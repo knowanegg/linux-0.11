@@ -43,6 +43,12 @@ config QEMU_SERIAL_PTY
 	help
 	  Support pty serial.
 
+config QEMU_ROOTFS_NAME
+	string "QEMU Full rootfs name"
+	depends on QEMU
+	help
+	  Full Rootfs name for QEMU
+
 endif
 
 endmenu
