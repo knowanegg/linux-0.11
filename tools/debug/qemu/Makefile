@@ -21,7 +21,7 @@ IMAGE_NAME := $(srctree)/arch/$(SRCARCH)/kernel/BiscuitOS
 # Platform
 # -----------------------------------
 ifdef CONFIG_X86
-  QEMU := qemu-system-x86_64
+  QEMU := qemu-system-i386
 else
   QEMU := qemu
 endif
