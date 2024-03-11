@@ -99,55 +99,64 @@ go:
 # put stack at 0x9ff00
 	mov %ax, %ss
 	# 栈指针设置在0xFF00，这时栈位于9000:ff00也就是0x9ff00
-	mov $0xFF00, %sp # arbitrary value >> 512
+	mov $0xFF00, %sp # arbitrary value >> 512 ？这里不知道为啥
 
 # load the setup-sectors directly after the bootblock
 # Note that 'es' is already set up
 
 load_setup:
-	# 读硬盘
-	# If use hard disk, dirver is 0x80
+	# 读硬盘，调用中断处理程序
+	# If use hard disk, dirver is 0x80 
 	mov $0x0000, %dx      # head 0
-	mov $DEVICE_NR, %dl   # dirve 0
-	mov $0x0002, %cx   # sector 2, track 0
-	mov $0x0200, %bx   # address = 512, in INITSEG
-	.equ     AX, 0x200+SETUPLEN
+	mov $DEVICE_NR, %dl   # drive 0
+	mov $0x0002, %cx   # sector 2 扇区（Sector）, track 0 磁道（Track）这里为什么是2扇区
+                       # 因为第一扇区是boot，也就是现在的程序，紧跟着的下一个扇区就是setup
+	mov $0x0200, %bx   # address = 512, in INITSEG 加载到INITSEG的512地址处
+	.equ     AX, 0x200+SETUPLEN # 这里的equ不是判断，是设置常量相当于 #define AX 0x200+SETUPLEN
 	mov     $AX, %ax   # service 2, nr of sectors
-	int $0x13          # read it
-	jnc ok_load_setup  # ok -continue
-	mov $0x0000, %dx
-	mov $DEVICE_NR, %dl
+	int $0x13          # read it 调用0x13中断处理，这是实模式下BIOS提供的磁盘服务中断
+	jnc ok_load_setup  # jnc 是一个汇编语言指令，代表 "Jump if Not Carry"。
+					   # 条件跳转，用于在没有进位（Carry Flag未设置）的情况下跳转到指定的地址。
+					   # 这里如果没有进位，CF=0，说明读取setup程序成功，跳转到ok_load_setup
+					   # 如果CF=1，表示有错误，将通过下面的代码重置磁盘，然后重新读取
+	mov $0x0000, %dx   #
+	mov $DEVICE_NR, %dl #
 	mov $0x0000, %ax   # reset the diskette
-	int $0x13
-	jmp load_setup
+	int $0x13          # 再次调用中断处理程序，重置磁盘
+	jmp load_setup     # 跳转到开头重新读
 
 ok_load_setup:
 
-# Get disk dirve parameters, specifically nr of sectors/track
+# Get disk drive parameters, specifically nr of sectors/track
+# 获取磁盘参数，特别是磁道数和扇区数
 
-	mov $DEVICE_NR, %dl
-	mov $0x0800, %ax
-	int $0x13
+	mov $DEVICE_NR, %dl # 指定设备号
+	mov $0x0800, %ax # AH 被设置为 0x08，代表获取磁盘驱动器参数的功能
+	int $0x13 # %cx是系统调用返回值
+              # CL: 扇区数的低6位和柱面数的高2位（柱面号的高2位在第6和第7位，扇区号在低6位）
 	mov $0x00, %ch
 	mov %ax, %ax
 	mov %ax, %ax
+	# 这两行代码实际上没有执行任何操作，它们等效于 NOP（无操作）。可能是为了对齐、占位或其他特定编码习惯。
 	#seg cs
-	mov %cx, %cs:sectors+0
-	mov $INITSEG, %ax
-	mov %ax, %es
+	mov %cx, %cs:sectors+0 # sectors在最后面定义，这里不是sectors的内容而是在本程序中的偏移。
+                           # 这条语句是将%cx的内容写入到sectors位置定义的word中
+	mov $INITSEG, %ax # 将附加段指向INITSEG
+	mov %ax, %es 
 
 # Print some iname message
+# 打印信息
 
-	mov $0x03, %ah     # read cursor pos
+	mov $0x03, %ah     # 读取指针位置
 	xor %bh, %bh
-	int $0x10
+	int $0x10          # 调用0x10中断
 
-	mov $27, %cx
-	mov $0x0007, %bx   # page 0, attribute 7 (normal)
+	mov $27, %cx       # 要显示27个字符
+	mov $0x0007, %bx   # page 0, attribute 7 (normal) 显示属性
 #	lea msg1, %bp
-	mov $msg1, %bp
-	mov $0x1301, %ax
-	int $0x10
+	mov $msg1, %bp     # message存储位置放入bp
+	mov $0x1301, %ax   
+	int $0x10          # 调用 0x10中断
 
 # Ok, we've written the message, now
 # we want to load the system (at 0x10000)
