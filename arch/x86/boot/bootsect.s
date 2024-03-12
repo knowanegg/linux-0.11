@@ -135,9 +135,7 @@ ok_load_setup:
 	int $0x13 # %cx是系统调用返回值
               # CL: 扇区数的低6位和柱面数的高2位（柱面号的高2位在第6和第7位，扇区号在低6位）
 	mov $0x00, %ch
-	mov %ax, %ax
-	mov %ax, %ax
-	# 这两行代码实际上没有执行任何操作，它们等效于 NOP（无操作）。可能是为了对齐、占位或其他特定编码习惯。
+	
 	#seg cs
 	mov %cx, %cs:sectors+0 # sectors在最后面定义，这里不是sectors的内容而是在本程序中的偏移。
                            # 这条语句是将%cx的内容写入到sectors位置定义的word中
@@ -192,9 +190,6 @@ root_defined:
 # after that (everything loaded), we jump to
 # the setup-routine loaded directly after
 # the bootblock:
-	mov %ax, %ax
-	mov %bx, %bx
-	mov %bx, %bx
 	ljmp $SETUPSEG, $0  # 最后一条指令，跳转到setup.s
 
 # This routine loads the system at address 0x10000, making sure
