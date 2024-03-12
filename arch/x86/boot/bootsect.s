@@ -42,7 +42,7 @@
 	# Boot from first floppy
 	.equ DEVICE_NR, 0x00
 
-	.equ SETUPLEN, 4        # nr of setup-sectors
+	.equ SETUPLEN, 4        # nr of setup-sectors setup占用的扇区数
 	.equ BOOTSEG, 0x07C0    # original address of boot-sector
 	.equ INITSEG, 0x9000    # we move boot here - out of the way
 	.equ SETUPSEG, 0x9020   # setup starts here
@@ -76,8 +76,8 @@
 
 _start:
 	# 打断点0x7c00，停在这条指令，为啥？
-	# 因为计算机启动第一条指令是FFFF:0000，指向BIOS的ROM 0xFFFF0 进入BIOS程序
-	# 经过BIOS自检后，将硬盘0磁道0扇区的数据加载到0000:7c00，也就断在了这里
+	# 因为计算机启动第一条指令是FFFF:0000，这条指令指向BIOS的ROM 0xFFFF0
+	# 经过BIOS自检后，将硬盘0磁道0扇区的数据加载到这里
 	mov $BOOTSEG, %ax
 	# BOOTSEG是定义的常量0x7c00，也就是现在的位置，现在是0000:7c00，要使用段寄存器就变成07c0:0000
 	# 要把现在的程序256字节移动到INITSEG也就是0x9000段处，为什么？要腾出空间
@@ -156,15 +156,15 @@ ok_load_setup:
 #	lea msg1, %bp
 	mov $msg1, %bp     # message存储位置放入bp
 	mov $0x1301, %ax   
-	int $0x10          # 调用 0x10中断
+	int $0x10          # 调用 0x10中断,在屏幕上显示message
 
 # Ok, we've written the message, now
 # we want to load the system (at 0x10000)
 
-	mov $SYSSEG, %ax
+	mov $SYSSEG, %ax # 将要加载系统的段放入es,这里SYSSGE是 .equ SYSSEG, 0x1000
 	mov %ax, %es    # Segment of 0x010000
-	call read_it
-	call kill_motor
+	call read_it    # 读取方法
+	call kill_motor # 
 
 # After that we check which root-device to use. If the device is
 # defined (#= 0), nothing is done and the given device is used.
@@ -187,7 +187,7 @@ undef_root:
 	jmp undef_root
 root_defined:
 	#seg cs
-	mov %ax, %cs:root_dev+0
+	mov %ax, %cs:root_dev+0 # 如果一开始就define了，那么就相当于来回mov了一遍，没作用
 
 # after that (everything loaded), we jump to
 # the setup-routine loaded directly after
@@ -195,7 +195,7 @@ root_defined:
 	mov %ax, %ax
 	mov %bx, %bx
 	mov %bx, %bx
-	ljmp $SETUPSEG, $0
+	ljmp $SETUPSEG, $0  # 最后一条指令，跳转到setup.s
 
 # This routine loads the system at address 0x10000, making sure
 # no 64kB boundaries are crossed. We try to load it as fast as
@@ -208,26 +208,29 @@ head:	.word 0			   # current head
 track:	.word 0			   # current track
 
 read_it:
-	mov %es, %ax
-	test $0x0fff, %ax
+	mov %es, %ax       # 比较es和0x0fff，从read SYSSEG来的话es应该是0x1000
+	test $0x0fff, %ax  # test指令执行的是位与（AND）操作，但结果不会保存，仅用来影响标志位。
 die:
-	jne die       # es must be at 64kB boundary
-	xor %bx, %bx  # bx is starting address with segment
+	jne die       # es must be at 64kB boundary es必须64K对齐，如果and 0x0fff有对上的说没对齐
+				  # 然后自己跳转到自己，无限死循环？
+	xor %bx, %bx  # bx is starting address with segment  这里清零
 rp_read:
 	mov %es, %ax
-	cmp $ENDSEG, %ax   # have we loaded all yet?
-	jb ok1_read
-	ret
+	cmp $ENDSEG, %ax   # have we loaded all yet? # 看看有没有完全加载完
+	jb ok1_read        # jb（Jump if Below）
+                       # 如果%ax中的值（无符号数）小于$ENDSEG的值，就跳转到ok1_read
+	ret	               # 否则就说明已经读完，ret到166行
 
 ok1_read:
 	#seg cs
-	mov %cs:sectors+0, %ax
-	sub sread, %ax
-	mov %ax, %cx
-	shl $9, %cx
-	add %bx, %cx
-	jnc ok2_read     # don't over 64KB
-	je ok2_read
+	mov %cs:sectors+0, %ax # 这里的sectors是前面142行通过系统调用读到的
+	sub sread, %ax   # sread:.word 1+ SETUPLEN  # sectors read of current track
+                     # 这里要先把本程序(boot)占用的1和setup程序占用的扇区数减掉
+	mov %ax, %cx     # 剩下的扇区数放入cx进行循环
+	shl $9, %cx      # 左移<9位,相当于*2^9=512，每个扇区的字节数
+	add %bx, %cx     # 加上bx，段内起始地址，
+	jnc ok2_read     # Jump if Not Carry 没有进位就跳转 don't over 64KB
+	je ok2_read      # 
 	xor %ax, %ax     # over 64KB
 	sub %bx, %ax
 	shr $9, %ax
@@ -312,7 +315,7 @@ msg1:
 
 	.org 508
 root_dev:
-	.word ROOT_DEV
+	.word ROOT_DEV # .equ ROOT_DEV, 0x301 /dev/hd1
 	.word 0xAA55
 
 	.text
