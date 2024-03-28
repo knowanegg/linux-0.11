@@ -38,7 +38,10 @@ startup_32:
 	mov %ax, %es             # reloaded in 'setup_gdt'
 	mov %ax, %fs
 	mov %ax, %gs
-	lss stack_start, %esp
+	lss stack_start, %esp   # stack_start 是一个内存地址，指向包含两个部分的数据结构：
+	                        # 新的堆栈指针值和新的堆栈段选择子。首先是堆栈指针值（低地址处）
+							# 其次是段选择子（高地址处）。低地址明显看出给了%esp
+							# 高地址隐式赋值给了SS
 	xorl %eax, %eax
 1:
 	incl %eax                # Check that A20 really is enabled
@@ -269,10 +272,12 @@ setup_paging:
 	xorl %eax, %eax
 	xorl %edi, %edi         /* pg_dir is at 0x00 */
 	cld;rep;stosl           # CLean Direction flag 
+	                        # 这里的分号有些浏览器会解释成注释
+							# 但是实际rep stosl是执行的
 	                        # 当DF=0的时候，从低地址到高地址 */
 	movl $pg0+7, pg_dir     # 这里为什么是+7? 误区：pg0的地址+7
 	movl $pg1+7, pg_dir+4   # 实际上pg0的值+7，也就是这个7是给pg0附加的
-	movl $pg2+7, pg_dir+8   # pg0=
+	movl $pg2+7, pg_dir+8   # pg0=0x1000 +7 = 0x1007
 	movl $pg3+7, pg_dir+12  
 	movl $pg3+4092, %edi
 	movl $0xfff007, %eax    /* 16Mb - 4096 + 7 (r/w user, p) */
@@ -293,12 +298,67 @@ setup_paging:
 	jge 1b
 	cld
 	xorl %eax, %eax         /* pg_dir is at 0x0000 */
+	                        # 页目录设置在这里，注意！这里只有四条页目录
+							# 请看上面向278-281向pg_dir写的四条
+							# pg_dir在这个程序头定义了，也就是说写在了本程序的startup_32
+							# 覆盖了程序头！
+
+							;000000a1 <setup_gdt>:  *可以看到这里还是0x0000a1
+							; setup_gdt:
+							;         lgdt gdt_descr
+							;       a1:       0f 01 15 b2 54 00 00    lgdtl  0x54b2
+							;         ret
+							;       a8:       c3                      ret    
+							;         ...
+
+							; 00001000 <pg0>:       *pg0直接用.org伪指令定位到0x1000
+							;         ...
+
+							; 00002000 <pg1>:       *pg1直接定位到0x2000
+							;         ...
+
+							; 00003000 <pg2>:       *pg2直接定位到0x3000
+							;         ...
+
+							; 00004000 <pg3>:       ........
+							;         ...
+
+							; 00005000 <tmp_floppy_area>: * 这里在pg3后面.org了0x5000,从0x5000开始
+							;         ...
+
+							; 00005400 <after_page_tables>:
+							; tmp_floppy_area:
+							;         .fill 1024,1,0
+
+							; # 
+							; after_page_tables:
+							;         pushl $0         # These are the parameters to main :-)
+							;     5400:       6a 00                   push   $0x0
+							;         pushl $0         # 压栈main参数
+							;     5402:       6a 00                   push   $0x0
+							;         pushl $0
+							;     5404:       6a 00                   push   $0x0
+							;         pushl $L6
+							;     5406:       68 12 54 00 00          push   $0x5412
+							;         pushl $main
+							;     540b:       68 d3 85 01 00          push   $0x185d3
+							;         jmp setup_paging
+							;     5410:       eb 3c                   jmp    544e <setup_paging>
+
+							; 00005412 <L6>:
+
+                            # 也就是说，运行到写pg_dir和页表的时候，cs:ip已经跑到0x5000外了，这时候可覆盖
+							# 前面的0x0000-0x4fff。
+							# 为什么页表要写到0x4ffc而不是0x4fff呢？
+							# 因为页表有长度啊，从0x4ffc开始写0x00fff807，四位正好写到0x4fff
+
 	movl %eax, %cr3         /* cr3 - page directory start */
 	movl %cr0, %eax
 	orl  $0x80000000, %eax
 	movl %eax, %cr0         /* set paging (PG) bit */
 							# 设置cr0寄存器的PG位，打开分页
 	ret                     /* This also flushes prefetch-queue */
+                            # 
 
 .align 2
 .word 0
