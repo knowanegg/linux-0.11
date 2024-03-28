@@ -278,7 +278,12 @@ setup_paging:
 	movl $pg0+7, pg_dir     # 这里为什么是+7? 误区：pg0的地址+7
 	movl $pg1+7, pg_dir+4   # 实际上pg0的值+7，也就是这个7是给pg0附加的
 	movl $pg2+7, pg_dir+8   # pg0=0x1000 +7 = 0x1007
-	movl $pg3+7, pg_dir+12  
+	movl $pg3+7, pg_dir+12  # 这里四个页目录，映射到四个页表的头部
+	                        # 分别映射到0x1000 0x2000 0x3000 0x4000
+							# 每个页表4byte，那么0x1000的空间可以存储 0x1000/4 = 0x400
+							# 也就是1024个页表
+							# 每个页表映射物理地址范围为0x1000,也就是0x400*0x1000=4MB
+							# 四个页目录加起来就=4M*4=16M
 	movl $pg3+4092, %edi
 	movl $0xfff007, %eax    /* 16Mb - 4096 + 7 (r/w user, p) */
 	std                     # SeT Direction flag
@@ -303,49 +308,49 @@ setup_paging:
 							# pg_dir在这个程序头定义了，也就是说写在了本程序的startup_32
 							# 覆盖了程序头！
 
-							;000000a1 <setup_gdt>:  *可以看到这里还是0x0000a1
-							; setup_gdt:
-							;         lgdt gdt_descr
-							;       a1:       0f 01 15 b2 54 00 00    lgdtl  0x54b2
-							;         ret
-							;       a8:       c3                      ret    
-							;         ...
+							# 000000a1 <setup_gdt>:  *可以看到这里还是0x0000a1
+							#  setup_gdt:
+							#          lgdt gdt_descr
+							#        a1:       0f 01 15 b2 54 00 00    lgdtl  0x54b2
+							#          ret
+							#        a8:       c3                      ret    
+							#          ...
 
-							; 00001000 <pg0>:       *pg0直接用.org伪指令定位到0x1000
-							;         ...
+							#  00001000 <pg0>:       *pg0直接用.org伪指令定位到0x1000
+							#          ...
 
-							; 00002000 <pg1>:       *pg1直接定位到0x2000
-							;         ...
+							#  00002000 <pg1>:       *pg1直接定位到0x2000
+							#          ...
 
-							; 00003000 <pg2>:       *pg2直接定位到0x3000
-							;         ...
+							#  00003000 <pg2>:       *pg2直接定位到0x3000
+							#          ...
 
-							; 00004000 <pg3>:       ........
-							;         ...
+							#  00004000 <pg3>:       ........
+							#          ...
 
-							; 00005000 <tmp_floppy_area>: * 这里在pg3后面.org了0x5000,从0x5000开始
-							;         ...
+							#  00005000 <tmp_floppy_area>: * 这里在pg3后面.org了0x5000,从0x5000开始
+							#          ...
 
-							; 00005400 <after_page_tables>:
-							; tmp_floppy_area:
-							;         .fill 1024,1,0
+							#  00005400 <after_page_tables>:
+							#  tmp_floppy_area:
+							#          .fill 1024,1,0
 
-							; # 
-							; after_page_tables:
-							;         pushl $0         # These are the parameters to main :-)
-							;     5400:       6a 00                   push   $0x0
-							;         pushl $0         # 压栈main参数
-							;     5402:       6a 00                   push   $0x0
-							;         pushl $0
-							;     5404:       6a 00                   push   $0x0
-							;         pushl $L6
-							;     5406:       68 12 54 00 00          push   $0x5412
-							;         pushl $main
-							;     540b:       68 d3 85 01 00          push   $0x185d3
-							;         jmp setup_paging
-							;     5410:       eb 3c                   jmp    544e <setup_paging>
+							#  # 
+							#  after_page_tables:
+							#          pushl $0         # These are the parameters to main :-)
+							#      5400:       6a 00                   push   $0x0
+							#          pushl $0         # 压栈main参数
+							#      5402:       6a 00                   push   $0x0
+							#          pushl $0
+							#      5404:       6a 00                   push   $0x0
+							#          pushl $L6
+							#      5406:       68 12 54 00 00          push   $0x5412
+							#          pushl $main
+							#      540b:       68 d3 85 01 00          push   $0x185d3
+							#          jmp setup_paging
+							#      5410:       eb 3c                   jmp    544e <setup_paging>
 
-							; 00005412 <L6>:
+							#  00005412 <L6>:
 
                             # 也就是说，运行到写pg_dir和页表的时候，cs:ip已经跑到0x5000外了，这时候可覆盖
 							# 前面的0x0000-0x4fff。
