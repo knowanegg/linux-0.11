@@ -129,13 +129,17 @@ void wake_up(struct task_struct **p)
 	}
 }
 
+// sched初始化
 void sched_init(void)
 {
     int i;
-    struct desc_struct *p;
+    struct desc_struct *p; //描述符结构体，linus真能复用啊，只要是个32位的都用这个
 
     if (sizeof(struct sigaction) != 16)
         panic("Struct sigaction MUST be 16 bytes");
+	// #define FIRST_TSS_ENTRY  4
+	// #define FIRST_LDT_ENTRY  (FIRST_TSS_ENTRY + 1)
+	// 也就是tss描述符在gdt中是第四个，FIRST_LDT_ENTRY比ldt多一个
     set_tss_desc(gdt + FIRST_TSS_ENTRY, &(init_task.task.tss));
     set_ldt_desc(gdt + FIRST_LDT_ENTRY, &(init_task.task.ldt));
     p = gdt + 2 + FIRST_TSS_ENTRY;

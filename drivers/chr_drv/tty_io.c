@@ -107,9 +107,12 @@ struct tty_queue *table_list[] = {
 	&tty_table[2].read_q, &tty_table[2].write_q
 };
 
+// 初始化tty
 void tty_init(void)
 {
+	// 初始化2个串口的中断
     rs_init();
+	// 初始化console窗口显示
     con_init();
 }
 
@@ -289,7 +292,7 @@ void do_tty_interrupt(int tty)
 {
 	copy_to_cooked(tty_table + tty);
 }
-
+// 字符设备初始化
 void chr_dev_init(void)
 {
 }

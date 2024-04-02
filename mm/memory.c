@@ -41,12 +41,18 @@ void mem_init(long start_mem, long end_mem)
     int i;
 
     HIGH_MEMORY = end_mem;
+	// 将字节转换为 4KB 大小的页面数量。
     for (i = 0; i < PAGING_PAGES; i++)
+	    // USED = 100
         mem_map[i] = USED;
+    // MAP_NR就是=LOW_MEM>>12 快速计算出4kb数量
     i = MAP_NR(start_mem);
+	// 0xfe0000-0x40000=0xbe0000
     end_mem -= start_mem;
+	// 算算主要内存有多少个页
     end_mem >>= 12;
     while (end_mem-- > 0)
+	    // 将所有的主要内存页表填0
         mem_map[i++] = 0;
 }
 

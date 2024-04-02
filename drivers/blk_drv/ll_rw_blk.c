@@ -166,10 +166,13 @@ void ll_rw_block(int rw, struct buffer_head *bh)
     make_request(major, rw, bh);
 }
 
+// block device init，块设备初始化
 void blk_dev_init(void)
 {
     int i;
-
+    // NR_REQUEST在<linux/blk.h>中定义，是32
+    // 也就是限制了请求队列最多32个
+    // 这里初始化为空
     for (i = 0; i < NR_REQUEST; i++) {
         request_queue[i].dev = -1;
         request_queue[i].next = NULL;

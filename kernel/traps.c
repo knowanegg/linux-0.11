@@ -179,8 +179,8 @@ void trap_init(void)
 {
     int i;
 
-    set_trap_gate(0, &divide_error);
-    set_trap_gate(1, &debug);
+    set_trap_gate(0, &divide_error); //第0个就设置divide_error
+    set_trap_gate(1, &debug); 
     set_trap_gate(2, &nmi);
     set_system_gate(3, &int3);
     set_system_gate(4, &overflow);
@@ -196,11 +196,12 @@ void trap_init(void)
     set_trap_gate(14, &page_fault);
     set_trap_gate(15, &reserved);
     set_trap_gate(16, &coprocessor_error);
-
+    // 前16个idt设置完，从第十七个开始到第48个，设置位保留
     for (i = 17; i < 48; i++)
         set_trap_gate(i, &reserved);
+    // 浮点irq13
     set_trap_gate(45, &irq13);
-    outb_p(inb_p(0x21) & 0xfb, 0x21);
-    outb(inb_p(0xA1) & 0xdf, 0xA1);
-    set_trap_gate(39, &parallel_interrupt);
+    outb_p(inb_p(0x21) & 0xfb, 0x21); //// 允许8259A主芯片的IRQ2中断请求。
+    outb(inb_p(0xA1) & 0xdf, 0xA1); //// 允许8259A从芯片的IRQ3中断请求。
+    set_trap_gate(39, &parallel_interrupt);  // 设置并行口1的中断0x27陷阱门的描述符。
 }

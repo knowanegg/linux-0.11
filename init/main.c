@@ -112,24 +112,29 @@ static void time_init(void)
 /*
  * Detect memory from setup-routine.
  */
+ // 
 static void memory_detect(void)
 {
+    // 这里的MB_SHITF=20，2^20快速表达1M ,KB就是快速表达1K
+    // EXT_MEM_K 在 0x90002，是前面setup.s:53行写入的
     memory_end = (1 << MB_SHIFT) + (EXT_MEM_K << KB_SHIFT);
     memory_end &= 0xFFFFF000;
-
+    // 获得可用内存大小
     /* Current version only support litter than 16Mb */
     if (memory_end > 16 << MB_SHIFT)
+        // 如果超过16M只用16M       
         memory_end = 16 << MB_SHIFT;
+    // 如果大于12M，那么buffer_memory_end=4M
     if (memory_end > 12 << MB_SHIFT)
         buffer_memory_end = 4 << MB_SHIFT;
     else if (memory_end > 6 << MB_SHIFT)
         buffer_memory_end = 2 << MB_SHIFT;
     else
         buffer_memory_end = 1 << MB_SHIFT;
-
+    // buffer_memory_end 是缓冲结束位置，后面的是主内存
     main_memory_start = buffer_memory_end;
 }
-
+/**********************************************/
 int main(void)
 {
     /*
@@ -137,18 +142,26 @@ int main(void)
      * enable them.
      */
 #ifdef CONFIG_DEBUG_KERNEL_EARLY
+    // 在debug.h中声明，common.c中实现，空的
     debug_on_kernel_early();
 #endif
+    // ROOT_DEV在linux/fs.h中声明，是个int
+    // ORIG_ROOT_DEV在上面define为0x901FC
     ROOT_DEV = ORIG_ROOT_DEV;
+    // (*(struct drive_info *)0x90080)
     drive_info = DRIVE_INFO;
-    memory_detect();
-    mem_init(main_memory_start, memory_end);
-    trap_init();
-    blk_dev_init();
-    chr_dev_init();
-    tty_init();
-    time_init();
-    sched_init();
+    // 这个函数就在上面定义的
+    memory_detect(); // 计算可用内存和buffer地址
+    
+    // 内存初始化，把mem_map中所有内存（包括buffer）页标为used
+    // 然后再把mem_map中buffer以外的可用内存页标为0
+    mem_init(main_memory_start, memory_end); 
+    trap_init(); // 陷阱门初始化
+    blk_dev_init(); // 块设备初始化
+    chr_dev_init(); // 字符设备初始化，空的，没实现也没调用
+    tty_init(); // 初始化串口
+    time_init(); // 初始化时间，就在这个文件里面实现，从CMOS里面读
+    sched_init(); //
     buffer_init(buffer_memory_end);
 #ifdef CONFIG_HARDDISK
     hd_init();

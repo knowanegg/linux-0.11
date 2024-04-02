@@ -1,28 +1,30 @@
-# 从bios跳转到这里，也就是0x7c00开始执行
-# 这里开始就是0x7c00不需要在编译设置偏移
-# 是因为BIOS已经把硬盘0扇区也就是这个程序
-# 挪到了0x7c00，然后在BIOS最后一条指令
-# jmp到了0x7c00
+	.code16
+# rewrite with AT&T syntax by falcon <wuzhangjin@gmail.com> at 081012
+# modify for biscuitos by buddy <buddy.zhang@aliyun.com> at 170303
+#
+# SYS_SIZE is the number of clicks (16 bytes) to be loaded.
+# 0x3000 is 0x30000 bytes = 196KB, more than enough for current
+# version of linux
+	.equ SYSSIZE, 0x3000
 
-# 编译完后，用objdump看vmlinux，开头是head.s
-# 那么这个bootsect和setup在哪呢？
-# 应该是在硬盘1、2扇区，而vmlinux被写入到了
-# 从第三个扇区开始
-# 我们想找到真的编译成果，就去找硬盘文件
-# 看makefile，实际编译出来的合并到了bootloader
-# objdump -D -b binary -m i386:x86-64 ./arch/x86/boot/bootloader
+#
+#	bootsect.s		(C) 1991 Linus Torvalds
+#
+# bootsect.s is loaded at 0x7c00 by the bios-startup routines, and moves
+# iself out of the way to address 0x90000, and jump there.
+#
+# It then load's 'setup' directly after itself (0x90200), and the system
+# at 0x10000, using BIOS interrupts.
+#
+# NOTE! currently system is at most 8*65536 bytes long. This should be no
+# problem, even in the future. I want to keep it simple. This 512 kB
+# kernel size should by enough, especially as this doesn't contain the 
+# buffer cache as in minix
+#
+# The loader has been make as simple as possible, and continuos
+# read errors will result in a unbreakable loop. Reboot by hand. It
+# loads pretty fast by getting whole sectors at a time whenever possible.
 
-# 第一步，先把自己移动到0x90000，为后面
-# 腾出空间
-
-# 首先通过ax设置es到0x9000
-# 注意这里还没有进入保护模式，所以现在还是
-# 用ax，16位，也不用movl而是mov
-.code16 # 设置编译成16位指令
-	.global _start
-# 为什么一定要_start?
-# _start相当于c语言的main！必须存在的入口
-# 链接器会找_start,名称不能变
 	.global _start, begtext, begdata, begbss, endtext, enddata, endbss
 
 	.text
@@ -39,7 +41,7 @@
 	# .equ DEVICE_NR, 0x80
 	# Boot from first floppy
 	.equ DEVICE_NR, 0x00
-    .equ SYSSIZE, 0x3000
+
 	.equ SETUPLEN, 4        # nr of setup-sectors setup占用的扇区数
 	.equ BOOTSEG, 0x07C0    # original address of boot-sector
 	.equ INITSEG, 0x9000    # we move boot here - out of the way
@@ -68,27 +70,28 @@
 # 0x306    : /dev/hd6 - The second partition on second hard disk.
 # ROOT_DEV = 0 ; The same device with boot device.
 	.equ ROOT_DEV, 0x301
+
+	# Normalize the start address
+	ljmp $BOOTSEG, $_start
+
 _start:
-    mov $0x9000, %ax
-    mov %ax, %es
-# 现在设置好了es目标段，设置当前段ds
-    mov $0x07c0, %ax
-    mov %ax, %ds
-# 循环移动本身,大小为512也就是0x200大小
-# 用movsw可以一次移动两个byte，除以二=0x100=256
-    mov $256, %cx
-# 清理si和di
-    xor %si, %di
-# 循环拷贝
-    rep movsw
-
-# 拷贝完后，跳转到新地址执行
-# 这里有的是jmpf，有的是ljmp，看不同编译器
-# ljmp seg, ip
-    ljmp $0x9000, $new_start
-
-new_start:
-# 重设段寄存器
+	# 打断点0x7c00，停在这条指令，为啥？
+	# 因为计算机启动第一条指令是FFFF:0000，这条指令指向BIOS的ROM 0xFFFF0
+	# 经过BIOS自检后，将硬盘0磁道0扇区的数据加载到这里
+	mov $BOOTSEG, %ax
+	# BOOTSEG是定义的常量0x7c00，也就是现在的位置，现在是0000:7c00，要使用段寄存器就变成07c0:0000
+	# 要把现在的程序256字节移动到INITSEG也就是0x9000段处，为什么？要腾出空间
+	mov %ax, %ds
+	mov $INITSEG, %ax
+	mov %ax, %es
+	mov $256, %cx
+	sub %si, %si
+	sub %di, %di
+	rep
+	movsw
+	# long jump 长转移指令 这里$go是下面go:的偏移，加上$INITSEG就是9000:go，程序挪过去的位置
+	ljmp $INITSEG, $go
+go:
 	# 将cs值赋给ds、es、ss
 	mov %cs, %ax
 	mov %ax, %ds
@@ -100,7 +103,7 @@ new_start:
 
 # load the setup-sectors directly after the bootblock
 # Note that 'es' is already set up
-# 读取setup扇区，用BIOS的0x13中断调用
+
 load_setup:
 	# 读硬盘，调用中断处理程序
 	# If use hard disk, dirver is 0x80 

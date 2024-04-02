@@ -20,6 +20,7 @@ void rs_write(struct tty_struct *tty)
     sti();
 }
 
+//初始化port
 static void init(int port)
 {
     outb_p(0x80, port + 3);
@@ -31,6 +32,7 @@ static void init(int port)
     (void)inb(port);
 }
 
+// 初始化两个串口的中断门
 void rs_init(void)
 {
     set_intr_gate(0x24, rs1_interrupt);

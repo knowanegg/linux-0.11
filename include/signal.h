@@ -28,11 +28,13 @@ typedef unsigned int sigset_t;	/* 32 bits */
 #define SIGTTIN     21
 #define SIGTTOU     22
 
+// 是一个系统调用，用于检查或修改与指定信号相关联的处理动作。
+// 相比于旧的 signal 函数，sigaction 提供了更多的控制能力，允许程序以更细致的方式管理信号和信号处理。
 struct sigaction {
-	void (*sa_handler) (int);
-	sigset_t sa_mask;
-	int sa_flags;
-	void (*sa_restorer) (void);
+	void (*sa_handler) (int); // handler处理程序
+	sigset_t sa_mask;  // 32位掩码
+	int sa_flags;  // 标志位
+	void (*sa_restorer) (void); // restorer方法
 };
 
 #define SA_NOCLDSTOP 1

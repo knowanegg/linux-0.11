@@ -26,6 +26,8 @@
 
 #define iret() __asm__("iret"::)
 
+// dpl和type在这里是类型，是位标志,0x8000是P位为1,trap是15也就是f
+// gate_addr是门描述符存放的地址
 #define _set_gate(gate_addr, type, dpl, addr)  \
         __asm__ ("movw %%dx, %%ax\n\t"             \
                  "movw %0, %%dx\n\t"               \
@@ -36,7 +38,26 @@
                  "o" (*((char *) (gate_addr))),    \
                  "o" (*(4+(char *) (gate_addr))),  \
                  "d" ((char *) (addr)), "a" (0x00080000))
-
+// idt定义在include/linux/head.h 0x54b8
+// divide_error在asm.h，是一个偏移
+/* 0x00010f5e <+33>:    mov    eax,0x108c1
+   0x00010f64 <+39>:    mov    edx,eax
+   0x00010f66 <+41>:    mov    eax,0x80000
+   0x00010f6b <+46>:    mov    ax,dx
+   0x00010f6e <+49>:    mov    dx,0x8f00 #15=f
+   0x00010f72 <+53>:    mov    DWORD PTR [esi],eax
+   0x00010f74 <+55>:    mov    DWORD PTR [ebx],edx
+   # 这里为什么会有一个ax和dx？因为IDT表如下：
+   31                16 15   14  13  12  11  8 7      5 4    0
+        +-----------------+----+----+--+--+----+----+----+----+
+        | Offset 31..16   | P  | DPL| 0| S|Type| 0 0 0 0 0| IST|
+        +-----------------+----+----+--+--+----+----+----+----+
+        | Segment Selector|          Offset 15..0            |
+        +-----------------+---------------------------------+
+    这里最直观来看，我们先将offset的值放到eax，但上图中，offset是分开的
+    所以要再交换eax和edx的低位，就变成了高位offset和描述在一起，
+    段选择符和低位offset在一起
+*/
 #define set_trap_gate(n, addr)  \
 	_set_gate(&idt[n], 15, 0, addr)
 

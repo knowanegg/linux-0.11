@@ -38,32 +38,32 @@
 	begbss:
 	.text
 
-	ljmp $SETUPSEG, $_start	
+	ljmp $SETUPSEG, $_start	# 这里又重新跳转了一次，不知道啥情况，为了清缓存？
 _start:
 
 # ok, the read went well so we get current cursor position and save it for
 # posterity.
 
 	mov	$INITSEG, %ax	# this is done in bootsect already, but...
-	mov	%ax, %ds
-	mov	$0x03, %ah	# read cursor pos
-	xor	%bh, %bh
+	mov	%ax, %ds    # 将ds设置为INITSEG：0x9000
+	mov	$0x03, %ah	# read cursor pos # 用中断读取指针位置
+	xor	%bh, %bh    # 
 	int	$0x10		# save it in known place, con_init fetches
-	mov	%dx, %ds:0	# it from 0x90000.
-# Get memory size (extended mem, kB)
-
-	mov	$0x88, %ah 
+	mov	%dx, %ds:0	# 将结果写入0x90000
+# Get memory size (extended mem, kB) 获取内存信息
+# 这个 BIOS 中断调用返回系统中可用的扩展内存的大小（以 KB 为单位）。
+	mov	$0x88, %ah  # 
 	int	$0x15
-	mov	%ax, %ds:2
+	mov	%ax, %ds:2  
 
-# Get video-card data:
+# Get video-card data: 获取显卡数据
 
 	mov	$0x0f, %ah
 	int	$0x10
 	mov	%bx, %ds:4	# bh = display page
 	mov	%ax, %ds:6	# al = video mode, ah = window width
 
-# check for EGA/VGA and some config parameters
+# check for EGA/VGA and some config parameters # 获取显示接口参数
 
 	mov	$0x12, %ah
 	mov	$0x10, %bl
@@ -72,7 +72,7 @@ _start:
 	mov	%bx, %ds:10
 	mov	%cx, %ds:12
 
-# Get hd0 data
+# Get hd0 data # 获取hd0硬盘的数据
 
 	mov	$0x0000, %ax
 	mov	%ax, %ds
@@ -84,7 +84,7 @@ _start:
 	rep
 	movsb
 
-# Get hd1 data
+# Get hd1 data # 获取hd1硬盘的数据
 
 	mov	$0x0000, %ax
 	mov	%ax, %ds
@@ -96,7 +96,7 @@ _start:
 	rep
 	movsb
 
-# Check that there IS a hd1 :-)
+# Check that there IS a hd1 :-) # 看看是否存在hd1
 
 	mov	$0x01500, %ax
 	mov	$0x81, %dl
@@ -104,7 +104,10 @@ _start:
 	jc	no_disk1
 	cmp	$3, %ah
 	je	is_disk1
-no_disk1:
+
+# 在 no_disk1 分支中，通过 rep stosb 在特定的内存区域填充零值
+# 这可能是用于初始化或清理内存区域。
+no_disk1: 
 	mov	$INITSEG, %ax
 	mov	%ax, %es
 	mov	$0x0090, %di
@@ -112,13 +115,29 @@ no_disk1:
 	mov	$0x00, %ax
 	rep
 	stosb
+	# STOSB (Store String Byte) 是一条 x86 架构的汇编指令 #
+	# 用于将 AL 寄存器中的数据存储到由 ES:DI（在 16 位模式下）
+	# 或 RDI（在 64 位模式下）指定的内存地址处，并根据标志寄存器的方向位（DF，方向标志）
+	# 自动更新 DI 或 RDI 寄存器的值。
+    # 如果 DF 清零（通常情况），DI/RDI 会自增（对于STOSB是加 1，对于STOSW是加 2
+	# ，对于STOSD是加 4，对于STOSQ是加 8），允许连续向内存写入数据。
+	# 如果 DF 设置为 1，DI/RDI 会自减，允许向低地址连续写入数据。
+    # STOSB 指令经常用于内存填充操作，例如，将一块内存区域初始化为特定的值。
+	# 由于这条指令可以快速地重复执行，因此它在需要清零或设置大块内存时非常高效。
+
 is_disk1:
 
 # now we want to move to protected mode ...
+# 准备进入保护模式
 
 	cli			# no interrupts allowed ! 
 
 # first we move the system to it's rightful place
+# 0x10000 > 0x00000 
+# 0x20000 > 0x10000
+# ......
+# 0x90000 > 0x80000
+# 往前挪一个0x10000
 
 	mov	$0x0000, %ax
 	cld			# 'direction'=0, movs moves forward
@@ -128,9 +147,10 @@ do_move:
 	cmp	$0x9000, %ax
 	jz	end_move
 	mov	%ax, %ds	# source segment
-	sub	%di, %di
+	sub	%di, %di    # 清零？这里应该用xor也可以吧
 	sub	%si, %si
-	mov 	$0x8000, %cx
+	mov 	$0x8000, %cx # 循环0x8000次,下面用的是movsw,所以是0x8000*2
+                         # 也就是0x10000次，对应前面ax赋值给ds和es的段
 	rep
 	movsw
 	jmp	do_move
@@ -204,12 +224,18 @@ end_move:
 	#mov	$0x0001, %ax	# protected mode (PE) bit
 	#lmsw	%ax		# This is it!
 	mov	%cr0, %eax	# get machine status(cr0|MSW)	
-	bts	$0, %eax	# turn on the PE-bit 
+	bts	$0, %eax	# 将cr0最后一位置为1，打开保护模式
 	mov	%eax, %cr0	# protection enabled
 				
 				# segment-descriptor        (INDEX:TI:RPL)
-	.equ	sel_cs0, 0x0008 # select for code segment 0 (  001:0 :00) 
+	.equ	sel_cs0, 0x0008 # select for code segment 0 (  001:0 :00)
+                            # 段选择子0x0008，最后三位是标志位，也就是第一个段
+							#   15                           3   2   1 0
+                            # +--------------------------------+---+----+
+                            # |          索引 (Index)          | TI | RPL |
+                            # +--------------------------------+---+----+
 	ljmp	$sel_cs0, $0	# jmp offset 0 of code segment 0 in gdt
+	                        # 跳到第一个段的0x0执行，也是就是系统加载段
 
 # This routine checks that the keyboard command queue is empty
 # No timeout is used - if this hangs there is something wrong with
@@ -225,7 +251,7 @@ gdt:
 	.word	0,0,0,0		# dummy
 
 	.word	0x07FF		# 8Mb - limit=2047 (2048*4096=8Mb)
-	.word	0x0000		# base address=0
+	.word	0x0000		# base address=0 # 跳到0x00000执行，也就是我们吧system搬到的地方
 	.word	0x9A00		# code read/exec
 	.word	0x00C0		# granularity=4096, 386
 
@@ -239,8 +265,8 @@ idt_48:
 	.word	0,0			# idt base=0L
 
 gdt_48:
-	.word	0x800			# gdt limit=2048, 256 GDT entries
-	.word   512+gdt, 0x9		# gdt base = 0X9xxxx, 
+	.word	0x800			# gdt limit=2048, 256 GDT entries gdt界限
+	.word   512+gdt, 0x9		# gdt base = 0X9xxxx,         gdt地址
 	# 512+gdt is the real gdt after setup is moved to 0x9020 * 0x10
 	
 .text

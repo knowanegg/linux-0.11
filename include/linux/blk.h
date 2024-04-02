@@ -21,6 +21,7 @@
  * paging, 'bh' is NULL, and 'waiting' is used to wait for
  * read/write completion.
  */
+// 请求结构,既然放在这个blk.h下面了，就理解为块设备的请求吧
 struct request {
     int dev;
     int cmd;
@@ -32,8 +33,12 @@ struct request {
     struct buffer_head *bh;
     struct request *next;
 };
-
+// 块设备结构体
 struct blk_dev_struct {
+    // 你看这个成员，request_fn没有在任何地方声明，奇怪不
+    // 其实这不是 void struct a 这种，而是一个函数
+    // void request_fn(void){}，这样就理解了吧
+    // 这里第一个成员是一个函数指针，叫做request_fn
     void (*request_fn) (void);
     struct request *current_request;
 };
