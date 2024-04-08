@@ -13,7 +13,9 @@
 #include <linux/sched.h>
 #include <linux/kernel.h>
 
-
+// 变量 end 是由链接程序 ld 在链接内核模块时生成，用于指明内核执行模块的末端位置
+// 我们可以从编译内核时生成的 System.map 文件中查出该值。这里用它来表明
+// 高速缓冲区开始于内核代码末端位置。
 extern int end;
 extern void put_super(int);
 
@@ -79,16 +81,37 @@ struct buffer_head *bread(int dev, int block)
 }
 
 /* In BiscuitOS, buffer_end is at 4MB currently */
+// buffer_end = 0x400000
 void buffer_init(long buffer_end)
 {
+    // start_buffer是end，内核结束的位置
     struct buffer_head *h = start_buffer;
     void *b;
     int i;
 
+    // 0x100000
     if (buffer_end == 1 << 20)
+        //  0xa0000
         b = (void *)(640 * 1024);
+        // 首先根据参数提供的缓冲区高端位置确定实际缓冲区高端位置 b。如果缓冲区高端等于 1Mb，
+        // 则因为从 640KB - 1MB 被显示内存和 BIOS 占用，所以实际可用缓冲区内存高端位置应该是
+        // 640KB。否则缓冲区内存高端一定大于 1MB。
+        // 在main.c中memory_detect函数如果内存特别小，那么最低限制是从1M开始的主内存
+        // 那么buffer_end就是1M
+        // 图示：
+        //      |  0x00000                      |
+        //      |  kernel area                  |  
+        //      |  kernel_end =  buffer_start   | kernel结束处就是buffer开始处
+        //      |  buffer area                  |
+        //      |  640KB   buffer_end_new       |
+        //      |  BIOS_VGA                     |
+        //      |  1MB     buffer_end_old       | 因为BIOS和VGA用了640KB-1M，buffer_end只能挪上去
+        // 这时候buffer只有可怜的640KB，还得减去内核用的空间
     else
+        // 如果不止1M，那么就直接设置为buffer_end也就是memory_detect中设置的4M
         b = (void *)buffer_end;
+    // BLOCK_SIZE在fs.h中定义，为1024，一个块的大小,0x400,1KB
+    // 在这里将buffer_end向前直到buffer_start，切分成1KB大小的块
     while ((b -= BLOCK_SIZE) >= ((void *)(h + 1))) {
         h->b_dev    = 0;
         h->b_dirt   = 0;
@@ -98,20 +121,23 @@ void buffer_init(long buffer_end)
         h->b_wait = NULL;
         h->b_next = NULL;
         h->b_prev = NULL;
-        h->b_data = (char *)b;
-        h->b_prev_free = h - 1;
+        h->b_data = (char *)b; // 指向b
+        h->b_prev_free = h - 1; // 因为都是空闲的
         h->b_next_free = h + 1;
         h++;
         NR_BUFFERS++;
-        if (b == (void *)0x100000)
+        if (b == (void *)0x100000) // 这里对应1M
             b = (void *)0xA0000;
     }
     h--;
     free_list = start_buffer;
     free_list->b_prev_free = h;
-    h->b_next_free = free_list;
+    h->b_next_free = free_list; // 最后一条循环链接到第一条
+    // free_list_head 在system.map里有，但是不知道在哪定义的，也没见使用...
     free_list_head = free_list;
+    // #define NR_HASH 307
     for (i = 0; i < NR_HASH; i++)
+        // 清空哈希表
         hash_table[i] = NULL;
 }
 

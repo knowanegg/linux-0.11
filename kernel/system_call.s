@@ -183,9 +183,9 @@ timer_interrupt:
 	pushl %eax
 	movl $0x10, %eax
 	mov %ax, %ds
-	mov %ax, %es
-	movl $0x17, %eax
-	mov %ax, %fs
+	mov %ax, %es          # 设置ds和es为0x10选择子
+	movl $0x17, %eax      
+	mov %ax, %fs		  # 
 	incl jiffies
 	movb $0x20, %al       # EOI to interrupt controller #1
 	outb %al, $0x20

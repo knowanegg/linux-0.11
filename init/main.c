@@ -161,15 +161,15 @@ int main(void)
     chr_dev_init(); // 字符设备初始化，空的，没实现也没调用
     tty_init(); // 初始化串口
     time_init(); // 初始化时间，就在这个文件里面实现，从CMOS里面读
-    sched_init(); //
+    sched_init(); // buffer_memory_end 是前面计算的前面用作buffer的内存末端
     buffer_init(buffer_memory_end);
 #ifdef CONFIG_HARDDISK
-    hd_init();
+    hd_init(); // 硬盘初始化
 #endif
 #ifdef CONFIG_FLOPPY
-    floppy_init();
+    floppy_init(); // 磁盘初始化
 #endif
-    sti();
+    sti(); // Set Interrupt 开中断
 #ifdef CONFIG_DEBUG_KERNEL_LATER
     debug_on_kernel_later();
 #endif
@@ -177,6 +177,7 @@ int main(void)
     defined (CONFIG_DEBUG_USERLAND_SHELL)
     debug_kernel_on_userland_stage();
 #endif
+    // 内联汇编
     move_to_user_mode();
     if (!fork()) {   /* we count on this going ok */
         init();

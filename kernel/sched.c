@@ -140,10 +140,16 @@ void sched_init(void)
 	// #define FIRST_TSS_ENTRY  4
 	// #define FIRST_LDT_ENTRY  (FIRST_TSS_ENTRY + 1)
 	// 也就是tss描述符在gdt中是第四个，FIRST_LDT_ENTRY比ldt多一个
-    set_tss_desc(gdt + FIRST_TSS_ENTRY, &(init_task.task.tss));
+	// 问题：这里的gdt + FIRST_TSS_ENTRY直观解释是gdt+4
+	// 那么是gdt地址+4个字节？还是gdt数组往后+4个元素？
+	// 实际用gdb观察，是往后跳了四个元素
+	// 当你对数组名称执行加法操作时，你实际上是在进行指针运算。数组名称可以被视为指向数组第一个元素的指针。
+	// 因此，数组名 + 4 实质上是指向数组开头的指针向后移动了4个元素的位置。
+    set_tss_desc(gdt + FIRST_TSS_ENTRY, &(init_task.task.tss)); // 这里重点看tss的定义
     set_ldt_desc(gdt + FIRST_LDT_ENTRY, &(init_task.task.ldt));
-    p = gdt + 2 + FIRST_TSS_ENTRY;
+    p = gdt + 2 + FIRST_TSS_ENTRY; //P在FIRST_TSS_ENTRY往后两个，也就是FIRST_LDT_ENTRY后面
 
+	// 把task置空，p = gdt + 2 + FIRST_TSS_ENTRY后面所有置空
     for (i = 1; i < NR_TASKS; i++) { /* debug n 370 */
         task[i] = NULL;
         p->a = p->b = 0;
@@ -152,15 +158,25 @@ void sched_init(void)
         p++;
     }
     /* Clear NT, so that we won't have trouble with that later on */
+	// EFLAGS 中的 NT 标志位用于控制任务的嵌套调用。当 NT 位置位时，那么当前中断任务执行
+    // IRET 指令时就会引起任务切换。NT 指出 TSS 中的 back_link 字段是否有效。NT=0 时无效。
+
+	// 这里为什么用esp？怎么知道esp对应eflag？
+	// 看最前面的pushfl，先压进去操作完再pop出来的..
     __asm__("pushfl ; andl $0xffffbfff, (%esp) ; popfl");
+
     ltr(0);
     lldt(0);
+	// 下面代码用于初始化 8253 定时器。通道 0，选择工作方式 3，二进制计数方式。通道 0 的
+    // 输出引脚接在中断控制主芯片的 IRQ0 上，它每 10 毫秒发出一个 IRQ0 请求。LATCH 是初始
+ 	// 定时计数值
     outb_p(0x36, 0x43);	/* binary, mode 3, LSB/MSB, ch 0 */
-    outb_p(LATCH & 0xff, 0x40);	/* LSB */
-    outb(LATCH >> 8, 0x40);	/* MSB */
-    set_intr_gate(0x20, &timer_interrupt);
-    outb(inb_p(0x21) & ~0x01, 0x21);
-    set_system_gate(0x80, &system_call);
+    outb_p(LATCH & 0xff, 0x40);	/* LSB */ // 定时值低字节
+    outb(LATCH >> 8, 0x40);	/* MSB */ // 定时值高字节。
+	//设置0x20中断门为timer_interrupt，timer_interrupt在system_calls.s中用汇编实现
+    set_intr_gate(0x20, &timer_interrupt); 
+    outb(inb_p(0x21) & ~0x01, 0x21); //// 修改屏蔽码，允许定时器中断。
+    set_system_gate(0x80, &system_call);  // 设置系统调用门0x80
 }
 
 #define TIME_REQUESTS 64

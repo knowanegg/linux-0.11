@@ -75,9 +75,9 @@ struct buffer_head {
     unsigned char   b_count;      /* users using this block */
     unsigned char   b_lock;       /* 0 - ok, 1 - locked */
     struct task_struct *b_wait;
-    struct buffer_head *b_prev;
-    struct buffer_head *b_next;
-    struct buffer_head *b_prev_free;
+    struct buffer_head *b_prev;   // 管理相近的链表，这个跟下面带free的不同之处在于
+    struct buffer_head *b_next;   // 这个是为了让使用者用一大片buffer用的
+    struct buffer_head *b_prev_free; //管理空闲缓冲区的双向链表
     struct buffer_head *b_next_free;
 };
 

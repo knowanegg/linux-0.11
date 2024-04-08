@@ -1,6 +1,7 @@
 #ifndef _ASM_SYSTEM_H_
 #define _ASM_SYSTEM_H_
 
+// 迁移到用户模式
 #define move_to_user_mode() \
         __asm__("movl %%esp, %%eax\n\t"   \
                 "pushl $0x17\n\t"   \
@@ -16,6 +17,16 @@
                 "movw %%ax, %%fs\n\t"    \
                 "movw %%ax, %%gs\n\t"    \
                 :::"ax")
+                // 这里:::ax表示ax变了，但是在编译后没有加入什么其他指令，直接跳到了
+                // main.c的下一步fork
+                // 这里的$1f书上解释为24行1：的地址，很让人费解。其实这是这只是at&t一种语法：
+                // 局部标号可以用数字，而且可以重复。在以这些标号为目的的转移指令上
+                // 标号要带上后缀，b表示向前，f表示向后。
+                // 0x17,0x0f是段选择子。段选择子用于保护模式下的寻址。
+                // 0-1位表示请求的特权级，0表示系统级，3表示用户级。2位用于选择全局描述符表还是局部描述符表。
+                // pushl $0x0f 把当前局部空间代码段选择符入栈。
+                // 用户代码段的选择符 0x000f（RPL=3，局部表，代码段）
+                // pushl $0x17是栈段选择子
 
 #define sti()  __asm__("sti"::)
 #define cli()  __asm__("cli"::)
@@ -67,6 +78,10 @@
 #define set_system_gate(n, addr) \
 	_set_gate(&idt[n], 15, 3, addr)
 
+// 设置tss或者ldt的描述符
+// 第一个参数为n，仔细看::后面的一堆，基本都是
+// n n+2 n+4 .... 在n基础上偏移
+// 这里rorl不是r+or+l,而是循环右移
 #define _set_tssldt_desc(n, addr, type)  \
         __asm__("movw $104, %1\n\t"          \
                 "movw %%ax, %2\n\t"          \
