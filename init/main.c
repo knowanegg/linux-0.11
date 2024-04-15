@@ -179,6 +179,8 @@ int main(void)
 #endif
     // 内联汇编
     move_to_user_mode();
+    // 这里fork就在此文件最开始处中声明了inline和系统调用
+    // 但是具体实现在sys_fork
     if (!fork()) {   /* we count on this going ok */
         init();
     }

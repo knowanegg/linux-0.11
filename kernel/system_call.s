@@ -77,21 +77,21 @@ reschedule:
         pushl $ret_from_sys_call
         jmp schedule
 .align 2
-system_call:
-        cmpl $nr_system_calls-1,%eax
+system_call: # 这里就是int跳到的地方了，这里的压栈就是int的压栈，cpu不参与
+        cmpl $nr_system_calls-1,%eax	# 检查syscall的nr是否在范围内
         ja bad_sys_call
         push %ds
         push %es
         push %fs
         pushl %edx
         pushl %ecx              # push %ebx,%ecx,%edx as parameters
-        pushl %ebx              # to the system call
+        pushl %ebx              # 压入顺序 ds es fs edx ecx ebx
         movl $0x10,%edx         # set up ds,es to kernel space
         mov %dx,%ds
         mov %dx,%es
         movl $0x17,%edx         # fs points to local data space
         mov %dx,%fs
-        call *sys_call_table(,%eax,4)
+        call *sys_call_table(,%eax,4) # 在这里进入调用
         pushl %eax
         movl current,%eax
         cmpl $0,state(%eax)             # state
@@ -206,16 +206,20 @@ sys_execve:
 	ret
 
 .align 2
-sys_fork:
+sys_fork: # 进来之前是通过了系统调用，已经压栈了ds es fs edx ecx ebx
 	call find_empty_process
-	testl %eax, %eax
-	js 1f
+	testl %eax, %eax    # 返回eax
+	js 1f 				# js （Jump if Sign）是一个条件跳转指令，它会检查符号标志（SF）的状态。
+          				# 执行逻辑：如果 SF 被设置（即为1，表示最近的算术或逻辑操作的结果是负数），则跳转到指定的标签
+						# find_empty_process 返回 -EAGAIN 是-11, 表示任务数组中已经没空位置了
 	push %gs
 	pushl %esi
 	pushl %edi
 	pushl %ebp
-	pushl %eax
-	call copy_process
+	pushl %eax			# 这里的eax就是find_empty_process找到的task[]数组内空闲的下标
+	call copy_process	# 进去前压入顺序 gs esi edi ebp eax(nr)
+						# 加上syscall的压栈 ds es fs edx ecx ebx gs esi edi ebp eax(nr)
+						# cpu自动压栈下一条指令的地址作为ret地址
 	addl $20, %esp
 1:  ret
 

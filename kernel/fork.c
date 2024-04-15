@@ -37,9 +37,13 @@ repeat:
     if ((++last_pid) < 0)
         last_pid = 1;
     for (i = 0; i < NR_TASKS; i++)
+        // 从1开始找pid，1 2 3 4 5 ... 在task[]中如果不存在（没连续起来 1 2 4 5）
+        // 那么for就会一直在last_pid=3的地方循环下去，找有没有pid为3的
         if (task[i] && task[i]->pid == last_pid)
             goto repeat;
+    // 跑到这里的话就是找完了task都没有pid=3的，说明3可以用，这时候last_pid固定了
     for (i = 1; i < NR_TASKS; i++)
+        // 从1开始找task[i]为空的下标，如果有就返回。
         if (!task[i])
             return i;
 
@@ -76,11 +80,17 @@ int copy_mem(int nr, struct task_struct *p)
  * information (task[nr]) and sets up the necessary registers. It
  * also copies the data segment in it's entriety.
  */
-int copy_process(int nr, long ebp, long edi, long esi, long gs, long none,
-		long ebx, long ecx, long edx,
+int copy_process(int nr, long ebp, long edi, long esi, long gs, long none, // 这个none是call的返回地址压栈
+		long ebx, long ecx, long edx, //这一行和下面一行是system_call压栈的
 		long fs, long es, long ds,
-		long eip, long cs, long eflags, long esp, long ss)
-{
+		long eip, long cs, long eflags, long esp, long ss) // 用户进程由用户态切换成内核态时，硬件上自动将指定寄存器压入栈
+        // 最后eip cs eflags esp ss这几个参数是int指令执行的时候cpu自动压栈的
+        // 如果没有执行级别的转换，最后两个esp和ss是不用压栈的，因为可以直接用原来的栈，就不用开新栈了
+        // 可是在main函数中，我们不是还在内核代码中吗？
+        // 可以看main函数进fork的上一行，执行了move_to_user_mode()，进入了用户态
+        // 那么cpu是怎么判断我们在用户态的呢？
+        // 
+{ 
     struct task_struct *p;
     int i;
     struct file *f;
@@ -96,7 +106,7 @@ int copy_process(int nr, long ebp, long edi, long esi, long gs, long none,
      */
     *p = *current;
     p->state = TASK_UNINTERRUPTIBLE;
-    p->pid = last_pid;
+    p->pid = last_pid;          // 在这里直接用上一个函数计算的last_pid
     p->father = current->pid;
     p->counter = p->priority;
     p->signal = 0;

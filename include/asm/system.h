@@ -27,6 +27,19 @@
                 // pushl $0x0f 把当前局部空间代码段选择符入栈。
                 // 用户代码段的选择符 0x000f（RPL=3，局部表，代码段）
                 // pushl $0x17是栈段选择子
+                // 切换权限重点在这4行：
+                //     pushl $0x0f
+                //     pushl $1f
+                //     iret
+                //     1:
+                //  首先，0x0f是段选择符，其中RPL也就是权限是3=用户态
+                //  然后段选择符后面加上1f的偏移，也就是第四行1:的偏移，形成一个完整的地址
+                //  iret就pop出这个地址跳转过去，切换到了用户态
+                //  iret和ret不同就在于是interrupt ret，专门为中断准备的，考虑了完整的现场恢复
+                //  就像call和ret对应一样，call压栈函数返回地址，ret弹出这个地址返回
+                //  int和iret对应，int压栈eip cs eflags (esp ss 如果有权限切换的话)
+                //  iret的时候就pop出这些参数，恢复eflags、cs、ip寄存器的值
+                //  如果 IRET 发现堆栈中的 CS 寄存器的 RPL 与当前的 CPL 不同，这意味着发生了特权级的变化，就继续弹出ss和esp
 
 #define sti()  __asm__("sti"::)
 #define cli()  __asm__("cli"::)

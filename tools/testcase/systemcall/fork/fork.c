@@ -100,7 +100,7 @@ static int d_copy_process(int nr, unsigned long ebp,
      */
     *p = *current;
     p->state          = TASK_UNINTERRUPTIBLE;
-    p->pid            = last_pid;
+    p->pid            = last_pid;  // 在这里直接使用
     p->father         = current->pid;
     p->counter        = p->priority;
     p->signal         = 0;
