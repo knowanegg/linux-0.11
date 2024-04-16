@@ -377,8 +377,8 @@ gdt_descr:                   # 这只是一个描述符，只有一个描述符�
 	.long gdt                # magic number, but it works for me:^)
                              # 这里指向真正的表偏移
 	.align 8
-idt:
-	.fill 256,8,0            # IDT is uninitialized
+idt:  
+	.fill 256,8,0            # IDT is uninitialized 0x54b8
 	                         # 用0填满256个长度为8的表
 
 gdt:                         # 已经设计好的gdt表
@@ -392,7 +392,7 @@ gdt:                         # 已经设计好的gdt表
 段基址（Base Address）：0x00000000，表明段的起始地址在内存的0位置。
 段界限（Limit）：0x0000ffff，段界限的单位取决于G（Granularity）标志位的设置，此处表示这个段可以访问前1MB的内存（若G=1，则以4KB为单位，实际大小需乘以4KB）。
 标志（Flags）：0x00c09a中，9A 代表了段的类型和访问权限，其中：
-
+*/
 # a=0x1010
 # 2=0x0010
 # 差别在可执行位

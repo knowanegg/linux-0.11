@@ -1,0 +1,27 @@
+#
+# Block device drivers
+#
+menu "Block Device Drivers"
+
+config RAMDISK
+	bool "Ramdisk"
+	help
+	  Virtual hard-disk on RAM.
+
+config FLOPPY
+	bool "Floppy"
+	help
+	  Floppy disk.
+
+config HARDDISK
+	bool "Hard-disk"
+	help
+	  Hard disk
+
+config HD_TYPE
+	bool "Support multi disk type"
+	help
+	  Disk type.
+
+endmenu
+ 

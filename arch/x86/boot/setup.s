@@ -51,7 +51,7 @@ _start:
 	int	$0x10		# save it in known place, con_init fetches
 	mov	%dx, %ds:0	# 将结果写入0x90000
 # Get memory size (extended mem, kB) 获取内存信息
-
+# 这个 BIOS 中断调用返回系统中可用的扩展内存的大小（以 KB 为单位）。
 	mov	$0x88, %ah  # 
 	int	$0x15
 	mov	%ax, %ds:2  
@@ -142,10 +142,9 @@ is_disk1:
 	mov	$0x0000, %ax
 	cld			# 'direction'=0, movs moves forward
 do_move:
-	mov	%ax, %es	# destination segment 这时候ax是0x0000
-					# 为什么硬盘0x1000处会有系统？因为在前面bootsect中read_it了
-	add	$0x1000, %ax # 每次加0x1000
-	cmp	$0x9000, %ax # 如果到了0x9000就结束移动
+	mov	%ax, %es	# destination segment
+	add	$0x1000, %ax
+	cmp	$0x9000, %ax
 	jz	end_move
 	mov	%ax, %ds	# source segment
 	sub	%di, %di    # 清零？这里应该用xor也可以吧

@@ -1,0 +1,164 @@
+
+;; Function printk (printk, funcdef_no=0, decl_uid=999, cgraph_uid=1, symbol_order=1)
+
+starting the processing of deferred insns
+ending the processing of deferred insns
+
+
+printk
+
+Dataflow summary:
+;;  fully invalidated by EH 	 0 [ax] 1 [dx] 2 [cx] 8 [st] 9 [st(1)] 10 [st(2)] 11 [st(3)] 12 [st(4)] 13 [st(5)] 14 [st(6)] 15 [st(7)] 17 [flags] 18 [fpsr] 20 [xmm0] 21 [xmm1] 22 [xmm2] 23 [xmm3] 24 [xmm4] 25 [xmm5] 26 [xmm6] 27 [xmm7] 28 [mm0] 29 [mm1] 30 [mm2] 31 [mm3] 32 [mm4] 33 [mm5] 34 [mm6] 35 [mm7] 36 [r8] 37 [r9] 38 [r10] 39 [r11] 40 [r12] 41 [r13] 42 [r14] 43 [r15] 44 [xmm8] 45 [xmm9] 46 [xmm10] 47 [xmm11] 48 [xmm12] 49 [xmm13] 50 [xmm14] 51 [xmm15] 52 [xmm16] 53 [xmm17] 54 [xmm18] 55 [xmm19] 56 [xmm20] 57 [xmm21] 58 [xmm22] 59 [xmm23] 60 [xmm24] 61 [xmm25] 62 [xmm26] 63 [xmm27] 64 [xmm28] 65 [xmm29] 66 [xmm30] 67 [xmm31] 68 [k0] 69 [k1] 70 [k2] 71 [k3] 72 [k4] 73 [k5] 74 [k6] 75 [k7]
+;;  hardware regs used 	 7 [sp]
+;;  regular block artificial uses 	 7 [sp]
+;;  eh block artificial uses 	 7 [sp] 16 [argp]
+;;  entry block defs 	 0 [ax] 1 [dx] 2 [cx] 3 [bx] 7 [sp]
+;;  exit block uses 	 0 [ax] 3 [bx] 7 [sp]
+;;  regs ever live 	 0 [ax] 1 [dx] 2 [cx] 3 [bx] 7 [sp] 17 [flags]
+;;  ref usage 	r0={5d,5u} r1={6d,3u} r2={3d} r3={4d,4u} r7={10d,23u} r8={1d} r9={1d} r10={1d} r11={1d} r12={1d} r13={1d} r14={1d} r15={1d} r17={7d} r18={1d} r20={1d} r21={1d} r22={1d} r23={1d} r24={1d} r25={1d} r26={1d} r27={1d} r28={1d} r29={1d} r30={1d} r31={1d} r32={1d} r33={1d} r34={1d} r35={1d} r36={1d} r37={1d} r38={1d} r39={1d} r40={1d} r41={1d} r42={1d} r43={1d} r44={1d} r45={1d} r46={1d} r47={1d} r48={1d} r49={1d} r50={1d} r51={1d} r52={1d} r53={1d} r54={1d} r55={1d} r56={1d} r57={1d} r58={1d} r59={1d} r60={1d} r61={1d} r62={1d} r63={1d} r64={1d} r65={1d} r66={1d} r67={1d} r68={1d} r69={1d} r70={1d} r71={1d} r72={1d} r73={1d} r74={1d} r75={1d} 
+;;    total ref usage 135{100d,35u,0e} in 22{21 regular + 1 call} insns.
+(note 1 0 3 NOTE_INSN_DELETED)
+(note 3 1 32 2 [bb 2] NOTE_INSN_BASIC_BLOCK)
+(insn/f 32 3 33 2 (set (mem:SI (pre_dec:SI (reg/f:SI 7 sp)) [0  S4 A8])
+        (reg:SI 3 bx)) "kernel/printk.c":21:1 -1
+     (nil))
+(insn/f 33 32 34 2 (parallel [
+            (set (reg/f:SI 7 sp)
+                (plus:SI (reg/f:SI 7 sp)
+                    (const_int -24 [0xffffffffffffffe8])))
+            (clobber (reg:CC 17 flags))
+            (clobber (mem:BLK (scratch) [0  A8]))
+        ]) "kernel/printk.c":21:1 -1
+     (expr_list:REG_CFA_ADJUST_CFA (set (reg/f:SI 7 sp)
+            (plus:SI (reg/f:SI 7 sp)
+                (const_int -24 [0xffffffffffffffe8])))
+        (nil)))
+(note 34 33 30 2 NOTE_INSN_PROLOGUE_END)
+(insn/f 30 34 2 2 (parallel [
+            (set (reg:SI 0 ax [82])
+                (unspec:SI [
+                        (const_int 0 [0])
+                    ] UNSPEC_SET_GOT))
+            (clobber (reg:CC 17 flags))
+        ]) 846 {*set_got}
+     (expr_list:REG_CFA_FLUSH_QUEUE (nil)
+        (nil)))
+(note 2 30 40 2 NOTE_INSN_FUNCTION_BEG)
+(insn 40 2 6 2 (set (reg:SI 1 dx [86])
+        (plus:SI (reg/f:SI 7 sp)
+            (const_int 36 [0x24]))) "kernel/printk.c":25:5 205 {*leasi}
+     (nil))
+(insn 6 40 7 2 (set (mem/f/c:SI (plus:SI (reg/f:SI 7 sp)
+                (const_int 12 [0xc])) [1 args+0 S4 A32])
+        (reg:SI 1 dx [86])) "kernel/printk.c":25:5 75 {*movsi_internal}
+     (nil))
+(insn 7 6 8 2 (set (reg/f:SI 1 dx [orig:83 fmt.0_1 ] [83])
+        (mem/f/c:SI (plus:SI (reg/f:SI 7 sp)
+                (const_int 32 [0x20])) [1 fmt+0 S4 A32])) "kernel/printk.c":26:9 75 {*movsi_internal}
+     (nil))
+(insn 8 7 9 2 (parallel [
+            (set (reg/f:SI 7 sp)
+                (plus:SI (reg/f:SI 7 sp)
+                    (const_int -4 [0xfffffffffffffffc])))
+            (clobber (reg:CC 17 flags))
+        ]) "kernel/printk.c":26:9 209 {*addsi_1}
+     (expr_list:REG_ARGS_SIZE (const_int 4 [0x4])
+        (nil)))
+(insn 9 8 10 2 (set (mem/f:SI (pre_dec:SI (reg/f:SI 7 sp)) [1  S4 A32])
+        (mem/f/c:SI (plus:SI (reg/f:SI 7 sp)
+                (const_int 16 [0x10])) [1 args+0 S4 A32])) "kernel/printk.c":26:9 54 {*pushsi2}
+     (expr_list:REG_ARGS_SIZE (const_int 8 [0x8])
+        (nil)))
+(insn 10 9 11 2 (set (mem/f:SI (pre_dec:SI (reg/f:SI 7 sp)) [1  S4 A32])
+        (reg/f:SI 1 dx [orig:83 fmt.0_1 ] [83])) "kernel/printk.c":26:9 54 {*pushsi2}
+     (expr_list:REG_ARGS_SIZE (const_int 12 [0xc])
+        (nil)))
+(insn 11 10 12 2 (set (reg/f:SI 1 dx [87])
+        (plus:SI (reg:SI 0 ax [82])
+            (const:SI (unspec:SI [
+                        (symbol_ref:SI ("buf") [flags 0x2]  <var_decl 0x7726f96dab40 buf>)
+                    ] UNSPEC_GOTOFF)))) "kernel/printk.c":26:9 205 {*leasi}
+     (expr_list:REG_EQUAL (symbol_ref:SI ("buf") [flags 0x2]  <var_decl 0x7726f96dab40 buf>)
+        (nil)))
+(insn 12 11 13 2 (set (mem/f:SI (pre_dec:SI (reg/f:SI 7 sp)) [1  S4 A32])
+        (reg/f:SI 1 dx [87])) "kernel/printk.c":26:9 54 {*pushsi2}
+     (expr_list:REG_ARGS_SIZE (const_int 16 [0x10])
+        (nil)))
+(insn 13 12 14 2 (set (reg:SI 3 bx)
+        (reg:SI 0 ax [82])) "kernel/printk.c":26:9 75 {*movsi_internal}
+     (nil))
+(call_insn 14 13 15 2 (set (reg:SI 0 ax)
+        (call (mem:QI (symbol_ref:SI ("vsprintf") [flags 0x41]  <function_decl 0x7726f7cd2b00 vsprintf>) [0 vsprintf S1 A8])
+            (const_int 16 [0x10]))) "kernel/printk.c":26:9 823 {*call_value}
+     (nil)
+    (expr_list (use (reg:SI 3 bx))
+        (nil)))
+(insn 15 14 17 2 (parallel [
+            (set (reg/f:SI 7 sp)
+                (plus:SI (reg/f:SI 7 sp)
+                    (const_int 16 [0x10])))
+            (clobber (reg:CC 17 flags))
+        ]) "kernel/printk.c":26:9 209 {*addsi_1}
+     (expr_list:REG_ARGS_SIZE (const_int 0 [0])
+        (nil)))
+(insn 17 15 18 2 (set (mem/c:SI (plus:SI (reg/f:SI 7 sp)
+                (const_int 8 [0x8])) [2 i+0 S4 A32])
+        (reg:SI 0 ax [88])) "kernel/printk.c":26:9 75 {*movsi_internal}
+     (nil))
+(insn 18 17 19 2 (set (reg:SI 3 bx [89])
+        (mem/c:SI (plus:SI (reg/f:SI 7 sp)
+                (const_int 8 [0x8])) [2 i+0 S4 A32])) "kernel/printk.c":29:5 75 {*movsi_internal}
+     (nil))
+(insn 19 18 20 2 (parallel [
+            (asm_operands/v ("push %%fs
+	push %%ds
+	pop %%fs
+	pushl %0
+	pushl $buf
+	pushl $0
+	call tty_write
+	addl $8, %%esp
+	popl %0
+	pop %%fs") ("") 0 [
+                    (reg:SI 3 bx [89])
+                ]
+                 [
+                    (asm_input:SI ("r") kernel/printk.c:29)
+                ]
+                 [] kernel/printk.c:29)
+            (clobber (reg:SI 1 dx))
+            (clobber (reg:SI 2 cx))
+            (clobber (reg:SI 0 ax))
+            (clobber (reg:CC 17 flags))
+        ]) "kernel/printk.c":29:5 -1
+     (nil))
+(insn 20 19 28 2 (set (reg:SI 0 ax [orig:84 _6 ] [84])
+        (mem/c:SI (plus:SI (reg/f:SI 7 sp)
+                (const_int 8 [0x8])) [2 i+0 S4 A32])) "kernel/printk.c":41:12 75 {*movsi_internal}
+     (nil))
+(insn 28 20 35 2 (use (reg/i:SI 0 ax)) "kernel/printk.c":42:1 -1
+     (nil))
+(note 35 28 36 2 NOTE_INSN_EPILOGUE_BEG)
+(insn/f 36 35 37 2 (parallel [
+            (set (reg/f:SI 7 sp)
+                (plus:SI (reg/f:SI 7 sp)
+                    (const_int 24 [0x18])))
+            (clobber (reg:CC 17 flags))
+            (clobber (mem:BLK (scratch) [0  A8]))
+        ]) "kernel/printk.c":42:1 -1
+     (expr_list:REG_CFA_ADJUST_CFA (set (reg/f:SI 7 sp)
+            (plus:SI (reg/f:SI 7 sp)
+                (const_int 24 [0x18])))
+        (nil)))
+(insn/f 37 36 38 2 (set (reg:SI 3 bx)
+        (mem:SI (post_inc:SI (reg/f:SI 7 sp)) [0  S4 A8])) "kernel/printk.c":42:1 -1
+     (expr_list:REG_CFA_ADJUST_CFA (set (reg/f:SI 7 sp)
+            (plus:SI (reg/f:SI 7 sp)
+                (const_int 4 [0x4])))
+        (expr_list:REG_CFA_RESTORE (reg:SI 3 bx)
+            (nil))))
+(jump_insn 38 37 39 2 (simple_return) "kernel/printk.c":42:1 -1
+     (nil)
+ -> simple_return)
+(barrier 39 38 31)
+(note 31 39 0 NOTE_INSN_DELETED)

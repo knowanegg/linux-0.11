@@ -1,4 +1,3 @@
-
 /*
  *  linux/init/main.c
  *
@@ -152,23 +151,25 @@ int main(void)
     // (*(struct drive_info *)0x90080)
     drive_info = DRIVE_INFO;
     // 这个函数就在上面定义的
-    memory_detect();
+    memory_detect(); // 计算可用内存和buffer地址
     
-    mem_init(main_memory_start, memory_end);
-    trap_init();
-    blk_dev_init();
-    chr_dev_init();
-    tty_init();
-    time_init();
-    sched_init();
+    // 内存初始化，把mem_map中所有内存（包括buffer）页标为used
+    // 然后再把mem_map中buffer以外的可用内存页标为0
+    mem_init(main_memory_start, memory_end); 
+    trap_init(); // 陷阱门初始化
+    blk_dev_init(); // 块设备初始化
+    chr_dev_init(); // 字符设备初始化，空的，没实现也没调用
+    tty_init(); // 初始化串口
+    time_init(); // 初始化时间，就在这个文件里面实现，从CMOS里面读
+    sched_init(); // buffer_memory_end 是前面计算的前面用作buffer的内存末端
     buffer_init(buffer_memory_end);
 #ifdef CONFIG_HARDDISK
-    hd_init();
+    hd_init(); // 硬盘初始化
 #endif
 #ifdef CONFIG_FLOPPY
-    floppy_init();
+    floppy_init(); // 磁盘初始化
 #endif
-    sti();
+    sti(); // Set Interrupt 开中断
 #ifdef CONFIG_DEBUG_KERNEL_LATER
     debug_on_kernel_later();
 #endif
@@ -176,7 +177,10 @@ int main(void)
     defined (CONFIG_DEBUG_USERLAND_SHELL)
     debug_kernel_on_userland_stage();
 #endif
+    // 内联汇编
     move_to_user_mode();
+    // 这里fork就在此文件最开始处中声明了inline和系统调用
+    // 但是具体实现在sys_fork
     if (!fork()) {   /* we count on this going ok */
         init();
     }

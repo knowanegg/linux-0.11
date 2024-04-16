@@ -1,0 +1,991 @@
+
+;; Function dupfd (dupfd, funcdef_no=1, decl_uid=1324, cgraph_uid=2, symbol_order=1)
+
+
+
+dupfd
+
+Dataflow summary:
+;;  fully invalidated by EH 	 0 [ax] 1 [dx] 2 [cx] 8 [st] 9 [st(1)] 10 [st(2)] 11 [st(3)] 12 [st(4)] 13 [st(5)] 14 [st(6)] 15 [st(7)] 17 [flags] 18 [fpsr] 20 [xmm0] 21 [xmm1] 22 [xmm2] 23 [xmm3] 24 [xmm4] 25 [xmm5] 26 [xmm6] 27 [xmm7] 28 [mm0] 29 [mm1] 30 [mm2] 31 [mm3] 32 [mm4] 33 [mm5] 34 [mm6] 35 [mm7] 36 [r8] 37 [r9] 38 [r10] 39 [r11] 40 [r12] 41 [r13] 42 [r14] 43 [r15] 44 [xmm8] 45 [xmm9] 46 [xmm10] 47 [xmm11] 48 [xmm12] 49 [xmm13] 50 [xmm14] 51 [xmm15] 52 [xmm16] 53 [xmm17] 54 [xmm18] 55 [xmm19] 56 [xmm20] 57 [xmm21] 58 [xmm22] 59 [xmm23] 60 [xmm24] 61 [xmm25] 62 [xmm26] 63 [xmm27] 64 [xmm28] 65 [xmm29] 66 [xmm30] 67 [xmm31] 68 [k0] 69 [k1] 70 [k2] 71 [k3] 72 [k4] 73 [k5] 74 [k6] 75 [k7]
+;;  hardware regs used 	
+;;  regular block artificial uses 	 6 [bp] 7 [sp] 16 [argp] 19 [frame]
+;;  eh block artificial uses 	 6 [bp] 7 [sp] 16 [argp] 19 [frame]
+;;  entry block defs 	 0 [ax] 1 [dx] 2 [cx] 6 [bp] 7 [sp] 16 [argp] 19 [frame]
+;;  exit block uses 	 0 [ax] 6 [bp] 7 [sp] 19 [frame]
+;;  regs ever live 	 0 [ax] 17 [flags]
+;;  ref usage 	r0={2d,2u} r1={1d} r2={1d} r6={1d,16u} r7={1d,16u} r16={1d,28u,5e} r17={15d,6u} r19={1d,16u} r82={6u} r83={1d,1u} r84={1d,1u} r85={1d,1u} r86={1d,1u} r87={1d,1u} r88={1d,1u} r89={1d,1u} r90={1d,1u} r91={1d,1u} r92={1d,1u} r93={1d,1u} r94={1d,1u} r95={1d,2u} r96={1d,1u} r97={1d,2u} r98={1d,1u} r99={1d,1u} r100={4d,1u} r101={1d,1u} r102={1d,1u} r103={1d,1u} r104={1d,1u} r105={1d,1u} r106={1d,1u} r107={1d,1u} r108={1d,1u} r109={1d,1u} r110={1d,1u} r111={1d,1u} r112={1d,1u} r113={1d,1u} r114={1d,1u} r115={1d,1u} r116={1d,1u} r117={1d,1u} r118={1d,1u} r119={1d,1u} 
+;;    total ref usage 197{63d,129u,5e} in 64{64 regular + 0 call} insns.
+(note 1 0 3 NOTE_INSN_DELETED)
+(note 3 1 2 2 [bb 2] NOTE_INSN_BASIC_BLOCK)
+(note 2 3 7 2 NOTE_INSN_FUNCTION_BEG)
+(insn 7 2 8 2 (set (reg:CC 17 flags)
+        (compare:CC (mem/c:SI (reg/f:SI 16 argp) [6 fd+0 S4 A32])
+            (const_int 19 [0x13]))) "fs/fcntl.c":17:8 11 {*cmpsi_1}
+     (nil))
+(jump_insn 8 7 9 2 (set (pc)
+        (if_then_else (gtu (reg:CC 17 flags)
+                (const_int 0 [0]))
+            (label_ref 17)
+            (pc))) "fs/fcntl.c":17:8 806 {*jcc}
+     (nil)
+ -> 17)
+(note 9 8 10 3 [bb 3] NOTE_INSN_BASIC_BLOCK)
+(insn 10 9 11 3 (set (reg/f:SI 102)
+        (mem/u/c:SI (plus:SI (reg:SI 82)
+                (const:SI (unspec:SI [
+                            (symbol_ref:SI ("current") [flags 0x40]  <var_decl 0x7bd51e52e120 current>)
+                        ] UNSPEC_GOT))) [15  S4 A8])) "fs/fcntl.c":17:34 75 {*movsi_internal}
+     (nil))
+(insn 11 10 12 3 (set (reg/f:SI 83 [ current.0_1 ])
+        (mem/f/c:SI (reg/f:SI 102) [1 current+0 S4 A32])) "fs/fcntl.c":17:34 75 {*movsi_internal}
+     (nil))
+(insn 12 11 13 3 (set (reg:SI 104)
+        (mem/c:SI (reg/f:SI 16 argp) [6 fd+0 S4 A32])) "fs/fcntl.c":17:40 75 {*movsi_internal}
+     (nil))
+(insn 13 12 14 3 (parallel [
+            (set (reg:SI 103)
+                (plus:SI (reg:SI 104)
+                    (const_int 160 [0xa0])))
+            (clobber (reg:CC 17 flags))
+        ]) "fs/fcntl.c":17:40 209 {*addsi_1}
+     (expr_list:REG_EQUAL (plus:SI (mem/c:SI (reg/f:SI 16 argp) [6 fd+0 S4 A32])
+            (const_int 160 [0xa0]))
+        (nil)))
+(insn 14 13 15 3 (set (reg/f:SI 84 [ _2 ])
+        (mem/f:SI (plus:SI (mult:SI (reg:SI 103)
+                    (const_int 4 [0x4]))
+                (reg/f:SI 83 [ current.0_1 ])) [10 current.0_1->filp[fd_22(D)]+0 S4 A32])) "fs/fcntl.c":17:40 75 {*movsi_internal}
+     (nil))
+(insn 15 14 16 3 (set (reg:CCZ 17 flags)
+        (compare:CCZ (reg/f:SI 84 [ _2 ])
+            (const_int 0 [0]))) "fs/fcntl.c":17:23 7 {*cmpsi_ccno_1}
+     (nil))
+(jump_insn 16 15 17 3 (set (pc)
+        (if_then_else (ne (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref 22)
+            (pc))) "fs/fcntl.c":17:23 806 {*jcc}
+     (nil)
+ -> 22)
+(code_label 17 16 18 4 2 (nil) [1 uses])
+(note 18 17 19 4 [bb 4] NOTE_INSN_BASIC_BLOCK)
+(insn 19 18 109 4 (set (reg:SI 100 [ _20 ])
+        (const_int -9 [0xfffffffffffffff7])) "fs/fcntl.c":18:16 75 {*movsi_internal}
+     (nil))
+(jump_insn 109 19 110 4 (set (pc)
+        (label_ref 100)) "fs/fcntl.c":18:16 -1
+     (nil)
+ -> 100)
+(barrier 110 109 22)
+(code_label 22 110 23 5 3 (nil) [1 uses])
+(note 23 22 26 5 [bb 5] NOTE_INSN_BASIC_BLOCK)
+(insn 26 23 27 5 (set (reg:CC 17 flags)
+        (compare:CC (mem/c:SI (plus:SI (reg/f:SI 16 argp)
+                    (const_int 4 [0x4])) [6 arg+0 S4 A32])
+            (const_int 19 [0x13]))) "fs/fcntl.c":19:8 11 {*cmpsi_1}
+     (nil))
+(jump_insn 27 26 28 5 (set (pc)
+        (if_then_else (leu (reg:CC 17 flags)
+                (const_int 0 [0]))
+            (label_ref 32)
+            (pc))) "fs/fcntl.c":19:8 806 {*jcc}
+     (nil)
+ -> 32)
+(note 28 27 29 6 [bb 6] NOTE_INSN_BASIC_BLOCK)
+(insn 29 28 111 6 (set (reg:SI 100 [ _20 ])
+        (const_int -22 [0xffffffffffffffea])) "fs/fcntl.c":20:16 75 {*movsi_internal}
+     (nil))
+(jump_insn 111 29 112 6 (set (pc)
+        (label_ref 100)) "fs/fcntl.c":20:16 -1
+     (nil)
+ -> 100)
+(barrier 112 111 32)
+(code_label 32 112 33 7 5 (nil) [1 uses])
+(note 33 32 113 7 [bb 7] NOTE_INSN_BASIC_BLOCK)
+(jump_insn 113 33 114 7 (set (pc)
+        (label_ref 52)) "fs/fcntl.c":21:11 -1
+     (nil)
+ -> 52)
+(barrier 114 113 54)
+(code_label 54 114 36 8 9 (nil) [1 uses])
+(note 36 54 37 8 [bb 8] NOTE_INSN_BASIC_BLOCK)
+(insn 37 36 38 8 (set (reg/f:SI 105)
+        (mem/u/c:SI (plus:SI (reg:SI 82)
+                (const:SI (unspec:SI [
+                            (symbol_ref:SI ("current") [flags 0x40]  <var_decl 0x7bd51e52e120 current>)
+                        ] UNSPEC_GOT))) [15  S4 A8])) "fs/fcntl.c":22:20 75 {*movsi_internal}
+     (nil))
+(insn 38 37 39 8 (set (reg/f:SI 85 [ current.1_3 ])
+        (mem/f/c:SI (reg/f:SI 105) [1 current+0 S4 A32])) "fs/fcntl.c":22:20 75 {*movsi_internal}
+     (nil))
+(insn 39 38 40 8 (set (reg:SI 107)
+        (mem/c:SI (plus:SI (reg/f:SI 16 argp)
+                (const_int 4 [0x4])) [6 arg+0 S4 A32])) "fs/fcntl.c":22:26 75 {*movsi_internal}
+     (nil))
+(insn 40 39 41 8 (parallel [
+            (set (reg:SI 106)
+                (plus:SI (reg:SI 107)
+                    (const_int 160 [0xa0])))
+            (clobber (reg:CC 17 flags))
+        ]) "fs/fcntl.c":22:26 209 {*addsi_1}
+     (expr_list:REG_EQUAL (plus:SI (mem/c:SI (plus:SI (reg/f:SI 16 argp)
+                    (const_int 4 [0x4])) [6 arg+0 S4 A32])
+            (const_int 160 [0xa0]))
+        (nil)))
+(insn 41 40 42 8 (set (reg/f:SI 86 [ _4 ])
+        (mem/f:SI (plus:SI (mult:SI (reg:SI 106)
+                    (const_int 4 [0x4]))
+                (reg/f:SI 85 [ current.1_3 ])) [10 current.1_3->filp[arg_19]+0 S4 A32])) "fs/fcntl.c":22:26 75 {*movsi_internal}
+     (nil))
+(insn 42 41 43 8 (set (reg:CCZ 17 flags)
+        (compare:CCZ (reg/f:SI 86 [ _4 ])
+            (const_int 0 [0]))) "fs/fcntl.c":22:12 7 {*cmpsi_ccno_1}
+     (nil))
+(jump_insn 43 42 44 8 (set (pc)
+        (if_then_else (eq (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref:SI 121)
+            (pc))) "fs/fcntl.c":22:12 806 {*jcc}
+     (nil)
+ -> 121)
+(note 44 43 45 9 [bb 9] NOTE_INSN_BASIC_BLOCK)
+(insn 45 44 52 9 (parallel [
+            (set (mem/c:SI (plus:SI (reg/f:SI 16 argp)
+                        (const_int 4 [0x4])) [6 arg+0 S4 A32])
+                (plus:SI (mem/c:SI (plus:SI (reg/f:SI 16 argp)
+                            (const_int 4 [0x4])) [6 arg+0 S4 A32])
+                    (const_int 1 [0x1])))
+            (clobber (reg:CC 17 flags))
+        ]) "fs/fcntl.c":23:16 209 {*addsi_1}
+     (nil))
+(code_label 52 45 53 10 6 (nil) [1 uses])
+(note 53 52 57 10 [bb 10] NOTE_INSN_BASIC_BLOCK)
+(insn 57 53 58 10 (set (reg:CC 17 flags)
+        (compare:CC (mem/c:SI (plus:SI (reg/f:SI 16 argp)
+                    (const_int 4 [0x4])) [6 arg+0 S4 A32])
+            (const_int 19 [0x13]))) "fs/fcntl.c":21:16 11 {*cmpsi_1}
+     (nil))
+(jump_insn 58 57 117 10 (set (pc)
+        (if_then_else (leu (reg:CC 17 flags)
+                (const_int 0 [0]))
+            (label_ref 54)
+            (pc))) "fs/fcntl.c":21:16 806 {*jcc}
+     (nil)
+ -> 54)
+(note 117 58 118 15 [bb 15] NOTE_INSN_BASIC_BLOCK)
+(jump_insn 118 117 119 15 (set (pc)
+        (label_ref 59)) -1
+     (nil)
+ -> 59)
+(barrier 119 118 121)
+(code_label 121 119 120 16 11 (nil) [1 uses])
+(note 120 121 122 16 [bb 16] NOTE_INSN_BASIC_BLOCK)
+(insn 122 120 59 16 (const_int 0 [0]) "fs/fcntl.c":25:13 -1
+     (nil))
+(code_label 59 122 60 11 8 (nil) [1 uses])
+(note 60 59 63 11 [bb 11] NOTE_INSN_BASIC_BLOCK)
+(insn 63 60 64 11 (set (reg:CC 17 flags)
+        (compare:CC (mem/c:SI (plus:SI (reg/f:SI 16 argp)
+                    (const_int 4 [0x4])) [6 arg+0 S4 A32])
+            (const_int 19 [0x13]))) "fs/fcntl.c":26:8 11 {*cmpsi_1}
+     (nil))
+(jump_insn 64 63 65 11 (set (pc)
+        (if_then_else (leu (reg:CC 17 flags)
+                (const_int 0 [0]))
+            (label_ref 69)
+            (pc))) "fs/fcntl.c":26:8 806 {*jcc}
+     (nil)
+ -> 69)
+(note 65 64 66 12 [bb 12] NOTE_INSN_BASIC_BLOCK)
+(insn 66 65 115 12 (set (reg:SI 100 [ _20 ])
+        (const_int -24 [0xffffffffffffffe8])) "fs/fcntl.c":27:16 75 {*movsi_internal}
+     (nil))
+(jump_insn 115 66 116 12 (set (pc)
+        (label_ref 100)) "fs/fcntl.c":27:16 -1
+     (nil)
+ -> 100)
+(barrier 116 115 69)
+(code_label 69 116 70 13 10 (nil) [1 uses])
+(note 70 69 71 13 [bb 13] NOTE_INSN_BASIC_BLOCK)
+(insn 71 70 72 13 (set (reg/f:SI 108)
+        (mem/u/c:SI (plus:SI (reg:SI 82)
+                (const:SI (unspec:SI [
+                            (symbol_ref:SI ("current") [flags 0x40]  <var_decl 0x7bd51e52e120 current>)
+                        ] UNSPEC_GOT))) [15  S4 A8])) "fs/fcntl.c":28:28 75 {*movsi_internal}
+     (nil))
+(insn 72 71 73 13 (set (reg/f:SI 87 [ current.2_5 ])
+        (mem/f/c:SI (reg/f:SI 108) [1 current+0 S4 A32])) "fs/fcntl.c":28:28 75 {*movsi_internal}
+     (nil))
+(insn 73 72 74 13 (set (reg:SI 88 [ _6 ])
+        (mem:SI (plus:SI (reg/f:SI 87 [ current.2_5 ])
+                (const_int 636 [0x27c])) [3 current.2_5->close_on_exec+0 S4 A32])) "fs/fcntl.c":28:28 75 {*movsi_internal}
+     (nil))
+(insn 74 73 75 13 (set (reg:SI 109)
+        (mem/c:SI (plus:SI (reg/f:SI 16 argp)
+                (const_int 4 [0x4])) [6 arg+0 S4 A32])) "fs/fcntl.c":28:35 75 {*movsi_internal}
+     (nil))
+(insn 75 74 76 13 (set (reg:SI 110)
+        (const_int 1 [0x1])) "fs/fcntl.c":28:35 75 {*movsi_internal}
+     (nil))
+(insn 76 75 77 13 (parallel [
+            (set (reg:SI 89 [ _7 ])
+                (ashift:SI (reg:SI 110)
+                    (subreg:QI (reg:SI 109) 0)))
+            (clobber (reg:CC 17 flags))
+        ]) "fs/fcntl.c":28:35 655 {*ashlsi3_1}
+     (nil))
+(insn 77 76 78 13 (set (reg:SI 90 [ _8 ])
+        (not:SI (reg:SI 89 [ _7 ]))) "fs/fcntl.c":28:31 632 {*one_cmplsi2_1}
+     (nil))
+(insn 78 77 79 13 (set (reg:SI 91 [ _9 ])
+        (reg:SI 90 [ _8 ])) "fs/fcntl.c":28:31 75 {*movsi_internal}
+     (nil))
+(insn 79 78 80 13 (set (reg/f:SI 111)
+        (mem/u/c:SI (plus:SI (reg:SI 82)
+                (const:SI (unspec:SI [
+                            (symbol_ref:SI ("current") [flags 0x40]  <var_decl 0x7bd51e52e120 current>)
+                        ] UNSPEC_GOT))) [15  S4 A8])) "fs/fcntl.c":28:28 75 {*movsi_internal}
+     (nil))
+(insn 80 79 81 13 (set (reg/f:SI 92 [ current.3_10 ])
+        (mem/f/c:SI (reg/f:SI 111) [1 current+0 S4 A32])) "fs/fcntl.c":28:28 75 {*movsi_internal}
+     (nil))
+(insn 81 80 82 13 (parallel [
+            (set (reg:SI 93 [ _11 ])
+                (and:SI (reg:SI 88 [ _6 ])
+                    (reg:SI 91 [ _9 ])))
+            (clobber (reg:CC 17 flags))
+        ]) "fs/fcntl.c":28:28 490 {*andsi_1}
+     (nil))
+(insn 82 81 83 13 (set (mem:SI (plus:SI (reg/f:SI 92 [ current.3_10 ])
+                (const_int 636 [0x27c])) [3 current.3_10->close_on_exec+0 S4 A32])
+        (reg:SI 93 [ _11 ])) "fs/fcntl.c":28:28 75 {*movsi_internal}
+     (nil))
+(insn 83 82 84 13 (set (reg/f:SI 112)
+        (mem/u/c:SI (plus:SI (reg:SI 82)
+                (const:SI (unspec:SI [
+                            (symbol_ref:SI ("current") [flags 0x40]  <var_decl 0x7bd51e52e120 current>)
+                        ] UNSPEC_GOT))) [15  S4 A8])) "fs/fcntl.c":29:34 75 {*movsi_internal}
+     (nil))
+(insn 84 83 85 13 (set (reg/f:SI 94 [ current.4_12 ])
+        (mem/f/c:SI (reg/f:SI 112) [1 current+0 S4 A32])) "fs/fcntl.c":29:34 75 {*movsi_internal}
+     (nil))
+(insn 85 84 86 13 (set (reg/f:SI 113)
+        (mem/u/c:SI (plus:SI (reg:SI 82)
+                (const:SI (unspec:SI [
+                            (symbol_ref:SI ("current") [flags 0x40]  <var_decl 0x7bd51e52e120 current>)
+                        ] UNSPEC_GOT))) [15  S4 A8])) "fs/fcntl.c":29:13 75 {*movsi_internal}
+     (nil))
+(insn 86 85 87 13 (set (reg/f:SI 95 [ current.5_13 ])
+        (mem/f/c:SI (reg/f:SI 113) [1 current+0 S4 A32])) "fs/fcntl.c":29:13 75 {*movsi_internal}
+     (nil))
+(insn 87 86 88 13 (set (reg:SI 115)
+        (mem/c:SI (reg/f:SI 16 argp) [6 fd+0 S4 A32])) "fs/fcntl.c":29:40 75 {*movsi_internal}
+     (nil))
+(insn 88 87 89 13 (parallel [
+            (set (reg:SI 114)
+                (plus:SI (reg:SI 115)
+                    (const_int 160 [0xa0])))
+            (clobber (reg:CC 17 flags))
+        ]) "fs/fcntl.c":29:40 209 {*addsi_1}
+     (expr_list:REG_EQUAL (plus:SI (mem/c:SI (reg/f:SI 16 argp) [6 fd+0 S4 A32])
+            (const_int 160 [0xa0]))
+        (nil)))
+(insn 89 88 90 13 (set (reg/f:SI 96 [ _14 ])
+        (mem/f:SI (plus:SI (mult:SI (reg:SI 114)
+                    (const_int 4 [0x4]))
+                (reg/f:SI 94 [ current.4_12 ])) [10 current.4_12->filp[fd_22(D)]+0 S4 A32])) "fs/fcntl.c":29:40 75 {*movsi_internal}
+     (nil))
+(insn 90 89 91 13 (set (reg:SI 117)
+        (mem/c:SI (plus:SI (reg/f:SI 16 argp)
+                (const_int 4 [0x4])) [6 arg+0 S4 A32])) "fs/fcntl.c":29:25 75 {*movsi_internal}
+     (nil))
+(insn 91 90 92 13 (parallel [
+            (set (reg:SI 116)
+                (plus:SI (reg:SI 117)
+                    (const_int 160 [0xa0])))
+            (clobber (reg:CC 17 flags))
+        ]) "fs/fcntl.c":29:25 209 {*addsi_1}
+     (expr_list:REG_EQUAL (plus:SI (mem/c:SI (plus:SI (reg/f:SI 16 argp)
+                    (const_int 4 [0x4])) [6 arg+0 S4 A32])
+            (const_int 160 [0xa0]))
+        (nil)))
+(insn 92 91 93 13 (set (mem/f:SI (plus:SI (mult:SI (reg:SI 116)
+                    (const_int 4 [0x4]))
+                (reg/f:SI 95 [ current.5_13 ])) [10 current.5_13->filp[arg_19]+0 S4 A32])
+        (reg/f:SI 96 [ _14 ])) "fs/fcntl.c":29:25 75 {*movsi_internal}
+     (nil))
+(insn 93 92 94 13 (set (reg:SI 119)
+        (mem/c:SI (plus:SI (reg/f:SI 16 argp)
+                (const_int 4 [0x4])) [6 arg+0 S4 A32])) "fs/fcntl.c":29:19 75 {*movsi_internal}
+     (nil))
+(insn 94 93 95 13 (parallel [
+            (set (reg:SI 118)
+                (plus:SI (reg:SI 119)
+                    (const_int 160 [0xa0])))
+            (clobber (reg:CC 17 flags))
+        ]) "fs/fcntl.c":29:19 209 {*addsi_1}
+     (expr_list:REG_EQUAL (plus:SI (mem/c:SI (plus:SI (reg/f:SI 16 argp)
+                    (const_int 4 [0x4])) [6 arg+0 S4 A32])
+            (const_int 160 [0xa0]))
+        (nil)))
+(insn 95 94 96 13 (set (reg/f:SI 97 [ _15 ])
+        (mem/f:SI (plus:SI (mult:SI (reg:SI 118)
+                    (const_int 4 [0x4]))
+                (reg/f:SI 95 [ current.5_13 ])) [10 current.5_13->filp[arg_19]+0 S4 A32])) "fs/fcntl.c":29:19 75 {*movsi_internal}
+     (nil))
+(insn 96 95 97 13 (set (reg:HI 98 [ _16 ])
+        (mem:HI (plus:SI (reg/f:SI 97 [ _15 ])
+                (const_int 4 [0x4])) [8 _15->f_count+0 S2 A32])) "fs/fcntl.c":29:45 76 {*movhi_internal}
+     (nil))
+(insn 97 96 98 13 (parallel [
+            (set (reg:HI 99 [ _18 ])
+                (plus:HI (reg:HI 98 [ _16 ])
+                    (const_int 1 [0x1])))
+            (clobber (reg:CC 17 flags))
+        ]) "fs/fcntl.c":29:54 212 {*addhi_1}
+     (nil))
+(insn 98 97 99 13 (set (mem:HI (plus:SI (reg/f:SI 97 [ _15 ])
+                (const_int 4 [0x4])) [8 _15->f_count+0 S2 A32])
+        (reg:HI 99 [ _18 ])) "fs/fcntl.c":29:54 76 {*movhi_internal}
+     (nil))
+(insn 99 98 100 13 (set (reg:SI 100 [ _20 ])
+        (mem/c:SI (plus:SI (reg/f:SI 16 argp)
+                (const_int 4 [0x4])) [6 arg+0 S4 A32])) "fs/fcntl.c":30:12 75 {*movsi_internal}
+     (nil))
+(code_label 100 99 101 14 4 (nil) [3 uses])
+(note 101 100 102 14 [bb 14] NOTE_INSN_BASIC_BLOCK)
+(insn 102 101 106 14 (set (reg:SI 101 [ <retval> ])
+        (reg:SI 100 [ _20 ])) "fs/fcntl.c":31:1 75 {*movsi_internal}
+     (nil))
+(insn 106 102 107 14 (set (reg/i:SI 0 ax)
+        (reg:SI 101 [ <retval> ])) "fs/fcntl.c":31:1 75 {*movsi_internal}
+     (nil))
+(insn 107 106 0 14 (use (reg/i:SI 0 ax)) "fs/fcntl.c":31:1 -1
+     (nil))
+
+;; Function sys_dup (sys_dup, funcdef_no=2, decl_uid=1330, cgraph_uid=3, symbol_order=2)
+
+verify found no changes in insn with uid = 7.
+
+
+sys_dup
+
+Dataflow summary:
+;;  fully invalidated by EH 	 0 [ax] 1 [dx] 2 [cx] 8 [st] 9 [st(1)] 10 [st(2)] 11 [st(3)] 12 [st(4)] 13 [st(5)] 14 [st(6)] 15 [st(7)] 17 [flags] 18 [fpsr] 20 [xmm0] 21 [xmm1] 22 [xmm2] 23 [xmm3] 24 [xmm4] 25 [xmm5] 26 [xmm6] 27 [xmm7] 28 [mm0] 29 [mm1] 30 [mm2] 31 [mm3] 32 [mm4] 33 [mm5] 34 [mm6] 35 [mm7] 36 [r8] 37 [r9] 38 [r10] 39 [r11] 40 [r12] 41 [r13] 42 [r14] 43 [r15] 44 [xmm8] 45 [xmm9] 46 [xmm10] 47 [xmm11] 48 [xmm12] 49 [xmm13] 50 [xmm14] 51 [xmm15] 52 [xmm16] 53 [xmm17] 54 [xmm18] 55 [xmm19] 56 [xmm20] 57 [xmm21] 58 [xmm22] 59 [xmm23] 60 [xmm24] 61 [xmm25] 62 [xmm26] 63 [xmm27] 64 [xmm28] 65 [xmm29] 66 [xmm30] 67 [xmm31] 68 [k0] 69 [k1] 70 [k2] 71 [k3] 72 [k4] 73 [k5] 74 [k6] 75 [k7]
+;;  hardware regs used 	
+;;  regular block artificial uses 	 6 [bp] 7 [sp] 16 [argp] 19 [frame]
+;;  eh block artificial uses 	 6 [bp] 7 [sp] 16 [argp] 19 [frame]
+;;  entry block defs 	 0 [ax] 1 [dx] 2 [cx] 6 [bp] 7 [sp] 16 [argp] 19 [frame]
+;;  exit block uses 	 0 [ax] 6 [bp] 7 [sp] 19 [frame]
+;;  regs ever live 	 0 [ax] 7 [sp] 17 [flags]
+;;  ref usage 	r0={3d,3u} r1={2d} r2={2d} r6={1d,2u} r7={4d,7u} r8={1d} r9={1d} r10={1d} r11={1d} r12={1d} r13={1d} r14={1d} r15={1d} r16={1d,2u} r17={2d} r18={1d} r19={1d,2u} r20={1d} r21={1d} r22={1d} r23={1d} r24={1d} r25={1d} r26={1d} r27={1d} r28={1d} r29={1d} r30={1d} r31={1d} r32={1d} r33={1d} r34={1d} r35={1d} r36={1d} r37={1d} r38={1d} r39={1d} r40={1d} r41={1d} r42={1d} r43={1d} r44={1d} r45={1d} r46={1d} r47={1d} r48={1d} r49={1d} r50={1d} r51={1d} r52={1d} r53={1d} r54={1d} r55={1d} r56={1d} r57={1d} r58={1d} r59={1d} r60={1d} r61={1d} r62={1d} r63={1d} r64={1d} r65={1d} r66={1d} r67={1d} r68={1d} r69={1d} r70={1d} r71={1d} r72={1d} r73={1d} r74={1d} r75={1d} r83={1d,1u} r84={1d,1u} 
+;;    total ref usage 101{83d,18u,0e} in 8{7 regular + 1 call} insns.
+(note 1 0 3 NOTE_INSN_DELETED)
+(note 3 1 2 2 [bb 2] NOTE_INSN_BASIC_BLOCK)
+(note 2 3 5 2 NOTE_INSN_FUNCTION_BEG)
+(insn 5 2 6 2 (set (mem:SI (pre_dec:SI (reg/f:SI 7 sp)) [6  S4 A32])
+        (const_int 0 [0])) "fs/fcntl.c":35:12 54 {*pushsi2}
+     (expr_list:REG_ARGS_SIZE (const_int 4 [0x4])
+        (nil)))
+(insn 6 5 7 2 (set (mem:SI (pre_dec:SI (reg/f:SI 7 sp)) [6  S4 A32])
+        (mem/c:SI (reg/f:SI 16 argp) [6 fildes+0 S4 A32])) "fs/fcntl.c":35:12 54 {*pushsi2}
+     (expr_list:REG_ARGS_SIZE (const_int 8 [0x8])
+        (nil)))
+(call_insn 7 6 8 2 (set (reg:SI 0 ax)
+        (call (mem:QI (symbol_ref:SI ("dupfd") [flags 0x3]  <function_decl 0x7bd51e538900 dupfd>) [0 dupfd S1 A8])
+            (const_int 8 [0x8]))) "fs/fcntl.c":35:12 823 {*call_value}
+     (nil)
+    (nil))
+(insn 8 7 9 2 (parallel [
+            (set (reg/f:SI 7 sp)
+                (plus:SI (reg/f:SI 7 sp)
+                    (const_int 8 [0x8])))
+            (clobber (reg:CC 17 flags))
+        ]) "fs/fcntl.c":35:12 209 {*addsi_1}
+     (expr_list:REG_ARGS_SIZE (const_int 0 [0])
+        (nil)))
+(insn 9 8 12 2 (set (reg:SI 83 [ _4 ])
+        (reg:SI 0 ax)) "fs/fcntl.c":35:12 75 {*movsi_internal}
+     (nil))
+(insn 12 9 16 2 (set (reg:SI 84 [ <retval> ])
+        (reg:SI 83 [ _4 ])) "fs/fcntl.c":35:12 75 {*movsi_internal}
+     (nil))
+(insn 16 12 17 2 (set (reg/i:SI 0 ax)
+        (reg:SI 84 [ <retval> ])) "fs/fcntl.c":36:1 75 {*movsi_internal}
+     (nil))
+(insn 17 16 0 2 (use (reg/i:SI 0 ax)) "fs/fcntl.c":36:1 -1
+     (nil))
+
+;; Function sys_fcntl (sys_fcntl, funcdef_no=3, decl_uid=1335, cgraph_uid=4, symbol_order=3)
+
+verify found no changes in insn with uid = 41.
+
+
+sys_fcntl
+
+Dataflow summary:
+;;  fully invalidated by EH 	 0 [ax] 1 [dx] 2 [cx] 8 [st] 9 [st(1)] 10 [st(2)] 11 [st(3)] 12 [st(4)] 13 [st(5)] 14 [st(6)] 15 [st(7)] 17 [flags] 18 [fpsr] 20 [xmm0] 21 [xmm1] 22 [xmm2] 23 [xmm3] 24 [xmm4] 25 [xmm5] 26 [xmm6] 27 [xmm7] 28 [mm0] 29 [mm1] 30 [mm2] 31 [mm3] 32 [mm4] 33 [mm5] 34 [mm6] 35 [mm7] 36 [r8] 37 [r9] 38 [r10] 39 [r11] 40 [r12] 41 [r13] 42 [r14] 43 [r15] 44 [xmm8] 45 [xmm9] 46 [xmm10] 47 [xmm11] 48 [xmm12] 49 [xmm13] 50 [xmm14] 51 [xmm15] 52 [xmm16] 53 [xmm17] 54 [xmm18] 55 [xmm19] 56 [xmm20] 57 [xmm21] 58 [xmm22] 59 [xmm23] 60 [xmm24] 61 [xmm25] 62 [xmm26] 63 [xmm27] 64 [xmm28] 65 [xmm29] 66 [xmm30] 67 [xmm31] 68 [k0] 69 [k1] 70 [k2] 71 [k3] 72 [k4] 73 [k5] 74 [k6] 75 [k7]
+;;  hardware regs used 	
+;;  regular block artificial uses 	 6 [bp] 7 [sp] 16 [argp] 19 [frame]
+;;  eh block artificial uses 	 6 [bp] 7 [sp] 16 [argp] 19 [frame]
+;;  entry block defs 	 0 [ax] 1 [dx] 2 [cx] 6 [bp] 7 [sp] 16 [argp] 19 [frame]
+;;  exit block uses 	 0 [ax] 6 [bp] 7 [sp] 19 [frame]
+;;  regs ever live 	 0 [ax] 7 [sp] 17 [flags]
+;;  ref usage 	r0={3d,3u} r1={2d} r2={2d} r6={1d,17u} r7={4d,22u} r8={1d} r9={1d} r10={1d} r11={1d} r12={1d} r13={1d} r14={1d} r15={1d} r16={1d,27u,2e} r17={19d,4u} r18={1d} r19={1d,24u} r20={1d} r21={1d} r22={1d} r23={1d} r24={1d} r25={1d} r26={1d} r27={1d} r28={1d} r29={1d} r30={1d} r31={1d} r32={1d} r33={1d} r34={1d} r35={1d} r36={1d} r37={1d} r38={1d} r39={1d} r40={1d} r41={1d} r42={1d} r43={1d} r44={1d} r45={1d} r46={1d} r47={1d} r48={1d} r49={1d} r50={1d} r51={1d} r52={1d} r53={1d} r54={1d} r55={1d} r56={1d} r57={1d} r58={1d} r59={1d} r60={1d} r61={1d} r62={1d} r63={1d} r64={1d} r65={1d} r66={1d} r67={1d} r68={1d} r69={1d} r70={1d} r71={1d} r72={1d} r73={1d} r74={1d} r75={1d} r82={8u} r83={1d,1u} r84={1d,1u} r85={1d,1u} r86={1d,1u} r87={1d,1u} r88={1d,1u} r89={1d,1u} r90={1d,1u} r91={1d,1u} r92={1d,1u} r93={1d,1u} r94={1d,1u} r95={1d,1u} r96={1d,1u} r97={1d,1u} r98={1d,1u} r99={1d,1u} r100={1d,1u} r101={1d,1u} r102={1d,1u} r103={1d,1u} r104={1d,1u} r105={1d,1u} r106={1d,1u} r107={1d,1u} r108={1d,1u} r109={8d,1u} r110={1d,1u} r111={1d,1u} r112={1d,1u} r113={1d,1u} r114={1d,1u} r115={1d,1u} r116={1d,1u} r117={1d,1u} r118={1d,1u} r119={1d,1u} r120={1d,1u} r121={1d,1u} r122={1d,1u} r123={1d,1u} r124={1d,1u} r125={1d,1u} r126={1d,1u} r127={1d,1u} r128={1d,1u} r129={1d,1u} r130={1d,1u} r131={1d,1u} r132={1d,1u} r133={1d,1u} r134={1d,1u} r135={1d,1u} 
+;;    total ref usage 318{158d,158u,2e} in 88{87 regular + 1 call} insns.
+(note 1 0 3 NOTE_INSN_DELETED)
+(note 3 1 2 2 [bb 2] NOTE_INSN_BASIC_BLOCK)
+(note 2 3 7 2 NOTE_INSN_FUNCTION_BEG)
+(insn 7 2 8 2 (set (reg:CC 17 flags)
+        (compare:CC (mem/c:SI (reg/f:SI 16 argp) [6 fd+0 S4 A32])
+            (const_int 19 [0x13]))) "fs/fcntl.c":42:8 11 {*cmpsi_1}
+     (nil))
+(jump_insn 8 7 9 2 (set (pc)
+        (if_then_else (gtu (reg:CC 17 flags)
+                (const_int 0 [0]))
+            (label_ref 18)
+            (pc))) "fs/fcntl.c":42:8 806 {*jcc}
+     (nil)
+ -> 18)
+(note 9 8 10 3 [bb 3] NOTE_INSN_BASIC_BLOCK)
+(insn 10 9 11 3 (set (reg/f:SI 111)
+        (mem/u/c:SI (plus:SI (reg:SI 82)
+                (const:SI (unspec:SI [
+                            (symbol_ref:SI ("current") [flags 0x40]  <var_decl 0x7bd51e52e120 current>)
+                        ] UNSPEC_GOT))) [15  S4 A8])) "fs/fcntl.c":42:42 75 {*movsi_internal}
+     (nil))
+(insn 11 10 12 3 (set (reg/f:SI 83 [ current.6_1 ])
+        (mem/f/c:SI (reg/f:SI 111) [1 current+0 S4 A32])) "fs/fcntl.c":42:42 75 {*movsi_internal}
+     (nil))
+(insn 12 11 13 3 (set (reg:SI 113)
+        (mem/c:SI (reg/f:SI 16 argp) [6 fd+0 S4 A32])) "fs/fcntl.c":42:33 75 {*movsi_internal}
+     (nil))
+(insn 13 12 14 3 (parallel [
+            (set (reg:SI 112)
+                (plus:SI (reg:SI 113)
+                    (const_int 160 [0xa0])))
+            (clobber (reg:CC 17 flags))
+        ]) "fs/fcntl.c":42:33 209 {*addsi_1}
+     (expr_list:REG_EQUAL (plus:SI (mem/c:SI (reg/f:SI 16 argp) [6 fd+0 S4 A32])
+            (const_int 160 [0xa0]))
+        (nil)))
+(insn 14 13 15 3 (set (reg/f:SI 114)
+        (mem/f:SI (plus:SI (mult:SI (reg:SI 112)
+                    (const_int 4 [0x4]))
+                (reg/f:SI 83 [ current.6_1 ])) [10 current.6_1->filp[fd_30(D)]+0 S4 A32])) "fs/fcntl.c":42:33 75 {*movsi_internal}
+     (nil))
+(insn 15 14 16 3 (set (mem/f/c:SI (plus:SI (reg/f:SI 19 frame)
+                (const_int -4 [0xfffffffffffffffc])) [10 filp+0 S4 A32])
+        (reg/f:SI 114)) "fs/fcntl.c":42:33 75 {*movsi_internal}
+     (nil))
+(insn 16 15 17 3 (set (reg:CCZ 17 flags)
+        (compare:CCZ (mem/f/c:SI (plus:SI (reg/f:SI 19 frame)
+                    (const_int -4 [0xfffffffffffffffc])) [10 filp+0 S4 A32])
+            (const_int 0 [0]))) "fs/fcntl.c":42:23 7 {*cmpsi_ccno_1}
+     (nil))
+(jump_insn 17 16 18 3 (set (pc)
+        (if_then_else (ne (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref 23)
+            (pc))) "fs/fcntl.c":42:23 806 {*jcc}
+     (nil)
+ -> 23)
+(code_label 18 17 19 4 15 (nil) [1 uses])
+(note 19 18 20 4 [bb 4] NOTE_INSN_BASIC_BLOCK)
+(insn 20 19 139 4 (set (reg:SI 109 [ _27 ])
+        (const_int -9 [0xfffffffffffffff7])) "fs/fcntl.c":43:16 75 {*movsi_internal}
+     (nil))
+(jump_insn 139 20 140 4 (set (pc)
+        (label_ref 129)) "fs/fcntl.c":43:16 -1
+     (nil)
+ -> 129)
+(barrier 140 139 23)
+(code_label 23 140 24 5 16 (nil) [1 uses])
+(note 24 23 27 5 [bb 5] NOTE_INSN_BASIC_BLOCK)
+(insn 27 24 28 5 (set (reg:CC 17 flags)
+        (compare:CC (mem/c:SI (plus:SI (reg/f:SI 16 argp)
+                    (const_int 4 [0x4])) [6 cmd+0 S4 A32])
+            (const_int 7 [0x7]))) "fs/fcntl.c":44:5 11 {*cmpsi_1}
+     (nil))
+(jump_insn 28 27 138 5 (set (pc)
+        (if_then_else (gtu (reg:CC 17 flags)
+                (const_int 0 [0]))
+            (label_ref 126)
+            (pc))) "fs/fcntl.c":44:5 806 {*jcc}
+     (nil)
+ -> 126)
+(note 138 28 29 6 [bb 6] NOTE_INSN_BASIC_BLOCK)
+(insn 29 138 30 6 (set (reg:SI 115)
+        (mem/c:SI (plus:SI (reg/f:SI 16 argp)
+                (const_int 4 [0x4])) [6 cmd+0 S4 A32])) "fs/fcntl.c":44:5 75 {*movsi_internal}
+     (nil))
+(insn 30 29 31 6 (parallel [
+            (set (reg:SI 116)
+                (ashift:SI (reg:SI 115)
+                    (const_int 2 [0x2])))
+            (clobber (reg:CC 17 flags))
+        ]) "fs/fcntl.c":44:5 655 {*ashlsi3_1}
+     (nil))
+(insn 31 30 32 6 (set (reg:SI 117)
+        (mem/u/c:SI (plus:SI (plus:SI (reg:SI 116)
+                    (reg:SI 82))
+                (const:SI (unspec:SI [
+                            (label_ref:SI 34)
+                        ] UNSPEC_GOTOFF))) [0  S4 A8])) "fs/fcntl.c":44:5 75 {*movsi_internal}
+     (insn_list:REG_LABEL_OPERAND 34 (nil)))
+(insn 32 31 33 6 (parallel [
+            (set (reg:SI 118)
+                (plus:SI (reg:SI 117)
+                    (reg:SI 82)))
+            (clobber (reg:CC 17 flags))
+        ]) "fs/fcntl.c":44:5 209 {*addsi_1}
+     (nil))
+(jump_insn 33 32 34 6 (parallel [
+            (set (pc)
+                (reg:SI 118))
+            (use (label_ref 34))
+        ]) "fs/fcntl.c":44:5 810 {*tablejump_1}
+     (nil)
+ -> 34)
+(code_label 34 33 35 20 (nil) [2 uses])
+(jump_table_data 35 34 36 (addr_diff_vec:SI (label_ref:SI 34)
+         [
+            (label_ref:SI 37)
+            (label_ref:SI 46)
+            (label_ref:SI 57)
+            (label_ref:SI 96)
+            (label_ref:SI 103)
+            (label_ref:SI 121)
+            (label_ref:SI 121)
+            (label_ref:SI 121)
+        ]
+        (const_int 0 [0])
+        (const_int 0 [0])))
+(barrier 36 35 37)
+(code_label 37 36 38 7 25 (nil) [1 uses])
+(note 38 37 39 7 [bb 7] NOTE_INSN_BASIC_BLOCK)
+(insn 39 38 40 7 (set (mem:SI (pre_dec:SI (reg/f:SI 7 sp)) [3  S4 A32])
+        (mem/c:SI (plus:SI (reg/f:SI 16 argp)
+                (const_int 8 [0x8])) [3 arg+0 S4 A32])) "fs/fcntl.c":46:16 54 {*pushsi2}
+     (expr_list:REG_ARGS_SIZE (const_int 4 [0x4])
+        (nil)))
+(insn 40 39 41 7 (set (mem:SI (pre_dec:SI (reg/f:SI 7 sp)) [6  S4 A32])
+        (mem/c:SI (reg/f:SI 16 argp) [6 fd+0 S4 A32])) "fs/fcntl.c":46:16 54 {*pushsi2}
+     (expr_list:REG_ARGS_SIZE (const_int 8 [0x8])
+        (nil)))
+(call_insn 41 40 42 7 (set (reg:SI 0 ax)
+        (call (mem:QI (symbol_ref:SI ("dupfd") [flags 0x3]  <function_decl 0x7bd51e538900 dupfd>) [0 dupfd S1 A8])
+            (const_int 8 [0x8]))) "fs/fcntl.c":46:16 823 {*call_value}
+     (nil)
+    (nil))
+(insn 42 41 43 7 (parallel [
+            (set (reg/f:SI 7 sp)
+                (plus:SI (reg/f:SI 7 sp)
+                    (const_int 8 [0x8])))
+            (clobber (reg:CC 17 flags))
+        ]) "fs/fcntl.c":46:16 209 {*addsi_1}
+     (expr_list:REG_ARGS_SIZE (const_int 0 [0])
+        (nil)))
+(insn 43 42 141 7 (set (reg:SI 109 [ _27 ])
+        (reg:SI 0 ax)) "fs/fcntl.c":46:16 75 {*movsi_internal}
+     (nil))
+(jump_insn 141 43 142 7 (set (pc)
+        (label_ref 129)) "fs/fcntl.c":46:16 -1
+     (nil)
+ -> 129)
+(barrier 142 141 46)
+(code_label 46 142 47 8 24 (nil) [1 uses])
+(note 47 46 48 8 [bb 8] NOTE_INSN_BASIC_BLOCK)
+(insn 48 47 49 8 (set (reg/f:SI 119)
+        (mem/u/c:SI (plus:SI (reg:SI 82)
+                (const:SI (unspec:SI [
+                            (symbol_ref:SI ("current") [flags 0x40]  <var_decl 0x7bd51e52e120 current>)
+                        ] UNSPEC_GOT))) [15  S4 A8])) "fs/fcntl.c":48:24 75 {*movsi_internal}
+     (nil))
+(insn 49 48 50 8 (set (reg/f:SI 84 [ current.7_2 ])
+        (mem/f/c:SI (reg/f:SI 119) [1 current+0 S4 A32])) "fs/fcntl.c":48:24 75 {*movsi_internal}
+     (nil))
+(insn 50 49 51 8 (set (reg:SI 85 [ _3 ])
+        (mem:SI (plus:SI (reg/f:SI 84 [ current.7_2 ])
+                (const_int 636 [0x27c])) [3 current.7_2->close_on_exec+0 S4 A32])) "fs/fcntl.c":48:24 75 {*movsi_internal}
+     (nil))
+(insn 51 50 52 8 (set (reg:SI 120)
+        (mem/c:SI (reg/f:SI 16 argp) [6 fd+0 S4 A32])) "fs/fcntl.c":48:40 75 {*movsi_internal}
+     (nil))
+(insn 52 51 53 8 (parallel [
+            (set (reg:SI 86 [ _4 ])
+                (lshiftrt:SI (reg:SI 85 [ _3 ])
+                    (subreg:QI (reg:SI 120) 0)))
+            (clobber (reg:CC 17 flags))
+        ]) "fs/fcntl.c":48:40 701 {*lshrsi3_1}
+     (nil))
+(insn 53 52 54 8 (set (reg:SI 87 [ _5 ])
+        (reg:SI 86 [ _4 ])) "fs/fcntl.c":48:47 75 {*movsi_internal}
+     (nil))
+(insn 54 53 143 8 (parallel [
+            (set (reg:SI 109 [ _27 ])
+                (and:SI (reg:SI 87 [ _5 ])
+                    (const_int 1 [0x1])))
+            (clobber (reg:CC 17 flags))
+        ]) "fs/fcntl.c":48:47 490 {*andsi_1}
+     (nil))
+(jump_insn 143 54 144 8 (set (pc)
+        (label_ref 129)) "fs/fcntl.c":48:47 -1
+     (nil)
+ -> 129)
+(barrier 144 143 57)
+(code_label 57 144 58 9 23 (nil) [1 uses])
+(note 58 57 59 9 [bb 9] NOTE_INSN_BASIC_BLOCK)
+(insn 59 58 60 9 (set (reg:SI 121)
+        (mem/c:SI (plus:SI (reg/f:SI 16 argp)
+                (const_int 8 [0x8])) [3 arg+0 S4 A32])) "fs/fcntl.c":50:17 75 {*movsi_internal}
+     (nil))
+(insn 60 59 61 9 (parallel [
+            (set (reg:SI 88 [ _6 ])
+                (and:SI (reg:SI 121)
+                    (const_int 1 [0x1])))
+            (clobber (reg:CC 17 flags))
+        ]) "fs/fcntl.c":50:17 490 {*andsi_1}
+     (expr_list:REG_EQUAL (and:SI (mem/c:SI (plus:SI (reg/f:SI 16 argp)
+                    (const_int 8 [0x8])) [3 arg+0 S4 A32])
+            (const_int 1 [0x1]))
+        (nil)))
+(insn 61 60 62 9 (set (reg:CCZ 17 flags)
+        (compare:CCZ (reg:SI 88 [ _6 ])
+            (const_int 0 [0]))) "fs/fcntl.c":50:12 7 {*cmpsi_ccno_1}
+     (nil))
+(jump_insn 62 61 63 9 (set (pc)
+        (if_then_else (eq (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref 77)
+            (pc))) "fs/fcntl.c":50:12 806 {*jcc}
+     (nil)
+ -> 77)
+(note 63 62 64 10 [bb 10] NOTE_INSN_BASIC_BLOCK)
+(insn 64 63 65 10 (set (reg/f:SI 122)
+        (mem/u/c:SI (plus:SI (reg:SI 82)
+                (const:SI (unspec:SI [
+                            (symbol_ref:SI ("current") [flags 0x40]  <var_decl 0x7bd51e52e120 current>)
+                        ] UNSPEC_GOT))) [15  S4 A8])) "fs/fcntl.c":51:36 75 {*movsi_internal}
+     (nil))
+(insn 65 64 66 10 (set (reg/f:SI 89 [ current.8_7 ])
+        (mem/f/c:SI (reg/f:SI 122) [1 current+0 S4 A32])) "fs/fcntl.c":51:36 75 {*movsi_internal}
+     (nil))
+(insn 66 65 67 10 (set (reg:SI 90 [ _8 ])
+        (mem:SI (plus:SI (reg/f:SI 89 [ current.8_7 ])
+                (const_int 636 [0x27c])) [3 current.8_7->close_on_exec+0 S4 A32])) "fs/fcntl.c":51:36 75 {*movsi_internal}
+     (nil))
+(insn 67 66 68 10 (set (reg:SI 123)
+        (mem/c:SI (reg/f:SI 16 argp) [6 fd+0 S4 A32])) "fs/fcntl.c":51:42 75 {*movsi_internal}
+     (nil))
+(insn 68 67 69 10 (set (reg:SI 124)
+        (const_int 1 [0x1])) "fs/fcntl.c":51:42 75 {*movsi_internal}
+     (nil))
+(insn 69 68 70 10 (parallel [
+            (set (reg:SI 91 [ _9 ])
+                (ashift:SI (reg:SI 124)
+                    (subreg:QI (reg:SI 123) 0)))
+            (clobber (reg:CC 17 flags))
+        ]) "fs/fcntl.c":51:42 655 {*ashlsi3_1}
+     (nil))
+(insn 70 69 71 10 (set (reg:SI 92 [ _10 ])
+        (reg:SI 91 [ _9 ])) "fs/fcntl.c":51:42 75 {*movsi_internal}
+     (nil))
+(insn 71 70 72 10 (set (reg/f:SI 125)
+        (mem/u/c:SI (plus:SI (reg:SI 82)
+                (const:SI (unspec:SI [
+                            (symbol_ref:SI ("current") [flags 0x40]  <var_decl 0x7bd51e52e120 current>)
+                        ] UNSPEC_GOT))) [15  S4 A8])) "fs/fcntl.c":51:36 75 {*movsi_internal}
+     (nil))
+(insn 72 71 73 10 (set (reg/f:SI 93 [ current.9_11 ])
+        (mem/f/c:SI (reg/f:SI 125) [1 current+0 S4 A32])) "fs/fcntl.c":51:36 75 {*movsi_internal}
+     (nil))
+(insn 73 72 74 10 (parallel [
+            (set (reg:SI 94 [ _12 ])
+                (ior:SI (reg:SI 90 [ _8 ])
+                    (reg:SI 92 [ _10 ])))
+            (clobber (reg:CC 17 flags))
+        ]) "fs/fcntl.c":51:36 520 {*iorsi_1}
+     (nil))
+(insn 74 73 145 10 (set (mem:SI (plus:SI (reg/f:SI 93 [ current.9_11 ])
+                (const_int 636 [0x27c])) [3 current.9_11->close_on_exec+0 S4 A32])
+        (reg:SI 94 [ _12 ])) "fs/fcntl.c":51:36 75 {*movsi_internal}
+     (nil))
+(jump_insn 145 74 146 10 (set (pc)
+        (label_ref 91)) -1
+     (nil)
+ -> 91)
+(barrier 146 145 77)
+(code_label 77 146 78 11 26 (nil) [1 uses])
+(note 78 77 79 11 [bb 11] NOTE_INSN_BASIC_BLOCK)
+(insn 79 78 80 11 (set (reg/f:SI 126)
+        (mem/u/c:SI (plus:SI (reg:SI 82)
+                (const:SI (unspec:SI [
+                            (symbol_ref:SI ("current") [flags 0x40]  <var_decl 0x7bd51e52e120 current>)
+                        ] UNSPEC_GOT))) [15  S4 A8])) "fs/fcntl.c":53:36 75 {*movsi_internal}
+     (nil))
+(insn 80 79 81 11 (set (reg/f:SI 95 [ current.10_13 ])
+        (mem/f/c:SI (reg/f:SI 126) [1 current+0 S4 A32])) "fs/fcntl.c":53:36 75 {*movsi_internal}
+     (nil))
+(insn 81 80 82 11 (set (reg:SI 96 [ _14 ])
+        (mem:SI (plus:SI (reg/f:SI 95 [ current.10_13 ])
+                (const_int 636 [0x27c])) [3 current.10_13->close_on_exec+0 S4 A32])) "fs/fcntl.c":53:36 75 {*movsi_internal}
+     (nil))
+(insn 82 81 83 11 (set (reg:SI 127)
+        (mem/c:SI (reg/f:SI 16 argp) [6 fd+0 S4 A32])) "fs/fcntl.c":53:43 75 {*movsi_internal}
+     (nil))
+(insn 83 82 84 11 (set (reg:SI 128)
+        (const_int 1 [0x1])) "fs/fcntl.c":53:43 75 {*movsi_internal}
+     (nil))
+(insn 84 83 85 11 (parallel [
+            (set (reg:SI 97 [ _15 ])
+                (ashift:SI (reg:SI 128)
+                    (subreg:QI (reg:SI 127) 0)))
+            (clobber (reg:CC 17 flags))
+        ]) "fs/fcntl.c":53:43 655 {*ashlsi3_1}
+     (nil))
+(insn 85 84 86 11 (set (reg:SI 98 [ _16 ])
+        (not:SI (reg:SI 97 [ _15 ]))) "fs/fcntl.c":53:39 632 {*one_cmplsi2_1}
+     (nil))
+(insn 86 85 87 11 (set (reg:SI 99 [ _17 ])
+        (reg:SI 98 [ _16 ])) "fs/fcntl.c":53:39 75 {*movsi_internal}
+     (nil))
+(insn 87 86 88 11 (set (reg/f:SI 129)
+        (mem/u/c:SI (plus:SI (reg:SI 82)
+                (const:SI (unspec:SI [
+                            (symbol_ref:SI ("current") [flags 0x40]  <var_decl 0x7bd51e52e120 current>)
+                        ] UNSPEC_GOT))) [15  S4 A8])) "fs/fcntl.c":53:36 75 {*movsi_internal}
+     (nil))
+(insn 88 87 89 11 (set (reg/f:SI 100 [ current.11_18 ])
+        (mem/f/c:SI (reg/f:SI 129) [1 current+0 S4 A32])) "fs/fcntl.c":53:36 75 {*movsi_internal}
+     (nil))
+(insn 89 88 90 11 (parallel [
+            (set (reg:SI 101 [ _19 ])
+                (and:SI (reg:SI 96 [ _14 ])
+                    (reg:SI 99 [ _17 ])))
+            (clobber (reg:CC 17 flags))
+        ]) "fs/fcntl.c":53:36 490 {*andsi_1}
+     (nil))
+(insn 90 89 91 11 (set (mem:SI (plus:SI (reg/f:SI 100 [ current.11_18 ])
+                (const_int 636 [0x27c])) [3 current.11_18->close_on_exec+0 S4 A32])
+        (reg:SI 101 [ _19 ])) "fs/fcntl.c":53:36 75 {*movsi_internal}
+     (nil))
+(code_label 91 90 92 12 27 (nil) [1 uses])
+(note 92 91 93 12 [bb 12] NOTE_INSN_BASIC_BLOCK)
+(insn 93 92 147 12 (set (reg:SI 109 [ _27 ])
+        (const_int 0 [0])) "fs/fcntl.c":54:16 75 {*movsi_internal}
+     (nil))
+(jump_insn 147 93 148 12 (set (pc)
+        (label_ref 129)) "fs/fcntl.c":54:16 -1
+     (nil)
+ -> 129)
+(barrier 148 147 96)
+(code_label 96 148 97 13 22 (nil) [1 uses])
+(note 97 96 98 13 [bb 13] NOTE_INSN_BASIC_BLOCK)
+(insn 98 97 99 13 (set (reg/f:SI 130)
+        (mem/f/c:SI (plus:SI (reg/f:SI 19 frame)
+                (const_int -4 [0xfffffffffffffffc])) [10 filp+0 S4 A32])) "fs/fcntl.c":56:20 75 {*movsi_internal}
+     (nil))
+(insn 99 98 100 13 (set (reg:HI 102 [ _20 ])
+        (mem:HI (plus:SI (reg/f:SI 130)
+                (const_int 2 [0x2])) [8 filp_32->f_flags+0 S2 A16])) "fs/fcntl.c":56:20 76 {*movhi_internal}
+     (nil))
+(insn 100 99 149 13 (set (reg:SI 109 [ _27 ])
+        (zero_extend:SI (reg:HI 102 [ _20 ]))) "fs/fcntl.c":56:20 144 {*zero_extendhisi2}
+     (nil))
+(jump_insn 149 100 150 13 (set (pc)
+        (label_ref 129)) "fs/fcntl.c":56:20 -1
+     (nil)
+ -> 129)
+(barrier 150 149 103)
+(code_label 103 150 104 14 21 (nil) [1 uses])
+(note 104 103 105 14 [bb 14] NOTE_INSN_BASIC_BLOCK)
+(insn 105 104 106 14 (set (reg/f:SI 131)
+        (mem/f/c:SI (plus:SI (reg/f:SI 19 frame)
+                (const_int -4 [0xfffffffffffffffc])) [10 filp+0 S4 A32])) "fs/fcntl.c":58:23 75 {*movsi_internal}
+     (nil))
+(insn 106 105 107 14 (set (reg:HI 103 [ _21 ])
+        (mem:HI (plus:SI (reg/f:SI 131)
+                (const_int 2 [0x2])) [8 filp_32->f_flags+0 S2 A16])) "fs/fcntl.c":58:23 76 {*movhi_internal}
+     (nil))
+(insn 107 106 108 14 (parallel [
+            (set (reg:HI 104 [ _22 ])
+                (and:HI (reg:HI 103 [ _21 ])
+                    (const_int -3073 [0xfffffffffffff3ff])))
+            (clobber (reg:CC 17 flags))
+        ]) "fs/fcntl.c":58:23 489 {*andhi_1}
+     (nil))
+(insn 108 107 109 14 (set (reg/f:SI 132)
+        (mem/f/c:SI (plus:SI (reg/f:SI 19 frame)
+                (const_int -4 [0xfffffffffffffffc])) [10 filp+0 S4 A32])) "fs/fcntl.c":58:23 75 {*movsi_internal}
+     (nil))
+(insn 109 108 110 14 (set (mem:HI (plus:SI (reg/f:SI 132)
+                (const_int 2 [0x2])) [8 filp_32->f_flags+0 S2 A16])
+        (reg:HI 104 [ _22 ])) "fs/fcntl.c":58:23 76 {*movhi_internal}
+     (nil))
+(insn 110 109 111 14 (set (reg/f:SI 133)
+        (mem/f/c:SI (plus:SI (reg/f:SI 19 frame)
+                (const_int -4 [0xfffffffffffffffc])) [10 filp+0 S4 A32])) "fs/fcntl.c":59:23 75 {*movsi_internal}
+     (nil))
+(insn 111 110 112 14 (set (reg:HI 105 [ _23 ])
+        (mem:HI (plus:SI (reg/f:SI 133)
+                (const_int 2 [0x2])) [8 filp_32->f_flags+0 S2 A16])) "fs/fcntl.c":59:23 76 {*movhi_internal}
+     (nil))
+(insn 112 111 113 14 (set (reg:SI 134)
+        (mem/c:SI (plus:SI (reg/f:SI 16 argp)
+                (const_int 8 [0x8])) [3 arg+0 S4 A32])) "fs/fcntl.c":59:30 75 {*movsi_internal}
+     (nil))
+(insn 113 112 114 14 (set (reg:HI 106 [ _24 ])
+        (subreg:HI (reg:SI 134) 0)) "fs/fcntl.c":59:30 76 {*movhi_internal}
+     (nil))
+(insn 114 113 115 14 (parallel [
+            (set (reg:HI 107 [ _25 ])
+                (and:HI (reg:HI 106 [ _24 ])
+                    (const_int 3072 [0xc00])))
+            (clobber (reg:CC 17 flags))
+        ]) "fs/fcntl.c":59:30 489 {*andhi_1}
+     (nil))
+(insn 115 114 116 14 (parallel [
+            (set (reg:HI 108 [ _26 ])
+                (ior:HI (reg:HI 105 [ _23 ])
+                    (reg:HI 107 [ _25 ])))
+            (clobber (reg:CC 17 flags))
+        ]) "fs/fcntl.c":59:23 518 {*iorhi_1}
+     (nil))
+(insn 116 115 117 14 (set (reg/f:SI 135)
+        (mem/f/c:SI (plus:SI (reg/f:SI 19 frame)
+                (const_int -4 [0xfffffffffffffffc])) [10 filp+0 S4 A32])) "fs/fcntl.c":59:23 75 {*movsi_internal}
+     (nil))
+(insn 117 116 118 14 (set (mem:HI (plus:SI (reg/f:SI 135)
+                (const_int 2 [0x2])) [8 filp_32->f_flags+0 S2 A16])
+        (reg:HI 108 [ _26 ])) "fs/fcntl.c":59:23 76 {*movhi_internal}
+     (nil))
+(insn 118 117 151 14 (set (reg:SI 109 [ _27 ])
+        (const_int 0 [0])) "fs/fcntl.c":60:16 75 {*movsi_internal}
+     (nil))
+(jump_insn 151 118 152 14 (set (pc)
+        (label_ref 129)) "fs/fcntl.c":60:16 -1
+     (nil)
+ -> 129)
+(barrier 152 151 121)
+(code_label 121 152 122 15 19 (nil) [3 uses])
+(note 122 121 123 15 [bb 15] NOTE_INSN_BASIC_BLOCK)
+(insn 123 122 153 15 (set (reg:SI 109 [ _27 ])
+        (const_int -1 [0xffffffffffffffff])) "fs/fcntl.c":64:16 75 {*movsi_internal}
+     (nil))
+(jump_insn 153 123 154 15 (set (pc)
+        (label_ref 129)) "fs/fcntl.c":64:16 -1
+     (nil)
+ -> 129)
+(barrier 154 153 126)
+(code_label 126 154 127 16 18 (nil) [1 uses])
+(note 127 126 128 16 [bb 16] NOTE_INSN_BASIC_BLOCK)
+(insn 128 127 129 16 (set (reg:SI 109 [ _27 ])
+        (const_int -1 [0xffffffffffffffff])) "fs/fcntl.c":66:16 75 {*movsi_internal}
+     (nil))
+(code_label 129 128 130 17 17 (nil) [7 uses])
+(note 130 129 131 17 [bb 17] NOTE_INSN_BASIC_BLOCK)
+(insn 131 130 135 17 (set (reg:SI 110 [ <retval> ])
+        (reg:SI 109 [ _27 ])) "fs/fcntl.c":68:1 75 {*movsi_internal}
+     (nil))
+(insn 135 131 136 17 (set (reg/i:SI 0 ax)
+        (reg:SI 110 [ <retval> ])) "fs/fcntl.c":68:1 75 {*movsi_internal}
+     (nil))
+(insn 136 135 0 17 (use (reg/i:SI 0 ax)) "fs/fcntl.c":68:1 -1
+     (nil))
+
+;; Function sys_dup2 (sys_dup2, funcdef_no=4, decl_uid=1350, cgraph_uid=5, symbol_order=4)
+
+verify found no changes in insn with uid = 9.
+verify found no changes in insn with uid = 14.
+
+
+sys_dup2
+
+Dataflow summary:
+;;  fully invalidated by EH 	 0 [ax] 1 [dx] 2 [cx] 8 [st] 9 [st(1)] 10 [st(2)] 11 [st(3)] 12 [st(4)] 13 [st(5)] 14 [st(6)] 15 [st(7)] 17 [flags] 18 [fpsr] 20 [xmm0] 21 [xmm1] 22 [xmm2] 23 [xmm3] 24 [xmm4] 25 [xmm5] 26 [xmm6] 27 [xmm7] 28 [mm0] 29 [mm1] 30 [mm2] 31 [mm3] 32 [mm4] 33 [mm5] 34 [mm6] 35 [mm7] 36 [r8] 37 [r9] 38 [r10] 39 [r11] 40 [r12] 41 [r13] 42 [r14] 43 [r15] 44 [xmm8] 45 [xmm9] 46 [xmm10] 47 [xmm11] 48 [xmm12] 49 [xmm13] 50 [xmm14] 51 [xmm15] 52 [xmm16] 53 [xmm17] 54 [xmm18] 55 [xmm19] 56 [xmm20] 57 [xmm21] 58 [xmm22] 59 [xmm23] 60 [xmm24] 61 [xmm25] 62 [xmm26] 63 [xmm27] 64 [xmm28] 65 [xmm29] 66 [xmm30] 67 [xmm31] 68 [k0] 69 [k1] 70 [k2] 71 [k3] 72 [k4] 73 [k5] 74 [k6] 75 [k7]
+;;  hardware regs used 	
+;;  regular block artificial uses 	 6 [bp] 7 [sp] 16 [argp] 19 [frame]
+;;  eh block artificial uses 	 6 [bp] 7 [sp] 16 [argp] 19 [frame]
+;;  entry block defs 	 0 [ax] 1 [dx] 2 [cx] 6 [bp] 7 [sp] 16 [argp] 19 [frame]
+;;  exit block uses 	 0 [ax] 6 [bp] 7 [sp] 19 [frame]
+;;  regs ever live 	 0 [ax] 3 [bx] 7 [sp] 17 [flags]
+;;  ref usage 	r0={4d,3u} r1={3d} r2={3d} r3={1d,1u} r6={1d,2u} r7={8d,15u} r8={2d} r9={2d} r10={2d} r11={2d} r12={2d} r13={2d} r14={2d} r15={2d} r16={1d,4u} r17={6d} r18={2d} r19={1d,2u} r20={2d} r21={2d} r22={2d} r23={2d} r24={2d} r25={2d} r26={2d} r27={2d} r28={2d} r29={2d} r30={2d} r31={2d} r32={2d} r33={2d} r34={2d} r35={2d} r36={2d} r37={2d} r38={2d} r39={2d} r40={2d} r41={2d} r42={2d} r43={2d} r44={2d} r45={2d} r46={2d} r47={2d} r48={2d} r49={2d} r50={2d} r51={2d} r52={2d} r53={2d} r54={2d} r55={2d} r56={2d} r57={2d} r58={2d} r59={2d} r60={2d} r61={2d} r62={2d} r63={2d} r64={2d} r65={2d} r66={2d} r67={2d} r68={2d} r69={2d} r70={2d} r71={2d} r72={2d} r73={2d} r74={2d} r75={2d} r82={1u} r83={1d,1u} r84={1d,1u} r85={1d,1u} 
+;;    total ref usage 192{161d,31u,0e} in 15{13 regular + 2 call} insns.
+(note 1 0 3 NOTE_INSN_DELETED)
+(note 3 1 2 2 [bb 2] NOTE_INSN_BASIC_BLOCK)
+(note 2 3 5 2 NOTE_INSN_FUNCTION_BEG)
+(insn 5 2 6 2 (set (reg:SI 83 [ newfd.12_1 ])
+        (mem/c:SI (plus:SI (reg/f:SI 16 argp)
+                (const_int 4 [0x4])) [6 newfd+0 S4 A32])) "fs/fcntl.c":72:5 75 {*movsi_internal}
+     (nil))
+(insn 6 5 7 2 (parallel [
+            (set (reg/f:SI 7 sp)
+                (plus:SI (reg/f:SI 7 sp)
+                    (const_int -12 [0xfffffffffffffff4])))
+            (clobber (reg:CC 17 flags))
+        ]) "fs/fcntl.c":72:5 209 {*addsi_1}
+     (expr_list:REG_ARGS_SIZE (const_int 12 [0xc])
+        (nil)))
+(insn 7 6 8 2 (set (mem:SI (pre_dec:SI (reg/f:SI 7 sp)) [6  S4 A32])
+        (reg:SI 83 [ newfd.12_1 ])) "fs/fcntl.c":72:5 54 {*pushsi2}
+     (expr_list:REG_ARGS_SIZE (const_int 16 [0x10])
+        (nil)))
+(insn 8 7 9 2 (set (reg:SI 3 bx)
+        (reg:SI 82)) "fs/fcntl.c":72:5 75 {*movsi_internal}
+     (nil))
+(call_insn 9 8 10 2 (set (reg:SI 0 ax)
+        (call (mem:QI (symbol_ref:SI ("sys_close") [flags 0x41]  <function_decl 0x7bd51e538800 sys_close>) [0 sys_close S1 A8])
+            (const_int 16 [0x10]))) "fs/fcntl.c":72:5 823 {*call_value}
+     (nil)
+    (expr_list (use (reg:SI 3 bx))
+        (nil)))
+(insn 10 9 11 2 (parallel [
+            (set (reg/f:SI 7 sp)
+                (plus:SI (reg/f:SI 7 sp)
+                    (const_int 16 [0x10])))
+            (clobber (reg:CC 17 flags))
+        ]) "fs/fcntl.c":72:5 209 {*addsi_1}
+     (expr_list:REG_ARGS_SIZE (const_int 0 [0])
+        (nil)))
+(insn 11 10 12 2 (parallel [
+            (set (reg/f:SI 7 sp)
+                (plus:SI (reg/f:SI 7 sp)
+                    (const_int -8 [0xfffffffffffffff8])))
+            (clobber (reg:CC 17 flags))
+        ]) "fs/fcntl.c":73:12 209 {*addsi_1}
+     (expr_list:REG_ARGS_SIZE (const_int 8 [0x8])
+        (nil)))
+(insn 12 11 13 2 (set (mem:SI (pre_dec:SI (reg/f:SI 7 sp)) [6  S4 A32])
+        (mem/c:SI (plus:SI (reg/f:SI 16 argp)
+                (const_int 4 [0x4])) [6 newfd+0 S4 A32])) "fs/fcntl.c":73:12 54 {*pushsi2}
+     (expr_list:REG_ARGS_SIZE (const_int 12 [0xc])
+        (nil)))
+(insn 13 12 14 2 (set (mem:SI (pre_dec:SI (reg/f:SI 7 sp)) [6  S4 A32])
+        (mem/c:SI (reg/f:SI 16 argp) [6 oldfd+0 S4 A32])) "fs/fcntl.c":73:12 54 {*pushsi2}
+     (expr_list:REG_ARGS_SIZE (const_int 16 [0x10])
+        (nil)))
+(call_insn 14 13 15 2 (set (reg:SI 0 ax)
+        (call (mem:QI (symbol_ref:SI ("dupfd") [flags 0x3]  <function_decl 0x7bd51e538900 dupfd>) [0 dupfd S1 A8])
+            (const_int 16 [0x10]))) "fs/fcntl.c":73:12 823 {*call_value}
+     (nil)
+    (nil))
+(insn 15 14 16 2 (parallel [
+            (set (reg/f:SI 7 sp)
+                (plus:SI (reg/f:SI 7 sp)
+                    (const_int 16 [0x10])))
+            (clobber (reg:CC 17 flags))
+        ]) "fs/fcntl.c":73:12 209 {*addsi_1}
+     (expr_list:REG_ARGS_SIZE (const_int 0 [0])
+        (nil)))
+(insn 16 15 19 2 (set (reg:SI 84 [ _7 ])
+        (reg:SI 0 ax)) "fs/fcntl.c":73:12 75 {*movsi_internal}
+     (nil))
+(insn 19 16 23 2 (set (reg:SI 85 [ <retval> ])
+        (reg:SI 84 [ _7 ])) "fs/fcntl.c":73:12 75 {*movsi_internal}
+     (nil))
+(insn 23 19 24 2 (set (reg/i:SI 0 ax)
+        (reg:SI 85 [ <retval> ])) "fs/fcntl.c":74:1 75 {*movsi_internal}
+     (nil))
+(insn 24 23 0 2 (use (reg/i:SI 0 ax)) "fs/fcntl.c":74:1 -1
+     (nil))

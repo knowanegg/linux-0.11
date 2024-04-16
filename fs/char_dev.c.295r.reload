@@ -1,0 +1,2910 @@
+
+;; Function get_fs_byte (get_fs_byte, funcdef_no=1, decl_uid=1321, cgraph_uid=2, symbol_order=1)
+
+
+********** Local #1: **********
+
+	   Spilling non-eliminable hard regs: 7
+New elimination table:
+Can eliminate 16 to 7 (offset=8, prev_offset=0)
+Can eliminate 16 to 6 (offset=4, prev_offset=0)
+Can eliminate 19 to 7 (offset=0, prev_offset=0)
+Can eliminate 19 to 6 (offset=-4, prev_offset=0)
+          alt=0,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 0 in insn 18:  (0) =r {*set_got}
+          alt=0,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 0 in insn 6:  (0) =r  (1) g {*movsi_internal}
+          alt=0,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 0 in insn 7:  (0) =r  (1) m
+	   Spilling non-eliminable hard regs: 7
+
+********** Inheritance #1: **********
+
+EBB 2
+
+********** Pseudo live ranges #1: **********
+
+  BB 2
+   Insn 16: point = 0, n_alt = -1
+   Insn 15: point = 0, n_alt = -2
+   Insn 11: point = 1, n_alt = -2
+   Insn 8: point = 3, n_alt = -2
+   Insn 5: point = 5, n_alt = -2
+   Insn 7: point = 7, n_alt = 0
+   Insn 6: point = 9, n_alt = 0
+   Insn 18: point = 10, n_alt = 0
+ r82: [10..10]
+ r83: [4..5]
+ r84: [2..3]
+ r85: [0..1]
+ r86: [6..7]
+ r87: [8..9]
+Compressing live ranges: from 11 to 11 - 100%
+Ranges after the compression:
+ r82: [10..10]
+ r83: [4..5]
+ r84: [2..3]
+ r85: [0..1]
+ r86: [6..7]
+ r87: [8..9]
+
+********** Assignment #1: **********
+
+
+********** Undoing inheritance #1: **********
+
+
+********** Local #2: **********
+
+	   Spilling non-eliminable hard regs: 7
+	   Spilling non-eliminable hard regs: 7
+New elimination table:
+Can eliminate 16 to 7 (offset=8, prev_offset=8)
+Can eliminate 16 to 6 (offset=4, prev_offset=0)
+Can eliminate 19 to 7 (offset=0, prev_offset=0)
+Can eliminate 19 to 6 (offset=-4, prev_offset=0)
+changing reg in insn 18
+changing reg in insn 5
+changing reg in insn 8
+changing reg in insn 8
+changing reg in insn 11
+changing reg in insn 11
+changing reg in insn 15
+changing reg in insn 7
+changing reg in insn 5
+changing reg in insn 6
+changing reg in insn 7
+deleting insn with uid = 11.
+deleting insn with uid = 15.
+starting the processing of deferred insns
+ending the processing of deferred insns
+
+
+get_fs_byte
+
+Dataflow summary:
+;;  fully invalidated by EH 	 0 [ax] 1 [dx] 2 [cx] 8 [st] 9 [st(1)] 10 [st(2)] 11 [st(3)] 12 [st(4)] 13 [st(5)] 14 [st(6)] 15 [st(7)] 17 [flags] 18 [fpsr] 20 [xmm0] 21 [xmm1] 22 [xmm2] 23 [xmm3] 24 [xmm4] 25 [xmm5] 26 [xmm6] 27 [xmm7] 28 [mm0] 29 [mm1] 30 [mm2] 31 [mm3] 32 [mm4] 33 [mm5] 34 [mm6] 35 [mm7] 36 [r8] 37 [r9] 38 [r10] 39 [r11] 40 [r12] 41 [r13] 42 [r14] 43 [r15] 44 [xmm8] 45 [xmm9] 46 [xmm10] 47 [xmm11] 48 [xmm12] 49 [xmm13] 50 [xmm14] 51 [xmm15] 52 [xmm16] 53 [xmm17] 54 [xmm18] 55 [xmm19] 56 [xmm20] 57 [xmm21] 58 [xmm22] 59 [xmm23] 60 [xmm24] 61 [xmm25] 62 [xmm26] 63 [xmm27] 64 [xmm28] 65 [xmm29] 66 [xmm30] 67 [xmm31] 68 [k0] 69 [k1] 70 [k2] 71 [k3] 72 [k4] 73 [k5] 74 [k6] 75 [k7]
+;;  hardware regs used 	
+;;  regular block artificial uses 	 7 [sp]
+;;  eh block artificial uses 	 7 [sp] 16 [argp]
+;;  entry block defs 	 0 [ax] 1 [dx] 2 [cx] 7 [sp]
+;;  exit block uses 	 0 [ax] 7 [sp]
+;;  regs ever live 	 0 [ax] 3 [bx] 17 [flags]
+;;  ref usage 	r0={5d,4u} r1={1d} r2={1d} r3={1d,1u} r7={1d,3u} r17={2d} 
+;;    total ref usage 19{11d,8u,0e} in 6{6 regular + 0 call} insns.
+(note 1 0 3 NOTE_INSN_DELETED)
+(note 3 1 18 2 [bb 2] NOTE_INSN_BASIC_BLOCK)
+(insn/f 18 3 2 2 (parallel [
+            (set (reg:SI 0 ax [82])
+                (unspec:SI [
+                        (const_int 0 [0])
+                    ] UNSPEC_SET_GOT))
+            (clobber (reg:CC 17 flags))
+        ]) 846 {*set_got}
+     (expr_list:REG_CFA_FLUSH_QUEUE (nil)
+        (nil)))
+(note 2 18 6 2 NOTE_INSN_FUNCTION_BEG)
+(insn 6 2 7 2 (set (reg/f:SI 0 ax [87])
+        (mem/f/c:SI (plus:SI (reg/f:SI 7 sp)
+                (const_int 8 [0x8])) [1 addr+0 S4 A32])) "include/asm/segment.h":8:5 75 {*movsi_internal}
+     (nil))
+(insn 7 6 5 2 (parallel [
+            (set (reg:QI 0 ax [orig:86 _v ] [86])
+                (asm_operands:QI ("movb %%fs:%1, %0") ("=r") 0 [
+                        (mem:QI (reg/f:SI 0 ax [87]) [0 *addr_2(D)+0 S1 A8])
+                    ]
+                     [
+                        (asm_input:QI ("m") include/asm/segment.h:8)
+                    ]
+                     [] include/asm/segment.h:8))
+            (clobber (reg:CC 17 flags))
+        ]) "include/asm/segment.h":8:5 -1
+     (nil))
+(insn 5 7 8 2 (set (reg/v:QI 3 bx [orig:83 _v ] [83])
+        (reg:QI 0 ax [orig:86 _v ] [86])) "include/asm/segment.h":8:5 77 {*movqi_internal}
+     (nil))
+(insn 8 5 16 2 (set (reg:QI 0 ax [orig:84 _4 ] [84])
+        (reg/v:QI 3 bx [orig:83 _v ] [83])) "include/asm/segment.h":9:12 77 {*movqi_internal}
+     (nil))
+(insn 16 8 19 2 (use (reg/i:QI 0 ax)) "include/asm/segment.h":10:1 -1
+     (nil))
+(note 19 16 0 NOTE_INSN_DELETED)
+
+;; Function put_fs_byte (put_fs_byte, funcdef_no=2, decl_uid=1326, cgraph_uid=3, symbol_order=2)
+
+
+********** Local #1: **********
+
+	   Spilling non-eliminable hard regs: 7
+New elimination table:
+Can eliminate 16 to 7 (offset=8, prev_offset=0)
+Can eliminate 16 to 6 (offset=4, prev_offset=0)
+Can eliminate 19 to 7 (offset=4, prev_offset=0)
+Can eliminate 19 to 6 (offset=0, prev_offset=0)
+          alt=0,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 0 in insn 15:  (0) =r {*set_got}
+          alt=0,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 0 in insn 2:  (0) =r  (1) g {*movsi_internal}
+          alt=0,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 0 in insn 3:  (0) =Q  (1) Q {*movqi_internal}
+            0 Non-pseudo reload: reject+=2
+            0 Non input pseudo reload: reject++
+            Cycle danger: overall += LRA_MAX_REJECT
+          alt=0,overall=609,losers=1,rld_nregs=1
+            0 Non-pseudo reload: reject+=2
+            0 Non input pseudo reload: reject++
+            alt=3: Bad operand -- refuse
+            0 Non-pseudo reload: reject+=2
+            0 Non input pseudo reload: reject++
+            1 Spill pseudo into memory: reject+=3
+            Using memory insn operand 1: reject+=3
+          alt=4,overall=21,losers=2,rld_nregs=1
+            0 Non-pseudo reload: reject+=2
+            0 Non input pseudo reload: reject++
+            Cycle danger: overall += LRA_MAX_REJECT
+          alt=5,overall=609,losers=1,rld_nregs=1
+            0 Non-pseudo reload: reject+=2
+            0 Non input pseudo reload: reject++
+            Cycle danger: overall += LRA_MAX_REJECT
+          alt=6,overall=609,losers=1,rld_nregs=1
+            Staticly defined alt reject+=6
+            0 Non-pseudo reload: reject+=2
+            0 Non input pseudo reload: reject++
+            1 Spill pseudo into memory: reject+=3
+            Using memory insn operand 1: reject+=3
+            alt=7,overall=27,losers=2 -- refuse
+          alt=8,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 8 in insn 4:  (0) m  (1) qn {*movqi_internal}
+            1 Non-pseudo reload: reject+=2
+            1 Non input pseudo reload: reject++
+            Cycle danger: overall += LRA_MAX_REJECT
+          alt=0,overall=609,losers=1,rld_nregs=1
+            alt=3: Bad operand -- refuse
+          alt=4,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 4 in insn 8:  (0) q  (1) m {*movqi_internal}
+          alt=0,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 0 in insn 9:  (0) =r  (1) g {*movsi_internal}
+          alt=0,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 0 in insn 10:  (0) r  (1) m
+	   Spilling non-eliminable hard regs: 7
+
+********** Inheritance #1: **********
+
+EBB 2 3
+
+********** Pseudo live ranges #1: **********
+
+  BB 3
+   Insn 14: point = 0, n_alt = -1
+  BB 2
+   Insn 10: point = 0, n_alt = 0
+   Insn 9: point = 1, n_alt = 0
+   Insn 8: point = 2, n_alt = 4
+   Insn 4: point = 3, n_alt = 8
+   Insn 3: point = 4, n_alt = 0
+   Insn 2: point = 6, n_alt = 0
+   Insn 15: point = 7, n_alt = 0
+ r82: [7..7]
+ r83: [5..6]
+ r84: [3..4]
+ r85: [0..2]
+ r86: [0..1]
+Compressing live ranges: from 8 to 7 - 87%
+Ranges after the compression:
+ r82: [6..6]
+ r83: [4..5]
+ r84: [2..3]
+ r85: [0..1]
+ r86: [0..1]
+
+********** Assignment #1: **********
+
+
+********** Undoing inheritance #1: **********
+
+
+********** Local #2: **********
+
+	   Spilling non-eliminable hard regs: 7
+	   Spilling non-eliminable hard regs: 7
+New elimination table:
+Can eliminate 16 to 7 (offset=8, prev_offset=8)
+Can eliminate 16 to 6 (offset=4, prev_offset=0)
+Can eliminate 19 to 7 (offset=4, prev_offset=4)
+Can eliminate 19 to 6 (offset=0, prev_offset=0)
+changing reg in insn 15
+changing reg in insn 2
+changing reg in insn 3
+changing reg in insn 4
+changing reg in insn 8
+changing reg in insn 10
+changing reg in insn 9
+changing reg in insn 10
+deleting insn with uid = 3.
+starting the processing of deferred insns
+ending the processing of deferred insns
+
+
+put_fs_byte
+
+Dataflow summary:
+;;  fully invalidated by EH 	 0 [ax] 1 [dx] 2 [cx] 8 [st] 9 [st(1)] 10 [st(2)] 11 [st(3)] 12 [st(4)] 13 [st(5)] 14 [st(6)] 15 [st(7)] 17 [flags] 18 [fpsr] 20 [xmm0] 21 [xmm1] 22 [xmm2] 23 [xmm3] 24 [xmm4] 25 [xmm5] 26 [xmm6] 27 [xmm7] 28 [mm0] 29 [mm1] 30 [mm2] 31 [mm3] 32 [mm4] 33 [mm5] 34 [mm6] 35 [mm7] 36 [r8] 37 [r9] 38 [r10] 39 [r11] 40 [r12] 41 [r13] 42 [r14] 43 [r15] 44 [xmm8] 45 [xmm9] 46 [xmm10] 47 [xmm11] 48 [xmm12] 49 [xmm13] 50 [xmm14] 51 [xmm15] 52 [xmm16] 53 [xmm17] 54 [xmm18] 55 [xmm19] 56 [xmm20] 57 [xmm21] 58 [xmm22] 59 [xmm23] 60 [xmm24] 61 [xmm25] 62 [xmm26] 63 [xmm27] 64 [xmm28] 65 [xmm29] 66 [xmm30] 67 [xmm31] 68 [k0] 69 [k1] 70 [k2] 71 [k3] 72 [k4] 73 [k5] 74 [k6] 75 [k7]
+;;  hardware regs used 	
+;;  regular block artificial uses 	 7 [sp]
+;;  eh block artificial uses 	 7 [sp] 16 [argp]
+;;  entry block defs 	 0 [ax] 1 [dx] 2 [cx] 7 [sp]
+;;  exit block uses 	 7 [sp]
+;;  regs ever live 	 0 [ax] 1 [dx] 17 [flags]
+;;  ref usage 	r0={4d,2u} r1={2d,1u} r2={1d} r7={1d,7u} r17={2d} 
+;;    total ref usage 20{10d,10u,0e} in 7{7 regular + 0 call} insns.
+(note 1 0 6 NOTE_INSN_DELETED)
+(note 6 1 15 2 [bb 2] NOTE_INSN_BASIC_BLOCK)
+(insn/f 15 6 2 2 (parallel [
+            (set (reg:SI 0 ax [82])
+                (unspec:SI [
+                        (const_int 0 [0])
+                    ] UNSPEC_SET_GOT))
+            (clobber (reg:CC 17 flags))
+        ]) 846 {*set_got}
+     (expr_list:REG_CFA_FLUSH_QUEUE (nil)
+        (nil)))
+(insn 2 15 4 2 (set (reg:SI 0 ax [83])
+        (mem/c:SI (plus:SI (reg/f:SI 7 sp)
+                (const_int 8 [0x8])) [0 val+0 S4 A32])) "include/asm/segment.h":13:1 75 {*movsi_internal}
+     (nil))
+(insn 4 2 5 2 (set (mem/c:QI (reg/f:SI 7 sp) [0 val+0 S1 A32])
+        (reg:QI 0 ax [84])) "include/asm/segment.h":13:1 77 {*movqi_internal}
+     (nil))
+(note 5 4 8 2 NOTE_INSN_FUNCTION_BEG)
+(insn 8 5 9 2 (set (reg:QI 0 ax [85])
+        (mem/c:QI (reg/f:SI 7 sp) [0 val+0 S1 A32])) "include/asm/segment.h":14:5 77 {*movqi_internal}
+     (nil))
+(insn 9 8 10 2 (set (reg/f:SI 1 dx [86])
+        (mem/f/c:SI (plus:SI (reg/f:SI 7 sp)
+                (const_int 12 [0xc])) [1 addr+0 S4 A32])) "include/asm/segment.h":14:5 75 {*movsi_internal}
+     (nil))
+(insn 10 9 13 2 (parallel [
+            (asm_operands/v ("movb %0, %%fs:%1") ("") 0 [
+                    (reg:QI 0 ax [85])
+                    (mem:QI (reg/f:SI 1 dx [86]) [0 *addr_3(D)+0 S1 A8])
+                ]
+                 [
+                    (asm_input:QI ("r") include/asm/segment.h:14)
+                    (asm_input:QI ("m") include/asm/segment.h:14)
+                ]
+                 [] include/asm/segment.h:14)
+            (clobber (reg:CC 17 flags))
+        ]) "include/asm/segment.h":14:5 -1
+     (nil))
+(note 13 10 14 3 [bb 3] NOTE_INSN_BASIC_BLOCK)
+(insn 14 13 16 3 (const_int 0 [0]) "include/asm/segment.h":15:1 843 {nop}
+     (nil))
+(note 16 14 0 NOTE_INSN_DELETED)
+
+;; Function rw_ram (rw_ram, funcdef_no=8, decl_uid=1368, cgraph_uid=9, symbol_order=8)
+
+
+********** Local #1: **********
+
+	   Spilling non-eliminable hard regs: 7
+New elimination table:
+Can eliminate 16 to 7 (offset=4, prev_offset=0)
+Can eliminate 16 to 6 (offset=4, prev_offset=0)
+Can eliminate 19 to 7 (offset=0, prev_offset=0)
+Can eliminate 19 to 6 (offset=0, prev_offset=0)
+          alt=0,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 0 in insn 15:  (0) =r {*set_got}
+          alt=0,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 0 in insn 5:  (0) =r  (1) g {*movsi_internal}
+	   Spilling non-eliminable hard regs: 7
+
+********** Inheritance #1: **********
+
+EBB 2
+
+********** Pseudo live ranges #1: **********
+
+  BB 2
+   Insn 13: point = 0, n_alt = -1
+   Insn 12: point = 0, n_alt = -2
+   Insn 8: point = 1, n_alt = -2
+   Insn 5: point = 3, n_alt = 0
+   Insn 15: point = 4, n_alt = 0
+ r82: [4..4]
+ r83: [2..3]
+ r84: [0..1]
+Compressing live ranges: from 5 to 5 - 100%
+Ranges after the compression:
+ r82: [4..4]
+ r83: [2..3]
+ r84: [0..1]
+
+********** Assignment #1: **********
+
+
+********** Undoing inheritance #1: **********
+
+
+********** Local #2: **********
+
+	   Spilling non-eliminable hard regs: 7
+	   Spilling non-eliminable hard regs: 7
+New elimination table:
+Can eliminate 16 to 7 (offset=4, prev_offset=4)
+Can eliminate 16 to 6 (offset=4, prev_offset=0)
+Can eliminate 19 to 7 (offset=0, prev_offset=0)
+Can eliminate 19 to 6 (offset=0, prev_offset=0)
+changing reg in insn 15
+changing reg in insn 5
+changing reg in insn 8
+changing reg in insn 8
+changing reg in insn 12
+deleting insn with uid = 8.
+deleting insn with uid = 12.
+starting the processing of deferred insns
+ending the processing of deferred insns
+
+
+rw_ram
+
+Dataflow summary:
+;;  fully invalidated by EH 	 0 [ax] 1 [dx] 2 [cx] 8 [st] 9 [st(1)] 10 [st(2)] 11 [st(3)] 12 [st(4)] 13 [st(5)] 14 [st(6)] 15 [st(7)] 17 [flags] 18 [fpsr] 20 [xmm0] 21 [xmm1] 22 [xmm2] 23 [xmm3] 24 [xmm4] 25 [xmm5] 26 [xmm6] 27 [xmm7] 28 [mm0] 29 [mm1] 30 [mm2] 31 [mm3] 32 [mm4] 33 [mm5] 34 [mm6] 35 [mm7] 36 [r8] 37 [r9] 38 [r10] 39 [r11] 40 [r12] 41 [r13] 42 [r14] 43 [r15] 44 [xmm8] 45 [xmm9] 46 [xmm10] 47 [xmm11] 48 [xmm12] 49 [xmm13] 50 [xmm14] 51 [xmm15] 52 [xmm16] 53 [xmm17] 54 [xmm18] 55 [xmm19] 56 [xmm20] 57 [xmm21] 58 [xmm22] 59 [xmm23] 60 [xmm24] 61 [xmm25] 62 [xmm26] 63 [xmm27] 64 [xmm28] 65 [xmm29] 66 [xmm30] 67 [xmm31] 68 [k0] 69 [k1] 70 [k2] 71 [k3] 72 [k4] 73 [k5] 74 [k6] 75 [k7]
+;;  hardware regs used 	
+;;  regular block artificial uses 	 7 [sp]
+;;  eh block artificial uses 	 7 [sp] 16 [argp]
+;;  entry block defs 	 0 [ax] 1 [dx] 2 [cx] 7 [sp]
+;;  exit block uses 	 0 [ax] 7 [sp]
+;;  regs ever live 	 0 [ax] 17 [flags]
+;;  ref usage 	r0={3d,2u} r1={1d} r2={1d} r7={1d,2u} r17={1d} 
+;;    total ref usage 11{7d,4u,0e} in 3{3 regular + 0 call} insns.
+(note 1 0 3 NOTE_INSN_DELETED)
+(note 3 1 15 2 [bb 2] NOTE_INSN_BASIC_BLOCK)
+(insn/f 15 3 2 2 (parallel [
+            (set (reg:SI 0 ax [82])
+                (unspec:SI [
+                        (const_int 0 [0])
+                    ] UNSPEC_SET_GOT))
+            (clobber (reg:CC 17 flags))
+        ]) 846 {*set_got}
+     (expr_list:REG_CFA_FLUSH_QUEUE (nil)
+        (nil)))
+(note 2 15 5 2 NOTE_INSN_FUNCTION_BEG)
+(insn 5 2 13 2 (set (reg:SI 0 ax [orig:83 _1 ] [83])
+        (const_int -5 [0xfffffffffffffffb])) "fs/char_dev.c":22:12 75 {*movsi_internal}
+     (nil))
+(insn 13 5 16 2 (use (reg/i:SI 0 ax)) "fs/char_dev.c":23:1 -1
+     (nil))
+(note 16 13 0 NOTE_INSN_DELETED)
+
+;; Function rw_mem (rw_mem, funcdef_no=9, decl_uid=1374, cgraph_uid=10, symbol_order=9)
+
+
+********** Local #1: **********
+
+	   Spilling non-eliminable hard regs: 7
+New elimination table:
+Can eliminate 16 to 7 (offset=4, prev_offset=0)
+Can eliminate 16 to 6 (offset=4, prev_offset=0)
+Can eliminate 19 to 7 (offset=0, prev_offset=0)
+Can eliminate 19 to 6 (offset=0, prev_offset=0)
+          alt=0,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 0 in insn 15:  (0) =r {*set_got}
+          alt=0,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 0 in insn 5:  (0) =r  (1) g {*movsi_internal}
+	   Spilling non-eliminable hard regs: 7
+
+********** Inheritance #1: **********
+
+EBB 2
+
+********** Pseudo live ranges #1: **********
+
+  BB 2
+   Insn 13: point = 0, n_alt = -1
+   Insn 12: point = 0, n_alt = -2
+   Insn 8: point = 1, n_alt = -2
+   Insn 5: point = 3, n_alt = 0
+   Insn 15: point = 4, n_alt = 0
+ r82: [4..4]
+ r83: [2..3]
+ r84: [0..1]
+Compressing live ranges: from 5 to 5 - 100%
+Ranges after the compression:
+ r82: [4..4]
+ r83: [2..3]
+ r84: [0..1]
+
+********** Assignment #1: **********
+
+
+********** Undoing inheritance #1: **********
+
+
+********** Local #2: **********
+
+	   Spilling non-eliminable hard regs: 7
+	   Spilling non-eliminable hard regs: 7
+New elimination table:
+Can eliminate 16 to 7 (offset=4, prev_offset=4)
+Can eliminate 16 to 6 (offset=4, prev_offset=0)
+Can eliminate 19 to 7 (offset=0, prev_offset=0)
+Can eliminate 19 to 6 (offset=0, prev_offset=0)
+changing reg in insn 15
+changing reg in insn 5
+changing reg in insn 8
+changing reg in insn 8
+changing reg in insn 12
+deleting insn with uid = 8.
+deleting insn with uid = 12.
+starting the processing of deferred insns
+ending the processing of deferred insns
+
+
+rw_mem
+
+Dataflow summary:
+;;  fully invalidated by EH 	 0 [ax] 1 [dx] 2 [cx] 8 [st] 9 [st(1)] 10 [st(2)] 11 [st(3)] 12 [st(4)] 13 [st(5)] 14 [st(6)] 15 [st(7)] 17 [flags] 18 [fpsr] 20 [xmm0] 21 [xmm1] 22 [xmm2] 23 [xmm3] 24 [xmm4] 25 [xmm5] 26 [xmm6] 27 [xmm7] 28 [mm0] 29 [mm1] 30 [mm2] 31 [mm3] 32 [mm4] 33 [mm5] 34 [mm6] 35 [mm7] 36 [r8] 37 [r9] 38 [r10] 39 [r11] 40 [r12] 41 [r13] 42 [r14] 43 [r15] 44 [xmm8] 45 [xmm9] 46 [xmm10] 47 [xmm11] 48 [xmm12] 49 [xmm13] 50 [xmm14] 51 [xmm15] 52 [xmm16] 53 [xmm17] 54 [xmm18] 55 [xmm19] 56 [xmm20] 57 [xmm21] 58 [xmm22] 59 [xmm23] 60 [xmm24] 61 [xmm25] 62 [xmm26] 63 [xmm27] 64 [xmm28] 65 [xmm29] 66 [xmm30] 67 [xmm31] 68 [k0] 69 [k1] 70 [k2] 71 [k3] 72 [k4] 73 [k5] 74 [k6] 75 [k7]
+;;  hardware regs used 	
+;;  regular block artificial uses 	 7 [sp]
+;;  eh block artificial uses 	 7 [sp] 16 [argp]
+;;  entry block defs 	 0 [ax] 1 [dx] 2 [cx] 7 [sp]
+;;  exit block uses 	 0 [ax] 7 [sp]
+;;  regs ever live 	 0 [ax] 17 [flags]
+;;  ref usage 	r0={3d,2u} r1={1d} r2={1d} r7={1d,2u} r17={1d} 
+;;    total ref usage 11{7d,4u,0e} in 3{3 regular + 0 call} insns.
+(note 1 0 3 NOTE_INSN_DELETED)
+(note 3 1 15 2 [bb 2] NOTE_INSN_BASIC_BLOCK)
+(insn/f 15 3 2 2 (parallel [
+            (set (reg:SI 0 ax [82])
+                (unspec:SI [
+                        (const_int 0 [0])
+                    ] UNSPEC_SET_GOT))
+            (clobber (reg:CC 17 flags))
+        ]) 846 {*set_got}
+     (expr_list:REG_CFA_FLUSH_QUEUE (nil)
+        (nil)))
+(note 2 15 5 2 NOTE_INSN_FUNCTION_BEG)
+(insn 5 2 13 2 (set (reg:SI 0 ax [orig:83 _1 ] [83])
+        (const_int -5 [0xfffffffffffffffb])) "fs/char_dev.c":27:12 75 {*movsi_internal}
+     (nil))
+(insn 13 5 16 2 (use (reg/i:SI 0 ax)) "fs/char_dev.c":28:1 -1
+     (nil))
+(note 16 13 0 NOTE_INSN_DELETED)
+
+;; Function rw_kmem (rw_kmem, funcdef_no=10, decl_uid=1380, cgraph_uid=11, symbol_order=10)
+
+
+********** Local #1: **********
+
+	   Spilling non-eliminable hard regs: 7
+New elimination table:
+Can eliminate 16 to 7 (offset=4, prev_offset=0)
+Can eliminate 16 to 6 (offset=4, prev_offset=0)
+Can eliminate 19 to 7 (offset=0, prev_offset=0)
+Can eliminate 19 to 6 (offset=0, prev_offset=0)
+          alt=0,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 0 in insn 15:  (0) =r {*set_got}
+          alt=0,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 0 in insn 5:  (0) =r  (1) g {*movsi_internal}
+	   Spilling non-eliminable hard regs: 7
+
+********** Inheritance #1: **********
+
+EBB 2
+
+********** Pseudo live ranges #1: **********
+
+  BB 2
+   Insn 13: point = 0, n_alt = -1
+   Insn 12: point = 0, n_alt = -2
+   Insn 8: point = 1, n_alt = -2
+   Insn 5: point = 3, n_alt = 0
+   Insn 15: point = 4, n_alt = 0
+ r82: [4..4]
+ r83: [2..3]
+ r84: [0..1]
+Compressing live ranges: from 5 to 5 - 100%
+Ranges after the compression:
+ r82: [4..4]
+ r83: [2..3]
+ r84: [0..1]
+
+********** Assignment #1: **********
+
+
+********** Undoing inheritance #1: **********
+
+
+********** Local #2: **********
+
+	   Spilling non-eliminable hard regs: 7
+	   Spilling non-eliminable hard regs: 7
+New elimination table:
+Can eliminate 16 to 7 (offset=4, prev_offset=4)
+Can eliminate 16 to 6 (offset=4, prev_offset=0)
+Can eliminate 19 to 7 (offset=0, prev_offset=0)
+Can eliminate 19 to 6 (offset=0, prev_offset=0)
+changing reg in insn 15
+changing reg in insn 5
+changing reg in insn 8
+changing reg in insn 8
+changing reg in insn 12
+deleting insn with uid = 8.
+deleting insn with uid = 12.
+starting the processing of deferred insns
+ending the processing of deferred insns
+
+
+rw_kmem
+
+Dataflow summary:
+;;  fully invalidated by EH 	 0 [ax] 1 [dx] 2 [cx] 8 [st] 9 [st(1)] 10 [st(2)] 11 [st(3)] 12 [st(4)] 13 [st(5)] 14 [st(6)] 15 [st(7)] 17 [flags] 18 [fpsr] 20 [xmm0] 21 [xmm1] 22 [xmm2] 23 [xmm3] 24 [xmm4] 25 [xmm5] 26 [xmm6] 27 [xmm7] 28 [mm0] 29 [mm1] 30 [mm2] 31 [mm3] 32 [mm4] 33 [mm5] 34 [mm6] 35 [mm7] 36 [r8] 37 [r9] 38 [r10] 39 [r11] 40 [r12] 41 [r13] 42 [r14] 43 [r15] 44 [xmm8] 45 [xmm9] 46 [xmm10] 47 [xmm11] 48 [xmm12] 49 [xmm13] 50 [xmm14] 51 [xmm15] 52 [xmm16] 53 [xmm17] 54 [xmm18] 55 [xmm19] 56 [xmm20] 57 [xmm21] 58 [xmm22] 59 [xmm23] 60 [xmm24] 61 [xmm25] 62 [xmm26] 63 [xmm27] 64 [xmm28] 65 [xmm29] 66 [xmm30] 67 [xmm31] 68 [k0] 69 [k1] 70 [k2] 71 [k3] 72 [k4] 73 [k5] 74 [k6] 75 [k7]
+;;  hardware regs used 	
+;;  regular block artificial uses 	 7 [sp]
+;;  eh block artificial uses 	 7 [sp] 16 [argp]
+;;  entry block defs 	 0 [ax] 1 [dx] 2 [cx] 7 [sp]
+;;  exit block uses 	 0 [ax] 7 [sp]
+;;  regs ever live 	 0 [ax] 17 [flags]
+;;  ref usage 	r0={3d,2u} r1={1d} r2={1d} r7={1d,2u} r17={1d} 
+;;    total ref usage 11{7d,4u,0e} in 3{3 regular + 0 call} insns.
+(note 1 0 3 NOTE_INSN_DELETED)
+(note 3 1 15 2 [bb 2] NOTE_INSN_BASIC_BLOCK)
+(insn/f 15 3 2 2 (parallel [
+            (set (reg:SI 0 ax [82])
+                (unspec:SI [
+                        (const_int 0 [0])
+                    ] UNSPEC_SET_GOT))
+            (clobber (reg:CC 17 flags))
+        ]) 846 {*set_got}
+     (expr_list:REG_CFA_FLUSH_QUEUE (nil)
+        (nil)))
+(note 2 15 5 2 NOTE_INSN_FUNCTION_BEG)
+(insn 5 2 13 2 (set (reg:SI 0 ax [orig:83 _1 ] [83])
+        (const_int -5 [0xfffffffffffffffb])) "fs/char_dev.c":32:12 75 {*movsi_internal}
+     (nil))
+(insn 13 5 16 2 (use (reg/i:SI 0 ax)) "fs/char_dev.c":33:1 -1
+     (nil))
+(note 16 13 0 NOTE_INSN_DELETED)
+
+;; Function rw_port (rw_port, funcdef_no=11, decl_uid=1386, cgraph_uid=12, symbol_order=11)
+
+
+********** Local #1: **********
+
+	   Spilling non-eliminable hard regs: 7
+New elimination table:
+Can eliminate 16 to 7 (offset=20, prev_offset=0)
+Can eliminate 16 to 6 (offset=4, prev_offset=0)
+Can eliminate 19 to 7 (offset=16, prev_offset=0)
+Can eliminate 19 to 6 (offset=0, prev_offset=0)
+          alt=0,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 0 in insn 83:  (0) =r {*set_got}
+          alt=0,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 0 in insn 5:  (0) =r  (1) g {*movsi_internal}
+          alt=0,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 0 in insn 6:  (0) =r  (1) g {*movsi_internal}
+            0 Non-pseudo reload: reject+=2
+            0 Non input pseudo reload: reject++
+            Cycle danger: overall += LRA_MAX_REJECT
+          alt=0,overall=609,losers=1,rld_nregs=1
+          alt=1,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 1 in insn 7:  (0) m  (1) re {*movsi_internal}
+            0 Non-pseudo reload: reject+=2
+            0 Non input pseudo reload: reject++
+          alt=0,overall=9,losers=1,rld_nregs=1
+            Staticly defined alt reject+=6
+          alt=1,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 1 in insn 11:  (0) ?mr {*cmpsi_ccno_1}
+          alt=0,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 0 in insn 14:  (0) =r  (1) g {*movsi_internal}
+            1 Matching alt: reject+=2
+          alt=0,overall=8,losers=1,rld_nregs=1
+            1 Matching alt: reject+=2
+            2 Spill Non-pseudo into memory: reject+=3
+            Using memory insn operand 2: reject+=3
+            2 Non input pseudo reload: reject++
+            alt=1,overall=21,losers=2 -- refuse
+            2 Matching alt: reject+=2
+            2 Non-pseudo reload: reject+=2
+            2 Non input pseudo reload: reject++
+            alt=2,overall=11,losers=1 -- refuse
+          alt=3,overall=0,losers=0,rld_nregs=0
+            1 Matching alt: reject+=2
+            1 Non-pseudo reload: reject+=2
+            1 Non input pseudo reload: reject++
+            alt=0,overall=11,losers=1 -- refuse
+            1 Matching alt: reject+=2
+            1 Non-pseudo reload: reject+=2
+            1 Non input pseudo reload: reject++
+            alt=1,overall=11,losers=1 -- refuse
+            1 Non-pseudo reload: reject+=2
+            1 Non input pseudo reload: reject++
+            alt=2,overall=9,losers=1 -- refuse
+            1 Non-pseudo reload: reject+=2
+            1 Non input pseudo reload: reject++
+            alt=3,overall=9,losers=1 -- refuse
+	 Choosing alt 3 in insn 15:  (0) r  (1) r  (2) le {*addsi_1}
+            0 Non-pseudo reload: reject+=2
+            0 Non input pseudo reload: reject++
+            Cycle danger: overall += LRA_MAX_REJECT
+          alt=0,overall=609,losers=1,rld_nregs=1
+          alt=1,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 1 in insn 16:  (0) m  (1) re {*movsi_internal}
+          alt=0,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 0 in insn 18:  (0) =r  (1) g {*movsi_internal}
+            1 Small class reload: reject+=3
+          alt=0,overall=9,losers=1,rld_nregs=1
+	 Choosing alt 0 in insn 19:  (0) =a  (1) d
+      Creating newreg=109 from oldreg=99, assigning class DREG to r109
+   19: {r98:QI=asm_operands;clobber flags:CC;}
+      REG_DEAD r99:SI
+      REG_UNUSED flags:CC
+    Inserting insn reload before:
+   85: r109:SI=r99:SI
+
+            0 Non-pseudo reload: reject+=2
+            0 Non input pseudo reload: reject++
+            Cycle danger: overall += LRA_MAX_REJECT
+          alt=0,overall=609,losers=1,rld_nregs=1
+            0 Non-pseudo reload: reject+=2
+            0 Non input pseudo reload: reject++
+            alt=3: Bad operand -- refuse
+            0 Non-pseudo reload: reject+=2
+            0 Non input pseudo reload: reject++
+            1 Spill pseudo into memory: reject+=3
+            Using memory insn operand 1: reject+=3
+          alt=4,overall=21,losers=2,rld_nregs=1
+            0 Non-pseudo reload: reject+=2
+            0 Non input pseudo reload: reject++
+            Cycle danger: overall += LRA_MAX_REJECT
+          alt=5,overall=609,losers=1,rld_nregs=1
+            0 Non-pseudo reload: reject+=2
+            0 Non input pseudo reload: reject++
+            Cycle danger: overall += LRA_MAX_REJECT
+          alt=6,overall=609,losers=1,rld_nregs=1
+            Staticly defined alt reject+=6
+            0 Non-pseudo reload: reject+=2
+            0 Non input pseudo reload: reject++
+            1 Spill pseudo into memory: reject+=3
+            Using memory insn operand 1: reject+=3
+            alt=7,overall=27,losers=2 -- refuse
+          alt=8,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 8 in insn 17:  (0) m  (1) qn {*movqi_internal}
+            1 Non-pseudo reload: reject+=2
+            1 Non input pseudo reload: reject++
+            Cycle danger: overall += LRA_MAX_REJECT
+          alt=0,overall=609,losers=1,rld_nregs=1
+            alt=3: Bad operand -- refuse
+          alt=4,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 4 in insn 20:  (0) q  (1) m {*movqi_internal}
+          alt=0,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 0 in insn 22:  (0) =r  (1) qm {extendqisi2}
+          alt=0,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 0 in insn 23:  (0) =<  (1) ri*m {*pushsi2}
+          alt=0,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 0 in insn 24:  (0) =<  (1) ri*m {*pushsi2} (sp_off=-4)
+          alt=0,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 0 in insn 25:  (0) lBwBz {*call} (sp_off=-8)
+          alt=0,overall=0,losers=0,rld_nregs=0
+            1 Matching alt: reject+=2
+            1 Non-pseudo reload: reject+=2
+            1 Non input pseudo reload: reject++
+            alt=0,overall=11,losers=1 -- refuse
+            1 Matching alt: reject+=2
+            1 Non-pseudo reload: reject+=2
+            1 Non input pseudo reload: reject++
+            alt=1,overall=11,losers=1 -- refuse
+            1 Non-pseudo reload: reject+=2
+            1 Non input pseudo reload: reject++
+            alt=2,overall=9,losers=1 -- refuse
+            1 Non-pseudo reload: reject+=2
+            1 Non input pseudo reload: reject++
+            alt=3,overall=9,losers=1 -- refuse
+	 Choosing alt 0 in insn 26:  (0) =rm  (1) %0  (2) re {*addsi_1} (sp_off=-8)
+          alt=0,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 0 in insn 31:  (0) =r  (1) g {*movsi_internal}
+            1 Matching alt: reject+=2
+          alt=0,overall=8,losers=1,rld_nregs=1
+            1 Matching alt: reject+=2
+            2 Spill Non-pseudo into memory: reject+=3
+            Using memory insn operand 2: reject+=3
+            2 Non input pseudo reload: reject++
+            alt=1,overall=21,losers=2 -- refuse
+            2 Matching alt: reject+=2
+            2 Non-pseudo reload: reject+=2
+            2 Non input pseudo reload: reject++
+            alt=2,overall=11,losers=1 -- refuse
+          alt=3,overall=0,losers=0,rld_nregs=0
+            1 Matching alt: reject+=2
+            1 Non-pseudo reload: reject+=2
+            1 Non input pseudo reload: reject++
+            alt=0,overall=11,losers=1 -- refuse
+            1 Matching alt: reject+=2
+            1 Non-pseudo reload: reject+=2
+            1 Non input pseudo reload: reject++
+            alt=1,overall=11,losers=1 -- refuse
+            1 Non-pseudo reload: reject+=2
+            1 Non input pseudo reload: reject++
+            alt=2,overall=9,losers=1 -- refuse
+            1 Non-pseudo reload: reject+=2
+            1 Non input pseudo reload: reject++
+            alt=3,overall=9,losers=1 -- refuse
+	 Choosing alt 3 in insn 32:  (0) r  (1) r  (2) le {*addsi_1}
+            0 Non-pseudo reload: reject+=2
+            0 Non input pseudo reload: reject++
+            Cycle danger: overall += LRA_MAX_REJECT
+          alt=0,overall=609,losers=1,rld_nregs=1
+          alt=1,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 1 in insn 33:  (0) m  (1) re {*movsi_internal}
+          alt=0,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 0 in insn 34:  (0) =<  (1) ri*m {*pushsi2}
+          alt=0,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 0 in insn 35:  (1) lBwBz {*call_value} (sp_off=-4)
+          alt=0,overall=0,losers=0,rld_nregs=0
+            1 Matching alt: reject+=2
+            1 Non-pseudo reload: reject+=2
+            1 Non input pseudo reload: reject++
+            alt=0,overall=11,losers=1 -- refuse
+            1 Matching alt: reject+=2
+            1 Non-pseudo reload: reject+=2
+            1 Non input pseudo reload: reject++
+            alt=1,overall=11,losers=1 -- refuse
+            1 Non-pseudo reload: reject+=2
+            1 Non input pseudo reload: reject++
+            alt=2,overall=9,losers=1 -- refuse
+            1 Non-pseudo reload: reject+=2
+            1 Non input pseudo reload: reject++
+            alt=3,overall=9,losers=1 -- refuse
+	 Choosing alt 0 in insn 36:  (0) =rm  (1) %0  (2) re {*addsi_1} (sp_off=-4)
+          alt=0,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 0 in insn 38:  (0) =r  (1) g {*movsi_internal}
+          alt=0,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 0 in insn 39:  (0) a  (1) d
+          alt=0,overall=0,losers=0,rld_nregs=0
+            1 Matching alt: reject+=2
+            1 Non-pseudo reload: reject+=2
+            1 Non input pseudo reload: reject++
+            alt=0,overall=17,losers=2 -- refuse
+            0 Non-pseudo reload: reject+=2
+            0 Non input pseudo reload: reject++
+            alt=1,overall=9,losers=1 -- refuse
+            0 Non-pseudo reload: reject+=2
+            0 Non input pseudo reload: reject++
+            alt=2,overall=9,losers=1 -- refuse
+            0 Non-pseudo reload: reject+=2
+            0 Non input pseudo reload: reject++
+            alt=3,overall=9,losers=1 -- refuse
+	 Choosing alt 0 in insn 42:  (0) =rm  (1) %0  (2) re {*addsi_1}
+          alt=0,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 0 in insn 45:  (0) =r  (1) g {*movsi_internal}
+            1 Matching alt: reject+=2
+          alt=0,overall=8,losers=1,rld_nregs=1
+            1 Matching alt: reject+=2
+            2 Spill Non-pseudo into memory: reject+=3
+            Using memory insn operand 2: reject+=3
+            2 Non input pseudo reload: reject++
+            alt=1,overall=21,losers=2 -- refuse
+            2 Matching alt: reject+=2
+            2 Non-pseudo reload: reject+=2
+            2 Non input pseudo reload: reject++
+            alt=2,overall=11,losers=1 -- refuse
+          alt=3,overall=0,losers=0,rld_nregs=0
+            1 Matching alt: reject+=2
+            1 Non-pseudo reload: reject+=2
+            1 Non input pseudo reload: reject++
+            alt=0,overall=11,losers=1 -- refuse
+            1 Matching alt: reject+=2
+            1 Non-pseudo reload: reject+=2
+            1 Non input pseudo reload: reject++
+            alt=1,overall=11,losers=1 -- refuse
+            1 Non-pseudo reload: reject+=2
+            1 Non input pseudo reload: reject++
+            alt=2,overall=9,losers=1 -- refuse
+            1 Non-pseudo reload: reject+=2
+            1 Non input pseudo reload: reject++
+            alt=3,overall=9,losers=1 -- refuse
+	 Choosing alt 3 in insn 46:  (0) r  (1) r  (2) le {*addsi_1}
+            0 Non-pseudo reload: reject+=2
+            0 Non input pseudo reload: reject++
+            Cycle danger: overall += LRA_MAX_REJECT
+          alt=0,overall=609,losers=1,rld_nregs=1
+          alt=1,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 1 in insn 47:  (0) m  (1) re {*movsi_internal}
+          alt=0,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 0 in insn 50:  (0) r {*cmpsi_ccno_1}
+          alt=0,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 0 in insn 56:  (0) rm  (1) re {*cmpsi_1}
+          alt=0,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 0 in insn 60:  (0) =r  (1) g {*movsi_internal}
+          alt=0,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 0 in insn 61:  (0) =r  (1) g {*movsi_internal}
+          alt=0,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 0 in insn 62:  (0) =rm  (1) 0  (2) re {*subsi_1}
+          alt=0,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 0 in insn 63:  (0) =r  (1) g {*movsi_internal}
+          alt=0,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 0 in insn 64:  (0) =r  (1) g {*movsi_internal}
+          alt=0,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 0 in insn 65:  (0) =r  (1) g {*movsi_internal}
+          alt=0,overall=0,losers=0,rld_nregs=0
+            alt=0,overall=6,losers=1 -- refuse
+            alt=1,overall=6,losers=1 -- refuse
+          alt=2,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 0 in insn 66:  (0) =rm  (1) %0  (2) re {*addsi_1}
+          alt=0,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 0 in insn 67:  (0) =r  (1) g {*movsi_internal}
+            0 Non-pseudo reload: reject+=2
+            0 Non input pseudo reload: reject++
+            Cycle danger: overall += LRA_MAX_REJECT
+          alt=0,overall=609,losers=1,rld_nregs=1
+          alt=1,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 1 in insn 68:  (0) m  (1) re {*movsi_internal}
+          alt=0,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 0 in insn 69:  (0) =r  (1) g {*movsi_internal}
+	   Spilling non-eliminable hard regs: 7
+
+********** Inheritance #1: **********
+
+EBB 2
+EBB 3 4
+EBB 5
+EBB 6
+EBB 7 8
+EBB 9
+
+********** Pseudo live ranges #1: **********
+
+  BB 9
+   Insn 77: point = 0, n_alt = -1
+   Insn 76: point = 0, n_alt = -2
+   Insn 72: point = 1, n_alt = -2
+   Insn 69: point = 3, n_alt = 0
+   Insn 68: point = 4, n_alt = 1
+   Insn 67: point = 5, n_alt = 0
+   Insn 66: point = 6, n_alt = 0
+   Insn 65: point = 8, n_alt = 0
+   Insn 64: point = 9, n_alt = 0
+   Insn 63: point = 11, n_alt = 0
+   Insn 62: point = 12, n_alt = 0
+   Insn 61: point = 13, n_alt = 0
+   Insn 60: point = 15, n_alt = 0
+  BB 7
+   Insn 51: point = 16, n_alt = -1
+   Insn 50: point = 16, n_alt = 0
+   Insn 47: point = 17, n_alt = 1
+   Insn 46: point = 18, n_alt = 3
+   Insn 45: point = 19, n_alt = 0
+  BB 2
+   Insn 79: point = 20, n_alt = -1
+   Insn 7: point = 20, n_alt = 1
+   Insn 6: point = 21, n_alt = 0
+   Insn 5: point = 23, n_alt = 0
+   Insn 83: point = 24, n_alt = 0
+  BB 6
+   Insn 42: point = 25, n_alt = 0
+  BB 4
+   Insn 81: point = 25, n_alt = -1
+   Insn 26: point = 25, n_alt = 0
+   Insn 25: point = 25, n_alt = 0
+   Insn 24: point = 25, n_alt = 0
+   Insn 23: point = 26, n_alt = 0
+   Insn 22: point = 27, n_alt = 0
+   Insn 21: point = 29, n_alt = -2
+   Insn 20: point = 31, n_alt = 4
+   Insn 17: point = 32, n_alt = 8
+   Insn 19: point = 33, n_alt = 0
+   Insn 85: point = 35, n_alt = -2
+	Hard reg 0 is preferable by r109 with profit 1000
+   Insn 18: point = 37, n_alt = 0
+   Insn 16: point = 38, n_alt = 1
+   Insn 15: point = 39, n_alt = 3
+   Insn 14: point = 40, n_alt = 0
+  BB 5
+   Insn 39: point = 41, n_alt = 0
+   Insn 38: point = 42, n_alt = 0
+   Insn 37: point = 43, n_alt = -2
+   Insn 36: point = 44, n_alt = 0
+   Insn 35: point = 44, n_alt = 0
+   Insn 34: point = 44, n_alt = 0
+   Insn 33: point = 45, n_alt = 1
+   Insn 32: point = 46, n_alt = 3
+   Insn 31: point = 47, n_alt = 0
+  BB 3
+   Insn 12: point = 48, n_alt = -1
+   Insn 11: point = 48, n_alt = 1
+  BB 8
+   Insn 57: point = 48, n_alt = -1
+   Insn 56: point = 48, n_alt = 0
+ r82: [24..24]
+ r83: [26..40]
+ r84: [28..29]
+ r85: [25..27]
+ r86: [44..47]
+ r87: [41..43]
+ r88: [16..19]
+ r89: [12..13]
+ r90: [7..9]
+ r91: [4..6]
+ r92: [30..31]
+ r93: [2..3]
+ r94: [0..1]
+ r95: [22..23]
+ r96: [20..21]
+ r97: [38..39]
+ r98: [32..33]
+ r99: [36..37]
+ r100: [45..46]
+ r101: [41..42]
+ r102: [17..18]
+ r103: [14..15]
+ r104: [10..11]
+ r105: [7..8]
+ r106: [4..5]
+ r109: [34..35]
+Compressing live ranges: from 48 to 39 - 81%
+Ranges after the compression:
+ r82: [20..20]
+ r83: [21..34]
+ r84: [23..24]
+ r85: [21..22]
+ r86: [37..38]
+ r87: [35..36]
+ r88: [14..15]
+ r89: [10..11]
+ r90: [6..7]
+ r91: [4..5]
+ r92: [25..26]
+ r93: [2..3]
+ r94: [0..1]
+ r95: [18..19]
+ r96: [16..17]
+ r97: [33..34]
+ r98: [27..28]
+ r99: [31..32]
+ r100: [37..38]
+ r101: [35..36]
+ r102: [14..15]
+ r103: [12..13]
+ r104: [8..9]
+ r105: [6..7]
+ r106: [4..5]
+ r109: [29..30]
+
+********** Assignment #1: **********
+
+	 Assigning to 109 (cl=DREG, orig=99, freq=2000, tfirst=109, tfreq=2000)...
+	   Assign 1 to reload r109 (freq=2000)
+
+********** Undoing inheritance #1: **********
+
+
+********** Local #2: **********
+
+	   Spilling non-eliminable hard regs: 7
+	   Spilling non-eliminable hard regs: 7
+New elimination table:
+Can eliminate 16 to 7 (offset=20, prev_offset=20)
+Can eliminate 16 to 6 (offset=4, prev_offset=0)
+Can eliminate 19 to 7 (offset=16, prev_offset=16)
+Can eliminate 19 to 6 (offset=0, prev_offset=0)
+changing reg in insn 83
+changing reg in insn 14
+changing reg in insn 23
+changing reg in insn 15
+changing reg in insn 21
+changing reg in insn 22
+changing reg in insn 22
+changing reg in insn 24
+changing reg in insn 31
+changing reg in insn 34
+changing reg in insn 32
+changing reg in insn 37
+changing reg in insn 39
+changing reg in insn 45
+changing reg in insn 50
+changing reg in insn 46
+changing reg in insn 61
+changing reg in insn 62
+changing reg in insn 64
+changing reg in insn 66
+changing reg in insn 66
+changing reg in insn 66
+changing reg in insn 68
+changing reg in insn 20
+changing reg in insn 21
+changing reg in insn 69
+changing reg in insn 72
+changing reg in insn 72
+changing reg in insn 76
+changing reg in insn 5
+changing reg in insn 6
+changing reg in insn 6
+changing reg in insn 7
+changing reg in insn 15
+changing reg in insn 16
+changing reg in insn 19
+changing reg in insn 17
+changing reg in insn 18
+changing reg in insn 32
+changing reg in insn 33
+changing reg in insn 38
+changing reg in insn 39
+changing reg in insn 46
+changing reg in insn 47
+changing reg in insn 60
+changing reg in insn 61
+changing reg in insn 63
+changing reg in insn 64
+changing reg in insn 65
+changing reg in insn 66
+changing reg in insn 67
+changing reg in insn 68
+deleting insn with uid = 21.
+deleting insn with uid = 37.
+deleting insn with uid = 72.
+deleting insn with uid = 76.
+starting the processing of deferred insns
+ending the processing of deferred insns
+verify found no changes in insn with uid = 25.
+verify found no changes in insn with uid = 35.
+
+
+rw_port
+
+Dataflow summary:
+;;  fully invalidated by EH 	 0 [ax] 1 [dx] 2 [cx] 8 [st] 9 [st(1)] 10 [st(2)] 11 [st(3)] 12 [st(4)] 13 [st(5)] 14 [st(6)] 15 [st(7)] 17 [flags] 18 [fpsr] 20 [xmm0] 21 [xmm1] 22 [xmm2] 23 [xmm3] 24 [xmm4] 25 [xmm5] 26 [xmm6] 27 [xmm7] 28 [mm0] 29 [mm1] 30 [mm2] 31 [mm3] 32 [mm4] 33 [mm5] 34 [mm6] 35 [mm7] 36 [r8] 37 [r9] 38 [r10] 39 [r11] 40 [r12] 41 [r13] 42 [r14] 43 [r15] 44 [xmm8] 45 [xmm9] 46 [xmm10] 47 [xmm11] 48 [xmm12] 49 [xmm13] 50 [xmm14] 51 [xmm15] 52 [xmm16] 53 [xmm17] 54 [xmm18] 55 [xmm19] 56 [xmm20] 57 [xmm21] 58 [xmm22] 59 [xmm23] 60 [xmm24] 61 [xmm25] 62 [xmm26] 63 [xmm27] 64 [xmm28] 65 [xmm29] 66 [xmm30] 67 [xmm31] 68 [k0] 69 [k1] 70 [k2] 71 [k3] 72 [k4] 73 [k5] 74 [k6] 75 [k7]
+;;  hardware regs used 	
+;;  regular block artificial uses 	 7 [sp]
+;;  eh block artificial uses 	 7 [sp] 16 [argp]
+;;  entry block defs 	 0 [ax] 1 [dx] 2 [cx] 7 [sp]
+;;  exit block uses 	 0 [ax] 7 [sp]
+;;  regs ever live 	 0 [ax] 1 [dx] 2 [cx] 7 [sp] 17 [flags]
+;;  ref usage 	r0={19d,19u} r1={9d,6u,1e} r2={4d,2u} r7={6d,41u} r8={2d} r9={2d} r10={2d} r11={2d} r12={2d} r13={2d} r14={2d} r15={2d} r17={16d,3u} r18={2d} r19={1e} r20={2d} r21={2d} r22={2d} r23={2d} r24={2d} r25={2d} r26={2d} r27={2d} r28={2d} r29={2d} r30={2d} r31={2d} r32={2d} r33={2d} r34={2d} r35={2d} r36={2d} r37={2d} r38={2d} r39={2d} r40={2d} r41={2d} r42={2d} r43={2d} r44={2d} r45={2d} r46={2d} r47={2d} r48={2d} r49={2d} r50={2d} r51={2d} r52={2d} r53={2d} r54={2d} r55={2d} r56={2d} r57={2d} r58={2d} r59={2d} r60={2d} r61={2d} r62={2d} r63={2d} r64={2d} r65={2d} r66={2d} r67={2d} r68={2d} r69={2d} r70={2d} r71={2d} r72={2d} r73={2d} r74={2d} r75={2d} 
+;;    total ref usage 257{184d,71u,2e} in 48{46 regular + 2 call} insns.
+(note 1 0 3 NOTE_INSN_DELETED)
+(note 3 1 83 2 [bb 2] NOTE_INSN_BASIC_BLOCK)
+(insn/f 83 3 2 2 (parallel [
+            (set (reg:SI 0 ax [82])
+                (unspec:SI [
+                        (const_int 0 [0])
+                    ] UNSPEC_SET_GOT))
+            (clobber (reg:CC 17 flags))
+        ]) 846 {*set_got}
+     (expr_list:REG_CFA_FLUSH_QUEUE (nil)
+        (nil)))
+(note 2 83 5 2 NOTE_INSN_FUNCTION_BEG)
+(insn 5 2 6 2 (set (reg/f:SI 0 ax [95])
+        (mem/f/c:SI (plus:SI (reg/f:SI 7 sp)
+                (const_int 32 [0x20])) [3 pos+0 S4 A32])) "fs/char_dev.c":37:9 75 {*movsi_internal}
+     (nil))
+(insn 6 5 7 2 (set (reg:SI 0 ax [96])
+        (mem:SI (reg/f:SI 0 ax [95]) [4 *pos_17(D)+0 S4 A32])) "fs/char_dev.c":37:9 75 {*movsi_internal}
+     (nil))
+(insn 7 6 79 2 (set (mem/c:SI (plus:SI (reg/f:SI 7 sp)
+                (const_int 12 [0xc])) [2 i+0 S4 A32])
+        (reg:SI 0 ax [96])) "fs/char_dev.c":37:9 75 {*movsi_internal}
+     (nil))
+(jump_insn 79 7 80 2 (set (pc)
+        (label_ref 43)) "fs/char_dev.c":39:11 807 {jump}
+     (nil)
+ -> 43)
+(barrier 80 79 53)
+(code_label 53 80 10 3 15 (nil) [1 uses])
+(note 10 53 11 3 [bb 3] NOTE_INSN_BASIC_BLOCK)
+(insn 11 10 12 3 (set (reg:CCZ 17 flags)
+        (compare:CCZ (mem/c:SI (plus:SI (reg/f:SI 7 sp)
+                    (const_int 20 [0x14])) [2 rw+0 S4 A32])
+            (const_int 0 [0]))) "fs/char_dev.c":40:12 7 {*cmpsi_ccno_1}
+     (nil))
+(jump_insn 12 11 13 3 (set (pc)
+        (if_then_else (ne (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref 29)
+            (pc))) "fs/char_dev.c":40:12 806 {*jcc}
+     (nil)
+ -> 29)
+(note 13 12 14 4 [bb 4] NOTE_INSN_BASIC_BLOCK)
+(insn 14 13 15 4 (set (reg/f:SI 2 cx [orig:83 buf.0_1 ] [83])
+        (mem/f/c:SI (plus:SI (reg/f:SI 7 sp)
+                (const_int 24 [0x18])) [1 buf+0 S4 A32])) "fs/char_dev.c":41:13 75 {*movsi_internal}
+     (nil))
+(insn 15 14 16 4 (parallel [
+            (set (reg:SI 0 ax [97])
+                (plus:SI (reg/f:SI 2 cx [orig:83 buf.0_1 ] [83])
+                    (const_int 1 [0x1])))
+            (clobber (reg:CC 17 flags))
+        ]) "fs/char_dev.c":41:13 209 {*addsi_1}
+     (nil))
+(insn 16 15 18 4 (set (mem/f/c:SI (plus:SI (reg/f:SI 7 sp)
+                (const_int 24 [0x18])) [1 buf+0 S4 A32])
+        (reg:SI 0 ax [97])) "fs/char_dev.c":41:13 75 {*movsi_internal}
+     (nil))
+(insn 18 16 85 4 (set (reg:SI 0 ax [99])
+        (mem/c:SI (plus:SI (reg/f:SI 7 sp)
+                (const_int 12 [0xc])) [2 i+0 S4 A32])) "fs/char_dev.c":41:25 75 {*movsi_internal}
+     (nil))
+(insn 85 18 19 4 (set (reg:SI 1 dx [99])
+        (reg:SI 0 ax [99])) "fs/char_dev.c":41:25 75 {*movsi_internal}
+     (nil))
+(insn 19 85 17 4 (parallel [
+            (set (reg:QI 0 ax [orig:98 _v ] [98])
+                (asm_operands/v:QI ("inb %%dx, %%al") ("=a") 0 [
+                        (reg:SI 1 dx [99])
+                    ]
+                     [
+                        (asm_input:SI ("d") fs/char_dev.c:41)
+                    ]
+                     [] fs/char_dev.c:41))
+            (clobber (reg:CC 17 flags))
+        ]) "fs/char_dev.c":41:25 -1
+     (nil))
+(insn 17 19 20 4 (set (mem/c:QI (plus:SI (reg/f:SI 7 sp)
+                (const_int 11 [0xb])) [0 _v+0 S1 A8])
+        (reg:QI 0 ax [orig:98 _v ] [98])) "fs/char_dev.c":41:25 77 {*movqi_internal}
+     (nil))
+(insn 20 17 22 4 (set (reg:QI 0 ax [orig:92 _27 ] [92])
+        (mem/c:QI (plus:SI (reg/f:SI 7 sp)
+                (const_int 11 [0xb])) [0 _v+0 S1 A8])) "fs/char_dev.c":41:25 77 {*movqi_internal}
+     (nil))
+(insn 22 20 23 4 (set (reg:SI 0 ax [orig:85 _3 ] [85])
+        (sign_extend:SI (reg:QI 0 ax [orig:84 _2 ] [84]))) "fs/char_dev.c":41:13 153 {extendqisi2}
+     (nil))
+(insn 23 22 24 4 (set (mem/f:SI (pre_dec:SI (reg/f:SI 7 sp)) [1  S4 A32])
+        (reg/f:SI 2 cx [orig:83 buf.0_1 ] [83])) "fs/char_dev.c":41:13 54 {*pushsi2}
+     (expr_list:REG_ARGS_SIZE (const_int 4 [0x4])
+        (nil)))
+(insn 24 23 25 4 (set (mem:SI (pre_dec:SI (reg/f:SI 7 sp)) [2  S4 A32])
+        (reg:SI 0 ax [orig:85 _3 ] [85])) "fs/char_dev.c":41:13 54 {*pushsi2}
+     (expr_list:REG_ARGS_SIZE (const_int 8 [0x8])
+        (nil)))
+(call_insn 25 24 26 4 (call (mem:QI (symbol_ref:SI ("put_fs_byte") [flags 0x3]  <function_decl 0x711f33139a00 put_fs_byte>) [0 put_fs_byte S1 A8])
+        (const_int 8 [0x8])) "fs/char_dev.c":41:13 812 {*call}
+     (nil)
+    (nil))
+(insn 26 25 81 4 (parallel [
+            (set (reg/f:SI 7 sp)
+                (plus:SI (reg/f:SI 7 sp)
+                    (const_int 8 [0x8])))
+            (clobber (reg:CC 17 flags))
+        ]) "fs/char_dev.c":41:13 209 {*addsi_1}
+     (expr_list:REG_ARGS_SIZE (const_int 0 [0])
+        (nil)))
+(jump_insn 81 26 82 4 (set (pc)
+        (label_ref 40)) 807 {jump}
+     (nil)
+ -> 40)
+(barrier 82 81 29)
+(code_label 29 82 30 5 12 (nil) [1 uses])
+(note 30 29 31 5 [bb 5] NOTE_INSN_BASIC_BLOCK)
+(insn 31 30 32 5 (set (reg/f:SI 0 ax [orig:86 buf.1_4 ] [86])
+        (mem/f/c:SI (plus:SI (reg/f:SI 7 sp)
+                (const_int 24 [0x18])) [1 buf+0 S4 A32])) "fs/char_dev.c":43:13 75 {*movsi_internal}
+     (nil))
+(insn 32 31 33 5 (parallel [
+            (set (reg:SI 1 dx [100])
+                (plus:SI (reg/f:SI 0 ax [orig:86 buf.1_4 ] [86])
+                    (const_int 1 [0x1])))
+            (clobber (reg:CC 17 flags))
+        ]) "fs/char_dev.c":43:13 209 {*addsi_1}
+     (nil))
+(insn 33 32 34 5 (set (mem/f/c:SI (plus:SI (reg/f:SI 7 sp)
+                (const_int 24 [0x18])) [1 buf+0 S4 A32])
+        (reg:SI 1 dx [100])) "fs/char_dev.c":43:13 75 {*movsi_internal}
+     (nil))
+(insn 34 33 35 5 (set (mem/f:SI (pre_dec:SI (reg/f:SI 7 sp)) [1  S4 A32])
+        (reg/f:SI 0 ax [orig:86 buf.1_4 ] [86])) "fs/char_dev.c":43:13 54 {*pushsi2}
+     (expr_list:REG_ARGS_SIZE (const_int 4 [0x4])
+        (nil)))
+(call_insn 35 34 36 5 (set (reg:QI 0 ax)
+        (call (mem:QI (symbol_ref:SI ("get_fs_byte") [flags 0x3]  <function_decl 0x711f33139800 get_fs_byte>) [0 get_fs_byte S1 A8])
+            (const_int 4 [0x4]))) "fs/char_dev.c":43:13 823 {*call_value}
+     (nil)
+    (nil))
+(insn 36 35 38 5 (parallel [
+            (set (reg/f:SI 7 sp)
+                (plus:SI (reg/f:SI 7 sp)
+                    (const_int 4 [0x4])))
+            (clobber (reg:CC 17 flags))
+        ]) "fs/char_dev.c":43:13 209 {*addsi_1}
+     (expr_list:REG_ARGS_SIZE (const_int 0 [0])
+        (nil)))
+(insn 38 36 39 5 (set (reg:SI 1 dx [101])
+        (mem/c:SI (plus:SI (reg/f:SI 7 sp)
+                (const_int 12 [0xc])) [2 i+0 S4 A32])) "fs/char_dev.c":43:13 75 {*movsi_internal}
+     (nil))
+(insn 39 38 40 5 (parallel [
+            (asm_operands/v ("outb %%al, %%dx") ("") 0 [
+                    (reg:QI 0 ax [orig:87 _5 ] [87])
+                    (reg:SI 1 dx [101])
+                ]
+                 [
+                    (asm_input:QI ("a") fs/char_dev.c:43)
+                    (asm_input:SI ("d") fs/char_dev.c:43)
+                ]
+                 [] fs/char_dev.c:43)
+            (clobber (reg:CC 17 flags))
+        ]) "fs/char_dev.c":43:13 -1
+     (nil))
+(code_label 40 39 41 6 13 (nil) [1 uses])
+(note 41 40 42 6 [bb 6] NOTE_INSN_BASIC_BLOCK)
+(insn 42 41 43 6 (parallel [
+            (set (mem/c:SI (plus:SI (reg/f:SI 7 sp)
+                        (const_int 12 [0xc])) [2 i+0 S4 A32])
+                (plus:SI (mem/c:SI (plus:SI (reg/f:SI 7 sp)
+                            (const_int 12 [0xc])) [2 i+0 S4 A32])
+                    (const_int 1 [0x1])))
+            (clobber (reg:CC 17 flags))
+        ]) "fs/char_dev.c":44:10 209 {*addsi_1}
+     (nil))
+(code_label 43 42 44 7 11 (nil) [1 uses])
+(note 44 43 45 7 [bb 7] NOTE_INSN_BASIC_BLOCK)
+(insn 45 44 46 7 (set (reg:SI 0 ax [orig:88 count.2_6 ] [88])
+        (mem/c:SI (plus:SI (reg/f:SI 7 sp)
+                (const_int 28 [0x1c])) [2 count+0 S4 A32])) "fs/char_dev.c":39:17 75 {*movsi_internal}
+     (nil))
+(insn 46 45 47 7 (parallel [
+            (set (reg:SI 1 dx [102])
+                (plus:SI (reg:SI 0 ax [orig:88 count.2_6 ] [88])
+                    (const_int -1 [0xffffffffffffffff])))
+            (clobber (reg:CC 17 flags))
+        ]) "fs/char_dev.c":39:17 209 {*addsi_1}
+     (nil))
+(insn 47 46 50 7 (set (mem/c:SI (plus:SI (reg/f:SI 7 sp)
+                (const_int 28 [0x1c])) [2 count+0 S4 A32])
+        (reg:SI 1 dx [102])) "fs/char_dev.c":39:17 75 {*movsi_internal}
+     (nil))
+(insn 50 47 51 7 (set (reg:CCNO 17 flags)
+        (compare:CCNO (reg:SI 0 ax [orig:88 count.2_6 ] [88])
+            (const_int 0 [0]))) "fs/char_dev.c":39:24 7 {*cmpsi_ccno_1}
+     (nil))
+(jump_insn 51 50 52 7 (set (pc)
+        (if_then_else (le (reg:CCNO 17 flags)
+                (const_int 0 [0]))
+            (label_ref 58)
+            (pc))) "fs/char_dev.c":39:24 806 {*jcc}
+     (nil)
+ -> 58)
+(note 52 51 56 8 [bb 8] NOTE_INSN_BASIC_BLOCK)
+(insn 56 52 57 8 (set (reg:CCGC 17 flags)
+        (compare:CCGC (mem/c:SI (plus:SI (reg/f:SI 7 sp)
+                    (const_int 12 [0xc])) [2 i+0 S4 A32])
+            (const_int 65535 [0xffff]))) "fs/char_dev.c":39:24 11 {*cmpsi_1}
+     (nil))
+(jump_insn 57 56 58 8 (set (pc)
+        (if_then_else (le (reg:CCGC 17 flags)
+                (const_int 0 [0]))
+            (label_ref 53)
+            (pc))) "fs/char_dev.c":39:24 806 {*jcc}
+     (nil)
+ -> 53)
+(code_label 58 57 59 9 14 (nil) [1 uses])
+(note 59 58 60 9 [bb 9] NOTE_INSN_BASIC_BLOCK)
+(insn 60 59 61 9 (set (reg/f:SI 0 ax [103])
+        (mem/f/c:SI (plus:SI (reg/f:SI 7 sp)
+                (const_int 32 [0x20])) [3 pos+0 S4 A32])) "fs/char_dev.c":46:10 75 {*movsi_internal}
+     (nil))
+(insn 61 60 62 9 (set (reg:SI 0 ax [orig:89 _7 ] [89])
+        (mem:SI (reg/f:SI 0 ax [103]) [4 *pos_17(D)+0 S4 A32])) "fs/char_dev.c":46:10 75 {*movsi_internal}
+     (nil))
+(insn 62 61 63 9 (parallel [
+            (set (mem/c:SI (plus:SI (reg/f:SI 7 sp)
+                        (const_int 12 [0xc])) [2 i+0 S4 A32])
+                (minus:SI (mem/c:SI (plus:SI (reg/f:SI 7 sp)
+                            (const_int 12 [0xc])) [2 i+0 S4 A32])
+                    (reg:SI 0 ax [orig:89 _7 ] [89])))
+            (clobber (reg:CC 17 flags))
+        ]) "fs/char_dev.c":46:7 282 {*subsi_1}
+     (nil))
+(insn 63 62 64 9 (set (reg/f:SI 0 ax [104])
+        (mem/f/c:SI (plus:SI (reg/f:SI 7 sp)
+                (const_int 32 [0x20])) [3 pos+0 S4 A32])) "fs/char_dev.c":47:10 75 {*movsi_internal}
+     (nil))
+(insn 64 63 65 9 (set (reg:SI 1 dx [orig:90 _8 ] [90])
+        (mem:SI (reg/f:SI 0 ax [104]) [4 *pos_17(D)+0 S4 A32])) "fs/char_dev.c":47:10 75 {*movsi_internal}
+     (nil))
+(insn 65 64 66 9 (set (reg:SI 0 ax [105])
+        (mem/c:SI (plus:SI (reg/f:SI 7 sp)
+                (const_int 12 [0xc])) [2 i+0 S4 A32])) "fs/char_dev.c":47:10 75 {*movsi_internal}
+     (nil))
+(insn 66 65 67 9 (parallel [
+            (set (reg:SI 1 dx [orig:91 _9 ] [91])
+                (plus:SI (reg:SI 1 dx [orig:90 _8 ] [90])
+                    (reg:SI 0 ax [105])))
+            (clobber (reg:CC 17 flags))
+        ]) "fs/char_dev.c":47:10 209 {*addsi_1}
+     (expr_list:REG_EQUAL (plus:SI (reg:SI 1 dx [orig:90 _8 ] [90])
+            (mem/c:SI (plus:SI (reg/f:SI 19 frame)
+                    (const_int -4 [0xfffffffffffffffc])) [2 i+0 S4 A32]))
+        (nil)))
+(insn 67 66 68 9 (set (reg/f:SI 0 ax [106])
+        (mem/f/c:SI (plus:SI (reg/f:SI 7 sp)
+                (const_int 32 [0x20])) [3 pos+0 S4 A32])) "fs/char_dev.c":47:10 75 {*movsi_internal}
+     (nil))
+(insn 68 67 69 9 (set (mem:SI (reg/f:SI 0 ax [106]) [4 *pos_17(D)+0 S4 A32])
+        (reg:SI 1 dx [orig:91 _9 ] [91])) "fs/char_dev.c":47:10 75 {*movsi_internal}
+     (nil))
+(insn 69 68 77 9 (set (reg:SI 0 ax [orig:93 _32 ] [93])
+        (mem/c:SI (plus:SI (reg/f:SI 7 sp)
+                (const_int 12 [0xc])) [2 i+0 S4 A32])) "fs/char_dev.c":48:12 75 {*movsi_internal}
+     (nil))
+(insn 77 69 84 9 (use (reg/i:SI 0 ax)) "fs/char_dev.c":49:1 -1
+     (nil))
+(note 84 77 0 NOTE_INSN_DELETED)
+
+;; Function rw_memory (rw_memory, funcdef_no=12, decl_uid=1399, cgraph_uid=13, symbol_order=12)
+
+
+********** Local #1: **********
+
+	   Spilling non-eliminable hard regs: 7
+New elimination table:
+Can eliminate 16 to 7 (offset=4, prev_offset=0)
+Can eliminate 16 to 6 (offset=4, prev_offset=0)
+Can eliminate 19 to 7 (offset=0, prev_offset=0)
+Can eliminate 19 to 6 (offset=0, prev_offset=0)
+          alt=0,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 0 in insn 101:  (0) =r {*set_got}
+          alt=0,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 0 in insn 7:  (0) rm  (1) re {*cmpsi_1}
+          alt=0,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 0 in insn 9:  (0) =r  (1) g {*movsi_internal}
+          alt=0,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 0 in insn 10:  (0) =rm  (1) 0  (2) cI {*ashlsi3_1}
+          alt=0,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 0 in insn 11:  (0) =r  (1) g {*movsi_internal}
+          alt=0,overall=6,losers=1,rld_nregs=1
+            2 Spill pseudo into memory: reject+=3
+            Using memory insn operand 2: reject+=3
+            alt=1,overall=18,losers=2 -- refuse
+          alt=2,overall=0,losers=0,rld_nregs=0
+          alt=0,overall=0,losers=0,rld_nregs=0
+  Commutative operand exchange in insn 12
+	 Choosing alt 0 in insn 12:  (0) =rm  (1) %0  (2) re {*addsi_1}
+          alt=0,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 0 in insn 13:  (0) rBw {*tablejump_1}
+          alt=0,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 0 in insn 19:  (0) =<  (1) ri*m {*pushsi2}
+          alt=0,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 0 in insn 20:  (0) =<  (1) ri*m {*pushsi2} (sp_off=-4)
+          alt=0,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 0 in insn 21:  (0) =<  (1) ri*m {*pushsi2} (sp_off=-8)
+          alt=0,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 0 in insn 22:  (0) =<  (1) ri*m {*pushsi2} (sp_off=-12)
+          alt=0,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 0 in insn 23:  (1) lBwBz {*call_value} (sp_off=-16)
+          alt=0,overall=0,losers=0,rld_nregs=0
+            1 Matching alt: reject+=2
+            1 Non-pseudo reload: reject+=2
+            1 Non input pseudo reload: reject++
+            alt=0,overall=11,losers=1 -- refuse
+            1 Matching alt: reject+=2
+            1 Non-pseudo reload: reject+=2
+            1 Non input pseudo reload: reject++
+            alt=1,overall=11,losers=1 -- refuse
+            1 Non-pseudo reload: reject+=2
+            1 Non input pseudo reload: reject++
+            alt=2,overall=9,losers=1 -- refuse
+            1 Non-pseudo reload: reject+=2
+            1 Non input pseudo reload: reject++
+            alt=3,overall=9,losers=1 -- refuse
+	 Choosing alt 0 in insn 24:  (0) =rm  (1) %0  (2) re {*addsi_1} (sp_off=-16)
+          alt=0,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 0 in insn 30:  (0) =<  (1) ri*m {*pushsi2}
+          alt=0,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 0 in insn 31:  (0) =<  (1) ri*m {*pushsi2} (sp_off=-4)
+          alt=0,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 0 in insn 32:  (0) =<  (1) ri*m {*pushsi2} (sp_off=-8)
+          alt=0,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 0 in insn 33:  (0) =<  (1) ri*m {*pushsi2} (sp_off=-12)
+          alt=0,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 0 in insn 34:  (1) lBwBz {*call_value} (sp_off=-16)
+          alt=0,overall=0,losers=0,rld_nregs=0
+            1 Matching alt: reject+=2
+            1 Non-pseudo reload: reject+=2
+            1 Non input pseudo reload: reject++
+            alt=0,overall=11,losers=1 -- refuse
+            1 Matching alt: reject+=2
+            1 Non-pseudo reload: reject+=2
+            1 Non input pseudo reload: reject++
+            alt=1,overall=11,losers=1 -- refuse
+            1 Non-pseudo reload: reject+=2
+            1 Non input pseudo reload: reject++
+            alt=2,overall=9,losers=1 -- refuse
+            1 Non-pseudo reload: reject+=2
+            1 Non input pseudo reload: reject++
+            alt=3,overall=9,losers=1 -- refuse
+	 Choosing alt 0 in insn 35:  (0) =rm  (1) %0  (2) re {*addsi_1} (sp_off=-16)
+          alt=0,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 0 in insn 41:  (0) =<  (1) ri*m {*pushsi2}
+          alt=0,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 0 in insn 42:  (0) =<  (1) ri*m {*pushsi2} (sp_off=-4)
+          alt=0,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 0 in insn 43:  (0) =<  (1) ri*m {*pushsi2} (sp_off=-8)
+          alt=0,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 0 in insn 44:  (0) =<  (1) ri*m {*pushsi2} (sp_off=-12)
+          alt=0,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 0 in insn 45:  (1) lBwBz {*call_value} (sp_off=-16)
+          alt=0,overall=0,losers=0,rld_nregs=0
+            1 Matching alt: reject+=2
+            1 Non-pseudo reload: reject+=2
+            1 Non input pseudo reload: reject++
+            alt=0,overall=11,losers=1 -- refuse
+            1 Matching alt: reject+=2
+            1 Non-pseudo reload: reject+=2
+            1 Non input pseudo reload: reject++
+            alt=1,overall=11,losers=1 -- refuse
+            1 Non-pseudo reload: reject+=2
+            1 Non input pseudo reload: reject++
+            alt=2,overall=9,losers=1 -- refuse
+            1 Non-pseudo reload: reject+=2
+            1 Non input pseudo reload: reject++
+            alt=3,overall=9,losers=1 -- refuse
+	 Choosing alt 0 in insn 46:  (0) =rm  (1) %0  (2) re {*addsi_1} (sp_off=-16)
+            0 Non-pseudo reload: reject+=2
+            0 Non input pseudo reload: reject++
+          alt=0,overall=9,losers=1,rld_nregs=1
+            Staticly defined alt reject+=6
+          alt=1,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 1 in insn 52:  (0) ?mr {*cmpsi_ccno_1}
+          alt=0,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 0 in insn 55:  (0) =r  (1) g {*movsi_internal}
+          alt=0,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 0 in insn 60:  (0) =r  (1) g {*movsi_internal}
+          alt=0,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 0 in insn 67:  (0) =<  (1) ri*m {*pushsi2}
+          alt=0,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 0 in insn 68:  (0) =<  (1) ri*m {*pushsi2} (sp_off=-4)
+          alt=0,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 0 in insn 69:  (0) =<  (1) ri*m {*pushsi2} (sp_off=-8)
+          alt=0,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 0 in insn 70:  (0) =<  (1) ri*m {*pushsi2} (sp_off=-12)
+          alt=0,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 0 in insn 71:  (1) lBwBz {*call_value} (sp_off=-16)
+          alt=0,overall=0,losers=0,rld_nregs=0
+            1 Matching alt: reject+=2
+            1 Non-pseudo reload: reject+=2
+            1 Non input pseudo reload: reject++
+            alt=0,overall=11,losers=1 -- refuse
+            1 Matching alt: reject+=2
+            1 Non-pseudo reload: reject+=2
+            1 Non input pseudo reload: reject++
+            alt=1,overall=11,losers=1 -- refuse
+            1 Non-pseudo reload: reject+=2
+            1 Non input pseudo reload: reject++
+            alt=2,overall=9,losers=1 -- refuse
+            1 Non-pseudo reload: reject+=2
+            1 Non input pseudo reload: reject++
+            alt=3,overall=9,losers=1 -- refuse
+	 Choosing alt 0 in insn 72:  (0) =rm  (1) %0  (2) re {*addsi_1} (sp_off=-16)
+          alt=0,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 0 in insn 78:  (0) =r  (1) g {*movsi_internal}
+	   Spilling non-eliminable hard regs: 7
+
+********** Inheritance #1: **********
+
+EBB 2 3
+EBB 4
+EBB 5
+EBB 6
+EBB 7 8
+EBB 9
+EBB 10
+EBB 11
+EBB 12
+
+********** Pseudo live ranges #1: **********
+
+  BB 12
+   Insn 86: point = 0, n_alt = -1
+   Insn 85: point = 0, n_alt = -2
+   Insn 81: point = 1, n_alt = -2
+  BB 10
+   Insn 99: point = 4, n_alt = -1
+   Insn 73: point = 4, n_alt = -2
+   Insn 72: point = 5, n_alt = 0
+   Insn 71: point = 5, n_alt = 0
+   Insn 70: point = 5, n_alt = 0
+   Insn 69: point = 5, n_alt = 0
+   Insn 68: point = 5, n_alt = 0
+   Insn 67: point = 5, n_alt = 0
+  BB 11
+   Insn 78: point = 5, n_alt = 0
+  BB 9
+   Insn 97: point = 6, n_alt = -1
+   Insn 60: point = 6, n_alt = 0
+  BB 8
+   Insn 95: point = 7, n_alt = -1
+   Insn 55: point = 7, n_alt = 0
+  BB 7
+   Insn 53: point = 8, n_alt = -1
+   Insn 52: point = 8, n_alt = 1
+  BB 5
+   Insn 91: point = 8, n_alt = -1
+   Insn 36: point = 8, n_alt = -2
+   Insn 35: point = 9, n_alt = 0
+   Insn 34: point = 9, n_alt = 0
+   Insn 33: point = 9, n_alt = 0
+   Insn 32: point = 9, n_alt = 0
+   Insn 31: point = 9, n_alt = 0
+   Insn 30: point = 9, n_alt = 0
+  BB 4
+   Insn 89: point = 9, n_alt = -1
+   Insn 25: point = 9, n_alt = -2
+   Insn 24: point = 10, n_alt = 0
+   Insn 23: point = 10, n_alt = 0
+   Insn 22: point = 10, n_alt = 0
+   Insn 21: point = 10, n_alt = 0
+   Insn 20: point = 10, n_alt = 0
+   Insn 19: point = 10, n_alt = 0
+  BB 6
+   Insn 93: point = 10, n_alt = -1
+   Insn 47: point = 10, n_alt = -2
+   Insn 46: point = 11, n_alt = 0
+   Insn 45: point = 11, n_alt = 0
+   Insn 44: point = 11, n_alt = 0
+   Insn 43: point = 11, n_alt = 0
+   Insn 42: point = 11, n_alt = 0
+   Insn 41: point = 11, n_alt = 0
+  BB 3
+   Insn 13: point = 11, n_alt = 0
+   Insn 12: point = 12, n_alt = 0
+   Insn 11: point = 14, n_alt = 0
+   Insn 10: point = 16, n_alt = 0
+   Insn 9: point = 18, n_alt = 0
+  BB 2
+   Insn 8: point = 20, n_alt = -1
+   Insn 7: point = 20, n_alt = 0
+   Insn 101: point = 20, n_alt = 0
+ r82: [13..20]
+ r83: [2..10]
+ r84: [0..1]
+ r85: [17..18]
+ r86: [15..16]
+ r87: [13..14]
+ r88: [11..12]
+Compressing live ranges: from 21 to 12 - 57%
+Ranges after the compression:
+ r82: [6..11]
+ r83: [2..3]
+ r84: [0..1]
+ r85: [10..11]
+ r86: [8..9]
+ r87: [6..7]
+ r88: [4..5]
+
+********** Assignment #1: **********
+
+
+********** Undoing inheritance #1: **********
+
+
+********** Local #2: **********
+
+	   Spilling non-eliminable hard regs: 7
+	   Spilling non-eliminable hard regs: 7
+New elimination table:
+Can eliminate 16 to 7 (offset=4, prev_offset=4)
+Can eliminate 16 to 6 (offset=4, prev_offset=0)
+Can eliminate 19 to 7 (offset=0, prev_offset=0)
+Can eliminate 19 to 6 (offset=0, prev_offset=0)
+changing reg in insn 101
+changing reg in insn 11
+changing reg in insn 78
+changing reg in insn 73
+changing reg in insn 60
+changing reg in insn 55
+changing reg in insn 47
+changing reg in insn 36
+changing reg in insn 25
+changing reg in insn 81
+changing reg in insn 81
+changing reg in insn 85
+changing reg in insn 9
+changing reg in insn 10
+changing reg in insn 10
+changing reg in insn 11
+changing reg in insn 11
+changing reg in insn 12
+changing reg in insn 13
+deleting insn with uid = 25.
+deleting insn with uid = 36.
+deleting insn with uid = 47.
+deleting insn with uid = 73.
+deleting insn with uid = 81.
+deleting insn with uid = 85.
+starting the processing of deferred insns
+ending the processing of deferred insns
+verify found no changes in insn with uid = 23.
+verify found no changes in insn with uid = 34.
+verify found no changes in insn with uid = 45.
+verify found no changes in insn with uid = 71.
+
+
+rw_memory
+
+Dataflow summary:
+;;  fully invalidated by EH 	 0 [ax] 1 [dx] 2 [cx] 8 [st] 9 [st(1)] 10 [st(2)] 11 [st(3)] 12 [st(4)] 13 [st(5)] 14 [st(6)] 15 [st(7)] 17 [flags] 18 [fpsr] 20 [xmm0] 21 [xmm1] 22 [xmm2] 23 [xmm3] 24 [xmm4] 25 [xmm5] 26 [xmm6] 27 [xmm7] 28 [mm0] 29 [mm1] 30 [mm2] 31 [mm3] 32 [mm4] 33 [mm5] 34 [mm6] 35 [mm7] 36 [r8] 37 [r9] 38 [r10] 39 [r11] 40 [r12] 41 [r13] 42 [r14] 43 [r15] 44 [xmm8] 45 [xmm9] 46 [xmm10] 47 [xmm11] 48 [xmm12] 49 [xmm13] 50 [xmm14] 51 [xmm15] 52 [xmm16] 53 [xmm17] 54 [xmm18] 55 [xmm19] 56 [xmm20] 57 [xmm21] 58 [xmm22] 59 [xmm23] 60 [xmm24] 61 [xmm25] 62 [xmm26] 63 [xmm27] 64 [xmm28] 65 [xmm29] 66 [xmm30] 67 [xmm31] 68 [k0] 69 [k1] 70 [k2] 71 [k3] 72 [k4] 73 [k5] 74 [k6] 75 [k7]
+;;  hardware regs used 	
+;;  regular block artificial uses 	 7 [sp]
+;;  eh block artificial uses 	 7 [sp] 16 [argp]
+;;  entry block defs 	 0 [ax] 1 [dx] 2 [cx] 7 [sp]
+;;  exit block uses 	 0 [ax] 7 [sp]
+;;  regs ever live 	 0 [ax] 1 [dx] 7 [sp] 17 [flags]
+;;  ref usage 	r0={10d,5u} r1={8d,3u} r2={5d} r7={21d,60u} r8={4d} r9={4d} r10={4d} r11={4d} r12={4d} r13={4d} r14={4d} r15={4d} r17={13d,2u} r18={4d} r20={4d} r21={4d} r22={4d} r23={4d} r24={4d} r25={4d} r26={4d} r27={4d} r28={4d} r29={4d} r30={4d} r31={4d} r32={4d} r33={4d} r34={4d} r35={4d} r36={4d} r37={4d} r38={4d} r39={4d} r40={4d} r41={4d} r42={4d} r43={4d} r44={4d} r45={4d} r46={4d} r47={4d} r48={4d} r49={4d} r50={4d} r51={4d} r52={4d} r53={4d} r54={4d} r55={4d} r56={4d} r57={4d} r58={4d} r59={4d} r60={4d} r61={4d} r62={4d} r63={4d} r64={4d} r65={4d} r66={4d} r67={4d} r68={4d} r69={4d} r70={4d} r71={4d} r72={4d} r73={4d} r74={4d} r75={4d} 
+;;    total ref usage 387{317d,70u,0e} in 44{40 regular + 4 call} insns.
+(note 1 0 3 NOTE_INSN_DELETED)
+(note 3 1 101 2 [bb 2] NOTE_INSN_BASIC_BLOCK)
+(insn/f 101 3 2 2 (parallel [
+            (set (reg:SI 0 ax [82])
+                (unspec:SI [
+                        (const_int 0 [0])
+                    ] UNSPEC_SET_GOT))
+            (clobber (reg:CC 17 flags))
+        ]) 846 {*set_got}
+     (expr_list:REG_CFA_FLUSH_QUEUE (nil)
+        (nil)))
+(note 2 101 7 2 NOTE_INSN_FUNCTION_BEG)
+(insn 7 2 8 2 (set (reg:CC 17 flags)
+        (compare:CC (mem/c:SI (plus:SI (reg/f:SI 7 sp)
+                    (const_int 8 [0x8])) [2 minor+0 S4 A32])
+            (const_int 4 [0x4]))) "fs/char_dev.c":53:5 11 {*cmpsi_1}
+     (nil))
+(jump_insn 8 7 88 2 (set (pc)
+        (if_then_else (gtu (reg:CC 17 flags)
+                (const_int 0 [0]))
+            (label_ref 76)
+            (pc))) "fs/char_dev.c":53:5 806 {*jcc}
+     (nil)
+ -> 76)
+(note 88 8 9 3 [bb 3] NOTE_INSN_BASIC_BLOCK)
+(insn 9 88 10 3 (set (reg:SI 1 dx [85])
+        (mem/c:SI (plus:SI (reg/f:SI 7 sp)
+                (const_int 8 [0x8])) [2 minor+0 S4 A32])) "fs/char_dev.c":53:5 75 {*movsi_internal}
+     (nil))
+(insn 10 9 11 3 (parallel [
+            (set (reg:SI 1 dx [86])
+                (ashift:SI (reg:SI 1 dx [85])
+                    (const_int 2 [0x2])))
+            (clobber (reg:CC 17 flags))
+        ]) "fs/char_dev.c":53:5 655 {*ashlsi3_1}
+     (nil))
+(insn 11 10 12 3 (set (reg:SI 1 dx [87])
+        (mem/u/c:SI (plus:SI (plus:SI (reg:SI 1 dx [86])
+                    (reg:SI 0 ax [82]))
+                (const:SI (unspec:SI [
+                            (label_ref:SI 14)
+                        ] UNSPEC_GOTOFF))) [0  S4 A8])) "fs/char_dev.c":53:5 75 {*movsi_internal}
+     (insn_list:REG_LABEL_OPERAND 14 (nil)))
+(insn 12 11 13 3 (parallel [
+            (set (reg:SI 0 ax [88])
+                (plus:SI (reg:SI 0 ax [82])
+                    (reg:SI 1 dx [87])))
+            (clobber (reg:CC 17 flags))
+        ]) "fs/char_dev.c":53:5 209 {*addsi_1}
+     (nil))
+(jump_insn 13 12 14 3 (parallel [
+            (set (pc)
+                (reg:SI 0 ax [88]))
+            (use (label_ref 14))
+        ]) "fs/char_dev.c":53:5 810 {*tablejump_1}
+     (nil)
+ -> 14)
+(code_label 14 13 15 20 (nil) [2 uses])
+(jump_table_data 15 14 16 (addr_diff_vec:SI (label_ref:SI 14)
+         [
+            (label_ref:SI 17)
+            (label_ref:SI 28)
+            (label_ref:SI 39)
+            (label_ref:SI 50)
+            (label_ref:SI 65)
+        ]
+        (const_int 0 [0])
+        (const_int 0 [0])))
+(barrier 16 15 17)
+(code_label 17 16 18 4 24 (nil) [1 uses])
+(note 18 17 19 4 [bb 4] NOTE_INSN_BASIC_BLOCK)
+(insn 19 18 20 4 (set (mem/f:SI (pre_dec:SI (reg/f:SI 7 sp)) [3  S4 A32])
+        (mem/f/c:SI (plus:SI (reg/f:SI 7 sp)
+                (const_int 20 [0x14])) [3 pos+0 S4 A32])) "fs/char_dev.c":55:16 54 {*pushsi2}
+     (expr_list:REG_ARGS_SIZE (const_int 4 [0x4])
+        (nil)))
+(insn 20 19 21 4 (set (mem:SI (pre_dec:SI (reg/f:SI 7 sp)) [2  S4 A32])
+        (mem/c:SI (plus:SI (reg/f:SI 7 sp)
+                (const_int 20 [0x14])) [2 count+0 S4 A32])) "fs/char_dev.c":55:16 54 {*pushsi2}
+     (expr_list:REG_ARGS_SIZE (const_int 8 [0x8])
+        (nil)))
+(insn 21 20 22 4 (set (mem/f:SI (pre_dec:SI (reg/f:SI 7 sp)) [1  S4 A32])
+        (mem/f/c:SI (plus:SI (reg/f:SI 7 sp)
+                (const_int 20 [0x14])) [1 buf+0 S4 A32])) "fs/char_dev.c":55:16 54 {*pushsi2}
+     (expr_list:REG_ARGS_SIZE (const_int 12 [0xc])
+        (nil)))
+(insn 22 21 23 4 (set (mem:SI (pre_dec:SI (reg/f:SI 7 sp)) [2  S4 A32])
+        (mem/c:SI (plus:SI (reg/f:SI 7 sp)
+                (const_int 16 [0x10])) [2 rw+0 S4 A32])) "fs/char_dev.c":55:16 54 {*pushsi2}
+     (expr_list:REG_ARGS_SIZE (const_int 16 [0x10])
+        (nil)))
+(call_insn 23 22 24 4 (set (reg:SI 0 ax)
+        (call (mem:QI (symbol_ref:SI ("rw_ram") [flags 0x3]  <function_decl 0x711f3313a800 rw_ram>) [0 rw_ram S1 A8])
+            (const_int 16 [0x10]))) "fs/char_dev.c":55:16 823 {*call_value}
+     (nil)
+    (nil))
+(insn 24 23 89 4 (parallel [
+            (set (reg/f:SI 7 sp)
+                (plus:SI (reg/f:SI 7 sp)
+                    (const_int 16 [0x10])))
+            (clobber (reg:CC 17 flags))
+        ]) "fs/char_dev.c":55:16 209 {*addsi_1}
+     (expr_list:REG_ARGS_SIZE (const_int 0 [0])
+        (nil)))
+(jump_insn 89 24 90 4 (set (pc)
+        (label_ref 79)) "fs/char_dev.c":55:16 807 {jump}
+     (nil)
+ -> 79)
+(barrier 90 89 28)
+(code_label 28 90 29 5 23 (nil) [1 uses])
+(note 29 28 30 5 [bb 5] NOTE_INSN_BASIC_BLOCK)
+(insn 30 29 31 5 (set (mem/f:SI (pre_dec:SI (reg/f:SI 7 sp)) [3  S4 A32])
+        (mem/f/c:SI (plus:SI (reg/f:SI 7 sp)
+                (const_int 20 [0x14])) [3 pos+0 S4 A32])) "fs/char_dev.c":57:16 54 {*pushsi2}
+     (expr_list:REG_ARGS_SIZE (const_int 4 [0x4])
+        (nil)))
+(insn 31 30 32 5 (set (mem:SI (pre_dec:SI (reg/f:SI 7 sp)) [2  S4 A32])
+        (mem/c:SI (plus:SI (reg/f:SI 7 sp)
+                (const_int 20 [0x14])) [2 count+0 S4 A32])) "fs/char_dev.c":57:16 54 {*pushsi2}
+     (expr_list:REG_ARGS_SIZE (const_int 8 [0x8])
+        (nil)))
+(insn 32 31 33 5 (set (mem/f:SI (pre_dec:SI (reg/f:SI 7 sp)) [1  S4 A32])
+        (mem/f/c:SI (plus:SI (reg/f:SI 7 sp)
+                (const_int 20 [0x14])) [1 buf+0 S4 A32])) "fs/char_dev.c":57:16 54 {*pushsi2}
+     (expr_list:REG_ARGS_SIZE (const_int 12 [0xc])
+        (nil)))
+(insn 33 32 34 5 (set (mem:SI (pre_dec:SI (reg/f:SI 7 sp)) [2  S4 A32])
+        (mem/c:SI (plus:SI (reg/f:SI 7 sp)
+                (const_int 16 [0x10])) [2 rw+0 S4 A32])) "fs/char_dev.c":57:16 54 {*pushsi2}
+     (expr_list:REG_ARGS_SIZE (const_int 16 [0x10])
+        (nil)))
+(call_insn 34 33 35 5 (set (reg:SI 0 ax)
+        (call (mem:QI (symbol_ref:SI ("rw_mem") [flags 0x3]  <function_decl 0x711f3313aa00 rw_mem>) [0 rw_mem S1 A8])
+            (const_int 16 [0x10]))) "fs/char_dev.c":57:16 823 {*call_value}
+     (nil)
+    (nil))
+(insn 35 34 91 5 (parallel [
+            (set (reg/f:SI 7 sp)
+                (plus:SI (reg/f:SI 7 sp)
+                    (const_int 16 [0x10])))
+            (clobber (reg:CC 17 flags))
+        ]) "fs/char_dev.c":57:16 209 {*addsi_1}
+     (expr_list:REG_ARGS_SIZE (const_int 0 [0])
+        (nil)))
+(jump_insn 91 35 92 5 (set (pc)
+        (label_ref 79)) "fs/char_dev.c":57:16 807 {jump}
+     (nil)
+ -> 79)
+(barrier 92 91 39)
+(code_label 39 92 40 6 22 (nil) [1 uses])
+(note 40 39 41 6 [bb 6] NOTE_INSN_BASIC_BLOCK)
+(insn 41 40 42 6 (set (mem/f:SI (pre_dec:SI (reg/f:SI 7 sp)) [3  S4 A32])
+        (mem/f/c:SI (plus:SI (reg/f:SI 7 sp)
+                (const_int 20 [0x14])) [3 pos+0 S4 A32])) "fs/char_dev.c":59:16 54 {*pushsi2}
+     (expr_list:REG_ARGS_SIZE (const_int 4 [0x4])
+        (nil)))
+(insn 42 41 43 6 (set (mem:SI (pre_dec:SI (reg/f:SI 7 sp)) [2  S4 A32])
+        (mem/c:SI (plus:SI (reg/f:SI 7 sp)
+                (const_int 20 [0x14])) [2 count+0 S4 A32])) "fs/char_dev.c":59:16 54 {*pushsi2}
+     (expr_list:REG_ARGS_SIZE (const_int 8 [0x8])
+        (nil)))
+(insn 43 42 44 6 (set (mem/f:SI (pre_dec:SI (reg/f:SI 7 sp)) [1  S4 A32])
+        (mem/f/c:SI (plus:SI (reg/f:SI 7 sp)
+                (const_int 20 [0x14])) [1 buf+0 S4 A32])) "fs/char_dev.c":59:16 54 {*pushsi2}
+     (expr_list:REG_ARGS_SIZE (const_int 12 [0xc])
+        (nil)))
+(insn 44 43 45 6 (set (mem:SI (pre_dec:SI (reg/f:SI 7 sp)) [2  S4 A32])
+        (mem/c:SI (plus:SI (reg/f:SI 7 sp)
+                (const_int 16 [0x10])) [2 rw+0 S4 A32])) "fs/char_dev.c":59:16 54 {*pushsi2}
+     (expr_list:REG_ARGS_SIZE (const_int 16 [0x10])
+        (nil)))
+(call_insn 45 44 46 6 (set (reg:SI 0 ax)
+        (call (mem:QI (symbol_ref:SI ("rw_kmem") [flags 0x3]  <function_decl 0x711f3313ac00 rw_kmem>) [0 rw_kmem S1 A8])
+            (const_int 16 [0x10]))) "fs/char_dev.c":59:16 823 {*call_value}
+     (nil)
+    (nil))
+(insn 46 45 93 6 (parallel [
+            (set (reg/f:SI 7 sp)
+                (plus:SI (reg/f:SI 7 sp)
+                    (const_int 16 [0x10])))
+            (clobber (reg:CC 17 flags))
+        ]) "fs/char_dev.c":59:16 209 {*addsi_1}
+     (expr_list:REG_ARGS_SIZE (const_int 0 [0])
+        (nil)))
+(jump_insn 93 46 94 6 (set (pc)
+        (label_ref 79)) "fs/char_dev.c":59:16 807 {jump}
+     (nil)
+ -> 79)
+(barrier 94 93 50)
+(code_label 50 94 51 7 21 (nil) [1 uses])
+(note 51 50 52 7 [bb 7] NOTE_INSN_BASIC_BLOCK)
+(insn 52 51 53 7 (set (reg:CCZ 17 flags)
+        (compare:CCZ (mem/c:SI (plus:SI (reg/f:SI 7 sp)
+                    (const_int 4 [0x4])) [2 rw+0 S4 A32])
+            (const_int 0 [0]))) "fs/char_dev.c":61:33 7 {*cmpsi_ccno_1}
+     (nil))
+(jump_insn 53 52 54 7 (set (pc)
+        (if_then_else (eq (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref 58)
+            (pc))) "fs/char_dev.c":61:33 806 {*jcc}
+     (nil)
+ -> 58)
+(note 54 53 55 8 [bb 8] NOTE_INSN_BASIC_BLOCK)
+(insn 55 54 95 8 (set (reg:SI 0 ax [orig:83 _1 ] [83])
+        (mem/c:SI (plus:SI (reg/f:SI 7 sp)
+                (const_int 16 [0x10])) [2 count+0 S4 A32])) "fs/char_dev.c":61:33 75 {*movsi_internal}
+     (nil))
+(jump_insn 95 55 96 8 (set (pc)
+        (label_ref 79)) "fs/char_dev.c":61:33 807 {jump}
+     (nil)
+ -> 79)
+(barrier 96 95 58)
+(code_label 58 96 59 9 26 (nil) [1 uses])
+(note 59 58 60 9 [bb 9] NOTE_INSN_BASIC_BLOCK)
+(insn 60 59 97 9 (set (reg:SI 0 ax [orig:83 _1 ] [83])
+        (const_int 0 [0])) "fs/char_dev.c":61:33 75 {*movsi_internal}
+     (nil))
+(jump_insn 97 60 98 9 (set (pc)
+        (label_ref 79)) "fs/char_dev.c":61:33 807 {jump}
+     (nil)
+ -> 79)
+(barrier 98 97 65)
+(code_label 65 98 66 10 19 (nil) [1 uses])
+(note 66 65 67 10 [bb 10] NOTE_INSN_BASIC_BLOCK)
+(insn 67 66 68 10 (set (mem/f:SI (pre_dec:SI (reg/f:SI 7 sp)) [3  S4 A32])
+        (mem/f/c:SI (plus:SI (reg/f:SI 7 sp)
+                (const_int 20 [0x14])) [3 pos+0 S4 A32])) "fs/char_dev.c":63:16 54 {*pushsi2}
+     (expr_list:REG_ARGS_SIZE (const_int 4 [0x4])
+        (nil)))
+(insn 68 67 69 10 (set (mem:SI (pre_dec:SI (reg/f:SI 7 sp)) [2  S4 A32])
+        (mem/c:SI (plus:SI (reg/f:SI 7 sp)
+                (const_int 20 [0x14])) [2 count+0 S4 A32])) "fs/char_dev.c":63:16 54 {*pushsi2}
+     (expr_list:REG_ARGS_SIZE (const_int 8 [0x8])
+        (nil)))
+(insn 69 68 70 10 (set (mem/f:SI (pre_dec:SI (reg/f:SI 7 sp)) [1  S4 A32])
+        (mem/f/c:SI (plus:SI (reg/f:SI 7 sp)
+                (const_int 20 [0x14])) [1 buf+0 S4 A32])) "fs/char_dev.c":63:16 54 {*pushsi2}
+     (expr_list:REG_ARGS_SIZE (const_int 12 [0xc])
+        (nil)))
+(insn 70 69 71 10 (set (mem:SI (pre_dec:SI (reg/f:SI 7 sp)) [2  S4 A32])
+        (mem/c:SI (plus:SI (reg/f:SI 7 sp)
+                (const_int 16 [0x10])) [2 rw+0 S4 A32])) "fs/char_dev.c":63:16 54 {*pushsi2}
+     (expr_list:REG_ARGS_SIZE (const_int 16 [0x10])
+        (nil)))
+(call_insn 71 70 72 10 (set (reg:SI 0 ax)
+        (call (mem:QI (symbol_ref:SI ("rw_port") [flags 0x3]  <function_decl 0x711f3313ae00 rw_port>) [0 rw_port S1 A8])
+            (const_int 16 [0x10]))) "fs/char_dev.c":63:16 823 {*call_value}
+     (nil)
+    (nil))
+(insn 72 71 99 10 (parallel [
+            (set (reg/f:SI 7 sp)
+                (plus:SI (reg/f:SI 7 sp)
+                    (const_int 16 [0x10])))
+            (clobber (reg:CC 17 flags))
+        ]) "fs/char_dev.c":63:16 209 {*addsi_1}
+     (expr_list:REG_ARGS_SIZE (const_int 0 [0])
+        (nil)))
+(jump_insn 99 72 100 10 (set (pc)
+        (label_ref 79)) "fs/char_dev.c":63:16 807 {jump}
+     (nil)
+ -> 79)
+(barrier 100 99 76)
+(code_label 76 100 77 11 18 (nil) [1 uses])
+(note 77 76 78 11 [bb 11] NOTE_INSN_BASIC_BLOCK)
+(insn 78 77 79 11 (set (reg:SI 0 ax [orig:83 _1 ] [83])
+        (const_int -5 [0xfffffffffffffffb])) "fs/char_dev.c":65:16 75 {*movsi_internal}
+     (nil))
+(code_label 79 78 80 12 25 (nil) [6 uses])
+(note 80 79 86 12 [bb 12] NOTE_INSN_BASIC_BLOCK)
+(insn 86 80 102 12 (use (reg/i:SI 0 ax)) "fs/char_dev.c":67:1 -1
+     (nil))
+(note 102 86 0 NOTE_INSN_DELETED)
+
+;; Function rw_ttyx (rw_ttyx, funcdef_no=13, decl_uid=1413, cgraph_uid=14, symbol_order=13)
+
+
+********** Local #1: **********
+
+	   Spilling non-eliminable hard regs: 7
+New elimination table:
+Can eliminate 16 to 7 (offset=16, prev_offset=0)
+Can eliminate 16 to 6 (offset=4, prev_offset=0)
+Can eliminate 19 to 7 (offset=0, prev_offset=0)
+Can eliminate 19 to 6 (offset=-12, prev_offset=0)
+          alt=0,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 0 in insn 41:  (0) =r {*set_got}
+            0 Non-pseudo reload: reject+=2
+            0 Non input pseudo reload: reject++
+          alt=0,overall=9,losers=1,rld_nregs=1
+            Staticly defined alt reject+=6
+          alt=1,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 1 in insn 5:  (0) ?mr {*cmpsi_ccno_1}
+          alt=0,overall=0,losers=0,rld_nregs=0
+            1 Matching alt: reject+=2
+            1 Non-pseudo reload: reject+=2
+            1 Non input pseudo reload: reject++
+            alt=0,overall=11,losers=1 -- refuse
+            1 Matching alt: reject+=2
+            1 Non-pseudo reload: reject+=2
+            1 Non input pseudo reload: reject++
+            alt=1,overall=11,losers=1 -- refuse
+            1 Non-pseudo reload: reject+=2
+            1 Non input pseudo reload: reject++
+            alt=2,overall=9,losers=1 -- refuse
+            1 Non-pseudo reload: reject+=2
+            1 Non input pseudo reload: reject++
+            alt=3,overall=9,losers=1 -- refuse
+	 Choosing alt 0 in insn 8:  (0) =rm  (1) %0  (2) re {*addsi_1}
+          alt=0,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 0 in insn 9:  (0) =<  (1) ri*m {*pushsi2} (sp_off=-4)
+          alt=0,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 0 in insn 10:  (0) =<  (1) ri*m {*pushsi2} (sp_off=-8)
+          alt=0,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 0 in insn 11:  (0) =<  (1) ri*m {*pushsi2} (sp_off=-12)
+          alt=0,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 0 in insn 13:  (1) lBwBz {*call_value} (sp_off=-16)
+          alt=0,overall=0,losers=0,rld_nregs=0
+            1 Matching alt: reject+=2
+            1 Non-pseudo reload: reject+=2
+            1 Non input pseudo reload: reject++
+            alt=0,overall=11,losers=1 -- refuse
+            1 Matching alt: reject+=2
+            1 Non-pseudo reload: reject+=2
+            1 Non input pseudo reload: reject++
+            alt=1,overall=11,losers=1 -- refuse
+            1 Non-pseudo reload: reject+=2
+            1 Non input pseudo reload: reject++
+            alt=2,overall=9,losers=1 -- refuse
+            1 Non-pseudo reload: reject+=2
+            1 Non input pseudo reload: reject++
+            alt=3,overall=9,losers=1 -- refuse
+	 Choosing alt 0 in insn 14:  (0) =rm  (1) %0  (2) re {*addsi_1} (sp_off=-16)
+          alt=0,overall=0,losers=0,rld_nregs=0
+            1 Matching alt: reject+=2
+            1 Non-pseudo reload: reject+=2
+            1 Non input pseudo reload: reject++
+            alt=0,overall=11,losers=1 -- refuse
+            1 Matching alt: reject+=2
+            1 Non-pseudo reload: reject+=2
+            1 Non input pseudo reload: reject++
+            alt=1,overall=11,losers=1 -- refuse
+            1 Non-pseudo reload: reject+=2
+            1 Non input pseudo reload: reject++
+            alt=2,overall=9,losers=1 -- refuse
+            1 Non-pseudo reload: reject+=2
+            1 Non input pseudo reload: reject++
+            alt=3,overall=9,losers=1 -- refuse
+	 Choosing alt 0 in insn 20:  (0) =rm  (1) %0  (2) re {*addsi_1}
+          alt=0,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 0 in insn 21:  (0) =<  (1) ri*m {*pushsi2} (sp_off=-4)
+          alt=0,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 0 in insn 22:  (0) =<  (1) ri*m {*pushsi2} (sp_off=-8)
+          alt=0,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 0 in insn 23:  (0) =<  (1) ri*m {*pushsi2} (sp_off=-12)
+          alt=0,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 0 in insn 25:  (1) lBwBz {*call_value} (sp_off=-16)
+          alt=0,overall=0,losers=0,rld_nregs=0
+            1 Matching alt: reject+=2
+            1 Non-pseudo reload: reject+=2
+            1 Non input pseudo reload: reject++
+            alt=0,overall=11,losers=1 -- refuse
+            1 Matching alt: reject+=2
+            1 Non-pseudo reload: reject+=2
+            1 Non input pseudo reload: reject++
+            alt=1,overall=11,losers=1 -- refuse
+            1 Non-pseudo reload: reject+=2
+            1 Non input pseudo reload: reject++
+            alt=2,overall=9,losers=1 -- refuse
+            1 Non-pseudo reload: reject+=2
+            1 Non input pseudo reload: reject++
+            alt=3,overall=9,losers=1 -- refuse
+	 Choosing alt 0 in insn 26:  (0) =rm  (1) %0  (2) re {*addsi_1} (sp_off=-16)
+	   Spilling non-eliminable hard regs: 7
+
+********** Inheritance #1: **********
+
+EBB 2 3
+EBB 4
+EBB 5
+
+********** Pseudo live ranges #1: **********
+
+  BB 5
+   Insn 37: point = 0, n_alt = -1
+   Insn 36: point = 0, n_alt = -2
+   Insn 32: point = 1, n_alt = -2
+  BB 3
+   Insn 39: point = 4, n_alt = -1
+   Insn 15: point = 4, n_alt = -2
+   Insn 14: point = 5, n_alt = 0
+   Insn 13: point = 5, n_alt = 0
+   Insn 12: point = 5, n_alt = -2
+   Insn 11: point = 6, n_alt = 0
+   Insn 10: point = 6, n_alt = 0
+   Insn 9: point = 6, n_alt = 0
+   Insn 8: point = 6, n_alt = 0
+  BB 4
+   Insn 27: point = 7, n_alt = -2
+   Insn 26: point = 8, n_alt = 0
+   Insn 25: point = 8, n_alt = 0
+   Insn 24: point = 8, n_alt = -2
+   Insn 23: point = 9, n_alt = 0
+   Insn 22: point = 9, n_alt = 0
+   Insn 21: point = 9, n_alt = 0
+   Insn 20: point = 9, n_alt = 0
+  BB 2
+   Insn 6: point = 10, n_alt = -1
+   Insn 5: point = 10, n_alt = 1
+   Insn 41: point = 10, n_alt = 0
+ r82: [8..10] [5..6]
+ r83: [7..7] [2..4]
+ r84: [0..1]
+Compressing live ranges: from 11 to 9 - 81%
+Ranges after the compression:
+ r82: [7..8] [4..5]
+ r83: [6..6] [2..3]
+ r84: [0..1]
+
+********** Assignment #1: **********
+
+
+********** Undoing inheritance #1: **********
+
+
+********** Local #2: **********
+
+	   Spilling non-eliminable hard regs: 7
+	   Spilling non-eliminable hard regs: 7
+New elimination table:
+Can eliminate 16 to 7 (offset=16, prev_offset=16)
+Can eliminate 16 to 6 (offset=4, prev_offset=0)
+Can eliminate 19 to 7 (offset=0, prev_offset=0)
+Can eliminate 19 to 6 (offset=-12, prev_offset=0)
+changing reg in insn 41
+changing reg in insn 24
+changing reg in insn 12
+changing reg in insn 27
+changing reg in insn 15
+changing reg in insn 32
+changing reg in insn 32
+changing reg in insn 36
+deleting insn with uid = 15.
+deleting insn with uid = 27.
+deleting insn with uid = 32.
+deleting insn with uid = 36.
+starting the processing of deferred insns
+ending the processing of deferred insns
+
+
+rw_ttyx
+
+Dataflow summary:
+;;  fully invalidated by EH 	 0 [ax] 1 [dx] 2 [cx] 8 [st] 9 [st(1)] 10 [st(2)] 11 [st(3)] 12 [st(4)] 13 [st(5)] 14 [st(6)] 15 [st(7)] 17 [flags] 18 [fpsr] 20 [xmm0] 21 [xmm1] 22 [xmm2] 23 [xmm3] 24 [xmm4] 25 [xmm5] 26 [xmm6] 27 [xmm7] 28 [mm0] 29 [mm1] 30 [mm2] 31 [mm3] 32 [mm4] 33 [mm5] 34 [mm6] 35 [mm7] 36 [r8] 37 [r9] 38 [r10] 39 [r11] 40 [r12] 41 [r13] 42 [r14] 43 [r15] 44 [xmm8] 45 [xmm9] 46 [xmm10] 47 [xmm11] 48 [xmm12] 49 [xmm13] 50 [xmm14] 51 [xmm15] 52 [xmm16] 53 [xmm17] 54 [xmm18] 55 [xmm19] 56 [xmm20] 57 [xmm21] 58 [xmm22] 59 [xmm23] 60 [xmm24] 61 [xmm25] 62 [xmm26] 63 [xmm27] 64 [xmm28] 65 [xmm29] 66 [xmm30] 67 [xmm31] 68 [k0] 69 [k1] 70 [k2] 71 [k3] 72 [k4] 73 [k5] 74 [k6] 75 [k7]
+;;  hardware regs used 	
+;;  regular block artificial uses 	 7 [sp]
+;;  eh block artificial uses 	 7 [sp] 16 [argp]
+;;  entry block defs 	 0 [ax] 1 [dx] 2 [cx] 7 [sp]
+;;  exit block uses 	 0 [ax] 7 [sp]
+;;  regs ever live 	 0 [ax] 3 [bx] 7 [sp] 17 [flags]
+;;  ref usage 	r0={4d,4u} r1={3d} r2={3d} r3={2d,2u} r7={11d,28u} r8={2d} r9={2d} r10={2d} r11={2d} r12={2d} r13={2d} r14={2d} r15={2d} r17={8d,1u} r18={2d} r20={2d} r21={2d} r22={2d} r23={2d} r24={2d} r25={2d} r26={2d} r27={2d} r28={2d} r29={2d} r30={2d} r31={2d} r32={2d} r33={2d} r34={2d} r35={2d} r36={2d} r37={2d} r38={2d} r39={2d} r40={2d} r41={2d} r42={2d} r43={2d} r44={2d} r45={2d} r46={2d} r47={2d} r48={2d} r49={2d} r50={2d} r51={2d} r52={2d} r53={2d} r54={2d} r55={2d} r56={2d} r57={2d} r58={2d} r59={2d} r60={2d} r61={2d} r62={2d} r63={2d} r64={2d} r65={2d} r66={2d} r67={2d} r68={2d} r69={2d} r70={2d} r71={2d} r72={2d} r73={2d} r74={2d} r75={2d} 
+;;    total ref usage 196{161d,35u,0e} in 19{17 regular + 2 call} insns.
+(note 1 0 3 NOTE_INSN_DELETED)
+(note 3 1 41 2 [bb 2] NOTE_INSN_BASIC_BLOCK)
+(insn/f 41 3 2 2 (parallel [
+            (set (reg:SI 0 ax [82])
+                (unspec:SI [
+                        (const_int 0 [0])
+                    ] UNSPEC_SET_GOT))
+            (clobber (reg:CC 17 flags))
+        ]) 846 {*set_got}
+     (expr_list:REG_CFA_FLUSH_QUEUE (nil)
+        (nil)))
+(note 2 41 5 2 NOTE_INSN_FUNCTION_BEG)
+(insn 5 2 6 2 (set (reg:CCZ 17 flags)
+        (compare:CCZ (mem/c:SI (plus:SI (reg/f:SI 7 sp)
+                    (const_int 16 [0x10])) [2 rw+0 S4 A32])
+            (const_int 0 [0]))) "fs/char_dev.c":71:56 7 {*cmpsi_ccno_1}
+     (nil))
+(jump_insn 6 5 7 2 (set (pc)
+        (if_then_else (ne (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref 18)
+            (pc))) "fs/char_dev.c":71:56 806 {*jcc}
+     (nil)
+ -> 18)
+(note 7 6 8 3 [bb 3] NOTE_INSN_BASIC_BLOCK)
+(insn 8 7 9 3 (parallel [
+            (set (reg/f:SI 7 sp)
+                (plus:SI (reg/f:SI 7 sp)
+                    (const_int -4 [0xfffffffffffffffc])))
+            (clobber (reg:CC 17 flags))
+        ]) "fs/char_dev.c":71:28 209 {*addsi_1}
+     (expr_list:REG_ARGS_SIZE (const_int 4 [0x4])
+        (nil)))
+(insn 9 8 10 3 (set (mem:SI (pre_dec:SI (reg/f:SI 7 sp)) [2  S4 A32])
+        (mem/c:SI (plus:SI (reg/f:SI 7 sp)
+                (const_int 32 [0x20])) [2 count+0 S4 A32])) "fs/char_dev.c":71:28 54 {*pushsi2}
+     (expr_list:REG_ARGS_SIZE (const_int 8 [0x8])
+        (nil)))
+(insn 10 9 11 3 (set (mem/f:SI (pre_dec:SI (reg/f:SI 7 sp)) [1  S4 A32])
+        (mem/f/c:SI (plus:SI (reg/f:SI 7 sp)
+                (const_int 32 [0x20])) [1 buf+0 S4 A32])) "fs/char_dev.c":71:28 54 {*pushsi2}
+     (expr_list:REG_ARGS_SIZE (const_int 12 [0xc])
+        (nil)))
+(insn 11 10 12 3 (set (mem:SI (pre_dec:SI (reg/f:SI 7 sp)) [2  S4 A32])
+        (mem/c:SI (plus:SI (reg/f:SI 7 sp)
+                (const_int 32 [0x20])) [2 minor+0 S4 A32])) "fs/char_dev.c":71:28 54 {*pushsi2}
+     (expr_list:REG_ARGS_SIZE (const_int 16 [0x10])
+        (nil)))
+(insn 12 11 13 3 (set (reg:SI 3 bx)
+        (reg:SI 0 ax [82])) "fs/char_dev.c":71:28 75 {*movsi_internal}
+     (nil))
+(call_insn 13 12 14 3 (set (reg:SI 0 ax)
+        (call (mem:QI (symbol_ref:SI ("tty_read") [flags 0x41]  <function_decl 0x711f3313a600 tty_read>) [0 tty_read S1 A8])
+            (const_int 16 [0x10]))) "fs/char_dev.c":71:28 823 {*call_value}
+     (nil)
+    (expr_list (use (reg:SI 3 bx))
+        (nil)))
+(insn 14 13 39 3 (parallel [
+            (set (reg/f:SI 7 sp)
+                (plus:SI (reg/f:SI 7 sp)
+                    (const_int 16 [0x10])))
+            (clobber (reg:CC 17 flags))
+        ]) "fs/char_dev.c":71:28 209 {*addsi_1}
+     (expr_list:REG_ARGS_SIZE (const_int 0 [0])
+        (nil)))
+(jump_insn 39 14 40 3 (set (pc)
+        (label_ref 30)) "fs/char_dev.c":71:56 807 {jump}
+     (nil)
+ -> 30)
+(barrier 40 39 18)
+(code_label 18 40 19 4 29 (nil) [1 uses])
+(note 19 18 20 4 [bb 4] NOTE_INSN_BASIC_BLOCK)
+(insn 20 19 21 4 (parallel [
+            (set (reg/f:SI 7 sp)
+                (plus:SI (reg/f:SI 7 sp)
+                    (const_int -4 [0xfffffffffffffffc])))
+            (clobber (reg:CC 17 flags))
+        ]) "fs/char_dev.c":72:28 209 {*addsi_1}
+     (expr_list:REG_ARGS_SIZE (const_int 4 [0x4])
+        (nil)))
+(insn 21 20 22 4 (set (mem:SI (pre_dec:SI (reg/f:SI 7 sp)) [2  S4 A32])
+        (mem/c:SI (plus:SI (reg/f:SI 7 sp)
+                (const_int 32 [0x20])) [2 count+0 S4 A32])) "fs/char_dev.c":72:28 54 {*pushsi2}
+     (expr_list:REG_ARGS_SIZE (const_int 8 [0x8])
+        (nil)))
+(insn 22 21 23 4 (set (mem/f:SI (pre_dec:SI (reg/f:SI 7 sp)) [1  S4 A32])
+        (mem/f/c:SI (plus:SI (reg/f:SI 7 sp)
+                (const_int 32 [0x20])) [1 buf+0 S4 A32])) "fs/char_dev.c":72:28 54 {*pushsi2}
+     (expr_list:REG_ARGS_SIZE (const_int 12 [0xc])
+        (nil)))
+(insn 23 22 24 4 (set (mem:SI (pre_dec:SI (reg/f:SI 7 sp)) [2  S4 A32])
+        (mem/c:SI (plus:SI (reg/f:SI 7 sp)
+                (const_int 32 [0x20])) [2 minor+0 S4 A32])) "fs/char_dev.c":72:28 54 {*pushsi2}
+     (expr_list:REG_ARGS_SIZE (const_int 16 [0x10])
+        (nil)))
+(insn 24 23 25 4 (set (reg:SI 3 bx)
+        (reg:SI 0 ax [82])) "fs/char_dev.c":72:28 75 {*movsi_internal}
+     (nil))
+(call_insn 25 24 26 4 (set (reg:SI 0 ax)
+        (call (mem:QI (symbol_ref:SI ("tty_write") [flags 0x41]  <function_decl 0x711f33116d00 tty_write>) [0 tty_write S1 A8])
+            (const_int 16 [0x10]))) "fs/char_dev.c":72:28 823 {*call_value}
+     (nil)
+    (expr_list (use (reg:SI 3 bx))
+        (nil)))
+(insn 26 25 30 4 (parallel [
+            (set (reg/f:SI 7 sp)
+                (plus:SI (reg/f:SI 7 sp)
+                    (const_int 16 [0x10])))
+            (clobber (reg:CC 17 flags))
+        ]) "fs/char_dev.c":72:28 209 {*addsi_1}
+     (expr_list:REG_ARGS_SIZE (const_int 0 [0])
+        (nil)))
+(code_label 30 26 31 5 31 (nil) [1 uses])
+(note 31 30 37 5 [bb 5] NOTE_INSN_BASIC_BLOCK)
+(insn 37 31 42 5 (use (reg/i:SI 0 ax)) "fs/char_dev.c":73:1 -1
+     (nil))
+(note 42 37 0 NOTE_INSN_DELETED)
+
+;; Function rw_tty (rw_tty, funcdef_no=14, decl_uid=1420, cgraph_uid=15, symbol_order=14)
+
+
+********** Local #1: **********
+
+	   Spilling non-eliminable hard regs: 7
+New elimination table:
+Can eliminate 16 to 7 (offset=16, prev_offset=0)
+Can eliminate 16 to 6 (offset=4, prev_offset=0)
+Can eliminate 19 to 7 (offset=0, prev_offset=0)
+Can eliminate 19 to 6 (offset=-12, prev_offset=0)
+          alt=0,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 0 in insn 42:  (0) =r {*set_got}
+          alt=0,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 0 in insn 5:  (0) =r  (1) g {*movsi_internal}
+          alt=0,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 0 in insn 6:  (0) =r  (1) g {*movsi_internal}
+          alt=0,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 0 in insn 7:  (0) =r  (1) g {*movsi_internal}
+          alt=0,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 0 in insn 10:  (0) r {*cmpsi_ccno_1}
+          alt=0,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 0 in insn 13:  (0) =r  (1) g {*movsi_internal}
+          alt=0,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 0 in insn 18:  (0) =r  (1) g {*movsi_internal}
+          alt=0,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 0 in insn 19:  (0) =r  (1) g {*movsi_internal}
+          alt=0,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 0 in insn 20:  (0) =r  (1) g {*movsi_internal}
+          alt=0,overall=0,losers=0,rld_nregs=0
+            1 Matching alt: reject+=2
+            1 Non-pseudo reload: reject+=2
+            1 Non input pseudo reload: reject++
+            alt=0,overall=11,losers=1 -- refuse
+            1 Matching alt: reject+=2
+            1 Non-pseudo reload: reject+=2
+            1 Non input pseudo reload: reject++
+            alt=1,overall=11,losers=1 -- refuse
+            1 Non-pseudo reload: reject+=2
+            1 Non input pseudo reload: reject++
+            alt=2,overall=9,losers=1 -- refuse
+            1 Non-pseudo reload: reject+=2
+            1 Non input pseudo reload: reject++
+            alt=3,overall=9,losers=1 -- refuse
+	 Choosing alt 0 in insn 22:  (0) =rm  (1) %0  (2) re {*addsi_1}
+          alt=0,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 0 in insn 23:  (0) =<  (1) ri*m {*pushsi2} (sp_off=-12)
+          alt=0,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 0 in insn 24:  (0) =<  (1) ri*m {*pushsi2} (sp_off=-16)
+          alt=0,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 0 in insn 25:  (0) =<  (1) ri*m {*pushsi2} (sp_off=-20)
+          alt=0,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 0 in insn 26:  (0) =<  (1) ri*m {*pushsi2} (sp_off=-24)
+          alt=0,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 0 in insn 27:  (0) =<  (1) ri*m {*pushsi2} (sp_off=-28)
+          alt=0,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 0 in insn 28:  (1) lBwBz {*call_value} (sp_off=-32)
+          alt=0,overall=0,losers=0,rld_nregs=0
+            1 Matching alt: reject+=2
+            1 Non-pseudo reload: reject+=2
+            1 Non input pseudo reload: reject++
+            alt=0,overall=11,losers=1 -- refuse
+            1 Matching alt: reject+=2
+            1 Non-pseudo reload: reject+=2
+            1 Non input pseudo reload: reject++
+            alt=1,overall=11,losers=1 -- refuse
+            1 Non-pseudo reload: reject+=2
+            1 Non input pseudo reload: reject++
+            alt=2,overall=9,losers=1 -- refuse
+            1 Non-pseudo reload: reject+=2
+            1 Non input pseudo reload: reject++
+            alt=3,overall=9,losers=1 -- refuse
+	 Choosing alt 0 in insn 29:  (0) =rm  (1) %0  (2) re {*addsi_1} (sp_off=-32)
+	   Spilling non-eliminable hard regs: 7
+
+********** Inheritance #1: **********
+
+EBB 2 3
+EBB 4
+EBB 5
+
+********** Pseudo live ranges #1: **********
+
+  BB 5
+   Insn 38: point = 0, n_alt = -1
+   Insn 37: point = 0, n_alt = -2
+   Insn 33: point = 1, n_alt = -2
+  BB 3
+   Insn 40: point = 4, n_alt = -1
+   Insn 13: point = 4, n_alt = 0
+  BB 4
+   Insn 30: point = 5, n_alt = -2
+   Insn 29: point = 6, n_alt = 0
+   Insn 28: point = 6, n_alt = 0
+   Insn 27: point = 6, n_alt = 0
+   Insn 26: point = 6, n_alt = 0
+   Insn 25: point = 7, n_alt = 0
+   Insn 24: point = 7, n_alt = 0
+   Insn 23: point = 7, n_alt = 0
+   Insn 22: point = 7, n_alt = 0
+   Insn 21: point = 7, n_alt = -2
+   Insn 20: point = 9, n_alt = 0
+   Insn 19: point = 11, n_alt = 0
+   Insn 18: point = 13, n_alt = 0
+  BB 2
+   Insn 11: point = 16, n_alt = -1
+   Insn 10: point = 16, n_alt = 0
+   Insn 7: point = 17, n_alt = 0
+   Insn 6: point = 19, n_alt = 0
+   Insn 5: point = 21, n_alt = 0
+   Insn 42: point = 22, n_alt = 0
+ r82: [14..22]
+ r83: [18..19]
+ r84: [16..17]
+ r85: [10..11]
+ r86: [8..9]
+ r87: [6..7]
+ r88: [2..5]
+ r89: [0..1]
+ r90: [20..21]
+ r91: [12..13]
+Compressing live ranges: from 23 to 18 - 78%
+Ranges after the compression:
+ r82: [12..17]
+ r83: [14..15]
+ r84: [12..13]
+ r85: [8..9]
+ r86: [6..7]
+ r87: [4..5]
+ r88: [2..3]
+ r89: [0..1]
+ r90: [16..17]
+ r91: [10..11]
+
+********** Assignment #1: **********
+
+
+********** Undoing inheritance #1: **********
+
+
+********** Local #2: **********
+
+	   Spilling non-eliminable hard regs: 7
+	   Spilling non-eliminable hard regs: 7
+New elimination table:
+Can eliminate 16 to 7 (offset=16, prev_offset=16)
+Can eliminate 16 to 6 (offset=4, prev_offset=0)
+Can eliminate 19 to 7 (offset=0, prev_offset=0)
+Can eliminate 19 to 6 (offset=-12, prev_offset=0)
+changing reg in insn 42
+changing reg in insn 18
+changing reg in insn 5
+changing reg in insn 6
+changing reg in insn 7
+changing reg in insn 7
+changing reg in insn 10
+changing reg in insn 19
+changing reg in insn 20
+changing reg in insn 20
+changing reg in insn 21
+changing reg in insn 21
+changing reg in insn 26
+changing reg in insn 30
+changing reg in insn 13
+changing reg in insn 33
+changing reg in insn 33
+changing reg in insn 37
+changing reg in insn 5
+changing reg in insn 6
+changing reg in insn 18
+changing reg in insn 19
+deleting insn with uid = 21.
+deleting insn with uid = 30.
+deleting insn with uid = 33.
+deleting insn with uid = 37.
+starting the processing of deferred insns
+ending the processing of deferred insns
+verify found no changes in insn with uid = 28.
+
+
+rw_tty
+
+Dataflow summary:
+;;  fully invalidated by EH 	 0 [ax] 1 [dx] 2 [cx] 8 [st] 9 [st(1)] 10 [st(2)] 11 [st(3)] 12 [st(4)] 13 [st(5)] 14 [st(6)] 15 [st(7)] 17 [flags] 18 [fpsr] 20 [xmm0] 21 [xmm1] 22 [xmm2] 23 [xmm3] 24 [xmm4] 25 [xmm5] 26 [xmm6] 27 [xmm7] 28 [mm0] 29 [mm1] 30 [mm2] 31 [mm3] 32 [mm4] 33 [mm5] 34 [mm6] 35 [mm7] 36 [r8] 37 [r9] 38 [r10] 39 [r11] 40 [r12] 41 [r13] 42 [r14] 43 [r15] 44 [xmm8] 45 [xmm9] 46 [xmm10] 47 [xmm11] 48 [xmm12] 49 [xmm13] 50 [xmm14] 51 [xmm15] 52 [xmm16] 53 [xmm17] 54 [xmm18] 55 [xmm19] 56 [xmm20] 57 [xmm21] 58 [xmm22] 59 [xmm23] 60 [xmm24] 61 [xmm25] 62 [xmm26] 63 [xmm27] 64 [xmm28] 65 [xmm29] 66 [xmm30] 67 [xmm31] 68 [k0] 69 [k1] 70 [k2] 71 [k3] 72 [k4] 73 [k5] 74 [k6] 75 [k7]
+;;  hardware regs used 	
+;;  regular block artificial uses 	 7 [sp]
+;;  eh block artificial uses 	 7 [sp] 16 [argp]
+;;  entry block defs 	 0 [ax] 1 [dx] 2 [cx] 7 [sp]
+;;  exit block uses 	 0 [ax] 7 [sp]
+;;  regs ever live 	 0 [ax] 1 [dx] 7 [sp] 17 [flags]
+;;  ref usage 	r0={7d,7u} r1={5d,3u} r2={2d} r7={8d,19u} r8={1d} r9={1d} r10={1d} r11={1d} r12={1d} r13={1d} r14={1d} r15={1d} r17={5d,1u} r18={1d} r20={1d} r21={1d} r22={1d} r23={1d} r24={1d} r25={1d} r26={1d} r27={1d} r28={1d} r29={1d} r30={1d} r31={1d} r32={1d} r33={1d} r34={1d} r35={1d} r36={1d} r37={1d} r38={1d} r39={1d} r40={1d} r41={1d} r42={1d} r43={1d} r44={1d} r45={1d} r46={1d} r47={1d} r48={1d} r49={1d} r50={1d} r51={1d} r52={1d} r53={1d} r54={1d} r55={1d} r56={1d} r57={1d} r58={1d} r59={1d} r60={1d} r61={1d} r62={1d} r63={1d} r64={1d} r65={1d} r66={1d} r67={1d} r68={1d} r69={1d} r70={1d} r71={1d} r72={1d} r73={1d} r74={1d} r75={1d} 
+;;    total ref usage 122{92d,30u,0e} in 20{19 regular + 1 call} insns.
+(note 1 0 3 NOTE_INSN_DELETED)
+(note 3 1 42 2 [bb 2] NOTE_INSN_BASIC_BLOCK)
+(insn/f 42 3 2 2 (parallel [
+            (set (reg:SI 0 ax [82])
+                (unspec:SI [
+                        (const_int 0 [0])
+                    ] UNSPEC_SET_GOT))
+            (clobber (reg:CC 17 flags))
+        ]) 846 {*set_got}
+     (expr_list:REG_CFA_FLUSH_QUEUE (nil)
+        (nil)))
+(note 2 42 5 2 NOTE_INSN_FUNCTION_BEG)
+(insn 5 2 6 2 (set (reg/f:SI 1 dx [90])
+        (mem/u/c:SI (plus:SI (reg:SI 0 ax [82])
+                (const:SI (unspec:SI [
+                            (symbol_ref:SI ("current") [flags 0x40]  <var_decl 0x711f3311a1b0 current>)
+                        ] UNSPEC_GOT))) [6  S4 A8])) "fs/char_dev.c":77:16 75 {*movsi_internal}
+     (nil))
+(insn 6 5 7 2 (set (reg/f:SI 1 dx [orig:83 current.5_1 ] [83])
+        (mem/f/c:SI (reg/f:SI 1 dx [90]) [5 current+0 S4 A32])) "fs/char_dev.c":77:16 75 {*movsi_internal}
+     (nil))
+(insn 7 6 10 2 (set (reg:SI 1 dx [orig:84 _2 ] [84])
+        (mem:SI (plus:SI (reg/f:SI 1 dx [orig:83 current.5_1 ] [83])
+                (const_int 616 [0x268])) [2 current.5_1->tty+0 S4 A32])) "fs/char_dev.c":77:16 75 {*movsi_internal}
+     (nil))
+(insn 10 7 11 2 (set (reg:CCGOC 17 flags)
+        (compare:CCGOC (reg:SI 1 dx [orig:84 _2 ] [84])
+            (const_int 0 [0]))) "fs/char_dev.c":77:8 7 {*cmpsi_ccno_1}
+     (nil))
+(jump_insn 11 10 12 2 (set (pc)
+        (if_then_else (ge (reg:CCGOC 17 flags)
+                (const_int 0 [0]))
+            (label_ref 16)
+            (pc))) "fs/char_dev.c":77:8 806 {*jcc}
+     (nil)
+ -> 16)
+(note 12 11 13 3 [bb 3] NOTE_INSN_BASIC_BLOCK)
+(insn 13 12 40 3 (set (reg:SI 0 ax [orig:88 _6 ] [88])
+        (const_int -1 [0xffffffffffffffff])) "fs/char_dev.c":78:16 75 {*movsi_internal}
+     (nil))
+(jump_insn 40 13 41 3 (set (pc)
+        (label_ref 31)) "fs/char_dev.c":78:16 807 {jump}
+     (nil)
+ -> 31)
+(barrier 41 40 16)
+(code_label 16 41 17 4 33 (nil) [1 uses])
+(note 17 16 18 4 [bb 4] NOTE_INSN_BASIC_BLOCK)
+(insn 18 17 19 4 (set (reg/f:SI 0 ax [91])
+        (mem/u/c:SI (plus:SI (reg:SI 0 ax [82])
+                (const:SI (unspec:SI [
+                            (symbol_ref:SI ("current") [flags 0x40]  <var_decl 0x711f3311a1b0 current>)
+                        ] UNSPEC_GOT))) [6  S4 A8])) "fs/char_dev.c":79:31 75 {*movsi_internal}
+     (nil))
+(insn 19 18 20 4 (set (reg/f:SI 0 ax [orig:85 current.6_3 ] [85])
+        (mem/f/c:SI (reg/f:SI 0 ax [91]) [5 current+0 S4 A32])) "fs/char_dev.c":79:31 75 {*movsi_internal}
+     (nil))
+(insn 20 19 22 4 (set (reg:SI 0 ax [orig:86 _4 ] [86])
+        (mem:SI (plus:SI (reg/f:SI 0 ax [orig:85 current.6_3 ] [85])
+                (const_int 616 [0x268])) [2 current.6_3->tty+0 S4 A32])) "fs/char_dev.c":79:31 75 {*movsi_internal}
+     (nil))
+(insn 22 20 23 4 (parallel [
+            (set (reg/f:SI 7 sp)
+                (plus:SI (reg/f:SI 7 sp)
+                    (const_int -12 [0xfffffffffffffff4])))
+            (clobber (reg:CC 17 flags))
+        ]) "fs/char_dev.c":79:12 209 {*addsi_1}
+     (expr_list:REG_ARGS_SIZE (const_int 12 [0xc])
+        (nil)))
+(insn 23 22 24 4 (set (mem/f:SI (pre_dec:SI (reg/f:SI 7 sp)) [3  S4 A32])
+        (mem/f/c:SI (plus:SI (reg/f:SI 7 sp)
+                (const_int 44 [0x2c])) [3 pos+0 S4 A32])) "fs/char_dev.c":79:12 54 {*pushsi2}
+     (expr_list:REG_ARGS_SIZE (const_int 16 [0x10])
+        (nil)))
+(insn 24 23 25 4 (set (mem:SI (pre_dec:SI (reg/f:SI 7 sp)) [2  S4 A32])
+        (mem/c:SI (plus:SI (reg/f:SI 7 sp)
+                (const_int 44 [0x2c])) [2 count+0 S4 A32])) "fs/char_dev.c":79:12 54 {*pushsi2}
+     (expr_list:REG_ARGS_SIZE (const_int 20 [0x14])
+        (nil)))
+(insn 25 24 26 4 (set (mem/f:SI (pre_dec:SI (reg/f:SI 7 sp)) [1  S4 A32])
+        (mem/f/c:SI (plus:SI (reg/f:SI 7 sp)
+                (const_int 44 [0x2c])) [1 buf+0 S4 A32])) "fs/char_dev.c":79:12 54 {*pushsi2}
+     (expr_list:REG_ARGS_SIZE (const_int 24 [0x18])
+        (nil)))
+(insn 26 25 27 4 (set (mem:SI (pre_dec:SI (reg/f:SI 7 sp)) [2  S4 A32])
+        (reg:SI 0 ax [orig:87 _5 ] [87])) "fs/char_dev.c":79:12 54 {*pushsi2}
+     (expr_list:REG_ARGS_SIZE (const_int 28 [0x1c])
+        (nil)))
+(insn 27 26 28 4 (set (mem:SI (pre_dec:SI (reg/f:SI 7 sp)) [2  S4 A32])
+        (mem/c:SI (plus:SI (reg/f:SI 7 sp)
+                (const_int 44 [0x2c])) [2 rw+0 S4 A32])) "fs/char_dev.c":79:12 54 {*pushsi2}
+     (expr_list:REG_ARGS_SIZE (const_int 32 [0x20])
+        (nil)))
+(call_insn 28 27 29 4 (set (reg:SI 0 ax)
+        (call (mem:QI (symbol_ref:SI ("rw_ttyx") [flags 0x3]  <function_decl 0x711f33146200 rw_ttyx>) [0 rw_ttyx S1 A8])
+            (const_int 32 [0x20]))) "fs/char_dev.c":79:12 823 {*call_value}
+     (nil)
+    (nil))
+(insn 29 28 31 4 (parallel [
+            (set (reg/f:SI 7 sp)
+                (plus:SI (reg/f:SI 7 sp)
+                    (const_int 32 [0x20])))
+            (clobber (reg:CC 17 flags))
+        ]) "fs/char_dev.c":79:12 209 {*addsi_1}
+     (expr_list:REG_ARGS_SIZE (const_int 0 [0])
+        (nil)))
+(code_label 31 29 32 5 34 (nil) [1 uses])
+(note 32 31 38 5 [bb 5] NOTE_INSN_BASIC_BLOCK)
+(insn 38 32 43 5 (use (reg/i:SI 0 ax)) "fs/char_dev.c":80:1 -1
+     (nil))
+(note 43 38 0 NOTE_INSN_DELETED)
+
+;; Function rw_char (rw_char, funcdef_no=15, decl_uid=1428, cgraph_uid=16, symbol_order=16)
+
+
+********** Local #1: **********
+
+	   Spilling non-eliminable hard regs: 7
+New elimination table:
+Can eliminate 16 to 7 (offset=32, prev_offset=0)
+Can eliminate 16 to 6 (offset=4, prev_offset=0)
+Can eliminate 19 to 7 (offset=16, prev_offset=0)
+Can eliminate 19 to 6 (offset=-12, prev_offset=0)
+          alt=0,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 0 in insn 54:  (0) =r {*set_got}
+          alt=0,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 0 in insn 5:  (0) =r  (1) g {*movsi_internal}
+          alt=0,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 0 in insn 6:  (0) =rm  (1) 0  (2) cI {*lshrsi3_1}
+          alt=0,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 0 in insn 9:  (0) rm  (1) re {*cmpsi_1}
+          alt=0,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 0 in insn 12:  (0) =r  (1) g {*movsi_internal}
+          alt=0,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 0 in insn 17:  (0) =r  (1) g {*movsi_internal}
+          alt=0,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 0 in insn 18:  (0) =rm  (1) 0  (2) cI {*lshrsi3_1}
+          alt=0,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 0 in insn 19:  (0) =r  (1) g {*movsi_internal}
+            0 Non-pseudo reload: reject+=2
+            0 Non input pseudo reload: reject++
+            Cycle danger: overall += LRA_MAX_REJECT
+          alt=0,overall=609,losers=1,rld_nregs=1
+          alt=1,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 1 in insn 20:  (0) m  (1) re {*movsi_internal}
+            0 Non-pseudo reload: reject+=2
+            0 Non input pseudo reload: reject++
+          alt=0,overall=9,losers=1,rld_nregs=1
+            Staticly defined alt reject+=6
+          alt=1,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 1 in insn 21:  (0) ?mr {*cmpsi_ccno_1}
+          alt=0,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 0 in insn 24:  (0) =r  (1) g {*movsi_internal}
+          alt=0,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 0 in insn 29:  (0) =r  (1) g {*movsi_internal}
+          alt=0,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 0 in insn 30:  (0) =r  (1) qm {*zero_extendqisi2}
+          alt=0,overall=0,losers=0,rld_nregs=0
+            1 Matching alt: reject+=2
+            1 Non-pseudo reload: reject+=2
+            1 Non input pseudo reload: reject++
+            alt=0,overall=11,losers=1 -- refuse
+            1 Matching alt: reject+=2
+            1 Non-pseudo reload: reject+=2
+            1 Non input pseudo reload: reject++
+            alt=1,overall=11,losers=1 -- refuse
+            1 Non-pseudo reload: reject+=2
+            1 Non input pseudo reload: reject++
+            alt=2,overall=9,losers=1 -- refuse
+            1 Non-pseudo reload: reject+=2
+            1 Non input pseudo reload: reject++
+            alt=3,overall=9,losers=1 -- refuse
+	 Choosing alt 0 in insn 31:  (0) =rm  (1) %0  (2) re {*addsi_1}
+          alt=0,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 0 in insn 32:  (0) =<  (1) ri*m {*pushsi2} (sp_off=-12)
+          alt=0,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 0 in insn 33:  (0) =<  (1) ri*m {*pushsi2} (sp_off=-16)
+          alt=0,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 0 in insn 34:  (0) =<  (1) ri*m {*pushsi2} (sp_off=-20)
+          alt=0,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 0 in insn 35:  (0) =<  (1) ri*m {*pushsi2} (sp_off=-24)
+          alt=0,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 0 in insn 36:  (0) =<  (1) ri*m {*pushsi2} (sp_off=-28)
+          alt=0,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 0 in insn 37:  (0) =r  (1) g {*movsi_internal} (sp_off=-32)
+          alt=0,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 0 in insn 38:  (1) lBwBz {*call_value} (sp_off=-32)
+          alt=0,overall=0,losers=0,rld_nregs=0
+            1 Matching alt: reject+=2
+            1 Non-pseudo reload: reject+=2
+            1 Non input pseudo reload: reject++
+            alt=0,overall=11,losers=1 -- refuse
+            1 Matching alt: reject+=2
+            1 Non-pseudo reload: reject+=2
+            1 Non input pseudo reload: reject++
+            alt=1,overall=11,losers=1 -- refuse
+            1 Non-pseudo reload: reject+=2
+            1 Non input pseudo reload: reject++
+            alt=2,overall=9,losers=1 -- refuse
+            1 Non-pseudo reload: reject+=2
+            1 Non input pseudo reload: reject++
+            alt=3,overall=9,losers=1 -- refuse
+	 Choosing alt 0 in insn 39:  (0) =rm  (1) %0  (2) re {*addsi_1} (sp_off=-32)
+	   Spilling non-eliminable hard regs: 7
+
+********** Inheritance #1: **********
+
+EBB 2 3
+EBB 4 5
+EBB 6
+EBB 7
+
+********** Pseudo live ranges #1: **********
+
+  BB 7
+   Insn 48: point = 0, n_alt = -1
+   Insn 47: point = 0, n_alt = -2
+   Insn 43: point = 1, n_alt = -2
+  BB 5
+   Insn 52: point = 4, n_alt = -1
+   Insn 24: point = 4, n_alt = 0
+  BB 3
+   Insn 50: point = 5, n_alt = -1
+   Insn 12: point = 5, n_alt = 0
+  BB 6
+   Insn 40: point = 6, n_alt = -2
+   Insn 39: point = 7, n_alt = 0
+   Insn 38: point = 7, n_alt = 0
+   Insn 37: point = 8, n_alt = 0
+   Insn 36: point = 9, n_alt = 0
+   Insn 35: point = 9, n_alt = 0
+   Insn 34: point = 10, n_alt = 0
+   Insn 33: point = 10, n_alt = 0
+   Insn 32: point = 10, n_alt = 0
+   Insn 31: point = 10, n_alt = 0
+   Insn 30: point = 10, n_alt = 0
+   Insn 29: point = 12, n_alt = 0
+  BB 4
+   Insn 22: point = 13, n_alt = -1
+   Insn 21: point = 13, n_alt = 1
+   Insn 20: point = 13, n_alt = 1
+   Insn 19: point = 14, n_alt = 0
+   Insn 18: point = 16, n_alt = 0
+   Insn 17: point = 18, n_alt = 0
+  BB 2
+   Insn 10: point = 20, n_alt = -1
+   Insn 9: point = 20, n_alt = 0
+   Insn 6: point = 21, n_alt = 0
+   Insn 5: point = 23, n_alt = 0
+   Insn 54: point = 24, n_alt = 0
+ r82: [15..24]
+ r83: [22..23]
+ r84: [20..21]
+ r85: [17..18]
+ r86: [15..16]
+ r87: [11..12]
+ r88: [9..10]
+ r89: [2..6]
+ r90: [0..1]
+ r91: [13..14]
+ r92: [7..8]
+Compressing live ranges: from 25 to 20 - 80%
+Ranges after the compression:
+ r82: [12..19]
+ r83: [18..19]
+ r84: [16..17]
+ r85: [14..15]
+ r86: [12..13]
+ r87: [8..9]
+ r88: [6..7]
+ r89: [2..3]
+ r90: [0..1]
+ r91: [10..11]
+ r92: [4..5]
+
+********** Assignment #1: **********
+
+
+********** Undoing inheritance #1: **********
+
+
+********** Local #2: **********
+
+	   Spilling non-eliminable hard regs: 7
+	   Spilling non-eliminable hard regs: 7
+New elimination table:
+Can eliminate 16 to 7 (offset=32, prev_offset=32)
+Can eliminate 16 to 6 (offset=4, prev_offset=0)
+Can eliminate 19 to 7 (offset=16, prev_offset=16)
+Can eliminate 19 to 6 (offset=-12, prev_offset=0)
+changing reg in insn 54
+changing reg in insn 19
+changing reg in insn 5
+changing reg in insn 6
+changing reg in insn 6
+changing reg in insn 9
+changing reg in insn 17
+changing reg in insn 18
+changing reg in insn 18
+changing reg in insn 19
+changing reg in insn 29
+changing reg in insn 30
+changing reg in insn 35
+changing reg in insn 40
+changing reg in insn 24
+changing reg in insn 12
+changing reg in insn 43
+changing reg in insn 43
+changing reg in insn 47
+changing reg in insn 19
+changing reg in insn 20
+changing reg in insn 37
+changing reg in insn 38
+deleting insn with uid = 40.
+deleting insn with uid = 43.
+deleting insn with uid = 47.
+starting the processing of deferred insns
+ending the processing of deferred insns
+rescanning insn with uid = 38.
+
+
+rw_char
+
+Dataflow summary:
+;;  fully invalidated by EH 	 0 [ax] 1 [dx] 2 [cx] 8 [st] 9 [st(1)] 10 [st(2)] 11 [st(3)] 12 [st(4)] 13 [st(5)] 14 [st(6)] 15 [st(7)] 17 [flags] 18 [fpsr] 20 [xmm0] 21 [xmm1] 22 [xmm2] 23 [xmm3] 24 [xmm4] 25 [xmm5] 26 [xmm6] 27 [xmm7] 28 [mm0] 29 [mm1] 30 [mm2] 31 [mm3] 32 [mm4] 33 [mm5] 34 [mm6] 35 [mm7] 36 [r8] 37 [r9] 38 [r10] 39 [r11] 40 [r12] 41 [r13] 42 [r14] 43 [r15] 44 [xmm8] 45 [xmm9] 46 [xmm10] 47 [xmm11] 48 [xmm12] 49 [xmm13] 50 [xmm14] 51 [xmm15] 52 [xmm16] 53 [xmm17] 54 [xmm18] 55 [xmm19] 56 [xmm20] 57 [xmm21] 58 [xmm22] 59 [xmm23] 60 [xmm24] 61 [xmm25] 62 [xmm26] 63 [xmm27] 64 [xmm28] 65 [xmm29] 66 [xmm30] 67 [xmm31] 68 [k0] 69 [k1] 70 [k2] 71 [k3] 72 [k4] 73 [k5] 74 [k6] 75 [k7]
+;;  hardware regs used 	
+;;  regular block artificial uses 	 7 [sp]
+;;  eh block artificial uses 	 7 [sp] 16 [argp]
+;;  entry block defs 	 0 [ax] 1 [dx] 2 [cx] 7 [sp]
+;;  exit block uses 	 0 [ax] 7 [sp]
+;;  regs ever live 	 0 [ax] 1 [dx] 7 [sp] 17 [flags]
+;;  ref usage 	r0={9d,7u} r1={6d,4u} r2={2d} r7={8d,27u} r8={1d} r9={1d} r10={1d} r11={1d} r12={1d} r13={1d} r14={1d} r15={1d} r17={8d,2u} r18={1d} r20={1d} r21={1d} r22={1d} r23={1d} r24={1d} r25={1d} r26={1d} r27={1d} r28={1d} r29={1d} r30={1d} r31={1d} r32={1d} r33={1d} r34={1d} r35={1d} r36={1d} r37={1d} r38={1d} r39={1d} r40={1d} r41={1d} r42={1d} r43={1d} r44={1d} r45={1d} r46={1d} r47={1d} r48={1d} r49={1d} r50={1d} r51={1d} r52={1d} r53={1d} r54={1d} r55={1d} r56={1d} r57={1d} r58={1d} r59={1d} r60={1d} r61={1d} r62={1d} r63={1d} r64={1d} r65={1d} r66={1d} r67={1d} r68={1d} r69={1d} r70={1d} r71={1d} r72={1d} r73={1d} r74={1d} r75={1d} 
+;;    total ref usage 138{98d,40u,0e} in 27{26 regular + 1 call} insns.
+(note 1 0 3 NOTE_INSN_DELETED)
+(note 3 1 54 2 [bb 2] NOTE_INSN_BASIC_BLOCK)
+(insn/f 54 3 2 2 (parallel [
+            (set (reg:SI 0 ax [82])
+                (unspec:SI [
+                        (const_int 0 [0])
+                    ] UNSPEC_SET_GOT))
+            (clobber (reg:CC 17 flags))
+        ]) 846 {*set_got}
+     (expr_list:REG_CFA_FLUSH_QUEUE (nil)
+        (nil)))
+(note 2 54 5 2 NOTE_INSN_FUNCTION_BEG)
+(insn 5 2 6 2 (set (reg:SI 1 dx [orig:83 dev.7_1 ] [83])
+        (mem/c:SI (plus:SI (reg/f:SI 7 sp)
+                (const_int 36 [0x24])) [2 dev+0 S4 A32])) "fs/char_dev.c":99:9 75 {*movsi_internal}
+     (nil))
+(insn 6 5 9 2 (parallel [
+            (set (reg:SI 1 dx [orig:84 _2 ] [84])
+                (lshiftrt:SI (reg:SI 1 dx [orig:83 dev.7_1 ] [83])
+                    (const_int 8 [0x8])))
+            (clobber (reg:CC 17 flags))
+        ]) "fs/char_dev.c":99:9 701 {*lshrsi3_1}
+     (nil))
+(insn 9 6 10 2 (set (reg:CC 17 flags)
+        (compare:CC (reg:SI 1 dx [orig:84 _2 ] [84])
+            (const_int 7 [0x7]))) "fs/char_dev.c":99:8 11 {*cmpsi_1}
+     (nil))
+(jump_insn 10 9 11 2 (set (pc)
+        (if_then_else (leu (reg:CC 17 flags)
+                (const_int 0 [0]))
+            (label_ref 15)
+            (pc))) "fs/char_dev.c":99:8 806 {*jcc}
+     (nil)
+ -> 15)
+(note 11 10 12 3 [bb 3] NOTE_INSN_BASIC_BLOCK)
+(insn 12 11 50 3 (set (reg:SI 0 ax [orig:89 _7 ] [89])
+        (const_int -19 [0xffffffffffffffed])) "fs/char_dev.c":100:16 75 {*movsi_internal}
+     (nil))
+(jump_insn 50 12 51 3 (set (pc)
+        (label_ref 41)) "fs/char_dev.c":100:16 807 {jump}
+     (nil)
+ -> 41)
+(barrier 51 50 15)
+(code_label 15 51 16 4 36 (nil) [1 uses])
+(note 16 15 17 4 [bb 4] NOTE_INSN_BASIC_BLOCK)
+(insn 17 16 18 4 (set (reg:SI 1 dx [orig:85 dev.8_3 ] [85])
+        (mem/c:SI (plus:SI (reg/f:SI 7 sp)
+                (const_int 36 [0x24])) [2 dev+0 S4 A32])) "fs/char_dev.c":101:33 75 {*movsi_internal}
+     (nil))
+(insn 18 17 19 4 (parallel [
+            (set (reg:SI 1 dx [orig:86 _4 ] [86])
+                (lshiftrt:SI (reg:SI 1 dx [orig:85 dev.8_3 ] [85])
+                    (const_int 8 [0x8])))
+            (clobber (reg:CC 17 flags))
+        ]) "fs/char_dev.c":101:33 701 {*lshrsi3_1}
+     (nil))
+(insn 19 18 20 4 (set (reg/f:SI 0 ax [91])
+        (mem/f:SI (plus:SI (plus:SI (mult:SI (reg:SI 1 dx [orig:86 _4 ] [86])
+                        (const_int 4 [0x4]))
+                    (reg:SI 0 ax [82]))
+                (const:SI (unspec:SI [
+                            (symbol_ref:SI ("crw_table") [flags 0x2]  <var_decl 0x711f3311a900 crw_table>)
+                        ] UNSPEC_GOTOFF))) [17 crw_table[_4]+0 S4 A32])) "fs/char_dev.c":101:21 75 {*movsi_internal}
+     (nil))
+(insn 20 19 21 4 (set (mem/f/c:SI (plus:SI (reg/f:SI 7 sp)
+                (const_int 12 [0xc])) [17 call_addr+0 S4 A32])
+        (reg/f:SI 0 ax [91])) "fs/char_dev.c":101:21 75 {*movsi_internal}
+     (nil))
+(insn 21 20 22 4 (set (reg:CCZ 17 flags)
+        (compare:CCZ (mem/f/c:SI (plus:SI (reg/f:SI 7 sp)
+                    (const_int 12 [0xc])) [17 call_addr+0 S4 A32])
+            (const_int 0 [0]))) "fs/char_dev.c":101:8 7 {*cmpsi_ccno_1}
+     (nil))
+(jump_insn 22 21 23 4 (set (pc)
+        (if_then_else (ne (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref 27)
+            (pc))) "fs/char_dev.c":101:8 806 {*jcc}
+     (nil)
+ -> 27)
+(note 23 22 24 5 [bb 5] NOTE_INSN_BASIC_BLOCK)
+(insn 24 23 52 5 (set (reg:SI 0 ax [orig:89 _7 ] [89])
+        (const_int -19 [0xffffffffffffffed])) "fs/char_dev.c":102:16 75 {*movsi_internal}
+     (nil))
+(jump_insn 52 24 53 5 (set (pc)
+        (label_ref 41)) "fs/char_dev.c":102:16 807 {jump}
+     (nil)
+ -> 41)
+(barrier 53 52 27)
+(code_label 27 53 28 6 38 (nil) [1 uses])
+(note 28 27 29 6 [bb 6] NOTE_INSN_BASIC_BLOCK)
+(insn 29 28 30 6 (set (reg:SI 0 ax [orig:87 dev.9_5 ] [87])
+        (mem/c:SI (plus:SI (reg/f:SI 7 sp)
+                (const_int 36 [0x24])) [2 dev+0 S4 A32])) "fs/char_dev.c":103:26 75 {*movsi_internal}
+     (nil))
+(insn 30 29 31 6 (set (reg:SI 0 ax [orig:88 _6 ] [88])
+        (zero_extend:SI (reg:QI 0 ax [orig:87 dev.9_5 ] [87]))) "fs/char_dev.c":103:12 143 {*zero_extendqisi2}
+     (nil))
+(insn 31 30 32 6 (parallel [
+            (set (reg/f:SI 7 sp)
+                (plus:SI (reg/f:SI 7 sp)
+                    (const_int -12 [0xfffffffffffffff4])))
+            (clobber (reg:CC 17 flags))
+        ]) "fs/char_dev.c":103:12 209 {*addsi_1}
+     (expr_list:REG_ARGS_SIZE (const_int 12 [0xc])
+        (nil)))
+(insn 32 31 33 6 (set (mem/f:SI (pre_dec:SI (reg/f:SI 7 sp)) [3  S4 A32])
+        (mem/f/c:SI (plus:SI (reg/f:SI 7 sp)
+                (const_int 60 [0x3c])) [3 pos+0 S4 A32])) "fs/char_dev.c":103:12 54 {*pushsi2}
+     (expr_list:REG_ARGS_SIZE (const_int 16 [0x10])
+        (nil)))
+(insn 33 32 34 6 (set (mem:SI (pre_dec:SI (reg/f:SI 7 sp)) [2  S4 A32])
+        (mem/c:SI (plus:SI (reg/f:SI 7 sp)
+                (const_int 60 [0x3c])) [2 count+0 S4 A32])) "fs/char_dev.c":103:12 54 {*pushsi2}
+     (expr_list:REG_ARGS_SIZE (const_int 20 [0x14])
+        (nil)))
+(insn 34 33 35 6 (set (mem/f:SI (pre_dec:SI (reg/f:SI 7 sp)) [1  S4 A32])
+        (mem/f/c:SI (plus:SI (reg/f:SI 7 sp)
+                (const_int 60 [0x3c])) [1 buf+0 S4 A32])) "fs/char_dev.c":103:12 54 {*pushsi2}
+     (expr_list:REG_ARGS_SIZE (const_int 24 [0x18])
+        (nil)))
+(insn 35 34 36 6 (set (mem:SI (pre_dec:SI (reg/f:SI 7 sp)) [2  S4 A32])
+        (reg:SI 0 ax [orig:88 _6 ] [88])) "fs/char_dev.c":103:12 54 {*pushsi2}
+     (expr_list:REG_ARGS_SIZE (const_int 28 [0x1c])
+        (nil)))
+(insn 36 35 37 6 (set (mem:SI (pre_dec:SI (reg/f:SI 7 sp)) [2  S4 A32])
+        (mem/c:SI (plus:SI (reg/f:SI 7 sp)
+                (const_int 60 [0x3c])) [2 rw+0 S4 A32])) "fs/char_dev.c":103:12 54 {*pushsi2}
+     (expr_list:REG_ARGS_SIZE (const_int 32 [0x20])
+        (nil)))
+(insn 37 36 38 6 (set (reg/f:SI 0 ax [92])
+        (mem/f/c:SI (plus:SI (reg/f:SI 7 sp)
+                (const_int 44 [0x2c])) [17 call_addr+0 S4 A32])) "fs/char_dev.c":103:12 75 {*movsi_internal}
+     (nil))
+(call_insn 38 37 39 6 (set (reg:SI 0 ax)
+        (call (mem:QI (reg/f:SI 0 ax [92]) [0 *(int (*<T328>) (int, unsigned int, char *, int, off_t *)) call_addr_11 S1 A8])
+            (const_int 32 [0x20]))) "fs/char_dev.c":103:12 823 {*call_value}
+     (nil)
+    (nil))
+(insn 39 38 41 6 (parallel [
+            (set (reg/f:SI 7 sp)
+                (plus:SI (reg/f:SI 7 sp)
+                    (const_int 32 [0x20])))
+            (clobber (reg:CC 17 flags))
+        ]) "fs/char_dev.c":103:12 209 {*addsi_1}
+     (expr_list:REG_ARGS_SIZE (const_int 0 [0])
+        (nil)))
+(code_label 41 39 42 7 37 (nil) [2 uses])
+(note 42 41 48 7 [bb 7] NOTE_INSN_BASIC_BLOCK)
+(insn 48 42 55 7 (use (reg/i:SI 0 ax)) "fs/char_dev.c":104:1 -1
+     (nil))
+(note 55 48 0 NOTE_INSN_DELETED)

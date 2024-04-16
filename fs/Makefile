@@ -1,0 +1,17 @@
+obj-y += super.o
+obj-y += buffer.o
+obj-y += open.o
+obj-y += inode.o
+obj-y += truncate.o
+obj-y += bitmap.o
+obj-y += file_table.o
+obj-y += read_write.o
+obj-y += pipe.o
+obj-y += char_dev.o
+obj-y += file_dev.o
+obj-y += block_dev.o
+obj-y += namei.o
+obj-y += exec.o
+obj-y += stat.o
+obj-y += fcntl.o
+obj-y += ioctl.o

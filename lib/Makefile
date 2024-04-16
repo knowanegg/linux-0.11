@@ -1,0 +1,12 @@
+lib-y += string.o
+lib-y += ctype.o
+lib-y += errno.o
+lib-y += malloc.o
+lib-y += open.o
+lib-y += dup.o
+lib-y += close.o
+lib-y += _exit.o
+lib-y += execve.o
+lib-y += wait.o
+lib-y += setsid.o
+lib-y += write.o

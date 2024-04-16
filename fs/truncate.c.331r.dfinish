@@ -1,0 +1,1095 @@
+
+;; Function free_ind (free_ind, funcdef_no=1, decl_uid=1336, cgraph_uid=2, symbol_order=1)
+
+(note 1 0 3 NOTE_INSN_DELETED)
+(note 3 1 82 2 [bb 2] NOTE_INSN_BASIC_BLOCK)
+(insn/f 82 3 83 2 (set (mem:SI (pre_dec:SI (reg/f:SI 7 sp)) [0  S4 A8])
+        (reg:SI 3 bx)) "fs/truncate.c":11:1 54 {*pushsi2}
+     (nil))
+(insn/f 83 82 84 2 (parallel [
+            (set (reg/f:SI 7 sp)
+                (plus:SI (reg/f:SI 7 sp)
+                    (const_int -24 [0xffffffffffffffe8])))
+            (clobber (reg:CC 17 flags))
+            (clobber (mem:BLK (scratch) [0  A8]))
+        ]) "fs/truncate.c":11:1 1141 {pro_epilogue_adjust_stack_add_si}
+     (expr_list:REG_CFA_ADJUST_CFA (set (reg/f:SI 7 sp)
+            (plus:SI (reg/f:SI 7 sp)
+                (const_int -24 [0xffffffffffffffe8])))
+        (nil)))
+(note 84 83 80 2 NOTE_INSN_PROLOGUE_END)
+(insn/f 80 84 2 2 (parallel [
+            (set (reg:SI 3 bx [82])
+                (unspec:SI [
+                        (const_int 0 [0])
+                    ] UNSPEC_SET_GOT))
+            (clobber (reg:CC 17 flags))
+        ]) 846 {*set_got}
+     (expr_list:REG_CFA_FLUSH_QUEUE (nil)
+        (nil)))
+(note 2 80 5 2 NOTE_INSN_FUNCTION_BEG)
+(insn 5 2 6 2 (set (reg:CCZ 17 flags)
+        (compare:CCZ (mem/c:SI (plus:SI (reg/f:SI 7 sp)
+                    (const_int 36 [0x24])) [6 block+0 S4 A32])
+            (const_int 0 [0]))) "fs/truncate.c":16:8 7 {*cmpsi_ccno_1}
+     (nil))
+(jump_insn 6 5 11 2 (set (pc)
+        (if_then_else (eq (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref:SI 78)
+            (pc))) "fs/truncate.c":16:8 806 {*jcc}
+     (nil)
+ -> 78)
+(note 11 6 12 3 [bb 3] NOTE_INSN_BASIC_BLOCK)
+(insn 12 11 13 3 (parallel [
+            (set (reg/f:SI 7 sp)
+                (plus:SI (reg/f:SI 7 sp)
+                    (const_int -8 [0xfffffffffffffff8])))
+            (clobber (reg:CC 17 flags))
+        ]) "fs/truncate.c":18:15 209 {*addsi_1}
+     (expr_list:REG_ARGS_SIZE (const_int 8 [0x8])
+        (nil)))
+(insn 13 12 14 3 (set (mem:SI (pre_dec:SI (reg/f:SI 7 sp)) [6  S4 A32])
+        (mem/c:SI (plus:SI (reg/f:SI 7 sp)
+                (const_int 44 [0x2c])) [6 block+0 S4 A32])) "fs/truncate.c":18:15 54 {*pushsi2}
+     (expr_list:REG_ARGS_SIZE (const_int 12 [0xc])
+        (nil)))
+(insn 14 13 16 3 (set (mem:SI (pre_dec:SI (reg/f:SI 7 sp)) [6  S4 A32])
+        (mem/c:SI (plus:SI (reg/f:SI 7 sp)
+                (const_int 44 [0x2c])) [6 dev+0 S4 A32])) "fs/truncate.c":18:15 54 {*pushsi2}
+     (expr_list:REG_ARGS_SIZE (const_int 16 [0x10])
+        (nil)))
+(call_insn 16 14 17 3 (set (reg:SI 0 ax)
+        (call (mem:QI (symbol_ref:SI ("bread") [flags 0x41]  <function_decl 0x742679f15200 bread>) [0 bread S1 A8])
+            (const_int 16 [0x10]))) "fs/truncate.c":18:15 823 {*call_value}
+     (nil)
+    (expr_list (use (reg:SI 3 bx))
+        (nil)))
+(insn 17 16 19 3 (parallel [
+            (set (reg/f:SI 7 sp)
+                (plus:SI (reg/f:SI 7 sp)
+                    (const_int 16 [0x10])))
+            (clobber (reg:CC 17 flags))
+        ]) "fs/truncate.c":18:15 209 {*addsi_1}
+     (expr_list:REG_ARGS_SIZE (const_int 0 [0])
+        (nil)))
+(insn 19 17 20 3 (set (mem/f/c:SI (plus:SI (reg/f:SI 7 sp)
+                (const_int 4 [0x4])) [7 bh+0 S4 A32])
+        (reg:SI 0 ax [86])) "fs/truncate.c":18:15 75 {*movsi_internal}
+     (nil))
+(insn 20 19 21 3 (set (reg:CCZ 17 flags)
+        (compare:CCZ (mem/f/c:SI (plus:SI (reg/f:SI 7 sp)
+                    (const_int 4 [0x4])) [7 bh+0 S4 A32])
+            (const_int 0 [0]))) "fs/truncate.c":18:8 7 {*cmpsi_ccno_1}
+     (nil))
+(jump_insn 21 20 22 3 (set (pc)
+        (if_then_else (eq (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref 61)
+            (pc))) "fs/truncate.c":18:8 806 {*jcc}
+     (nil)
+ -> 61)
+(note 22 21 23 4 [bb 4] NOTE_INSN_BASIC_BLOCK)
+(insn 23 22 24 4 (set (reg/f:SI 0 ax [87])
+        (mem/f/c:SI (plus:SI (reg/f:SI 7 sp)
+                (const_int 4 [0x4])) [7 bh+0 S4 A32])) "fs/truncate.c":19:11 75 {*movsi_internal}
+     (nil))
+(insn 24 23 25 4 (set (reg/f:SI 0 ax [88])
+        (mem/f:SI (reg/f:SI 0 ax [87]) [9 bh_14->b_data+0 S4 A32])) "fs/truncate.c":19:11 75 {*movsi_internal}
+     (nil))
+(insn 25 24 26 4 (set (mem/f/c:SI (plus:SI (reg/f:SI 7 sp)
+                (const_int 12 [0xc])) [5 p+0 S4 A32])
+        (reg/f:SI 0 ax [88])) "fs/truncate.c":19:11 75 {*movsi_internal}
+     (nil))
+(insn 26 25 73 4 (set (mem/c:SI (plus:SI (reg/f:SI 7 sp)
+                (const_int 8 [0x8])) [6 i+0 S4 A32])
+        (const_int 0 [0])) "fs/truncate.c":20:16 75 {*movsi_internal}
+     (nil))
+(jump_insn 73 26 74 4 (set (pc)
+        (label_ref 48)) "fs/truncate.c":20:9 807 {jump}
+     (nil)
+ -> 48)
+(barrier 74 73 50)
+(code_label 50 74 29 5 7 (nil) [1 uses])
+(note 29 50 30 5 [bb 5] NOTE_INSN_BASIC_BLOCK)
+(insn 30 29 31 5 (set (reg/f:SI 0 ax [89])
+        (mem/f/c:SI (plus:SI (reg/f:SI 7 sp)
+                (const_int 12 [0xc])) [5 p+0 S4 A32])) "fs/truncate.c":21:16 75 {*movsi_internal}
+     (nil))
+(insn 31 30 32 5 (set (reg:HI 0 ax [orig:83 _1 ] [83])
+        (mem:HI (reg/f:SI 0 ax [89]) [2 *p_4+0 S2 A16])) "fs/truncate.c":21:16 76 {*movhi_internal}
+     (nil))
+(insn 32 31 33 5 (set (reg:CCZ 17 flags)
+        (compare:CCZ (reg:HI 0 ax [orig:83 _1 ] [83])
+            (const_int 0 [0]))) "fs/truncate.c":21:15 6 {*cmphi_ccno_1}
+     (nil))
+(jump_insn 33 32 34 5 (set (pc)
+        (if_then_else (eq (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref 44)
+            (pc))) "fs/truncate.c":21:15 806 {*jcc}
+     (nil)
+ -> 44)
+(note 34 33 35 6 [bb 6] NOTE_INSN_BASIC_BLOCK)
+(insn 35 34 36 6 (set (reg/f:SI 0 ax [90])
+        (mem/f/c:SI (plus:SI (reg/f:SI 7 sp)
+                (const_int 12 [0xc])) [5 p+0 S4 A32])) "fs/truncate.c":22:31 75 {*movsi_internal}
+     (nil))
+(insn 36 35 37 6 (set (reg:HI 0 ax [orig:84 _2 ] [84])
+        (mem:HI (reg/f:SI 0 ax [90]) [2 *p_4+0 S2 A16])) "fs/truncate.c":22:31 76 {*movhi_internal}
+     (nil))
+(insn 37 36 38 6 (set (reg:SI 0 ax [orig:85 _3 ] [85])
+        (zero_extend:SI (reg:HI 0 ax [orig:84 _2 ] [84]))) "fs/truncate.c":22:15 144 {*zero_extendhisi2}
+     (nil))
+(insn 38 37 39 6 (parallel [
+            (set (reg/f:SI 7 sp)
+                (plus:SI (reg/f:SI 7 sp)
+                    (const_int -8 [0xfffffffffffffff8])))
+            (clobber (reg:CC 17 flags))
+        ]) "fs/truncate.c":22:15 209 {*addsi_1}
+     (expr_list:REG_ARGS_SIZE (const_int 8 [0x8])
+        (nil)))
+(insn 39 38 40 6 (set (mem:SI (pre_dec:SI (reg/f:SI 7 sp)) [6  S4 A32])
+        (reg:SI 0 ax [orig:85 _3 ] [85])) "fs/truncate.c":22:15 54 {*pushsi2}
+     (expr_list:REG_ARGS_SIZE (const_int 12 [0xc])
+        (nil)))
+(insn 40 39 42 6 (set (mem:SI (pre_dec:SI (reg/f:SI 7 sp)) [6  S4 A32])
+        (mem/c:SI (plus:SI (reg/f:SI 7 sp)
+                (const_int 44 [0x2c])) [6 dev+0 S4 A32])) "fs/truncate.c":22:15 54 {*pushsi2}
+     (expr_list:REG_ARGS_SIZE (const_int 16 [0x10])
+        (nil)))
+(call_insn 42 40 43 6 (call (mem:QI (symbol_ref:SI ("free_block") [flags 0x41]  <function_decl 0x742679f15400 free_block>) [0 free_block S1 A8])
+        (const_int 16 [0x10])) "fs/truncate.c":22:15 812 {*call}
+     (nil)
+    (expr_list (use (reg:SI 3 bx))
+        (nil)))
+(insn 43 42 44 6 (parallel [
+            (set (reg/f:SI 7 sp)
+                (plus:SI (reg/f:SI 7 sp)
+                    (const_int 16 [0x10])))
+            (clobber (reg:CC 17 flags))
+        ]) "fs/truncate.c":22:15 209 {*addsi_1}
+     (expr_list:REG_ARGS_SIZE (const_int 0 [0])
+        (nil)))
+(code_label 44 43 45 7 6 (nil) [1 uses])
+(note 45 44 46 7 [bb 7] NOTE_INSN_BASIC_BLOCK)
+(insn 46 45 47 7 (parallel [
+            (set (mem/c:SI (plus:SI (reg/f:SI 7 sp)
+                        (const_int 8 [0x8])) [6 i+0 S4 A32])
+                (plus:SI (mem/c:SI (plus:SI (reg/f:SI 7 sp)
+                            (const_int 8 [0x8])) [6 i+0 S4 A32])
+                    (const_int 1 [0x1])))
+            (clobber (reg:CC 17 flags))
+        ]) "fs/truncate.c":20:31 209 {*addsi_1}
+     (nil))
+(insn 47 46 48 7 (parallel [
+            (set (mem/f/c:SI (plus:SI (reg/f:SI 7 sp)
+                        (const_int 12 [0xc])) [5 p+0 S4 A32])
+                (plus:SI (mem/f/c:SI (plus:SI (reg/f:SI 7 sp)
+                            (const_int 12 [0xc])) [5 p+0 S4 A32])
+                    (const_int 2 [0x2])))
+            (clobber (reg:CC 17 flags))
+        ]) "fs/truncate.c":20:36 209 {*addsi_1}
+     (nil))
+(code_label 48 47 49 8 5 (nil) [1 uses])
+(note 49 48 53 8 [bb 8] NOTE_INSN_BASIC_BLOCK)
+(insn 53 49 54 8 (set (reg:CCGC 17 flags)
+        (compare:CCGC (mem/c:SI (plus:SI (reg/f:SI 7 sp)
+                    (const_int 8 [0x8])) [6 i+0 S4 A32])
+            (const_int 511 [0x1ff]))) "fs/truncate.c":20:23 11 {*cmpsi_1}
+     (nil))
+(jump_insn 54 53 55 8 (set (pc)
+        (if_then_else (le (reg:CCGC 17 flags)
+                (const_int 0 [0]))
+            (label_ref 50)
+            (pc))) "fs/truncate.c":20:23 806 {*jcc}
+     (nil)
+ -> 50)
+(note 55 54 56 9 [bb 9] NOTE_INSN_BASIC_BLOCK)
+(insn 56 55 57 9 (parallel [
+            (set (reg/f:SI 7 sp)
+                (plus:SI (reg/f:SI 7 sp)
+                    (const_int -12 [0xfffffffffffffff4])))
+            (clobber (reg:CC 17 flags))
+        ]) "fs/truncate.c":23:9 209 {*addsi_1}
+     (expr_list:REG_ARGS_SIZE (const_int 12 [0xc])
+        (nil)))
+(insn 57 56 59 9 (set (mem/f:SI (pre_dec:SI (reg/f:SI 7 sp)) [7  S4 A32])
+        (mem/f/c:SI (plus:SI (reg/f:SI 7 sp)
+                (const_int 16 [0x10])) [7 bh+0 S4 A32])) "fs/truncate.c":23:9 54 {*pushsi2}
+     (expr_list:REG_ARGS_SIZE (const_int 16 [0x10])
+        (nil)))
+(call_insn 59 57 60 9 (call (mem:QI (symbol_ref:SI ("brelse") [flags 0x41]  <function_decl 0x742679f15300 brelse>) [0 brelse S1 A8])
+        (const_int 16 [0x10])) "fs/truncate.c":23:9 812 {*call}
+     (nil)
+    (expr_list (use (reg:SI 3 bx))
+        (nil)))
+(insn 60 59 61 9 (parallel [
+            (set (reg/f:SI 7 sp)
+                (plus:SI (reg/f:SI 7 sp)
+                    (const_int 16 [0x10])))
+            (clobber (reg:CC 17 flags))
+        ]) "fs/truncate.c":23:9 209 {*addsi_1}
+     (expr_list:REG_ARGS_SIZE (const_int 0 [0])
+        (nil)))
+(code_label 61 60 62 10 4 (nil) [1 uses])
+(note 62 61 63 10 [bb 10] NOTE_INSN_BASIC_BLOCK)
+(insn 63 62 64 10 (parallel [
+            (set (reg/f:SI 7 sp)
+                (plus:SI (reg/f:SI 7 sp)
+                    (const_int -8 [0xfffffffffffffff8])))
+            (clobber (reg:CC 17 flags))
+        ]) "fs/truncate.c":25:5 209 {*addsi_1}
+     (expr_list:REG_ARGS_SIZE (const_int 8 [0x8])
+        (nil)))
+(insn 64 63 65 10 (set (mem:SI (pre_dec:SI (reg/f:SI 7 sp)) [6  S4 A32])
+        (mem/c:SI (plus:SI (reg/f:SI 7 sp)
+                (const_int 44 [0x2c])) [6 block+0 S4 A32])) "fs/truncate.c":25:5 54 {*pushsi2}
+     (expr_list:REG_ARGS_SIZE (const_int 12 [0xc])
+        (nil)))
+(insn 65 64 67 10 (set (mem:SI (pre_dec:SI (reg/f:SI 7 sp)) [6  S4 A32])
+        (mem/c:SI (plus:SI (reg/f:SI 7 sp)
+                (const_int 44 [0x2c])) [6 dev+0 S4 A32])) "fs/truncate.c":25:5 54 {*pushsi2}
+     (expr_list:REG_ARGS_SIZE (const_int 16 [0x10])
+        (nil)))
+(call_insn 67 65 68 10 (call (mem:QI (symbol_ref:SI ("free_block") [flags 0x41]  <function_decl 0x742679f15400 free_block>) [0 free_block S1 A8])
+        (const_int 16 [0x10])) "fs/truncate.c":25:5 812 {*call}
+     (nil)
+    (expr_list (use (reg:SI 3 bx))
+        (nil)))
+(insn 68 67 75 10 (parallel [
+            (set (reg/f:SI 7 sp)
+                (plus:SI (reg/f:SI 7 sp)
+                    (const_int 16 [0x10])))
+            (clobber (reg:CC 17 flags))
+        ]) "fs/truncate.c":25:5 209 {*addsi_1}
+     (expr_list:REG_ARGS_SIZE (const_int 0 [0])
+        (nil)))
+(jump_insn 75 68 76 10 (set (pc)
+        (label_ref 71)) 807 {jump}
+     (nil)
+ -> 71)
+(barrier 76 75 78)
+(code_label 78 76 77 11 8 (nil) [1 uses])
+(note 77 78 79 11 [bb 11] NOTE_INSN_BASIC_BLOCK)
+(insn 79 77 71 11 (const_int 0 [0]) "fs/truncate.c":17:9 843 {nop}
+     (nil))
+(code_label 71 79 72 12 1 (nil) [1 uses])
+(note 72 71 85 12 [bb 12] NOTE_INSN_BASIC_BLOCK)
+(note 85 72 86 12 NOTE_INSN_EPILOGUE_BEG)
+(insn/f 86 85 87 12 (parallel [
+            (set (reg/f:SI 7 sp)
+                (plus:SI (reg/f:SI 7 sp)
+                    (const_int 24 [0x18])))
+            (clobber (reg:CC 17 flags))
+            (clobber (mem:BLK (scratch) [0  A8]))
+        ]) "fs/truncate.c":26:1 1141 {pro_epilogue_adjust_stack_add_si}
+     (expr_list:REG_CFA_ADJUST_CFA (set (reg/f:SI 7 sp)
+            (plus:SI (reg/f:SI 7 sp)
+                (const_int 24 [0x18])))
+        (nil)))
+(insn/f 87 86 88 12 (set (reg:SI 3 bx)
+        (mem:SI (post_inc:SI (reg/f:SI 7 sp)) [0  S4 A8])) "fs/truncate.c":26:1 59 {*popsi1}
+     (expr_list:REG_CFA_ADJUST_CFA (set (reg/f:SI 7 sp)
+            (plus:SI (reg/f:SI 7 sp)
+                (const_int 4 [0x4])))
+        (expr_list:REG_CFA_RESTORE (reg:SI 3 bx)
+            (nil))))
+(jump_insn 88 87 89 12 (simple_return) "fs/truncate.c":26:1 837 {simple_return_internal}
+     (nil)
+ -> simple_return)
+(barrier 89 88 81)
+(note 81 89 0 NOTE_INSN_DELETED)
+
+;; Function free_dind (free_dind, funcdef_no=2, decl_uid=1347, cgraph_uid=3, symbol_order=2)
+
+(note 1 0 3 NOTE_INSN_DELETED)
+(note 3 1 81 2 [bb 2] NOTE_INSN_BASIC_BLOCK)
+(insn/f 81 3 82 2 (set (mem:SI (pre_dec:SI (reg/f:SI 7 sp)) [0  S4 A8])
+        (reg:SI 3 bx)) "fs/truncate.c":29:1 54 {*pushsi2}
+     (nil))
+(insn/f 82 81 83 2 (parallel [
+            (set (reg/f:SI 7 sp)
+                (plus:SI (reg/f:SI 7 sp)
+                    (const_int -24 [0xffffffffffffffe8])))
+            (clobber (reg:CC 17 flags))
+            (clobber (mem:BLK (scratch) [0  A8]))
+        ]) "fs/truncate.c":29:1 1141 {pro_epilogue_adjust_stack_add_si}
+     (expr_list:REG_CFA_ADJUST_CFA (set (reg/f:SI 7 sp)
+            (plus:SI (reg/f:SI 7 sp)
+                (const_int -24 [0xffffffffffffffe8])))
+        (nil)))
+(note 83 82 79 2 NOTE_INSN_PROLOGUE_END)
+(insn/f 79 83 2 2 (parallel [
+            (set (reg:SI 3 bx [82])
+                (unspec:SI [
+                        (const_int 0 [0])
+                    ] UNSPEC_SET_GOT))
+            (clobber (reg:CC 17 flags))
+        ]) 846 {*set_got}
+     (expr_list:REG_CFA_FLUSH_QUEUE (nil)
+        (nil)))
+(note 2 79 5 2 NOTE_INSN_FUNCTION_BEG)
+(insn 5 2 6 2 (set (reg:CCZ 17 flags)
+        (compare:CCZ (mem/c:SI (plus:SI (reg/f:SI 7 sp)
+                    (const_int 36 [0x24])) [6 block+0 S4 A32])
+            (const_int 0 [0]))) "fs/truncate.c":34:8 7 {*cmpsi_ccno_1}
+     (nil))
+(jump_insn 6 5 11 2 (set (pc)
+        (if_then_else (eq (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref:SI 77)
+            (pc))) "fs/truncate.c":34:8 806 {*jcc}
+     (nil)
+ -> 77)
+(note 11 6 12 3 [bb 3] NOTE_INSN_BASIC_BLOCK)
+(insn 12 11 13 3 (parallel [
+            (set (reg/f:SI 7 sp)
+                (plus:SI (reg/f:SI 7 sp)
+                    (const_int -8 [0xfffffffffffffff8])))
+            (clobber (reg:CC 17 flags))
+        ]) "fs/truncate.c":36:15 209 {*addsi_1}
+     (expr_list:REG_ARGS_SIZE (const_int 8 [0x8])
+        (nil)))
+(insn 13 12 14 3 (set (mem:SI (pre_dec:SI (reg/f:SI 7 sp)) [6  S4 A32])
+        (mem/c:SI (plus:SI (reg/f:SI 7 sp)
+                (const_int 44 [0x2c])) [6 block+0 S4 A32])) "fs/truncate.c":36:15 54 {*pushsi2}
+     (expr_list:REG_ARGS_SIZE (const_int 12 [0xc])
+        (nil)))
+(insn 14 13 16 3 (set (mem:SI (pre_dec:SI (reg/f:SI 7 sp)) [6  S4 A32])
+        (mem/c:SI (plus:SI (reg/f:SI 7 sp)
+                (const_int 44 [0x2c])) [6 dev+0 S4 A32])) "fs/truncate.c":36:15 54 {*pushsi2}
+     (expr_list:REG_ARGS_SIZE (const_int 16 [0x10])
+        (nil)))
+(call_insn 16 14 17 3 (set (reg:SI 0 ax)
+        (call (mem:QI (symbol_ref:SI ("bread") [flags 0x41]  <function_decl 0x742679f15200 bread>) [0 bread S1 A8])
+            (const_int 16 [0x10]))) "fs/truncate.c":36:15 823 {*call_value}
+     (nil)
+    (expr_list (use (reg:SI 3 bx))
+        (nil)))
+(insn 17 16 19 3 (parallel [
+            (set (reg/f:SI 7 sp)
+                (plus:SI (reg/f:SI 7 sp)
+                    (const_int 16 [0x10])))
+            (clobber (reg:CC 17 flags))
+        ]) "fs/truncate.c":36:15 209 {*addsi_1}
+     (expr_list:REG_ARGS_SIZE (const_int 0 [0])
+        (nil)))
+(insn 19 17 20 3 (set (mem/f/c:SI (plus:SI (reg/f:SI 7 sp)
+                (const_int 4 [0x4])) [7 bh+0 S4 A32])
+        (reg:SI 0 ax [86])) "fs/truncate.c":36:15 75 {*movsi_internal}
+     (nil))
+(insn 20 19 21 3 (set (reg:CCZ 17 flags)
+        (compare:CCZ (mem/f/c:SI (plus:SI (reg/f:SI 7 sp)
+                    (const_int 4 [0x4])) [7 bh+0 S4 A32])
+            (const_int 0 [0]))) "fs/truncate.c":36:8 7 {*cmpsi_ccno_1}
+     (nil))
+(jump_insn 21 20 22 3 (set (pc)
+        (if_then_else (eq (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref 60)
+            (pc))) "fs/truncate.c":36:8 806 {*jcc}
+     (nil)
+ -> 60)
+(note 22 21 23 4 [bb 4] NOTE_INSN_BASIC_BLOCK)
+(insn 23 22 24 4 (set (reg/f:SI 0 ax [87])
+        (mem/f/c:SI (plus:SI (reg/f:SI 7 sp)
+                (const_int 4 [0x4])) [7 bh+0 S4 A32])) "fs/truncate.c":37:11 75 {*movsi_internal}
+     (nil))
+(insn 24 23 25 4 (set (reg/f:SI 0 ax [88])
+        (mem/f:SI (reg/f:SI 0 ax [87]) [9 bh_14->b_data+0 S4 A32])) "fs/truncate.c":37:11 75 {*movsi_internal}
+     (nil))
+(insn 25 24 26 4 (set (mem/f/c:SI (plus:SI (reg/f:SI 7 sp)
+                (const_int 12 [0xc])) [5 p+0 S4 A32])
+        (reg/f:SI 0 ax [88])) "fs/truncate.c":37:11 75 {*movsi_internal}
+     (nil))
+(insn 26 25 72 4 (set (mem/c:SI (plus:SI (reg/f:SI 7 sp)
+                (const_int 8 [0x8])) [6 i+0 S4 A32])
+        (const_int 0 [0])) "fs/truncate.c":38:16 75 {*movsi_internal}
+     (nil))
+(jump_insn 72 26 73 4 (set (pc)
+        (label_ref 47)) "fs/truncate.c":38:9 807 {jump}
+     (nil)
+ -> 47)
+(barrier 73 72 49)
+(code_label 49 73 29 5 15 (nil) [1 uses])
+(note 29 49 30 5 [bb 5] NOTE_INSN_BASIC_BLOCK)
+(insn 30 29 31 5 (set (reg/f:SI 0 ax [89])
+        (mem/f/c:SI (plus:SI (reg/f:SI 7 sp)
+                (const_int 12 [0xc])) [5 p+0 S4 A32])) "fs/truncate.c":39:17 75 {*movsi_internal}
+     (nil))
+(insn 31 30 32 5 (set (reg:HI 0 ax [orig:83 _1 ] [83])
+        (mem:HI (reg/f:SI 0 ax [89]) [2 *p_4+0 S2 A16])) "fs/truncate.c":39:17 76 {*movhi_internal}
+     (nil))
+(insn 32 31 33 5 (set (reg:CCZ 17 flags)
+        (compare:CCZ (reg:HI 0 ax [orig:83 _1 ] [83])
+            (const_int 0 [0]))) "fs/truncate.c":39:16 6 {*cmphi_ccno_1}
+     (nil))
+(jump_insn 33 32 34 5 (set (pc)
+        (if_then_else (eq (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref 43)
+            (pc))) "fs/truncate.c":39:16 806 {*jcc}
+     (nil)
+ -> 43)
+(note 34 33 35 6 [bb 6] NOTE_INSN_BASIC_BLOCK)
+(insn 35 34 36 6 (set (reg/f:SI 0 ax [90])
+        (mem/f/c:SI (plus:SI (reg/f:SI 7 sp)
+                (const_int 12 [0xc])) [5 p+0 S4 A32])) "fs/truncate.c":40:31 75 {*movsi_internal}
+     (nil))
+(insn 36 35 37 6 (set (reg:HI 0 ax [orig:84 _2 ] [84])
+        (mem:HI (reg/f:SI 0 ax [90]) [2 *p_4+0 S2 A16])) "fs/truncate.c":40:31 76 {*movhi_internal}
+     (nil))
+(insn 37 36 38 6 (set (reg:SI 0 ax [orig:85 _3 ] [85])
+        (zero_extend:SI (reg:HI 0 ax [orig:84 _2 ] [84]))) "fs/truncate.c":40:17 144 {*zero_extendhisi2}
+     (nil))
+(insn 38 37 39 6 (parallel [
+            (set (reg/f:SI 7 sp)
+                (plus:SI (reg/f:SI 7 sp)
+                    (const_int -8 [0xfffffffffffffff8])))
+            (clobber (reg:CC 17 flags))
+        ]) "fs/truncate.c":40:17 209 {*addsi_1}
+     (expr_list:REG_ARGS_SIZE (const_int 8 [0x8])
+        (nil)))
+(insn 39 38 40 6 (set (mem:SI (pre_dec:SI (reg/f:SI 7 sp)) [6  S4 A32])
+        (reg:SI 0 ax [orig:85 _3 ] [85])) "fs/truncate.c":40:17 54 {*pushsi2}
+     (expr_list:REG_ARGS_SIZE (const_int 12 [0xc])
+        (nil)))
+(insn 40 39 41 6 (set (mem:SI (pre_dec:SI (reg/f:SI 7 sp)) [6  S4 A32])
+        (mem/c:SI (plus:SI (reg/f:SI 7 sp)
+                (const_int 44 [0x2c])) [6 dev+0 S4 A32])) "fs/truncate.c":40:17 54 {*pushsi2}
+     (expr_list:REG_ARGS_SIZE (const_int 16 [0x10])
+        (nil)))
+(call_insn 41 40 42 6 (call (mem:QI (symbol_ref:SI ("free_ind") [flags 0x3]  <function_decl 0x742679f3a900 free_ind>) [0 free_ind S1 A8])
+        (const_int 16 [0x10])) "fs/truncate.c":40:17 812 {*call}
+     (nil)
+    (nil))
+(insn 42 41 43 6 (parallel [
+            (set (reg/f:SI 7 sp)
+                (plus:SI (reg/f:SI 7 sp)
+                    (const_int 16 [0x10])))
+            (clobber (reg:CC 17 flags))
+        ]) "fs/truncate.c":40:17 209 {*addsi_1}
+     (expr_list:REG_ARGS_SIZE (const_int 0 [0])
+        (nil)))
+(code_label 43 42 44 7 14 (nil) [1 uses])
+(note 44 43 45 7 [bb 7] NOTE_INSN_BASIC_BLOCK)
+(insn 45 44 46 7 (parallel [
+            (set (mem/c:SI (plus:SI (reg/f:SI 7 sp)
+                        (const_int 8 [0x8])) [6 i+0 S4 A32])
+                (plus:SI (mem/c:SI (plus:SI (reg/f:SI 7 sp)
+                            (const_int 8 [0x8])) [6 i+0 S4 A32])
+                    (const_int 1 [0x1])))
+            (clobber (reg:CC 17 flags))
+        ]) "fs/truncate.c":38:31 209 {*addsi_1}
+     (nil))
+(insn 46 45 47 7 (parallel [
+            (set (mem/f/c:SI (plus:SI (reg/f:SI 7 sp)
+                        (const_int 12 [0xc])) [5 p+0 S4 A32])
+                (plus:SI (mem/f/c:SI (plus:SI (reg/f:SI 7 sp)
+                            (const_int 12 [0xc])) [5 p+0 S4 A32])
+                    (const_int 2 [0x2])))
+            (clobber (reg:CC 17 flags))
+        ]) "fs/truncate.c":38:36 209 {*addsi_1}
+     (nil))
+(code_label 47 46 48 8 13 (nil) [1 uses])
+(note 48 47 52 8 [bb 8] NOTE_INSN_BASIC_BLOCK)
+(insn 52 48 53 8 (set (reg:CCGC 17 flags)
+        (compare:CCGC (mem/c:SI (plus:SI (reg/f:SI 7 sp)
+                    (const_int 8 [0x8])) [6 i+0 S4 A32])
+            (const_int 511 [0x1ff]))) "fs/truncate.c":38:23 11 {*cmpsi_1}
+     (nil))
+(jump_insn 53 52 54 8 (set (pc)
+        (if_then_else (le (reg:CCGC 17 flags)
+                (const_int 0 [0]))
+            (label_ref 49)
+            (pc))) "fs/truncate.c":38:23 806 {*jcc}
+     (nil)
+ -> 49)
+(note 54 53 55 9 [bb 9] NOTE_INSN_BASIC_BLOCK)
+(insn 55 54 56 9 (parallel [
+            (set (reg/f:SI 7 sp)
+                (plus:SI (reg/f:SI 7 sp)
+                    (const_int -12 [0xfffffffffffffff4])))
+            (clobber (reg:CC 17 flags))
+        ]) "fs/truncate.c":41:9 209 {*addsi_1}
+     (expr_list:REG_ARGS_SIZE (const_int 12 [0xc])
+        (nil)))
+(insn 56 55 58 9 (set (mem/f:SI (pre_dec:SI (reg/f:SI 7 sp)) [7  S4 A32])
+        (mem/f/c:SI (plus:SI (reg/f:SI 7 sp)
+                (const_int 16 [0x10])) [7 bh+0 S4 A32])) "fs/truncate.c":41:9 54 {*pushsi2}
+     (expr_list:REG_ARGS_SIZE (const_int 16 [0x10])
+        (nil)))
+(call_insn 58 56 59 9 (call (mem:QI (symbol_ref:SI ("brelse") [flags 0x41]  <function_decl 0x742679f15300 brelse>) [0 brelse S1 A8])
+        (const_int 16 [0x10])) "fs/truncate.c":41:9 812 {*call}
+     (nil)
+    (expr_list (use (reg:SI 3 bx))
+        (nil)))
+(insn 59 58 60 9 (parallel [
+            (set (reg/f:SI 7 sp)
+                (plus:SI (reg/f:SI 7 sp)
+                    (const_int 16 [0x10])))
+            (clobber (reg:CC 17 flags))
+        ]) "fs/truncate.c":41:9 209 {*addsi_1}
+     (expr_list:REG_ARGS_SIZE (const_int 0 [0])
+        (nil)))
+(code_label 60 59 61 10 12 (nil) [1 uses])
+(note 61 60 62 10 [bb 10] NOTE_INSN_BASIC_BLOCK)
+(insn 62 61 63 10 (parallel [
+            (set (reg/f:SI 7 sp)
+                (plus:SI (reg/f:SI 7 sp)
+                    (const_int -8 [0xfffffffffffffff8])))
+            (clobber (reg:CC 17 flags))
+        ]) "fs/truncate.c":43:5 209 {*addsi_1}
+     (expr_list:REG_ARGS_SIZE (const_int 8 [0x8])
+        (nil)))
+(insn 63 62 64 10 (set (mem:SI (pre_dec:SI (reg/f:SI 7 sp)) [6  S4 A32])
+        (mem/c:SI (plus:SI (reg/f:SI 7 sp)
+                (const_int 44 [0x2c])) [6 block+0 S4 A32])) "fs/truncate.c":43:5 54 {*pushsi2}
+     (expr_list:REG_ARGS_SIZE (const_int 12 [0xc])
+        (nil)))
+(insn 64 63 66 10 (set (mem:SI (pre_dec:SI (reg/f:SI 7 sp)) [6  S4 A32])
+        (mem/c:SI (plus:SI (reg/f:SI 7 sp)
+                (const_int 44 [0x2c])) [6 dev+0 S4 A32])) "fs/truncate.c":43:5 54 {*pushsi2}
+     (expr_list:REG_ARGS_SIZE (const_int 16 [0x10])
+        (nil)))
+(call_insn 66 64 67 10 (call (mem:QI (symbol_ref:SI ("free_block") [flags 0x41]  <function_decl 0x742679f15400 free_block>) [0 free_block S1 A8])
+        (const_int 16 [0x10])) "fs/truncate.c":43:5 812 {*call}
+     (nil)
+    (expr_list (use (reg:SI 3 bx))
+        (nil)))
+(insn 67 66 74 10 (parallel [
+            (set (reg/f:SI 7 sp)
+                (plus:SI (reg/f:SI 7 sp)
+                    (const_int 16 [0x10])))
+            (clobber (reg:CC 17 flags))
+        ]) "fs/truncate.c":43:5 209 {*addsi_1}
+     (expr_list:REG_ARGS_SIZE (const_int 0 [0])
+        (nil)))
+(jump_insn 74 67 75 10 (set (pc)
+        (label_ref 70)) 807 {jump}
+     (nil)
+ -> 70)
+(barrier 75 74 77)
+(code_label 77 75 76 11 16 (nil) [1 uses])
+(note 76 77 78 11 [bb 11] NOTE_INSN_BASIC_BLOCK)
+(insn 78 76 70 11 (const_int 0 [0]) "fs/truncate.c":35:9 843 {nop}
+     (nil))
+(code_label 70 78 71 12 9 (nil) [1 uses])
+(note 71 70 84 12 [bb 12] NOTE_INSN_BASIC_BLOCK)
+(note 84 71 85 12 NOTE_INSN_EPILOGUE_BEG)
+(insn/f 85 84 86 12 (parallel [
+            (set (reg/f:SI 7 sp)
+                (plus:SI (reg/f:SI 7 sp)
+                    (const_int 24 [0x18])))
+            (clobber (reg:CC 17 flags))
+            (clobber (mem:BLK (scratch) [0  A8]))
+        ]) "fs/truncate.c":44:1 1141 {pro_epilogue_adjust_stack_add_si}
+     (expr_list:REG_CFA_ADJUST_CFA (set (reg/f:SI 7 sp)
+            (plus:SI (reg/f:SI 7 sp)
+                (const_int 24 [0x18])))
+        (nil)))
+(insn/f 86 85 87 12 (set (reg:SI 3 bx)
+        (mem:SI (post_inc:SI (reg/f:SI 7 sp)) [0  S4 A8])) "fs/truncate.c":44:1 59 {*popsi1}
+     (expr_list:REG_CFA_ADJUST_CFA (set (reg/f:SI 7 sp)
+            (plus:SI (reg/f:SI 7 sp)
+                (const_int 4 [0x4])))
+        (expr_list:REG_CFA_RESTORE (reg:SI 3 bx)
+            (nil))))
+(jump_insn 87 86 88 12 (simple_return) "fs/truncate.c":44:1 837 {simple_return_internal}
+     (nil)
+ -> simple_return)
+(barrier 88 87 80)
+(note 80 88 0 NOTE_INSN_DELETED)
+
+;; Function truncate (truncate, funcdef_no=3, decl_uid=1129, cgraph_uid=4, symbol_order=3)
+
+(note 1 0 3 NOTE_INSN_DELETED)
+(note 3 1 127 2 [bb 2] NOTE_INSN_BASIC_BLOCK)
+(insn/f 127 3 128 2 (set (mem:SI (pre_dec:SI (reg/f:SI 7 sp)) [0  S4 A8])
+        (reg:SI 3 bx)) "fs/truncate.c":47:1 54 {*pushsi2}
+     (nil))
+(insn/f 128 127 129 2 (parallel [
+            (set (reg/f:SI 7 sp)
+                (plus:SI (reg/f:SI 7 sp)
+                    (const_int -24 [0xffffffffffffffe8])))
+            (clobber (reg:CC 17 flags))
+            (clobber (mem:BLK (scratch) [0  A8]))
+        ]) "fs/truncate.c":47:1 1141 {pro_epilogue_adjust_stack_add_si}
+     (expr_list:REG_CFA_ADJUST_CFA (set (reg/f:SI 7 sp)
+            (plus:SI (reg/f:SI 7 sp)
+                (const_int -24 [0xffffffffffffffe8])))
+        (nil)))
+(note 129 128 120 2 NOTE_INSN_PROLOGUE_END)
+(insn/f 120 129 2 2 (parallel [
+            (set (reg:SI 3 bx [82])
+                (unspec:SI [
+                        (const_int 0 [0])
+                    ] UNSPEC_SET_GOT))
+            (clobber (reg:CC 17 flags))
+        ]) 846 {*set_got}
+     (expr_list:REG_CFA_FLUSH_QUEUE (nil)
+        (nil)))
+(note 2 120 5 2 NOTE_INSN_FUNCTION_BEG)
+(insn 5 2 6 2 (set (reg/f:SI 0 ax [109])
+        (mem/f/c:SI (plus:SI (reg/f:SI 7 sp)
+                (const_int 32 [0x20])) [10 inode+0 S4 A32])) "fs/truncate.c":50:11 75 {*movsi_internal}
+     (nil))
+(insn 6 5 7 2 (set (reg:HI 0 ax [orig:83 _1 ] [83])
+        (mem:HI (reg/f:SI 0 ax [109]) [2 inode_32(D)->i_mode+0 S2 A32])) "fs/truncate.c":50:11 76 {*movhi_internal}
+     (nil))
+(insn 7 6 8 2 (set (reg:SI 0 ax [orig:84 _2 ] [84])
+        (zero_extend:SI (reg:HI 0 ax [orig:83 _1 ] [83]))) "fs/truncate.c":50:11 144 {*zero_extendhisi2}
+     (nil))
+(insn 8 7 9 2 (parallel [
+            (set (reg:SI 0 ax [orig:85 _3 ] [85])
+                (and:SI (reg:SI 0 ax [orig:84 _2 ] [84])
+                    (const_int 61440 [0xf000])))
+            (clobber (reg:CC 17 flags))
+        ]) "fs/truncate.c":50:11 490 {*andsi_1}
+     (nil))
+(insn 9 8 10 2 (set (reg:CCZ 17 flags)
+        (compare:CCZ (reg:SI 0 ax [orig:85 _3 ] [85])
+            (const_int 32768 [0x8000]))) "fs/truncate.c":50:8 11 {*cmpsi_1}
+     (nil))
+(jump_insn 10 9 11 2 (set (pc)
+        (if_then_else (eq (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref 21)
+            (pc))) "fs/truncate.c":50:8 806 {*jcc}
+     (nil)
+ -> 21)
+(note 11 10 12 3 [bb 3] NOTE_INSN_BASIC_BLOCK)
+(insn 12 11 13 3 (set (reg/f:SI 0 ax [110])
+        (mem/f/c:SI (plus:SI (reg/f:SI 7 sp)
+                (const_int 32 [0x20])) [10 inode+0 S4 A32])) "fs/truncate.c":50:37 75 {*movsi_internal}
+     (nil))
+(insn 13 12 14 3 (set (reg:HI 0 ax [orig:86 _4 ] [86])
+        (mem:HI (reg/f:SI 0 ax [110]) [2 inode_32(D)->i_mode+0 S2 A32])) "fs/truncate.c":50:37 76 {*movhi_internal}
+     (nil))
+(insn 14 13 15 3 (set (reg:SI 0 ax [orig:87 _5 ] [87])
+        (zero_extend:SI (reg:HI 0 ax [orig:86 _4 ] [86]))) "fs/truncate.c":50:37 144 {*zero_extendhisi2}
+     (nil))
+(insn 15 14 16 3 (parallel [
+            (set (reg:SI 0 ax [orig:88 _6 ] [88])
+                (and:SI (reg:SI 0 ax [orig:87 _5 ] [87])
+                    (const_int 61440 [0xf000])))
+            (clobber (reg:CC 17 flags))
+        ]) "fs/truncate.c":50:37 490 {*andsi_1}
+     (nil))
+(insn 16 15 17 3 (set (reg:CCZ 17 flags)
+        (compare:CCZ (reg:SI 0 ax [orig:88 _6 ] [88])
+            (const_int 16384 [0x4000]))) "fs/truncate.c":50:9 11 {*cmpsi_1}
+     (nil))
+(jump_insn 17 16 21 3 (set (pc)
+        (if_then_else (ne (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref:SI 118)
+            (pc))) "fs/truncate.c":50:9 806 {*jcc}
+     (nil)
+ -> 118)
+(code_label 21 17 22 4 18 (nil) [1 uses])
+(note 22 21 23 4 [bb 4] NOTE_INSN_BASIC_BLOCK)
+(insn 23 22 113 4 (set (mem/c:SI (plus:SI (reg/f:SI 7 sp)
+                (const_int 12 [0xc])) [6 i+0 S4 A32])
+        (const_int 0 [0])) "fs/truncate.c":52:12 75 {*movsi_internal}
+     (nil))
+(jump_insn 113 23 114 4 (set (pc)
+        (label_ref 52)) "fs/truncate.c":52:5 807 {jump}
+     (nil)
+ -> 52)
+(barrier 114 113 54)
+(code_label 54 114 26 5 22 (nil) [1 uses])
+(note 26 54 27 5 [bb 5] NOTE_INSN_BASIC_BLOCK)
+(insn 27 26 28 5 (set (reg/f:SI 0 ax [111])
+        (mem/f/c:SI (plus:SI (reg/f:SI 7 sp)
+                (const_int 32 [0x20])) [10 inode+0 S4 A32])) "fs/truncate.c":53:26 75 {*movsi_internal}
+     (nil))
+(insn 28 27 29 5 (set (reg:SI 1 dx [112])
+        (mem/c:SI (plus:SI (reg/f:SI 7 sp)
+                (const_int 12 [0xc])) [6 i+0 S4 A32])) "fs/truncate.c":53:26 75 {*movsi_internal}
+     (nil))
+(insn 29 28 30 5 (set (reg:HI 0 ax [orig:89 _7 ] [89])
+        (mem:HI (plus:SI (plus:SI (mult:SI (reg:SI 1 dx [112])
+                        (const_int 2 [0x2]))
+                    (reg/f:SI 0 ax [111]))
+                (const_int 14 [0xe])) [2 inode_32(D)->i_zone[i_27]+0 S2 A16])) "fs/truncate.c":53:26 76 {*movhi_internal}
+     (nil))
+(insn 30 29 31 5 (set (reg:CCZ 17 flags)
+        (compare:CCZ (reg:HI 0 ax [orig:89 _7 ] [89])
+            (const_int 0 [0]))) "fs/truncate.c":53:12 6 {*cmphi_ccno_1}
+     (nil))
+(jump_insn 31 30 32 5 (set (pc)
+        (if_then_else (eq (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref 49)
+            (pc))) "fs/truncate.c":53:12 806 {*jcc}
+     (nil)
+ -> 49)
+(note 32 31 33 6 [bb 6] NOTE_INSN_BASIC_BLOCK)
+(insn 33 32 34 6 (set (reg/f:SI 0 ax [113])
+        (mem/f/c:SI (plus:SI (reg/f:SI 7 sp)
+                (const_int 32 [0x20])) [10 inode+0 S4 A32])) "fs/truncate.c":54:51 75 {*movsi_internal}
+     (nil))
+(insn 34 33 35 6 (set (reg:SI 1 dx [114])
+        (mem/c:SI (plus:SI (reg/f:SI 7 sp)
+                (const_int 12 [0xc])) [6 i+0 S4 A32])) "fs/truncate.c":54:51 75 {*movsi_internal}
+     (nil))
+(insn 35 34 36 6 (set (reg:HI 0 ax [orig:90 _8 ] [90])
+        (mem:HI (plus:SI (plus:SI (mult:SI (reg:SI 1 dx [114])
+                        (const_int 2 [0x2]))
+                    (reg/f:SI 0 ax [113]))
+                (const_int 14 [0xe])) [2 inode_32(D)->i_zone[i_27]+0 S2 A16])) "fs/truncate.c":54:51 76 {*movhi_internal}
+     (nil))
+(insn 36 35 37 6 (set (reg:SI 1 dx [orig:91 _9 ] [91])
+        (zero_extend:SI (reg:HI 0 ax [orig:90 _8 ] [90]))) "fs/truncate.c":54:13 144 {*zero_extendhisi2}
+     (nil))
+(insn 37 36 38 6 (set (reg/f:SI 0 ax [115])
+        (mem/f/c:SI (plus:SI (reg/f:SI 7 sp)
+                (const_int 32 [0x20])) [10 inode+0 S4 A32])) "fs/truncate.c":54:29 75 {*movsi_internal}
+     (nil))
+(insn 38 37 39 6 (set (reg:HI 0 ax [orig:92 _10 ] [92])
+        (mem:HI (plus:SI (reg/f:SI 0 ax [115])
+                (const_int 44 [0x2c])) [2 inode_32(D)->i_dev+0 S2 A32])) "fs/truncate.c":54:29 76 {*movhi_internal}
+     (nil))
+(insn 39 38 40 6 (set (reg:SI 0 ax [orig:93 _11 ] [93])
+        (zero_extend:SI (reg:HI 0 ax [orig:92 _10 ] [92]))) "fs/truncate.c":54:13 144 {*zero_extendhisi2}
+     (nil))
+(insn 40 39 41 6 (parallel [
+            (set (reg/f:SI 7 sp)
+                (plus:SI (reg/f:SI 7 sp)
+                    (const_int -8 [0xfffffffffffffff8])))
+            (clobber (reg:CC 17 flags))
+        ]) "fs/truncate.c":54:13 209 {*addsi_1}
+     (expr_list:REG_ARGS_SIZE (const_int 8 [0x8])
+        (nil)))
+(insn 41 40 42 6 (set (mem:SI (pre_dec:SI (reg/f:SI 7 sp)) [6  S4 A32])
+        (reg:SI 1 dx [orig:91 _9 ] [91])) "fs/truncate.c":54:13 54 {*pushsi2}
+     (expr_list:REG_ARGS_SIZE (const_int 12 [0xc])
+        (nil)))
+(insn 42 41 44 6 (set (mem:SI (pre_dec:SI (reg/f:SI 7 sp)) [6  S4 A32])
+        (reg:SI 0 ax [orig:93 _11 ] [93])) "fs/truncate.c":54:13 54 {*pushsi2}
+     (expr_list:REG_ARGS_SIZE (const_int 16 [0x10])
+        (nil)))
+(call_insn 44 42 45 6 (call (mem:QI (symbol_ref:SI ("free_block") [flags 0x41]  <function_decl 0x742679f15400 free_block>) [0 free_block S1 A8])
+        (const_int 16 [0x10])) "fs/truncate.c":54:13 812 {*call}
+     (nil)
+    (expr_list (use (reg:SI 3 bx))
+        (nil)))
+(insn 45 44 46 6 (parallel [
+            (set (reg/f:SI 7 sp)
+                (plus:SI (reg/f:SI 7 sp)
+                    (const_int 16 [0x10])))
+            (clobber (reg:CC 17 flags))
+        ]) "fs/truncate.c":54:13 209 {*addsi_1}
+     (expr_list:REG_ARGS_SIZE (const_int 0 [0])
+        (nil)))
+(insn 46 45 47 6 (set (reg/f:SI 0 ax [116])
+        (mem/f/c:SI (plus:SI (reg/f:SI 7 sp)
+                (const_int 32 [0x20])) [10 inode+0 S4 A32])) "fs/truncate.c":55:30 75 {*movsi_internal}
+     (nil))
+(insn 47 46 48 6 (set (reg:SI 1 dx [117])
+        (mem/c:SI (plus:SI (reg/f:SI 7 sp)
+                (const_int 12 [0xc])) [6 i+0 S4 A32])) "fs/truncate.c":55:30 75 {*movsi_internal}
+     (nil))
+(insn 48 47 49 6 (set (mem:HI (plus:SI (plus:SI (mult:SI (reg:SI 1 dx [117])
+                        (const_int 2 [0x2]))
+                    (reg/f:SI 0 ax [116]))
+                (const_int 14 [0xe])) [2 inode_32(D)->i_zone[i_27]+0 S2 A16])
+        (const_int 0 [0])) "fs/truncate.c":55:30 76 {*movhi_internal}
+     (nil))
+(code_label 49 48 50 7 21 (nil) [1 uses])
+(note 50 49 51 7 [bb 7] NOTE_INSN_BASIC_BLOCK)
+(insn 51 50 52 7 (parallel [
+            (set (mem/c:SI (plus:SI (reg/f:SI 7 sp)
+                        (const_int 12 [0xc])) [6 i+0 S4 A32])
+                (plus:SI (mem/c:SI (plus:SI (reg/f:SI 7 sp)
+                            (const_int 12 [0xc])) [6 i+0 S4 A32])
+                    (const_int 1 [0x1])))
+            (clobber (reg:CC 17 flags))
+        ]) "fs/truncate.c":52:25 209 {*addsi_1}
+     (nil))
+(code_label 52 51 53 8 20 (nil) [1 uses])
+(note 53 52 57 8 [bb 8] NOTE_INSN_BASIC_BLOCK)
+(insn 57 53 58 8 (set (reg:CCGC 17 flags)
+        (compare:CCGC (mem/c:SI (plus:SI (reg/f:SI 7 sp)
+                    (const_int 12 [0xc])) [6 i+0 S4 A32])
+            (const_int 6 [0x6]))) "fs/truncate.c":52:19 11 {*cmpsi_1}
+     (nil))
+(jump_insn 58 57 59 8 (set (pc)
+        (if_then_else (le (reg:CCGC 17 flags)
+                (const_int 0 [0]))
+            (label_ref 54)
+            (pc))) "fs/truncate.c":52:19 806 {*jcc}
+     (nil)
+ -> 54)
+(note 59 58 60 9 [bb 9] NOTE_INSN_BASIC_BLOCK)
+(insn 60 59 61 9 (set (reg/f:SI 0 ax [118])
+        (mem/f/c:SI (plus:SI (reg/f:SI 7 sp)
+                (const_int 32 [0x20])) [10 inode+0 S4 A32])) "fs/truncate.c":57:41 75 {*movsi_internal}
+     (nil))
+(insn 61 60 62 9 (set (reg:HI 0 ax [orig:94 _12 ] [94])
+        (mem:HI (plus:SI (reg/f:SI 0 ax [118])
+                (const_int 28 [0x1c])) [2 inode_32(D)->i_zone[7]+0 S2 A32])) "fs/truncate.c":57:41 76 {*movhi_internal}
+     (nil))
+(insn 62 61 63 9 (set (reg:SI 1 dx [orig:95 _13 ] [95])
+        (zero_extend:SI (reg:HI 0 ax [orig:94 _12 ] [94]))) "fs/truncate.c":57:5 144 {*zero_extendhisi2}
+     (nil))
+(insn 63 62 64 9 (set (reg/f:SI 0 ax [119])
+        (mem/f/c:SI (plus:SI (reg/f:SI 7 sp)
+                (const_int 32 [0x20])) [10 inode+0 S4 A32])) "fs/truncate.c":57:19 75 {*movsi_internal}
+     (nil))
+(insn 64 63 65 9 (set (reg:HI 0 ax [orig:96 _14 ] [96])
+        (mem:HI (plus:SI (reg/f:SI 0 ax [119])
+                (const_int 44 [0x2c])) [2 inode_32(D)->i_dev+0 S2 A32])) "fs/truncate.c":57:19 76 {*movhi_internal}
+     (nil))
+(insn 65 64 66 9 (set (reg:SI 0 ax [orig:97 _15 ] [97])
+        (zero_extend:SI (reg:HI 0 ax [orig:96 _14 ] [96]))) "fs/truncate.c":57:5 144 {*zero_extendhisi2}
+     (nil))
+(insn 66 65 67 9 (parallel [
+            (set (reg/f:SI 7 sp)
+                (plus:SI (reg/f:SI 7 sp)
+                    (const_int -8 [0xfffffffffffffff8])))
+            (clobber (reg:CC 17 flags))
+        ]) "fs/truncate.c":57:5 209 {*addsi_1}
+     (expr_list:REG_ARGS_SIZE (const_int 8 [0x8])
+        (nil)))
+(insn 67 66 68 9 (set (mem:SI (pre_dec:SI (reg/f:SI 7 sp)) [6  S4 A32])
+        (reg:SI 1 dx [orig:95 _13 ] [95])) "fs/truncate.c":57:5 54 {*pushsi2}
+     (expr_list:REG_ARGS_SIZE (const_int 12 [0xc])
+        (nil)))
+(insn 68 67 69 9 (set (mem:SI (pre_dec:SI (reg/f:SI 7 sp)) [6  S4 A32])
+        (reg:SI 0 ax [orig:97 _15 ] [97])) "fs/truncate.c":57:5 54 {*pushsi2}
+     (expr_list:REG_ARGS_SIZE (const_int 16 [0x10])
+        (nil)))
+(call_insn 69 68 70 9 (call (mem:QI (symbol_ref:SI ("free_ind") [flags 0x3]  <function_decl 0x742679f3a900 free_ind>) [0 free_ind S1 A8])
+        (const_int 16 [0x10])) "fs/truncate.c":57:5 812 {*call}
+     (nil)
+    (nil))
+(insn 70 69 71 9 (parallel [
+            (set (reg/f:SI 7 sp)
+                (plus:SI (reg/f:SI 7 sp)
+                    (const_int 16 [0x10])))
+            (clobber (reg:CC 17 flags))
+        ]) "fs/truncate.c":57:5 209 {*addsi_1}
+     (expr_list:REG_ARGS_SIZE (const_int 0 [0])
+        (nil)))
+(insn 71 70 72 9 (set (reg/f:SI 0 ax [120])
+        (mem/f/c:SI (plus:SI (reg/f:SI 7 sp)
+                (const_int 32 [0x20])) [10 inode+0 S4 A32])) "fs/truncate.c":58:42 75 {*movsi_internal}
+     (nil))
+(insn 72 71 73 9 (set (reg:HI 0 ax [orig:98 _16 ] [98])
+        (mem:HI (plus:SI (reg/f:SI 0 ax [120])
+                (const_int 30 [0x1e])) [2 inode_32(D)->i_zone[8]+0 S2 A16])) "fs/truncate.c":58:42 76 {*movhi_internal}
+     (nil))
+(insn 73 72 74 9 (set (reg:SI 1 dx [orig:99 _17 ] [99])
+        (zero_extend:SI (reg:HI 0 ax [orig:98 _16 ] [98]))) "fs/truncate.c":58:5 144 {*zero_extendhisi2}
+     (nil))
+(insn 74 73 75 9 (set (reg/f:SI 0 ax [121])
+        (mem/f/c:SI (plus:SI (reg/f:SI 7 sp)
+                (const_int 32 [0x20])) [10 inode+0 S4 A32])) "fs/truncate.c":58:20 75 {*movsi_internal}
+     (nil))
+(insn 75 74 76 9 (set (reg:HI 0 ax [orig:100 _18 ] [100])
+        (mem:HI (plus:SI (reg/f:SI 0 ax [121])
+                (const_int 44 [0x2c])) [2 inode_32(D)->i_dev+0 S2 A32])) "fs/truncate.c":58:20 76 {*movhi_internal}
+     (nil))
+(insn 76 75 77 9 (set (reg:SI 0 ax [orig:101 _19 ] [101])
+        (zero_extend:SI (reg:HI 0 ax [orig:100 _18 ] [100]))) "fs/truncate.c":58:5 144 {*zero_extendhisi2}
+     (nil))
+(insn 77 76 78 9 (parallel [
+            (set (reg/f:SI 7 sp)
+                (plus:SI (reg/f:SI 7 sp)
+                    (const_int -8 [0xfffffffffffffff8])))
+            (clobber (reg:CC 17 flags))
+        ]) "fs/truncate.c":58:5 209 {*addsi_1}
+     (expr_list:REG_ARGS_SIZE (const_int 8 [0x8])
+        (nil)))
+(insn 78 77 79 9 (set (mem:SI (pre_dec:SI (reg/f:SI 7 sp)) [6  S4 A32])
+        (reg:SI 1 dx [orig:99 _17 ] [99])) "fs/truncate.c":58:5 54 {*pushsi2}
+     (expr_list:REG_ARGS_SIZE (const_int 12 [0xc])
+        (nil)))
+(insn 79 78 80 9 (set (mem:SI (pre_dec:SI (reg/f:SI 7 sp)) [6  S4 A32])
+        (reg:SI 0 ax [orig:101 _19 ] [101])) "fs/truncate.c":58:5 54 {*pushsi2}
+     (expr_list:REG_ARGS_SIZE (const_int 16 [0x10])
+        (nil)))
+(call_insn 80 79 81 9 (call (mem:QI (symbol_ref:SI ("free_dind") [flags 0x3]  <function_decl 0x742679f3ab00 free_dind>) [0 free_dind S1 A8])
+        (const_int 16 [0x10])) "fs/truncate.c":58:5 812 {*call}
+     (nil)
+    (nil))
+(insn 81 80 82 9 (parallel [
+            (set (reg/f:SI 7 sp)
+                (plus:SI (reg/f:SI 7 sp)
+                    (const_int 16 [0x10])))
+            (clobber (reg:CC 17 flags))
+        ]) "fs/truncate.c":58:5 209 {*addsi_1}
+     (expr_list:REG_ARGS_SIZE (const_int 0 [0])
+        (nil)))
+(insn 82 81 83 9 (set (reg/f:SI 0 ax [122])
+        (mem/f/c:SI (plus:SI (reg/f:SI 7 sp)
+                (const_int 32 [0x20])) [10 inode+0 S4 A32])) "fs/truncate.c":59:41 75 {*movsi_internal}
+     (nil))
+(insn 83 82 84 9 (set (mem:HI (plus:SI (reg/f:SI 0 ax [122])
+                (const_int 30 [0x1e])) [2 inode_32(D)->i_zone[8]+0 S2 A16])
+        (const_int 0 [0])) "fs/truncate.c":59:41 76 {*movhi_internal}
+     (nil))
+(insn 84 83 85 9 (set (reg/f:SI 0 ax [123])
+        (mem/f/c:SI (plus:SI (reg/f:SI 7 sp)
+                (const_int 32 [0x20])) [10 inode+0 S4 A32])) "fs/truncate.c":59:37 75 {*movsi_internal}
+     (nil))
+(insn 85 84 86 9 (set (reg:HI 1 dx [orig:102 _20 ] [102])
+        (mem:HI (plus:SI (reg/f:SI 0 ax [123])
+                (const_int 30 [0x1e])) [2 inode_32(D)->i_zone[8]+0 S2 A16])) "fs/truncate.c":59:37 76 {*movhi_internal}
+     (nil))
+(insn 86 85 87 9 (set (reg/f:SI 0 ax [124])
+        (mem/f/c:SI (plus:SI (reg/f:SI 7 sp)
+                (const_int 32 [0x20])) [10 inode+0 S4 A32])) "fs/truncate.c":59:22 75 {*movsi_internal}
+     (nil))
+(insn 87 86 88 9 (set (mem:HI (plus:SI (reg/f:SI 0 ax [124])
+                (const_int 28 [0x1c])) [2 inode_32(D)->i_zone[7]+0 S2 A32])
+        (reg:HI 1 dx [orig:102 _20 ] [102])) "fs/truncate.c":59:22 76 {*movhi_internal}
+     (nil))
+(insn 88 87 89 9 (set (reg/f:SI 0 ax [125])
+        (mem/f/c:SI (plus:SI (reg/f:SI 7 sp)
+                (const_int 32 [0x20])) [10 inode+0 S4 A32])) "fs/truncate.c":60:19 75 {*movsi_internal}
+     (nil))
+(insn 89 88 90 9 (set (mem:SI (plus:SI (reg/f:SI 0 ax [125])
+                (const_int 4 [0x4])) [3 inode_32(D)->i_size+0 S4 A32])
+        (const_int 0 [0])) "fs/truncate.c":60:19 75 {*movsi_internal}
+     (nil))
+(insn 90 89 91 9 (set (reg/f:SI 0 ax [126])
+        (mem/f/c:SI (plus:SI (reg/f:SI 7 sp)
+                (const_int 32 [0x20])) [10 inode+0 S4 A32])) "fs/truncate.c":61:19 75 {*movsi_internal}
+     (nil))
+(insn 91 90 92 9 (set (mem:QI (plus:SI (reg/f:SI 0 ax [126])
+                (const_int 51 [0x33])) [0 inode_32(D)->i_dirt+0 S1 A8])
+        (const_int 1 [0x1])) "fs/truncate.c":61:19 77 {*movqi_internal}
+     (nil))
+(insn 92 91 93 9 (set (reg/f:SI 0 ax [127])
+        (mem/u/c:SI (plus:SI (reg:SI 3 bx [82])
+                (const:SI (unspec:SI [
+                            (symbol_ref:SI ("jiffies") [flags 0x40]  <var_decl 0x742679f34360 jiffies>)
+                        ] UNSPEC_GOT))) [11  S4 A8])) "fs/truncate.c":62:39 75 {*movsi_internal}
+     (nil))
+(insn 93 92 94 9 (set (reg:SI 2 cx [orig:103 jiffies.0_21 ] [103])
+        (mem/v/c:SI (reg/f:SI 0 ax [127]) [3 jiffies+0 S4 A32])) "fs/truncate.c":62:39 75 {*movsi_internal}
+     (nil))
+(insn 94 93 122 9 (set (reg:SI 1 dx [129])
+        (const_int 1374389535 [0x51eb851f])) "fs/truncate.c":62:39 75 {*movsi_internal}
+     (nil))
+(insn 122 94 95 9 (set (reg:SI 0 ax [136])
+        (reg:SI 2 cx [orig:103 jiffies.0_21 ] [103])) "fs/truncate.c":62:39 75 {*movsi_internal}
+     (nil))
+(insn 95 122 123 9 (parallel [
+            (set (reg:SI 1 dx [128])
+                (truncate:SI (lshiftrt:DI (mult:DI (sign_extend:DI (reg:SI 0 ax [136]))
+                            (sign_extend:DI (reg:SI 1 dx [129])))
+                        (const_int 32 [0x20]))))
+            (clobber (reg:SI 0 ax [136]))
+            (clobber (reg:CC 17 flags))
+        ]) "fs/truncate.c":62:39 435 {*smulsi3_highpart_1}
+     (nil))
+(insn 123 95 96 9 (set (reg:SI 0 ax [128])
+        (reg:SI 1 dx [128])) "fs/truncate.c":62:39 75 {*movsi_internal}
+     (nil))
+(insn 96 123 97 9 (parallel [
+            (set (reg:SI 0 ax [128])
+                (ashiftrt:SI (reg:SI 0 ax [128])
+                    (const_int 5 [0x5])))
+            (clobber (reg:CC 17 flags))
+        ]) "fs/truncate.c":62:39 702 {*ashrsi3_1}
+     (nil))
+(insn 97 96 98 9 (parallel [
+            (set (reg:SI 2 cx [131])
+                (ashiftrt:SI (reg:SI 2 cx [orig:103 jiffies.0_21 ] [103])
+                    (const_int 31 [0x1f])))
+            (clobber (reg:CC 17 flags))
+        ]) "fs/truncate.c":62:39 694 {ashrsi3_cvt}
+     (nil))
+(insn 98 97 126 9 (parallel [
+            (set (reg:SI 0 ax [130])
+                (minus:SI (reg:SI 0 ax [130])
+                    (reg:SI 2 cx [131])))
+            (clobber (reg:CC 17 flags))
+        ]) "fs/truncate.c":62:39 282 {*subsi_1}
+     (nil))
+(insn 126 98 99 9 (set (reg:SI 1 dx [orig:104 _22 ] [104])
+        (reg:SI 0 ax [130])) "fs/truncate.c":62:39 75 {*movsi_internal}
+     (nil))
+(insn 99 126 100 9 (set (reg/f:SI 0 ax [132])
+        (mem/u/c:SI (plus:SI (reg:SI 3 bx [82])
+                (const:SI (unspec:SI [
+                            (symbol_ref:SI ("startup_time") [flags 0x40]  <var_decl 0x742679f343f0 startup_time>)
+                        ] UNSPEC_GOT))) [11  S4 A8])) "fs/truncate.c":62:39 75 {*movsi_internal}
+     (nil))
+(insn 100 99 101 9 (set (reg:SI 0 ax [orig:105 startup_time.1_23 ] [105])
+        (mem/c:SI (reg/f:SI 0 ax [132]) [3 startup_time+0 S4 A32])) "fs/truncate.c":62:39 75 {*movsi_internal}
+     (nil))
+(insn 101 100 102 9 (parallel [
+            (set (reg:SI 0 ax [orig:106 _24 ] [106])
+                (plus:SI (reg:SI 0 ax [orig:105 startup_time.1_23 ] [105])
+                    (reg:SI 1 dx [orig:104 _22 ] [104])))
+            (clobber (reg:CC 17 flags))
+        ]) "fs/truncate.c":62:39 209 {*addsi_1}
+     (nil))
+(insn 102 101 103 9 (set (reg:SI 1 dx [orig:107 _25 ] [107])
+        (reg:SI 0 ax [orig:106 _24 ] [106])) "fs/truncate.c":62:39 75 {*movsi_internal}
+     (nil))
+(insn 103 102 104 9 (set (reg/f:SI 0 ax [133])
+        (mem/f/c:SI (plus:SI (reg/f:SI 7 sp)
+                (const_int 32 [0x20])) [10 inode+0 S4 A32])) "fs/truncate.c":62:37 75 {*movsi_internal}
+     (nil))
+(insn 104 103 105 9 (set (mem:SI (plus:SI (reg/f:SI 0 ax [133])
+                (const_int 40 [0x28])) [3 inode_32(D)->i_ctime+0 S4 A32])
+        (reg:SI 1 dx [orig:107 _25 ] [107])) "fs/truncate.c":62:37 75 {*movsi_internal}
+     (nil))
+(insn 105 104 106 9 (set (reg/f:SI 0 ax [134])
+        (mem/f/c:SI (plus:SI (reg/f:SI 7 sp)
+                (const_int 32 [0x20])) [10 inode+0 S4 A32])) "fs/truncate.c":62:27 75 {*movsi_internal}
+     (nil))
+(insn 106 105 107 9 (set (reg:SI 1 dx [orig:108 _26 ] [108])
+        (mem:SI (plus:SI (reg/f:SI 0 ax [134])
+                (const_int 40 [0x28])) [3 inode_32(D)->i_ctime+0 S4 A32])) "fs/truncate.c":62:27 75 {*movsi_internal}
+     (nil))
+(insn 107 106 108 9 (set (reg/f:SI 0 ax [135])
+        (mem/f/c:SI (plus:SI (reg/f:SI 7 sp)
+                (const_int 32 [0x20])) [10 inode+0 S4 A32])) "fs/truncate.c":62:20 75 {*movsi_internal}
+     (nil))
+(insn 108 107 115 9 (set (mem:SI (plus:SI (reg/f:SI 0 ax [135])
+                (const_int 8 [0x8])) [3 inode_32(D)->i_mtime+0 S4 A32])
+        (reg:SI 1 dx [orig:108 _26 ] [108])) "fs/truncate.c":62:20 75 {*movsi_internal}
+     (nil))
+(jump_insn 115 108 116 9 (set (pc)
+        (label_ref 111)) 807 {jump}
+     (nil)
+ -> 111)
+(barrier 116 115 118)
+(code_label 118 116 117 10 23 (nil) [1 uses])
+(note 117 118 119 10 [bb 10] NOTE_INSN_BASIC_BLOCK)
+(insn 119 117 111 10 (const_int 0 [0]) "fs/truncate.c":51:9 843 {nop}
+     (nil))
+(code_label 111 119 112 11 17 (nil) [1 uses])
+(note 112 111 130 11 [bb 11] NOTE_INSN_BASIC_BLOCK)
+(note 130 112 131 11 NOTE_INSN_EPILOGUE_BEG)
+(insn/f 131 130 132 11 (parallel [
+            (set (reg/f:SI 7 sp)
+                (plus:SI (reg/f:SI 7 sp)
+                    (const_int 24 [0x18])))
+            (clobber (reg:CC 17 flags))
+            (clobber (mem:BLK (scratch) [0  A8]))
+        ]) "fs/truncate.c":63:1 1141 {pro_epilogue_adjust_stack_add_si}
+     (expr_list:REG_CFA_ADJUST_CFA (set (reg/f:SI 7 sp)
+            (plus:SI (reg/f:SI 7 sp)
+                (const_int 24 [0x18])))
+        (nil)))
+(insn/f 132 131 133 11 (set (reg:SI 3 bx)
+        (mem:SI (post_inc:SI (reg/f:SI 7 sp)) [0  S4 A8])) "fs/truncate.c":63:1 59 {*popsi1}
+     (expr_list:REG_CFA_ADJUST_CFA (set (reg/f:SI 7 sp)
+            (plus:SI (reg/f:SI 7 sp)
+                (const_int 4 [0x4])))
+        (expr_list:REG_CFA_RESTORE (reg:SI 3 bx)
+            (nil))))
+(jump_insn 133 132 134 11 (simple_return) "fs/truncate.c":63:1 837 {simple_return_internal}
+     (nil)
+ -> simple_return)
+(barrier 134 133 121)
+(note 121 134 0 NOTE_INSN_DELETED)

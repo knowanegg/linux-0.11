@@ -1,0 +1,159 @@
+
+;; Function open (open, funcdef_no=0, decl_uid=1130, cgraph_uid=1, symbol_order=0)
+
+
+;; Generating RTL for gimple basic block 2
+
+;; Generating RTL for gimple basic block 3
+
+;; Generating RTL for gimple basic block 4
+
+;; Generating RTL for gimple basic block 5
+
+
+try_optimize_cfg iteration 1
+
+Merging block 3 into block 2...
+Merged blocks 2 and 3.
+Merged 2 and 3 without moving.
+Removing jump 34.
+Merging block 7 into block 6...
+Merged blocks 6 and 7.
+Merged 6 and 7 without moving.
+
+
+try_optimize_cfg iteration 2
+
+
+
+;;
+;; Full RTL generated for this function:
+;;
+(note 1 0 3 NOTE_INSN_DELETED)
+(note 3 1 2 2 [bb 2] NOTE_INSN_BASIC_BLOCK)
+(note 2 3 5 2 NOTE_INSN_FUNCTION_BEG)
+(insn 5 2 6 2 (parallel [
+            (set (reg:SI 90)
+                (plus:SI (reg/f:SI 76 virtual-incoming-args)
+                    (const_int 4 [0x4])))
+            (clobber (reg:CC 17 flags))
+        ]) "lib/open.c":16:5 -1
+     (nil))
+(insn 6 5 7 2 (parallel [
+            (set (reg:SI 91)
+                (plus:SI (reg:SI 90)
+                    (const_int 4 [0x4])))
+            (clobber (reg:CC 17 flags))
+        ]) "lib/open.c":16:5 -1
+     (nil))
+(insn 7 6 8 2 (set (mem/f/c:SI (plus:SI (reg/f:SI 77 virtual-stack-vars)
+                (const_int -4 [0xfffffffffffffffc])) [1 arg+0 S4 A32])
+        (reg:SI 91)) "lib/open.c":16:5 -1
+     (nil))
+(insn 8 7 9 2 (set (reg:SI 83 [ flag.0_1 ])
+        (mem/c:SI (plus:SI (reg/f:SI 76 virtual-incoming-args)
+                (const_int 4 [0x4])) [2 flag+0 S4 A32])) "lib/open.c":17:5 -1
+     (nil))
+(insn 9 8 10 2 (parallel [
+            (set (mem/f/c:SI (plus:SI (reg/f:SI 77 virtual-stack-vars)
+                        (const_int -4 [0xfffffffffffffffc])) [1 arg+0 S4 A32])
+                (plus:SI (mem/f/c:SI (plus:SI (reg/f:SI 77 virtual-stack-vars)
+                            (const_int -4 [0xfffffffffffffffc])) [1 arg+0 S4 A32])
+                    (const_int 4 [0x4])))
+            (clobber (reg:CC 17 flags))
+        ]) "lib/open.c":20:20 -1
+     (nil))
+(insn 10 9 11 2 (set (reg/f:SI 92)
+        (mem/f/c:SI (plus:SI (reg/f:SI 77 virtual-stack-vars)
+                (const_int -4 [0xfffffffffffffffc])) [1 arg+0 S4 A32])) "lib/open.c":20:20 -1
+     (nil))
+(insn 11 10 12 2 (parallel [
+            (set (reg/f:SI 84 [ _2 ])
+                (plus:SI (reg/f:SI 92)
+                    (const_int -4 [0xfffffffffffffffc])))
+            (clobber (reg:CC 17 flags))
+        ]) "lib/open.c":20:20 -1
+     (expr_list:REG_EQUAL (plus:SI (mem/f/c:SI (plus:SI (reg/f:SI 77 virtual-stack-vars)
+                    (const_int -4 [0xfffffffffffffffc])) [1 arg+0 S4 A32])
+            (const_int -4 [0xfffffffffffffffc]))
+        (nil)))
+(insn 12 11 14 2 (set (reg:SI 85 [ _3 ])
+        (mem:SI (reg/f:SI 84 [ _2 ]) [2 MEM[(int *)_2]+0 S4 A32])) "lib/open.c":20:20 -1
+     (nil))
+(insn 14 12 15 2 (set (reg:SI 94)
+        (const_int 5 [0x5])) "lib/open.c":17:5 -1
+     (nil))
+(insn 15 14 16 2 (set (reg/f:SI 95)
+        (mem/f/c:SI (reg/f:SI 76 virtual-incoming-args) [1 filename+0 S4 A32])) "lib/open.c":17:5 -1
+     (nil))
+(insn 16 15 13 2 (parallel [
+            (set (reg:SI 93 [ res ])
+                (asm_operands:SI ("int $0x80") ("=a") 0 [
+                        (reg:SI 94)
+                        (reg/f:SI 95)
+                        (reg:SI 83 [ flag.0_1 ])
+                        (reg:SI 85 [ _3 ])
+                    ]
+                     [
+                        (asm_input:SI ("0") lib/open.c:17)
+                        (asm_input:SI ("b") lib/open.c:17)
+                        (asm_input:SI ("c") lib/open.c:17)
+                        (asm_input:SI ("d") lib/open.c:17)
+                    ]
+                     [] lib/open.c:17))
+            (clobber (reg:CC 17 flags))
+        ]) "lib/open.c":17:5 -1
+     (nil))
+(insn 13 16 19 2 (set (reg/v:SI 88 [ res ])
+        (reg:SI 93 [ res ])) "lib/open.c":17:5 -1
+     (nil))
+(insn 19 13 20 2 (set (reg:CCGOC 17 flags)
+        (compare:CCGOC (reg/v:SI 88 [ res ])
+            (const_int 0 [0]))) "lib/open.c":21:8 -1
+     (nil))
+(jump_insn 20 19 21 2 (set (pc)
+        (if_then_else (lt (reg:CCGOC 17 flags)
+                (const_int 0 [0]))
+            (label_ref 25)
+            (pc))) "lib/open.c":21:8 -1
+     (nil)
+ -> 25)
+(note 21 20 22 4 [bb 4] NOTE_INSN_BASIC_BLOCK)
+(insn 22 21 23 4 (set (reg:SI 87 [ _5 ])
+        (reg/v:SI 88 [ res ])) "lib/open.c":22:16 -1
+     (nil))
+(jump_insn 23 22 24 4 (set (pc)
+        (label_ref 31)) "lib/open.c":22:16 -1
+     (nil)
+ -> 31)
+(barrier 24 23 25)
+(code_label 25 24 26 5 2 (nil) [1 uses])
+(note 26 25 27 5 [bb 5] NOTE_INSN_BASIC_BLOCK)
+(insn 27 26 28 5 (parallel [
+            (set (reg:SI 86 [ _4 ])
+                (neg:SI (reg/v:SI 88 [ res ])))
+            (clobber (reg:CC 17 flags))
+        ]) "lib/open.c":23:13 -1
+     (nil))
+(insn 28 27 29 5 (set (reg/f:SI 96)
+        (mem/u/c:SI (plus:SI (reg:SI 82)
+                (const:SI (unspec:SI [
+                            (symbol_ref:SI ("errno") [flags 0x40]  <var_decl 0x75617109bb40 errno>)
+                        ] UNSPEC_GOT))) [3  S4 A8])) "lib/open.c":23:11 -1
+     (nil))
+(insn 29 28 30 5 (set (mem/c:SI (reg/f:SI 96) [2 errno+0 S4 A32])
+        (reg:SI 86 [ _4 ])) "lib/open.c":23:11 -1
+     (nil))
+(insn 30 29 31 5 (set (reg:SI 87 [ _5 ])
+        (const_int -1 [0xffffffffffffffff])) "lib/open.c":24:12 -1
+     (nil))
+(code_label 31 30 32 6 3 (nil) [1 uses])
+(note 32 31 33 6 [bb 6] NOTE_INSN_BASIC_BLOCK)
+(insn 33 32 37 6 (set (reg:SI 89 [ <retval> ])
+        (reg:SI 87 [ _5 ])) "lib/open.c":25:1 -1
+     (nil))
+(insn 37 33 38 6 (set (reg/i:SI 0 ax)
+        (reg:SI 89 [ <retval> ])) "lib/open.c":25:1 -1
+     (nil))
+(insn 38 37 0 6 (use (reg/i:SI 0 ax)) "lib/open.c":25:1 -1
+     (nil))

@@ -1,0 +1,11 @@
+obj-$(CONFIG_DEBUG_MMU)                += common.o
+obj-$(CONFIG_DEBUG_MMU_LINEAR)         += linear/
+obj-$(CONFIG_DEBUG_MMU_PHYSIC)         += physic/
+obj-$(CONFIG_DEBUG_MMU_VIRTUAL)        += virtual/
+obj-$(CONFIG_DEBUG_MMU_LOGIC)          += logic/
+obj-$(CONFIG_DEBUG_MMU_PGTABLE)        += pgtable/
+obj-$(CONFIG_DEBUG_MMU_SEGMENTATION)   += segmentation/
+obj-$(CONFIG_DEBUG_MMU_PAGING)         += paging/
+obj-$(CONFIG_DEBUG_MMU_ACCESS)         += right/
+obj-$(CONFIG_DEBUG_MMU_PAGE_FAULT)     += page-fault/
+obj-$(CONFIG_DEBUG_MMU_TLB)            += TLB/

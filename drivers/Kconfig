@@ -1,0 +1,7 @@
+menu "Device Driver"
+
+source "drivers/chr_drv/Kconfig"
+
+source "drivers/blk_drv/Kconfig"
+
+endmenu

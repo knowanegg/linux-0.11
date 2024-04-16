@@ -1,0 +1,28 @@
+# Ignore image file
+vmlinux
+BiscuitOS
+bootloader
+bootsect
+setup
+vmlinux.bin
+
+# Ignore indicate file
+*.o
+.*
+*.*~
+*.map
+*.svg
+*.patch
+*.
+*.a
+*.cmd
+*.img
+*.bin
+
+# Execte file
+
+!.gitignore
+# output
+keyboard.s
+drivers/chr_drv/keyboard.s
+

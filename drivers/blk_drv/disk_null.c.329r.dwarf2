@@ -1,0 +1,99 @@
+
+;; Function floppy_change (floppy_change, funcdef_no=0, decl_uid=999, cgraph_uid=1, symbol_order=2)
+
+Creating trace 0 : start at note 1
+Creating trace 1 : start at note 17
+Creating trace 2 : start at note 18
+Processing trace 0 : start at note 1
+   saw edge from trace 0 to 1 (via fallthru 0)
+	push trace 1 to worklist
+Processing trace 1 : start at note 17
+   saw edge from trace 1 to 2 (via fallthru 0)
+	push trace 2 to worklist
+Processing trace 2 : start at note 18
+
+
+floppy_change
+
+Dataflow summary:
+;;  fully invalidated by EH 	 0 [ax] 1 [dx] 2 [cx] 8 [st] 9 [st(1)] 10 [st(2)] 11 [st(3)] 12 [st(4)] 13 [st(5)] 14 [st(6)] 15 [st(7)] 17 [flags] 18 [fpsr] 20 [xmm0] 21 [xmm1] 22 [xmm2] 23 [xmm3] 24 [xmm4] 25 [xmm5] 26 [xmm6] 27 [xmm7] 28 [mm0] 29 [mm1] 30 [mm2] 31 [mm3] 32 [mm4] 33 [mm5] 34 [mm6] 35 [mm7] 36 [r8] 37 [r9] 38 [r10] 39 [r11] 40 [r12] 41 [r13] 42 [r14] 43 [r15] 44 [xmm8] 45 [xmm9] 46 [xmm10] 47 [xmm11] 48 [xmm12] 49 [xmm13] 50 [xmm14] 51 [xmm15] 52 [xmm16] 53 [xmm17] 54 [xmm18] 55 [xmm19] 56 [xmm20] 57 [xmm21] 58 [xmm22] 59 [xmm23] 60 [xmm24] 61 [xmm25] 62 [xmm26] 63 [xmm27] 64 [xmm28] 65 [xmm29] 66 [xmm30] 67 [xmm31] 68 [k0] 69 [k1] 70 [k2] 71 [k3] 72 [k4] 73 [k5] 74 [k6] 75 [k7]
+;;  hardware regs used 	 7 [sp]
+;;  regular block artificial uses 	 7 [sp]
+;;  eh block artificial uses 	 7 [sp] 16 [argp]
+;;  entry block defs 	 0 [ax] 1 [dx] 2 [cx] 7 [sp]
+;;  exit block uses 	 0 [ax] 7 [sp]
+;;  regs ever live 	 0 [ax] 17 [flags]
+;;  ref usage 	r0={3d,2u} r1={1d} r2={1d} r7={1d,2u} r17={1d} 
+;;    total ref usage 11{7d,4u,0e} in 4{4 regular + 0 call} insns.
+(note 1 0 3 NOTE_INSN_DELETED)
+(note 3 1 17 2 [bb 2] NOTE_INSN_BASIC_BLOCK)
+(note 17 3 15 2 NOTE_INSN_PROLOGUE_END)
+(insn/f 15 17 2 2 (parallel [
+            (set (reg:SI 0 ax [82])
+                (unspec:SI [
+                        (const_int 0 [0])
+                    ] UNSPEC_SET_GOT))
+            (clobber (reg:CC 17 flags))
+        ]) 846 {*set_got}
+     (expr_list:REG_CFA_FLUSH_QUEUE (nil)
+        (nil)))
+(note 2 15 5 2 NOTE_INSN_FUNCTION_BEG)
+(insn 5 2 13 2 (set (reg:SI 0 ax [orig:83 _1 ] [83])
+        (const_int 0 [0])) "drivers/blk_drv/disk_null.c":37:12 75 {*movsi_internal}
+     (nil))
+(insn 13 5 18 2 (use (reg/i:SI 0 ax)) "drivers/blk_drv/disk_null.c":38:1 -1
+     (nil))
+(note 18 13 19 2 NOTE_INSN_EPILOGUE_BEG)
+(jump_insn 19 18 20 2 (simple_return) "drivers/blk_drv/disk_null.c":38:1 837 {simple_return_internal}
+     (nil)
+ -> simple_return)
+(barrier 20 19 16)
+(note 16 20 0 NOTE_INSN_DELETED)
+
+;; Function unexpected_floppy_interrupt (unexpected_floppy_interrupt, funcdef_no=1, decl_uid=1002, cgraph_uid=2, symbol_order=3)
+
+Creating trace 0 : start at note 1
+Creating trace 1 : start at note 11
+Creating trace 2 : start at note 12
+Processing trace 0 : start at note 1
+   saw edge from trace 0 to 1 (via fallthru 0)
+	push trace 1 to worklist
+Processing trace 1 : start at note 11
+   saw edge from trace 1 to 2 (via fallthru 0)
+	push trace 2 to worklist
+Processing trace 2 : start at note 12
+
+
+unexpected_floppy_interrupt
+
+Dataflow summary:
+;;  fully invalidated by EH 	 0 [ax] 1 [dx] 2 [cx] 8 [st] 9 [st(1)] 10 [st(2)] 11 [st(3)] 12 [st(4)] 13 [st(5)] 14 [st(6)] 15 [st(7)] 17 [flags] 18 [fpsr] 20 [xmm0] 21 [xmm1] 22 [xmm2] 23 [xmm3] 24 [xmm4] 25 [xmm5] 26 [xmm6] 27 [xmm7] 28 [mm0] 29 [mm1] 30 [mm2] 31 [mm3] 32 [mm4] 33 [mm5] 34 [mm6] 35 [mm7] 36 [r8] 37 [r9] 38 [r10] 39 [r11] 40 [r12] 41 [r13] 42 [r14] 43 [r15] 44 [xmm8] 45 [xmm9] 46 [xmm10] 47 [xmm11] 48 [xmm12] 49 [xmm13] 50 [xmm14] 51 [xmm15] 52 [xmm16] 53 [xmm17] 54 [xmm18] 55 [xmm19] 56 [xmm20] 57 [xmm21] 58 [xmm22] 59 [xmm23] 60 [xmm24] 61 [xmm25] 62 [xmm26] 63 [xmm27] 64 [xmm28] 65 [xmm29] 66 [xmm30] 67 [xmm31] 68 [k0] 69 [k1] 70 [k2] 71 [k3] 72 [k4] 73 [k5] 74 [k6] 75 [k7]
+;;  hardware regs used 	 7 [sp]
+;;  regular block artificial uses 	 7 [sp]
+;;  eh block artificial uses 	 7 [sp] 16 [argp]
+;;  entry block defs 	 0 [ax] 1 [dx] 2 [cx] 7 [sp]
+;;  exit block uses 	 7 [sp]
+;;  regs ever live 	 0 [ax] 17 [flags]
+;;  ref usage 	r0={2d} r1={1d} r2={1d} r7={1d,2u} r17={1d} 
+;;    total ref usage 8{6d,2u,0e} in 3{3 regular + 0 call} insns.
+(note 1 0 3 NOTE_INSN_DELETED)
+(note 3 1 11 2 [bb 2] NOTE_INSN_BASIC_BLOCK)
+(note 11 3 9 2 NOTE_INSN_PROLOGUE_END)
+(insn/f 9 11 2 2 (parallel [
+            (set (reg:SI 0 ax [82])
+                (unspec:SI [
+                        (const_int 0 [0])
+                    ] UNSPEC_SET_GOT))
+            (clobber (reg:CC 17 flags))
+        ]) 846 {*set_got}
+     (expr_list:REG_CFA_FLUSH_QUEUE (nil)
+        (nil)))
+(note 2 9 8 2 NOTE_INSN_FUNCTION_BEG)
+(insn 8 2 12 2 (const_int 0 [0]) "drivers/blk_drv/disk_null.c":42:1 843 {nop}
+     (nil))
+(note 12 8 13 2 NOTE_INSN_EPILOGUE_BEG)
+(jump_insn 13 12 14 2 (simple_return) "drivers/blk_drv/disk_null.c":42:1 837 {simple_return_internal}
+     (nil)
+ -> simple_return)
+(barrier 14 13 10)
+(note 10 14 0 NOTE_INSN_DELETED)

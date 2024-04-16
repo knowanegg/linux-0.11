@@ -1,0 +1,541 @@
+
+arch/x86/boot/.debug_bootsect:     file format elf32-i386
+arch/x86/boot/.debug_bootsect
+architecture: i386, flags 0x00000112:
+EXEC_P, HAS_SYMS, D_PAGED
+start address 0x00000005
+
+Program Header:
+    LOAD off    0x00001000 vaddr 0x00000000 paddr 0x00000000 align 2**12
+         filesz 0x00000200 memsz 0x00000200 flags r-x
+
+Sections:
+Idx Name          Size      VMA       LMA       File off  Algn
+  0 .text         00000200  00000000  00000000  00001000  2**0
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+  1 .debug_aranges 00000020  00000000  00000000  00001200  2**3
+                  CONTENTS, READONLY, DEBUGGING, OCTETS
+  2 .debug_info   00000026  00000000  00000000  00001220  2**0
+                  CONTENTS, READONLY, DEBUGGING, OCTETS
+  3 .debug_abbrev 00000014  00000000  00000000  00001246  2**0
+                  CONTENTS, READONLY, DEBUGGING, OCTETS
+  4 .debug_line   000000c6  00000000  00000000  0000125a  2**0
+                  CONTENTS, READONLY, DEBUGGING, OCTETS
+  5 .debug_str    00000062  00000000  00000000  00001320  2**0
+                  CONTENTS, READONLY, DEBUGGING, OCTETS
+SYMBOL TABLE:
+00000000 l    df *ABS*	00000000 bootsect.o
+00003000 l       *ABS*	00000000 SYSSIZE
+00000000 l       *ABS*	00000000 DEVICE_NR
+00000004 l       *ABS*	00000000 SETUPLEN
+000007c0 l       *ABS*	00000000 BOOTSEG
+00009000 l       *ABS*	00000000 INITSEG
+00009020 l       *ABS*	00000000 SETUPSEG
+00001000 l       *ABS*	00000000 SYSSEG
+00004000 l       *ABS*	00000000 ENDSEG
+00000301 l       *ABS*	00000000 ROOT_DEV
+0000001d l       .text	00000000 go
+00000028 l       .text	00000000 load_setup
+00000204 l       *ABS*	00000000 AX
+00000046 l       .text	00000000 ok_load_setup
+00000150 l       .text	00000000 sectors
+00000152 l       .text	00000000 msg1
+000000b1 l       .text	00000000 read_it
+00000147 l       .text	00000000 kill_motor
+000001fc l       .text	00000000 root_dev
+0000009c l       .text	00000000 root_defined
+0000009a l       .text	00000000 undef_root
+000000ab l       .text	00000000 sread
+000000ad l       .text	00000000 head
+000000af l       .text	00000000 track
+000000b6 l       .text	00000000 die
+000000ba l       .text	00000000 rp_read
+000000c2 l       .text	00000000 ok1_read
+000000dc l       .text	00000000 ok2_read
+00000113 l       .text	00000000 read_track
+000000fe l       .text	00000000 ok3_read
+000000f9 l       .text	00000000 ok4_read
+00000139 l       .text	00000000 bad_rt
+00000200 g       .text	00000000 endtext
+00000000 g       .text	00000000 begtext
+00000005 g       .text	00000000 _start
+00001000 g       .text	00000000 __bss_start
+00001000 g       .text	00000000 begdata
+00001000 g       .text	00000000 endbss
+00001000 g       .text	00000000 enddata
+00001000 g       .text	00000000 _edata
+00001000 g       .text	00000000 _end
+00001000 g       .text	00000000 begbss
+
+
+Contents of section .text:
+ 0000 ea0500c0 07b8c007 8ed8b800 908ec0b9  ................
+ 0010 000129f6 29fff3a5 ea1d0000 908cc88e  ..).)...........
+ 0020 d88ec08e d0bc00ff ba0000b2 00b90200  ................
+ 0030 bb0002b8 0402cd13 730cba00 00b200b8  ........s.......
+ 0040 0000cd13 ebe2b200 b80008cd 13b50089  ................
+ 0050 c089c02e 890e5001 b800908e c0b40330  ......P........0
+ 0060 ffcd10b9 1b00bb07 00bd5201 b80113cd  ..........R.....
+ 0070 10b80010 8ec0e838 00e8cb00 2ea1fc01  .......8........
+ 0080 83f80075 172e8b1e 5001b808 0283fb0f  ...u....P.......
+ 0090 740ab81c 0283fb12 7402ebfe 2ea3fc01  t.......t.......
+ 00a0 89c089db 89dbea00 00209005 00000000  ......... ......
+ 00b0 008cc0a9 ff0f75fe 31db8cc0 3d004072  ......u.1...=.@r
+ 00c0 01c32ea1 50012b06 ab0089c1 c1e10901  ....P.+.........
+ 00d0 d9730974 0731c029 d8c1e809 e8340089  .s.t.1.).....4..
+ 00e0 c10306ab 002e3b06 50017512 b801002b  ......;.P.u....+
+ 00f0 06ad0075 04ff06af 00a3ad00 31c0a3ab  ...u........1...
+ 0100 00c1e109 01cb73b2 8cc00500 108ec031  ......s........1
+ 0110 dbeba750 5351528b 16af008b 0eab0041  ...PSQR........A
+ 0120 88d58b16 ad0088d6 b20081e2 0001b402  ................
+ 0130 cd137205 5a595b58 c3b80000 ba0000cd  ..r.ZY[X........
+ 0140 135a595b 58ebcc52 baf203b0 006e5ac3  .ZY[X..R.....nZ.
+ 0150 00000d0a 4c6f6164 696e6720 42697363  ....Loading Bisc
+ 0160 7569744f 53202e2e 2e0d0a0d 0a000000  uitOS ..........
+ 0170 00000000 00000000 00000000 00000000  ................
+ 0180 00000000 00000000 00000000 00000000  ................
+ 0190 00000000 00000000 00000000 00000000  ................
+ 01a0 00000000 00000000 00000000 00000000  ................
+ 01b0 00000000 00000000 00000000 00000000  ................
+ 01c0 00000000 00000000 00000000 00000000  ................
+ 01d0 00000000 00000000 00000000 00000000  ................
+ 01e0 00000000 00000000 00000000 00000000  ................
+ 01f0 00000000 00000000 00000000 010355aa  ..............U.
+Contents of section .debug_aranges:
+ 0000 1c000000 02000000 00000400 00000000  ................
+ 0010 00000000 00020000 00000000 00000000  ................
+Contents of section .debug_info:
+ 0000 22000000 02000000 00000401 00000000  "...............
+ 0010 00000000 00020000 00000000 0b000000  ................
+ 0020 56000000 0180                        V.....          
+Contents of section .debug_abbrev:
+ 0000 01110010 06110112 01030e1b 0e250e13  .............%..
+ 0010 05000000                             ....            
+Contents of section .debug_line:
+ 0000 c2000000 03002100 00000101 fb0e0d00  ......!.........
+ 0010 01010101 00000001 00000100 626f6f74  ............boot
+ 0020 73656374 2e730000 00000000 05020000  sect.s..........
+ 0030 000003ca 00015e3f 2f3d2f3d 2f2f2122  ......^?/=/=//!"
+ 0040 5b2f2f30 30443d2f 3d3e3d2f 303d2f3d  [//00D=/=>=/0=/=
+ 0050 2f342f3d 2f2f2f30 593d322f 2f303d3e  /4/=///0Y=2//0=>
+ 0060 3d3d333d 2f3d444b 3d30593d 3d2f3d3d  ==3=/=DK=0Y==/==
+ 0070 30314f2f 2f2f030d ac2f3e2f 302f3d2f  01O///.../>/0/=/
+ 0080 244b4b2f 3d2f2f2f 2f2f3e3d 2f4c592f  $KK/=/////>=/LY/
+ 0090 3d4b2f4c 3d303d3d 2f2f2f3d 2f2f3421  =K/L=0==///=//4!
+ 00a0 2121214b 4b212f4b 2f2f4b2f 2f2f2121  !!!KK!/K//K///!!
+ 00b0 2121223d 3d2f2121 21213521 3d2f2121  !!"==/!!!!5!=/!!
+ 00c0 02b10100 0101                        ......          
+Contents of section .debug_str:
+ 0000 626f6f74 73656374 2e73002f 686f6d65  bootsect.s./home
+ 0010 2f756275 6e74752f 42697363 7569744f  /ubuntu/BiscuitO
+ 0020 532f6f75 74707574 2f6c696e 75782d30  S/output/linux-0
+ 0030 2e31312f 6c696e75 782f6b65 726e656c  .11/linux/kernel
+ 0040 5f676974 6875622f 61726368 2f783836  _github/arch/x86
+ 0050 2f626f6f 7400474e 55204153 20322e33  /boot.GNU AS 2.3
+ 0060 3800                                 8.              
+
+Disassembly of section .text:
+
+00000000 <begtext>:
+# 0x306    : /dev/hd6 - The second partition on second hard disk.
+# ROOT_DEV = 0 ; The same device with boot device.
+	.equ ROOT_DEV, 0x301
+
+	# Normalize the start address
+	ljmp $BOOTSEG, $_start
+   0:	ea                   	.byte 0xea
+   1:	05                   	.byte 0x5
+   2:	00 c0                	add    %al,%al
+   4:	07                   	pop    %es
+
+00000005 <_start>:
+
+_start:
+	# 打断点0x7c00，停在这条指令，为啥？
+	# 因为计算机启动第一条指令是FFFF:0000，这条指令指向BIOS的ROM 0xFFFF0
+	# 经过BIOS自检后，将硬盘0磁道0扇区的数据加载到这里
+	mov $BOOTSEG, %ax
+   5:	b8 c0 07 8e d8       	mov    $0xd88e07c0,%eax
+	# BOOTSEG是定义的常量0x7c00，也就是现在的位置，现在是0000:7c00，要使用段寄存器就变成07c0:0000
+	# 要把现在的程序256字节移动到INITSEG也就是0x9000段处，为什么？要腾出空间
+	mov %ax, %ds
+	mov $INITSEG, %ax
+   a:	b8 00 90 8e c0       	mov    $0xc08e9000,%eax
+	mov %ax, %es
+	mov $256, %cx
+   f:	b9 00 01 29 f6       	mov    $0xf6290100,%ecx
+	sub %si, %si
+	sub %di, %di
+  14:	29 ff                	sub    %edi,%edi
+	rep
+  16:	f3 a5                	rep movsl %ds:(%esi),%es:(%edi)
+	movsw
+	# long jump 长转移指令 这里$go是下面go:的偏移，加上$INITSEG就是9000:go，程序挪过去的位置
+	ljmp $INITSEG, $go
+  18:	ea                   	.byte 0xea
+  19:	1d                   	.byte 0x1d
+  1a:	00 00                	add    %al,(%eax)
+  1c:	90                   	nop
+
+0000001d <go>:
+go:
+	# 将cs值赋给ds、es、ss
+	mov %cs, %ax
+  1d:	8c c8                	mov    %cs,%eax
+	mov %ax, %ds
+  1f:	8e d8                	mov    %eax,%ds
+	mov %ax, %es
+  21:	8e c0                	mov    %eax,%es
+# put stack at 0x9ff00
+	mov %ax, %ss
+  23:	8e d0                	mov    %eax,%ss
+	# 栈指针设置在0xFF00，这时栈位于9000:ff00也就是0x9ff00
+	mov $0xFF00, %sp # arbitrary value >> 512 ？这里不知道为啥
+  25:	bc                   	.byte 0xbc
+  26:	00 ff                	add    %bh,%bh
+
+00000028 <load_setup>:
+# Note that 'es' is already set up
+
+load_setup:
+	# 读硬盘，调用中断处理程序
+	# If use hard disk, dirver is 0x80 
+	mov $0x0000, %dx      # head 0
+  28:	ba 00 00 b2 00       	mov    $0xb20000,%edx
+	mov $DEVICE_NR, %dl   # drive 0
+	mov $0x0002, %cx   # sector 2, track 0
+  2d:	b9 02 00 bb 00       	mov    $0xbb0002,%ecx
+	mov $0x0200, %bx   # address = 512, in INITSEG
+  32:	02 b8 04 02 cd 13    	add    0x13cd0204(%eax),%bh
+	.equ     AX, 0x200+SETUPLEN # 这里的equ不是判断，是设置常量相当于 #define AX 0x200+SETUPLEN
+	mov     $AX, %ax   # service 2, nr of sectors
+	int $0x13          # read it 调用0x13中断处理，这是实模式下BIOS提供的磁盘服务中断
+	jnc ok_load_setup  # jnc 是一个汇编语言指令，代表 "Jump if Not Carry"。
+  38:	73 0c                	jae    46 <ok_load_setup>
+					   # 条件跳转，用于在没有进位（Carry Flag未设置）的情况下跳转到指定的地址。
+	mov $0x0000, %dx
+  3a:	ba 00 00 b2 00       	mov    $0xb20000,%edx
+	mov $DEVICE_NR, %dl
+	mov $0x0000, %ax   # reset the diskette
+  3f:	b8 00 00 cd 13       	mov    $0x13cd0000,%eax
+	int $0x13          # 再次调用中断处理程序，重置
+	jmp load_setup
+  44:	eb e2                	jmp    28 <load_setup>
+
+00000046 <ok_load_setup>:
+
+ok_load_setup:
+
+# Get disk drive parameters, specifically nr of sectors/track
+
+	mov $DEVICE_NR, %dl
+  46:	b2 00                	mov    $0x0,%dl
+	mov $0x0800, %ax
+  48:	b8 00 08 cd 13       	mov    $0x13cd0800,%eax
+	int $0x13
+	mov $0x00, %ch
+  4d:	b5 00                	mov    $0x0,%ch
+	mov %ax, %ax
+  4f:	89 c0                	mov    %eax,%eax
+	mov %ax, %ax
+  51:	89 c0                	mov    %eax,%eax
+	#seg cs
+	mov %cx, %cs:sectors+0
+  53:	2e 89 0e             	mov    %ecx,%cs:(%esi)
+  56:	50                   	push   %eax
+  57:	01 b8 00 90 8e c0    	add    %edi,-0x3f717000(%eax)
+	mov $INITSEG, %ax
+	mov %ax, %es
+
+# Print some iname message
+
+	mov $0x03, %ah     # read cursor pos
+  5d:	b4 03                	mov    $0x3,%ah
+	xor %bh, %bh
+  5f:	30 ff                	xor    %bh,%bh
+	int $0x10
+  61:	cd 10                	int    $0x10
+
+	mov $27, %cx
+  63:	b9 1b 00 bb 07       	mov    $0x7bb001b,%ecx
+	mov $0x0007, %bx   # page 0, attribute 7 (normal)
+  68:	00 bd 52 01 b8 01    	add    %bh,0x1b80152(%ebp)
+#	lea msg1, %bp
+	mov $msg1, %bp
+	mov $0x1301, %ax
+  6e:	13 cd                	adc    %ebp,%ecx
+	int $0x10
+  70:	10 b8 00 10 8e c0    	adc    %bh,-0x3f71f000(%eax)
+# Ok, we've written the message, now
+# we want to load the system (at 0x10000)
+
+	mov $SYSSEG, %ax
+	mov %ax, %es    # Segment of 0x010000
+	call read_it
+  76:	e8 38 00 e8 cb       	call   cbe800b3 <SETUPSEG+0xcbe77093>
+	call kill_motor
+  7b:	00 2e                	add    %ch,(%esi)
+# defined (#= 0), nothing is done and the given device is used.
+# Otherwise, either /dev/PS0 (2,28) or /dev/at0 (2,8), depending
+# on the number of sectors that the BIOS report currently.
+
+	#seg cs
+	mov %cs:root_dev+0, %ax
+  7d:	a1 fc 01 83 f8       	mov    0xf88301fc,%eax
+	cmp $0, %ax
+  82:	00 75 17             	add    %dh,0x17(%ebp)
+	jne root_defined
+	#seg cs
+	mov %cs:sectors+0, %bx
+  85:	2e 8b 1e             	mov    %cs:(%esi),%ebx
+  88:	50                   	push   %eax
+  89:	01 b8 08 02 83 fb    	add    %edi,-0x47cfdf8(%eax)
+	mov $0x0208, %ax        # /dev/ps0 - 1.2Mb
+	cmp $15, %bx
+  8f:	0f 74 0a             	pcmpeqb (%edx),%mm1
+	je root_defined
+	mov $0x021c, %ax        # /dev/PS0 - 1.44Mb
+  92:	b8 1c 02 83 fb       	mov    $0xfb83021c,%eax
+	cmp $18, %bx
+  97:	12                   	.byte 0x12
+	je root_defined
+  98:	74 02                	je     9c <root_defined>
+
+0000009a <undef_root>:
+undef_root:
+	jmp undef_root
+  9a:	eb fe                	jmp    9a <undef_root>
+
+0000009c <root_defined>:
+root_defined:
+	#seg cs
+	mov %ax, %cs:root_dev+0
+  9c:	2e a3 fc 01 89 c0    	mov    %eax,%cs:0xc08901fc
+
+# after that (everything loaded), we jump to
+# the setup-routine loaded directly after
+# the bootblock:
+	mov %ax, %ax
+	mov %bx, %bx
+  a2:	89 db                	mov    %ebx,%ebx
+	mov %bx, %bx
+  a4:	89 db                	mov    %ebx,%ebx
+	ljmp $SETUPSEG, $0
+  a6:	ea                   	.byte 0xea
+  a7:	00 00                	add    %al,(%eax)
+  a9:	20                   	.byte 0x20
+  aa:	90                   	nop
+
+000000ab <sread>:
+  ab:	05                   	.byte 0x5
+	...
+
+000000ad <head>:
+	...
+
+000000af <track>:
+	...
+
+000000b1 <read_it>:
+sread:	.word 1+ SETUPLEN  # sectors read of current track
+head:	.word 0			   # current head
+track:	.word 0			   # current track
+
+read_it:
+	mov %es, %ax
+  b1:	8c c0                	mov    %es,%eax
+	test $0x0fff, %ax
+  b3:	a9                   	.byte 0xa9
+  b4:	ff 0f                	decl   (%edi)
+
+000000b6 <die>:
+die:
+	jne die       # es must be at 64kB boundary
+  b6:	75 fe                	jne    b6 <die>
+	xor %bx, %bx  # bx is starting address with segment
+  b8:	31 db                	xor    %ebx,%ebx
+
+000000ba <rp_read>:
+rp_read:
+	mov %es, %ax
+  ba:	8c c0                	mov    %es,%eax
+	cmp $ENDSEG, %ax   # have we loaded all yet?
+  bc:	3d 00 40 72 01       	cmp    $0x1724000,%eax
+	jb ok1_read
+	ret
+  c1:	c3                   	ret    
+
+000000c2 <ok1_read>:
+
+ok1_read:
+	#seg cs
+	mov %cs:sectors+0, %ax
+  c2:	2e a1 50 01 2b 06    	mov    %cs:0x62b0150,%eax
+	sub sread, %ax
+  c8:	ab                   	stos   %eax,%es:(%edi)
+  c9:	00 89 c1 c1 e1 09    	add    %cl,0x9e1c1c1(%ecx)
+	mov %ax, %cx
+	shl $9, %cx
+	add %bx, %cx
+  cf:	01 d9                	add    %ebx,%ecx
+	jnc ok2_read     # don't over 64KB
+  d1:	73 09                	jae    dc <ok2_read>
+	je ok2_read
+  d3:	74 07                	je     dc <ok2_read>
+	xor %ax, %ax     # over 64KB
+  d5:	31 c0                	xor    %eax,%eax
+	sub %bx, %ax
+  d7:	29 d8                	sub    %ebx,%eax
+	shr $9, %ax
+  d9:	c1 e8 09             	shr    $0x9,%eax
+
+000000dc <ok2_read>:
+ok2_read:
+	call read_track
+  dc:	e8 34 00 89 c1       	call   c1890115 <SETUPSEG+0xc18870f5>
+	mov  %ax, %cx
+	add sread, %ax
+  e1:	03 06                	add    (%esi),%eax
+  e3:	ab                   	stos   %eax,%es:(%edi)
+  e4:	00 2e                	add    %ch,(%esi)
+	#seg cs
+	cmp %cs:sectors+0, %ax
+  e6:	3b 06                	cmp    (%esi),%eax
+  e8:	50                   	push   %eax
+  e9:	01 75 12             	add    %esi,0x12(%ebp)
+	jne ok3_read
+	mov $1, %ax
+  ec:	b8 01 00 2b 06       	mov    $0x62b0001,%eax
+	sub head, %ax
+  f1:	ad                   	lods   %ds:(%esi),%eax
+  f2:	00 75 04             	add    %dh,0x4(%ebp)
+	jne ok4_read
+	incw track
+  f5:	ff 06                	incl   (%esi)
+  f7:	af                   	scas   %es:(%edi),%eax
+	...
+
+000000f9 <ok4_read>:
+ok4_read:
+	mov %ax, head
+  f9:	a3 ad 00 31 c0       	mov    %eax,0xc03100ad
+
+000000fe <ok3_read>:
+	xor %ax, %ax
+ok3_read:
+	mov %ax, sread
+  fe:	a3 ab 00 c1 e1       	mov    %eax,0xe1c100ab
+	shl $9, %cx
+ 103:	09 01                	or     %eax,(%ecx)
+	add %cx, %bx
+ 105:	cb                   	lret   
+	jnc rp_read
+ 106:	73 b2                	jae    ba <rp_read>
+	mov %es, %ax
+ 108:	8c c0                	mov    %es,%eax
+	add $0x1000, %ax
+ 10a:	05 00 10 8e c0       	add    $0xc08e1000,%eax
+	mov %ax, %es
+	xor %bx, %bx
+ 10f:	31 db                	xor    %ebx,%ebx
+	jmp rp_read
+ 111:	eb a7                	jmp    ba <rp_read>
+
+00000113 <read_track>:
+
+# Read a track data
+# AL: the number of read sector
+# [BX:ES]: Store data
+read_track:
+	push %ax
+ 113:	50                   	push   %eax
+	push %bx
+ 114:	53                   	push   %ebx
+	push %cx
+ 115:	51                   	push   %ecx
+	push %dx
+ 116:	52                   	push   %edx
+	mov track, %dx
+ 117:	8b 16                	mov    (%esi),%edx
+ 119:	af                   	scas   %es:(%edi),%eax
+ 11a:	00 8b 0e ab 00 41    	add    %cl,0x4100ab0e(%ebx)
+	mov sread, %cx
+	inc %cx             # Sectors
+	mov %dl, %ch        # Cylinders
+ 120:	88 d5                	mov    %dl,%ch
+	mov head, %dx
+ 122:	8b 16                	mov    (%esi),%edx
+ 124:	ad                   	lods   %ds:(%esi),%eax
+ 125:	00 88 d6 b2 00 81    	add    %cl,-0x7eff4d2a(%eax)
+	mov %dl, %dh        # Heads
+	mov $DEVICE_NR, %dl
+	and $0x0100, %dx  # boot from floppy
+ 12b:	e2 00                	loop   12d <read_track+0x1a>
+ 12d:	01 b4 02 cd 13 72 05 	add    %esi,0x57213cd(%edx,%eax,1)
+	mov $2, %ah
+	int $0x13
+	jc bad_rt
+	pop %dx
+ 134:	5a                   	pop    %edx
+	pop %cx
+ 135:	59                   	pop    %ecx
+	pop %bx
+ 136:	5b                   	pop    %ebx
+	pop %ax
+ 137:	58                   	pop    %eax
+	ret
+ 138:	c3                   	ret    
+
+00000139 <bad_rt>:
+bad_rt:
+	mov $0, %ax
+ 139:	b8 00 00 ba 00       	mov    $0xba0000,%eax
+	mov $0, %dx
+ 13e:	00 cd                	add    %cl,%ch
+	int $0x13
+ 140:	13 5a 59             	adc    0x59(%edx),%ebx
+	pop %dx
+	pop %cx
+	pop %bx
+ 143:	5b                   	pop    %ebx
+	pop %ax
+ 144:	58                   	pop    %eax
+	jmp read_track
+ 145:	eb cc                	jmp    113 <read_track>
+
+00000147 <kill_motor>:
+#
+# This procedure turns off the floppy dirve motor, so
+# that we enter the kernel a known state, and
+# don't have to worry about it later.
+kill_motor:
+	push %dx
+ 147:	52                   	push   %edx
+	mov $0x3f2, %dx
+ 148:	ba f2 03 b0 00       	mov    $0xb003f2,%edx
+	mov $0, %al
+	outsb
+ 14d:	6e                   	outsb  %ds:(%esi),(%dx)
+	pop %dx
+ 14e:	5a                   	pop    %edx
+	ret
+ 14f:	c3                   	ret    
+
+00000150 <sectors>:
+	...
+
+00000152 <msg1>:
+ 152:	0d 0a 4c 6f 61       	or     $0x616f4c0a,%eax
+ 157:	64 69 6e 67 20 42 69 	imul   $0x73694220,%fs:0x67(%esi),%ebp
+ 15e:	73 
+ 15f:	63 75 69             	arpl   %si,0x69(%ebp)
+ 162:	74 4f                	je     1b3 <msg1+0x61>
+ 164:	53                   	push   %ebx
+ 165:	20 2e                	and    %ch,(%esi)
+ 167:	2e 2e 0d 0a 0d 0a 00 	cs cs or $0xa0d0a,%eax
+	...
+
+000001fc <root_dev>:
+ 1fc:	01 03                	add    %eax,(%ebx)
+ 1fe:	55                   	push   %ebp
+ 1ff:	aa                   	stos   %al,%es:(%edi)

@@ -1,0 +1,2758 @@
+
+;; Function free_inode (free_inode, funcdef_no=1, decl_uid=1109, cgraph_uid=2, symbol_order=1)
+
+(note 1 0 3 NOTE_INSN_DELETED)
+(note 3 1 2 2 [bb 2] NOTE_INSN_BASIC_BLOCK)
+(note 2 3 5 2 NOTE_INSN_FUNCTION_BEG)
+(insn 5 2 6 2 (set (reg:CCZ 17 flags)
+        (compare:CCZ (mem/f/c:SI (reg/f:SI 16 argp) [8 inode+0 S4 A32])
+            (const_int 0 [0]))) "fs/bitmap.c":53:8 7 {*cmpsi_ccno_1}
+     (nil))
+(jump_insn 6 5 7 2 (set (pc)
+        (if_then_else (ne (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref 10)
+            (pc))) "fs/bitmap.c":53:8 806 {*jcc}
+     (nil)
+ -> 10)
+(note 7 6 8 4 [bb 4] NOTE_INSN_BASIC_BLOCK)
+(jump_insn 8 7 9 4 (set (pc)
+        (label_ref:SI 159)) "fs/bitmap.c":54:9 807 {jump}
+     (nil)
+ -> 159)
+(barrier 9 8 10)
+(code_label 10 9 11 5 2 (nil) [1 uses])
+(note 11 10 12 5 [bb 5] NOTE_INSN_BASIC_BLOCK)
+(insn 12 11 13 5 (set (reg/f:SI 102)
+        (mem/f/c:SI (reg/f:SI 16 argp) [8 inode+0 S4 A32])) "fs/bitmap.c":55:15 75 {*movsi_internal}
+     (nil))
+(insn 13 12 14 5 (set (reg:HI 83 [ _1 ])
+        (mem:HI (plus:SI (reg/f:SI 102)
+                (const_int 44 [0x2c])) [4 inode_25(D)->i_dev+0 S2 A32])) "fs/bitmap.c":55:15 76 {*movhi_internal}
+     (nil))
+(insn 14 13 15 5 (set (reg:CCZ 17 flags)
+        (compare:CCZ (reg:HI 83 [ _1 ])
+            (const_int 0 [0]))) "fs/bitmap.c":55:8 6 {*cmphi_ccno_1}
+     (nil))
+(jump_insn 15 14 16 5 (set (pc)
+        (if_then_else (ne (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref 26)
+            (pc))) "fs/bitmap.c":55:8 806 {*jcc}
+     (nil)
+ -> 26)
+(note 16 15 17 6 [bb 6] NOTE_INSN_BASIC_BLOCK)
+(insn 17 16 18 6 (parallel [
+            (set (reg/f:SI 7 sp)
+                (plus:SI (reg/f:SI 7 sp)
+                    (const_int -4 [0xfffffffffffffffc])))
+            (clobber (reg:CC 17 flags))
+        ]) "fs/bitmap.c":56:9 209 {*addsi_1}
+     (expr_list:REG_ARGS_SIZE (const_int 4 [0x4])
+        (nil)))
+(insn 18 17 19 6 (set (mem:SI (pre_dec:SI (reg/f:SI 7 sp)) [13  S4 A32])
+        (const_int 56 [0x38])) "fs/bitmap.c":56:9 54 {*pushsi2}
+     (expr_list:REG_ARGS_SIZE (const_int 8 [0x8])
+        (nil)))
+(insn 19 18 20 6 (set (mem:SI (pre_dec:SI (reg/f:SI 7 sp)) [13  S4 A32])
+        (const_int 0 [0])) "fs/bitmap.c":56:9 54 {*pushsi2}
+     (expr_list:REG_ARGS_SIZE (const_int 12 [0xc])
+        (nil)))
+(insn 20 19 21 6 (set (mem/f:SI (pre_dec:SI (reg/f:SI 7 sp)) [8  S4 A32])
+        (mem/f/c:SI (reg/f:SI 16 argp) [8 inode+0 S4 A32])) "fs/bitmap.c":56:9 54 {*pushsi2}
+     (expr_list:REG_ARGS_SIZE (const_int 16 [0x10])
+        (nil)))
+(insn 21 20 22 6 (set (reg:SI 3 bx)
+        (reg:SI 82)) "fs/bitmap.c":56:9 75 {*movsi_internal}
+     (nil))
+(call_insn 22 21 23 6 (set (reg:SI 0 ax)
+        (call (mem:QI (symbol_ref:SI ("memset") [flags 0x41]  <function_decl 0x74c8ddf3b200 memset>) [0 memset S1 A8])
+            (const_int 16 [0x10]))) "fs/bitmap.c":56:9 823 {*call_value}
+     (nil)
+    (expr_list (use (reg:SI 3 bx))
+        (nil)))
+(insn 23 22 24 6 (parallel [
+            (set (reg/f:SI 7 sp)
+                (plus:SI (reg/f:SI 7 sp)
+                    (const_int 16 [0x10])))
+            (clobber (reg:CC 17 flags))
+        ]) "fs/bitmap.c":56:9 209 {*addsi_1}
+     (expr_list:REG_ARGS_SIZE (const_int 0 [0])
+        (nil)))
+(jump_insn 24 23 25 6 (set (pc)
+        (label_ref:SI 159)) "fs/bitmap.c":57:9 807 {jump}
+     (nil)
+ -> 159)
+(barrier 25 24 26)
+(code_label 26 25 27 7 4 (nil) [1 uses])
+(note 27 26 28 7 [bb 7] NOTE_INSN_BASIC_BLOCK)
+(insn 28 27 29 7 (set (reg/f:SI 103)
+        (mem/f/c:SI (reg/f:SI 16 argp) [8 inode+0 S4 A32])) "fs/bitmap.c":59:14 75 {*movsi_internal}
+     (nil))
+(insn 29 28 32 7 (set (reg:HI 84 [ _2 ])
+        (mem:HI (plus:SI (reg/f:SI 103)
+                (const_int 48 [0x30])) [4 inode_25(D)->i_count+0 S2 A32])) "fs/bitmap.c":59:14 76 {*movhi_internal}
+     (nil))
+(insn 32 29 33 7 (set (reg:CC 17 flags)
+        (compare:CC (reg:HI 84 [ _2 ])
+            (const_int 1 [0x1]))) "fs/bitmap.c":59:8 10 {*cmphi_1}
+     (nil))
+(jump_insn 33 32 34 7 (set (pc)
+        (if_then_else (leu (reg:CC 17 flags)
+                (const_int 0 [0]))
+            (label_ref 51)
+            (pc))) "fs/bitmap.c":59:8 806 {*jcc}
+     (nil)
+ -> 51)
+(note 34 33 35 8 [bb 8] NOTE_INSN_BASIC_BLOCK)
+(insn 35 34 36 8 (set (reg/f:SI 104)
+        (mem/f/c:SI (reg/f:SI 16 argp) [8 inode+0 S4 A32])) "fs/bitmap.c":60:61 75 {*movsi_internal}
+     (nil))
+(insn 36 35 37 8 (set (reg:HI 85 [ _3 ])
+        (mem:HI (plus:SI (reg/f:SI 104)
+                (const_int 48 [0x30])) [4 inode_25(D)->i_count+0 S2 A32])) "fs/bitmap.c":60:61 76 {*movhi_internal}
+     (nil))
+(insn 37 36 38 8 (set (reg:SI 86 [ _4 ])
+        (zero_extend:SI (reg:HI 85 [ _3 ]))) "fs/bitmap.c":60:9 144 {*zero_extendhisi2}
+     (nil))
+(insn 38 37 39 8 (parallel [
+            (set (reg/f:SI 7 sp)
+                (plus:SI (reg/f:SI 7 sp)
+                    (const_int -8 [0xfffffffffffffff8])))
+            (clobber (reg:CC 17 flags))
+        ]) "fs/bitmap.c":60:9 209 {*addsi_1}
+     (expr_list:REG_ARGS_SIZE (const_int 8 [0x8])
+        (nil)))
+(insn 39 38 40 8 (set (mem:SI (pre_dec:SI (reg/f:SI 7 sp)) [13  S4 A32])
+        (reg:SI 86 [ _4 ])) "fs/bitmap.c":60:9 54 {*pushsi2}
+     (expr_list:REG_ARGS_SIZE (const_int 12 [0xc])
+        (nil)))
+(insn 40 39 41 8 (set (reg/f:SI 105)
+        (plus:SI (reg:SI 82)
+            (const:SI (unspec:SI [
+                        (symbol_ref/f:SI ("*.LC0") [flags 0x2]  <var_decl 0x74c8ddf5d630 *.LC0>)
+                    ] UNSPEC_GOTOFF)))) "fs/bitmap.c":60:9 205 {*leasi}
+     (expr_list:REG_EQUAL (symbol_ref/f:SI ("*.LC0") [flags 0x2]  <var_decl 0x74c8ddf5d630 *.LC0>)
+        (nil)))
+(insn 41 40 42 8 (set (mem/f:SI (pre_dec:SI (reg/f:SI 7 sp)) [2  S4 A32])
+        (reg/f:SI 105)) "fs/bitmap.c":60:9 54 {*pushsi2}
+     (expr_list:REG_ARGS_SIZE (const_int 16 [0x10])
+        (nil)))
+(insn 42 41 43 8 (set (reg:SI 3 bx)
+        (reg:SI 82)) "fs/bitmap.c":60:9 75 {*movsi_internal}
+     (nil))
+(call_insn 43 42 44 8 (set (reg:SI 0 ax)
+        (call (mem:QI (symbol_ref:SI ("printk") [flags 0x41]  <function_decl 0x74c8ddf10900 printk>) [0 printk S1 A8])
+            (const_int 16 [0x10]))) "fs/bitmap.c":60:9 823 {*call_value}
+     (nil)
+    (expr_list (use (reg:SI 3 bx))
+        (nil)))
+(insn 44 43 45 8 (parallel [
+            (set (reg/f:SI 7 sp)
+                (plus:SI (reg/f:SI 7 sp)
+                    (const_int 16 [0x10])))
+            (clobber (reg:CC 17 flags))
+        ]) "fs/bitmap.c":60:9 209 {*addsi_1}
+     (expr_list:REG_ARGS_SIZE (const_int 0 [0])
+        (nil)))
+(insn 45 44 46 8 (parallel [
+            (set (reg/f:SI 7 sp)
+                (plus:SI (reg/f:SI 7 sp)
+                    (const_int -12 [0xfffffffffffffff4])))
+            (clobber (reg:CC 17 flags))
+        ]) "fs/bitmap.c":61:9 209 {*addsi_1}
+     (expr_list:REG_ARGS_SIZE (const_int 12 [0xc])
+        (nil)))
+(insn 46 45 47 8 (set (reg/f:SI 106)
+        (plus:SI (reg:SI 82)
+            (const:SI (unspec:SI [
+                        (symbol_ref/f:SI ("*.LC1") [flags 0x2]  <var_decl 0x74c8ddf5d6c0 *.LC1>)
+                    ] UNSPEC_GOTOFF)))) "fs/bitmap.c":61:9 205 {*leasi}
+     (expr_list:REG_EQUAL (symbol_ref/f:SI ("*.LC1") [flags 0x2]  <var_decl 0x74c8ddf5d6c0 *.LC1>)
+        (nil)))
+(insn 47 46 48 8 (set (mem/f:SI (pre_dec:SI (reg/f:SI 7 sp)) [2  S4 A32])
+        (reg/f:SI 106)) "fs/bitmap.c":61:9 54 {*pushsi2}
+     (expr_list:REG_ARGS_SIZE (const_int 16 [0x10])
+        (nil)))
+(insn 48 47 49 8 (set (reg:SI 3 bx)
+        (reg:SI 82)) "fs/bitmap.c":61:9 75 {*movsi_internal}
+     (nil))
+(call_insn 49 48 50 8 (call (mem:QI (symbol_ref:SI ("panic") [flags 0x41]  <function_decl 0x74c8ddf10b00 panic>) [0 panic S1 A8])
+        (const_int 16 [0x10])) "fs/bitmap.c":61:9 812 {*call}
+     (nil)
+    (expr_list (use (reg:SI 3 bx))
+        (nil)))
+(insn 50 49 51 8 (parallel [
+            (set (reg/f:SI 7 sp)
+                (plus:SI (reg/f:SI 7 sp)
+                    (const_int 16 [0x10])))
+            (clobber (reg:CC 17 flags))
+        ]) "fs/bitmap.c":61:9 209 {*addsi_1}
+     (expr_list:REG_ARGS_SIZE (const_int 0 [0])
+        (nil)))
+(code_label 51 50 52 9 5 (nil) [1 uses])
+(note 52 51 53 9 [bb 9] NOTE_INSN_BASIC_BLOCK)
+(insn 53 52 54 9 (set (reg/f:SI 107)
+        (mem/f/c:SI (reg/f:SI 16 argp) [8 inode+0 S4 A32])) "fs/bitmap.c":63:14 75 {*movsi_internal}
+     (nil))
+(insn 54 53 55 9 (set (reg:QI 87 [ _5 ])
+        (mem:QI (plus:SI (reg/f:SI 107)
+                (const_int 13 [0xd])) [0 inode_25(D)->i_nlinks+0 S1 A8])) "fs/bitmap.c":63:14 77 {*movqi_internal}
+     (nil))
+(insn 55 54 56 9 (set (reg:CCZ 17 flags)
+        (compare:CCZ (reg:QI 87 [ _5 ])
+            (const_int 0 [0]))) "fs/bitmap.c":63:8 5 {*cmpqi_ccno_1}
+     (nil))
+(jump_insn 56 55 57 9 (set (pc)
+        (if_then_else (eq (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref 64)
+            (pc))) "fs/bitmap.c":63:8 806 {*jcc}
+     (nil)
+ -> 64)
+(note 57 56 58 10 [bb 10] NOTE_INSN_BASIC_BLOCK)
+(insn 58 57 59 10 (parallel [
+            (set (reg/f:SI 7 sp)
+                (plus:SI (reg/f:SI 7 sp)
+                    (const_int -12 [0xfffffffffffffff4])))
+            (clobber (reg:CC 17 flags))
+        ]) "fs/bitmap.c":64:9 209 {*addsi_1}
+     (expr_list:REG_ARGS_SIZE (const_int 12 [0xc])
+        (nil)))
+(insn 59 58 60 10 (set (reg/f:SI 108)
+        (plus:SI (reg:SI 82)
+            (const:SI (unspec:SI [
+                        (symbol_ref/f:SI ("*.LC2") [flags 0x2]  <var_decl 0x74c8ddf5d750 *.LC2>)
+                    ] UNSPEC_GOTOFF)))) "fs/bitmap.c":64:9 205 {*leasi}
+     (expr_list:REG_EQUAL (symbol_ref/f:SI ("*.LC2") [flags 0x2]  <var_decl 0x74c8ddf5d750 *.LC2>)
+        (nil)))
+(insn 60 59 61 10 (set (mem/f:SI (pre_dec:SI (reg/f:SI 7 sp)) [2  S4 A32])
+        (reg/f:SI 108)) "fs/bitmap.c":64:9 54 {*pushsi2}
+     (expr_list:REG_ARGS_SIZE (const_int 16 [0x10])
+        (nil)))
+(insn 61 60 62 10 (set (reg:SI 3 bx)
+        (reg:SI 82)) "fs/bitmap.c":64:9 75 {*movsi_internal}
+     (nil))
+(call_insn 62 61 63 10 (call (mem:QI (symbol_ref:SI ("panic") [flags 0x41]  <function_decl 0x74c8ddf10b00 panic>) [0 panic S1 A8])
+        (const_int 16 [0x10])) "fs/bitmap.c":64:9 812 {*call}
+     (nil)
+    (expr_list (use (reg:SI 3 bx))
+        (nil)))
+(insn 63 62 64 10 (parallel [
+            (set (reg/f:SI 7 sp)
+                (plus:SI (reg/f:SI 7 sp)
+                    (const_int 16 [0x10])))
+            (clobber (reg:CC 17 flags))
+        ]) "fs/bitmap.c":64:9 209 {*addsi_1}
+     (expr_list:REG_ARGS_SIZE (const_int 0 [0])
+        (nil)))
+(code_label 64 63 65 11 6 (nil) [1 uses])
+(note 65 64 66 11 [bb 11] NOTE_INSN_BASIC_BLOCK)
+(insn 66 65 67 11 (set (reg/f:SI 109)
+        (mem/f/c:SI (reg/f:SI 16 argp) [8 inode+0 S4 A32])) "fs/bitmap.c":65:31 75 {*movsi_internal}
+     (nil))
+(insn 67 66 68 11 (set (reg:HI 88 [ _6 ])
+        (mem:HI (plus:SI (reg/f:SI 109)
+                (const_int 44 [0x2c])) [4 inode_25(D)->i_dev+0 S2 A32])) "fs/bitmap.c":65:31 76 {*movhi_internal}
+     (nil))
+(insn 68 67 69 11 (set (reg:SI 89 [ _7 ])
+        (zero_extend:SI (reg:HI 88 [ _6 ]))) "fs/bitmap.c":65:16 144 {*zero_extendhisi2}
+     (nil))
+(insn 69 68 70 11 (parallel [
+            (set (reg/f:SI 7 sp)
+                (plus:SI (reg/f:SI 7 sp)
+                    (const_int -12 [0xfffffffffffffff4])))
+            (clobber (reg:CC 17 flags))
+        ]) "fs/bitmap.c":65:16 209 {*addsi_1}
+     (expr_list:REG_ARGS_SIZE (const_int 12 [0xc])
+        (nil)))
+(insn 70 69 71 11 (set (mem:SI (pre_dec:SI (reg/f:SI 7 sp)) [13  S4 A32])
+        (reg:SI 89 [ _7 ])) "fs/bitmap.c":65:16 54 {*pushsi2}
+     (expr_list:REG_ARGS_SIZE (const_int 16 [0x10])
+        (nil)))
+(insn 71 70 72 11 (set (reg:SI 3 bx)
+        (reg:SI 82)) "fs/bitmap.c":65:16 75 {*movsi_internal}
+     (nil))
+(call_insn 72 71 73 11 (set (reg:SI 0 ax)
+        (call (mem:QI (symbol_ref:SI ("get_super") [flags 0x41]  <function_decl 0x74c8ddf0e000 get_super>) [0 get_super S1 A8])
+            (const_int 16 [0x10]))) "fs/bitmap.c":65:16 823 {*call_value}
+     (nil)
+    (expr_list (use (reg:SI 3 bx))
+        (nil)))
+(insn 73 72 74 11 (parallel [
+            (set (reg/f:SI 7 sp)
+                (plus:SI (reg/f:SI 7 sp)
+                    (const_int 16 [0x10])))
+            (clobber (reg:CC 17 flags))
+        ]) "fs/bitmap.c":65:16 209 {*addsi_1}
+     (expr_list:REG_ARGS_SIZE (const_int 0 [0])
+        (nil)))
+(insn 74 73 75 11 (set (reg:SI 110)
+        (reg:SI 0 ax)) "fs/bitmap.c":65:16 75 {*movsi_internal}
+     (nil))
+(insn 75 74 76 11 (set (mem/f/c:SI (plus:SI (reg/f:SI 19 frame)
+                (const_int -4 [0xfffffffffffffffc])) [19 sb+0 S4 A32])
+        (reg:SI 110)) "fs/bitmap.c":65:16 75 {*movsi_internal}
+     (nil))
+(insn 76 75 77 11 (set (reg:CCZ 17 flags)
+        (compare:CCZ (mem/f/c:SI (plus:SI (reg/f:SI 19 frame)
+                    (const_int -4 [0xfffffffffffffffc])) [19 sb+0 S4 A32])
+            (const_int 0 [0]))) "fs/bitmap.c":65:8 7 {*cmpsi_ccno_1}
+     (nil))
+(jump_insn 77 76 78 11 (set (pc)
+        (if_then_else (ne (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref 85)
+            (pc))) "fs/bitmap.c":65:8 806 {*jcc}
+     (nil)
+ -> 85)
+(note 78 77 79 12 [bb 12] NOTE_INSN_BASIC_BLOCK)
+(insn 79 78 80 12 (parallel [
+            (set (reg/f:SI 7 sp)
+                (plus:SI (reg/f:SI 7 sp)
+                    (const_int -12 [0xfffffffffffffff4])))
+            (clobber (reg:CC 17 flags))
+        ]) "fs/bitmap.c":66:9 209 {*addsi_1}
+     (expr_list:REG_ARGS_SIZE (const_int 12 [0xc])
+        (nil)))
+(insn 80 79 81 12 (set (reg/f:SI 111)
+        (plus:SI (reg:SI 82)
+            (const:SI (unspec:SI [
+                        (symbol_ref/f:SI ("*.LC3") [flags 0x2]  <var_decl 0x74c8ddf5d7e0 *.LC3>)
+                    ] UNSPEC_GOTOFF)))) "fs/bitmap.c":66:9 205 {*leasi}
+     (expr_list:REG_EQUAL (symbol_ref/f:SI ("*.LC3") [flags 0x2]  <var_decl 0x74c8ddf5d7e0 *.LC3>)
+        (nil)))
+(insn 81 80 82 12 (set (mem/f:SI (pre_dec:SI (reg/f:SI 7 sp)) [2  S4 A32])
+        (reg/f:SI 111)) "fs/bitmap.c":66:9 54 {*pushsi2}
+     (expr_list:REG_ARGS_SIZE (const_int 16 [0x10])
+        (nil)))
+(insn 82 81 83 12 (set (reg:SI 3 bx)
+        (reg:SI 82)) "fs/bitmap.c":66:9 75 {*movsi_internal}
+     (nil))
+(call_insn 83 82 84 12 (call (mem:QI (symbol_ref:SI ("panic") [flags 0x41]  <function_decl 0x74c8ddf10b00 panic>) [0 panic S1 A8])
+        (const_int 16 [0x10])) "fs/bitmap.c":66:9 812 {*call}
+     (nil)
+    (expr_list (use (reg:SI 3 bx))
+        (nil)))
+(insn 84 83 85 12 (parallel [
+            (set (reg/f:SI 7 sp)
+                (plus:SI (reg/f:SI 7 sp)
+                    (const_int 16 [0x10])))
+            (clobber (reg:CC 17 flags))
+        ]) "fs/bitmap.c":66:9 209 {*addsi_1}
+     (expr_list:REG_ARGS_SIZE (const_int 0 [0])
+        (nil)))
+(code_label 85 84 86 13 7 (nil) [1 uses])
+(note 86 85 87 13 [bb 13] NOTE_INSN_BASIC_BLOCK)
+(insn 87 86 88 13 (set (reg/f:SI 112)
+        (mem/f/c:SI (reg/f:SI 16 argp) [8 inode+0 S4 A32])) "fs/bitmap.c":67:14 75 {*movsi_internal}
+     (nil))
+(insn 88 87 89 13 (set (reg:HI 90 [ _8 ])
+        (mem:HI (plus:SI (reg/f:SI 112)
+                (const_int 46 [0x2e])) [4 inode_25(D)->i_num+0 S2 A16])) "fs/bitmap.c":67:14 76 {*movhi_internal}
+     (nil))
+(insn 89 88 90 13 (set (reg:CCZ 17 flags)
+        (compare:CCZ (reg:HI 90 [ _8 ])
+            (const_int 0 [0]))) "fs/bitmap.c":67:8 6 {*cmphi_ccno_1}
+     (nil))
+(jump_insn 90 89 91 13 (set (pc)
+        (if_then_else (eq (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref 98)
+            (pc))) "fs/bitmap.c":67:8 806 {*jcc}
+     (nil)
+ -> 98)
+(note 91 90 92 14 [bb 14] NOTE_INSN_BASIC_BLOCK)
+(insn 92 91 93 14 (set (reg/f:SI 113)
+        (mem/f/c:SI (reg/f:SI 16 argp) [8 inode+0 S4 A32])) "fs/bitmap.c":67:34 75 {*movsi_internal}
+     (nil))
+(insn 93 92 94 14 (set (reg:HI 91 [ _9 ])
+        (mem:HI (plus:SI (reg/f:SI 113)
+                (const_int 46 [0x2e])) [4 inode_25(D)->i_num+0 S2 A16])) "fs/bitmap.c":67:34 76 {*movhi_internal}
+     (nil))
+(insn 94 93 95 14 (set (reg/f:SI 114)
+        (mem/f/c:SI (plus:SI (reg/f:SI 19 frame)
+                (const_int -4 [0xfffffffffffffffc])) [19 sb+0 S4 A32])) "fs/bitmap.c":67:46 75 {*movsi_internal}
+     (nil))
+(insn 95 94 96 14 (set (reg:HI 92 [ _10 ])
+        (mem:HI (reg/f:SI 114) [4 sb_31->s_ninodes+0 S2 A32])) "fs/bitmap.c":67:46 76 {*movhi_internal}
+     (nil))
+(insn 96 95 97 14 (set (reg:CC 17 flags)
+        (compare:CC (reg:HI 91 [ _9 ])
+            (reg:HI 92 [ _10 ]))) "fs/bitmap.c":67:26 10 {*cmphi_1}
+     (nil))
+(jump_insn 97 96 98 14 (set (pc)
+        (if_then_else (leu (reg:CC 17 flags)
+                (const_int 0 [0]))
+            (label_ref 106)
+            (pc))) "fs/bitmap.c":67:26 806 {*jcc}
+     (nil)
+ -> 106)
+(code_label 98 97 99 15 8 (nil) [1 uses])
+(note 99 98 100 15 [bb 15] NOTE_INSN_BASIC_BLOCK)
+(insn 100 99 101 15 (parallel [
+            (set (reg/f:SI 7 sp)
+                (plus:SI (reg/f:SI 7 sp)
+                    (const_int -12 [0xfffffffffffffff4])))
+            (clobber (reg:CC 17 flags))
+        ]) "fs/bitmap.c":68:9 209 {*addsi_1}
+     (expr_list:REG_ARGS_SIZE (const_int 12 [0xc])
+        (nil)))
+(insn 101 100 102 15 (set (reg/f:SI 115)
+        (plus:SI (reg:SI 82)
+            (const:SI (unspec:SI [
+                        (symbol_ref/f:SI ("*.LC4") [flags 0x2]  <var_decl 0x74c8ddf5d870 *.LC4>)
+                    ] UNSPEC_GOTOFF)))) "fs/bitmap.c":68:9 205 {*leasi}
+     (expr_list:REG_EQUAL (symbol_ref/f:SI ("*.LC4") [flags 0x2]  <var_decl 0x74c8ddf5d870 *.LC4>)
+        (nil)))
+(insn 102 101 103 15 (set (mem/f:SI (pre_dec:SI (reg/f:SI 7 sp)) [2  S4 A32])
+        (reg/f:SI 115)) "fs/bitmap.c":68:9 54 {*pushsi2}
+     (expr_list:REG_ARGS_SIZE (const_int 16 [0x10])
+        (nil)))
+(insn 103 102 104 15 (set (reg:SI 3 bx)
+        (reg:SI 82)) "fs/bitmap.c":68:9 75 {*movsi_internal}
+     (nil))
+(call_insn 104 103 105 15 (call (mem:QI (symbol_ref:SI ("panic") [flags 0x41]  <function_decl 0x74c8ddf10b00 panic>) [0 panic S1 A8])
+        (const_int 16 [0x10])) "fs/bitmap.c":68:9 812 {*call}
+     (nil)
+    (expr_list (use (reg:SI 3 bx))
+        (nil)))
+(insn 105 104 106 15 (parallel [
+            (set (reg/f:SI 7 sp)
+                (plus:SI (reg/f:SI 7 sp)
+                    (const_int 16 [0x10])))
+            (clobber (reg:CC 17 flags))
+        ]) "fs/bitmap.c":68:9 209 {*addsi_1}
+     (expr_list:REG_ARGS_SIZE (const_int 0 [0])
+        (nil)))
+(code_label 106 105 107 16 9 (nil) [1 uses])
+(note 107 106 108 16 [bb 16] NOTE_INSN_BASIC_BLOCK)
+(insn 108 107 109 16 (set (reg/f:SI 116)
+        (mem/f/c:SI (reg/f:SI 16 argp) [8 inode+0 S4 A32])) "fs/bitmap.c":69:32 75 {*movsi_internal}
+     (nil))
+(insn 109 108 110 16 (set (reg:HI 93 [ _11 ])
+        (mem:HI (plus:SI (reg/f:SI 116)
+                (const_int 46 [0x2e])) [4 inode_25(D)->i_num+0 S2 A16])) "fs/bitmap.c":69:32 76 {*movhi_internal}
+     (nil))
+(insn 110 109 111 16 (parallel [
+            (set (reg:HI 94 [ _12 ])
+                (lshiftrt:HI (reg:HI 93 [ _11 ])
+                    (const_int 13 [0xd])))
+            (clobber (reg:CC 17 flags))
+        ]) "fs/bitmap.c":69:40 711 {*lshrhi3_1}
+     (nil))
+(insn 111 110 112 16 (set (reg:SI 95 [ _13 ])
+        (zero_extend:SI (reg:HI 94 [ _12 ]))) "fs/bitmap.c":69:40 144 {*zero_extendhisi2}
+     (nil))
+(insn 112 111 113 16 (set (reg/f:SI 117)
+        (mem/f/c:SI (plus:SI (reg/f:SI 19 frame)
+                (const_int -4 [0xfffffffffffffffc])) [19 sb+0 S4 A32])) "fs/bitmap.c":69:14 75 {*movsi_internal}
+     (nil))
+(insn 113 112 114 16 (parallel [
+            (set (reg:SI 118)
+                (plus:SI (reg:SI 95 [ _13 ])
+                    (const_int 4 [0x4])))
+            (clobber (reg:CC 17 flags))
+        ]) "fs/bitmap.c":69:14 209 {*addsi_1}
+     (nil))
+(insn 114 113 115 16 (set (reg/f:SI 119)
+        (mem/f:SI (plus:SI (plus:SI (mult:SI (reg:SI 118)
+                        (const_int 4 [0x4]))
+                    (reg/f:SI 117))
+                (const_int 4 [0x4])) [6 sb_31->s_imap[_13]+0 S4 A32])) "fs/bitmap.c":69:14 75 {*movsi_internal}
+     (nil))
+(insn 115 114 116 16 (set (mem/f/c:SI (plus:SI (reg/f:SI 19 frame)
+                (const_int -8 [0xfffffffffffffff8])) [6 bh+0 S4 A32])
+        (reg/f:SI 119)) "fs/bitmap.c":69:14 75 {*movsi_internal}
+     (nil))
+(insn 116 115 117 16 (set (reg:CCZ 17 flags)
+        (compare:CCZ (mem/f/c:SI (plus:SI (reg/f:SI 19 frame)
+                    (const_int -8 [0xfffffffffffffff8])) [6 bh+0 S4 A32])
+            (const_int 0 [0]))) "fs/bitmap.c":69:8 7 {*cmpsi_ccno_1}
+     (nil))
+(jump_insn 117 116 118 16 (set (pc)
+        (if_then_else (ne (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref 125)
+            (pc))) "fs/bitmap.c":69:8 806 {*jcc}
+     (nil)
+ -> 125)
+(note 118 117 119 17 [bb 17] NOTE_INSN_BASIC_BLOCK)
+(insn 119 118 120 17 (parallel [
+            (set (reg/f:SI 7 sp)
+                (plus:SI (reg/f:SI 7 sp)
+                    (const_int -12 [0xfffffffffffffff4])))
+            (clobber (reg:CC 17 flags))
+        ]) "fs/bitmap.c":70:9 209 {*addsi_1}
+     (expr_list:REG_ARGS_SIZE (const_int 12 [0xc])
+        (nil)))
+(insn 120 119 121 17 (set (reg/f:SI 120)
+        (plus:SI (reg:SI 82)
+            (const:SI (unspec:SI [
+                        (symbol_ref/f:SI ("*.LC5") [flags 0x2]  <var_decl 0x74c8ddf5d900 *.LC5>)
+                    ] UNSPEC_GOTOFF)))) "fs/bitmap.c":70:9 205 {*leasi}
+     (expr_list:REG_EQUAL (symbol_ref/f:SI ("*.LC5") [flags 0x2]  <var_decl 0x74c8ddf5d900 *.LC5>)
+        (nil)))
+(insn 121 120 122 17 (set (mem/f:SI (pre_dec:SI (reg/f:SI 7 sp)) [2  S4 A32])
+        (reg/f:SI 120)) "fs/bitmap.c":70:9 54 {*pushsi2}
+     (expr_list:REG_ARGS_SIZE (const_int 16 [0x10])
+        (nil)))
+(insn 122 121 123 17 (set (reg:SI 3 bx)
+        (reg:SI 82)) "fs/bitmap.c":70:9 75 {*movsi_internal}
+     (nil))
+(call_insn 123 122 124 17 (call (mem:QI (symbol_ref:SI ("panic") [flags 0x41]  <function_decl 0x74c8ddf10b00 panic>) [0 panic S1 A8])
+        (const_int 16 [0x10])) "fs/bitmap.c":70:9 812 {*call}
+     (nil)
+    (expr_list (use (reg:SI 3 bx))
+        (nil)))
+(insn 124 123 125 17 (parallel [
+            (set (reg/f:SI 7 sp)
+                (plus:SI (reg/f:SI 7 sp)
+                    (const_int 16 [0x10])))
+            (clobber (reg:CC 17 flags))
+        ]) "fs/bitmap.c":70:9 209 {*addsi_1}
+     (expr_list:REG_ARGS_SIZE (const_int 0 [0])
+        (nil)))
+(code_label 125 124 126 18 10 (nil) [1 uses])
+(note 126 125 127 18 [bb 18] NOTE_INSN_BASIC_BLOCK)
+(insn 127 126 128 18 (set (reg/f:SI 121)
+        (mem/f/c:SI (reg/f:SI 16 argp) [8 inode+0 S4 A32])) "fs/bitmap.c":71:9 75 {*movsi_internal}
+     (nil))
+(insn 128 127 129 18 (set (reg:HI 96 [ _14 ])
+        (mem:HI (plus:SI (reg/f:SI 121)
+                (const_int 46 [0x2e])) [4 inode_25(D)->i_num+0 S2 A16])) "fs/bitmap.c":71:9 76 {*movhi_internal}
+     (nil))
+(insn 129 128 130 18 (set (reg:SI 97 [ _15 ])
+        (zero_extend:SI (reg:HI 96 [ _14 ]))) "fs/bitmap.c":71:9 144 {*zero_extendhisi2}
+     (nil))
+(insn 130 129 131 18 (parallel [
+            (set (reg:SI 98 [ _16 ])
+                (and:SI (reg:SI 97 [ _15 ])
+                    (const_int 8191 [0x1fff])))
+            (clobber (reg:CC 17 flags))
+        ]) "fs/bitmap.c":71:9 490 {*andsi_1}
+     (nil))
+(insn 131 130 132 18 (set (reg/f:SI 122)
+        (mem/f/c:SI (plus:SI (reg/f:SI 19 frame)
+                (const_int -8 [0xfffffffffffffff8])) [6 bh+0 S4 A32])) "fs/bitmap.c":71:9 75 {*movsi_internal}
+     (nil))
+(insn 132 131 134 18 (set (reg/f:SI 99 [ _17 ])
+        (mem/f:SI (reg/f:SI 122) [2 bh_34->b_data+0 S4 A32])) "fs/bitmap.c":71:9 75 {*movsi_internal}
+     (nil))
+(insn 134 132 135 18 (set (reg:SI 124)
+        (const_int 0 [0])) "fs/bitmap.c":71:9 75 {*movsi_internal}
+     (nil))
+(insn 135 134 133 18 (parallel [
+            (set (reg:SI 123 [ res ])
+                (asm_operands/v:SI ("btrl %2,%3
+	setnb %%al") ("=a") 0 [
+                        (reg:SI 124)
+                        (reg:SI 98 [ _16 ])
+                        (mem:QI (reg/f:SI 99 [ _17 ]) [0 *_17+0 S1 A8])
+                    ]
+                     [
+                        (asm_input:SI ("0") fs/bitmap.c:71)
+                        (asm_input:SI ("r") fs/bitmap.c:71)
+                        (asm_input:QI ("m") fs/bitmap.c:71)
+                    ]
+                     [] fs/bitmap.c:71))
+            (clobber (reg:CC 17 flags))
+        ]) "fs/bitmap.c":71:9 -1
+     (nil))
+(insn 133 135 136 18 (set (reg/v:SI 100 [ res ])
+        (reg:SI 123 [ res ])) "fs/bitmap.c":71:9 75 {*movsi_internal}
+     (nil))
+(insn 136 133 137 18 (set (reg:SI 101 [ _37 ])
+        (reg/v:SI 100 [ res ])) "fs/bitmap.c":71:9 75 {*movsi_internal}
+     (nil))
+(insn 137 136 138 18 (set (reg:CCZ 17 flags)
+        (compare:CCZ (reg:SI 101 [ _37 ])
+            (const_int 0 [0]))) "fs/bitmap.c":71:8 7 {*cmpsi_ccno_1}
+     (nil))
+(jump_insn 138 137 139 18 (set (pc)
+        (if_then_else (eq (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref 146)
+            (pc))) "fs/bitmap.c":71:8 806 {*jcc}
+     (nil)
+ -> 146)
+(note 139 138 140 19 [bb 19] NOTE_INSN_BASIC_BLOCK)
+(insn 140 139 141 19 (parallel [
+            (set (reg/f:SI 7 sp)
+                (plus:SI (reg/f:SI 7 sp)
+                    (const_int -12 [0xfffffffffffffff4])))
+            (clobber (reg:CC 17 flags))
+        ]) "fs/bitmap.c":72:9 209 {*addsi_1}
+     (expr_list:REG_ARGS_SIZE (const_int 12 [0xc])
+        (nil)))
+(insn 141 140 142 19 (set (reg/f:SI 125)
+        (plus:SI (reg:SI 82)
+            (const:SI (unspec:SI [
+                        (symbol_ref/f:SI ("*.LC6") [flags 0x2]  <var_decl 0x74c8ddf5da20 *.LC6>)
+                    ] UNSPEC_GOTOFF)))) "fs/bitmap.c":72:9 205 {*leasi}
+     (expr_list:REG_EQUAL (symbol_ref/f:SI ("*.LC6") [flags 0x2]  <var_decl 0x74c8ddf5da20 *.LC6>)
+        (nil)))
+(insn 142 141 143 19 (set (mem/f:SI (pre_dec:SI (reg/f:SI 7 sp)) [2  S4 A32])
+        (reg/f:SI 125)) "fs/bitmap.c":72:9 54 {*pushsi2}
+     (expr_list:REG_ARGS_SIZE (const_int 16 [0x10])
+        (nil)))
+(insn 143 142 144 19 (set (reg:SI 3 bx)
+        (reg:SI 82)) "fs/bitmap.c":72:9 75 {*movsi_internal}
+     (nil))
+(call_insn 144 143 145 19 (set (reg:SI 0 ax)
+        (call (mem:QI (symbol_ref:SI ("printk") [flags 0x41]  <function_decl 0x74c8ddf10900 printk>) [0 printk S1 A8])
+            (const_int 16 [0x10]))) "fs/bitmap.c":72:9 823 {*call_value}
+     (nil)
+    (expr_list (use (reg:SI 3 bx))
+        (nil)))
+(insn 145 144 146 19 (parallel [
+            (set (reg/f:SI 7 sp)
+                (plus:SI (reg/f:SI 7 sp)
+                    (const_int 16 [0x10])))
+            (clobber (reg:CC 17 flags))
+        ]) "fs/bitmap.c":72:9 209 {*addsi_1}
+     (expr_list:REG_ARGS_SIZE (const_int 0 [0])
+        (nil)))
+(code_label 146 145 147 20 11 (nil) [1 uses])
+(note 147 146 148 20 [bb 20] NOTE_INSN_BASIC_BLOCK)
+(insn 148 147 149 20 (set (reg/f:SI 126)
+        (mem/f/c:SI (plus:SI (reg/f:SI 19 frame)
+                (const_int -8 [0xfffffffffffffff8])) [6 bh+0 S4 A32])) "fs/bitmap.c":73:16 75 {*movsi_internal}
+     (nil))
+(insn 149 148 150 20 (set (mem:QI (plus:SI (reg/f:SI 126)
+                (const_int 11 [0xb])) [0 bh_34->b_dirt+0 S1 A8])
+        (const_int 1 [0x1])) "fs/bitmap.c":73:16 77 {*movqi_internal}
+     (nil))
+(insn 150 149 151 20 (parallel [
+            (set (reg/f:SI 7 sp)
+                (plus:SI (reg/f:SI 7 sp)
+                    (const_int -4 [0xfffffffffffffffc])))
+            (clobber (reg:CC 17 flags))
+        ]) "fs/bitmap.c":74:5 209 {*addsi_1}
+     (expr_list:REG_ARGS_SIZE (const_int 4 [0x4])
+        (nil)))
+(insn 151 150 152 20 (set (mem:SI (pre_dec:SI (reg/f:SI 7 sp)) [13  S4 A32])
+        (const_int 56 [0x38])) "fs/bitmap.c":74:5 54 {*pushsi2}
+     (expr_list:REG_ARGS_SIZE (const_int 8 [0x8])
+        (nil)))
+(insn 152 151 153 20 (set (mem:SI (pre_dec:SI (reg/f:SI 7 sp)) [13  S4 A32])
+        (const_int 0 [0])) "fs/bitmap.c":74:5 54 {*pushsi2}
+     (expr_list:REG_ARGS_SIZE (const_int 12 [0xc])
+        (nil)))
+(insn 153 152 154 20 (set (mem/f:SI (pre_dec:SI (reg/f:SI 7 sp)) [8  S4 A32])
+        (mem/f/c:SI (reg/f:SI 16 argp) [8 inode+0 S4 A32])) "fs/bitmap.c":74:5 54 {*pushsi2}
+     (expr_list:REG_ARGS_SIZE (const_int 16 [0x10])
+        (nil)))
+(insn 154 153 155 20 (set (reg:SI 3 bx)
+        (reg:SI 82)) "fs/bitmap.c":74:5 75 {*movsi_internal}
+     (nil))
+(call_insn 155 154 156 20 (set (reg:SI 0 ax)
+        (call (mem:QI (symbol_ref:SI ("memset") [flags 0x41]  <function_decl 0x74c8ddf3b200 memset>) [0 memset S1 A8])
+            (const_int 16 [0x10]))) "fs/bitmap.c":74:5 823 {*call_value}
+     (nil)
+    (expr_list (use (reg:SI 3 bx))
+        (nil)))
+(insn 156 155 159 20 (parallel [
+            (set (reg/f:SI 7 sp)
+                (plus:SI (reg/f:SI 7 sp)
+                    (const_int 16 [0x10])))
+            (clobber (reg:CC 17 flags))
+        ]) "fs/bitmap.c":74:5 209 {*addsi_1}
+     (expr_list:REG_ARGS_SIZE (const_int 0 [0])
+        (nil)))
+(code_label 159 156 160 22 1 (nil) [2 uses])
+(note 160 159 0 22 [bb 22] NOTE_INSN_BASIC_BLOCK)
+
+;; Function free_block (free_block, funcdef_no=2, decl_uid=1119, cgraph_uid=3, symbol_order=2)
+
+(note 1 0 3 NOTE_INSN_DELETED)
+(note 3 1 2 2 [bb 2] NOTE_INSN_BASIC_BLOCK)
+(note 2 3 5 2 NOTE_INSN_FUNCTION_BEG)
+(insn 5 2 6 2 (parallel [
+            (set (reg/f:SI 7 sp)
+                (plus:SI (reg/f:SI 7 sp)
+                    (const_int -12 [0xfffffffffffffff4])))
+            (clobber (reg:CC 17 flags))
+        ]) "fs/bitmap.c":82:16 209 {*addsi_1}
+     (expr_list:REG_ARGS_SIZE (const_int 12 [0xc])
+        (nil)))
+(insn 6 5 7 2 (set (mem:SI (pre_dec:SI (reg/f:SI 7 sp)) [13  S4 A32])
+        (mem/c:SI (reg/f:SI 16 argp) [13 dev+0 S4 A32])) "fs/bitmap.c":82:16 54 {*pushsi2}
+     (expr_list:REG_ARGS_SIZE (const_int 16 [0x10])
+        (nil)))
+(insn 7 6 8 2 (set (reg:SI 3 bx)
+        (reg:SI 82)) "fs/bitmap.c":82:16 75 {*movsi_internal}
+     (nil))
+(call_insn 8 7 9 2 (set (reg:SI 0 ax)
+        (call (mem:QI (symbol_ref:SI ("get_super") [flags 0x41]  <function_decl 0x74c8ddf0e000 get_super>) [0 get_super S1 A8])
+            (const_int 16 [0x10]))) "fs/bitmap.c":82:16 823 {*call_value}
+     (nil)
+    (expr_list (use (reg:SI 3 bx))
+        (nil)))
+(insn 9 8 10 2 (parallel [
+            (set (reg/f:SI 7 sp)
+                (plus:SI (reg/f:SI 7 sp)
+                    (const_int 16 [0x10])))
+            (clobber (reg:CC 17 flags))
+        ]) "fs/bitmap.c":82:16 209 {*addsi_1}
+     (expr_list:REG_ARGS_SIZE (const_int 0 [0])
+        (nil)))
+(insn 10 9 11 2 (set (reg:SI 105)
+        (reg:SI 0 ax)) "fs/bitmap.c":82:16 75 {*movsi_internal}
+     (nil))
+(insn 11 10 12 2 (set (mem/f/c:SI (plus:SI (reg/f:SI 19 frame)
+                (const_int -4 [0xfffffffffffffffc])) [19 sb+0 S4 A32])
+        (reg:SI 105)) "fs/bitmap.c":82:16 75 {*movsi_internal}
+     (nil))
+(insn 12 11 13 2 (set (reg:CCZ 17 flags)
+        (compare:CCZ (mem/f/c:SI (plus:SI (reg/f:SI 19 frame)
+                    (const_int -4 [0xfffffffffffffffc])) [19 sb+0 S4 A32])
+            (const_int 0 [0]))) "fs/bitmap.c":82:8 7 {*cmpsi_ccno_1}
+     (nil))
+(jump_insn 13 12 14 2 (set (pc)
+        (if_then_else (ne (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref 21)
+            (pc))) "fs/bitmap.c":82:8 806 {*jcc}
+     (nil)
+ -> 21)
+(note 14 13 15 4 [bb 4] NOTE_INSN_BASIC_BLOCK)
+(insn 15 14 16 4 (parallel [
+            (set (reg/f:SI 7 sp)
+                (plus:SI (reg/f:SI 7 sp)
+                    (const_int -12 [0xfffffffffffffff4])))
+            (clobber (reg:CC 17 flags))
+        ]) "fs/bitmap.c":83:9 209 {*addsi_1}
+     (expr_list:REG_ARGS_SIZE (const_int 12 [0xc])
+        (nil)))
+(insn 16 15 17 4 (set (reg/f:SI 106)
+        (plus:SI (reg:SI 82)
+            (const:SI (unspec:SI [
+                        (symbol_ref/f:SI ("*.LC7") [flags 0x2]  <var_decl 0x74c8ddf5dbd0 *.LC7>)
+                    ] UNSPEC_GOTOFF)))) "fs/bitmap.c":83:9 205 {*leasi}
+     (expr_list:REG_EQUAL (symbol_ref/f:SI ("*.LC7") [flags 0x2]  <var_decl 0x74c8ddf5dbd0 *.LC7>)
+        (nil)))
+(insn 17 16 18 4 (set (mem/f:SI (pre_dec:SI (reg/f:SI 7 sp)) [2  S4 A32])
+        (reg/f:SI 106)) "fs/bitmap.c":83:9 54 {*pushsi2}
+     (expr_list:REG_ARGS_SIZE (const_int 16 [0x10])
+        (nil)))
+(insn 18 17 19 4 (set (reg:SI 3 bx)
+        (reg:SI 82)) "fs/bitmap.c":83:9 75 {*movsi_internal}
+     (nil))
+(call_insn 19 18 20 4 (call (mem:QI (symbol_ref:SI ("panic") [flags 0x41]  <function_decl 0x74c8ddf10b00 panic>) [0 panic S1 A8])
+        (const_int 16 [0x10])) "fs/bitmap.c":83:9 812 {*call}
+     (nil)
+    (expr_list (use (reg:SI 3 bx))
+        (nil)))
+(insn 20 19 21 4 (parallel [
+            (set (reg/f:SI 7 sp)
+                (plus:SI (reg/f:SI 7 sp)
+                    (const_int 16 [0x10])))
+            (clobber (reg:CC 17 flags))
+        ]) "fs/bitmap.c":83:9 209 {*addsi_1}
+     (expr_list:REG_ARGS_SIZE (const_int 0 [0])
+        (nil)))
+(code_label 21 20 22 5 14 (nil) [1 uses])
+(note 22 21 23 5 [bb 5] NOTE_INSN_BASIC_BLOCK)
+(insn 23 22 24 5 (set (reg/f:SI 107)
+        (mem/f/c:SI (plus:SI (reg/f:SI 19 frame)
+                (const_int -4 [0xfffffffffffffffc])) [19 sb+0 S4 A32])) "fs/bitmap.c":84:19 75 {*movsi_internal}
+     (nil))
+(insn 24 23 25 5 (set (reg:HI 83 [ _1 ])
+        (mem:HI (plus:SI (reg/f:SI 107)
+                (const_int 8 [0x8])) [4 sb_29->s_firstdatazone+0 S2 A32])) "fs/bitmap.c":84:19 76 {*movhi_internal}
+     (nil))
+(insn 25 24 26 5 (set (reg:SI 84 [ _2 ])
+        (zero_extend:SI (reg:HI 83 [ _1 ]))) "fs/bitmap.c":84:19 144 {*zero_extendhisi2}
+     (nil))
+(insn 26 25 27 5 (set (reg:CCGC 17 flags)
+        (compare:CCGC (mem/c:SI (plus:SI (reg/f:SI 16 argp)
+                    (const_int 4 [0x4])) [13 block+0 S4 A32])
+            (reg:SI 84 [ _2 ]))) "fs/bitmap.c":84:8 11 {*cmpsi_1}
+     (nil))
+(jump_insn 27 26 28 5 (set (pc)
+        (if_then_else (lt (reg:CCGC 17 flags)
+                (const_int 0 [0]))
+            (label_ref 34)
+            (pc))) "fs/bitmap.c":84:8 806 {*jcc}
+     (nil)
+ -> 34)
+(note 28 27 29 6 [bb 6] NOTE_INSN_BASIC_BLOCK)
+(insn 29 28 30 6 (set (reg/f:SI 108)
+        (mem/f/c:SI (plus:SI (reg/f:SI 19 frame)
+                (const_int -4 [0xfffffffffffffffc])) [19 sb+0 S4 A32])) "fs/bitmap.c":84:51 75 {*movsi_internal}
+     (nil))
+(insn 30 29 31 6 (set (reg:HI 85 [ _3 ])
+        (mem:HI (plus:SI (reg/f:SI 108)
+                (const_int 2 [0x2])) [4 sb_29->s_nzones+0 S2 A16])) "fs/bitmap.c":84:51 76 {*movhi_internal}
+     (nil))
+(insn 31 30 32 6 (set (reg:SI 86 [ _4 ])
+        (zero_extend:SI (reg:HI 85 [ _3 ]))) "fs/bitmap.c":84:51 144 {*zero_extendhisi2}
+     (nil))
+(insn 32 31 33 6 (set (reg:CCGC 17 flags)
+        (compare:CCGC (mem/c:SI (plus:SI (reg/f:SI 16 argp)
+                    (const_int 4 [0x4])) [13 block+0 S4 A32])
+            (reg:SI 86 [ _4 ]))) "fs/bitmap.c":84:37 11 {*cmpsi_1}
+     (nil))
+(jump_insn 33 32 34 6 (set (pc)
+        (if_then_else (lt (reg:CCGC 17 flags)
+                (const_int 0 [0]))
+            (label_ref 42)
+            (pc))) "fs/bitmap.c":84:37 806 {*jcc}
+     (nil)
+ -> 42)
+(code_label 34 33 35 7 15 (nil) [1 uses])
+(note 35 34 36 7 [bb 7] NOTE_INSN_BASIC_BLOCK)
+(insn 36 35 37 7 (parallel [
+            (set (reg/f:SI 7 sp)
+                (plus:SI (reg/f:SI 7 sp)
+                    (const_int -12 [0xfffffffffffffff4])))
+            (clobber (reg:CC 17 flags))
+        ]) "fs/bitmap.c":85:9 209 {*addsi_1}
+     (expr_list:REG_ARGS_SIZE (const_int 12 [0xc])
+        (nil)))
+(insn 37 36 38 7 (set (reg/f:SI 109)
+        (plus:SI (reg:SI 82)
+            (const:SI (unspec:SI [
+                        (symbol_ref/f:SI ("*.LC8") [flags 0x2]  <var_decl 0x74c8ddf5dc60 *.LC8>)
+                    ] UNSPEC_GOTOFF)))) "fs/bitmap.c":85:9 205 {*leasi}
+     (expr_list:REG_EQUAL (symbol_ref/f:SI ("*.LC8") [flags 0x2]  <var_decl 0x74c8ddf5dc60 *.LC8>)
+        (nil)))
+(insn 38 37 39 7 (set (mem/f:SI (pre_dec:SI (reg/f:SI 7 sp)) [2  S4 A32])
+        (reg/f:SI 109)) "fs/bitmap.c":85:9 54 {*pushsi2}
+     (expr_list:REG_ARGS_SIZE (const_int 16 [0x10])
+        (nil)))
+(insn 39 38 40 7 (set (reg:SI 3 bx)
+        (reg:SI 82)) "fs/bitmap.c":85:9 75 {*movsi_internal}
+     (nil))
+(call_insn 40 39 41 7 (call (mem:QI (symbol_ref:SI ("panic") [flags 0x41]  <function_decl 0x74c8ddf10b00 panic>) [0 panic S1 A8])
+        (const_int 16 [0x10])) "fs/bitmap.c":85:9 812 {*call}
+     (nil)
+    (expr_list (use (reg:SI 3 bx))
+        (nil)))
+(insn 41 40 42 7 (parallel [
+            (set (reg/f:SI 7 sp)
+                (plus:SI (reg/f:SI 7 sp)
+                    (const_int 16 [0x10])))
+            (clobber (reg:CC 17 flags))
+        ]) "fs/bitmap.c":85:9 209 {*addsi_1}
+     (expr_list:REG_ARGS_SIZE (const_int 0 [0])
+        (nil)))
+(code_label 42 41 43 8 16 (nil) [1 uses])
+(note 43 42 44 8 [bb 8] NOTE_INSN_BASIC_BLOCK)
+(insn 44 43 45 8 (parallel [
+            (set (reg/f:SI 7 sp)
+                (plus:SI (reg/f:SI 7 sp)
+                    (const_int -8 [0xfffffffffffffff8])))
+            (clobber (reg:CC 17 flags))
+        ]) "fs/bitmap.c":86:10 209 {*addsi_1}
+     (expr_list:REG_ARGS_SIZE (const_int 8 [0x8])
+        (nil)))
+(insn 45 44 46 8 (set (mem:SI (pre_dec:SI (reg/f:SI 7 sp)) [13  S4 A32])
+        (mem/c:SI (plus:SI (reg/f:SI 16 argp)
+                (const_int 4 [0x4])) [13 block+0 S4 A32])) "fs/bitmap.c":86:10 54 {*pushsi2}
+     (expr_list:REG_ARGS_SIZE (const_int 12 [0xc])
+        (nil)))
+(insn 46 45 47 8 (set (mem:SI (pre_dec:SI (reg/f:SI 7 sp)) [13  S4 A32])
+        (mem/c:SI (reg/f:SI 16 argp) [13 dev+0 S4 A32])) "fs/bitmap.c":86:10 54 {*pushsi2}
+     (expr_list:REG_ARGS_SIZE (const_int 16 [0x10])
+        (nil)))
+(insn 47 46 48 8 (set (reg:SI 3 bx)
+        (reg:SI 82)) "fs/bitmap.c":86:10 75 {*movsi_internal}
+     (nil))
+(call_insn 48 47 49 8 (set (reg:SI 0 ax)
+        (call (mem:QI (symbol_ref:SI ("get_hash_table") [flags 0x41]  <function_decl 0x74c8ddf0e400 get_hash_table>) [0 get_hash_table S1 A8])
+            (const_int 16 [0x10]))) "fs/bitmap.c":86:10 823 {*call_value}
+     (nil)
+    (expr_list (use (reg:SI 3 bx))
+        (nil)))
+(insn 49 48 50 8 (parallel [
+            (set (reg/f:SI 7 sp)
+                (plus:SI (reg/f:SI 7 sp)
+                    (const_int 16 [0x10])))
+            (clobber (reg:CC 17 flags))
+        ]) "fs/bitmap.c":86:10 209 {*addsi_1}
+     (expr_list:REG_ARGS_SIZE (const_int 0 [0])
+        (nil)))
+(insn 50 49 51 8 (set (reg:SI 110)
+        (reg:SI 0 ax)) "fs/bitmap.c":86:10 75 {*movsi_internal}
+     (nil))
+(insn 51 50 52 8 (set (mem/f/c:SI (plus:SI (reg/f:SI 19 frame)
+                (const_int -8 [0xfffffffffffffff8])) [6 bh+0 S4 A32])
+        (reg:SI 110)) "fs/bitmap.c":86:10 75 {*movsi_internal}
+     (nil))
+(insn 52 51 53 8 (set (reg:CCZ 17 flags)
+        (compare:CCZ (mem/f/c:SI (plus:SI (reg/f:SI 19 frame)
+                    (const_int -8 [0xfffffffffffffff8])) [6 bh+0 S4 A32])
+            (const_int 0 [0]))) "fs/bitmap.c":87:8 7 {*cmpsi_ccno_1}
+     (nil))
+(jump_insn 53 52 54 8 (set (pc)
+        (if_then_else (eq (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref 84)
+            (pc))) "fs/bitmap.c":87:8 806 {*jcc}
+     (nil)
+ -> 84)
+(note 54 53 55 9 [bb 9] NOTE_INSN_BASIC_BLOCK)
+(insn 55 54 56 9 (set (reg/f:SI 111)
+        (mem/f/c:SI (plus:SI (reg/f:SI 19 frame)
+                (const_int -8 [0xfffffffffffffff8])) [6 bh+0 S4 A32])) "fs/bitmap.c":88:15 75 {*movsi_internal}
+     (nil))
+(insn 56 55 57 9 (set (reg:QI 87 [ _5 ])
+        (mem:QI (plus:SI (reg/f:SI 111)
+                (const_int 12 [0xc])) [0 bh_34->b_count+0 S1 A32])) "fs/bitmap.c":88:15 77 {*movqi_internal}
+     (nil))
+(insn 57 56 58 9 (set (reg:CCZ 17 flags)
+        (compare:CCZ (reg:QI 87 [ _5 ])
+            (const_int 1 [0x1]))) "fs/bitmap.c":88:12 9 {*cmpqi_1}
+     (nil))
+(jump_insn 58 57 59 9 (set (pc)
+        (if_then_else (eq (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref 73)
+            (pc))) "fs/bitmap.c":88:12 806 {*jcc}
+     (nil)
+ -> 73)
+(note 59 58 60 10 [bb 10] NOTE_INSN_BASIC_BLOCK)
+(insn 60 59 61 10 (set (reg/f:SI 112)
+        (mem/f/c:SI (plus:SI (reg/f:SI 19 frame)
+                (const_int -8 [0xfffffffffffffff8])) [6 bh+0 S4 A32])) "fs/bitmap.c":90:35 75 {*movsi_internal}
+     (nil))
+(insn 61 60 62 10 (set (reg:QI 88 [ _6 ])
+        (mem:QI (plus:SI (reg/f:SI 112)
+                (const_int 12 [0xc])) [0 bh_34->b_count+0 S1 A32])) "fs/bitmap.c":90:35 77 {*movqi_internal}
+     (nil))
+(insn 62 61 63 10 (set (reg:SI 89 [ _7 ])
+        (zero_extend:SI (reg:QI 88 [ _6 ]))) "fs/bitmap.c":89:13 143 {*zero_extendqisi2}
+     (nil))
+(insn 63 62 64 10 (set (mem:SI (pre_dec:SI (reg/f:SI 7 sp)) [13  S4 A32])
+        (reg:SI 89 [ _7 ])) "fs/bitmap.c":89:13 54 {*pushsi2}
+     (expr_list:REG_ARGS_SIZE (const_int 4 [0x4])
+        (nil)))
+(insn 64 63 65 10 (set (mem:SI (pre_dec:SI (reg/f:SI 7 sp)) [13  S4 A32])
+        (mem/c:SI (plus:SI (reg/f:SI 16 argp)
+                (const_int 4 [0x4])) [13 block+0 S4 A32])) "fs/bitmap.c":89:13 54 {*pushsi2}
+     (expr_list:REG_ARGS_SIZE (const_int 8 [0x8])
+        (nil)))
+(insn 65 64 66 10 (set (mem:SI (pre_dec:SI (reg/f:SI 7 sp)) [13  S4 A32])
+        (mem/c:SI (reg/f:SI 16 argp) [13 dev+0 S4 A32])) "fs/bitmap.c":89:13 54 {*pushsi2}
+     (expr_list:REG_ARGS_SIZE (const_int 12 [0xc])
+        (nil)))
+(insn 66 65 67 10 (set (reg/f:SI 113)
+        (plus:SI (reg:SI 82)
+            (const:SI (unspec:SI [
+                        (symbol_ref/f:SI ("*.LC9") [flags 0x2]  <var_decl 0x74c8ddf5dcf0 *.LC9>)
+                    ] UNSPEC_GOTOFF)))) "fs/bitmap.c":89:13 205 {*leasi}
+     (expr_list:REG_EQUAL (symbol_ref/f:SI ("*.LC9") [flags 0x2]  <var_decl 0x74c8ddf5dcf0 *.LC9>)
+        (nil)))
+(insn 67 66 68 10 (set (mem/f:SI (pre_dec:SI (reg/f:SI 7 sp)) [2  S4 A32])
+        (reg/f:SI 113)) "fs/bitmap.c":89:13 54 {*pushsi2}
+     (expr_list:REG_ARGS_SIZE (const_int 16 [0x10])
+        (nil)))
+(insn 68 67 69 10 (set (reg:SI 3 bx)
+        (reg:SI 82)) "fs/bitmap.c":89:13 75 {*movsi_internal}
+     (nil))
+(call_insn 69 68 70 10 (set (reg:SI 0 ax)
+        (call (mem:QI (symbol_ref:SI ("printk") [flags 0x41]  <function_decl 0x74c8ddf10900 printk>) [0 printk S1 A8])
+            (const_int 16 [0x10]))) "fs/bitmap.c":89:13 823 {*call_value}
+     (nil)
+    (expr_list (use (reg:SI 3 bx))
+        (nil)))
+(insn 70 69 71 10 (parallel [
+            (set (reg/f:SI 7 sp)
+                (plus:SI (reg/f:SI 7 sp)
+                    (const_int 16 [0x10])))
+            (clobber (reg:CC 17 flags))
+        ]) "fs/bitmap.c":89:13 209 {*addsi_1}
+     (expr_list:REG_ARGS_SIZE (const_int 0 [0])
+        (nil)))
+(jump_insn 71 70 72 10 (set (pc)
+        (label_ref:SI 150)) "fs/bitmap.c":91:13 807 {jump}
+     (nil)
+ -> 150)
+(barrier 72 71 73)
+(code_label 73 72 74 11 18 (nil) [1 uses])
+(note 74 73 75 11 [bb 11] NOTE_INSN_BASIC_BLOCK)
+(insn 75 74 76 11 (set (reg/f:SI 114)
+        (mem/f/c:SI (plus:SI (reg/f:SI 19 frame)
+                (const_int -8 [0xfffffffffffffff8])) [6 bh+0 S4 A32])) "fs/bitmap.c":93:20 75 {*movsi_internal}
+     (nil))
+(insn 76 75 77 11 (set (mem:QI (plus:SI (reg/f:SI 114)
+                (const_int 11 [0xb])) [0 bh_34->b_dirt+0 S1 A8])
+        (const_int 0 [0])) "fs/bitmap.c":93:20 77 {*movqi_internal}
+     (nil))
+(insn 77 76 78 11 (set (reg/f:SI 115)
+        (mem/f/c:SI (plus:SI (reg/f:SI 19 frame)
+                (const_int -8 [0xfffffffffffffff8])) [6 bh+0 S4 A32])) "fs/bitmap.c":94:24 75 {*movsi_internal}
+     (nil))
+(insn 78 77 79 11 (set (mem:QI (plus:SI (reg/f:SI 115)
+                (const_int 10 [0xa])) [0 bh_34->b_uptodate+0 S1 A16])
+        (const_int 0 [0])) "fs/bitmap.c":94:24 77 {*movqi_internal}
+     (nil))
+(insn 79 78 80 11 (parallel [
+            (set (reg/f:SI 7 sp)
+                (plus:SI (reg/f:SI 7 sp)
+                    (const_int -12 [0xfffffffffffffff4])))
+            (clobber (reg:CC 17 flags))
+        ]) "fs/bitmap.c":95:9 209 {*addsi_1}
+     (expr_list:REG_ARGS_SIZE (const_int 12 [0xc])
+        (nil)))
+(insn 80 79 81 11 (set (mem/f:SI (pre_dec:SI (reg/f:SI 7 sp)) [6  S4 A32])
+        (mem/f/c:SI (plus:SI (reg/f:SI 19 frame)
+                (const_int -8 [0xfffffffffffffff8])) [6 bh+0 S4 A32])) "fs/bitmap.c":95:9 54 {*pushsi2}
+     (expr_list:REG_ARGS_SIZE (const_int 16 [0x10])
+        (nil)))
+(insn 81 80 82 11 (set (reg:SI 3 bx)
+        (reg:SI 82)) "fs/bitmap.c":95:9 75 {*movsi_internal}
+     (nil))
+(call_insn 82 81 83 11 (call (mem:QI (symbol_ref:SI ("brelse") [flags 0x41]  <function_decl 0x74c8ddf0e200 brelse>) [0 brelse S1 A8])
+        (const_int 16 [0x10])) "fs/bitmap.c":95:9 812 {*call}
+     (nil)
+    (expr_list (use (reg:SI 3 bx))
+        (nil)))
+(insn 83 82 84 11 (parallel [
+            (set (reg/f:SI 7 sp)
+                (plus:SI (reg/f:SI 7 sp)
+                    (const_int 16 [0x10])))
+            (clobber (reg:CC 17 flags))
+        ]) "fs/bitmap.c":95:9 209 {*addsi_1}
+     (expr_list:REG_ARGS_SIZE (const_int 0 [0])
+        (nil)))
+(code_label 84 83 85 12 17 (nil) [1 uses])
+(note 85 84 86 12 [bb 12] NOTE_INSN_BASIC_BLOCK)
+(insn 86 85 87 12 (set (reg/f:SI 116)
+        (mem/f/c:SI (plus:SI (reg/f:SI 19 frame)
+                (const_int -4 [0xfffffffffffffffc])) [19 sb+0 S4 A32])) "fs/bitmap.c":97:16 75 {*movsi_internal}
+     (nil))
+(insn 87 86 88 12 (set (reg:HI 90 [ _8 ])
+        (mem:HI (plus:SI (reg/f:SI 116)
+                (const_int 8 [0x8])) [4 sb_29->s_firstdatazone+0 S2 A32])) "fs/bitmap.c":97:16 76 {*movhi_internal}
+     (nil))
+(insn 88 87 89 12 (set (reg:SI 91 [ _9 ])
+        (zero_extend:SI (reg:HI 90 [ _8 ]))) "fs/bitmap.c":97:16 144 {*zero_extendhisi2}
+     (nil))
+(insn 89 88 90 12 (parallel [
+            (set (reg:SI 92 [ _10 ])
+                (plus:SI (reg:SI 91 [ _9 ])
+                    (const_int -1 [0xffffffffffffffff])))
+            (clobber (reg:CC 17 flags))
+        ]) "fs/bitmap.c":97:34 209 {*addsi_1}
+     (nil))
+(insn 90 89 91 12 (parallel [
+            (set (mem/c:SI (plus:SI (reg/f:SI 16 argp)
+                        (const_int 4 [0x4])) [13 block+0 S4 A32])
+                (minus:SI (mem/c:SI (plus:SI (reg/f:SI 16 argp)
+                            (const_int 4 [0x4])) [13 block+0 S4 A32])
+                    (reg:SI 92 [ _10 ])))
+            (clobber (reg:CC 17 flags))
+        ]) "fs/bitmap.c":97:11 282 {*subsi_1}
+     (nil))
+(insn 91 90 92 12 (set (reg:SI 117)
+        (mem/c:SI (plus:SI (reg/f:SI 16 argp)
+                (const_int 4 [0x4])) [13 block+0 S4 A32])) "fs/bitmap.c":98:9 75 {*movsi_internal}
+     (nil))
+(insn 92 91 93 12 (parallel [
+            (set (reg:SI 93 [ _11 ])
+                (and:SI (reg:SI 117)
+                    (const_int 8191 [0x1fff])))
+            (clobber (reg:CC 17 flags))
+        ]) "fs/bitmap.c":98:9 490 {*andsi_1}
+     (expr_list:REG_EQUAL (and:SI (mem/c:SI (plus:SI (reg/f:SI 16 argp)
+                    (const_int 4 [0x4])) [13 block+0 S4 A32])
+            (const_int 8191 [0x1fff]))
+        (nil)))
+(insn 93 92 94 12 (set (reg:SI 118)
+        (mem/c:SI (plus:SI (reg/f:SI 16 argp)
+                (const_int 4 [0x4])) [13 block+0 S4 A32])) "fs/bitmap.c":98:9 75 {*movsi_internal}
+     (nil))
+(insn 94 93 95 12 (set (reg:SI 119)
+        (reg:SI 118)) "fs/bitmap.c":98:9 75 {*movsi_internal}
+     (nil))
+(insn 95 94 98 12 (parallel [
+            (set (reg:SI 120)
+                (plus:SI (reg:SI 119)
+                    (const_int 8191 [0x1fff])))
+            (clobber (reg:CC 17 flags))
+        ]) "fs/bitmap.c":98:9 209 {*addsi_1}
+     (nil))
+(insn 98 95 99 12 (set (reg:CCGOC 17 flags)
+        (compare:CCGOC (reg:SI 119)
+            (const_int 0 [0]))) "fs/bitmap.c":98:9 7 {*cmpsi_ccno_1}
+     (nil))
+(insn 99 98 100 12 (set (reg:SI 119)
+        (if_then_else:SI (lt (reg:CCGOC 17 flags)
+                (const_int 0 [0]))
+            (reg:SI 120)
+            (reg:SI 119))) "fs/bitmap.c":98:9 1100 {*movsicc_noc}
+     (nil))
+(insn 100 99 101 12 (parallel [
+            (set (reg:SI 121)
+                (ashiftrt:SI (reg:SI 119)
+                    (const_int 13 [0xd])))
+            (clobber (reg:CC 17 flags))
+        ]) "fs/bitmap.c":98:9 702 {*ashrsi3_1}
+     (expr_list:REG_EQUAL (div:SI (reg:SI 118)
+            (const_int 8192 [0x2000]))
+        (nil)))
+(insn 101 100 102 12 (set (reg:SI 94 [ _12 ])
+        (reg:SI 121)) "fs/bitmap.c":98:9 75 {*movsi_internal}
+     (nil))
+(insn 102 101 103 12 (set (reg/f:SI 122)
+        (mem/f/c:SI (plus:SI (reg/f:SI 19 frame)
+                (const_int -4 [0xfffffffffffffffc])) [19 sb+0 S4 A32])) "fs/bitmap.c":98:9 75 {*movsi_internal}
+     (nil))
+(insn 103 102 104 12 (parallel [
+            (set (reg:SI 123)
+                (plus:SI (reg:SI 94 [ _12 ])
+                    (const_int 12 [0xc])))
+            (clobber (reg:CC 17 flags))
+        ]) "fs/bitmap.c":98:9 209 {*addsi_1}
+     (nil))
+(insn 104 103 105 12 (set (reg/f:SI 95 [ _13 ])
+        (mem/f:SI (plus:SI (plus:SI (mult:SI (reg:SI 123)
+                        (const_int 4 [0x4]))
+                    (reg/f:SI 122))
+                (const_int 4 [0x4])) [6 sb_29->s_zmap[_12]+0 S4 A32])) "fs/bitmap.c":98:9 75 {*movsi_internal}
+     (nil))
+(insn 105 104 107 12 (set (reg/f:SI 96 [ _14 ])
+        (mem/f:SI (reg/f:SI 95 [ _13 ]) [2 _13->b_data+0 S4 A32])) "fs/bitmap.c":98:9 75 {*movsi_internal}
+     (nil))
+(insn 107 105 108 12 (set (reg:SI 125)
+        (const_int 0 [0])) "fs/bitmap.c":98:9 75 {*movsi_internal}
+     (nil))
+(insn 108 107 106 12 (parallel [
+            (set (reg:SI 124 [ res ])
+                (asm_operands/v:SI ("btrl %2,%3
+	setnb %%al") ("=a") 0 [
+                        (reg:SI 125)
+                        (reg:SI 93 [ _11 ])
+                        (mem:QI (reg/f:SI 96 [ _14 ]) [0 *_14+0 S1 A8])
+                    ]
+                     [
+                        (asm_input:SI ("0") fs/bitmap.c:98)
+                        (asm_input:SI ("r") fs/bitmap.c:98)
+                        (asm_input:QI ("m") fs/bitmap.c:98)
+                    ]
+                     [] fs/bitmap.c:98))
+            (clobber (reg:CC 17 flags))
+        ]) "fs/bitmap.c":98:9 -1
+     (nil))
+(insn 106 108 109 12 (set (reg/v:SI 103 [ res ])
+        (reg:SI 124 [ res ])) "fs/bitmap.c":98:9 75 {*movsi_internal}
+     (nil))
+(insn 109 106 110 12 (set (reg:SI 104 [ _41 ])
+        (reg/v:SI 103 [ res ])) "fs/bitmap.c":98:9 75 {*movsi_internal}
+     (nil))
+(insn 110 109 111 12 (set (reg:CCZ 17 flags)
+        (compare:CCZ (reg:SI 104 [ _41 ])
+            (const_int 0 [0]))) "fs/bitmap.c":98:8 7 {*cmpsi_ccno_1}
+     (nil))
+(jump_insn 111 110 112 12 (set (pc)
+        (if_then_else (eq (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref 133)
+            (pc))) "fs/bitmap.c":98:8 806 {*jcc}
+     (nil)
+ -> 133)
+(note 112 111 113 13 [bb 13] NOTE_INSN_BASIC_BLOCK)
+(insn 113 112 114 13 (set (reg/f:SI 126)
+        (mem/f/c:SI (plus:SI (reg/f:SI 19 frame)
+                (const_int -4 [0xfffffffffffffffc])) [19 sb+0 S4 A32])) "fs/bitmap.c":99:51 75 {*movsi_internal}
+     (nil))
+(insn 114 113 115 13 (set (reg:HI 97 [ _15 ])
+        (mem:HI (plus:SI (reg/f:SI 126)
+                (const_int 8 [0x8])) [4 sb_29->s_firstdatazone+0 S2 A32])) "fs/bitmap.c":99:51 76 {*movhi_internal}
+     (nil))
+(insn 115 114 116 13 (set (reg:SI 98 [ _16 ])
+        (zero_extend:SI (reg:HI 97 [ _15 ]))) "fs/bitmap.c":99:51 144 {*zero_extendhisi2}
+     (nil))
+(insn 116 115 117 13 (set (reg:SI 127)
+        (mem/c:SI (plus:SI (reg/f:SI 16 argp)
+                (const_int 4 [0x4])) [13 block+0 S4 A32])) "fs/bitmap.c":99:47 75 {*movsi_internal}
+     (nil))
+(insn 117 116 118 13 (parallel [
+            (set (reg:SI 99 [ _17 ])
+                (plus:SI (reg:SI 98 [ _16 ])
+                    (reg:SI 127)))
+            (clobber (reg:CC 17 flags))
+        ]) "fs/bitmap.c":99:47 209 {*addsi_1}
+     (expr_list:REG_EQUAL (plus:SI (reg:SI 98 [ _16 ])
+            (mem/c:SI (plus:SI (reg/f:SI 16 argp)
+                    (const_int 4 [0x4])) [13 block+0 S4 A32]))
+        (nil)))
+(insn 118 117 119 13 (parallel [
+            (set (reg:SI 100 [ _18 ])
+                (plus:SI (reg:SI 99 [ _17 ])
+                    (const_int -1 [0xffffffffffffffff])))
+            (clobber (reg:CC 17 flags))
+        ]) "fs/bitmap.c":99:9 209 {*addsi_1}
+     (nil))
+(insn 119 118 120 13 (parallel [
+            (set (reg/f:SI 7 sp)
+                (plus:SI (reg/f:SI 7 sp)
+                    (const_int -4 [0xfffffffffffffffc])))
+            (clobber (reg:CC 17 flags))
+        ]) "fs/bitmap.c":99:9 209 {*addsi_1}
+     (expr_list:REG_ARGS_SIZE (const_int 4 [0x4])
+        (nil)))
+(insn 120 119 121 13 (set (mem:SI (pre_dec:SI (reg/f:SI 7 sp)) [13  S4 A32])
+        (reg:SI 100 [ _18 ])) "fs/bitmap.c":99:9 54 {*pushsi2}
+     (expr_list:REG_ARGS_SIZE (const_int 8 [0x8])
+        (nil)))
+(insn 121 120 122 13 (set (mem:SI (pre_dec:SI (reg/f:SI 7 sp)) [13  S4 A32])
+        (mem/c:SI (reg/f:SI 16 argp) [13 dev+0 S4 A32])) "fs/bitmap.c":99:9 54 {*pushsi2}
+     (expr_list:REG_ARGS_SIZE (const_int 12 [0xc])
+        (nil)))
+(insn 122 121 123 13 (set (reg/f:SI 128)
+        (plus:SI (reg:SI 82)
+            (const:SI (unspec:SI [
+                        (symbol_ref/f:SI ("*.LC10") [flags 0x2]  <var_decl 0x74c8ddf5de10 *.LC10>)
+                    ] UNSPEC_GOTOFF)))) "fs/bitmap.c":99:9 205 {*leasi}
+     (expr_list:REG_EQUAL (symbol_ref/f:SI ("*.LC10") [flags 0x2]  <var_decl 0x74c8ddf5de10 *.LC10>)
+        (nil)))
+(insn 123 122 124 13 (set (mem/f:SI (pre_dec:SI (reg/f:SI 7 sp)) [2  S4 A32])
+        (reg/f:SI 128)) "fs/bitmap.c":99:9 54 {*pushsi2}
+     (expr_list:REG_ARGS_SIZE (const_int 16 [0x10])
+        (nil)))
+(insn 124 123 125 13 (set (reg:SI 3 bx)
+        (reg:SI 82)) "fs/bitmap.c":99:9 75 {*movsi_internal}
+     (nil))
+(call_insn 125 124 126 13 (set (reg:SI 0 ax)
+        (call (mem:QI (symbol_ref:SI ("printk") [flags 0x41]  <function_decl 0x74c8ddf10900 printk>) [0 printk S1 A8])
+            (const_int 16 [0x10]))) "fs/bitmap.c":99:9 823 {*call_value}
+     (nil)
+    (expr_list (use (reg:SI 3 bx))
+        (nil)))
+(insn 126 125 127 13 (parallel [
+            (set (reg/f:SI 7 sp)
+                (plus:SI (reg/f:SI 7 sp)
+                    (const_int 16 [0x10])))
+            (clobber (reg:CC 17 flags))
+        ]) "fs/bitmap.c":99:9 209 {*addsi_1}
+     (expr_list:REG_ARGS_SIZE (const_int 0 [0])
+        (nil)))
+(insn 127 126 128 13 (parallel [
+            (set (reg/f:SI 7 sp)
+                (plus:SI (reg/f:SI 7 sp)
+                    (const_int -12 [0xfffffffffffffff4])))
+            (clobber (reg:CC 17 flags))
+        ]) "fs/bitmap.c":100:9 209 {*addsi_1}
+     (expr_list:REG_ARGS_SIZE (const_int 12 [0xc])
+        (nil)))
+(insn 128 127 129 13 (set (reg/f:SI 129)
+        (plus:SI (reg:SI 82)
+            (const:SI (unspec:SI [
+                        (symbol_ref/f:SI ("*.LC11") [flags 0x2]  <var_decl 0x74c8ddf5dea0 *.LC11>)
+                    ] UNSPEC_GOTOFF)))) "fs/bitmap.c":100:9 205 {*leasi}
+     (expr_list:REG_EQUAL (symbol_ref/f:SI ("*.LC11") [flags 0x2]  <var_decl 0x74c8ddf5dea0 *.LC11>)
+        (nil)))
+(insn 129 128 130 13 (set (mem/f:SI (pre_dec:SI (reg/f:SI 7 sp)) [2  S4 A32])
+        (reg/f:SI 129)) "fs/bitmap.c":100:9 54 {*pushsi2}
+     (expr_list:REG_ARGS_SIZE (const_int 16 [0x10])
+        (nil)))
+(insn 130 129 131 13 (set (reg:SI 3 bx)
+        (reg:SI 82)) "fs/bitmap.c":100:9 75 {*movsi_internal}
+     (nil))
+(call_insn 131 130 132 13 (call (mem:QI (symbol_ref:SI ("panic") [flags 0x41]  <function_decl 0x74c8ddf10b00 panic>) [0 panic S1 A8])
+        (const_int 16 [0x10])) "fs/bitmap.c":100:9 812 {*call}
+     (nil)
+    (expr_list (use (reg:SI 3 bx))
+        (nil)))
+(insn 132 131 133 13 (parallel [
+            (set (reg/f:SI 7 sp)
+                (plus:SI (reg/f:SI 7 sp)
+                    (const_int 16 [0x10])))
+            (clobber (reg:CC 17 flags))
+        ]) "fs/bitmap.c":100:9 209 {*addsi_1}
+     (expr_list:REG_ARGS_SIZE (const_int 0 [0])
+        (nil)))
+(code_label 133 132 134 14 20 (nil) [1 uses])
+(note 134 133 135 14 [bb 14] NOTE_INSN_BASIC_BLOCK)
+(insn 135 134 136 14 (set (reg:SI 130)
+        (mem/c:SI (plus:SI (reg/f:SI 16 argp)
+                (const_int 4 [0x4])) [13 block+0 S4 A32])) "fs/bitmap.c":102:22 75 {*movsi_internal}
+     (nil))
+(insn 136 135 137 14 (set (reg:SI 131)
+        (reg:SI 130)) "fs/bitmap.c":102:22 75 {*movsi_internal}
+     (nil))
+(insn 137 136 140 14 (parallel [
+            (set (reg:SI 132)
+                (plus:SI (reg:SI 131)
+                    (const_int 8191 [0x1fff])))
+            (clobber (reg:CC 17 flags))
+        ]) "fs/bitmap.c":102:22 209 {*addsi_1}
+     (nil))
+(insn 140 137 141 14 (set (reg:CCGOC 17 flags)
+        (compare:CCGOC (reg:SI 131)
+            (const_int 0 [0]))) "fs/bitmap.c":102:22 7 {*cmpsi_ccno_1}
+     (nil))
+(insn 141 140 142 14 (set (reg:SI 131)
+        (if_then_else:SI (lt (reg:CCGOC 17 flags)
+                (const_int 0 [0]))
+            (reg:SI 132)
+            (reg:SI 131))) "fs/bitmap.c":102:22 1100 {*movsicc_noc}
+     (nil))
+(insn 142 141 143 14 (parallel [
+            (set (reg:SI 133)
+                (ashiftrt:SI (reg:SI 131)
+                    (const_int 13 [0xd])))
+            (clobber (reg:CC 17 flags))
+        ]) "fs/bitmap.c":102:22 702 {*ashrsi3_1}
+     (expr_list:REG_EQUAL (div:SI (reg:SI 130)
+            (const_int 8192 [0x2000]))
+        (nil)))
+(insn 143 142 144 14 (set (reg:SI 101 [ _19 ])
+        (reg:SI 133)) "fs/bitmap.c":102:22 75 {*movsi_internal}
+     (nil))
+(insn 144 143 145 14 (set (reg/f:SI 134)
+        (mem/f/c:SI (plus:SI (reg/f:SI 19 frame)
+                (const_int -4 [0xfffffffffffffffc])) [19 sb+0 S4 A32])) "fs/bitmap.c":102:15 75 {*movsi_internal}
+     (nil))
+(insn 145 144 146 14 (parallel [
+            (set (reg:SI 135)
+                (plus:SI (reg:SI 101 [ _19 ])
+                    (const_int 12 [0xc])))
+            (clobber (reg:CC 17 flags))
+        ]) "fs/bitmap.c":102:15 209 {*addsi_1}
+     (nil))
+(insn 146 145 147 14 (set (reg/f:SI 102 [ _20 ])
+        (mem/f:SI (plus:SI (plus:SI (mult:SI (reg:SI 135)
+                        (const_int 4 [0x4]))
+                    (reg/f:SI 134))
+                (const_int 4 [0x4])) [6 sb_29->s_zmap[_19]+0 S4 A32])) "fs/bitmap.c":102:15 75 {*movsi_internal}
+     (nil))
+(insn 147 146 150 14 (set (mem:QI (plus:SI (reg/f:SI 102 [ _20 ])
+                (const_int 11 [0xb])) [0 _20->b_dirt+0 S1 A8])
+        (const_int 1 [0x1])) "fs/bitmap.c":102:38 77 {*movqi_internal}
+     (nil))
+(code_label 150 147 151 16 13 (nil) [1 uses])
+(note 151 150 0 16 [bb 16] NOTE_INSN_BASIC_BLOCK)
+
+;; Function new_block (new_block, funcdef_no=3, decl_uid=1141, cgraph_uid=4, symbol_order=3)
+
+(note 1 0 3 NOTE_INSN_DELETED)
+(note 3 1 2 2 [bb 2] NOTE_INSN_BASIC_BLOCK)
+(note 2 3 5 2 NOTE_INSN_FUNCTION_BEG)
+(insn 5 2 6 2 (parallel [
+            (set (reg/f:SI 7 sp)
+                (plus:SI (reg/f:SI 7 sp)
+                    (const_int -12 [0xfffffffffffffff4])))
+            (clobber (reg:CC 17 flags))
+        ]) "fs/bitmap.c":111:16 209 {*addsi_1}
+     (expr_list:REG_ARGS_SIZE (const_int 12 [0xc])
+        (nil)))
+(insn 6 5 7 2 (set (mem:SI (pre_dec:SI (reg/f:SI 7 sp)) [13  S4 A32])
+        (mem/c:SI (reg/f:SI 16 argp) [13 dev+0 S4 A32])) "fs/bitmap.c":111:16 54 {*pushsi2}
+     (expr_list:REG_ARGS_SIZE (const_int 16 [0x10])
+        (nil)))
+(insn 7 6 8 2 (set (reg:SI 3 bx)
+        (reg:SI 82)) "fs/bitmap.c":111:16 75 {*movsi_internal}
+     (nil))
+(call_insn 8 7 9 2 (set (reg:SI 0 ax)
+        (call (mem:QI (symbol_ref:SI ("get_super") [flags 0x41]  <function_decl 0x74c8ddf0e000 get_super>) [0 get_super S1 A8])
+            (const_int 16 [0x10]))) "fs/bitmap.c":111:16 823 {*call_value}
+     (nil)
+    (expr_list (use (reg:SI 3 bx))
+        (nil)))
+(insn 9 8 10 2 (parallel [
+            (set (reg/f:SI 7 sp)
+                (plus:SI (reg/f:SI 7 sp)
+                    (const_int 16 [0x10])))
+            (clobber (reg:CC 17 flags))
+        ]) "fs/bitmap.c":111:16 209 {*addsi_1}
+     (expr_list:REG_ARGS_SIZE (const_int 0 [0])
+        (nil)))
+(insn 10 9 11 2 (set (reg:SI 100)
+        (reg:SI 0 ax)) "fs/bitmap.c":111:16 75 {*movsi_internal}
+     (nil))
+(insn 11 10 12 2 (set (mem/f/c:SI (plus:SI (reg/f:SI 19 frame)
+                (const_int -16 [0xfffffffffffffff0])) [19 sb+0 S4 A32])
+        (reg:SI 100)) "fs/bitmap.c":111:16 75 {*movsi_internal}
+     (nil))
+(insn 12 11 13 2 (set (reg:CCZ 17 flags)
+        (compare:CCZ (mem/f/c:SI (plus:SI (reg/f:SI 19 frame)
+                    (const_int -16 [0xfffffffffffffff0])) [19 sb+0 S4 A32])
+            (const_int 0 [0]))) "fs/bitmap.c":111:8 7 {*cmpsi_ccno_1}
+     (nil))
+(jump_insn 13 12 14 2 (set (pc)
+        (if_then_else (ne (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref 21)
+            (pc))) "fs/bitmap.c":111:8 806 {*jcc}
+     (nil)
+ -> 21)
+(note 14 13 15 4 [bb 4] NOTE_INSN_BASIC_BLOCK)
+(insn 15 14 16 4 (parallel [
+            (set (reg/f:SI 7 sp)
+                (plus:SI (reg/f:SI 7 sp)
+                    (const_int -12 [0xfffffffffffffff4])))
+            (clobber (reg:CC 17 flags))
+        ]) "fs/bitmap.c":112:9 209 {*addsi_1}
+     (expr_list:REG_ARGS_SIZE (const_int 12 [0xc])
+        (nil)))
+(insn 16 15 17 4 (set (reg/f:SI 101)
+        (plus:SI (reg:SI 82)
+            (const:SI (unspec:SI [
+                        (symbol_ref/f:SI ("*.LC12") [flags 0x2]  <var_decl 0x74c8ddf5d510 *.LC12>)
+                    ] UNSPEC_GOTOFF)))) "fs/bitmap.c":112:9 205 {*leasi}
+     (expr_list:REG_EQUAL (symbol_ref/f:SI ("*.LC12") [flags 0x2]  <var_decl 0x74c8ddf5d510 *.LC12>)
+        (nil)))
+(insn 17 16 18 4 (set (mem/f:SI (pre_dec:SI (reg/f:SI 7 sp)) [2  S4 A32])
+        (reg/f:SI 101)) "fs/bitmap.c":112:9 54 {*pushsi2}
+     (expr_list:REG_ARGS_SIZE (const_int 16 [0x10])
+        (nil)))
+(insn 18 17 19 4 (set (reg:SI 3 bx)
+        (reg:SI 82)) "fs/bitmap.c":112:9 75 {*movsi_internal}
+     (nil))
+(call_insn 19 18 20 4 (call (mem:QI (symbol_ref:SI ("panic") [flags 0x41]  <function_decl 0x74c8ddf10b00 panic>) [0 panic S1 A8])
+        (const_int 16 [0x10])) "fs/bitmap.c":112:9 812 {*call}
+     (nil)
+    (expr_list (use (reg:SI 3 bx))
+        (nil)))
+(insn 20 19 21 4 (parallel [
+            (set (reg/f:SI 7 sp)
+                (plus:SI (reg/f:SI 7 sp)
+                    (const_int 16 [0x10])))
+            (clobber (reg:CC 17 flags))
+        ]) "fs/bitmap.c":112:9 209 {*addsi_1}
+     (expr_list:REG_ARGS_SIZE (const_int 0 [0])
+        (nil)))
+(code_label 21 20 22 5 22 (nil) [1 uses])
+(note 22 21 23 5 [bb 5] NOTE_INSN_BASIC_BLOCK)
+(insn 23 22 24 5 (set (mem/c:SI (plus:SI (reg/f:SI 19 frame)
+                (const_int -12 [0xfffffffffffffff4])) [13 j+0 S4 A32])
+        (const_int 8192 [0x2000])) "fs/bitmap.c":113:7 75 {*movsi_internal}
+     (nil))
+(insn 24 23 25 5 (set (mem/c:SI (plus:SI (reg/f:SI 19 frame)
+                (const_int -8 [0xfffffffffffffff8])) [13 i+0 S4 A32])
+        (const_int 0 [0])) "fs/bitmap.c":114:12 75 {*movsi_internal}
+     (nil))
+(jump_insn 25 24 26 5 (set (pc)
+        (label_ref 53)) "fs/bitmap.c":114:5 807 {jump}
+     (nil)
+ -> 53)
+(barrier 26 25 55)
+(code_label 55 26 27 6 26 (nil) [1 uses])
+(note 27 55 28 6 [bb 6] NOTE_INSN_BASIC_BLOCK)
+(insn 28 27 29 6 (set (reg/f:SI 102)
+        (mem/f/c:SI (plus:SI (reg/f:SI 19 frame)
+                (const_int -16 [0xfffffffffffffff0])) [19 sb+0 S4 A32])) "fs/bitmap.c":115:17 75 {*movsi_internal}
+     (nil))
+(insn 29 28 30 6 (set (reg:SI 104)
+        (mem/c:SI (plus:SI (reg/f:SI 19 frame)
+                (const_int -8 [0xfffffffffffffff8])) [13 i+0 S4 A32])) "fs/bitmap.c":115:17 75 {*movsi_internal}
+     (nil))
+(insn 30 29 31 6 (parallel [
+            (set (reg:SI 103)
+                (plus:SI (reg:SI 104)
+                    (const_int 12 [0xc])))
+            (clobber (reg:CC 17 flags))
+        ]) "fs/bitmap.c":115:17 209 {*addsi_1}
+     (expr_list:REG_EQUAL (plus:SI (mem/c:SI (plus:SI (reg/f:SI 19 frame)
+                    (const_int -8 [0xfffffffffffffff8])) [13 i+0 S4 A32])
+            (const_int 12 [0xc]))
+        (nil)))
+(insn 31 30 32 6 (set (reg/f:SI 105)
+        (mem/f:SI (plus:SI (plus:SI (mult:SI (reg:SI 103)
+                        (const_int 4 [0x4]))
+                    (reg/f:SI 102))
+                (const_int 4 [0x4])) [6 sb_28->s_zmap[i_15]+0 S4 A32])) "fs/bitmap.c":115:17 75 {*movsi_internal}
+     (nil))
+(insn 32 31 33 6 (set (mem/f/c:SI (plus:SI (reg/f:SI 19 frame)
+                (const_int -4 [0xfffffffffffffffc])) [6 bh+0 S4 A32])
+        (reg/f:SI 105)) "fs/bitmap.c":115:17 75 {*movsi_internal}
+     (nil))
+(insn 33 32 34 6 (set (reg:CCZ 17 flags)
+        (compare:CCZ (mem/f/c:SI (plus:SI (reg/f:SI 19 frame)
+                    (const_int -4 [0xfffffffffffffffc])) [6 bh+0 S4 A32])
+            (const_int 0 [0]))) "fs/bitmap.c":115:12 7 {*cmpsi_ccno_1}
+     (nil))
+(jump_insn 34 33 35 6 (set (pc)
+        (if_then_else (eq (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref 50)
+            (pc))) "fs/bitmap.c":115:12 806 {*jcc}
+     (nil)
+ -> 50)
+(note 35 34 36 7 [bb 7] NOTE_INSN_BASIC_BLOCK)
+(insn 36 35 37 7 (set (reg/f:SI 106)
+        (mem/f/c:SI (plus:SI (reg/f:SI 19 frame)
+                (const_int -4 [0xfffffffffffffffc])) [6 bh+0 S4 A32])) "fs/bitmap.c":116:22 75 {*movsi_internal}
+     (nil))
+(insn 37 36 39 7 (set (reg/f:SI 83 [ _1 ])
+        (mem/f:SI (reg/f:SI 106) [2 bh_33->b_data+0 S4 A32])) "fs/bitmap.c":116:22 75 {*movsi_internal}
+     (nil))
+(insn 39 37 40 7 (set (reg:SI 108)
+        (const_int 0 [0])) "fs/bitmap.c":116:22 75 {*movsi_internal}
+     (nil))
+(insn 40 39 38 7 (parallel [
+            (set (reg:SI 107 [ __res ])
+                (asm_operands/v:SI ("cld
+1:	lodsl
+	notl %%eax
+	bsfl %%eax, %%edx
+	je 2f
+	addl %%edx, %%ecx
+	jmp 3f
+2:	addl $32, %%ecx
+	cmpl $8192, %%ecx
+	jl 1b
+3:") ("=c") 0 [
+                        (reg:SI 108)
+                        (reg/f:SI 83 [ _1 ])
+                    ]
+                     [
+                        (asm_input:SI ("c") fs/bitmap.c:116)
+                        (asm_input:SI ("S") fs/bitmap.c:116)
+                    ]
+                     [] fs/bitmap.c:116))
+            (clobber (reg:CC 17 flags))
+        ]) "fs/bitmap.c":116:22 -1
+     (nil))
+(insn 38 40 41 7 (set (mem/c:SI (plus:SI (reg/f:SI 19 frame)
+                (const_int -20 [0xffffffffffffffec])) [13 __res+0 S4 A32])
+        (reg:SI 107 [ __res ])) "fs/bitmap.c":116:22 75 {*movsi_internal}
+     (nil))
+(insn 41 38 42 7 (set (reg:SI 96 [ _35 ])
+        (mem/c:SI (plus:SI (reg/f:SI 19 frame)
+                (const_int -20 [0xffffffffffffffec])) [13 __res+0 S4 A32])) "fs/bitmap.c":116:22 75 {*movsi_internal}
+     (nil))
+(insn 42 41 45 7 (set (mem/c:SI (plus:SI (reg/f:SI 19 frame)
+                (const_int -12 [0xfffffffffffffff4])) [13 j+0 S4 A32])
+        (reg:SI 96 [ _35 ])) "fs/bitmap.c":116:20 75 {*movsi_internal}
+     (nil))
+(insn 45 42 46 7 (set (reg:CCGC 17 flags)
+        (compare:CCGC (mem/c:SI (plus:SI (reg/f:SI 19 frame)
+                    (const_int -12 [0xfffffffffffffff4])) [13 j+0 S4 A32])
+            (const_int 8191 [0x1fff]))) "fs/bitmap.c":116:16 11 {*cmpsi_1}
+     (nil))
+(jump_insn 46 45 47 7 (set (pc)
+        (if_then_else (gt (reg:CCGC 17 flags)
+                (const_int 0 [0]))
+            (label_ref 50)
+            (pc))) "fs/bitmap.c":116:16 806 {*jcc}
+     (nil)
+ -> 50)
+(note 47 46 48 8 [bb 8] NOTE_INSN_BASIC_BLOCK)
+(jump_insn 48 47 49 8 (set (pc)
+        (label_ref 60)) "fs/bitmap.c":117:17 807 {jump}
+     (nil)
+ -> 60)
+(barrier 49 48 50)
+(code_label 50 49 51 9 24 (nil) [2 uses])
+(note 51 50 52 9 [bb 9] NOTE_INSN_BASIC_BLOCK)
+(insn 52 51 53 9 (parallel [
+            (set (mem/c:SI (plus:SI (reg/f:SI 19 frame)
+                        (const_int -8 [0xfffffffffffffff8])) [13 i+0 S4 A32])
+                (plus:SI (mem/c:SI (plus:SI (reg/f:SI 19 frame)
+                            (const_int -8 [0xfffffffffffffff8])) [13 i+0 S4 A32])
+                    (const_int 1 [0x1])))
+            (clobber (reg:CC 17 flags))
+        ]) "fs/bitmap.c":114:25 209 {*addsi_1}
+     (nil))
+(code_label 53 52 54 10 23 (nil) [1 uses])
+(note 54 53 58 10 [bb 10] NOTE_INSN_BASIC_BLOCK)
+(insn 58 54 59 10 (set (reg:CCGC 17 flags)
+        (compare:CCGC (mem/c:SI (plus:SI (reg/f:SI 19 frame)
+                    (const_int -8 [0xfffffffffffffff8])) [13 i+0 S4 A32])
+            (const_int 7 [0x7]))) "fs/bitmap.c":114:19 11 {*cmpsi_1}
+     (nil))
+(jump_insn 59 58 60 10 (set (pc)
+        (if_then_else (le (reg:CCGC 17 flags)
+                (const_int 0 [0]))
+            (label_ref 55)
+            (pc))) "fs/bitmap.c":114:19 806 {*jcc}
+     (nil)
+ -> 55)
+(code_label 60 59 61 11 25 (nil) [1 uses])
+(note 61 60 64 11 [bb 11] NOTE_INSN_BASIC_BLOCK)
+(insn 64 61 65 11 (set (reg:CCGC 17 flags)
+        (compare:CCGC (mem/c:SI (plus:SI (reg/f:SI 19 frame)
+                    (const_int -8 [0xfffffffffffffff8])) [13 i+0 S4 A32])
+            (const_int 7 [0x7]))) "fs/bitmap.c":118:8 11 {*cmpsi_1}
+     (nil))
+(jump_insn 65 64 66 11 (set (pc)
+        (if_then_else (gt (reg:CCGC 17 flags)
+                (const_int 0 [0]))
+            (label_ref 74)
+            (pc))) "fs/bitmap.c":118:8 806 {*jcc}
+     (nil)
+ -> 74)
+(note 66 65 67 12 [bb 12] NOTE_INSN_BASIC_BLOCK)
+(insn 67 66 68 12 (set (reg:CCZ 17 flags)
+        (compare:CCZ (mem/f/c:SI (plus:SI (reg/f:SI 19 frame)
+                    (const_int -4 [0xfffffffffffffffc])) [6 bh+0 S4 A32])
+            (const_int 0 [0]))) "fs/bitmap.c":118:16 7 {*cmpsi_ccno_1}
+     (nil))
+(jump_insn 68 67 69 12 (set (pc)
+        (if_then_else (eq (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref 74)
+            (pc))) "fs/bitmap.c":118:16 806 {*jcc}
+     (nil)
+ -> 74)
+(note 69 68 72 13 [bb 13] NOTE_INSN_BASIC_BLOCK)
+(insn 72 69 73 13 (set (reg:CCGC 17 flags)
+        (compare:CCGC (mem/c:SI (plus:SI (reg/f:SI 19 frame)
+                    (const_int -12 [0xfffffffffffffff4])) [13 j+0 S4 A32])
+            (const_int 8191 [0x1fff]))) "fs/bitmap.c":118:23 11 {*cmpsi_1}
+     (nil))
+(jump_insn 73 72 74 13 (set (pc)
+        (if_then_else (le (reg:CCGC 17 flags)
+                (const_int 0 [0]))
+            (label_ref 79)
+            (pc))) "fs/bitmap.c":118:23 806 {*jcc}
+     (nil)
+ -> 79)
+(code_label 74 73 75 14 27 (nil) [2 uses])
+(note 75 74 76 14 [bb 14] NOTE_INSN_BASIC_BLOCK)
+(insn 76 75 77 14 (set (reg:SI 95 [ _19 ])
+        (const_int 0 [0])) "fs/bitmap.c":119:16 75 {*movsi_internal}
+     (nil))
+(jump_insn 77 76 78 14 (set (pc)
+        (label_ref 168)) "fs/bitmap.c":119:16 807 {jump}
+     (nil)
+ -> 168)
+(barrier 78 77 79)
+(code_label 79 78 80 15 28 (nil) [1 uses])
+(note 80 79 81 15 [bb 15] NOTE_INSN_BASIC_BLOCK)
+(insn 81 80 82 15 (set (reg/f:SI 109)
+        (mem/f/c:SI (plus:SI (reg/f:SI 19 frame)
+                (const_int -4 [0xfffffffffffffffc])) [6 bh+0 S4 A32])) "fs/bitmap.c":120:9 75 {*movsi_internal}
+     (nil))
+(insn 82 81 84 15 (set (reg/f:SI 84 [ _2 ])
+        (mem/f:SI (reg/f:SI 109) [2 bh_14->b_data+0 S4 A32])) "fs/bitmap.c":120:9 75 {*movsi_internal}
+     (nil))
+(insn 84 82 85 15 (set (reg:SI 111)
+        (const_int 0 [0])) "fs/bitmap.c":120:9 75 {*movsi_internal}
+     (nil))
+(insn 85 84 86 15 (set (reg:SI 112)
+        (mem/c:SI (plus:SI (reg/f:SI 19 frame)
+                (const_int -12 [0xfffffffffffffff4])) [13 j+0 S4 A32])) "fs/bitmap.c":120:9 75 {*movsi_internal}
+     (nil))
+(insn 86 85 83 15 (parallel [
+            (set (reg:SI 110 [ res ])
+                (asm_operands/v:SI ("btsl %2,%3
+	setb %%al") ("=a") 0 [
+                        (reg:SI 111)
+                        (reg:SI 112)
+                        (mem:QI (reg/f:SI 84 [ _2 ]) [0 *_2+0 S1 A8])
+                    ]
+                     [
+                        (asm_input:SI ("0") fs/bitmap.c:120)
+                        (asm_input:SI ("r") fs/bitmap.c:120)
+                        (asm_input:QI ("m") fs/bitmap.c:120)
+                    ]
+                     [] fs/bitmap.c:120))
+            (clobber (reg:CC 17 flags))
+        ]) "fs/bitmap.c":120:9 -1
+     (nil))
+(insn 83 86 87 15 (set (reg/v:SI 97 [ res ])
+        (reg:SI 110 [ res ])) "fs/bitmap.c":120:9 75 {*movsi_internal}
+     (nil))
+(insn 87 83 88 15 (set (reg:SI 98 [ _39 ])
+        (reg/v:SI 97 [ res ])) "fs/bitmap.c":120:9 75 {*movsi_internal}
+     (nil))
+(insn 88 87 89 15 (set (reg:CCZ 17 flags)
+        (compare:CCZ (reg:SI 98 [ _39 ])
+            (const_int 0 [0]))) "fs/bitmap.c":120:8 7 {*cmpsi_ccno_1}
+     (nil))
+(jump_insn 89 88 90 15 (set (pc)
+        (if_then_else (eq (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref 97)
+            (pc))) "fs/bitmap.c":120:8 806 {*jcc}
+     (nil)
+ -> 97)
+(note 90 89 91 16 [bb 16] NOTE_INSN_BASIC_BLOCK)
+(insn 91 90 92 16 (parallel [
+            (set (reg/f:SI 7 sp)
+                (plus:SI (reg/f:SI 7 sp)
+                    (const_int -12 [0xfffffffffffffff4])))
+            (clobber (reg:CC 17 flags))
+        ]) "fs/bitmap.c":121:9 209 {*addsi_1}
+     (expr_list:REG_ARGS_SIZE (const_int 12 [0xc])
+        (nil)))
+(insn 92 91 93 16 (set (reg/f:SI 113)
+        (plus:SI (reg:SI 82)
+            (const:SI (unspec:SI [
+                        (symbol_ref/f:SI ("*.LC13") [flags 0x2]  <var_decl 0x74c8ddf97000 *.LC13>)
+                    ] UNSPEC_GOTOFF)))) "fs/bitmap.c":121:9 205 {*leasi}
+     (expr_list:REG_EQUAL (symbol_ref/f:SI ("*.LC13") [flags 0x2]  <var_decl 0x74c8ddf97000 *.LC13>)
+        (nil)))
+(insn 93 92 94 16 (set (mem/f:SI (pre_dec:SI (reg/f:SI 7 sp)) [2  S4 A32])
+        (reg/f:SI 113)) "fs/bitmap.c":121:9 54 {*pushsi2}
+     (expr_list:REG_ARGS_SIZE (const_int 16 [0x10])
+        (nil)))
+(insn 94 93 95 16 (set (reg:SI 3 bx)
+        (reg:SI 82)) "fs/bitmap.c":121:9 75 {*movsi_internal}
+     (nil))
+(call_insn 95 94 96 16 (call (mem:QI (symbol_ref:SI ("panic") [flags 0x41]  <function_decl 0x74c8ddf10b00 panic>) [0 panic S1 A8])
+        (const_int 16 [0x10])) "fs/bitmap.c":121:9 812 {*call}
+     (nil)
+    (expr_list (use (reg:SI 3 bx))
+        (nil)))
+(insn 96 95 97 16 (parallel [
+            (set (reg/f:SI 7 sp)
+                (plus:SI (reg/f:SI 7 sp)
+                    (const_int 16 [0x10])))
+            (clobber (reg:CC 17 flags))
+        ]) "fs/bitmap.c":121:9 209 {*addsi_1}
+     (expr_list:REG_ARGS_SIZE (const_int 0 [0])
+        (nil)))
+(code_label 97 96 98 17 30 (nil) [1 uses])
+(note 98 97 99 17 [bb 17] NOTE_INSN_BASIC_BLOCK)
+(insn 99 98 100 17 (set (reg/f:SI 114)
+        (mem/f/c:SI (plus:SI (reg/f:SI 19 frame)
+                (const_int -4 [0xfffffffffffffffc])) [6 bh+0 S4 A32])) "fs/bitmap.c":122:16 75 {*movsi_internal}
+     (nil))
+(insn 100 99 101 17 (set (mem:QI (plus:SI (reg/f:SI 114)
+                (const_int 11 [0xb])) [0 bh_14->b_dirt+0 S1 A8])
+        (const_int 1 [0x1])) "fs/bitmap.c":122:16 77 {*movqi_internal}
+     (nil))
+(insn 101 100 102 17 (set (reg:SI 115)
+        (mem/c:SI (plus:SI (reg/f:SI 19 frame)
+                (const_int -8 [0xfffffffffffffff8])) [13 i+0 S4 A32])) "fs/bitmap.c":123:12 75 {*movsi_internal}
+     (nil))
+(insn 102 101 103 17 (parallel [
+            (set (reg:SI 85 [ _3 ])
+                (ashift:SI (reg:SI 115)
+                    (const_int 13 [0xd])))
+            (clobber (reg:CC 17 flags))
+        ]) "fs/bitmap.c":123:12 655 {*ashlsi3_1}
+     (expr_list:REG_EQUAL (ashift:SI (mem/c:SI (plus:SI (reg/f:SI 19 frame)
+                    (const_int -8 [0xfffffffffffffff8])) [13 i+0 S4 A32])
+            (const_int 13 [0xd]))
+        (nil)))
+(insn 103 102 104 17 (set (reg/f:SI 116)
+        (mem/f/c:SI (plus:SI (reg/f:SI 19 frame)
+                (const_int -16 [0xfffffffffffffff0])) [19 sb+0 S4 A32])) "fs/bitmap.c":123:23 75 {*movsi_internal}
+     (nil))
+(insn 104 103 105 17 (set (reg:HI 86 [ _4 ])
+        (mem:HI (plus:SI (reg/f:SI 116)
+                (const_int 8 [0x8])) [4 sb_28->s_firstdatazone+0 S2 A32])) "fs/bitmap.c":123:23 76 {*movhi_internal}
+     (nil))
+(insn 105 104 106 17 (set (reg:SI 87 [ _5 ])
+        (zero_extend:SI (reg:HI 86 [ _4 ]))) "fs/bitmap.c":123:23 144 {*zero_extendhisi2}
+     (nil))
+(insn 106 105 107 17 (parallel [
+            (set (reg:SI 88 [ _6 ])
+                (plus:SI (reg:SI 85 [ _3 ])
+                    (reg:SI 87 [ _5 ])))
+            (clobber (reg:CC 17 flags))
+        ]) "fs/bitmap.c":123:19 209 {*addsi_1}
+     (nil))
+(insn 107 106 108 17 (parallel [
+            (set (reg:SI 89 [ _7 ])
+                (plus:SI (reg:SI 88 [ _6 ])
+                    (const_int -1 [0xffffffffffffffff])))
+            (clobber (reg:CC 17 flags))
+        ]) "fs/bitmap.c":123:41 209 {*addsi_1}
+     (nil))
+(insn 108 107 109 17 (parallel [
+            (set (mem/c:SI (plus:SI (reg/f:SI 19 frame)
+                        (const_int -12 [0xfffffffffffffff4])) [13 j+0 S4 A32])
+                (plus:SI (mem/c:SI (plus:SI (reg/f:SI 19 frame)
+                            (const_int -12 [0xfffffffffffffff4])) [13 j+0 S4 A32])
+                    (reg:SI 89 [ _7 ])))
+            (clobber (reg:CC 17 flags))
+        ]) "fs/bitmap.c":123:7 209 {*addsi_1}
+     (nil))
+(insn 109 108 110 17 (set (reg/f:SI 117)
+        (mem/f/c:SI (plus:SI (reg/f:SI 19 frame)
+                (const_int -16 [0xfffffffffffffff0])) [19 sb+0 S4 A32])) "fs/bitmap.c":124:16 75 {*movsi_internal}
+     (nil))
+(insn 110 109 111 17 (set (reg:HI 90 [ _8 ])
+        (mem:HI (plus:SI (reg/f:SI 117)
+                (const_int 2 [0x2])) [4 sb_28->s_nzones+0 S2 A16])) "fs/bitmap.c":124:16 76 {*movhi_internal}
+     (nil))
+(insn 111 110 112 17 (set (reg:SI 91 [ _9 ])
+        (zero_extend:SI (reg:HI 90 [ _8 ]))) "fs/bitmap.c":124:16 144 {*zero_extendhisi2}
+     (nil))
+(insn 112 111 113 17 (set (reg:CCGC 17 flags)
+        (compare:CCGC (mem/c:SI (plus:SI (reg/f:SI 19 frame)
+                    (const_int -12 [0xfffffffffffffff4])) [13 j+0 S4 A32])
+            (reg:SI 91 [ _9 ]))) "fs/bitmap.c":124:8 11 {*cmpsi_1}
+     (nil))
+(jump_insn 113 112 114 17 (set (pc)
+        (if_then_else (lt (reg:CCGC 17 flags)
+                (const_int 0 [0]))
+            (label_ref 118)
+            (pc))) "fs/bitmap.c":124:8 806 {*jcc}
+     (nil)
+ -> 118)
+(note 114 113 115 18 [bb 18] NOTE_INSN_BASIC_BLOCK)
+(insn 115 114 116 18 (set (reg:SI 95 [ _19 ])
+        (const_int 0 [0])) "fs/bitmap.c":125:16 75 {*movsi_internal}
+     (nil))
+(jump_insn 116 115 117 18 (set (pc)
+        (label_ref 168)) "fs/bitmap.c":125:16 807 {jump}
+     (nil)
+ -> 168)
+(barrier 117 116 118)
+(code_label 118 117 119 19 31 (nil) [1 uses])
+(note 119 118 120 19 [bb 19] NOTE_INSN_BASIC_BLOCK)
+(insn 120 119 121 19 (parallel [
+            (set (reg/f:SI 7 sp)
+                (plus:SI (reg/f:SI 7 sp)
+                    (const_int -8 [0xfffffffffffffff8])))
+            (clobber (reg:CC 17 flags))
+        ]) "fs/bitmap.c":126:16 209 {*addsi_1}
+     (expr_list:REG_ARGS_SIZE (const_int 8 [0x8])
+        (nil)))
+(insn 121 120 122 19 (set (mem:SI (pre_dec:SI (reg/f:SI 7 sp)) [13  S4 A32])
+        (mem/c:SI (plus:SI (reg/f:SI 19 frame)
+                (const_int -12 [0xfffffffffffffff4])) [13 j+0 S4 A32])) "fs/bitmap.c":126:16 54 {*pushsi2}
+     (expr_list:REG_ARGS_SIZE (const_int 12 [0xc])
+        (nil)))
+(insn 122 121 123 19 (set (mem:SI (pre_dec:SI (reg/f:SI 7 sp)) [13  S4 A32])
+        (mem/c:SI (reg/f:SI 16 argp) [13 dev+0 S4 A32])) "fs/bitmap.c":126:16 54 {*pushsi2}
+     (expr_list:REG_ARGS_SIZE (const_int 16 [0x10])
+        (nil)))
+(insn 123 122 124 19 (set (reg:SI 3 bx)
+        (reg:SI 82)) "fs/bitmap.c":126:16 75 {*movsi_internal}
+     (nil))
+(call_insn 124 123 125 19 (set (reg:SI 0 ax)
+        (call (mem:QI (symbol_ref:SI ("getblk") [flags 0x41]  <function_decl 0x74c8ddf0e500 getblk>) [0 getblk S1 A8])
+            (const_int 16 [0x10]))) "fs/bitmap.c":126:16 823 {*call_value}
+     (nil)
+    (expr_list (use (reg:SI 3 bx))
+        (nil)))
+(insn 125 124 126 19 (parallel [
+            (set (reg/f:SI 7 sp)
+                (plus:SI (reg/f:SI 7 sp)
+                    (const_int 16 [0x10])))
+            (clobber (reg:CC 17 flags))
+        ]) "fs/bitmap.c":126:16 209 {*addsi_1}
+     (expr_list:REG_ARGS_SIZE (const_int 0 [0])
+        (nil)))
+(insn 126 125 127 19 (set (reg:SI 118)
+        (reg:SI 0 ax)) "fs/bitmap.c":126:16 75 {*movsi_internal}
+     (nil))
+(insn 127 126 128 19 (set (mem/f/c:SI (plus:SI (reg/f:SI 19 frame)
+                (const_int -4 [0xfffffffffffffffc])) [6 bh+0 S4 A32])
+        (reg:SI 118)) "fs/bitmap.c":126:16 75 {*movsi_internal}
+     (nil))
+(insn 128 127 129 19 (set (reg:CCZ 17 flags)
+        (compare:CCZ (mem/f/c:SI (plus:SI (reg/f:SI 19 frame)
+                    (const_int -4 [0xfffffffffffffffc])) [6 bh+0 S4 A32])
+            (const_int 0 [0]))) "fs/bitmap.c":126:8 7 {*cmpsi_ccno_1}
+     (nil))
+(jump_insn 129 128 130 19 (set (pc)
+        (if_then_else (ne (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref 137)
+            (pc))) "fs/bitmap.c":126:8 806 {*jcc}
+     (nil)
+ -> 137)
+(note 130 129 131 20 [bb 20] NOTE_INSN_BASIC_BLOCK)
+(insn 131 130 132 20 (parallel [
+            (set (reg/f:SI 7 sp)
+                (plus:SI (reg/f:SI 7 sp)
+                    (const_int -12 [0xfffffffffffffff4])))
+            (clobber (reg:CC 17 flags))
+        ]) "fs/bitmap.c":127:9 209 {*addsi_1}
+     (expr_list:REG_ARGS_SIZE (const_int 12 [0xc])
+        (nil)))
+(insn 132 131 133 20 (set (reg/f:SI 119)
+        (plus:SI (reg:SI 82)
+            (const:SI (unspec:SI [
+                        (symbol_ref/f:SI ("*.LC14") [flags 0x2]  <var_decl 0x74c8ddf97090 *.LC14>)
+                    ] UNSPEC_GOTOFF)))) "fs/bitmap.c":127:9 205 {*leasi}
+     (expr_list:REG_EQUAL (symbol_ref/f:SI ("*.LC14") [flags 0x2]  <var_decl 0x74c8ddf97090 *.LC14>)
+        (nil)))
+(insn 133 132 134 20 (set (mem/f:SI (pre_dec:SI (reg/f:SI 7 sp)) [2  S4 A32])
+        (reg/f:SI 119)) "fs/bitmap.c":127:9 54 {*pushsi2}
+     (expr_list:REG_ARGS_SIZE (const_int 16 [0x10])
+        (nil)))
+(insn 134 133 135 20 (set (reg:SI 3 bx)
+        (reg:SI 82)) "fs/bitmap.c":127:9 75 {*movsi_internal}
+     (nil))
+(call_insn 135 134 136 20 (call (mem:QI (symbol_ref:SI ("panic") [flags 0x41]  <function_decl 0x74c8ddf10b00 panic>) [0 panic S1 A8])
+        (const_int 16 [0x10])) "fs/bitmap.c":127:9 812 {*call}
+     (nil)
+    (expr_list (use (reg:SI 3 bx))
+        (nil)))
+(insn 136 135 137 20 (parallel [
+            (set (reg/f:SI 7 sp)
+                (plus:SI (reg/f:SI 7 sp)
+                    (const_int 16 [0x10])))
+            (clobber (reg:CC 17 flags))
+        ]) "fs/bitmap.c":127:9 209 {*addsi_1}
+     (expr_list:REG_ARGS_SIZE (const_int 0 [0])
+        (nil)))
+(code_label 137 136 138 21 32 (nil) [1 uses])
+(note 138 137 139 21 [bb 21] NOTE_INSN_BASIC_BLOCK)
+(insn 139 138 140 21 (set (reg/f:SI 120)
+        (mem/f/c:SI (plus:SI (reg/f:SI 19 frame)
+                (const_int -4 [0xfffffffffffffffc])) [6 bh+0 S4 A32])) "fs/bitmap.c":128:11 75 {*movsi_internal}
+     (nil))
+(insn 140 139 141 21 (set (reg:QI 92 [ _10 ])
+        (mem:QI (plus:SI (reg/f:SI 120)
+                (const_int 12 [0xc])) [0 bh_44->b_count+0 S1 A32])) "fs/bitmap.c":128:11 77 {*movqi_internal}
+     (nil))
+(insn 141 140 142 21 (set (reg:CCZ 17 flags)
+        (compare:CCZ (reg:QI 92 [ _10 ])
+            (const_int 1 [0x1]))) "fs/bitmap.c":128:8 9 {*cmpqi_1}
+     (nil))
+(jump_insn 142 141 143 21 (set (pc)
+        (if_then_else (eq (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref 150)
+            (pc))) "fs/bitmap.c":128:8 806 {*jcc}
+     (nil)
+ -> 150)
+(note 143 142 144 22 [bb 22] NOTE_INSN_BASIC_BLOCK)
+(insn 144 143 145 22 (parallel [
+            (set (reg/f:SI 7 sp)
+                (plus:SI (reg/f:SI 7 sp)
+                    (const_int -12 [0xfffffffffffffff4])))
+            (clobber (reg:CC 17 flags))
+        ]) "fs/bitmap.c":129:9 209 {*addsi_1}
+     (expr_list:REG_ARGS_SIZE (const_int 12 [0xc])
+        (nil)))
+(insn 145 144 146 22 (set (reg/f:SI 121)
+        (plus:SI (reg:SI 82)
+            (const:SI (unspec:SI [
+                        (symbol_ref/f:SI ("*.LC15") [flags 0x2]  <var_decl 0x74c8ddf97120 *.LC15>)
+                    ] UNSPEC_GOTOFF)))) "fs/bitmap.c":129:9 205 {*leasi}
+     (expr_list:REG_EQUAL (symbol_ref/f:SI ("*.LC15") [flags 0x2]  <var_decl 0x74c8ddf97120 *.LC15>)
+        (nil)))
+(insn 146 145 147 22 (set (mem/f:SI (pre_dec:SI (reg/f:SI 7 sp)) [2  S4 A32])
+        (reg/f:SI 121)) "fs/bitmap.c":129:9 54 {*pushsi2}
+     (expr_list:REG_ARGS_SIZE (const_int 16 [0x10])
+        (nil)))
+(insn 147 146 148 22 (set (reg:SI 3 bx)
+        (reg:SI 82)) "fs/bitmap.c":129:9 75 {*movsi_internal}
+     (nil))
+(call_insn 148 147 149 22 (call (mem:QI (symbol_ref:SI ("panic") [flags 0x41]  <function_decl 0x74c8ddf10b00 panic>) [0 panic S1 A8])
+        (const_int 16 [0x10])) "fs/bitmap.c":129:9 812 {*call}
+     (nil)
+    (expr_list (use (reg:SI 3 bx))
+        (nil)))
+(insn 149 148 150 22 (parallel [
+            (set (reg/f:SI 7 sp)
+                (plus:SI (reg/f:SI 7 sp)
+                    (const_int 16 [0x10])))
+            (clobber (reg:CC 17 flags))
+        ]) "fs/bitmap.c":129:9 209 {*addsi_1}
+     (expr_list:REG_ARGS_SIZE (const_int 0 [0])
+        (nil)))
+(code_label 150 149 151 23 33 (nil) [1 uses])
+(note 151 150 152 23 [bb 23] NOTE_INSN_BASIC_BLOCK)
+(insn 152 151 153 23 (set (reg/f:SI 122)
+        (mem/f/c:SI (plus:SI (reg/f:SI 19 frame)
+                (const_int -4 [0xfffffffffffffffc])) [6 bh+0 S4 A32])) "fs/bitmap.c":130:5 75 {*movsi_internal}
+     (nil))
+(insn 153 152 154 23 (set (reg/f:SI 93 [ _11 ])
+        (mem/f:SI (reg/f:SI 122) [2 bh_44->b_data+0 S4 A32])) "fs/bitmap.c":130:5 75 {*movsi_internal}
+     (nil))
+(insn 154 153 155 23 (set (reg:SI 94 [ _12 ])
+        (reg/f:SI 93 [ _11 ])) "fs/bitmap.c":130:5 75 {*movsi_internal}
+     (nil))
+(insn 155 154 156 23 (set (reg:SI 123)
+        (const_int 0 [0])) "fs/bitmap.c":130:5 75 {*movsi_internal}
+     (nil))
+(insn 156 155 157 23 (set (reg:SI 124)
+        (const_int 256 [0x100])) "fs/bitmap.c":130:5 75 {*movsi_internal}
+     (nil))
+(insn 157 156 158 23 (parallel [
+            (asm_operands/v ("cld
+	rep
+	stosl") ("") 0 [
+                    (reg:SI 123)
+                    (reg:SI 124)
+                    (reg:SI 94 [ _12 ])
+                ]
+                 [
+                    (asm_input:SI ("a") fs/bitmap.c:130)
+                    (asm_input:SI ("c") fs/bitmap.c:130)
+                    (asm_input:SI ("D") fs/bitmap.c:130)
+                ]
+                 [] fs/bitmap.c:130)
+            (clobber (reg:CC 17 flags))
+        ]) "fs/bitmap.c":130:5 -1
+     (nil))
+(insn 158 157 159 23 (set (reg/f:SI 125)
+        (mem/f/c:SI (plus:SI (reg/f:SI 19 frame)
+                (const_int -4 [0xfffffffffffffffc])) [6 bh+0 S4 A32])) "fs/bitmap.c":131:20 75 {*movsi_internal}
+     (nil))
+(insn 159 158 160 23 (set (mem:QI (plus:SI (reg/f:SI 125)
+                (const_int 10 [0xa])) [0 bh_44->b_uptodate+0 S1 A16])
+        (const_int 1 [0x1])) "fs/bitmap.c":131:20 77 {*movqi_internal}
+     (nil))
+(insn 160 159 161 23 (set (reg/f:SI 126)
+        (mem/f/c:SI (plus:SI (reg/f:SI 19 frame)
+                (const_int -4 [0xfffffffffffffffc])) [6 bh+0 S4 A32])) "fs/bitmap.c":132:16 75 {*movsi_internal}
+     (nil))
+(insn 161 160 162 23 (set (mem:QI (plus:SI (reg/f:SI 126)
+                (const_int 11 [0xb])) [0 bh_44->b_dirt+0 S1 A8])
+        (const_int 1 [0x1])) "fs/bitmap.c":132:16 77 {*movqi_internal}
+     (nil))
+(insn 162 161 163 23 (parallel [
+            (set (reg/f:SI 7 sp)
+                (plus:SI (reg/f:SI 7 sp)
+                    (const_int -12 [0xfffffffffffffff4])))
+            (clobber (reg:CC 17 flags))
+        ]) "fs/bitmap.c":133:5 209 {*addsi_1}
+     (expr_list:REG_ARGS_SIZE (const_int 12 [0xc])
+        (nil)))
+(insn 163 162 164 23 (set (mem/f:SI (pre_dec:SI (reg/f:SI 7 sp)) [6  S4 A32])
+        (mem/f/c:SI (plus:SI (reg/f:SI 19 frame)
+                (const_int -4 [0xfffffffffffffffc])) [6 bh+0 S4 A32])) "fs/bitmap.c":133:5 54 {*pushsi2}
+     (expr_list:REG_ARGS_SIZE (const_int 16 [0x10])
+        (nil)))
+(insn 164 163 165 23 (set (reg:SI 3 bx)
+        (reg:SI 82)) "fs/bitmap.c":133:5 75 {*movsi_internal}
+     (nil))
+(call_insn 165 164 166 23 (call (mem:QI (symbol_ref:SI ("brelse") [flags 0x41]  <function_decl 0x74c8ddf0e200 brelse>) [0 brelse S1 A8])
+        (const_int 16 [0x10])) "fs/bitmap.c":133:5 812 {*call}
+     (nil)
+    (expr_list (use (reg:SI 3 bx))
+        (nil)))
+(insn 166 165 167 23 (parallel [
+            (set (reg/f:SI 7 sp)
+                (plus:SI (reg/f:SI 7 sp)
+                    (const_int 16 [0x10])))
+            (clobber (reg:CC 17 flags))
+        ]) "fs/bitmap.c":133:5 209 {*addsi_1}
+     (expr_list:REG_ARGS_SIZE (const_int 0 [0])
+        (nil)))
+(insn 167 166 168 23 (set (reg:SI 95 [ _19 ])
+        (mem/c:SI (plus:SI (reg/f:SI 19 frame)
+                (const_int -12 [0xfffffffffffffff4])) [13 j+0 S4 A32])) "fs/bitmap.c":134:12 75 {*movsi_internal}
+     (nil))
+(code_label 168 167 169 24 29 (nil) [2 uses])
+(note 169 168 170 24 [bb 24] NOTE_INSN_BASIC_BLOCK)
+(insn 170 169 174 24 (set (reg:SI 99 [ <retval> ])
+        (reg:SI 95 [ _19 ])) "fs/bitmap.c":135:1 75 {*movsi_internal}
+     (nil))
+(insn 174 170 175 24 (set (reg/i:SI 0 ax)
+        (reg:SI 99 [ <retval> ])) "fs/bitmap.c":135:1 75 {*movsi_internal}
+     (nil))
+(insn 175 174 0 24 (use (reg/i:SI 0 ax)) "fs/bitmap.c":135:1 -1
+     (nil))
+
+;; Function new_inode (new_inode, funcdef_no=4, decl_uid=1163, cgraph_uid=5, symbol_order=4)
+
+(note 1 0 3 NOTE_INSN_DELETED)
+(note 3 1 2 2 [bb 2] NOTE_INSN_BASIC_BLOCK)
+(note 2 3 5 2 NOTE_INSN_FUNCTION_BEG)
+(insn 5 2 6 2 (set (reg:SI 3 bx)
+        (reg:SI 82)) "fs/bitmap.c":144:19 75 {*movsi_internal}
+     (nil))
+(call_insn 6 5 7 2 (set (reg:SI 0 ax)
+        (call (mem:QI (symbol_ref:SI ("get_empty_inode") [flags 0x41]  <function_decl 0x74c8ddf10300 get_empty_inode>) [0 get_empty_inode S1 A8])
+            (const_int 0 [0]))) "fs/bitmap.c":144:19 823 {*call_value}
+     (nil)
+    (expr_list (use (reg:SI 3 bx))
+        (nil)))
+(insn 7 6 8 2 (set (reg:SI 111)
+        (reg:SI 0 ax)) "fs/bitmap.c":144:19 75 {*movsi_internal}
+     (nil))
+(insn 8 7 9 2 (set (mem/f/c:SI (plus:SI (reg/f:SI 19 frame)
+                (const_int -16 [0xfffffffffffffff0])) [8 inode+0 S4 A32])
+        (reg:SI 111)) "fs/bitmap.c":144:19 75 {*movsi_internal}
+     (nil))
+(insn 9 8 10 2 (set (reg:CCZ 17 flags)
+        (compare:CCZ (mem/f/c:SI (plus:SI (reg/f:SI 19 frame)
+                    (const_int -16 [0xfffffffffffffff0])) [8 inode+0 S4 A32])
+            (const_int 0 [0]))) "fs/bitmap.c":144:8 7 {*cmpsi_ccno_1}
+     (nil))
+(jump_insn 10 9 11 2 (set (pc)
+        (if_then_else (ne (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref 15)
+            (pc))) "fs/bitmap.c":144:8 806 {*jcc}
+     (nil)
+ -> 15)
+(note 11 10 12 4 [bb 4] NOTE_INSN_BASIC_BLOCK)
+(insn 12 11 13 4 (set (reg/f:SI 106 [ _30 ])
+        (const_int 0 [0])) "fs/bitmap.c":145:16 75 {*movsi_internal}
+     (nil))
+(jump_insn 13 12 14 4 (set (pc)
+        (label_ref 174)) "fs/bitmap.c":145:16 807 {jump}
+     (nil)
+ -> 174)
+(barrier 14 13 15)
+(code_label 15 14 16 5 36 (nil) [1 uses])
+(note 16 15 17 5 [bb 5] NOTE_INSN_BASIC_BLOCK)
+(insn 17 16 18 5 (parallel [
+            (set (reg/f:SI 7 sp)
+                (plus:SI (reg/f:SI 7 sp)
+                    (const_int -12 [0xfffffffffffffff4])))
+            (clobber (reg:CC 17 flags))
+        ]) "fs/bitmap.c":146:16 209 {*addsi_1}
+     (expr_list:REG_ARGS_SIZE (const_int 12 [0xc])
+        (nil)))
+(insn 18 17 19 5 (set (mem:SI (pre_dec:SI (reg/f:SI 7 sp)) [13  S4 A32])
+        (mem/c:SI (reg/f:SI 16 argp) [13 dev+0 S4 A32])) "fs/bitmap.c":146:16 54 {*pushsi2}
+     (expr_list:REG_ARGS_SIZE (const_int 16 [0x10])
+        (nil)))
+(insn 19 18 20 5 (set (reg:SI 3 bx)
+        (reg:SI 82)) "fs/bitmap.c":146:16 75 {*movsi_internal}
+     (nil))
+(call_insn 20 19 21 5 (set (reg:SI 0 ax)
+        (call (mem:QI (symbol_ref:SI ("get_super") [flags 0x41]  <function_decl 0x74c8ddf0e000 get_super>) [0 get_super S1 A8])
+            (const_int 16 [0x10]))) "fs/bitmap.c":146:16 823 {*call_value}
+     (nil)
+    (expr_list (use (reg:SI 3 bx))
+        (nil)))
+(insn 21 20 22 5 (parallel [
+            (set (reg/f:SI 7 sp)
+                (plus:SI (reg/f:SI 7 sp)
+                    (const_int 16 [0x10])))
+            (clobber (reg:CC 17 flags))
+        ]) "fs/bitmap.c":146:16 209 {*addsi_1}
+     (expr_list:REG_ARGS_SIZE (const_int 0 [0])
+        (nil)))
+(insn 22 21 23 5 (set (reg:SI 112)
+        (reg:SI 0 ax)) "fs/bitmap.c":146:16 75 {*movsi_internal}
+     (nil))
+(insn 23 22 24 5 (set (mem/f/c:SI (plus:SI (reg/f:SI 19 frame)
+                (const_int -20 [0xffffffffffffffec])) [19 sb+0 S4 A32])
+        (reg:SI 112)) "fs/bitmap.c":146:16 75 {*movsi_internal}
+     (nil))
+(insn 24 23 25 5 (set (reg:CCZ 17 flags)
+        (compare:CCZ (mem/f/c:SI (plus:SI (reg/f:SI 19 frame)
+                    (const_int -20 [0xffffffffffffffec])) [19 sb+0 S4 A32])
+            (const_int 0 [0]))) "fs/bitmap.c":146:8 7 {*cmpsi_ccno_1}
+     (nil))
+(jump_insn 25 24 26 5 (set (pc)
+        (if_then_else (ne (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref 33)
+            (pc))) "fs/bitmap.c":146:8 806 {*jcc}
+     (nil)
+ -> 33)
+(note 26 25 27 6 [bb 6] NOTE_INSN_BASIC_BLOCK)
+(insn 27 26 28 6 (parallel [
+            (set (reg/f:SI 7 sp)
+                (plus:SI (reg/f:SI 7 sp)
+                    (const_int -12 [0xfffffffffffffff4])))
+            (clobber (reg:CC 17 flags))
+        ]) "fs/bitmap.c":147:9 209 {*addsi_1}
+     (expr_list:REG_ARGS_SIZE (const_int 12 [0xc])
+        (nil)))
+(insn 28 27 29 6 (set (reg/f:SI 113)
+        (plus:SI (reg:SI 82)
+            (const:SI (unspec:SI [
+                        (symbol_ref/f:SI ("*.LC16") [flags 0x2]  <var_decl 0x74c8ddf47f30 *.LC16>)
+                    ] UNSPEC_GOTOFF)))) "fs/bitmap.c":147:9 205 {*leasi}
+     (expr_list:REG_EQUAL (symbol_ref/f:SI ("*.LC16") [flags 0x2]  <var_decl 0x74c8ddf47f30 *.LC16>)
+        (nil)))
+(insn 29 28 30 6 (set (mem/f:SI (pre_dec:SI (reg/f:SI 7 sp)) [2  S4 A32])
+        (reg/f:SI 113)) "fs/bitmap.c":147:9 54 {*pushsi2}
+     (expr_list:REG_ARGS_SIZE (const_int 16 [0x10])
+        (nil)))
+(insn 30 29 31 6 (set (reg:SI 3 bx)
+        (reg:SI 82)) "fs/bitmap.c":147:9 75 {*movsi_internal}
+     (nil))
+(call_insn 31 30 32 6 (call (mem:QI (symbol_ref:SI ("panic") [flags 0x41]  <function_decl 0x74c8ddf10b00 panic>) [0 panic S1 A8])
+        (const_int 16 [0x10])) "fs/bitmap.c":147:9 812 {*call}
+     (nil)
+    (expr_list (use (reg:SI 3 bx))
+        (nil)))
+(insn 32 31 33 6 (parallel [
+            (set (reg/f:SI 7 sp)
+                (plus:SI (reg/f:SI 7 sp)
+                    (const_int 16 [0x10])))
+            (clobber (reg:CC 17 flags))
+        ]) "fs/bitmap.c":147:9 209 {*addsi_1}
+     (expr_list:REG_ARGS_SIZE (const_int 0 [0])
+        (nil)))
+(code_label 33 32 34 7 38 (nil) [1 uses])
+(note 34 33 35 7 [bb 7] NOTE_INSN_BASIC_BLOCK)
+(insn 35 34 36 7 (set (mem/c:SI (plus:SI (reg/f:SI 19 frame)
+                (const_int -12 [0xfffffffffffffff4])) [13 j+0 S4 A32])
+        (const_int 8192 [0x2000])) "fs/bitmap.c":148:7 75 {*movsi_internal}
+     (nil))
+(insn 36 35 37 7 (set (mem/c:SI (plus:SI (reg/f:SI 19 frame)
+                (const_int -8 [0xfffffffffffffff8])) [13 i+0 S4 A32])
+        (const_int 0 [0])) "fs/bitmap.c":149:12 75 {*movsi_internal}
+     (nil))
+(jump_insn 37 36 38 7 (set (pc)
+        (label_ref 65)) "fs/bitmap.c":149:5 807 {jump}
+     (nil)
+ -> 65)
+(barrier 38 37 67)
+(code_label 67 38 39 8 42 (nil) [1 uses])
+(note 39 67 40 8 [bb 8] NOTE_INSN_BASIC_BLOCK)
+(insn 40 39 41 8 (set (reg/f:SI 114)
+        (mem/f/c:SI (plus:SI (reg/f:SI 19 frame)
+                (const_int -20 [0xffffffffffffffec])) [19 sb+0 S4 A32])) "fs/bitmap.c":150:17 75 {*movsi_internal}
+     (nil))
+(insn 41 40 42 8 (set (reg:SI 116)
+        (mem/c:SI (plus:SI (reg/f:SI 19 frame)
+                (const_int -8 [0xfffffffffffffff8])) [13 i+0 S4 A32])) "fs/bitmap.c":150:17 75 {*movsi_internal}
+     (nil))
+(insn 42 41 43 8 (parallel [
+            (set (reg:SI 115)
+                (plus:SI (reg:SI 116)
+                    (const_int 4 [0x4])))
+            (clobber (reg:CC 17 flags))
+        ]) "fs/bitmap.c":150:17 209 {*addsi_1}
+     (expr_list:REG_EQUAL (plus:SI (mem/c:SI (plus:SI (reg/f:SI 19 frame)
+                    (const_int -8 [0xfffffffffffffff8])) [13 i+0 S4 A32])
+            (const_int 4 [0x4]))
+        (nil)))
+(insn 43 42 44 8 (set (reg/f:SI 117)
+        (mem/f:SI (plus:SI (plus:SI (mult:SI (reg:SI 115)
+                        (const_int 4 [0x4]))
+                    (reg/f:SI 114))
+                (const_int 4 [0x4])) [6 sb_39->s_imap[i_26]+0 S4 A32])) "fs/bitmap.c":150:17 75 {*movsi_internal}
+     (nil))
+(insn 44 43 45 8 (set (mem/f/c:SI (plus:SI (reg/f:SI 19 frame)
+                (const_int -4 [0xfffffffffffffffc])) [6 bh+0 S4 A32])
+        (reg/f:SI 117)) "fs/bitmap.c":150:17 75 {*movsi_internal}
+     (nil))
+(insn 45 44 46 8 (set (reg:CCZ 17 flags)
+        (compare:CCZ (mem/f/c:SI (plus:SI (reg/f:SI 19 frame)
+                    (const_int -4 [0xfffffffffffffffc])) [6 bh+0 S4 A32])
+            (const_int 0 [0]))) "fs/bitmap.c":150:12 7 {*cmpsi_ccno_1}
+     (nil))
+(jump_insn 46 45 47 8 (set (pc)
+        (if_then_else (eq (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref 62)
+            (pc))) "fs/bitmap.c":150:12 806 {*jcc}
+     (nil)
+ -> 62)
+(note 47 46 48 9 [bb 9] NOTE_INSN_BASIC_BLOCK)
+(insn 48 47 49 9 (set (reg/f:SI 118)
+        (mem/f/c:SI (plus:SI (reg/f:SI 19 frame)
+                (const_int -4 [0xfffffffffffffffc])) [6 bh+0 S4 A32])) "fs/bitmap.c":151:22 75 {*movsi_internal}
+     (nil))
+(insn 49 48 51 9 (set (reg/f:SI 83 [ _1 ])
+        (mem/f:SI (reg/f:SI 118) [2 bh_44->b_data+0 S4 A32])) "fs/bitmap.c":151:22 75 {*movsi_internal}
+     (nil))
+(insn 51 49 52 9 (set (reg:SI 120)
+        (const_int 0 [0])) "fs/bitmap.c":151:22 75 {*movsi_internal}
+     (nil))
+(insn 52 51 50 9 (parallel [
+            (set (reg:SI 119 [ __res ])
+                (asm_operands/v:SI ("cld
+1:	lodsl
+	notl %%eax
+	bsfl %%eax, %%edx
+	je 2f
+	addl %%edx, %%ecx
+	jmp 3f
+2:	addl $32, %%ecx
+	cmpl $8192, %%ecx
+	jl 1b
+3:") ("=c") 0 [
+                        (reg:SI 120)
+                        (reg/f:SI 83 [ _1 ])
+                    ]
+                     [
+                        (asm_input:SI ("c") fs/bitmap.c:151)
+                        (asm_input:SI ("S") fs/bitmap.c:151)
+                    ]
+                     [] fs/bitmap.c:151))
+            (clobber (reg:CC 17 flags))
+        ]) "fs/bitmap.c":151:22 -1
+     (nil))
+(insn 50 52 53 9 (set (mem/c:SI (plus:SI (reg/f:SI 19 frame)
+                (const_int -24 [0xffffffffffffffe8])) [13 __res+0 S4 A32])
+        (reg:SI 119 [ __res ])) "fs/bitmap.c":151:22 75 {*movsi_internal}
+     (nil))
+(insn 53 50 54 9 (set (reg:SI 107 [ _46 ])
+        (mem/c:SI (plus:SI (reg/f:SI 19 frame)
+                (const_int -24 [0xffffffffffffffe8])) [13 __res+0 S4 A32])) "fs/bitmap.c":151:22 75 {*movsi_internal}
+     (nil))
+(insn 54 53 57 9 (set (mem/c:SI (plus:SI (reg/f:SI 19 frame)
+                (const_int -12 [0xfffffffffffffff4])) [13 j+0 S4 A32])
+        (reg:SI 107 [ _46 ])) "fs/bitmap.c":151:20 75 {*movsi_internal}
+     (nil))
+(insn 57 54 58 9 (set (reg:CCGC 17 flags)
+        (compare:CCGC (mem/c:SI (plus:SI (reg/f:SI 19 frame)
+                    (const_int -12 [0xfffffffffffffff4])) [13 j+0 S4 A32])
+            (const_int 8191 [0x1fff]))) "fs/bitmap.c":151:16 11 {*cmpsi_1}
+     (nil))
+(jump_insn 58 57 59 9 (set (pc)
+        (if_then_else (gt (reg:CCGC 17 flags)
+                (const_int 0 [0]))
+            (label_ref 62)
+            (pc))) "fs/bitmap.c":151:16 806 {*jcc}
+     (nil)
+ -> 62)
+(note 59 58 60 10 [bb 10] NOTE_INSN_BASIC_BLOCK)
+(jump_insn 60 59 61 10 (set (pc)
+        (label_ref 72)) "fs/bitmap.c":152:17 807 {jump}
+     (nil)
+ -> 72)
+(barrier 61 60 62)
+(code_label 62 61 63 11 40 (nil) [2 uses])
+(note 63 62 64 11 [bb 11] NOTE_INSN_BASIC_BLOCK)
+(insn 64 63 65 11 (parallel [
+            (set (mem/c:SI (plus:SI (reg/f:SI 19 frame)
+                        (const_int -8 [0xfffffffffffffff8])) [13 i+0 S4 A32])
+                (plus:SI (mem/c:SI (plus:SI (reg/f:SI 19 frame)
+                            (const_int -8 [0xfffffffffffffff8])) [13 i+0 S4 A32])
+                    (const_int 1 [0x1])))
+            (clobber (reg:CC 17 flags))
+        ]) "fs/bitmap.c":149:25 209 {*addsi_1}
+     (nil))
+(code_label 65 64 66 12 39 (nil) [1 uses])
+(note 66 65 70 12 [bb 12] NOTE_INSN_BASIC_BLOCK)
+(insn 70 66 71 12 (set (reg:CCGC 17 flags)
+        (compare:CCGC (mem/c:SI (plus:SI (reg/f:SI 19 frame)
+                    (const_int -8 [0xfffffffffffffff8])) [13 i+0 S4 A32])
+            (const_int 7 [0x7]))) "fs/bitmap.c":149:19 11 {*cmpsi_1}
+     (nil))
+(jump_insn 71 70 72 12 (set (pc)
+        (if_then_else (le (reg:CCGC 17 flags)
+                (const_int 0 [0]))
+            (label_ref 67)
+            (pc))) "fs/bitmap.c":149:19 806 {*jcc}
+     (nil)
+ -> 67)
+(code_label 72 71 73 13 41 (nil) [1 uses])
+(note 73 72 74 13 [bb 13] NOTE_INSN_BASIC_BLOCK)
+(insn 74 73 75 13 (set (reg:CCZ 17 flags)
+        (compare:CCZ (mem/f/c:SI (plus:SI (reg/f:SI 19 frame)
+                    (const_int -4 [0xfffffffffffffffc])) [6 bh+0 S4 A32])
+            (const_int 0 [0]))) "fs/bitmap.c":153:8 7 {*cmpsi_ccno_1}
+     (nil))
+(jump_insn 75 74 76 13 (set (pc)
+        (if_then_else (eq (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref 91)
+            (pc))) "fs/bitmap.c":153:8 806 {*jcc}
+     (nil)
+ -> 91)
+(note 76 75 79 14 [bb 14] NOTE_INSN_BASIC_BLOCK)
+(insn 79 76 80 14 (set (reg:CCGC 17 flags)
+        (compare:CCGC (mem/c:SI (plus:SI (reg/f:SI 19 frame)
+                    (const_int -12 [0xfffffffffffffff4])) [13 j+0 S4 A32])
+            (const_int 8191 [0x1fff]))) "fs/bitmap.c":153:13 11 {*cmpsi_1}
+     (nil))
+(jump_insn 80 79 81 14 (set (pc)
+        (if_then_else (gt (reg:CCGC 17 flags)
+                (const_int 0 [0]))
+            (label_ref 91)
+            (pc))) "fs/bitmap.c":153:13 806 {*jcc}
+     (nil)
+ -> 91)
+(note 81 80 82 15 [bb 15] NOTE_INSN_BASIC_BLOCK)
+(insn 82 81 83 15 (set (reg:SI 121)
+        (mem/c:SI (plus:SI (reg/f:SI 19 frame)
+                (const_int -8 [0xfffffffffffffff8])) [13 i+0 S4 A32])) "fs/bitmap.c":153:35 75 {*movsi_internal}
+     (nil))
+(insn 83 82 84 15 (parallel [
+            (set (reg:SI 84 [ _2 ])
+                (ashift:SI (reg:SI 121)
+                    (const_int 13 [0xd])))
+            (clobber (reg:CC 17 flags))
+        ]) "fs/bitmap.c":153:35 655 {*ashlsi3_1}
+     (expr_list:REG_EQUAL (ashift:SI (mem/c:SI (plus:SI (reg/f:SI 19 frame)
+                    (const_int -8 [0xfffffffffffffff8])) [13 i+0 S4 A32])
+            (const_int 13 [0xd]))
+        (nil)))
+(insn 84 83 85 15 (set (reg:SI 122)
+        (mem/c:SI (plus:SI (reg/f:SI 19 frame)
+                (const_int -12 [0xfffffffffffffff4])) [13 j+0 S4 A32])) "fs/bitmap.c":153:31 75 {*movsi_internal}
+     (nil))
+(insn 85 84 86 15 (parallel [
+            (set (reg:SI 85 [ _3 ])
+                (plus:SI (reg:SI 84 [ _2 ])
+                    (reg:SI 122)))
+            (clobber (reg:CC 17 flags))
+        ]) "fs/bitmap.c":153:31 209 {*addsi_1}
+     (expr_list:REG_EQUAL (plus:SI (reg:SI 84 [ _2 ])
+            (mem/c:SI (plus:SI (reg/f:SI 19 frame)
+                    (const_int -12 [0xfffffffffffffff4])) [13 j+0 S4 A32]))
+        (nil)))
+(insn 86 85 87 15 (set (reg/f:SI 123)
+        (mem/f/c:SI (plus:SI (reg/f:SI 19 frame)
+                (const_int -20 [0xffffffffffffffec])) [19 sb+0 S4 A32])) "fs/bitmap.c":153:46 75 {*movsi_internal}
+     (nil))
+(insn 87 86 88 15 (set (reg:HI 86 [ _4 ])
+        (mem:HI (reg/f:SI 123) [4 sb_39->s_ninodes+0 S2 A32])) "fs/bitmap.c":153:46 76 {*movhi_internal}
+     (nil))
+(insn 88 87 89 15 (set (reg:SI 87 [ _5 ])
+        (zero_extend:SI (reg:HI 86 [ _4 ]))) "fs/bitmap.c":153:46 144 {*zero_extendhisi2}
+     (nil))
+(insn 89 88 90 15 (set (reg:CCGC 17 flags)
+        (compare:CCGC (reg:SI 85 [ _3 ])
+            (reg:SI 87 [ _5 ]))) "fs/bitmap.c":153:26 11 {*cmpsi_1}
+     (nil))
+(jump_insn 90 89 91 15 (set (pc)
+        (if_then_else (le (reg:CCGC 17 flags)
+                (const_int 0 [0]))
+            (label_ref 101)
+            (pc))) "fs/bitmap.c":153:26 806 {*jcc}
+     (nil)
+ -> 101)
+(code_label 91 90 92 16 43 (nil) [2 uses])
+(note 92 91 93 16 [bb 16] NOTE_INSN_BASIC_BLOCK)
+(insn 93 92 94 16 (parallel [
+            (set (reg/f:SI 7 sp)
+                (plus:SI (reg/f:SI 7 sp)
+                    (const_int -12 [0xfffffffffffffff4])))
+            (clobber (reg:CC 17 flags))
+        ]) "fs/bitmap.c":154:9 209 {*addsi_1}
+     (expr_list:REG_ARGS_SIZE (const_int 12 [0xc])
+        (nil)))
+(insn 94 93 95 16 (set (mem/f:SI (pre_dec:SI (reg/f:SI 7 sp)) [8  S4 A32])
+        (mem/f/c:SI (plus:SI (reg/f:SI 19 frame)
+                (const_int -16 [0xfffffffffffffff0])) [8 inode+0 S4 A32])) "fs/bitmap.c":154:9 54 {*pushsi2}
+     (expr_list:REG_ARGS_SIZE (const_int 16 [0x10])
+        (nil)))
+(insn 95 94 96 16 (set (reg:SI 3 bx)
+        (reg:SI 82)) "fs/bitmap.c":154:9 75 {*movsi_internal}
+     (nil))
+(call_insn 96 95 97 16 (call (mem:QI (symbol_ref:SI ("iput") [flags 0x41]  <function_decl 0x74c8dded2d00 iput>) [0 iput S1 A8])
+        (const_int 16 [0x10])) "fs/bitmap.c":154:9 812 {*call}
+     (nil)
+    (expr_list (use (reg:SI 3 bx))
+        (nil)))
+(insn 97 96 98 16 (parallel [
+            (set (reg/f:SI 7 sp)
+                (plus:SI (reg/f:SI 7 sp)
+                    (const_int 16 [0x10])))
+            (clobber (reg:CC 17 flags))
+        ]) "fs/bitmap.c":154:9 209 {*addsi_1}
+     (expr_list:REG_ARGS_SIZE (const_int 0 [0])
+        (nil)))
+(insn 98 97 99 16 (set (reg/f:SI 106 [ _30 ])
+        (const_int 0 [0])) "fs/bitmap.c":155:16 75 {*movsi_internal}
+     (nil))
+(jump_insn 99 98 100 16 (set (pc)
+        (label_ref 174)) "fs/bitmap.c":155:16 807 {jump}
+     (nil)
+ -> 174)
+(barrier 100 99 101)
+(code_label 101 100 102 17 44 (nil) [1 uses])
+(note 102 101 103 17 [bb 17] NOTE_INSN_BASIC_BLOCK)
+(insn 103 102 104 17 (set (reg/f:SI 124)
+        (mem/f/c:SI (plus:SI (reg/f:SI 19 frame)
+                (const_int -4 [0xfffffffffffffffc])) [6 bh+0 S4 A32])) "fs/bitmap.c":157:9 75 {*movsi_internal}
+     (nil))
+(insn 104 103 106 17 (set (reg/f:SI 88 [ _6 ])
+        (mem/f:SI (reg/f:SI 124) [2 bh_25->b_data+0 S4 A32])) "fs/bitmap.c":157:9 75 {*movsi_internal}
+     (nil))
+(insn 106 104 107 17 (set (reg:SI 126)
+        (const_int 0 [0])) "fs/bitmap.c":157:9 75 {*movsi_internal}
+     (nil))
+(insn 107 106 108 17 (set (reg:SI 127)
+        (mem/c:SI (plus:SI (reg/f:SI 19 frame)
+                (const_int -12 [0xfffffffffffffff4])) [13 j+0 S4 A32])) "fs/bitmap.c":157:9 75 {*movsi_internal}
+     (nil))
+(insn 108 107 105 17 (parallel [
+            (set (reg:SI 125 [ res ])
+                (asm_operands/v:SI ("btsl %2,%3
+	setb %%al") ("=a") 0 [
+                        (reg:SI 126)
+                        (reg:SI 127)
+                        (mem:QI (reg/f:SI 88 [ _6 ]) [0 *_6+0 S1 A8])
+                    ]
+                     [
+                        (asm_input:SI ("0") fs/bitmap.c:157)
+                        (asm_input:SI ("r") fs/bitmap.c:157)
+                        (asm_input:QI ("m") fs/bitmap.c:157)
+                    ]
+                     [] fs/bitmap.c:157))
+            (clobber (reg:CC 17 flags))
+        ]) "fs/bitmap.c":157:9 -1
+     (nil))
+(insn 105 108 109 17 (set (reg/v:SI 108 [ res ])
+        (reg:SI 125 [ res ])) "fs/bitmap.c":157:9 75 {*movsi_internal}
+     (nil))
+(insn 109 105 110 17 (set (reg:SI 109 [ _50 ])
+        (reg/v:SI 108 [ res ])) "fs/bitmap.c":157:9 75 {*movsi_internal}
+     (nil))
+(insn 110 109 111 17 (set (reg:CCZ 17 flags)
+        (compare:CCZ (reg:SI 109 [ _50 ])
+            (const_int 0 [0]))) "fs/bitmap.c":157:8 7 {*cmpsi_ccno_1}
+     (nil))
+(jump_insn 111 110 112 17 (set (pc)
+        (if_then_else (eq (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref 119)
+            (pc))) "fs/bitmap.c":157:8 806 {*jcc}
+     (nil)
+ -> 119)
+(note 112 111 113 18 [bb 18] NOTE_INSN_BASIC_BLOCK)
+(insn 113 112 114 18 (parallel [
+            (set (reg/f:SI 7 sp)
+                (plus:SI (reg/f:SI 7 sp)
+                    (const_int -12 [0xfffffffffffffff4])))
+            (clobber (reg:CC 17 flags))
+        ]) "fs/bitmap.c":158:9 209 {*addsi_1}
+     (expr_list:REG_ARGS_SIZE (const_int 12 [0xc])
+        (nil)))
+(insn 114 113 115 18 (set (reg/f:SI 128)
+        (plus:SI (reg:SI 82)
+            (const:SI (unspec:SI [
+                        (symbol_ref/f:SI ("*.LC17") [flags 0x2]  <var_decl 0x74c8ddf972d0 *.LC17>)
+                    ] UNSPEC_GOTOFF)))) "fs/bitmap.c":158:9 205 {*leasi}
+     (expr_list:REG_EQUAL (symbol_ref/f:SI ("*.LC17") [flags 0x2]  <var_decl 0x74c8ddf972d0 *.LC17>)
+        (nil)))
+(insn 115 114 116 18 (set (mem/f:SI (pre_dec:SI (reg/f:SI 7 sp)) [2  S4 A32])
+        (reg/f:SI 128)) "fs/bitmap.c":158:9 54 {*pushsi2}
+     (expr_list:REG_ARGS_SIZE (const_int 16 [0x10])
+        (nil)))
+(insn 116 115 117 18 (set (reg:SI 3 bx)
+        (reg:SI 82)) "fs/bitmap.c":158:9 75 {*movsi_internal}
+     (nil))
+(call_insn 117 116 118 18 (call (mem:QI (symbol_ref:SI ("panic") [flags 0x41]  <function_decl 0x74c8ddf10b00 panic>) [0 panic S1 A8])
+        (const_int 16 [0x10])) "fs/bitmap.c":158:9 812 {*call}
+     (nil)
+    (expr_list (use (reg:SI 3 bx))
+        (nil)))
+(insn 118 117 119 18 (parallel [
+            (set (reg/f:SI 7 sp)
+                (plus:SI (reg/f:SI 7 sp)
+                    (const_int 16 [0x10])))
+            (clobber (reg:CC 17 flags))
+        ]) "fs/bitmap.c":158:9 209 {*addsi_1}
+     (expr_list:REG_ARGS_SIZE (const_int 0 [0])
+        (nil)))
+(code_label 119 118 120 19 45 (nil) [1 uses])
+(note 120 119 121 19 [bb 19] NOTE_INSN_BASIC_BLOCK)
+(insn 121 120 122 19 (set (reg/f:SI 129)
+        (mem/f/c:SI (plus:SI (reg/f:SI 19 frame)
+                (const_int -4 [0xfffffffffffffffc])) [6 bh+0 S4 A32])) "fs/bitmap.c":159:16 75 {*movsi_internal}
+     (nil))
+(insn 122 121 123 19 (set (mem:QI (plus:SI (reg/f:SI 129)
+                (const_int 11 [0xb])) [0 bh_25->b_dirt+0 S1 A8])
+        (const_int 1 [0x1])) "fs/bitmap.c":159:16 77 {*movqi_internal}
+     (nil))
+(insn 123 122 124 19 (set (reg/f:SI 130)
+        (mem/f/c:SI (plus:SI (reg/f:SI 19 frame)
+                (const_int -16 [0xfffffffffffffff0])) [8 inode+0 S4 A32])) "fs/bitmap.c":160:20 75 {*movsi_internal}
+     (nil))
+(insn 124 123 125 19 (set (mem:HI (plus:SI (reg/f:SI 130)
+                (const_int 48 [0x30])) [4 inode_36->i_count+0 S2 A32])
+        (const_int 1 [0x1])) "fs/bitmap.c":160:20 76 {*movhi_internal}
+     (nil))
+(insn 125 124 126 19 (set (reg/f:SI 131)
+        (mem/f/c:SI (plus:SI (reg/f:SI 19 frame)
+                (const_int -16 [0xfffffffffffffff0])) [8 inode+0 S4 A32])) "fs/bitmap.c":161:21 75 {*movsi_internal}
+     (nil))
+(insn 126 125 127 19 (set (mem:QI (plus:SI (reg/f:SI 131)
+                (const_int 13 [0xd])) [0 inode_36->i_nlinks+0 S1 A8])
+        (const_int 1 [0x1])) "fs/bitmap.c":161:21 77 {*movqi_internal}
+     (nil))
+(insn 127 126 128 19 (set (reg:SI 132)
+        (mem/c:SI (reg/f:SI 16 argp) [13 dev+0 S4 A32])) "fs/bitmap.c":162:18 75 {*movsi_internal}
+     (nil))
+(insn 128 127 129 19 (set (reg:HI 89 [ _7 ])
+        (subreg:HI (reg:SI 132) 0)) "fs/bitmap.c":162:18 76 {*movhi_internal}
+     (nil))
+(insn 129 128 130 19 (set (reg/f:SI 133)
+        (mem/f/c:SI (plus:SI (reg/f:SI 19 frame)
+                (const_int -16 [0xfffffffffffffff0])) [8 inode+0 S4 A32])) "fs/bitmap.c":162:18 75 {*movsi_internal}
+     (nil))
+(insn 130 129 131 19 (set (mem:HI (plus:SI (reg/f:SI 133)
+                (const_int 44 [0x2c])) [4 inode_36->i_dev+0 S2 A32])
+        (reg:HI 89 [ _7 ])) "fs/bitmap.c":162:18 76 {*movhi_internal}
+     (nil))
+(insn 131 130 132 19 (set (reg/f:SI 134)
+        (mem/u/c:SI (plus:SI (reg:SI 82)
+                (const:SI (unspec:SI [
+                            (symbol_ref:SI ("current") [flags 0x40]  <var_decl 0x74c8ddf2f120 current>)
+                        ] UNSPEC_GOT))) [20  S4 A8])) "fs/bitmap.c":163:27 75 {*movsi_internal}
+     (nil))
+(insn 132 131 133 19 (set (reg/f:SI 90 [ current.0_8 ])
+        (mem/f/c:SI (reg/f:SI 134) [5 current+0 S4 A32])) "fs/bitmap.c":163:27 75 {*movsi_internal}
+     (nil))
+(insn 133 132 134 19 (set (reg:HI 91 [ _9 ])
+        (mem:HI (plus:SI (reg/f:SI 90 [ current.0_8 ])
+                (const_int 578 [0x242])) [4 current.0_8->euid+0 S2 A16])) "fs/bitmap.c":163:27 76 {*movhi_internal}
+     (nil))
+(insn 134 133 135 19 (set (reg/f:SI 135)
+        (mem/f/c:SI (plus:SI (reg/f:SI 19 frame)
+                (const_int -16 [0xfffffffffffffff0])) [8 inode+0 S4 A32])) "fs/bitmap.c":163:18 75 {*movsi_internal}
+     (nil))
+(insn 135 134 136 19 (set (mem:HI (plus:SI (reg/f:SI 135)
+                (const_int 2 [0x2])) [4 inode_36->i_uid+0 S2 A16])
+        (reg:HI 91 [ _9 ])) "fs/bitmap.c":163:18 76 {*movhi_internal}
+     (nil))
+(insn 136 135 137 19 (set (reg/f:SI 136)
+        (mem/u/c:SI (plus:SI (reg:SI 82)
+                (const:SI (unspec:SI [
+                            (symbol_ref:SI ("current") [flags 0x40]  <var_decl 0x74c8ddf2f120 current>)
+                        ] UNSPEC_GOT))) [20  S4 A8])) "fs/bitmap.c":164:27 75 {*movsi_internal}
+     (nil))
+(insn 137 136 138 19 (set (reg/f:SI 92 [ current.1_10 ])
+        (mem/f/c:SI (reg/f:SI 136) [5 current+0 S4 A32])) "fs/bitmap.c":164:27 75 {*movsi_internal}
+     (nil))
+(insn 138 137 139 19 (set (reg:HI 93 [ _11 ])
+        (mem:HI (plus:SI (reg/f:SI 92 [ current.1_10 ])
+                (const_int 584 [0x248])) [4 current.1_10->egid+0 S2 A32])) "fs/bitmap.c":164:27 76 {*movhi_internal}
+     (nil))
+(insn 139 138 140 19 (set (reg:QI 94 [ _12 ])
+        (subreg:QI (reg:HI 93 [ _11 ]) 0)) "fs/bitmap.c":164:18 77 {*movqi_internal}
+     (nil))
+(insn 140 139 141 19 (set (reg/f:SI 137)
+        (mem/f/c:SI (plus:SI (reg/f:SI 19 frame)
+                (const_int -16 [0xfffffffffffffff0])) [8 inode+0 S4 A32])) "fs/bitmap.c":164:18 75 {*movsi_internal}
+     (nil))
+(insn 141 140 142 19 (set (mem:QI (plus:SI (reg/f:SI 137)
+                (const_int 12 [0xc])) [0 inode_36->i_gid+0 S1 A32])
+        (reg:QI 94 [ _12 ])) "fs/bitmap.c":164:18 77 {*movqi_internal}
+     (nil))
+(insn 142 141 143 19 (set (reg/f:SI 138)
+        (mem/f/c:SI (plus:SI (reg/f:SI 19 frame)
+                (const_int -16 [0xfffffffffffffff0])) [8 inode+0 S4 A32])) "fs/bitmap.c":165:19 75 {*movsi_internal}
+     (nil))
+(insn 143 142 144 19 (set (mem:QI (plus:SI (reg/f:SI 138)
+                (const_int 51 [0x33])) [0 inode_36->i_dirt+0 S1 A8])
+        (const_int 1 [0x1])) "fs/bitmap.c":165:19 77 {*movqi_internal}
+     (nil))
+(insn 144 143 145 19 (set (reg:SI 139)
+        (mem/c:SI (plus:SI (reg/f:SI 19 frame)
+                (const_int -8 [0xfffffffffffffff8])) [13 i+0 S4 A32])) "fs/bitmap.c":166:22 75 {*movsi_internal}
+     (nil))
+(insn 145 144 146 19 (set (reg:HI 95 [ _13 ])
+        (subreg:HI (reg:SI 139) 0)) "fs/bitmap.c":166:22 76 {*movhi_internal}
+     (nil))
+(insn 146 145 147 19 (parallel [
+            (set (reg:HI 96 [ _14 ])
+                (ashift:HI (reg:HI 95 [ _13 ])
+                    (const_int 13 [0xd])))
+            (clobber (reg:CC 17 flags))
+        ]) "fs/bitmap.c":166:22 659 {*ashlhi3_1}
+     (nil))
+(insn 147 146 148 19 (set (reg:SI 140)
+        (mem/c:SI (plus:SI (reg/f:SI 19 frame)
+                (const_int -12 [0xfffffffffffffff4])) [13 j+0 S4 A32])) "fs/bitmap.c":166:22 75 {*movsi_internal}
+     (nil))
+(insn 148 147 149 19 (set (reg:HI 97 [ _15 ])
+        (subreg:HI (reg:SI 140) 0)) "fs/bitmap.c":166:22 76 {*movhi_internal}
+     (nil))
+(insn 149 148 150 19 (parallel [
+            (set (reg:HI 98 [ _16 ])
+                (plus:HI (reg:HI 96 [ _14 ])
+                    (reg:HI 97 [ _15 ])))
+            (clobber (reg:CC 17 flags))
+        ]) "fs/bitmap.c":166:22 212 {*addhi_1}
+     (nil))
+(insn 150 149 151 19 (set (reg/f:SI 141)
+        (mem/f/c:SI (plus:SI (reg/f:SI 19 frame)
+                (const_int -16 [0xfffffffffffffff0])) [8 inode+0 S4 A32])) "fs/bitmap.c":166:18 75 {*movsi_internal}
+     (nil))
+(insn 151 150 152 19 (set (mem:HI (plus:SI (reg/f:SI 141)
+                (const_int 46 [0x2e])) [4 inode_36->i_num+0 S2 A16])
+        (reg:HI 98 [ _16 ])) "fs/bitmap.c":166:18 76 {*movhi_internal}
+     (nil))
+(insn 152 151 153 19 (set (reg/f:SI 142)
+        (mem/u/c:SI (plus:SI (reg:SI 82)
+                (const:SI (unspec:SI [
+                            (symbol_ref:SI ("jiffies") [flags 0x40]  <var_decl 0x74c8ddf2f360 jiffies>)
+                        ] UNSPEC_GOT))) [20  S4 A8])) "fs/bitmap.c":167:56 75 {*movsi_internal}
+     (nil))
+(insn 153 152 154 19 (set (reg:SI 99 [ jiffies.2_17 ])
+        (mem/v/c:SI (reg/f:SI 142) [3 jiffies+0 S4 A32])) "fs/bitmap.c":167:56 75 {*movsi_internal}
+     (nil))
+(insn 154 153 155 19 (set (reg:SI 144)
+        (const_int 1374389535 [0x51eb851f])) "fs/bitmap.c":167:56 75 {*movsi_internal}
+     (nil))
+(insn 155 154 156 19 (parallel [
+            (set (reg:SI 143)
+                (truncate:SI (lshiftrt:DI (mult:DI (sign_extend:DI (reg:SI 99 [ jiffies.2_17 ]))
+                            (sign_extend:DI (reg:SI 144)))
+                        (const_int 32 [0x20]))))
+            (clobber (scratch:SI))
+            (clobber (reg:CC 17 flags))
+        ]) "fs/bitmap.c":167:56 435 {*smulsi3_highpart_1}
+     (nil))
+(insn 156 155 157 19 (parallel [
+            (set (reg:SI 145)
+                (ashiftrt:SI (reg:SI 143)
+                    (const_int 5 [0x5])))
+            (clobber (reg:CC 17 flags))
+        ]) "fs/bitmap.c":167:56 702 {*ashrsi3_1}
+     (nil))
+(insn 157 156 158 19 (parallel [
+            (set (reg:SI 146)
+                (ashiftrt:SI (reg:SI 99 [ jiffies.2_17 ])
+                    (const_int 31 [0x1f])))
+            (clobber (reg:CC 17 flags))
+        ]) "fs/bitmap.c":167:56 694 {ashrsi3_cvt}
+     (nil))
+(insn 158 157 159 19 (parallel [
+            (set (reg:SI 100 [ _18 ])
+                (minus:SI (reg:SI 145)
+                    (reg:SI 146)))
+            (clobber (reg:CC 17 flags))
+        ]) "fs/bitmap.c":167:56 282 {*subsi_1}
+     (expr_list:REG_EQUAL (div:SI (reg:SI 99 [ jiffies.2_17 ])
+            (const_int 100 [0x64]))
+        (nil)))
+(insn 159 158 160 19 (set (reg/f:SI 147)
+        (mem/u/c:SI (plus:SI (reg:SI 82)
+                (const:SI (unspec:SI [
+                            (symbol_ref:SI ("startup_time") [flags 0x40]  <var_decl 0x74c8ddf2f3f0 startup_time>)
+                        ] UNSPEC_GOT))) [20  S4 A8])) "fs/bitmap.c":167:56 75 {*movsi_internal}
+     (nil))
+(insn 160 159 161 19 (set (reg:SI 101 [ startup_time.3_19 ])
+        (mem/c:SI (reg/f:SI 147) [3 startup_time+0 S4 A32])) "fs/bitmap.c":167:56 75 {*movsi_internal}
+     (nil))
+(insn 161 160 162 19 (parallel [
+            (set (reg:SI 102 [ _20 ])
+                (plus:SI (reg:SI 100 [ _18 ])
+                    (reg:SI 101 [ startup_time.3_19 ])))
+            (clobber (reg:CC 17 flags))
+        ]) "fs/bitmap.c":167:56 209 {*addsi_1}
+     (nil))
+(insn 162 161 163 19 (set (reg:SI 103 [ _21 ])
+        (reg:SI 102 [ _20 ])) "fs/bitmap.c":167:56 75 {*movsi_internal}
+     (nil))
+(insn 163 162 164 19 (set (reg/f:SI 148)
+        (mem/f/c:SI (plus:SI (reg/f:SI 19 frame)
+                (const_int -16 [0xfffffffffffffff0])) [8 inode+0 S4 A32])) "fs/bitmap.c":167:54 75 {*movsi_internal}
+     (nil))
+(insn 164 163 165 19 (set (mem:SI (plus:SI (reg/f:SI 148)
+                (const_int 40 [0x28])) [3 inode_36->i_ctime+0 S4 A32])
+        (reg:SI 103 [ _21 ])) "fs/bitmap.c":167:54 75 {*movsi_internal}
+     (nil))
+(insn 165 164 166 19 (set (reg/f:SI 149)
+        (mem/f/c:SI (plus:SI (reg/f:SI 19 frame)
+                (const_int -16 [0xfffffffffffffff0])) [8 inode+0 S4 A32])) "fs/bitmap.c":167:44 75 {*movsi_internal}
+     (nil))
+(insn 166 165 167 19 (set (reg:SI 104 [ _22 ])
+        (mem:SI (plus:SI (reg/f:SI 149)
+                (const_int 40 [0x28])) [3 inode_36->i_ctime+0 S4 A32])) "fs/bitmap.c":167:44 75 {*movsi_internal}
+     (nil))
+(insn 167 166 168 19 (set (reg/f:SI 150)
+        (mem/f/c:SI (plus:SI (reg/f:SI 19 frame)
+                (const_int -16 [0xfffffffffffffff0])) [8 inode+0 S4 A32])) "fs/bitmap.c":167:37 75 {*movsi_internal}
+     (nil))
+(insn 168 167 169 19 (set (mem:SI (plus:SI (reg/f:SI 150)
+                (const_int 36 [0x24])) [3 inode_36->i_atime+0 S4 A32])
+        (reg:SI 104 [ _22 ])) "fs/bitmap.c":167:37 75 {*movsi_internal}
+     (nil))
+(insn 169 168 170 19 (set (reg/f:SI 151)
+        (mem/f/c:SI (plus:SI (reg/f:SI 19 frame)
+                (const_int -16 [0xfffffffffffffff0])) [8 inode+0 S4 A32])) "fs/bitmap.c":167:27 75 {*movsi_internal}
+     (nil))
+(insn 170 169 171 19 (set (reg:SI 105 [ _23 ])
+        (mem:SI (plus:SI (reg/f:SI 151)
+                (const_int 36 [0x24])) [3 inode_36->i_atime+0 S4 A32])) "fs/bitmap.c":167:27 75 {*movsi_internal}
+     (nil))
+(insn 171 170 172 19 (set (reg/f:SI 152)
+        (mem/f/c:SI (plus:SI (reg/f:SI 19 frame)
+                (const_int -16 [0xfffffffffffffff0])) [8 inode+0 S4 A32])) "fs/bitmap.c":167:20 75 {*movsi_internal}
+     (nil))
+(insn 172 171 173 19 (set (mem:SI (plus:SI (reg/f:SI 152)
+                (const_int 8 [0x8])) [3 inode_36->i_mtime+0 S4 A32])
+        (reg:SI 105 [ _23 ])) "fs/bitmap.c":167:20 75 {*movsi_internal}
+     (nil))
+(insn 173 172 174 19 (set (reg/f:SI 106 [ _30 ])
+        (mem/f/c:SI (plus:SI (reg/f:SI 19 frame)
+                (const_int -16 [0xfffffffffffffff0])) [8 inode+0 S4 A32])) "fs/bitmap.c":168:12 75 {*movsi_internal}
+     (nil))
+(code_label 174 173 175 20 37 (nil) [2 uses])
+(note 175 174 176 20 [bb 20] NOTE_INSN_BASIC_BLOCK)
+(insn 176 175 180 20 (set (reg/f:SI 110 [ <retval> ])
+        (reg/f:SI 106 [ _30 ])) "fs/bitmap.c":169:1 75 {*movsi_internal}
+     (nil))
+(insn 180 176 181 20 (set (reg/i:SI 0 ax)
+        (reg/f:SI 110 [ <retval> ])) "fs/bitmap.c":169:1 75 {*movsi_internal}
+     (nil))
+(insn 181 180 0 20 (use (reg/i:SI 0 ax)) "fs/bitmap.c":169:1 -1
+     (nil))
