@@ -206,6 +206,11 @@ KBUILD_CFLAGS   := -Wall -Wundef  -Wno-trigraphs \
 		   -Werror-implicit-function-declaration \
 		   -Wno-format-security \
 		   -fno-delete-null-pointer-checks # -Wstrict-prototypes
+# 添加编译详细信息
+KBUILD_CFLAGS += -fverbose-asm
+KBUILD_CFLAGS += -fdump-rtl-all
+KBUILD_CFLAGS += -fopt-info
+
 KBUILD_AFLAGS_KERNEL :=
 KBUILD_CFLAGS_KERNEL :=
 KBUILD_AFLAGS   := -D__ASSEMBLY__

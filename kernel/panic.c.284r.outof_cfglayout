@@ -1,0 +1,139 @@
+
+;; Function panic (panic, funcdef_no=1, decl_uid=1002, cgraph_uid=2, symbol_order=1)
+
+Reordered sequence:
+ 2 bb 2
+ 3 bb 3
+ 4 bb 4
+ 5 bb 5
+(note 1 0 3 NOTE_INSN_DELETED)
+(note 3 1 2 2 [bb 2] NOTE_INSN_BASIC_BLOCK)
+(note 2 3 5 2 NOTE_INSN_FUNCTION_BEG)
+(insn 5 2 6 2 (parallel [
+            (set (reg/f:SI 7 sp)
+                (plus:SI (reg/f:SI 7 sp)
+                    (const_int -8 [0xfffffffffffffff8])))
+            (clobber (reg:CC 17 flags))
+        ]) "kernel/panic.c":20:2 209 {*addsi_1}
+     (expr_list:REG_ARGS_SIZE (const_int 8 [0x8])
+        (nil)))
+(insn 6 5 7 2 (set (mem/f:SI (pre_dec:SI (reg/f:SI 7 sp)) [1  S4 A32])
+        (mem/f/c:SI (reg/f:SI 16 argp) [1 s+0 S4 A32])) "kernel/panic.c":20:2 54 {*pushsi2}
+     (expr_list:REG_ARGS_SIZE (const_int 12 [0xc])
+        (nil)))
+(insn 7 6 8 2 (set (reg/f:SI 85)
+        (plus:SI (reg:SI 82)
+            (const:SI (unspec:SI [
+                        (symbol_ref/f:SI ("*.LC0") [flags 0x2]  <var_decl 0x72ca4572f630 *.LC0>)
+                    ] UNSPEC_GOTOFF)))) "kernel/panic.c":20:2 205 {*leasi}
+     (expr_list:REG_EQUAL (symbol_ref/f:SI ("*.LC0") [flags 0x2]  <var_decl 0x72ca4572f630 *.LC0>)
+        (nil)))
+(insn 8 7 9 2 (set (mem/f:SI (pre_dec:SI (reg/f:SI 7 sp)) [1  S4 A32])
+        (reg/f:SI 85)) "kernel/panic.c":20:2 54 {*pushsi2}
+     (expr_list:REG_ARGS_SIZE (const_int 16 [0x10])
+        (nil)))
+(insn 9 8 10 2 (set (reg:SI 3 bx)
+        (reg:SI 82)) "kernel/panic.c":20:2 75 {*movsi_internal}
+     (nil))
+(call_insn 10 9 11 2 (set (reg:SI 0 ax)
+        (call (mem:QI (symbol_ref:SI ("printk") [flags 0x41]  <function_decl 0x72ca456d2700 printk>) [0 printk S1 A8])
+            (const_int 16 [0x10]))) "kernel/panic.c":20:2 823 {*call_value}
+     (nil)
+    (expr_list (use (reg:SI 3 bx))
+        (nil)))
+(insn 11 10 12 2 (parallel [
+            (set (reg/f:SI 7 sp)
+                (plus:SI (reg/f:SI 7 sp)
+                    (const_int 16 [0x10])))
+            (clobber (reg:CC 17 flags))
+        ]) "kernel/panic.c":20:2 209 {*addsi_1}
+     (expr_list:REG_ARGS_SIZE (const_int 0 [0])
+        (nil)))
+(insn 12 11 13 2 (set (reg/f:SI 86)
+        (mem/u/c:SI (plus:SI (reg:SI 82)
+                (const:SI (unspec:SI [
+                            (symbol_ref:SI ("task") [flags 0x40]  <var_decl 0x72ca4572f1b0 task>)
+                        ] UNSPEC_GOT))) [3  S4 A8])) "kernel/panic.c":21:21 75 {*movsi_internal}
+     (nil))
+(insn 13 12 14 2 (set (reg/f:SI 83 [ _1 ])
+        (mem/f/c:SI (reg/f:SI 86) [2 task[0]+0 S4 A32])) "kernel/panic.c":21:21 75 {*movsi_internal}
+     (nil))
+(insn 14 13 15 2 (set (reg/f:SI 87)
+        (mem/u/c:SI (plus:SI (reg:SI 82)
+                (const:SI (unspec:SI [
+                            (symbol_ref:SI ("current") [flags 0x40]  <var_decl 0x72ca4572f120 current>)
+                        ] UNSPEC_GOT))) [3  S4 A8])) "kernel/panic.c":21:14 75 {*movsi_internal}
+     (nil))
+(insn 15 14 16 2 (set (reg/f:SI 84 [ current.0_2 ])
+        (mem/f/c:SI (reg/f:SI 87) [2 current+0 S4 A32])) "kernel/panic.c":21:14 75 {*movsi_internal}
+     (nil))
+(insn 16 15 17 2 (set (reg:CCZ 17 flags)
+        (compare:CCZ (reg/f:SI 83 [ _1 ])
+            (reg/f:SI 84 [ current.0_2 ]))) "kernel/panic.c":21:5 11 {*cmpsi_1}
+     (nil))
+(jump_insn 17 16 18 2 (set (pc)
+        (if_then_else (ne (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref 27)
+            (pc))) "kernel/panic.c":21:5 806 {*jcc}
+     (nil)
+ -> 27)
+(note 18 17 19 3 [bb 3] NOTE_INSN_BASIC_BLOCK)
+(insn 19 18 20 3 (parallel [
+            (set (reg/f:SI 7 sp)
+                (plus:SI (reg/f:SI 7 sp)
+                    (const_int -12 [0xfffffffffffffff4])))
+            (clobber (reg:CC 17 flags))
+        ]) "kernel/panic.c":22:3 209 {*addsi_1}
+     (expr_list:REG_ARGS_SIZE (const_int 12 [0xc])
+        (nil)))
+(insn 20 19 21 3 (set (reg/f:SI 88)
+        (plus:SI (reg:SI 82)
+            (const:SI (unspec:SI [
+                        (symbol_ref/f:SI ("*.LC1") [flags 0x2]  <var_decl 0x72ca4572f6c0 *.LC1>)
+                    ] UNSPEC_GOTOFF)))) "kernel/panic.c":22:3 205 {*leasi}
+     (expr_list:REG_EQUAL (symbol_ref/f:SI ("*.LC1") [flags 0x2]  <var_decl 0x72ca4572f6c0 *.LC1>)
+        (nil)))
+(insn 21 20 22 3 (set (mem/f:SI (pre_dec:SI (reg/f:SI 7 sp)) [1  S4 A32])
+        (reg/f:SI 88)) "kernel/panic.c":22:3 54 {*pushsi2}
+     (expr_list:REG_ARGS_SIZE (const_int 16 [0x10])
+        (nil)))
+(insn 22 21 23 3 (set (reg:SI 3 bx)
+        (reg:SI 82)) "kernel/panic.c":22:3 75 {*movsi_internal}
+     (nil))
+(call_insn 23 22 24 3 (set (reg:SI 0 ax)
+        (call (mem:QI (symbol_ref:SI ("printk") [flags 0x41]  <function_decl 0x72ca456d2700 printk>) [0 printk S1 A8])
+            (const_int 16 [0x10]))) "kernel/panic.c":22:3 823 {*call_value}
+     (nil)
+    (expr_list (use (reg:SI 3 bx))
+        (nil)))
+(insn 24 23 37 3 (parallel [
+            (set (reg/f:SI 7 sp)
+                (plus:SI (reg/f:SI 7 sp)
+                    (const_int 16 [0x10])))
+            (clobber (reg:CC 17 flags))
+        ]) "kernel/panic.c":22:3 209 {*addsi_1}
+     (expr_list:REG_ARGS_SIZE (const_int 0 [0])
+        (nil)))
+(jump_insn 37 24 38 3 (set (pc)
+        (label_ref 31)) -1
+     (nil)
+ -> 31)
+(barrier 38 37 27)
+(code_label 27 38 28 4 2 (nil) [1 uses])
+(note 28 27 29 4 [bb 4] NOTE_INSN_BASIC_BLOCK)
+(insn 29 28 30 4 (set (reg:SI 3 bx)
+        (reg:SI 82)) "kernel/panic.c":24:3 75 {*movsi_internal}
+     (nil))
+(call_insn 30 29 31 4 (call (mem:QI (symbol_ref:SI ("sys_sync") [flags 0x41]  <function_decl 0x72ca45737b00 sys_sync>) [0 sys_sync S1 A8])
+        (const_int 0 [0])) "kernel/panic.c":24:3 812 {*call}
+     (nil)
+    (expr_list (use (reg:SI 3 bx))
+        (nil)))
+(code_label 31 30 32 5 3 (nil) [2 uses])
+(note 32 31 39 5 [bb 5] NOTE_INSN_BASIC_BLOCK)
+(jump_insn 39 32 40 5 (set (pc)
+        (label_ref 31)) "kernel/panic.c":25:2 -1
+     (nil)
+ -> 31)
+(barrier 40 39 0)

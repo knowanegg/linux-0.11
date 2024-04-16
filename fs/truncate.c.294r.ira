@@ -1,0 +1,1855 @@
+
+;; Function free_ind (free_ind, funcdef_no=1, decl_uid=1336, cgraph_uid=2, symbol_order=1)
+
+scanning new insn with uid = 80.
+starting the processing of deferred insns
+ending the processing of deferred insns
+df_analyze called
+df_worklist_dataflow_doublequeue: n_basic_blocks 13 n_edges 16 count 16 (  1.2)
+;; 2 loops found
+;;
+;; Loop 0
+;;  header 0, latch 1
+;;  depth 0, outer -1
+;;  nodes: 0 1 2 3 4 5 6 7 8 9 10 12 11
+;;
+;; Loop 1
+;;  header 8, latch 7
+;;  depth 1, outer 0
+;;  nodes: 8 7 5 6
+;; 2 succs { 12 3 }
+;; 3 succs { 4 10 }
+;; 4 succs { 8 }
+;; 5 succs { 6 7 }
+;; 6 succs { 7 }
+;; 7 succs { 8 }
+;; 8 succs { 5 9 }
+;; 9 succs { 10 }
+;; 10 succs { 11 }
+;; 12 succs { 11 }
+;; 11 succs { 1 }
+Building IRA IR
+starting the processing of deferred insns
+ending the processing of deferred insns
+df_analyze called
+
+Pass 0 for finding pseudo/allocno costs
+
+    r90: preferred GENERAL_REGS, alternative NO_REGS, allocno GENERAL_REGS
+    a3 (r90,l0) best GENERAL_REGS, allocno GENERAL_REGS
+    r89: preferred GENERAL_REGS, alternative NO_REGS, allocno GENERAL_REGS
+    a5 (r89,l0) best GENERAL_REGS, allocno GENERAL_REGS
+    r88: preferred GENERAL_REGS, alternative NO_REGS, allocno GENERAL_REGS
+    a6 (r88,l0) best GENERAL_REGS, allocno GENERAL_REGS
+    r87: preferred GENERAL_REGS, alternative NO_REGS, allocno GENERAL_REGS
+    a7 (r87,l0) best GENERAL_REGS, allocno GENERAL_REGS
+    r86: preferred AREG, alternative GENERAL_REGS, allocno GENERAL_REGS
+    a8 (r86,l0) best AREG, allocno GENERAL_REGS
+    r85: preferred GENERAL_REGS, alternative NO_REGS, allocno GENERAL_REGS
+    a1 (r85,l0) best GENERAL_REGS, allocno GENERAL_REGS
+    r84: preferred GENERAL_REGS, alternative NO_REGS, allocno GENERAL_REGS
+    a2 (r84,l0) best GENERAL_REGS, allocno GENERAL_REGS
+    r83: preferred GENERAL_REGS, alternative NO_REGS, allocno GENERAL_REGS
+    a4 (r83,l0) best GENERAL_REGS, allocno GENERAL_REGS
+    r82: preferred BREG, alternative GENERAL_REGS, allocno GENERAL_REGS
+    a0 (r82,l0) best BREG, allocno GENERAL_REGS
+
+  a0(r82,l0) costs: AREG:8000 DREG:8000 CREG:8000 BREG:8000 SIREG:8000 DIREG:8000 AD_REGS:8000 CLOBBERED_REGS:8000 Q_REGS:8000 NON_Q_REGS:8000 TLS_GOTBASE_REGS:8000 GENERAL_REGS:8000 MEM:30000
+  a1(r85,l0) costs: AREG:0 DREG:0 CREG:0 BREG:0 SIREG:0 DIREG:0 AD_REGS:0 CLOBBERED_REGS:0 Q_REGS:0 NON_Q_REGS:0 TLS_GOTBASE_REGS:0 GENERAL_REGS:0 MEM:12000
+  a2(r84,l0) costs: AREG:0 DREG:0 CREG:0 BREG:0 SIREG:0 DIREG:0 AD_REGS:0 CLOBBERED_REGS:0 Q_REGS:0 NON_Q_REGS:0 TLS_GOTBASE_REGS:0 GENERAL_REGS:0 MEM:11000
+  a3(r90,l0) costs: AREG:0 DREG:0 CREG:0 BREG:0 SIREG:0 DIREG:0 AD_REGS:0 CLOBBERED_REGS:0 Q_REGS:0 NON_Q_REGS:0 TLS_GOTBASE_REGS:0 GENERAL_REGS:0 MEM:12000
+  a4(r83,l0) costs: AREG:0 DREG:0 CREG:0 BREG:0 SIREG:0 DIREG:0 AD_REGS:0 CLOBBERED_REGS:0 Q_REGS:0 NON_Q_REGS:0 TLS_GOTBASE_REGS:0 GENERAL_REGS:0 MEM:12000
+  a5(r89,l0) costs: AREG:0 DREG:0 CREG:0 BREG:0 SIREG:0 DIREG:0 AD_REGS:0 CLOBBERED_REGS:0 Q_REGS:0 NON_Q_REGS:0 TLS_GOTBASE_REGS:0 GENERAL_REGS:0 MEM:12000
+  a6(r88,l0) costs: AREG:0 DREG:0 CREG:0 BREG:0 SIREG:0 DIREG:0 AD_REGS:0 CLOBBERED_REGS:0 Q_REGS:0 NON_Q_REGS:0 TLS_GOTBASE_REGS:0 GENERAL_REGS:0 MEM:12000
+  a7(r87,l0) costs: AREG:0 DREG:0 CREG:0 BREG:0 SIREG:0 DIREG:0 AD_REGS:0 CLOBBERED_REGS:0 Q_REGS:0 NON_Q_REGS:0 TLS_GOTBASE_REGS:0 GENERAL_REGS:0 MEM:12000
+  a8(r86,l0) costs: AREG:2000 DREG:2000 CREG:2000 BREG:2000 SIREG:2000 DIREG:2000 AD_REGS:2000 CLOBBERED_REGS:2000 Q_REGS:2000 NON_Q_REGS:2000 TLS_GOTBASE_REGS:2000 GENERAL_REGS:2000 MEM:12000
+
+   Insn 79(l0): point = 1
+   Insn 75(l0): point = 4
+   Insn 68(l0): point = 6
+   Insn 67(l0): point = 8
+   Insn 66(l0): point = 10
+   Insn 65(l0): point = 12
+   Insn 64(l0): point = 14
+   Insn 63(l0): point = 16
+   Insn 60(l0): point = 19
+   Insn 59(l0): point = 21
+   Insn 58(l0): point = 23
+   Insn 57(l0): point = 25
+   Insn 56(l0): point = 27
+   Insn 33(l0): point = 30
+   Insn 32(l0): point = 32
+   Insn 31(l0): point = 34
+   Insn 30(l0): point = 36
+   Insn 54(l0): point = 39
+   Insn 53(l0): point = 41
+   Insn 47(l0): point = 44
+   Insn 46(l0): point = 46
+   Insn 43(l0): point = 49
+   Insn 42(l0): point = 51
+   Insn 41(l0): point = 53
+   Insn 40(l0): point = 55
+   Insn 39(l0): point = 57
+   Insn 38(l0): point = 59
+   Insn 37(l0): point = 61
+   Insn 36(l0): point = 63
+   Insn 35(l0): point = 65
+   Insn 73(l0): point = 68
+   Insn 26(l0): point = 70
+   Insn 25(l0): point = 72
+   Insn 24(l0): point = 74
+   Insn 23(l0): point = 76
+   Insn 21(l0): point = 79
+   Insn 20(l0): point = 81
+   Insn 19(l0): point = 83
+   Insn 18(l0): point = 85
+   Insn 17(l0): point = 87
+   Insn 16(l0): point = 89
+   Insn 15(l0): point = 91
+   Insn 14(l0): point = 93
+   Insn 13(l0): point = 95
+   Insn 12(l0): point = 97
+   Insn 6(l0): point = 100
+   Insn 5(l0): point = 102
+   Insn 80(l0): point = 104
+ a0(r82): [11..104]
+ a1(r85): [58..61]
+ a2(r84): [62..63]
+ a3(r90): [64..65]
+ a4(r83): [33..34]
+ a5(r89): [35..36]
+ a6(r88): [73..74]
+ a7(r87): [75..76]
+ a8(r86): [84..85]
+Compressing live ranges: from 107 to 16 - 14%
+Ranges after the compression:
+ a0(r82): [0..15]
+ a1(r85): [4..5]
+ a2(r84): [6..7]
+ a3(r90): [8..9]
+ a4(r83): [0..1]
+ a5(r89): [2..3]
+ a6(r88): [10..11]
+ a7(r87): [12..13]
+ a8(r86): [14..15]
+  pref0:a8(r86)<-hr0@1500
+  pref1:a0(r82)<-hr3@1500
+  regions=1, blocks=13, points=16
+    allocnos=9 (big 0), copies=0, conflicts=0, ranges=9
+Disposition:
+    0:r82  l0     3    4:r83  l0     0    2:r84  l0     0    1:r85  l0     0
+    8:r86  l0     0    7:r87  l0     0    6:r88  l0     0    5:r89  l0     0
+    3:r90  l0     0
++++Costs: overall 4000, reg 4000, mem 0, ld 0, st 0, move 0
++++       move loops 0, new jumps 0
+
+
+free_ind
+
+Dataflow summary:
+;;  fully invalidated by EH 	 0 [ax] 1 [dx] 2 [cx] 8 [st] 9 [st(1)] 10 [st(2)] 11 [st(3)] 12 [st(4)] 13 [st(5)] 14 [st(6)] 15 [st(7)] 17 [flags] 18 [fpsr] 20 [xmm0] 21 [xmm1] 22 [xmm2] 23 [xmm3] 24 [xmm4] 25 [xmm5] 26 [xmm6] 27 [xmm7] 28 [mm0] 29 [mm1] 30 [mm2] 31 [mm3] 32 [mm4] 33 [mm5] 34 [mm6] 35 [mm7] 36 [r8] 37 [r9] 38 [r10] 39 [r11] 40 [r12] 41 [r13] 42 [r14] 43 [r15] 44 [xmm8] 45 [xmm9] 46 [xmm10] 47 [xmm11] 48 [xmm12] 49 [xmm13] 50 [xmm14] 51 [xmm15] 52 [xmm16] 53 [xmm17] 54 [xmm18] 55 [xmm19] 56 [xmm20] 57 [xmm21] 58 [xmm22] 59 [xmm23] 60 [xmm24] 61 [xmm25] 62 [xmm26] 63 [xmm27] 64 [xmm28] 65 [xmm29] 66 [xmm30] 67 [xmm31] 68 [k0] 69 [k1] 70 [k2] 71 [k3] 72 [k4] 73 [k5] 74 [k6] 75 [k7]
+;;  hardware regs used 	 7 [sp] 16 [argp] 19 [frame]
+;;  regular block artificial uses 	 6 [bp] 7 [sp] 16 [argp] 19 [frame]
+;;  eh block artificial uses 	 6 [bp] 7 [sp] 16 [argp] 19 [frame]
+;;  entry block defs 	 0 [ax] 1 [dx] 2 [cx] 6 [bp] 7 [sp] 16 [argp] 19 [frame]
+;;  exit block uses 	 6 [bp] 7 [sp] 19 [frame]
+;;  regs ever live 	 0 [ax] 3 [bx] 7 [sp] 17 [flags]
+;;  ref usage 	r0={5d,1u} r1={5d} r2={5d} r3={4d,4u} r6={1d,12u} r7={16d,39u} r8={4d} r9={4d} r10={4d} r11={4d} r12={4d} r13={4d} r14={4d} r15={4d} r16={1d,17u} r17={19d,4u} r18={4d} r19={1d,25u} r20={4d} r21={4d} r22={4d} r23={4d} r24={4d} r25={4d} r26={4d} r27={4d} r28={4d} r29={4d} r30={4d} r31={4d} r32={4d} r33={4d} r34={4d} r35={4d} r36={4d} r37={4d} r38={4d} r39={4d} r40={4d} r41={4d} r42={4d} r43={4d} r44={4d} r45={4d} r46={4d} r47={4d} r48={4d} r49={4d} r50={4d} r51={4d} r52={4d} r53={4d} r54={4d} r55={4d} r56={4d} r57={4d} r58={4d} r59={4d} r60={4d} r61={4d} r62={4d} r63={4d} r64={4d} r65={4d} r66={4d} r67={4d} r68={4d} r69={4d} r70={4d} r71={4d} r72={4d} r73={4d} r74={4d} r75={4d} r82={1d,4u} r83={1d,1u} r84={1d,1u} r85={1d,1u} r86={1d,1u} r87={1d,1u} r88={1d,1u} r89={1d,1u} r90={1d,1u} 
+;;    total ref usage 440{326d,114u,0e} in 48{44 regular + 4 call} insns.
+(note 1 0 3 NOTE_INSN_DELETED)
+(note 3 1 80 2 [bb 2] NOTE_INSN_BASIC_BLOCK)
+(insn/f 80 3 2 2 (parallel [
+            (set (reg:SI 82)
+                (unspec:SI [
+                        (const_int 0 [0])
+                    ] UNSPEC_SET_GOT))
+            (clobber (reg:CC 17 flags))
+        ]) 846 {*set_got}
+     (expr_list:REG_UNUSED (reg:CC 17 flags)
+        (expr_list:REG_CFA_FLUSH_QUEUE (nil)
+            (nil))))
+(note 2 80 5 2 NOTE_INSN_FUNCTION_BEG)
+(insn 5 2 6 2 (set (reg:CCZ 17 flags)
+        (compare:CCZ (mem/c:SI (plus:SI (reg/f:SI 16 argp)
+                    (const_int 4 [0x4])) [6 block+0 S4 A32])
+            (const_int 0 [0]))) "fs/truncate.c":16:8 7 {*cmpsi_ccno_1}
+     (nil))
+(jump_insn 6 5 11 2 (set (pc)
+        (if_then_else (eq (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref:SI 78)
+            (pc))) "fs/truncate.c":16:8 806 {*jcc}
+     (expr_list:REG_DEAD (reg:CCZ 17 flags)
+        (nil))
+ -> 78)
+(note 11 6 12 3 [bb 3] NOTE_INSN_BASIC_BLOCK)
+(insn 12 11 13 3 (parallel [
+            (set (reg/f:SI 7 sp)
+                (plus:SI (reg/f:SI 7 sp)
+                    (const_int -8 [0xfffffffffffffff8])))
+            (clobber (reg:CC 17 flags))
+        ]) "fs/truncate.c":18:15 209 {*addsi_1}
+     (expr_list:REG_UNUSED (reg:CC 17 flags)
+        (expr_list:REG_ARGS_SIZE (const_int 8 [0x8])
+            (nil))))
+(insn 13 12 14 3 (set (mem:SI (pre_dec:SI (reg/f:SI 7 sp)) [6  S4 A32])
+        (mem/c:SI (plus:SI (reg/f:SI 16 argp)
+                (const_int 4 [0x4])) [6 block+0 S4 A32])) "fs/truncate.c":18:15 54 {*pushsi2}
+     (expr_list:REG_ARGS_SIZE (const_int 12 [0xc])
+        (nil)))
+(insn 14 13 15 3 (set (mem:SI (pre_dec:SI (reg/f:SI 7 sp)) [6  S4 A32])
+        (mem/c:SI (reg/f:SI 16 argp) [6 dev+0 S4 A32])) "fs/truncate.c":18:15 54 {*pushsi2}
+     (expr_list:REG_ARGS_SIZE (const_int 16 [0x10])
+        (nil)))
+(insn 15 14 16 3 (set (reg:SI 3 bx)
+        (reg:SI 82)) "fs/truncate.c":18:15 75 {*movsi_internal}
+     (nil))
+(call_insn 16 15 17 3 (set (reg:SI 0 ax)
+        (call (mem:QI (symbol_ref:SI ("bread") [flags 0x41]  <function_decl 0x742679f15200 bread>) [0 bread S1 A8])
+            (const_int 16 [0x10]))) "fs/truncate.c":18:15 823 {*call_value}
+     (expr_list:REG_DEAD (reg:SI 3 bx)
+        (nil))
+    (expr_list (use (reg:SI 3 bx))
+        (nil)))
+(insn 17 16 18 3 (parallel [
+            (set (reg/f:SI 7 sp)
+                (plus:SI (reg/f:SI 7 sp)
+                    (const_int 16 [0x10])))
+            (clobber (reg:CC 17 flags))
+        ]) "fs/truncate.c":18:15 209 {*addsi_1}
+     (expr_list:REG_UNUSED (reg:CC 17 flags)
+        (expr_list:REG_ARGS_SIZE (const_int 0 [0])
+            (nil))))
+(insn 18 17 19 3 (set (reg:SI 86)
+        (reg:SI 0 ax)) "fs/truncate.c":18:15 75 {*movsi_internal}
+     (expr_list:REG_DEAD (reg:SI 0 ax)
+        (nil)))
+(insn 19 18 20 3 (set (mem/f/c:SI (plus:SI (reg/f:SI 19 frame)
+                (const_int -12 [0xfffffffffffffff4])) [7 bh+0 S4 A32])
+        (reg:SI 86)) "fs/truncate.c":18:15 75 {*movsi_internal}
+     (expr_list:REG_DEAD (reg:SI 86)
+        (nil)))
+(insn 20 19 21 3 (set (reg:CCZ 17 flags)
+        (compare:CCZ (mem/f/c:SI (plus:SI (reg/f:SI 19 frame)
+                    (const_int -12 [0xfffffffffffffff4])) [7 bh+0 S4 A32])
+            (const_int 0 [0]))) "fs/truncate.c":18:8 7 {*cmpsi_ccno_1}
+     (nil))
+(jump_insn 21 20 22 3 (set (pc)
+        (if_then_else (eq (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref 61)
+            (pc))) "fs/truncate.c":18:8 806 {*jcc}
+     (expr_list:REG_DEAD (reg:CCZ 17 flags)
+        (nil))
+ -> 61)
+(note 22 21 23 4 [bb 4] NOTE_INSN_BASIC_BLOCK)
+(insn 23 22 24 4 (set (reg/f:SI 87)
+        (mem/f/c:SI (plus:SI (reg/f:SI 19 frame)
+                (const_int -12 [0xfffffffffffffff4])) [7 bh+0 S4 A32])) "fs/truncate.c":19:11 75 {*movsi_internal}
+     (nil))
+(insn 24 23 25 4 (set (reg/f:SI 88)
+        (mem/f:SI (reg/f:SI 87) [9 bh_14->b_data+0 S4 A32])) "fs/truncate.c":19:11 75 {*movsi_internal}
+     (expr_list:REG_DEAD (reg/f:SI 87)
+        (nil)))
+(insn 25 24 26 4 (set (mem/f/c:SI (plus:SI (reg/f:SI 19 frame)
+                (const_int -4 [0xfffffffffffffffc])) [5 p+0 S4 A32])
+        (reg/f:SI 88)) "fs/truncate.c":19:11 75 {*movsi_internal}
+     (expr_list:REG_DEAD (reg/f:SI 88)
+        (nil)))
+(insn 26 25 73 4 (set (mem/c:SI (plus:SI (reg/f:SI 19 frame)
+                (const_int -8 [0xfffffffffffffff8])) [6 i+0 S4 A32])
+        (const_int 0 [0])) "fs/truncate.c":20:16 75 {*movsi_internal}
+     (nil))
+(jump_insn 73 26 74 4 (set (pc)
+        (label_ref 48)) "fs/truncate.c":20:9 807 {jump}
+     (nil)
+ -> 48)
+(barrier 74 73 50)
+(code_label 50 74 29 5 7 (nil) [1 uses])
+(note 29 50 30 5 [bb 5] NOTE_INSN_BASIC_BLOCK)
+(insn 30 29 31 5 (set (reg/f:SI 89)
+        (mem/f/c:SI (plus:SI (reg/f:SI 19 frame)
+                (const_int -4 [0xfffffffffffffffc])) [5 p+0 S4 A32])) "fs/truncate.c":21:16 75 {*movsi_internal}
+     (nil))
+(insn 31 30 32 5 (set (reg:HI 83 [ _1 ])
+        (mem:HI (reg/f:SI 89) [2 *p_4+0 S2 A16])) "fs/truncate.c":21:16 76 {*movhi_internal}
+     (expr_list:REG_DEAD (reg/f:SI 89)
+        (nil)))
+(insn 32 31 33 5 (set (reg:CCZ 17 flags)
+        (compare:CCZ (reg:HI 83 [ _1 ])
+            (const_int 0 [0]))) "fs/truncate.c":21:15 6 {*cmphi_ccno_1}
+     (expr_list:REG_DEAD (reg:HI 83 [ _1 ])
+        (nil)))
+(jump_insn 33 32 34 5 (set (pc)
+        (if_then_else (eq (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref 44)
+            (pc))) "fs/truncate.c":21:15 806 {*jcc}
+     (expr_list:REG_DEAD (reg:CCZ 17 flags)
+        (nil))
+ -> 44)
+(note 34 33 35 6 [bb 6] NOTE_INSN_BASIC_BLOCK)
+(insn 35 34 36 6 (set (reg/f:SI 90)
+        (mem/f/c:SI (plus:SI (reg/f:SI 19 frame)
+                (const_int -4 [0xfffffffffffffffc])) [5 p+0 S4 A32])) "fs/truncate.c":22:31 75 {*movsi_internal}
+     (nil))
+(insn 36 35 37 6 (set (reg:HI 84 [ _2 ])
+        (mem:HI (reg/f:SI 90) [2 *p_4+0 S2 A16])) "fs/truncate.c":22:31 76 {*movhi_internal}
+     (expr_list:REG_DEAD (reg/f:SI 90)
+        (nil)))
+(insn 37 36 38 6 (set (reg:SI 85 [ _3 ])
+        (zero_extend:SI (reg:HI 84 [ _2 ]))) "fs/truncate.c":22:15 144 {*zero_extendhisi2}
+     (expr_list:REG_DEAD (reg:HI 84 [ _2 ])
+        (nil)))
+(insn 38 37 39 6 (parallel [
+            (set (reg/f:SI 7 sp)
+                (plus:SI (reg/f:SI 7 sp)
+                    (const_int -8 [0xfffffffffffffff8])))
+            (clobber (reg:CC 17 flags))
+        ]) "fs/truncate.c":22:15 209 {*addsi_1}
+     (expr_list:REG_UNUSED (reg:CC 17 flags)
+        (expr_list:REG_ARGS_SIZE (const_int 8 [0x8])
+            (nil))))
+(insn 39 38 40 6 (set (mem:SI (pre_dec:SI (reg/f:SI 7 sp)) [6  S4 A32])
+        (reg:SI 85 [ _3 ])) "fs/truncate.c":22:15 54 {*pushsi2}
+     (expr_list:REG_DEAD (reg:SI 85 [ _3 ])
+        (expr_list:REG_ARGS_SIZE (const_int 12 [0xc])
+            (nil))))
+(insn 40 39 41 6 (set (mem:SI (pre_dec:SI (reg/f:SI 7 sp)) [6  S4 A32])
+        (mem/c:SI (reg/f:SI 16 argp) [6 dev+0 S4 A32])) "fs/truncate.c":22:15 54 {*pushsi2}
+     (expr_list:REG_ARGS_SIZE (const_int 16 [0x10])
+        (nil)))
+(insn 41 40 42 6 (set (reg:SI 3 bx)
+        (reg:SI 82)) "fs/truncate.c":22:15 75 {*movsi_internal}
+     (nil))
+(call_insn 42 41 43 6 (call (mem:QI (symbol_ref:SI ("free_block") [flags 0x41]  <function_decl 0x742679f15400 free_block>) [0 free_block S1 A8])
+        (const_int 16 [0x10])) "fs/truncate.c":22:15 812 {*call}
+     (expr_list:REG_DEAD (reg:SI 3 bx)
+        (nil))
+    (expr_list (use (reg:SI 3 bx))
+        (nil)))
+(insn 43 42 44 6 (parallel [
+            (set (reg/f:SI 7 sp)
+                (plus:SI (reg/f:SI 7 sp)
+                    (const_int 16 [0x10])))
+            (clobber (reg:CC 17 flags))
+        ]) "fs/truncate.c":22:15 209 {*addsi_1}
+     (expr_list:REG_UNUSED (reg:CC 17 flags)
+        (expr_list:REG_ARGS_SIZE (const_int 0 [0])
+            (nil))))
+(code_label 44 43 45 7 6 (nil) [1 uses])
+(note 45 44 46 7 [bb 7] NOTE_INSN_BASIC_BLOCK)
+(insn 46 45 47 7 (parallel [
+            (set (mem/c:SI (plus:SI (reg/f:SI 19 frame)
+                        (const_int -8 [0xfffffffffffffff8])) [6 i+0 S4 A32])
+                (plus:SI (mem/c:SI (plus:SI (reg/f:SI 19 frame)
+                            (const_int -8 [0xfffffffffffffff8])) [6 i+0 S4 A32])
+                    (const_int 1 [0x1])))
+            (clobber (reg:CC 17 flags))
+        ]) "fs/truncate.c":20:31 209 {*addsi_1}
+     (expr_list:REG_UNUSED (reg:CC 17 flags)
+        (nil)))
+(insn 47 46 48 7 (parallel [
+            (set (mem/f/c:SI (plus:SI (reg/f:SI 19 frame)
+                        (const_int -4 [0xfffffffffffffffc])) [5 p+0 S4 A32])
+                (plus:SI (mem/f/c:SI (plus:SI (reg/f:SI 19 frame)
+                            (const_int -4 [0xfffffffffffffffc])) [5 p+0 S4 A32])
+                    (const_int 2 [0x2])))
+            (clobber (reg:CC 17 flags))
+        ]) "fs/truncate.c":20:36 209 {*addsi_1}
+     (expr_list:REG_UNUSED (reg:CC 17 flags)
+        (nil)))
+(code_label 48 47 49 8 5 (nil) [1 uses])
+(note 49 48 53 8 [bb 8] NOTE_INSN_BASIC_BLOCK)
+(insn 53 49 54 8 (set (reg:CCGC 17 flags)
+        (compare:CCGC (mem/c:SI (plus:SI (reg/f:SI 19 frame)
+                    (const_int -8 [0xfffffffffffffff8])) [6 i+0 S4 A32])
+            (const_int 511 [0x1ff]))) "fs/truncate.c":20:23 11 {*cmpsi_1}
+     (nil))
+(jump_insn 54 53 55 8 (set (pc)
+        (if_then_else (le (reg:CCGC 17 flags)
+                (const_int 0 [0]))
+            (label_ref 50)
+            (pc))) "fs/truncate.c":20:23 806 {*jcc}
+     (expr_list:REG_DEAD (reg:CCGC 17 flags)
+        (nil))
+ -> 50)
+(note 55 54 56 9 [bb 9] NOTE_INSN_BASIC_BLOCK)
+(insn 56 55 57 9 (parallel [
+            (set (reg/f:SI 7 sp)
+                (plus:SI (reg/f:SI 7 sp)
+                    (const_int -12 [0xfffffffffffffff4])))
+            (clobber (reg:CC 17 flags))
+        ]) "fs/truncate.c":23:9 209 {*addsi_1}
+     (expr_list:REG_UNUSED (reg:CC 17 flags)
+        (expr_list:REG_ARGS_SIZE (const_int 12 [0xc])
+            (nil))))
+(insn 57 56 58 9 (set (mem/f:SI (pre_dec:SI (reg/f:SI 7 sp)) [7  S4 A32])
+        (mem/f/c:SI (plus:SI (reg/f:SI 19 frame)
+                (const_int -12 [0xfffffffffffffff4])) [7 bh+0 S4 A32])) "fs/truncate.c":23:9 54 {*pushsi2}
+     (expr_list:REG_ARGS_SIZE (const_int 16 [0x10])
+        (nil)))
+(insn 58 57 59 9 (set (reg:SI 3 bx)
+        (reg:SI 82)) "fs/truncate.c":23:9 75 {*movsi_internal}
+     (nil))
+(call_insn 59 58 60 9 (call (mem:QI (symbol_ref:SI ("brelse") [flags 0x41]  <function_decl 0x742679f15300 brelse>) [0 brelse S1 A8])
+        (const_int 16 [0x10])) "fs/truncate.c":23:9 812 {*call}
+     (expr_list:REG_DEAD (reg:SI 3 bx)
+        (nil))
+    (expr_list (use (reg:SI 3 bx))
+        (nil)))
+(insn 60 59 61 9 (parallel [
+            (set (reg/f:SI 7 sp)
+                (plus:SI (reg/f:SI 7 sp)
+                    (const_int 16 [0x10])))
+            (clobber (reg:CC 17 flags))
+        ]) "fs/truncate.c":23:9 209 {*addsi_1}
+     (expr_list:REG_UNUSED (reg:CC 17 flags)
+        (expr_list:REG_ARGS_SIZE (const_int 0 [0])
+            (nil))))
+(code_label 61 60 62 10 4 (nil) [1 uses])
+(note 62 61 63 10 [bb 10] NOTE_INSN_BASIC_BLOCK)
+(insn 63 62 64 10 (parallel [
+            (set (reg/f:SI 7 sp)
+                (plus:SI (reg/f:SI 7 sp)
+                    (const_int -8 [0xfffffffffffffff8])))
+            (clobber (reg:CC 17 flags))
+        ]) "fs/truncate.c":25:5 209 {*addsi_1}
+     (expr_list:REG_UNUSED (reg:CC 17 flags)
+        (expr_list:REG_ARGS_SIZE (const_int 8 [0x8])
+            (nil))))
+(insn 64 63 65 10 (set (mem:SI (pre_dec:SI (reg/f:SI 7 sp)) [6  S4 A32])
+        (mem/c:SI (plus:SI (reg/f:SI 16 argp)
+                (const_int 4 [0x4])) [6 block+0 S4 A32])) "fs/truncate.c":25:5 54 {*pushsi2}
+     (expr_list:REG_ARGS_SIZE (const_int 12 [0xc])
+        (nil)))
+(insn 65 64 66 10 (set (mem:SI (pre_dec:SI (reg/f:SI 7 sp)) [6  S4 A32])
+        (mem/c:SI (reg/f:SI 16 argp) [6 dev+0 S4 A32])) "fs/truncate.c":25:5 54 {*pushsi2}
+     (expr_list:REG_ARGS_SIZE (const_int 16 [0x10])
+        (nil)))
+(insn 66 65 67 10 (set (reg:SI 3 bx)
+        (reg:SI 82)) "fs/truncate.c":25:5 75 {*movsi_internal}
+     (expr_list:REG_DEAD (reg:SI 82)
+        (nil)))
+(call_insn 67 66 68 10 (call (mem:QI (symbol_ref:SI ("free_block") [flags 0x41]  <function_decl 0x742679f15400 free_block>) [0 free_block S1 A8])
+        (const_int 16 [0x10])) "fs/truncate.c":25:5 812 {*call}
+     (expr_list:REG_DEAD (reg:SI 3 bx)
+        (nil))
+    (expr_list (use (reg:SI 3 bx))
+        (nil)))
+(insn 68 67 75 10 (parallel [
+            (set (reg/f:SI 7 sp)
+                (plus:SI (reg/f:SI 7 sp)
+                    (const_int 16 [0x10])))
+            (clobber (reg:CC 17 flags))
+        ]) "fs/truncate.c":25:5 209 {*addsi_1}
+     (expr_list:REG_UNUSED (reg:CC 17 flags)
+        (expr_list:REG_ARGS_SIZE (const_int 0 [0])
+            (nil))))
+(jump_insn 75 68 76 10 (set (pc)
+        (label_ref 71)) 807 {jump}
+     (nil)
+ -> 71)
+(barrier 76 75 78)
+(code_label 78 76 77 12 8 (nil) [1 uses])
+(note 77 78 79 12 [bb 12] NOTE_INSN_BASIC_BLOCK)
+(insn 79 77 71 12 (const_int 0 [0]) "fs/truncate.c":17:9 843 {nop}
+     (nil))
+(code_label 71 79 72 11 1 (nil) [1 uses])
+(note 72 71 0 11 [bb 11] NOTE_INSN_BASIC_BLOCK)
+
+;; Function free_dind (free_dind, funcdef_no=2, decl_uid=1347, cgraph_uid=3, symbol_order=2)
+
+scanning new insn with uid = 79.
+starting the processing of deferred insns
+ending the processing of deferred insns
+df_analyze called
+df_worklist_dataflow_doublequeue: n_basic_blocks 13 n_edges 16 count 17 (  1.3)
+;; 2 loops found
+;;
+;; Loop 0
+;;  header 0, latch 1
+;;  depth 0, outer -1
+;;  nodes: 0 1 2 3 4 5 6 7 8 9 10 12 11
+;;
+;; Loop 1
+;;  header 8, latch 7
+;;  depth 1, outer 0
+;;  nodes: 8 7 5 6
+;; 2 succs { 12 3 }
+;; 3 succs { 4 10 }
+;; 4 succs { 8 }
+;; 5 succs { 6 7 }
+;; 6 succs { 7 }
+;; 7 succs { 8 }
+;; 8 succs { 5 9 }
+;; 9 succs { 10 }
+;; 10 succs { 11 }
+;; 12 succs { 11 }
+;; 11 succs { 1 }
+Building IRA IR
+starting the processing of deferred insns
+ending the processing of deferred insns
+df_analyze called
+
+Pass 0 for finding pseudo/allocno costs
+
+    r90: preferred GENERAL_REGS, alternative NO_REGS, allocno GENERAL_REGS
+    a3 (r90,l0) best GENERAL_REGS, allocno GENERAL_REGS
+    r89: preferred GENERAL_REGS, alternative NO_REGS, allocno GENERAL_REGS
+    a5 (r89,l0) best GENERAL_REGS, allocno GENERAL_REGS
+    r88: preferred GENERAL_REGS, alternative NO_REGS, allocno GENERAL_REGS
+    a6 (r88,l0) best GENERAL_REGS, allocno GENERAL_REGS
+    r87: preferred GENERAL_REGS, alternative NO_REGS, allocno GENERAL_REGS
+    a7 (r87,l0) best GENERAL_REGS, allocno GENERAL_REGS
+    r86: preferred AREG, alternative GENERAL_REGS, allocno GENERAL_REGS
+    a8 (r86,l0) best AREG, allocno GENERAL_REGS
+    r85: preferred GENERAL_REGS, alternative NO_REGS, allocno GENERAL_REGS
+    a1 (r85,l0) best GENERAL_REGS, allocno GENERAL_REGS
+    r84: preferred GENERAL_REGS, alternative NO_REGS, allocno GENERAL_REGS
+    a2 (r84,l0) best GENERAL_REGS, allocno GENERAL_REGS
+    r83: preferred GENERAL_REGS, alternative NO_REGS, allocno GENERAL_REGS
+    a4 (r83,l0) best GENERAL_REGS, allocno GENERAL_REGS
+    r82: preferred BREG, alternative GENERAL_REGS, allocno GENERAL_REGS
+    a0 (r82,l0) best BREG, allocno GENERAL_REGS
+
+  a0(r82,l0) costs: AREG:6000 DREG:6000 CREG:6000 BREG:6000 SIREG:6000 DIREG:6000 AD_REGS:6000 CLOBBERED_REGS:6000 Q_REGS:6000 NON_Q_REGS:6000 TLS_GOTBASE_REGS:6000 GENERAL_REGS:6000 MEM:24000
+  a1(r85,l0) costs: AREG:0 DREG:0 CREG:0 BREG:0 SIREG:0 DIREG:0 AD_REGS:0 CLOBBERED_REGS:0 Q_REGS:0 NON_Q_REGS:0 TLS_GOTBASE_REGS:0 GENERAL_REGS:0 MEM:12000
+  a2(r84,l0) costs: AREG:0 DREG:0 CREG:0 BREG:0 SIREG:0 DIREG:0 AD_REGS:0 CLOBBERED_REGS:0 Q_REGS:0 NON_Q_REGS:0 TLS_GOTBASE_REGS:0 GENERAL_REGS:0 MEM:11000
+  a3(r90,l0) costs: AREG:0 DREG:0 CREG:0 BREG:0 SIREG:0 DIREG:0 AD_REGS:0 CLOBBERED_REGS:0 Q_REGS:0 NON_Q_REGS:0 TLS_GOTBASE_REGS:0 GENERAL_REGS:0 MEM:12000
+  a4(r83,l0) costs: AREG:0 DREG:0 CREG:0 BREG:0 SIREG:0 DIREG:0 AD_REGS:0 CLOBBERED_REGS:0 Q_REGS:0 NON_Q_REGS:0 TLS_GOTBASE_REGS:0 GENERAL_REGS:0 MEM:12000
+  a5(r89,l0) costs: AREG:0 DREG:0 CREG:0 BREG:0 SIREG:0 DIREG:0 AD_REGS:0 CLOBBERED_REGS:0 Q_REGS:0 NON_Q_REGS:0 TLS_GOTBASE_REGS:0 GENERAL_REGS:0 MEM:12000
+  a6(r88,l0) costs: AREG:0 DREG:0 CREG:0 BREG:0 SIREG:0 DIREG:0 AD_REGS:0 CLOBBERED_REGS:0 Q_REGS:0 NON_Q_REGS:0 TLS_GOTBASE_REGS:0 GENERAL_REGS:0 MEM:12000
+  a7(r87,l0) costs: AREG:0 DREG:0 CREG:0 BREG:0 SIREG:0 DIREG:0 AD_REGS:0 CLOBBERED_REGS:0 Q_REGS:0 NON_Q_REGS:0 TLS_GOTBASE_REGS:0 GENERAL_REGS:0 MEM:12000
+  a8(r86,l0) costs: AREG:2000 DREG:2000 CREG:2000 BREG:2000 SIREG:2000 DIREG:2000 AD_REGS:2000 CLOBBERED_REGS:2000 Q_REGS:2000 NON_Q_REGS:2000 TLS_GOTBASE_REGS:2000 GENERAL_REGS:2000 MEM:12000
+
+   Insn 78(l0): point = 1
+   Insn 74(l0): point = 4
+   Insn 67(l0): point = 6
+   Insn 66(l0): point = 8
+   Insn 65(l0): point = 10
+   Insn 64(l0): point = 12
+   Insn 63(l0): point = 14
+   Insn 62(l0): point = 16
+   Insn 59(l0): point = 19
+   Insn 58(l0): point = 21
+   Insn 57(l0): point = 23
+   Insn 56(l0): point = 25
+   Insn 55(l0): point = 27
+   Insn 33(l0): point = 30
+   Insn 32(l0): point = 32
+   Insn 31(l0): point = 34
+   Insn 30(l0): point = 36
+   Insn 53(l0): point = 39
+   Insn 52(l0): point = 41
+   Insn 46(l0): point = 44
+   Insn 45(l0): point = 46
+   Insn 42(l0): point = 49
+   Insn 41(l0): point = 51
+   Insn 40(l0): point = 53
+   Insn 39(l0): point = 55
+   Insn 38(l0): point = 57
+   Insn 37(l0): point = 59
+   Insn 36(l0): point = 61
+   Insn 35(l0): point = 63
+   Insn 72(l0): point = 66
+   Insn 26(l0): point = 68
+   Insn 25(l0): point = 70
+   Insn 24(l0): point = 72
+   Insn 23(l0): point = 74
+   Insn 21(l0): point = 77
+   Insn 20(l0): point = 79
+   Insn 19(l0): point = 81
+   Insn 18(l0): point = 83
+   Insn 17(l0): point = 85
+   Insn 16(l0): point = 87
+   Insn 15(l0): point = 89
+   Insn 14(l0): point = 91
+   Insn 13(l0): point = 93
+   Insn 12(l0): point = 95
+   Insn 6(l0): point = 98
+   Insn 5(l0): point = 100
+   Insn 79(l0): point = 102
+ a0(r82): [11..102]
+ a1(r85): [56..59]
+ a2(r84): [60..61]
+ a3(r90): [62..63]
+ a4(r83): [33..34]
+ a5(r89): [35..36]
+ a6(r88): [71..72]
+ a7(r87): [73..74]
+ a8(r86): [82..83]
+Compressing live ranges: from 105 to 16 - 15%
+Ranges after the compression:
+ a0(r82): [0..15]
+ a1(r85): [4..5]
+ a2(r84): [6..7]
+ a3(r90): [8..9]
+ a4(r83): [0..1]
+ a5(r89): [2..3]
+ a6(r88): [10..11]
+ a7(r87): [12..13]
+ a8(r86): [14..15]
+  pref0:a8(r86)<-hr0@1500
+  pref1:a0(r82)<-hr3@1500
+  regions=1, blocks=13, points=16
+    allocnos=9 (big 0), copies=0, conflicts=0, ranges=9
+Disposition:
+    0:r82  l0     3    4:r83  l0     0    2:r84  l0     0    1:r85  l0     0
+    8:r86  l0     0    7:r87  l0     0    6:r88  l0     0    5:r89  l0     0
+    3:r90  l0     0
++++Costs: overall 2000, reg 2000, mem 0, ld 0, st 0, move 0
++++       move loops 0, new jumps 0
+
+
+free_dind
+
+Dataflow summary:
+;;  fully invalidated by EH 	 0 [ax] 1 [dx] 2 [cx] 8 [st] 9 [st(1)] 10 [st(2)] 11 [st(3)] 12 [st(4)] 13 [st(5)] 14 [st(6)] 15 [st(7)] 17 [flags] 18 [fpsr] 20 [xmm0] 21 [xmm1] 22 [xmm2] 23 [xmm3] 24 [xmm4] 25 [xmm5] 26 [xmm6] 27 [xmm7] 28 [mm0] 29 [mm1] 30 [mm2] 31 [mm3] 32 [mm4] 33 [mm5] 34 [mm6] 35 [mm7] 36 [r8] 37 [r9] 38 [r10] 39 [r11] 40 [r12] 41 [r13] 42 [r14] 43 [r15] 44 [xmm8] 45 [xmm9] 46 [xmm10] 47 [xmm11] 48 [xmm12] 49 [xmm13] 50 [xmm14] 51 [xmm15] 52 [xmm16] 53 [xmm17] 54 [xmm18] 55 [xmm19] 56 [xmm20] 57 [xmm21] 58 [xmm22] 59 [xmm23] 60 [xmm24] 61 [xmm25] 62 [xmm26] 63 [xmm27] 64 [xmm28] 65 [xmm29] 66 [xmm30] 67 [xmm31] 68 [k0] 69 [k1] 70 [k2] 71 [k3] 72 [k4] 73 [k5] 74 [k6] 75 [k7]
+;;  hardware regs used 	 7 [sp] 16 [argp] 19 [frame]
+;;  regular block artificial uses 	 6 [bp] 7 [sp] 16 [argp] 19 [frame]
+;;  eh block artificial uses 	 6 [bp] 7 [sp] 16 [argp] 19 [frame]
+;;  entry block defs 	 0 [ax] 1 [dx] 2 [cx] 6 [bp] 7 [sp] 16 [argp] 19 [frame]
+;;  exit block uses 	 6 [bp] 7 [sp] 19 [frame]
+;;  regs ever live 	 0 [ax] 3 [bx] 7 [sp] 17 [flags]
+;;  ref usage 	r0={5d,1u} r1={5d} r2={5d} r3={3d,3u} r6={1d,12u} r7={16d,39u} r8={4d} r9={4d} r10={4d} r11={4d} r12={4d} r13={4d} r14={4d} r15={4d} r16={1d,17u} r17={19d,4u} r18={4d} r19={1d,25u} r20={4d} r21={4d} r22={4d} r23={4d} r24={4d} r25={4d} r26={4d} r27={4d} r28={4d} r29={4d} r30={4d} r31={4d} r32={4d} r33={4d} r34={4d} r35={4d} r36={4d} r37={4d} r38={4d} r39={4d} r40={4d} r41={4d} r42={4d} r43={4d} r44={4d} r45={4d} r46={4d} r47={4d} r48={4d} r49={4d} r50={4d} r51={4d} r52={4d} r53={4d} r54={4d} r55={4d} r56={4d} r57={4d} r58={4d} r59={4d} r60={4d} r61={4d} r62={4d} r63={4d} r64={4d} r65={4d} r66={4d} r67={4d} r68={4d} r69={4d} r70={4d} r71={4d} r72={4d} r73={4d} r74={4d} r75={4d} r82={1d,3u} r83={1d,1u} r84={1d,1u} r85={1d,1u} r86={1d,1u} r87={1d,1u} r88={1d,1u} r89={1d,1u} r90={1d,1u} 
+;;    total ref usage 437{325d,112u,0e} in 47{43 regular + 4 call} insns.
+(note 1 0 3 NOTE_INSN_DELETED)
+(note 3 1 79 2 [bb 2] NOTE_INSN_BASIC_BLOCK)
+(insn/f 79 3 2 2 (parallel [
+            (set (reg:SI 82)
+                (unspec:SI [
+                        (const_int 0 [0])
+                    ] UNSPEC_SET_GOT))
+            (clobber (reg:CC 17 flags))
+        ]) 846 {*set_got}
+     (expr_list:REG_UNUSED (reg:CC 17 flags)
+        (expr_list:REG_CFA_FLUSH_QUEUE (nil)
+            (nil))))
+(note 2 79 5 2 NOTE_INSN_FUNCTION_BEG)
+(insn 5 2 6 2 (set (reg:CCZ 17 flags)
+        (compare:CCZ (mem/c:SI (plus:SI (reg/f:SI 16 argp)
+                    (const_int 4 [0x4])) [6 block+0 S4 A32])
+            (const_int 0 [0]))) "fs/truncate.c":34:8 7 {*cmpsi_ccno_1}
+     (nil))
+(jump_insn 6 5 11 2 (set (pc)
+        (if_then_else (eq (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref:SI 77)
+            (pc))) "fs/truncate.c":34:8 806 {*jcc}
+     (expr_list:REG_DEAD (reg:CCZ 17 flags)
+        (nil))
+ -> 77)
+(note 11 6 12 3 [bb 3] NOTE_INSN_BASIC_BLOCK)
+(insn 12 11 13 3 (parallel [
+            (set (reg/f:SI 7 sp)
+                (plus:SI (reg/f:SI 7 sp)
+                    (const_int -8 [0xfffffffffffffff8])))
+            (clobber (reg:CC 17 flags))
+        ]) "fs/truncate.c":36:15 209 {*addsi_1}
+     (expr_list:REG_UNUSED (reg:CC 17 flags)
+        (expr_list:REG_ARGS_SIZE (const_int 8 [0x8])
+            (nil))))
+(insn 13 12 14 3 (set (mem:SI (pre_dec:SI (reg/f:SI 7 sp)) [6  S4 A32])
+        (mem/c:SI (plus:SI (reg/f:SI 16 argp)
+                (const_int 4 [0x4])) [6 block+0 S4 A32])) "fs/truncate.c":36:15 54 {*pushsi2}
+     (expr_list:REG_ARGS_SIZE (const_int 12 [0xc])
+        (nil)))
+(insn 14 13 15 3 (set (mem:SI (pre_dec:SI (reg/f:SI 7 sp)) [6  S4 A32])
+        (mem/c:SI (reg/f:SI 16 argp) [6 dev+0 S4 A32])) "fs/truncate.c":36:15 54 {*pushsi2}
+     (expr_list:REG_ARGS_SIZE (const_int 16 [0x10])
+        (nil)))
+(insn 15 14 16 3 (set (reg:SI 3 bx)
+        (reg:SI 82)) "fs/truncate.c":36:15 75 {*movsi_internal}
+     (nil))
+(call_insn 16 15 17 3 (set (reg:SI 0 ax)
+        (call (mem:QI (symbol_ref:SI ("bread") [flags 0x41]  <function_decl 0x742679f15200 bread>) [0 bread S1 A8])
+            (const_int 16 [0x10]))) "fs/truncate.c":36:15 823 {*call_value}
+     (expr_list:REG_DEAD (reg:SI 3 bx)
+        (nil))
+    (expr_list (use (reg:SI 3 bx))
+        (nil)))
+(insn 17 16 18 3 (parallel [
+            (set (reg/f:SI 7 sp)
+                (plus:SI (reg/f:SI 7 sp)
+                    (const_int 16 [0x10])))
+            (clobber (reg:CC 17 flags))
+        ]) "fs/truncate.c":36:15 209 {*addsi_1}
+     (expr_list:REG_UNUSED (reg:CC 17 flags)
+        (expr_list:REG_ARGS_SIZE (const_int 0 [0])
+            (nil))))
+(insn 18 17 19 3 (set (reg:SI 86)
+        (reg:SI 0 ax)) "fs/truncate.c":36:15 75 {*movsi_internal}
+     (expr_list:REG_DEAD (reg:SI 0 ax)
+        (nil)))
+(insn 19 18 20 3 (set (mem/f/c:SI (plus:SI (reg/f:SI 19 frame)
+                (const_int -12 [0xfffffffffffffff4])) [7 bh+0 S4 A32])
+        (reg:SI 86)) "fs/truncate.c":36:15 75 {*movsi_internal}
+     (expr_list:REG_DEAD (reg:SI 86)
+        (nil)))
+(insn 20 19 21 3 (set (reg:CCZ 17 flags)
+        (compare:CCZ (mem/f/c:SI (plus:SI (reg/f:SI 19 frame)
+                    (const_int -12 [0xfffffffffffffff4])) [7 bh+0 S4 A32])
+            (const_int 0 [0]))) "fs/truncate.c":36:8 7 {*cmpsi_ccno_1}
+     (nil))
+(jump_insn 21 20 22 3 (set (pc)
+        (if_then_else (eq (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref 60)
+            (pc))) "fs/truncate.c":36:8 806 {*jcc}
+     (expr_list:REG_DEAD (reg:CCZ 17 flags)
+        (nil))
+ -> 60)
+(note 22 21 23 4 [bb 4] NOTE_INSN_BASIC_BLOCK)
+(insn 23 22 24 4 (set (reg/f:SI 87)
+        (mem/f/c:SI (plus:SI (reg/f:SI 19 frame)
+                (const_int -12 [0xfffffffffffffff4])) [7 bh+0 S4 A32])) "fs/truncate.c":37:11 75 {*movsi_internal}
+     (nil))
+(insn 24 23 25 4 (set (reg/f:SI 88)
+        (mem/f:SI (reg/f:SI 87) [9 bh_14->b_data+0 S4 A32])) "fs/truncate.c":37:11 75 {*movsi_internal}
+     (expr_list:REG_DEAD (reg/f:SI 87)
+        (nil)))
+(insn 25 24 26 4 (set (mem/f/c:SI (plus:SI (reg/f:SI 19 frame)
+                (const_int -4 [0xfffffffffffffffc])) [5 p+0 S4 A32])
+        (reg/f:SI 88)) "fs/truncate.c":37:11 75 {*movsi_internal}
+     (expr_list:REG_DEAD (reg/f:SI 88)
+        (nil)))
+(insn 26 25 72 4 (set (mem/c:SI (plus:SI (reg/f:SI 19 frame)
+                (const_int -8 [0xfffffffffffffff8])) [6 i+0 S4 A32])
+        (const_int 0 [0])) "fs/truncate.c":38:16 75 {*movsi_internal}
+     (nil))
+(jump_insn 72 26 73 4 (set (pc)
+        (label_ref 47)) "fs/truncate.c":38:9 807 {jump}
+     (nil)
+ -> 47)
+(barrier 73 72 49)
+(code_label 49 73 29 5 15 (nil) [1 uses])
+(note 29 49 30 5 [bb 5] NOTE_INSN_BASIC_BLOCK)
+(insn 30 29 31 5 (set (reg/f:SI 89)
+        (mem/f/c:SI (plus:SI (reg/f:SI 19 frame)
+                (const_int -4 [0xfffffffffffffffc])) [5 p+0 S4 A32])) "fs/truncate.c":39:17 75 {*movsi_internal}
+     (nil))
+(insn 31 30 32 5 (set (reg:HI 83 [ _1 ])
+        (mem:HI (reg/f:SI 89) [2 *p_4+0 S2 A16])) "fs/truncate.c":39:17 76 {*movhi_internal}
+     (expr_list:REG_DEAD (reg/f:SI 89)
+        (nil)))
+(insn 32 31 33 5 (set (reg:CCZ 17 flags)
+        (compare:CCZ (reg:HI 83 [ _1 ])
+            (const_int 0 [0]))) "fs/truncate.c":39:16 6 {*cmphi_ccno_1}
+     (expr_list:REG_DEAD (reg:HI 83 [ _1 ])
+        (nil)))
+(jump_insn 33 32 34 5 (set (pc)
+        (if_then_else (eq (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref 43)
+            (pc))) "fs/truncate.c":39:16 806 {*jcc}
+     (expr_list:REG_DEAD (reg:CCZ 17 flags)
+        (nil))
+ -> 43)
+(note 34 33 35 6 [bb 6] NOTE_INSN_BASIC_BLOCK)
+(insn 35 34 36 6 (set (reg/f:SI 90)
+        (mem/f/c:SI (plus:SI (reg/f:SI 19 frame)
+                (const_int -4 [0xfffffffffffffffc])) [5 p+0 S4 A32])) "fs/truncate.c":40:31 75 {*movsi_internal}
+     (nil))
+(insn 36 35 37 6 (set (reg:HI 84 [ _2 ])
+        (mem:HI (reg/f:SI 90) [2 *p_4+0 S2 A16])) "fs/truncate.c":40:31 76 {*movhi_internal}
+     (expr_list:REG_DEAD (reg/f:SI 90)
+        (nil)))
+(insn 37 36 38 6 (set (reg:SI 85 [ _3 ])
+        (zero_extend:SI (reg:HI 84 [ _2 ]))) "fs/truncate.c":40:17 144 {*zero_extendhisi2}
+     (expr_list:REG_DEAD (reg:HI 84 [ _2 ])
+        (nil)))
+(insn 38 37 39 6 (parallel [
+            (set (reg/f:SI 7 sp)
+                (plus:SI (reg/f:SI 7 sp)
+                    (const_int -8 [0xfffffffffffffff8])))
+            (clobber (reg:CC 17 flags))
+        ]) "fs/truncate.c":40:17 209 {*addsi_1}
+     (expr_list:REG_UNUSED (reg:CC 17 flags)
+        (expr_list:REG_ARGS_SIZE (const_int 8 [0x8])
+            (nil))))
+(insn 39 38 40 6 (set (mem:SI (pre_dec:SI (reg/f:SI 7 sp)) [6  S4 A32])
+        (reg:SI 85 [ _3 ])) "fs/truncate.c":40:17 54 {*pushsi2}
+     (expr_list:REG_DEAD (reg:SI 85 [ _3 ])
+        (expr_list:REG_ARGS_SIZE (const_int 12 [0xc])
+            (nil))))
+(insn 40 39 41 6 (set (mem:SI (pre_dec:SI (reg/f:SI 7 sp)) [6  S4 A32])
+        (mem/c:SI (reg/f:SI 16 argp) [6 dev+0 S4 A32])) "fs/truncate.c":40:17 54 {*pushsi2}
+     (expr_list:REG_ARGS_SIZE (const_int 16 [0x10])
+        (nil)))
+(call_insn 41 40 42 6 (call (mem:QI (symbol_ref:SI ("free_ind") [flags 0x3]  <function_decl 0x742679f3a900 free_ind>) [0 free_ind S1 A8])
+        (const_int 16 [0x10])) "fs/truncate.c":40:17 812 {*call}
+     (nil)
+    (nil))
+(insn 42 41 43 6 (parallel [
+            (set (reg/f:SI 7 sp)
+                (plus:SI (reg/f:SI 7 sp)
+                    (const_int 16 [0x10])))
+            (clobber (reg:CC 17 flags))
+        ]) "fs/truncate.c":40:17 209 {*addsi_1}
+     (expr_list:REG_UNUSED (reg:CC 17 flags)
+        (expr_list:REG_ARGS_SIZE (const_int 0 [0])
+            (nil))))
+(code_label 43 42 44 7 14 (nil) [1 uses])
+(note 44 43 45 7 [bb 7] NOTE_INSN_BASIC_BLOCK)
+(insn 45 44 46 7 (parallel [
+            (set (mem/c:SI (plus:SI (reg/f:SI 19 frame)
+                        (const_int -8 [0xfffffffffffffff8])) [6 i+0 S4 A32])
+                (plus:SI (mem/c:SI (plus:SI (reg/f:SI 19 frame)
+                            (const_int -8 [0xfffffffffffffff8])) [6 i+0 S4 A32])
+                    (const_int 1 [0x1])))
+            (clobber (reg:CC 17 flags))
+        ]) "fs/truncate.c":38:31 209 {*addsi_1}
+     (expr_list:REG_UNUSED (reg:CC 17 flags)
+        (nil)))
+(insn 46 45 47 7 (parallel [
+            (set (mem/f/c:SI (plus:SI (reg/f:SI 19 frame)
+                        (const_int -4 [0xfffffffffffffffc])) [5 p+0 S4 A32])
+                (plus:SI (mem/f/c:SI (plus:SI (reg/f:SI 19 frame)
+                            (const_int -4 [0xfffffffffffffffc])) [5 p+0 S4 A32])
+                    (const_int 2 [0x2])))
+            (clobber (reg:CC 17 flags))
+        ]) "fs/truncate.c":38:36 209 {*addsi_1}
+     (expr_list:REG_UNUSED (reg:CC 17 flags)
+        (nil)))
+(code_label 47 46 48 8 13 (nil) [1 uses])
+(note 48 47 52 8 [bb 8] NOTE_INSN_BASIC_BLOCK)
+(insn 52 48 53 8 (set (reg:CCGC 17 flags)
+        (compare:CCGC (mem/c:SI (plus:SI (reg/f:SI 19 frame)
+                    (const_int -8 [0xfffffffffffffff8])) [6 i+0 S4 A32])
+            (const_int 511 [0x1ff]))) "fs/truncate.c":38:23 11 {*cmpsi_1}
+     (nil))
+(jump_insn 53 52 54 8 (set (pc)
+        (if_then_else (le (reg:CCGC 17 flags)
+                (const_int 0 [0]))
+            (label_ref 49)
+            (pc))) "fs/truncate.c":38:23 806 {*jcc}
+     (expr_list:REG_DEAD (reg:CCGC 17 flags)
+        (nil))
+ -> 49)
+(note 54 53 55 9 [bb 9] NOTE_INSN_BASIC_BLOCK)
+(insn 55 54 56 9 (parallel [
+            (set (reg/f:SI 7 sp)
+                (plus:SI (reg/f:SI 7 sp)
+                    (const_int -12 [0xfffffffffffffff4])))
+            (clobber (reg:CC 17 flags))
+        ]) "fs/truncate.c":41:9 209 {*addsi_1}
+     (expr_list:REG_UNUSED (reg:CC 17 flags)
+        (expr_list:REG_ARGS_SIZE (const_int 12 [0xc])
+            (nil))))
+(insn 56 55 57 9 (set (mem/f:SI (pre_dec:SI (reg/f:SI 7 sp)) [7  S4 A32])
+        (mem/f/c:SI (plus:SI (reg/f:SI 19 frame)
+                (const_int -12 [0xfffffffffffffff4])) [7 bh+0 S4 A32])) "fs/truncate.c":41:9 54 {*pushsi2}
+     (expr_list:REG_ARGS_SIZE (const_int 16 [0x10])
+        (nil)))
+(insn 57 56 58 9 (set (reg:SI 3 bx)
+        (reg:SI 82)) "fs/truncate.c":41:9 75 {*movsi_internal}
+     (nil))
+(call_insn 58 57 59 9 (call (mem:QI (symbol_ref:SI ("brelse") [flags 0x41]  <function_decl 0x742679f15300 brelse>) [0 brelse S1 A8])
+        (const_int 16 [0x10])) "fs/truncate.c":41:9 812 {*call}
+     (expr_list:REG_DEAD (reg:SI 3 bx)
+        (nil))
+    (expr_list (use (reg:SI 3 bx))
+        (nil)))
+(insn 59 58 60 9 (parallel [
+            (set (reg/f:SI 7 sp)
+                (plus:SI (reg/f:SI 7 sp)
+                    (const_int 16 [0x10])))
+            (clobber (reg:CC 17 flags))
+        ]) "fs/truncate.c":41:9 209 {*addsi_1}
+     (expr_list:REG_UNUSED (reg:CC 17 flags)
+        (expr_list:REG_ARGS_SIZE (const_int 0 [0])
+            (nil))))
+(code_label 60 59 61 10 12 (nil) [1 uses])
+(note 61 60 62 10 [bb 10] NOTE_INSN_BASIC_BLOCK)
+(insn 62 61 63 10 (parallel [
+            (set (reg/f:SI 7 sp)
+                (plus:SI (reg/f:SI 7 sp)
+                    (const_int -8 [0xfffffffffffffff8])))
+            (clobber (reg:CC 17 flags))
+        ]) "fs/truncate.c":43:5 209 {*addsi_1}
+     (expr_list:REG_UNUSED (reg:CC 17 flags)
+        (expr_list:REG_ARGS_SIZE (const_int 8 [0x8])
+            (nil))))
+(insn 63 62 64 10 (set (mem:SI (pre_dec:SI (reg/f:SI 7 sp)) [6  S4 A32])
+        (mem/c:SI (plus:SI (reg/f:SI 16 argp)
+                (const_int 4 [0x4])) [6 block+0 S4 A32])) "fs/truncate.c":43:5 54 {*pushsi2}
+     (expr_list:REG_ARGS_SIZE (const_int 12 [0xc])
+        (nil)))
+(insn 64 63 65 10 (set (mem:SI (pre_dec:SI (reg/f:SI 7 sp)) [6  S4 A32])
+        (mem/c:SI (reg/f:SI 16 argp) [6 dev+0 S4 A32])) "fs/truncate.c":43:5 54 {*pushsi2}
+     (expr_list:REG_ARGS_SIZE (const_int 16 [0x10])
+        (nil)))
+(insn 65 64 66 10 (set (reg:SI 3 bx)
+        (reg:SI 82)) "fs/truncate.c":43:5 75 {*movsi_internal}
+     (expr_list:REG_DEAD (reg:SI 82)
+        (nil)))
+(call_insn 66 65 67 10 (call (mem:QI (symbol_ref:SI ("free_block") [flags 0x41]  <function_decl 0x742679f15400 free_block>) [0 free_block S1 A8])
+        (const_int 16 [0x10])) "fs/truncate.c":43:5 812 {*call}
+     (expr_list:REG_DEAD (reg:SI 3 bx)
+        (nil))
+    (expr_list (use (reg:SI 3 bx))
+        (nil)))
+(insn 67 66 74 10 (parallel [
+            (set (reg/f:SI 7 sp)
+                (plus:SI (reg/f:SI 7 sp)
+                    (const_int 16 [0x10])))
+            (clobber (reg:CC 17 flags))
+        ]) "fs/truncate.c":43:5 209 {*addsi_1}
+     (expr_list:REG_UNUSED (reg:CC 17 flags)
+        (expr_list:REG_ARGS_SIZE (const_int 0 [0])
+            (nil))))
+(jump_insn 74 67 75 10 (set (pc)
+        (label_ref 70)) 807 {jump}
+     (nil)
+ -> 70)
+(barrier 75 74 77)
+(code_label 77 75 76 12 16 (nil) [1 uses])
+(note 76 77 78 12 [bb 12] NOTE_INSN_BASIC_BLOCK)
+(insn 78 76 70 12 (const_int 0 [0]) "fs/truncate.c":35:9 843 {nop}
+     (nil))
+(code_label 70 78 71 11 9 (nil) [1 uses])
+(note 71 70 0 11 [bb 11] NOTE_INSN_BASIC_BLOCK)
+
+;; Function truncate (truncate, funcdef_no=3, decl_uid=1129, cgraph_uid=4, symbol_order=3)
+
+scanning new insn with uid = 120.
+starting the processing of deferred insns
+ending the processing of deferred insns
+df_analyze called
+df_worklist_dataflow_doublequeue: n_basic_blocks 12 n_edges 15 count 15 (  1.2)
+;; 2 loops found
+;;
+;; Loop 0
+;;  header 0, latch 1
+;;  depth 0, outer -1
+;;  nodes: 0 1 2 3 4 5 6 7 8 9 11 10
+;;
+;; Loop 1
+;;  header 8, latch 7
+;;  depth 1, outer 0
+;;  nodes: 8 7 5 6
+;; 2 succs { 3 4 }
+;; 3 succs { 11 4 }
+;; 4 succs { 8 }
+;; 5 succs { 6 7 }
+;; 6 succs { 7 }
+;; 7 succs { 8 }
+;; 8 succs { 5 9 }
+;; 9 succs { 10 }
+;; 11 succs { 10 }
+;; 10 succs { 1 }
+Removing SCRATCH to p136 in insn #95 (nop 3)
+rescanning insn with uid = 95.
+Building IRA IR
+starting the processing of deferred insns
+ending the processing of deferred insns
+df_analyze called
+df_worklist_dataflow_doublequeue: n_basic_blocks 12 n_edges 15 count 15 (  1.2)
+
+Pass 0 for finding pseudo/allocno costs
+
+    r136: preferred GENERAL_REGS, alternative NO_REGS, allocno GENERAL_REGS
+    a15 (r136,l0) best GENERAL_REGS, allocno GENERAL_REGS
+    r135: preferred GENERAL_REGS, alternative NO_REGS, allocno GENERAL_REGS
+    a0 (r135,l0) best GENERAL_REGS, allocno GENERAL_REGS
+    r134: preferred GENERAL_REGS, alternative NO_REGS, allocno GENERAL_REGS
+    a2 (r134,l0) best GENERAL_REGS, allocno GENERAL_REGS
+    r133: preferred GENERAL_REGS, alternative NO_REGS, allocno GENERAL_REGS
+    a3 (r133,l0) best GENERAL_REGS, allocno GENERAL_REGS
+    r132: preferred GENERAL_REGS, alternative NO_REGS, allocno GENERAL_REGS
+    a8 (r132,l0) best GENERAL_REGS, allocno GENERAL_REGS
+    r131: preferred GENERAL_REGS, alternative NO_REGS, allocno GENERAL_REGS
+    a10 (r131,l0) best GENERAL_REGS, allocno GENERAL_REGS
+    r130: preferred GENERAL_REGS, alternative NO_REGS, allocno GENERAL_REGS
+    a11 (r130,l0) best GENERAL_REGS, allocno GENERAL_REGS
+    r129: preferred GENERAL_REGS, alternative NO_REGS, allocno GENERAL_REGS
+    a14 (r129,l0) best GENERAL_REGS, allocno GENERAL_REGS
+    r128: preferred DREG, alternative GENERAL_REGS, allocno GENERAL_REGS
+    a13 (r128,l0) best DREG, allocno GENERAL_REGS
+    r127: preferred GENERAL_REGS, alternative NO_REGS, allocno GENERAL_REGS
+    a16 (r127,l0) best GENERAL_REGS, allocno GENERAL_REGS
+    r126: preferred GENERAL_REGS, alternative NO_REGS, allocno GENERAL_REGS
+    a17 (r126,l0) best GENERAL_REGS, allocno GENERAL_REGS
+    r125: preferred GENERAL_REGS, alternative NO_REGS, allocno GENERAL_REGS
+    a18 (r125,l0) best GENERAL_REGS, allocno GENERAL_REGS
+    r124: preferred GENERAL_REGS, alternative NO_REGS, allocno GENERAL_REGS
+    a19 (r124,l0) best GENERAL_REGS, allocno GENERAL_REGS
+    r123: preferred GENERAL_REGS, alternative NO_REGS, allocno GENERAL_REGS
+    a21 (r123,l0) best GENERAL_REGS, allocno GENERAL_REGS
+    r122: preferred GENERAL_REGS, alternative NO_REGS, allocno GENERAL_REGS
+    a22 (r122,l0) best GENERAL_REGS, allocno GENERAL_REGS
+    r121: preferred GENERAL_REGS, alternative NO_REGS, allocno GENERAL_REGS
+    a26 (r121,l0) best GENERAL_REGS, allocno GENERAL_REGS
+    r120: preferred GENERAL_REGS, alternative NO_REGS, allocno GENERAL_REGS
+    a28 (r120,l0) best GENERAL_REGS, allocno GENERAL_REGS
+    r119: preferred GENERAL_REGS, alternative NO_REGS, allocno GENERAL_REGS
+    a32 (r119,l0) best GENERAL_REGS, allocno GENERAL_REGS
+    r118: preferred GENERAL_REGS, alternative NO_REGS, allocno GENERAL_REGS
+    a34 (r118,l0) best GENERAL_REGS, allocno GENERAL_REGS
+    r117: preferred GENERAL_REGS, alternative NO_REGS, allocno GENERAL_REGS
+    a36 (r117,l0) best GENERAL_REGS, allocno GENERAL_REGS
+    r116: preferred GENERAL_REGS, alternative NO_REGS, allocno GENERAL_REGS
+    a35 (r116,l0) best GENERAL_REGS, allocno GENERAL_REGS
+    r115: preferred GENERAL_REGS, alternative NO_REGS, allocno GENERAL_REGS
+    a40 (r115,l0) best GENERAL_REGS, allocno GENERAL_REGS
+    r114: preferred GENERAL_REGS, alternative NO_REGS, allocno GENERAL_REGS
+    a43 (r114,l0) best GENERAL_REGS, allocno GENERAL_REGS
+    r113: preferred GENERAL_REGS, alternative NO_REGS, allocno GENERAL_REGS
+    a42 (r113,l0) best GENERAL_REGS, allocno GENERAL_REGS
+    r112: preferred GENERAL_REGS, alternative NO_REGS, allocno GENERAL_REGS
+    a46 (r112,l0) best GENERAL_REGS, allocno GENERAL_REGS
+    r111: preferred GENERAL_REGS, alternative NO_REGS, allocno GENERAL_REGS
+    a45 (r111,l0) best GENERAL_REGS, allocno GENERAL_REGS
+    r110: preferred GENERAL_REGS, alternative NO_REGS, allocno GENERAL_REGS
+    a50 (r110,l0) best GENERAL_REGS, allocno GENERAL_REGS
+    r109: preferred GENERAL_REGS, alternative NO_REGS, allocno GENERAL_REGS
+    a54 (r109,l0) best GENERAL_REGS, allocno GENERAL_REGS
+    r108: preferred GENERAL_REGS, alternative NO_REGS, allocno GENERAL_REGS
+    a1 (r108,l0) best GENERAL_REGS, allocno GENERAL_REGS
+    r107: preferred GENERAL_REGS, alternative NO_REGS, allocno GENERAL_REGS
+    a4 (r107,l0) best GENERAL_REGS, allocno GENERAL_REGS
+    r106: preferred GENERAL_REGS, alternative NO_REGS, allocno GENERAL_REGS
+    a5 (r106,l0) best GENERAL_REGS, allocno GENERAL_REGS
+    r105: preferred GENERAL_REGS, alternative NO_REGS, allocno GENERAL_REGS
+    a6 (r105,l0) best GENERAL_REGS, allocno GENERAL_REGS
+    r104: preferred GENERAL_REGS, alternative NO_REGS, allocno GENERAL_REGS
+    a7 (r104,l0) best GENERAL_REGS, allocno GENERAL_REGS
+    r103: preferred GENERAL_REGS, alternative NO_REGS, allocno GENERAL_REGS
+    a12 (r103,l0) best GENERAL_REGS, allocno GENERAL_REGS
+    r102: preferred GENERAL_REGS, alternative NO_REGS, allocno GENERAL_REGS
+    a20 (r102,l0) best GENERAL_REGS, allocno GENERAL_REGS
+    r101: preferred GENERAL_REGS, alternative NO_REGS, allocno GENERAL_REGS
+    a23 (r101,l0) best GENERAL_REGS, allocno GENERAL_REGS
+    r100: preferred GENERAL_REGS, alternative NO_REGS, allocno GENERAL_REGS
+    a25 (r100,l0) best GENERAL_REGS, allocno GENERAL_REGS
+    r99: preferred GENERAL_REGS, alternative NO_REGS, allocno GENERAL_REGS
+    a24 (r99,l0) best GENERAL_REGS, allocno GENERAL_REGS
+    r98: preferred GENERAL_REGS, alternative NO_REGS, allocno GENERAL_REGS
+    a27 (r98,l0) best GENERAL_REGS, allocno GENERAL_REGS
+    r97: preferred GENERAL_REGS, alternative NO_REGS, allocno GENERAL_REGS
+    a29 (r97,l0) best GENERAL_REGS, allocno GENERAL_REGS
+    r96: preferred GENERAL_REGS, alternative NO_REGS, allocno GENERAL_REGS
+    a31 (r96,l0) best GENERAL_REGS, allocno GENERAL_REGS
+    r95: preferred GENERAL_REGS, alternative NO_REGS, allocno GENERAL_REGS
+    a30 (r95,l0) best GENERAL_REGS, allocno GENERAL_REGS
+    r94: preferred GENERAL_REGS, alternative NO_REGS, allocno GENERAL_REGS
+    a33 (r94,l0) best GENERAL_REGS, allocno GENERAL_REGS
+    r93: preferred GENERAL_REGS, alternative NO_REGS, allocno GENERAL_REGS
+    a37 (r93,l0) best GENERAL_REGS, allocno GENERAL_REGS
+    r92: preferred GENERAL_REGS, alternative NO_REGS, allocno GENERAL_REGS
+    a39 (r92,l0) best GENERAL_REGS, allocno GENERAL_REGS
+    r91: preferred GENERAL_REGS, alternative NO_REGS, allocno GENERAL_REGS
+    a38 (r91,l0) best GENERAL_REGS, allocno GENERAL_REGS
+    r90: preferred GENERAL_REGS, alternative NO_REGS, allocno GENERAL_REGS
+    a41 (r90,l0) best GENERAL_REGS, allocno GENERAL_REGS
+    r89: preferred GENERAL_REGS, alternative NO_REGS, allocno GENERAL_REGS
+    a44 (r89,l0) best GENERAL_REGS, allocno GENERAL_REGS
+    r88: preferred GENERAL_REGS, alternative NO_REGS, allocno GENERAL_REGS
+    a47 (r88,l0) best GENERAL_REGS, allocno GENERAL_REGS
+    r87: preferred GENERAL_REGS, alternative NO_REGS, allocno GENERAL_REGS
+    a48 (r87,l0) best GENERAL_REGS, allocno GENERAL_REGS
+    r86: preferred GENERAL_REGS, alternative NO_REGS, allocno GENERAL_REGS
+    a49 (r86,l0) best GENERAL_REGS, allocno GENERAL_REGS
+    r85: preferred GENERAL_REGS, alternative NO_REGS, allocno GENERAL_REGS
+    a51 (r85,l0) best GENERAL_REGS, allocno GENERAL_REGS
+    r84: preferred GENERAL_REGS, alternative NO_REGS, allocno GENERAL_REGS
+    a52 (r84,l0) best GENERAL_REGS, allocno GENERAL_REGS
+    r83: preferred GENERAL_REGS, alternative NO_REGS, allocno GENERAL_REGS
+    a53 (r83,l0) best GENERAL_REGS, allocno GENERAL_REGS
+    r82: preferred GENERAL_REGS, alternative NO_REGS, allocno GENERAL_REGS
+    a9 (r82,l0) best GENERAL_REGS, allocno GENERAL_REGS
+
+  a0(r135,l0) costs: AREG:0 DREG:0 CREG:0 BREG:0 SIREG:0 DIREG:0 AD_REGS:0 CLOBBERED_REGS:0 Q_REGS:0 NON_Q_REGS:0 TLS_GOTBASE_REGS:0 GENERAL_REGS:0 MEM:12000
+  a1(r108,l0) costs: AREG:0 DREG:0 CREG:0 BREG:0 SIREG:0 DIREG:0 AD_REGS:0 CLOBBERED_REGS:0 Q_REGS:0 NON_Q_REGS:0 TLS_GOTBASE_REGS:0 GENERAL_REGS:0 MEM:12000
+  a2(r134,l0) costs: AREG:0 DREG:0 CREG:0 BREG:0 SIREG:0 DIREG:0 AD_REGS:0 CLOBBERED_REGS:0 Q_REGS:0 NON_Q_REGS:0 TLS_GOTBASE_REGS:0 GENERAL_REGS:0 MEM:12000
+  a3(r133,l0) costs: AREG:0 DREG:0 CREG:0 BREG:0 SIREG:0 DIREG:0 AD_REGS:0 CLOBBERED_REGS:0 Q_REGS:0 NON_Q_REGS:0 TLS_GOTBASE_REGS:0 GENERAL_REGS:0 MEM:12000
+  a4(r107,l0) costs: AREG:0 DREG:0 CREG:0 BREG:0 SIREG:0 DIREG:0 AD_REGS:0 CLOBBERED_REGS:0 Q_REGS:0 NON_Q_REGS:0 TLS_GOTBASE_REGS:0 GENERAL_REGS:0 MEM:7000
+  a5(r106,l0) costs: AREG:0 DREG:0 CREG:0 BREG:0 SIREG:0 DIREG:0 AD_REGS:0 CLOBBERED_REGS:0 Q_REGS:0 NON_Q_REGS:0 TLS_GOTBASE_REGS:0 GENERAL_REGS:0 MEM:10000
+  a6(r105,l0) costs: AREG:0 DREG:0 CREG:0 BREG:0 SIREG:0 DIREG:0 AD_REGS:0 CLOBBERED_REGS:0 Q_REGS:0 NON_Q_REGS:0 TLS_GOTBASE_REGS:0 GENERAL_REGS:0 MEM:7000
+  a7(r104,l0) costs: AREG:0 DREG:0 CREG:0 BREG:0 SIREG:0 DIREG:0 AD_REGS:0 CLOBBERED_REGS:0 Q_REGS:0 NON_Q_REGS:0 TLS_GOTBASE_REGS:0 GENERAL_REGS:0 MEM:6000
+  a8(r132,l0) costs: AREG:0 DREG:0 CREG:0 BREG:0 SIREG:0 DIREG:0 AD_REGS:0 CLOBBERED_REGS:0 Q_REGS:0 NON_Q_REGS:0 TLS_GOTBASE_REGS:0 GENERAL_REGS:0 MEM:12000
+  a9(r82,l0) costs: AREG:2000 DREG:2000 CREG:2000 BREG:2000 SIREG:2000 DIREG:2000 AD_REGS:2000 CLOBBERED_REGS:2000 Q_REGS:2000 NON_Q_REGS:2000 TLS_GOTBASE_REGS:2000 GENERAL_REGS:2000 MEM:24000
+  a10(r131,l0) costs: AREG:0 DREG:0 CREG:0 BREG:0 SIREG:0 DIREG:0 AD_REGS:0 CLOBBERED_REGS:0 Q_REGS:0 NON_Q_REGS:0 TLS_GOTBASE_REGS:0 GENERAL_REGS:0 MEM:6000
+  a11(r130,l0) costs: AREG:0 DREG:0 CREG:0 BREG:0 SIREG:0 DIREG:0 AD_REGS:0 CLOBBERED_REGS:0 Q_REGS:0 NON_Q_REGS:0 TLS_GOTBASE_REGS:0 GENERAL_REGS:0 MEM:10000
+  a12(r103,l0) costs: AREG:2000 DREG:2000 CREG:2000 BREG:2000 SIREG:2000 DIREG:2000 AD_REGS:2000 CLOBBERED_REGS:2000 Q_REGS:2000 NON_Q_REGS:2000 TLS_GOTBASE_REGS:2000 GENERAL_REGS:2000 MEM:18000
+  a13(r128,l0) costs: AREG:4000 DREG:4000 CREG:4000 BREG:4000 SIREG:4000 DIREG:4000 AD_REGS:4000 CLOBBERED_REGS:4000 Q_REGS:4000 NON_Q_REGS:4000 TLS_GOTBASE_REGS:4000 GENERAL_REGS:4000 MEM:13000
+  a14(r129,l0) costs: AREG:2000 DREG:2000 CREG:2000 BREG:2000 SIREG:2000 DIREG:2000 AD_REGS:2000 CLOBBERED_REGS:2000 Q_REGS:2000 NON_Q_REGS:2000 TLS_GOTBASE_REGS:2000 GENERAL_REGS:2000 MEM:8000
+  a15(r136,l0) costs: AREG:2000 DREG:2000 CREG:2000 BREG:2000 SIREG:2000 DIREG:2000 AD_REGS:2000 CLOBBERED_REGS:2000 Q_REGS:2000 NON_Q_REGS:2000 TLS_GOTBASE_REGS:2000 GENERAL_REGS:2000 MEM:7000
+  a16(r127,l0) costs: AREG:0 DREG:0 CREG:0 BREG:0 SIREG:0 DIREG:0 AD_REGS:0 CLOBBERED_REGS:0 Q_REGS:0 NON_Q_REGS:0 TLS_GOTBASE_REGS:0 GENERAL_REGS:0 MEM:12000
+  a17(r126,l0) costs: AREG:0 DREG:0 CREG:0 BREG:0 SIREG:0 DIREG:0 AD_REGS:0 CLOBBERED_REGS:0 Q_REGS:0 NON_Q_REGS:0 TLS_GOTBASE_REGS:0 GENERAL_REGS:0 MEM:12000
+  a18(r125,l0) costs: AREG:0 DREG:0 CREG:0 BREG:0 SIREG:0 DIREG:0 AD_REGS:0 CLOBBERED_REGS:0 Q_REGS:0 NON_Q_REGS:0 TLS_GOTBASE_REGS:0 GENERAL_REGS:0 MEM:12000
+  a19(r124,l0) costs: AREG:0 DREG:0 CREG:0 BREG:0 SIREG:0 DIREG:0 AD_REGS:0 CLOBBERED_REGS:0 Q_REGS:0 NON_Q_REGS:0 TLS_GOTBASE_REGS:0 GENERAL_REGS:0 MEM:12000
+  a20(r102,l0) costs: AREG:0 DREG:0 CREG:0 BREG:0 SIREG:0 DIREG:0 AD_REGS:0 CLOBBERED_REGS:0 Q_REGS:0 NON_Q_REGS:0 TLS_GOTBASE_REGS:0 GENERAL_REGS:0 MEM:12000
+  a21(r123,l0) costs: AREG:0 DREG:0 CREG:0 BREG:0 SIREG:0 DIREG:0 AD_REGS:0 CLOBBERED_REGS:0 Q_REGS:0 NON_Q_REGS:0 TLS_GOTBASE_REGS:0 GENERAL_REGS:0 MEM:12000
+  a22(r122,l0) costs: AREG:0 DREG:0 CREG:0 BREG:0 SIREG:0 DIREG:0 AD_REGS:0 CLOBBERED_REGS:0 Q_REGS:0 NON_Q_REGS:0 TLS_GOTBASE_REGS:0 GENERAL_REGS:0 MEM:12000
+  a23(r101,l0) costs: AREG:0 DREG:0 CREG:0 BREG:0 SIREG:0 DIREG:0 AD_REGS:0 CLOBBERED_REGS:0 Q_REGS:0 NON_Q_REGS:0 TLS_GOTBASE_REGS:0 GENERAL_REGS:0 MEM:12000
+  a24(r99,l0) costs: AREG:0 DREG:0 CREG:0 BREG:0 SIREG:0 DIREG:0 AD_REGS:0 CLOBBERED_REGS:0 Q_REGS:0 NON_Q_REGS:0 TLS_GOTBASE_REGS:0 GENERAL_REGS:0 MEM:12000
+  a25(r100,l0) costs: AREG:0 DREG:0 CREG:0 BREG:0 SIREG:0 DIREG:0 AD_REGS:0 CLOBBERED_REGS:0 Q_REGS:0 NON_Q_REGS:0 TLS_GOTBASE_REGS:0 GENERAL_REGS:0 MEM:11000
+  a26(r121,l0) costs: AREG:0 DREG:0 CREG:0 BREG:0 SIREG:0 DIREG:0 AD_REGS:0 CLOBBERED_REGS:0 Q_REGS:0 NON_Q_REGS:0 TLS_GOTBASE_REGS:0 GENERAL_REGS:0 MEM:12000
+  a27(r98,l0) costs: AREG:0 DREG:0 CREG:0 BREG:0 SIREG:0 DIREG:0 AD_REGS:0 CLOBBERED_REGS:0 Q_REGS:0 NON_Q_REGS:0 TLS_GOTBASE_REGS:0 GENERAL_REGS:0 MEM:11000
+  a28(r120,l0) costs: AREG:0 DREG:0 CREG:0 BREG:0 SIREG:0 DIREG:0 AD_REGS:0 CLOBBERED_REGS:0 Q_REGS:0 NON_Q_REGS:0 TLS_GOTBASE_REGS:0 GENERAL_REGS:0 MEM:12000
+  a29(r97,l0) costs: AREG:0 DREG:0 CREG:0 BREG:0 SIREG:0 DIREG:0 AD_REGS:0 CLOBBERED_REGS:0 Q_REGS:0 NON_Q_REGS:0 TLS_GOTBASE_REGS:0 GENERAL_REGS:0 MEM:12000
+  a30(r95,l0) costs: AREG:0 DREG:0 CREG:0 BREG:0 SIREG:0 DIREG:0 AD_REGS:0 CLOBBERED_REGS:0 Q_REGS:0 NON_Q_REGS:0 TLS_GOTBASE_REGS:0 GENERAL_REGS:0 MEM:12000
+  a31(r96,l0) costs: AREG:0 DREG:0 CREG:0 BREG:0 SIREG:0 DIREG:0 AD_REGS:0 CLOBBERED_REGS:0 Q_REGS:0 NON_Q_REGS:0 TLS_GOTBASE_REGS:0 GENERAL_REGS:0 MEM:11000
+  a32(r119,l0) costs: AREG:0 DREG:0 CREG:0 BREG:0 SIREG:0 DIREG:0 AD_REGS:0 CLOBBERED_REGS:0 Q_REGS:0 NON_Q_REGS:0 TLS_GOTBASE_REGS:0 GENERAL_REGS:0 MEM:12000
+  a33(r94,l0) costs: AREG:0 DREG:0 CREG:0 BREG:0 SIREG:0 DIREG:0 AD_REGS:0 CLOBBERED_REGS:0 Q_REGS:0 NON_Q_REGS:0 TLS_GOTBASE_REGS:0 GENERAL_REGS:0 MEM:11000
+  a34(r118,l0) costs: AREG:0 DREG:0 CREG:0 BREG:0 SIREG:0 DIREG:0 AD_REGS:0 CLOBBERED_REGS:0 Q_REGS:0 NON_Q_REGS:0 TLS_GOTBASE_REGS:0 GENERAL_REGS:0 MEM:12000
+  a35(r116,l0) costs: AREG:0 DREG:0 CREG:0 BREG:0 SIREG:0 DIREG:0 AD_REGS:0 CLOBBERED_REGS:0 Q_REGS:0 NON_Q_REGS:0 TLS_GOTBASE_REGS:0 GENERAL_REGS:0 MEM:12000
+  a36(r117,l0) costs: AREG:0 DREG:0 CREG:0 BREG:0 SIREG:0 DIREG:0 AD_REGS:0 CLOBBERED_REGS:0 Q_REGS:0 NON_Q_REGS:0 TLS_GOTBASE_REGS:0 GENERAL_REGS:0 MEM:12000
+  a37(r93,l0) costs: AREG:0 DREG:0 CREG:0 BREG:0 SIREG:0 DIREG:0 AD_REGS:0 CLOBBERED_REGS:0 Q_REGS:0 NON_Q_REGS:0 TLS_GOTBASE_REGS:0 GENERAL_REGS:0 MEM:12000
+  a38(r91,l0) costs: AREG:0 DREG:0 CREG:0 BREG:0 SIREG:0 DIREG:0 AD_REGS:0 CLOBBERED_REGS:0 Q_REGS:0 NON_Q_REGS:0 TLS_GOTBASE_REGS:0 GENERAL_REGS:0 MEM:12000
+  a39(r92,l0) costs: AREG:0 DREG:0 CREG:0 BREG:0 SIREG:0 DIREG:0 AD_REGS:0 CLOBBERED_REGS:0 Q_REGS:0 NON_Q_REGS:0 TLS_GOTBASE_REGS:0 GENERAL_REGS:0 MEM:11000
+  a40(r115,l0) costs: AREG:0 DREG:0 CREG:0 BREG:0 SIREG:0 DIREG:0 AD_REGS:0 CLOBBERED_REGS:0 Q_REGS:0 NON_Q_REGS:0 TLS_GOTBASE_REGS:0 GENERAL_REGS:0 MEM:12000
+  a41(r90,l0) costs: AREG:0 DREG:0 CREG:0 BREG:0 SIREG:0 DIREG:0 AD_REGS:0 CLOBBERED_REGS:0 Q_REGS:0 NON_Q_REGS:0 TLS_GOTBASE_REGS:0 GENERAL_REGS:0 MEM:11000
+  a42(r113,l0) costs: AREG:0 DREG:0 CREG:0 BREG:0 SIREG:0 DIREG:0 AD_REGS:0 CLOBBERED_REGS:0 Q_REGS:0 NON_Q_REGS:0 TLS_GOTBASE_REGS:0 GENERAL_REGS:0 MEM:12000
+  a43(r114,l0) costs: AREG:0 DREG:0 CREG:0 BREG:0 SIREG:0 DIREG:0 AD_REGS:0 CLOBBERED_REGS:0 Q_REGS:0 NON_Q_REGS:0 TLS_GOTBASE_REGS:0 GENERAL_REGS:0 MEM:12000
+  a44(r89,l0) costs: AREG:0 DREG:0 CREG:0 BREG:0 SIREG:0 DIREG:0 AD_REGS:0 CLOBBERED_REGS:0 Q_REGS:0 NON_Q_REGS:0 TLS_GOTBASE_REGS:0 GENERAL_REGS:0 MEM:12000
+  a45(r111,l0) costs: AREG:0 DREG:0 CREG:0 BREG:0 SIREG:0 DIREG:0 AD_REGS:0 CLOBBERED_REGS:0 Q_REGS:0 NON_Q_REGS:0 TLS_GOTBASE_REGS:0 GENERAL_REGS:0 MEM:12000
+  a46(r112,l0) costs: AREG:0 DREG:0 CREG:0 BREG:0 SIREG:0 DIREG:0 AD_REGS:0 CLOBBERED_REGS:0 Q_REGS:0 NON_Q_REGS:0 TLS_GOTBASE_REGS:0 GENERAL_REGS:0 MEM:12000
+  a47(r88,l0) costs: AREG:0 DREG:0 CREG:0 BREG:0 SIREG:0 DIREG:0 AD_REGS:0 CLOBBERED_REGS:0 Q_REGS:0 NON_Q_REGS:0 TLS_GOTBASE_REGS:0 GENERAL_REGS:0 MEM:10000
+  a48(r87,l0) costs: AREG:0 DREG:0 CREG:0 BREG:0 SIREG:0 DIREG:0 AD_REGS:0 CLOBBERED_REGS:0 Q_REGS:0 NON_Q_REGS:0 TLS_GOTBASE_REGS:0 GENERAL_REGS:0 MEM:11000
+  a49(r86,l0) costs: AREG:0 DREG:0 CREG:0 BREG:0 SIREG:0 DIREG:0 AD_REGS:0 CLOBBERED_REGS:0 Q_REGS:0 NON_Q_REGS:0 TLS_GOTBASE_REGS:0 GENERAL_REGS:0 MEM:11000
+  a50(r110,l0) costs: AREG:0 DREG:0 CREG:0 BREG:0 SIREG:0 DIREG:0 AD_REGS:0 CLOBBERED_REGS:0 Q_REGS:0 NON_Q_REGS:0 TLS_GOTBASE_REGS:0 GENERAL_REGS:0 MEM:12000
+  a51(r85,l0) costs: AREG:0 DREG:0 CREG:0 BREG:0 SIREG:0 DIREG:0 AD_REGS:0 CLOBBERED_REGS:0 Q_REGS:0 NON_Q_REGS:0 TLS_GOTBASE_REGS:0 GENERAL_REGS:0 MEM:10000
+  a52(r84,l0) costs: AREG:0 DREG:0 CREG:0 BREG:0 SIREG:0 DIREG:0 AD_REGS:0 CLOBBERED_REGS:0 Q_REGS:0 NON_Q_REGS:0 TLS_GOTBASE_REGS:0 GENERAL_REGS:0 MEM:11000
+  a53(r83,l0) costs: AREG:0 DREG:0 CREG:0 BREG:0 SIREG:0 DIREG:0 AD_REGS:0 CLOBBERED_REGS:0 Q_REGS:0 NON_Q_REGS:0 TLS_GOTBASE_REGS:0 GENERAL_REGS:0 MEM:11000
+  a54(r109,l0) costs: AREG:0 DREG:0 CREG:0 BREG:0 SIREG:0 DIREG:0 AD_REGS:0 CLOBBERED_REGS:0 Q_REGS:0 NON_Q_REGS:0 TLS_GOTBASE_REGS:0 GENERAL_REGS:0 MEM:12000
+
+   Insn 119(l0): point = 1
+   Insn 115(l0): point = 4
+   Insn 108(l0): point = 6
+   Insn 107(l0): point = 8
+   Insn 106(l0): point = 10
+   Insn 105(l0): point = 12
+   Insn 104(l0): point = 14
+   Insn 103(l0): point = 16
+   Insn 102(l0): point = 18
+   Insn 101(l0): point = 20
+   Insn 100(l0): point = 22
+   Insn 99(l0): point = 24
+   Insn 98(l0): point = 26
+   Insn 97(l0): point = 29
+   Insn 96(l0): point = 31
+   Insn 95(l0): point = 33
+   Insn 94(l0): point = 35
+   Insn 93(l0): point = 37
+   Insn 92(l0): point = 39
+   Insn 91(l0): point = 41
+   Insn 90(l0): point = 43
+   Insn 89(l0): point = 45
+   Insn 88(l0): point = 47
+   Insn 87(l0): point = 49
+   Insn 86(l0): point = 51
+   Insn 85(l0): point = 53
+   Insn 84(l0): point = 55
+   Insn 83(l0): point = 57
+   Insn 82(l0): point = 59
+   Insn 81(l0): point = 61
+   Insn 80(l0): point = 63
+   Insn 79(l0): point = 65
+   Insn 78(l0): point = 67
+   Insn 77(l0): point = 69
+   Insn 76(l0): point = 71
+   Insn 75(l0): point = 73
+   Insn 74(l0): point = 75
+   Insn 73(l0): point = 77
+   Insn 72(l0): point = 79
+   Insn 71(l0): point = 81
+   Insn 70(l0): point = 83
+   Insn 69(l0): point = 85
+   Insn 68(l0): point = 87
+   Insn 67(l0): point = 89
+   Insn 66(l0): point = 91
+   Insn 65(l0): point = 93
+   Insn 64(l0): point = 95
+   Insn 63(l0): point = 97
+   Insn 62(l0): point = 99
+   Insn 61(l0): point = 101
+   Insn 60(l0): point = 103
+   Insn 31(l0): point = 106
+   Insn 30(l0): point = 108
+   Insn 29(l0): point = 110
+   Insn 28(l0): point = 112
+   Insn 27(l0): point = 114
+   Insn 58(l0): point = 117
+   Insn 57(l0): point = 119
+   Insn 51(l0): point = 122
+   Insn 48(l0): point = 125
+   Insn 47(l0): point = 127
+   Insn 46(l0): point = 129
+   Insn 45(l0): point = 131
+   Insn 44(l0): point = 133
+   Insn 43(l0): point = 135
+   Insn 42(l0): point = 137
+   Insn 41(l0): point = 139
+   Insn 40(l0): point = 141
+   Insn 39(l0): point = 143
+   Insn 38(l0): point = 145
+   Insn 37(l0): point = 147
+   Insn 36(l0): point = 149
+   Insn 35(l0): point = 151
+   Insn 34(l0): point = 153
+   Insn 33(l0): point = 155
+   Insn 113(l0): point = 158
+   Insn 23(l0): point = 160
+   Insn 17(l0): point = 163
+   Insn 16(l0): point = 165
+   Insn 15(l0): point = 167
+   Insn 14(l0): point = 169
+   Insn 13(l0): point = 171
+   Insn 12(l0): point = 173
+   Insn 10(l0): point = 176
+   Insn 9(l0): point = 178
+   Insn 8(l0): point = 180
+   Insn 7(l0): point = 182
+   Insn 6(l0): point = 184
+   Insn 5(l0): point = 186
+   Insn 120(l0): point = 188
+ a0(r135): [7..8]
+ a1(r108): [7..10]
+ a2(r134): [11..12]
+ a3(r133): [15..16]
+ a4(r107): [15..18]
+ a5(r106): [19..20]
+ a6(r105): [21..22]
+ a7(r104): [21..27]
+ a8(r132): [23..24]
+ a9(r82): [25..188]
+ a10(r131): [27..29]
+ a11(r130): [28..31]
+ a12(r103): [30..37]
+ a13(r128): [32..33]
+ a14(r129): [34..35]
+ a15(r136): [33..33]
+ a16(r127): [38..39]
+ a17(r126): [42..43]
+ a18(r125): [46..47]
+ a19(r124): [50..51]
+ a20(r102): [50..53]
+ a21(r123): [54..55]
+ a22(r122): [58..59]
+ a23(r101): [66..71]
+ a24(r99): [68..77]
+ a25(r100): [72..73]
+ a26(r121): [74..75]
+ a27(r98): [78..79]
+ a28(r120): [80..81]
+ a29(r97): [88..93]
+ a30(r95): [90..99]
+ a31(r96): [94..95]
+ a32(r119): [96..97]
+ a33(r94): [100..101]
+ a34(r118): [102..103]
+ a35(r116): [126..129]
+ a36(r117): [126..127]
+ a37(r93): [138..143]
+ a38(r91): [140..149]
+ a39(r92): [144..145]
+ a40(r115): [146..147]
+ a41(r90): [150..151]
+ a42(r113): [152..155]
+ a43(r114): [152..153]
+ a44(r89): [109..110]
+ a45(r111): [111..114]
+ a46(r112): [111..112]
+ a47(r88): [166..167]
+ a48(r87): [168..169]
+ a49(r86): [170..171]
+ a50(r110): [172..173]
+ a51(r85): [179..180]
+ a52(r84): [181..182]
+ a53(r83): [183..184]
+ a54(r109): [185..186]
+Compressing live ranges: from 191 to 86 - 45%
+Ranges after the compression:
+ a0(r135): [0..1]
+ a1(r108): [0..1]
+ a2(r134): [2..3]
+ a3(r133): [4..5]
+ a4(r107): [4..5]
+ a5(r106): [6..7]
+ a6(r105): [8..9]
+ a7(r104): [8..13]
+ a8(r132): [10..11]
+ a9(r82): [12..85]
+ a10(r131): [13..15]
+ a11(r130): [14..17]
+ a12(r103): [16..21]
+ a13(r128): [18..19]
+ a14(r129): [20..21]
+ a15(r136): [19..19]
+ a16(r127): [22..23]
+ a17(r126): [24..25]
+ a18(r125): [26..27]
+ a19(r124): [28..29]
+ a20(r102): [28..29]
+ a21(r123): [30..31]
+ a22(r122): [32..33]
+ a23(r101): [34..35]
+ a24(r99): [34..39]
+ a25(r100): [36..37]
+ a26(r121): [38..39]
+ a27(r98): [40..41]
+ a28(r120): [42..43]
+ a29(r97): [44..45]
+ a30(r95): [44..49]
+ a31(r96): [46..47]
+ a32(r119): [48..49]
+ a33(r94): [50..51]
+ a34(r118): [52..53]
+ a35(r116): [58..59]
+ a36(r117): [58..59]
+ a37(r93): [60..61]
+ a38(r91): [60..65]
+ a39(r92): [62..63]
+ a40(r115): [64..65]
+ a41(r90): [66..67]
+ a42(r113): [68..69]
+ a43(r114): [68..69]
+ a44(r89): [54..55]
+ a45(r111): [56..57]
+ a46(r112): [56..57]
+ a47(r88): [70..71]
+ a48(r87): [72..73]
+ a49(r86): [74..75]
+ a50(r110): [76..77]
+ a51(r85): [78..79]
+ a52(r84): [80..81]
+ a53(r83): [82..83]
+ a54(r109): [84..85]
+  pref0:a13(r128)<-hr1@1000
+  regions=1, blocks=12, points=86
+    allocnos=55 (big 0), copies=0, conflicts=0, ranges=55
+Disposition:
+    9:r82  l0     3   53:r83  l0     0   52:r84  l0     0   51:r85  l0     0
+   49:r86  l0     0   48:r87  l0     0   47:r88  l0     0   44:r89  l0     0
+   41:r90  l0     0   38:r91  l0     1   39:r92  l0     0   37:r93  l0     0
+   33:r94  l0     0   30:r95  l0     1   31:r96  l0     0   29:r97  l0     0
+   27:r98  l0     0   24:r99  l0     1   25:r100 l0     0   23:r101 l0     0
+   20:r102 l0     1   12:r103 l0     2    7:r104 l0     1    6:r105 l0     0
+    5:r106 l0     0    4:r107 l0     1    1:r108 l0     1   54:r109 l0     0
+   50:r110 l0     0   45:r111 l0     0   46:r112 l0     1   42:r113 l0     0
+   43:r114 l0     1   40:r115 l0     0   35:r116 l0     0   36:r117 l0     1
+   34:r118 l0     0   32:r119 l0     0   28:r120 l0     0   26:r121 l0     0
+   22:r122 l0     0   21:r123 l0     0   19:r124 l0     0   18:r125 l0     0
+   17:r126 l0     0   16:r127 l0     0   13:r128 l0     1   14:r129 l0     1
+   11:r130 l0     0   10:r131 l0     2    8:r132 l0     0    3:r133 l0     0
+    2:r134 l0     0    0:r135 l0     0   15:r136 l0     0
++++Costs: overall 10000, reg 10000, mem 0, ld 0, st 0, move 0
++++       move loops 0, new jumps 0
+
+
+truncate
+
+Dataflow summary:
+;;  fully invalidated by EH 	 0 [ax] 1 [dx] 2 [cx] 8 [st] 9 [st(1)] 10 [st(2)] 11 [st(3)] 12 [st(4)] 13 [st(5)] 14 [st(6)] 15 [st(7)] 17 [flags] 18 [fpsr] 20 [xmm0] 21 [xmm1] 22 [xmm2] 23 [xmm3] 24 [xmm4] 25 [xmm5] 26 [xmm6] 27 [xmm7] 28 [mm0] 29 [mm1] 30 [mm2] 31 [mm3] 32 [mm4] 33 [mm5] 34 [mm6] 35 [mm7] 36 [r8] 37 [r9] 38 [r10] 39 [r11] 40 [r12] 41 [r13] 42 [r14] 43 [r15] 44 [xmm8] 45 [xmm9] 46 [xmm10] 47 [xmm11] 48 [xmm12] 49 [xmm13] 50 [xmm14] 51 [xmm15] 52 [xmm16] 53 [xmm17] 54 [xmm18] 55 [xmm19] 56 [xmm20] 57 [xmm21] 58 [xmm22] 59 [xmm23] 60 [xmm24] 61 [xmm25] 62 [xmm26] 63 [xmm27] 64 [xmm28] 65 [xmm29] 66 [xmm30] 67 [xmm31] 68 [k0] 69 [k1] 70 [k2] 71 [k3] 72 [k4] 73 [k5] 74 [k6] 75 [k7]
+;;  hardware regs used 	 7 [sp] 16 [argp] 19 [frame]
+;;  regular block artificial uses 	 6 [bp] 7 [sp] 16 [argp] 19 [frame]
+;;  eh block artificial uses 	 6 [bp] 7 [sp] 16 [argp] 19 [frame]
+;;  entry block defs 	 0 [ax] 1 [dx] 2 [cx] 6 [bp] 7 [sp] 16 [argp] 19 [frame]
+;;  exit block uses 	 6 [bp] 7 [sp] 19 [frame]
+;;  regs ever live 	 3 [bx] 7 [sp] 17 [flags]
+;;  ref usage 	r0={4d} r1={4d} r2={4d} r3={1d,1u} r6={1d,11u} r7={13d,32u} r8={3d} r9={3d} r10={3d} r11={3d} r12={3d} r13={3d} r14={3d} r15={3d} r16={1d,28u} r17={22d,4u} r18={3d} r19={1d,18u} r20={3d} r21={3d} r22={3d} r23={3d} r24={3d} r25={3d} r26={3d} r27={3d} r28={3d} r29={3d} r30={3d} r31={3d} r32={3d} r33={3d} r34={3d} r35={3d} r36={3d} r37={3d} r38={3d} r39={3d} r40={3d} r41={3d} r42={3d} r43={3d} r44={3d} r45={3d} r46={3d} r47={3d} r48={3d} r49={3d} r50={3d} r51={3d} r52={3d} r53={3d} r54={3d} r55={3d} r56={3d} r57={3d} r58={3d} r59={3d} r60={3d} r61={3d} r62={3d} r63={3d} r64={3d} r65={3d} r66={3d} r67={3d} r68={3d} r69={3d} r70={3d} r71={3d} r72={3d} r73={3d} r74={3d} r75={3d} r82={1d,3u} r83={1d,1u} r84={1d,1u} r85={1d,1u} r86={1d,1u} r87={1d,1u} r88={1d,1u} r89={1d,1u} r90={1d,1u} r91={1d,1u} r92={1d,1u} r93={1d,1u} r94={1d,1u} r95={1d,1u} r96={1d,1u} r97={1d,1u} r98={1d,1u} r99={1d,1u} r100={1d,1u} r101={1d,1u} r102={1d,1u} r103={1d,2u} r104={1d,1u} r105={1d,1u} r106={1d,1u} r107={1d,1u} r108={1d,1u} r109={1d,1u} r110={1d,1u} r111={1d,1u} r112={1d,1u} r113={1d,1u} r114={1d,1u} r115={1d,1u} r116={1d,1u} r117={1d,1u} r118={1d,1u} r119={1d,1u} r120={1d,1u} r121={1d,1u} r122={1d,1u} r123={1d,1u} r124={1d,1u} r125={1d,1u} r126={1d,1u} r127={1d,1u} r128={1d,1u} r129={1d,1u} r130={1d,1u} r131={1d,1u} r132={1d,1u} r133={1d,1u} r134={1d,1u} r135={1d,1u} r136={1d} 
+;;    total ref usage 452{301d,151u,0e} in 90{87 regular + 3 call} insns.
+(note 1 0 3 NOTE_INSN_DELETED)
+(note 3 1 120 2 [bb 2] NOTE_INSN_BASIC_BLOCK)
+(insn/f 120 3 2 2 (parallel [
+            (set (reg:SI 82)
+                (unspec:SI [
+                        (const_int 0 [0])
+                    ] UNSPEC_SET_GOT))
+            (clobber (reg:CC 17 flags))
+        ]) 846 {*set_got}
+     (expr_list:REG_UNUSED (reg:CC 17 flags)
+        (expr_list:REG_CFA_FLUSH_QUEUE (nil)
+            (nil))))
+(note 2 120 5 2 NOTE_INSN_FUNCTION_BEG)
+(insn 5 2 6 2 (set (reg/f:SI 109)
+        (mem/f/c:SI (reg/f:SI 16 argp) [10 inode+0 S4 A32])) "fs/truncate.c":50:11 75 {*movsi_internal}
+     (nil))
+(insn 6 5 7 2 (set (reg:HI 83 [ _1 ])
+        (mem:HI (reg/f:SI 109) [2 inode_32(D)->i_mode+0 S2 A32])) "fs/truncate.c":50:11 76 {*movhi_internal}
+     (expr_list:REG_DEAD (reg/f:SI 109)
+        (nil)))
+(insn 7 6 8 2 (set (reg:SI 84 [ _2 ])
+        (zero_extend:SI (reg:HI 83 [ _1 ]))) "fs/truncate.c":50:11 144 {*zero_extendhisi2}
+     (expr_list:REG_DEAD (reg:HI 83 [ _1 ])
+        (nil)))
+(insn 8 7 9 2 (parallel [
+            (set (reg:SI 85 [ _3 ])
+                (and:SI (reg:SI 84 [ _2 ])
+                    (const_int 61440 [0xf000])))
+            (clobber (reg:CC 17 flags))
+        ]) "fs/truncate.c":50:11 490 {*andsi_1}
+     (expr_list:REG_DEAD (reg:SI 84 [ _2 ])
+        (expr_list:REG_UNUSED (reg:CC 17 flags)
+            (nil))))
+(insn 9 8 10 2 (set (reg:CCZ 17 flags)
+        (compare:CCZ (reg:SI 85 [ _3 ])
+            (const_int 32768 [0x8000]))) "fs/truncate.c":50:8 11 {*cmpsi_1}
+     (expr_list:REG_DEAD (reg:SI 85 [ _3 ])
+        (nil)))
+(jump_insn 10 9 11 2 (set (pc)
+        (if_then_else (eq (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref 21)
+            (pc))) "fs/truncate.c":50:8 806 {*jcc}
+     (expr_list:REG_DEAD (reg:CCZ 17 flags)
+        (nil))
+ -> 21)
+(note 11 10 12 3 [bb 3] NOTE_INSN_BASIC_BLOCK)
+(insn 12 11 13 3 (set (reg/f:SI 110)
+        (mem/f/c:SI (reg/f:SI 16 argp) [10 inode+0 S4 A32])) "fs/truncate.c":50:37 75 {*movsi_internal}
+     (nil))
+(insn 13 12 14 3 (set (reg:HI 86 [ _4 ])
+        (mem:HI (reg/f:SI 110) [2 inode_32(D)->i_mode+0 S2 A32])) "fs/truncate.c":50:37 76 {*movhi_internal}
+     (expr_list:REG_DEAD (reg/f:SI 110)
+        (nil)))
+(insn 14 13 15 3 (set (reg:SI 87 [ _5 ])
+        (zero_extend:SI (reg:HI 86 [ _4 ]))) "fs/truncate.c":50:37 144 {*zero_extendhisi2}
+     (expr_list:REG_DEAD (reg:HI 86 [ _4 ])
+        (nil)))
+(insn 15 14 16 3 (parallel [
+            (set (reg:SI 88 [ _6 ])
+                (and:SI (reg:SI 87 [ _5 ])
+                    (const_int 61440 [0xf000])))
+            (clobber (reg:CC 17 flags))
+        ]) "fs/truncate.c":50:37 490 {*andsi_1}
+     (expr_list:REG_DEAD (reg:SI 87 [ _5 ])
+        (expr_list:REG_UNUSED (reg:CC 17 flags)
+            (nil))))
+(insn 16 15 17 3 (set (reg:CCZ 17 flags)
+        (compare:CCZ (reg:SI 88 [ _6 ])
+            (const_int 16384 [0x4000]))) "fs/truncate.c":50:9 11 {*cmpsi_1}
+     (expr_list:REG_DEAD (reg:SI 88 [ _6 ])
+        (nil)))
+(jump_insn 17 16 21 3 (set (pc)
+        (if_then_else (ne (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref:SI 118)
+            (pc))) "fs/truncate.c":50:9 806 {*jcc}
+     (expr_list:REG_DEAD (reg:CCZ 17 flags)
+        (nil))
+ -> 118)
+(code_label 21 17 22 4 18 (nil) [1 uses])
+(note 22 21 23 4 [bb 4] NOTE_INSN_BASIC_BLOCK)
+(insn 23 22 113 4 (set (mem/c:SI (plus:SI (reg/f:SI 19 frame)
+                (const_int -4 [0xfffffffffffffffc])) [6 i+0 S4 A32])
+        (const_int 0 [0])) "fs/truncate.c":52:12 75 {*movsi_internal}
+     (nil))
+(jump_insn 113 23 114 4 (set (pc)
+        (label_ref 52)) "fs/truncate.c":52:5 807 {jump}
+     (nil)
+ -> 52)
+(barrier 114 113 54)
+(code_label 54 114 26 5 22 (nil) [1 uses])
+(note 26 54 27 5 [bb 5] NOTE_INSN_BASIC_BLOCK)
+(insn 27 26 28 5 (set (reg/f:SI 111)
+        (mem/f/c:SI (reg/f:SI 16 argp) [10 inode+0 S4 A32])) "fs/truncate.c":53:26 75 {*movsi_internal}
+     (nil))
+(insn 28 27 29 5 (set (reg:SI 112)
+        (mem/c:SI (plus:SI (reg/f:SI 19 frame)
+                (const_int -4 [0xfffffffffffffffc])) [6 i+0 S4 A32])) "fs/truncate.c":53:26 75 {*movsi_internal}
+     (nil))
+(insn 29 28 30 5 (set (reg:HI 89 [ _7 ])
+        (mem:HI (plus:SI (plus:SI (mult:SI (reg:SI 112)
+                        (const_int 2 [0x2]))
+                    (reg/f:SI 111))
+                (const_int 14 [0xe])) [2 inode_32(D)->i_zone[i_27]+0 S2 A16])) "fs/truncate.c":53:26 76 {*movhi_internal}
+     (expr_list:REG_DEAD (reg:SI 112)
+        (expr_list:REG_DEAD (reg/f:SI 111)
+            (nil))))
+(insn 30 29 31 5 (set (reg:CCZ 17 flags)
+        (compare:CCZ (reg:HI 89 [ _7 ])
+            (const_int 0 [0]))) "fs/truncate.c":53:12 6 {*cmphi_ccno_1}
+     (expr_list:REG_DEAD (reg:HI 89 [ _7 ])
+        (nil)))
+(jump_insn 31 30 32 5 (set (pc)
+        (if_then_else (eq (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref 49)
+            (pc))) "fs/truncate.c":53:12 806 {*jcc}
+     (expr_list:REG_DEAD (reg:CCZ 17 flags)
+        (nil))
+ -> 49)
+(note 32 31 33 6 [bb 6] NOTE_INSN_BASIC_BLOCK)
+(insn 33 32 34 6 (set (reg/f:SI 113)
+        (mem/f/c:SI (reg/f:SI 16 argp) [10 inode+0 S4 A32])) "fs/truncate.c":54:51 75 {*movsi_internal}
+     (nil))
+(insn 34 33 35 6 (set (reg:SI 114)
+        (mem/c:SI (plus:SI (reg/f:SI 19 frame)
+                (const_int -4 [0xfffffffffffffffc])) [6 i+0 S4 A32])) "fs/truncate.c":54:51 75 {*movsi_internal}
+     (nil))
+(insn 35 34 36 6 (set (reg:HI 90 [ _8 ])
+        (mem:HI (plus:SI (plus:SI (mult:SI (reg:SI 114)
+                        (const_int 2 [0x2]))
+                    (reg/f:SI 113))
+                (const_int 14 [0xe])) [2 inode_32(D)->i_zone[i_27]+0 S2 A16])) "fs/truncate.c":54:51 76 {*movhi_internal}
+     (expr_list:REG_DEAD (reg:SI 114)
+        (expr_list:REG_DEAD (reg/f:SI 113)
+            (nil))))
+(insn 36 35 37 6 (set (reg:SI 91 [ _9 ])
+        (zero_extend:SI (reg:HI 90 [ _8 ]))) "fs/truncate.c":54:13 144 {*zero_extendhisi2}
+     (expr_list:REG_DEAD (reg:HI 90 [ _8 ])
+        (nil)))
+(insn 37 36 38 6 (set (reg/f:SI 115)
+        (mem/f/c:SI (reg/f:SI 16 argp) [10 inode+0 S4 A32])) "fs/truncate.c":54:29 75 {*movsi_internal}
+     (nil))
+(insn 38 37 39 6 (set (reg:HI 92 [ _10 ])
+        (mem:HI (plus:SI (reg/f:SI 115)
+                (const_int 44 [0x2c])) [2 inode_32(D)->i_dev+0 S2 A32])) "fs/truncate.c":54:29 76 {*movhi_internal}
+     (expr_list:REG_DEAD (reg/f:SI 115)
+        (nil)))
+(insn 39 38 40 6 (set (reg:SI 93 [ _11 ])
+        (zero_extend:SI (reg:HI 92 [ _10 ]))) "fs/truncate.c":54:13 144 {*zero_extendhisi2}
+     (expr_list:REG_DEAD (reg:HI 92 [ _10 ])
+        (nil)))
+(insn 40 39 41 6 (parallel [
+            (set (reg/f:SI 7 sp)
+                (plus:SI (reg/f:SI 7 sp)
+                    (const_int -8 [0xfffffffffffffff8])))
+            (clobber (reg:CC 17 flags))
+        ]) "fs/truncate.c":54:13 209 {*addsi_1}
+     (expr_list:REG_UNUSED (reg:CC 17 flags)
+        (expr_list:REG_ARGS_SIZE (const_int 8 [0x8])
+            (nil))))
+(insn 41 40 42 6 (set (mem:SI (pre_dec:SI (reg/f:SI 7 sp)) [6  S4 A32])
+        (reg:SI 91 [ _9 ])) "fs/truncate.c":54:13 54 {*pushsi2}
+     (expr_list:REG_DEAD (reg:SI 91 [ _9 ])
+        (expr_list:REG_ARGS_SIZE (const_int 12 [0xc])
+            (nil))))
+(insn 42 41 43 6 (set (mem:SI (pre_dec:SI (reg/f:SI 7 sp)) [6  S4 A32])
+        (reg:SI 93 [ _11 ])) "fs/truncate.c":54:13 54 {*pushsi2}
+     (expr_list:REG_DEAD (reg:SI 93 [ _11 ])
+        (expr_list:REG_ARGS_SIZE (const_int 16 [0x10])
+            (nil))))
+(insn 43 42 44 6 (set (reg:SI 3 bx)
+        (reg:SI 82)) "fs/truncate.c":54:13 75 {*movsi_internal}
+     (nil))
+(call_insn 44 43 45 6 (call (mem:QI (symbol_ref:SI ("free_block") [flags 0x41]  <function_decl 0x742679f15400 free_block>) [0 free_block S1 A8])
+        (const_int 16 [0x10])) "fs/truncate.c":54:13 812 {*call}
+     (expr_list:REG_DEAD (reg:SI 3 bx)
+        (nil))
+    (expr_list (use (reg:SI 3 bx))
+        (nil)))
+(insn 45 44 46 6 (parallel [
+            (set (reg/f:SI 7 sp)
+                (plus:SI (reg/f:SI 7 sp)
+                    (const_int 16 [0x10])))
+            (clobber (reg:CC 17 flags))
+        ]) "fs/truncate.c":54:13 209 {*addsi_1}
+     (expr_list:REG_UNUSED (reg:CC 17 flags)
+        (expr_list:REG_ARGS_SIZE (const_int 0 [0])
+            (nil))))
+(insn 46 45 47 6 (set (reg/f:SI 116)
+        (mem/f/c:SI (reg/f:SI 16 argp) [10 inode+0 S4 A32])) "fs/truncate.c":55:30 75 {*movsi_internal}
+     (nil))
+(insn 47 46 48 6 (set (reg:SI 117)
+        (mem/c:SI (plus:SI (reg/f:SI 19 frame)
+                (const_int -4 [0xfffffffffffffffc])) [6 i+0 S4 A32])) "fs/truncate.c":55:30 75 {*movsi_internal}
+     (nil))
+(insn 48 47 49 6 (set (mem:HI (plus:SI (plus:SI (mult:SI (reg:SI 117)
+                        (const_int 2 [0x2]))
+                    (reg/f:SI 116))
+                (const_int 14 [0xe])) [2 inode_32(D)->i_zone[i_27]+0 S2 A16])
+        (const_int 0 [0])) "fs/truncate.c":55:30 76 {*movhi_internal}
+     (expr_list:REG_DEAD (reg:SI 117)
+        (expr_list:REG_DEAD (reg/f:SI 116)
+            (nil))))
+(code_label 49 48 50 7 21 (nil) [1 uses])
+(note 50 49 51 7 [bb 7] NOTE_INSN_BASIC_BLOCK)
+(insn 51 50 52 7 (parallel [
+            (set (mem/c:SI (plus:SI (reg/f:SI 19 frame)
+                        (const_int -4 [0xfffffffffffffffc])) [6 i+0 S4 A32])
+                (plus:SI (mem/c:SI (plus:SI (reg/f:SI 19 frame)
+                            (const_int -4 [0xfffffffffffffffc])) [6 i+0 S4 A32])
+                    (const_int 1 [0x1])))
+            (clobber (reg:CC 17 flags))
+        ]) "fs/truncate.c":52:25 209 {*addsi_1}
+     (expr_list:REG_UNUSED (reg:CC 17 flags)
+        (nil)))
+(code_label 52 51 53 8 20 (nil) [1 uses])
+(note 53 52 57 8 [bb 8] NOTE_INSN_BASIC_BLOCK)
+(insn 57 53 58 8 (set (reg:CCGC 17 flags)
+        (compare:CCGC (mem/c:SI (plus:SI (reg/f:SI 19 frame)
+                    (const_int -4 [0xfffffffffffffffc])) [6 i+0 S4 A32])
+            (const_int 6 [0x6]))) "fs/truncate.c":52:19 11 {*cmpsi_1}
+     (nil))
+(jump_insn 58 57 59 8 (set (pc)
+        (if_then_else (le (reg:CCGC 17 flags)
+                (const_int 0 [0]))
+            (label_ref 54)
+            (pc))) "fs/truncate.c":52:19 806 {*jcc}
+     (expr_list:REG_DEAD (reg:CCGC 17 flags)
+        (nil))
+ -> 54)
+(note 59 58 60 9 [bb 9] NOTE_INSN_BASIC_BLOCK)
+(insn 60 59 61 9 (set (reg/f:SI 118)
+        (mem/f/c:SI (reg/f:SI 16 argp) [10 inode+0 S4 A32])) "fs/truncate.c":57:41 75 {*movsi_internal}
+     (nil))
+(insn 61 60 62 9 (set (reg:HI 94 [ _12 ])
+        (mem:HI (plus:SI (reg/f:SI 118)
+                (const_int 28 [0x1c])) [2 inode_32(D)->i_zone[7]+0 S2 A32])) "fs/truncate.c":57:41 76 {*movhi_internal}
+     (expr_list:REG_DEAD (reg/f:SI 118)
+        (nil)))
+(insn 62 61 63 9 (set (reg:SI 95 [ _13 ])
+        (zero_extend:SI (reg:HI 94 [ _12 ]))) "fs/truncate.c":57:5 144 {*zero_extendhisi2}
+     (expr_list:REG_DEAD (reg:HI 94 [ _12 ])
+        (nil)))
+(insn 63 62 64 9 (set (reg/f:SI 119)
+        (mem/f/c:SI (reg/f:SI 16 argp) [10 inode+0 S4 A32])) "fs/truncate.c":57:19 75 {*movsi_internal}
+     (nil))
+(insn 64 63 65 9 (set (reg:HI 96 [ _14 ])
+        (mem:HI (plus:SI (reg/f:SI 119)
+                (const_int 44 [0x2c])) [2 inode_32(D)->i_dev+0 S2 A32])) "fs/truncate.c":57:19 76 {*movhi_internal}
+     (expr_list:REG_DEAD (reg/f:SI 119)
+        (nil)))
+(insn 65 64 66 9 (set (reg:SI 97 [ _15 ])
+        (zero_extend:SI (reg:HI 96 [ _14 ]))) "fs/truncate.c":57:5 144 {*zero_extendhisi2}
+     (expr_list:REG_DEAD (reg:HI 96 [ _14 ])
+        (nil)))
+(insn 66 65 67 9 (parallel [
+            (set (reg/f:SI 7 sp)
+                (plus:SI (reg/f:SI 7 sp)
+                    (const_int -8 [0xfffffffffffffff8])))
+            (clobber (reg:CC 17 flags))
+        ]) "fs/truncate.c":57:5 209 {*addsi_1}
+     (expr_list:REG_UNUSED (reg:CC 17 flags)
+        (expr_list:REG_ARGS_SIZE (const_int 8 [0x8])
+            (nil))))
+(insn 67 66 68 9 (set (mem:SI (pre_dec:SI (reg/f:SI 7 sp)) [6  S4 A32])
+        (reg:SI 95 [ _13 ])) "fs/truncate.c":57:5 54 {*pushsi2}
+     (expr_list:REG_DEAD (reg:SI 95 [ _13 ])
+        (expr_list:REG_ARGS_SIZE (const_int 12 [0xc])
+            (nil))))
+(insn 68 67 69 9 (set (mem:SI (pre_dec:SI (reg/f:SI 7 sp)) [6  S4 A32])
+        (reg:SI 97 [ _15 ])) "fs/truncate.c":57:5 54 {*pushsi2}
+     (expr_list:REG_DEAD (reg:SI 97 [ _15 ])
+        (expr_list:REG_ARGS_SIZE (const_int 16 [0x10])
+            (nil))))
+(call_insn 69 68 70 9 (call (mem:QI (symbol_ref:SI ("free_ind") [flags 0x3]  <function_decl 0x742679f3a900 free_ind>) [0 free_ind S1 A8])
+        (const_int 16 [0x10])) "fs/truncate.c":57:5 812 {*call}
+     (nil)
+    (nil))
+(insn 70 69 71 9 (parallel [
+            (set (reg/f:SI 7 sp)
+                (plus:SI (reg/f:SI 7 sp)
+                    (const_int 16 [0x10])))
+            (clobber (reg:CC 17 flags))
+        ]) "fs/truncate.c":57:5 209 {*addsi_1}
+     (expr_list:REG_UNUSED (reg:CC 17 flags)
+        (expr_list:REG_ARGS_SIZE (const_int 0 [0])
+            (nil))))
+(insn 71 70 72 9 (set (reg/f:SI 120)
+        (mem/f/c:SI (reg/f:SI 16 argp) [10 inode+0 S4 A32])) "fs/truncate.c":58:42 75 {*movsi_internal}
+     (nil))
+(insn 72 71 73 9 (set (reg:HI 98 [ _16 ])
+        (mem:HI (plus:SI (reg/f:SI 120)
+                (const_int 30 [0x1e])) [2 inode_32(D)->i_zone[8]+0 S2 A16])) "fs/truncate.c":58:42 76 {*movhi_internal}
+     (expr_list:REG_DEAD (reg/f:SI 120)
+        (nil)))
+(insn 73 72 74 9 (set (reg:SI 99 [ _17 ])
+        (zero_extend:SI (reg:HI 98 [ _16 ]))) "fs/truncate.c":58:5 144 {*zero_extendhisi2}
+     (expr_list:REG_DEAD (reg:HI 98 [ _16 ])
+        (nil)))
+(insn 74 73 75 9 (set (reg/f:SI 121)
+        (mem/f/c:SI (reg/f:SI 16 argp) [10 inode+0 S4 A32])) "fs/truncate.c":58:20 75 {*movsi_internal}
+     (nil))
+(insn 75 74 76 9 (set (reg:HI 100 [ _18 ])
+        (mem:HI (plus:SI (reg/f:SI 121)
+                (const_int 44 [0x2c])) [2 inode_32(D)->i_dev+0 S2 A32])) "fs/truncate.c":58:20 76 {*movhi_internal}
+     (expr_list:REG_DEAD (reg/f:SI 121)
+        (nil)))
+(insn 76 75 77 9 (set (reg:SI 101 [ _19 ])
+        (zero_extend:SI (reg:HI 100 [ _18 ]))) "fs/truncate.c":58:5 144 {*zero_extendhisi2}
+     (expr_list:REG_DEAD (reg:HI 100 [ _18 ])
+        (nil)))
+(insn 77 76 78 9 (parallel [
+            (set (reg/f:SI 7 sp)
+                (plus:SI (reg/f:SI 7 sp)
+                    (const_int -8 [0xfffffffffffffff8])))
+            (clobber (reg:CC 17 flags))
+        ]) "fs/truncate.c":58:5 209 {*addsi_1}
+     (expr_list:REG_UNUSED (reg:CC 17 flags)
+        (expr_list:REG_ARGS_SIZE (const_int 8 [0x8])
+            (nil))))
+(insn 78 77 79 9 (set (mem:SI (pre_dec:SI (reg/f:SI 7 sp)) [6  S4 A32])
+        (reg:SI 99 [ _17 ])) "fs/truncate.c":58:5 54 {*pushsi2}
+     (expr_list:REG_DEAD (reg:SI 99 [ _17 ])
+        (expr_list:REG_ARGS_SIZE (const_int 12 [0xc])
+            (nil))))
+(insn 79 78 80 9 (set (mem:SI (pre_dec:SI (reg/f:SI 7 sp)) [6  S4 A32])
+        (reg:SI 101 [ _19 ])) "fs/truncate.c":58:5 54 {*pushsi2}
+     (expr_list:REG_DEAD (reg:SI 101 [ _19 ])
+        (expr_list:REG_ARGS_SIZE (const_int 16 [0x10])
+            (nil))))
+(call_insn 80 79 81 9 (call (mem:QI (symbol_ref:SI ("free_dind") [flags 0x3]  <function_decl 0x742679f3ab00 free_dind>) [0 free_dind S1 A8])
+        (const_int 16 [0x10])) "fs/truncate.c":58:5 812 {*call}
+     (nil)
+    (nil))
+(insn 81 80 82 9 (parallel [
+            (set (reg/f:SI 7 sp)
+                (plus:SI (reg/f:SI 7 sp)
+                    (const_int 16 [0x10])))
+            (clobber (reg:CC 17 flags))
+        ]) "fs/truncate.c":58:5 209 {*addsi_1}
+     (expr_list:REG_UNUSED (reg:CC 17 flags)
+        (expr_list:REG_ARGS_SIZE (const_int 0 [0])
+            (nil))))
+(insn 82 81 83 9 (set (reg/f:SI 122)
+        (mem/f/c:SI (reg/f:SI 16 argp) [10 inode+0 S4 A32])) "fs/truncate.c":59:41 75 {*movsi_internal}
+     (nil))
+(insn 83 82 84 9 (set (mem:HI (plus:SI (reg/f:SI 122)
+                (const_int 30 [0x1e])) [2 inode_32(D)->i_zone[8]+0 S2 A16])
+        (const_int 0 [0])) "fs/truncate.c":59:41 76 {*movhi_internal}
+     (expr_list:REG_DEAD (reg/f:SI 122)
+        (nil)))
+(insn 84 83 85 9 (set (reg/f:SI 123)
+        (mem/f/c:SI (reg/f:SI 16 argp) [10 inode+0 S4 A32])) "fs/truncate.c":59:37 75 {*movsi_internal}
+     (nil))
+(insn 85 84 86 9 (set (reg:HI 102 [ _20 ])
+        (mem:HI (plus:SI (reg/f:SI 123)
+                (const_int 30 [0x1e])) [2 inode_32(D)->i_zone[8]+0 S2 A16])) "fs/truncate.c":59:37 76 {*movhi_internal}
+     (expr_list:REG_DEAD (reg/f:SI 123)
+        (nil)))
+(insn 86 85 87 9 (set (reg/f:SI 124)
+        (mem/f/c:SI (reg/f:SI 16 argp) [10 inode+0 S4 A32])) "fs/truncate.c":59:22 75 {*movsi_internal}
+     (nil))
+(insn 87 86 88 9 (set (mem:HI (plus:SI (reg/f:SI 124)
+                (const_int 28 [0x1c])) [2 inode_32(D)->i_zone[7]+0 S2 A32])
+        (reg:HI 102 [ _20 ])) "fs/truncate.c":59:22 76 {*movhi_internal}
+     (expr_list:REG_DEAD (reg/f:SI 124)
+        (expr_list:REG_DEAD (reg:HI 102 [ _20 ])
+            (nil))))
+(insn 88 87 89 9 (set (reg/f:SI 125)
+        (mem/f/c:SI (reg/f:SI 16 argp) [10 inode+0 S4 A32])) "fs/truncate.c":60:19 75 {*movsi_internal}
+     (nil))
+(insn 89 88 90 9 (set (mem:SI (plus:SI (reg/f:SI 125)
+                (const_int 4 [0x4])) [3 inode_32(D)->i_size+0 S4 A32])
+        (const_int 0 [0])) "fs/truncate.c":60:19 75 {*movsi_internal}
+     (expr_list:REG_DEAD (reg/f:SI 125)
+        (nil)))
+(insn 90 89 91 9 (set (reg/f:SI 126)
+        (mem/f/c:SI (reg/f:SI 16 argp) [10 inode+0 S4 A32])) "fs/truncate.c":61:19 75 {*movsi_internal}
+     (nil))
+(insn 91 90 92 9 (set (mem:QI (plus:SI (reg/f:SI 126)
+                (const_int 51 [0x33])) [0 inode_32(D)->i_dirt+0 S1 A8])
+        (const_int 1 [0x1])) "fs/truncate.c":61:19 77 {*movqi_internal}
+     (expr_list:REG_DEAD (reg/f:SI 126)
+        (nil)))
+(insn 92 91 93 9 (set (reg/f:SI 127)
+        (mem/u/c:SI (plus:SI (reg:SI 82)
+                (const:SI (unspec:SI [
+                            (symbol_ref:SI ("jiffies") [flags 0x40]  <var_decl 0x742679f34360 jiffies>)
+                        ] UNSPEC_GOT))) [11  S4 A8])) "fs/truncate.c":62:39 75 {*movsi_internal}
+     (nil))
+(insn 93 92 94 9 (set (reg:SI 103 [ jiffies.0_21 ])
+        (mem/v/c:SI (reg/f:SI 127) [3 jiffies+0 S4 A32])) "fs/truncate.c":62:39 75 {*movsi_internal}
+     (expr_list:REG_DEAD (reg/f:SI 127)
+        (nil)))
+(insn 94 93 95 9 (set (reg:SI 129)
+        (const_int 1374389535 [0x51eb851f])) "fs/truncate.c":62:39 75 {*movsi_internal}
+     (nil))
+(insn 95 94 96 9 (parallel [
+            (set (reg:SI 128)
+                (truncate:SI (lshiftrt:DI (mult:DI (sign_extend:DI (reg:SI 103 [ jiffies.0_21 ]))
+                            (sign_extend:DI (reg:SI 129)))
+                        (const_int 32 [0x20]))))
+            (clobber (reg:SI 136))
+            (clobber (reg:CC 17 flags))
+        ]) "fs/truncate.c":62:39 435 {*smulsi3_highpart_1}
+     (expr_list:REG_DEAD (reg:SI 129)
+        (expr_list:REG_UNUSED (reg:SI 136)
+            (expr_list:REG_UNUSED (reg:CC 17 flags)
+                (nil)))))
+(insn 96 95 97 9 (parallel [
+            (set (reg:SI 130)
+                (ashiftrt:SI (reg:SI 128)
+                    (const_int 5 [0x5])))
+            (clobber (reg:CC 17 flags))
+        ]) "fs/truncate.c":62:39 702 {*ashrsi3_1}
+     (expr_list:REG_DEAD (reg:SI 128)
+        (expr_list:REG_UNUSED (reg:CC 17 flags)
+            (nil))))
+(insn 97 96 98 9 (parallel [
+            (set (reg:SI 131)
+                (ashiftrt:SI (reg:SI 103 [ jiffies.0_21 ])
+                    (const_int 31 [0x1f])))
+            (clobber (reg:CC 17 flags))
+        ]) "fs/truncate.c":62:39 694 {ashrsi3_cvt}
+     (expr_list:REG_DEAD (reg:SI 103 [ jiffies.0_21 ])
+        (expr_list:REG_UNUSED (reg:CC 17 flags)
+            (nil))))
+(insn 98 97 99 9 (parallel [
+            (set (reg:SI 104 [ _22 ])
+                (minus:SI (reg:SI 130)
+                    (reg:SI 131)))
+            (clobber (reg:CC 17 flags))
+        ]) "fs/truncate.c":62:39 282 {*subsi_1}
+     (expr_list:REG_DEAD (reg:SI 131)
+        (expr_list:REG_DEAD (reg:SI 130)
+            (expr_list:REG_UNUSED (reg:CC 17 flags)
+                (nil)))))
+(insn 99 98 100 9 (set (reg/f:SI 132)
+        (mem/u/c:SI (plus:SI (reg:SI 82)
+                (const:SI (unspec:SI [
+                            (symbol_ref:SI ("startup_time") [flags 0x40]  <var_decl 0x742679f343f0 startup_time>)
+                        ] UNSPEC_GOT))) [11  S4 A8])) "fs/truncate.c":62:39 75 {*movsi_internal}
+     (expr_list:REG_DEAD (reg:SI 82)
+        (nil)))
+(insn 100 99 101 9 (set (reg:SI 105 [ startup_time.1_23 ])
+        (mem/c:SI (reg/f:SI 132) [3 startup_time+0 S4 A32])) "fs/truncate.c":62:39 75 {*movsi_internal}
+     (expr_list:REG_DEAD (reg/f:SI 132)
+        (nil)))
+(insn 101 100 102 9 (parallel [
+            (set (reg:SI 106 [ _24 ])
+                (plus:SI (reg:SI 104 [ _22 ])
+                    (reg:SI 105 [ startup_time.1_23 ])))
+            (clobber (reg:CC 17 flags))
+        ]) "fs/truncate.c":62:39 209 {*addsi_1}
+     (expr_list:REG_DEAD (reg:SI 105 [ startup_time.1_23 ])
+        (expr_list:REG_DEAD (reg:SI 104 [ _22 ])
+            (expr_list:REG_UNUSED (reg:CC 17 flags)
+                (nil)))))
+(insn 102 101 103 9 (set (reg:SI 107 [ _25 ])
+        (reg:SI 106 [ _24 ])) "fs/truncate.c":62:39 75 {*movsi_internal}
+     (expr_list:REG_DEAD (reg:SI 106 [ _24 ])
+        (nil)))
+(insn 103 102 104 9 (set (reg/f:SI 133)
+        (mem/f/c:SI (reg/f:SI 16 argp) [10 inode+0 S4 A32])) "fs/truncate.c":62:37 75 {*movsi_internal}
+     (nil))
+(insn 104 103 105 9 (set (mem:SI (plus:SI (reg/f:SI 133)
+                (const_int 40 [0x28])) [3 inode_32(D)->i_ctime+0 S4 A32])
+        (reg:SI 107 [ _25 ])) "fs/truncate.c":62:37 75 {*movsi_internal}
+     (expr_list:REG_DEAD (reg/f:SI 133)
+        (expr_list:REG_DEAD (reg:SI 107 [ _25 ])
+            (nil))))
+(insn 105 104 106 9 (set (reg/f:SI 134)
+        (mem/f/c:SI (reg/f:SI 16 argp) [10 inode+0 S4 A32])) "fs/truncate.c":62:27 75 {*movsi_internal}
+     (nil))
+(insn 106 105 107 9 (set (reg:SI 108 [ _26 ])
+        (mem:SI (plus:SI (reg/f:SI 134)
+                (const_int 40 [0x28])) [3 inode_32(D)->i_ctime+0 S4 A32])) "fs/truncate.c":62:27 75 {*movsi_internal}
+     (expr_list:REG_DEAD (reg/f:SI 134)
+        (nil)))
+(insn 107 106 108 9 (set (reg/f:SI 135)
+        (mem/f/c:SI (reg/f:SI 16 argp) [10 inode+0 S4 A32])) "fs/truncate.c":62:20 75 {*movsi_internal}
+     (nil))
+(insn 108 107 115 9 (set (mem:SI (plus:SI (reg/f:SI 135)
+                (const_int 8 [0x8])) [3 inode_32(D)->i_mtime+0 S4 A32])
+        (reg:SI 108 [ _26 ])) "fs/truncate.c":62:20 75 {*movsi_internal}
+     (expr_list:REG_DEAD (reg/f:SI 135)
+        (expr_list:REG_DEAD (reg:SI 108 [ _26 ])
+            (nil))))
+(jump_insn 115 108 116 9 (set (pc)
+        (label_ref 111)) 807 {jump}
+     (nil)
+ -> 111)
+(barrier 116 115 118)
+(code_label 118 116 117 11 23 (nil) [1 uses])
+(note 117 118 119 11 [bb 11] NOTE_INSN_BASIC_BLOCK)
+(insn 119 117 111 11 (const_int 0 [0]) "fs/truncate.c":51:9 843 {nop}
+     (nil))
+(code_label 111 119 112 10 17 (nil) [1 uses])
+(note 112 111 0 10 [bb 10] NOTE_INSN_BASIC_BLOCK)

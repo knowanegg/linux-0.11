@@ -1,0 +1,2233 @@
+
+;; Function get_fs_byte (get_fs_byte, funcdef_no=1, decl_uid=1332, cgraph_uid=2, symbol_order=1)
+
+
+;; Generating RTL for gimple basic block 2
+
+;; Generating RTL for gimple basic block 3
+
+
+try_optimize_cfg iteration 1
+
+Merging block 3 into block 2...
+Merged blocks 2 and 3.
+Merged 2 and 3 without moving.
+Merging block 4 into block 2...
+Merged blocks 2 and 4.
+Merged 2 and 4 without moving.
+Removing jump 12.
+Merging block 5 into block 2...
+Merged blocks 2 and 5.
+Merged 2 and 5 without moving.
+
+
+try_optimize_cfg iteration 2
+
+
+
+;;
+;; Full RTL generated for this function:
+;;
+(note 1 0 3 NOTE_INSN_DELETED)
+(note 3 1 2 2 [bb 2] NOTE_INSN_BASIC_BLOCK)
+(note 2 3 6 2 NOTE_INSN_FUNCTION_BEG)
+(insn 6 2 7 2 (set (reg/f:SI 87)
+        (mem/f/c:SI (reg/f:SI 76 virtual-incoming-args) [16 addr+0 S4 A32])) "include/asm/segment.h":8:5 -1
+     (nil))
+(insn 7 6 5 2 (parallel [
+            (set (reg:QI 86 [ _v ])
+                (asm_operands:QI ("movb %%fs:%1, %0") ("=r") 0 [
+                        (mem:QI (reg/f:SI 87) [0 *addr_2(D)+0 S1 A8])
+                    ]
+                     [
+                        (asm_input:QI ("m") include/asm/segment.h:8)
+                    ]
+                     [] include/asm/segment.h:8))
+            (clobber (reg:CC 17 flags))
+        ]) "include/asm/segment.h":8:5 -1
+     (nil))
+(insn 5 7 8 2 (set (reg/v:QI 83 [ _v ])
+        (reg:QI 86 [ _v ])) "include/asm/segment.h":8:5 -1
+     (nil))
+(insn 8 5 11 2 (set (reg:QI 84 [ _4 ])
+        (reg/v:QI 83 [ _v ])) "include/asm/segment.h":9:12 -1
+     (nil))
+(insn 11 8 15 2 (set (reg:QI 85 [ <retval> ])
+        (reg:QI 84 [ _4 ])) "include/asm/segment.h":9:12 -1
+     (nil))
+(insn 15 11 16 2 (set (reg/i:QI 0 ax)
+        (reg:QI 85 [ <retval> ])) "include/asm/segment.h":10:1 -1
+     (nil))
+(insn 16 15 0 2 (use (reg/i:QI 0 ax)) "include/asm/segment.h":10:1 -1
+     (nil))
+
+;; Function put_fs_byte (put_fs_byte, funcdef_no=2, decl_uid=1337, cgraph_uid=3, symbol_order=2)
+
+
+;; Generating RTL for gimple basic block 2
+
+
+try_optimize_cfg iteration 1
+
+Merging block 3 into block 2...
+Merged blocks 2 and 3.
+Merged 2 and 3 without moving.
+Merging block 4 into block 2...
+Merged blocks 2 and 4.
+Merged 2 and 4 without moving.
+
+
+try_optimize_cfg iteration 2
+
+
+
+;;
+;; Full RTL generated for this function:
+;;
+(note 1 0 6 NOTE_INSN_DELETED)
+(note 6 1 2 2 [bb 2] NOTE_INSN_BASIC_BLOCK)
+(insn 2 6 3 2 (set (reg:SI 83)
+        (mem/c:SI (reg/f:SI 76 virtual-incoming-args) [0 val+0 S4 A32])) "include/asm/segment.h":13:1 -1
+     (nil))
+(insn 3 2 4 2 (set (reg:QI 84)
+        (subreg:QI (reg:SI 83) 0)) "include/asm/segment.h":13:1 -1
+     (nil))
+(insn 4 3 5 2 (set (mem/c:QI (plus:SI (reg/f:SI 77 virtual-stack-vars)
+                (const_int -4 [0xfffffffffffffffc])) [0 val+0 S1 A32])
+        (reg:QI 84)) "include/asm/segment.h":13:1 -1
+     (nil))
+(note 5 4 8 2 NOTE_INSN_FUNCTION_BEG)
+(insn 8 5 9 2 (set (reg:QI 85)
+        (mem/c:QI (plus:SI (reg/f:SI 77 virtual-stack-vars)
+                (const_int -4 [0xfffffffffffffffc])) [0 val+0 S1 A32])) "include/asm/segment.h":14:5 -1
+     (nil))
+(insn 9 8 10 2 (set (reg/f:SI 86)
+        (mem/f/c:SI (plus:SI (reg/f:SI 76 virtual-incoming-args)
+                (const_int 4 [0x4])) [16 addr+0 S4 A32])) "include/asm/segment.h":14:5 -1
+     (nil))
+(insn 10 9 0 2 (parallel [
+            (asm_operands/v ("movb %0, %%fs:%1") ("") 0 [
+                    (reg:QI 85)
+                    (mem:QI (reg/f:SI 86) [0 *addr_3(D)+0 S1 A8])
+                ]
+                 [
+                    (asm_input:QI ("r") include/asm/segment.h:14)
+                    (asm_input:QI ("m") include/asm/segment.h:14)
+                ]
+                 [] include/asm/segment.h:14)
+            (clobber (reg:CC 17 flags))
+        ]) "include/asm/segment.h":14:5 -1
+     (nil))
+
+;; Function put_fs_long (put_fs_long, funcdef_no=3, decl_uid=1341, cgraph_uid=4, symbol_order=3)
+
+
+;; Generating RTL for gimple basic block 2
+
+
+try_optimize_cfg iteration 1
+
+Merging block 3 into block 2...
+Merged blocks 2 and 3.
+Merged 2 and 3 without moving.
+Merging block 4 into block 2...
+Merged blocks 2 and 4.
+Merged 2 and 4 without moving.
+
+
+try_optimize_cfg iteration 2
+
+
+
+;;
+;; Full RTL generated for this function:
+;;
+(note 1 0 3 NOTE_INSN_DELETED)
+(note 3 1 2 2 [bb 2] NOTE_INSN_BASIC_BLOCK)
+(note 2 3 5 2 NOTE_INSN_FUNCTION_BEG)
+(insn 5 2 6 2 (set (reg:SI 83)
+        (mem/c:SI (reg/f:SI 76 virtual-incoming-args) [3 val+0 S4 A32])) "include/asm/segment.h":19:5 -1
+     (nil))
+(insn 6 5 7 2 (set (reg/f:SI 84)
+        (mem/f/c:SI (plus:SI (reg/f:SI 76 virtual-incoming-args)
+                (const_int 4 [0x4])) [17 addr+0 S4 A32])) "include/asm/segment.h":19:5 -1
+     (nil))
+(insn 7 6 0 2 (parallel [
+            (asm_operands/v ("movl %0, %%fs:%1") ("") 0 [
+                    (reg:SI 83)
+                    (mem:SI (reg/f:SI 84) [3 *addr_3(D)+0 S4 A32])
+                ]
+                 [
+                    (asm_input:SI ("r") include/asm/segment.h:19)
+                    (asm_input:SI ("m") include/asm/segment.h:19)
+                ]
+                 [] include/asm/segment.h:19)
+            (clobber (reg:CC 17 flags))
+        ]) "include/asm/segment.h":19:5 -1
+     (nil))
+
+;; Function read_pipe (read_pipe, funcdef_no=8, decl_uid=1361, cgraph_uid=9, symbol_order=8)
+
+
+;; Generating RTL for gimple basic block 2
+
+;; Generating RTL for gimple basic block 3
+
+;; Generating RTL for gimple basic block 4
+
+;; Generating RTL for gimple basic block 5
+
+;; Generating RTL for gimple basic block 6
+
+;; Generating RTL for gimple basic block 7
+
+;; Generating RTL for gimple basic block 8
+
+;; Generating RTL for gimple basic block 9
+
+;; Generating RTL for gimple basic block 10
+
+;; Generating RTL for gimple basic block 11
+
+;; Generating RTL for gimple basic block 12
+
+;; Generating RTL for gimple basic block 13
+
+;; Generating RTL for gimple basic block 14
+
+;; Generating RTL for gimple basic block 15
+
+;; Generating RTL for gimple basic block 16
+
+;; Generating RTL for gimple basic block 17
+
+
+try_optimize_cfg iteration 1
+
+Merging block 3 into block 2...
+Merged blocks 2 and 3.
+Merged 2 and 3 without moving.
+Removing jump 142.
+Merging block 19 into block 18...
+Merged blocks 18 and 19.
+Merged 18 and 19 without moving.
+
+
+try_optimize_cfg iteration 2
+
+
+
+;;
+;; Full RTL generated for this function:
+;;
+(note 1 0 3 NOTE_INSN_DELETED)
+(note 3 1 2 2 [bb 2] NOTE_INSN_BASIC_BLOCK)
+(note 2 3 5 2 NOTE_INSN_FUNCTION_BEG)
+(insn 5 2 6 2 (set (mem/c:SI (plus:SI (reg/f:SI 77 virtual-stack-vars)
+                (const_int -12 [0xfffffffffffffff4])) [11 read+0 S4 A32])
+        (const_int 0 [0])) "fs/pipe.c":13:22 -1
+     (nil))
+(jump_insn 6 5 7 2 (set (pc)
+        (label_ref 123)) "fs/pipe.c":15:11 -1
+     (nil)
+ -> 123)
+(barrier 7 6 125)
+(code_label 125 7 8 4 15 (nil) [1 uses])
+(note 8 125 9 4 [bb 4] NOTE_INSN_BASIC_BLOCK)
+(jump_insn 9 8 10 4 (set (pc)
+        (label_ref 36)) "fs/pipe.c":16:15 -1
+     (nil)
+ -> 36)
+(barrier 10 9 46)
+(code_label 46 10 11 5 10 (nil) [1 uses])
+(note 11 46 12 5 [bb 5] NOTE_INSN_BASIC_BLOCK)
+(insn 12 11 13 5 (set (reg/f:SI 110)
+        (mem/f/c:SI (reg/f:SI 76 virtual-incoming-args) [6 inode+0 S4 A32])) "fs/pipe.c":17:13 -1
+     (nil))
+(insn 13 12 14 5 (parallel [
+            (set (reg/f:SI 83 [ _1 ])
+                (plus:SI (reg/f:SI 110)
+                    (const_int 32 [0x20])))
+            (clobber (reg:CC 17 flags))
+        ]) "fs/pipe.c":17:13 -1
+     (expr_list:REG_EQUAL (plus:SI (mem/f/c:SI (reg/f:SI 76 virtual-incoming-args) [6 inode+0 S4 A32])
+            (const_int 32 [0x20]))
+        (nil)))
+(insn 14 13 15 5 (parallel [
+            (set (reg/f:SI 7 sp)
+                (plus:SI (reg/f:SI 7 sp)
+                    (const_int -12 [0xfffffffffffffff4])))
+            (clobber (reg:CC 17 flags))
+        ]) "fs/pipe.c":17:13 -1
+     (expr_list:REG_ARGS_SIZE (const_int 12 [0xc])
+        (nil)))
+(insn 15 14 16 5 (set (mem/f:SI (pre_dec:SI (reg/f:SI 7 sp)) [18  S4 A32])
+        (reg/f:SI 83 [ _1 ])) "fs/pipe.c":17:13 -1
+     (expr_list:REG_ARGS_SIZE (const_int 16 [0x10])
+        (nil)))
+(insn 16 15 17 5 (set (reg:SI 3 bx)
+        (reg:SI 82)) "fs/pipe.c":17:13 -1
+     (nil))
+(call_insn 17 16 18 5 (call (mem:QI (symbol_ref:SI ("wake_up") [flags 0x41]  <function_decl 0x709e81338400 wake_up>) [0 wake_up S1 A8])
+        (const_int 16 [0x10])) "fs/pipe.c":17:13 -1
+     (nil)
+    (expr_list (use (reg:SI 3 bx))
+        (nil)))
+(insn 18 17 19 5 (parallel [
+            (set (reg/f:SI 7 sp)
+                (plus:SI (reg/f:SI 7 sp)
+                    (const_int 16 [0x10])))
+            (clobber (reg:CC 17 flags))
+        ]) "fs/pipe.c":17:13 -1
+     (expr_list:REG_ARGS_SIZE (const_int 0 [0])
+        (nil)))
+(insn 19 18 20 5 (set (reg/f:SI 111)
+        (mem/f/c:SI (reg/f:SI 76 virtual-incoming-args) [6 inode+0 S4 A32])) "fs/pipe.c":18:22 -1
+     (nil))
+(insn 20 19 21 5 (set (reg:HI 84 [ _2 ])
+        (mem:HI (plus:SI (reg/f:SI 111)
+                (const_int 48 [0x30])) [2 inode_43(D)->i_count+0 S2 A32])) "fs/pipe.c":18:22 -1
+     (nil))
+(insn 21 20 22 5 (set (reg:CCZ 17 flags)
+        (compare:CCZ (reg:HI 84 [ _2 ])
+            (const_int 2 [0x2]))) "fs/pipe.c":18:16 -1
+     (nil))
+(jump_insn 22 21 23 5 (set (pc)
+        (if_then_else (eq (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref 27)
+            (pc))) "fs/pipe.c":18:16 -1
+     (nil)
+ -> 27)
+(note 23 22 24 6 [bb 6] NOTE_INSN_BASIC_BLOCK)
+(insn 24 23 25 6 (set (reg:SI 108 [ _34 ])
+        (mem/c:SI (plus:SI (reg/f:SI 77 virtual-stack-vars)
+                (const_int -12 [0xfffffffffffffff4])) [11 read+0 S4 A32])) "fs/pipe.c":19:24 -1
+     (nil))
+(jump_insn 25 24 26 6 (set (pc)
+        (label_ref 139)) "fs/pipe.c":19:24 -1
+     (nil)
+ -> 139)
+(barrier 26 25 27)
+(code_label 27 26 28 7 8 (nil) [1 uses])
+(note 28 27 29 7 [bb 7] NOTE_INSN_BASIC_BLOCK)
+(insn 29 28 30 7 (set (reg/f:SI 112)
+        (mem/f/c:SI (reg/f:SI 76 virtual-incoming-args) [6 inode+0 S4 A32])) "fs/pipe.c":20:13 -1
+     (nil))
+(insn 30 29 31 7 (parallel [
+            (set (reg/f:SI 85 [ _3 ])
+                (plus:SI (reg/f:SI 112)
+                    (const_int 32 [0x20])))
+            (clobber (reg:CC 17 flags))
+        ]) "fs/pipe.c":20:13 -1
+     (expr_list:REG_EQUAL (plus:SI (mem/f/c:SI (reg/f:SI 76 virtual-incoming-args) [6 inode+0 S4 A32])
+            (const_int 32 [0x20]))
+        (nil)))
+(insn 31 30 32 7 (parallel [
+            (set (reg/f:SI 7 sp)
+                (plus:SI (reg/f:SI 7 sp)
+                    (const_int -12 [0xfffffffffffffff4])))
+            (clobber (reg:CC 17 flags))
+        ]) "fs/pipe.c":20:13 -1
+     (expr_list:REG_ARGS_SIZE (const_int 12 [0xc])
+        (nil)))
+(insn 32 31 33 7 (set (mem/f:SI (pre_dec:SI (reg/f:SI 7 sp)) [18  S4 A32])
+        (reg/f:SI 85 [ _3 ])) "fs/pipe.c":20:13 -1
+     (expr_list:REG_ARGS_SIZE (const_int 16 [0x10])
+        (nil)))
+(insn 33 32 34 7 (set (reg:SI 3 bx)
+        (reg:SI 82)) "fs/pipe.c":20:13 -1
+     (nil))
+(call_insn 34 33 35 7 (call (mem:QI (symbol_ref:SI ("sleep_on") [flags 0x41]  <function_decl 0x709e81338000 sleep_on>) [0 sleep_on S1 A8])
+        (const_int 16 [0x10])) "fs/pipe.c":20:13 -1
+     (nil)
+    (expr_list (use (reg:SI 3 bx))
+        (nil)))
+(insn 35 34 36 7 (parallel [
+            (set (reg/f:SI 7 sp)
+                (plus:SI (reg/f:SI 7 sp)
+                    (const_int 16 [0x10])))
+            (clobber (reg:CC 17 flags))
+        ]) "fs/pipe.c":20:13 -1
+     (expr_list:REG_ARGS_SIZE (const_int 0 [0])
+        (nil)))
+(code_label 36 35 37 8 7 (nil) [1 uses])
+(note 37 36 38 8 [bb 8] NOTE_INSN_BASIC_BLOCK)
+(insn 38 37 39 8 (set (reg/f:SI 113)
+        (mem/f/c:SI (reg/f:SI 76 virtual-incoming-args) [6 inode+0 S4 A32])) "fs/pipe.c":16:25 -1
+     (nil))
+(insn 39 38 40 8 (set (reg:HI 86 [ _4 ])
+        (mem:HI (plus:SI (reg/f:SI 113)
+                (const_int 14 [0xe])) [2 inode_43(D)->i_zone[0]+0 S2 A16])) "fs/pipe.c":16:25 -1
+     (nil))
+(insn 40 39 41 8 (set (reg/f:SI 114)
+        (mem/f/c:SI (reg/f:SI 76 virtual-incoming-args) [6 inode+0 S4 A32])) "fs/pipe.c":16:25 -1
+     (nil))
+(insn 41 40 42 8 (set (reg:HI 87 [ _5 ])
+        (mem:HI (plus:SI (reg/f:SI 114)
+                (const_int 16 [0x10])) [2 inode_43(D)->i_zone[1]+0 S2 A32])) "fs/pipe.c":16:25 -1
+     (nil))
+(insn 42 41 43 8 (parallel [
+            (set (reg:HI 88 [ _6 ])
+                (minus:HI (reg:HI 86 [ _4 ])
+                    (reg:HI 87 [ _5 ])))
+            (clobber (reg:CC 17 flags))
+        ]) "fs/pipe.c":16:25 -1
+     (nil))
+(insn 43 42 44 8 (set (reg:SI 89 [ _7 ])
+        (zero_extend:SI (reg:HI 88 [ _6 ]))) "fs/pipe.c":16:25 -1
+     (nil))
+(insn 44 43 45 8 (parallel [
+            (set (reg:SI 115)
+                (and:SI (reg:SI 89 [ _7 ])
+                    (const_int 4095 [0xfff])))
+            (clobber (reg:CC 17 flags))
+        ]) "fs/pipe.c":16:23 -1
+     (nil))
+(insn 45 44 47 8 (set (mem/c:SI (plus:SI (reg/f:SI 77 virtual-stack-vars)
+                (const_int -8 [0xfffffffffffffff8])) [11 size+0 S4 A32])
+        (reg:SI 115)) "fs/pipe.c":16:23 -1
+     (nil))
+(insn 47 45 48 8 (set (reg:CCZ 17 flags)
+        (compare:CCZ (mem/c:SI (plus:SI (reg/f:SI 77 virtual-stack-vars)
+                    (const_int -8 [0xfffffffffffffff8])) [11 size+0 S4 A32])
+            (const_int 0 [0]))) "fs/pipe.c":16:16 -1
+     (nil))
+(jump_insn 48 47 49 8 (set (pc)
+        (if_then_else (eq (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref 46)
+            (pc))) "fs/pipe.c":16:16 -1
+     (nil)
+ -> 46)
+(note 49 48 50 9 [bb 9] NOTE_INSN_BASIC_BLOCK)
+(insn 50 49 51 9 (set (reg/f:SI 116)
+        (mem/f/c:SI (reg/f:SI 76 virtual-incoming-args) [6 inode+0 S4 A32])) "fs/pipe.c":22:29 -1
+     (nil))
+(insn 51 50 52 9 (set (reg:HI 90 [ _8 ])
+        (mem:HI (plus:SI (reg/f:SI 116)
+                (const_int 16 [0x10])) [2 inode_43(D)->i_zone[1]+0 S2 A32])) "fs/pipe.c":22:29 -1
+     (nil))
+(insn 52 51 53 9 (set (reg:SI 91 [ _9 ])
+        (zero_extend:SI (reg:HI 90 [ _8 ]))) "fs/pipe.c":22:29 -1
+     (nil))
+(insn 53 52 54 9 (set (reg:SI 117)
+        (const_int 4096 [0x1000])) "fs/pipe.c":22:15 -1
+     (nil))
+(insn 54 53 55 9 (parallel [
+            (set (reg:SI 118)
+                (minus:SI (reg:SI 117)
+                    (reg:SI 91 [ _9 ])))
+            (clobber (reg:CC 17 flags))
+        ]) "fs/pipe.c":22:15 -1
+     (nil))
+(insn 55 54 56 9 (set (mem/c:SI (plus:SI (reg/f:SI 77 virtual-stack-vars)
+                (const_int -4 [0xfffffffffffffffc])) [11 chars+0 S4 A32])
+        (reg:SI 118)) "fs/pipe.c":22:15 -1
+     (nil))
+(insn 56 55 57 9 (set (reg:SI 119)
+        (mem/c:SI (plus:SI (reg/f:SI 77 virtual-stack-vars)
+                (const_int -4 [0xfffffffffffffffc])) [11 chars+0 S4 A32])) "fs/pipe.c":23:12 -1
+     (nil))
+(insn 57 56 58 9 (set (reg:CCGC 17 flags)
+        (compare:CCGC (reg:SI 119)
+            (mem/c:SI (plus:SI (reg/f:SI 76 virtual-incoming-args)
+                    (const_int 8 [0x8])) [11 count+0 S4 A32]))) "fs/pipe.c":23:12 -1
+     (nil))
+(jump_insn 58 57 59 9 (set (pc)
+        (if_then_else (le (reg:CCGC 17 flags)
+                (const_int 0 [0]))
+            (label_ref 62)
+            (pc))) "fs/pipe.c":23:12 -1
+     (nil)
+ -> 62)
+(note 59 58 60 10 [bb 10] NOTE_INSN_BASIC_BLOCK)
+(insn 60 59 61 10 (set (reg:SI 120)
+        (mem/c:SI (plus:SI (reg/f:SI 76 virtual-incoming-args)
+                (const_int 8 [0x8])) [11 count+0 S4 A32])) "fs/pipe.c":24:19 -1
+     (nil))
+(insn 61 60 62 10 (set (mem/c:SI (plus:SI (reg/f:SI 77 virtual-stack-vars)
+                (const_int -4 [0xfffffffffffffffc])) [11 chars+0 S4 A32])
+        (reg:SI 120)) "fs/pipe.c":24:19 -1
+     (nil))
+(code_label 62 61 63 11 11 (nil) [1 uses])
+(note 63 62 64 11 [bb 11] NOTE_INSN_BASIC_BLOCK)
+(insn 64 63 65 11 (set (reg:SI 121)
+        (mem/c:SI (plus:SI (reg/f:SI 77 virtual-stack-vars)
+                (const_int -4 [0xfffffffffffffffc])) [11 chars+0 S4 A32])) "fs/pipe.c":25:12 -1
+     (nil))
+(insn 65 64 66 11 (set (reg:CCGC 17 flags)
+        (compare:CCGC (reg:SI 121)
+            (mem/c:SI (plus:SI (reg/f:SI 77 virtual-stack-vars)
+                    (const_int -8 [0xfffffffffffffff8])) [11 size+0 S4 A32]))) "fs/pipe.c":25:12 -1
+     (nil))
+(jump_insn 66 65 67 11 (set (pc)
+        (if_then_else (le (reg:CCGC 17 flags)
+                (const_int 0 [0]))
+            (label_ref 70)
+            (pc))) "fs/pipe.c":25:12 -1
+     (nil)
+ -> 70)
+(note 67 66 68 12 [bb 12] NOTE_INSN_BASIC_BLOCK)
+(insn 68 67 69 12 (set (reg:SI 122)
+        (mem/c:SI (plus:SI (reg/f:SI 77 virtual-stack-vars)
+                (const_int -8 [0xfffffffffffffff8])) [11 size+0 S4 A32])) "fs/pipe.c":26:19 -1
+     (nil))
+(insn 69 68 70 12 (set (mem/c:SI (plus:SI (reg/f:SI 77 virtual-stack-vars)
+                (const_int -4 [0xfffffffffffffffc])) [11 chars+0 S4 A32])
+        (reg:SI 122)) "fs/pipe.c":26:19 -1
+     (nil))
+(code_label 70 69 71 13 12 (nil) [1 uses])
+(note 71 70 72 13 [bb 13] NOTE_INSN_BASIC_BLOCK)
+(insn 72 71 73 13 (set (reg:SI 123)
+        (mem/c:SI (plus:SI (reg/f:SI 77 virtual-stack-vars)
+                (const_int -4 [0xfffffffffffffffc])) [11 chars+0 S4 A32])) "fs/pipe.c":27:15 -1
+     (nil))
+(insn 73 72 74 13 (parallel [
+            (set (mem/c:SI (plus:SI (reg/f:SI 76 virtual-incoming-args)
+                        (const_int 8 [0x8])) [11 count+0 S4 A32])
+                (minus:SI (mem/c:SI (plus:SI (reg/f:SI 76 virtual-incoming-args)
+                            (const_int 8 [0x8])) [11 count+0 S4 A32])
+                    (reg:SI 123)))
+            (clobber (reg:CC 17 flags))
+        ]) "fs/pipe.c":27:15 -1
+     (nil))
+(insn 74 73 75 13 (set (reg:SI 124)
+        (mem/c:SI (plus:SI (reg/f:SI 77 virtual-stack-vars)
+                (const_int -4 [0xfffffffffffffffc])) [11 chars+0 S4 A32])) "fs/pipe.c":28:15 -1
+     (nil))
+(insn 75 74 76 13 (parallel [
+            (set (mem/c:SI (plus:SI (reg/f:SI 77 virtual-stack-vars)
+                        (const_int -12 [0xfffffffffffffff4])) [11 read+0 S4 A32])
+                (plus:SI (mem/c:SI (plus:SI (reg/f:SI 77 virtual-stack-vars)
+                            (const_int -12 [0xfffffffffffffff4])) [11 read+0 S4 A32])
+                    (reg:SI 124)))
+            (clobber (reg:CC 17 flags))
+        ]) "fs/pipe.c":28:15 -1
+     (nil))
+(insn 76 75 77 13 (set (reg/f:SI 125)
+        (mem/f/c:SI (reg/f:SI 76 virtual-incoming-args) [6 inode+0 S4 A32])) "fs/pipe.c":29:16 -1
+     (nil))
+(insn 77 76 78 13 (set (reg:HI 92 [ _10 ])
+        (mem:HI (plus:SI (reg/f:SI 125)
+                (const_int 16 [0x10])) [2 inode_43(D)->i_zone[1]+0 S2 A32])) "fs/pipe.c":29:16 -1
+     (nil))
+(insn 78 77 79 13 (set (reg:SI 126)
+        (zero_extend:SI (reg:HI 92 [ _10 ]))) "fs/pipe.c":29:14 -1
+     (nil))
+(insn 79 78 80 13 (set (mem/c:SI (plus:SI (reg/f:SI 77 virtual-stack-vars)
+                (const_int -8 [0xfffffffffffffff8])) [11 size+0 S4 A32])
+        (reg:SI 126)) "fs/pipe.c":29:14 -1
+     (nil))
+(insn 80 79 81 13 (set (reg/f:SI 127)
+        (mem/f/c:SI (reg/f:SI 76 virtual-incoming-args) [6 inode+0 S4 A32])) "fs/pipe.c":30:27 -1
+     (nil))
+(insn 81 80 82 13 (set (reg:HI 93 [ _11 ])
+        (mem:HI (plus:SI (reg/f:SI 127)
+                (const_int 16 [0x10])) [2 inode_43(D)->i_zone[1]+0 S2 A32])) "fs/pipe.c":30:27 -1
+     (nil))
+(insn 82 81 83 13 (set (reg:SI 128)
+        (mem/c:SI (plus:SI (reg/f:SI 77 virtual-stack-vars)
+                (const_int -4 [0xfffffffffffffffc])) [11 chars+0 S4 A32])) "fs/pipe.c":30:27 -1
+     (nil))
+(insn 83 82 84 13 (set (reg:HI 94 [ _12 ])
+        (subreg:HI (reg:SI 128) 0)) "fs/pipe.c":30:27 -1
+     (nil))
+(insn 84 83 85 13 (parallel [
+            (set (reg:HI 95 [ _13 ])
+                (plus:HI (reg:HI 93 [ _11 ])
+                    (reg:HI 94 [ _12 ])))
+            (clobber (reg:CC 17 flags))
+        ]) "fs/pipe.c":30:27 -1
+     (nil))
+(insn 85 84 86 13 (set (reg/f:SI 129)
+        (mem/f/c:SI (reg/f:SI 76 virtual-incoming-args) [6 inode+0 S4 A32])) "fs/pipe.c":30:27 -1
+     (nil))
+(insn 86 85 87 13 (set (mem:HI (plus:SI (reg/f:SI 129)
+                (const_int 16 [0x10])) [2 inode_43(D)->i_zone[1]+0 S2 A32])
+        (reg:HI 95 [ _13 ])) "fs/pipe.c":30:27 -1
+     (nil))
+(insn 87 86 88 13 (set (reg/f:SI 130)
+        (mem/f/c:SI (reg/f:SI 76 virtual-incoming-args) [6 inode+0 S4 A32])) "fs/pipe.c":31:27 -1
+     (nil))
+(insn 88 87 89 13 (set (reg:HI 96 [ _14 ])
+        (mem:HI (plus:SI (reg/f:SI 130)
+                (const_int 16 [0x10])) [2 inode_43(D)->i_zone[1]+0 S2 A32])) "fs/pipe.c":31:27 -1
+     (nil))
+(insn 89 88 90 13 (parallel [
+            (set (reg:HI 97 [ _15 ])
+                (and:HI (reg:HI 96 [ _14 ])
+                    (const_int 4095 [0xfff])))
+            (clobber (reg:CC 17 flags))
+        ]) "fs/pipe.c":31:27 -1
+     (nil))
+(insn 90 89 91 13 (set (reg/f:SI 131)
+        (mem/f/c:SI (reg/f:SI 76 virtual-incoming-args) [6 inode+0 S4 A32])) "fs/pipe.c":31:27 -1
+     (nil))
+(insn 91 90 92 13 (set (mem:HI (plus:SI (reg/f:SI 131)
+                (const_int 16 [0x10])) [2 inode_43(D)->i_zone[1]+0 S2 A32])
+        (reg:HI 97 [ _15 ])) "fs/pipe.c":31:27 -1
+     (nil))
+(jump_insn 92 91 93 13 (set (pc)
+        (label_ref 113)) "fs/pipe.c":32:15 -1
+     (nil)
+ -> 113)
+(barrier 93 92 118)
+(code_label 118 93 94 14 14 (nil) [1 uses])
+(note 94 118 95 14 [bb 14] NOTE_INSN_BASIC_BLOCK)
+(insn 95 94 96 14 (set (reg/f:SI 98 [ buf.0_16 ])
+        (mem/f/c:SI (plus:SI (reg/f:SI 76 virtual-incoming-args)
+                (const_int 4 [0x4])) [16 buf+0 S4 A32])) "fs/pipe.c":33:13 -1
+     (nil))
+(insn 96 95 97 14 (parallel [
+            (set (reg:SI 132)
+                (plus:SI (reg/f:SI 98 [ buf.0_16 ])
+                    (const_int 1 [0x1])))
+            (clobber (reg:CC 17 flags))
+        ]) "fs/pipe.c":33:13 -1
+     (nil))
+(insn 97 96 98 14 (set (mem/f/c:SI (plus:SI (reg/f:SI 76 virtual-incoming-args)
+                (const_int 4 [0x4])) [16 buf+0 S4 A32])
+        (reg:SI 132)) "fs/pipe.c":33:13 -1
+     (nil))
+(insn 98 97 99 14 (set (reg:SI 99 [ size.1_17 ])
+        (mem/c:SI (plus:SI (reg/f:SI 77 virtual-stack-vars)
+                (const_int -8 [0xfffffffffffffff8])) [11 size+0 S4 A32])) "fs/pipe.c":33:53 -1
+     (nil))
+(insn 99 98 100 14 (parallel [
+            (set (reg:SI 133)
+                (plus:SI (reg:SI 99 [ size.1_17 ])
+                    (const_int 1 [0x1])))
+            (clobber (reg:CC 17 flags))
+        ]) "fs/pipe.c":33:53 -1
+     (nil))
+(insn 100 99 101 14 (set (mem/c:SI (plus:SI (reg/f:SI 77 virtual-stack-vars)
+                (const_int -8 [0xfffffffffffffff8])) [11 size+0 S4 A32])
+        (reg:SI 133)) "fs/pipe.c":33:53 -1
+     (nil))
+(insn 101 100 102 14 (set (reg:SI 100 [ size.2_18 ])
+        (reg:SI 99 [ size.1_17 ])) "fs/pipe.c":33:48 -1
+     (nil))
+(insn 102 101 103 14 (set (reg/f:SI 134)
+        (mem/f/c:SI (reg/f:SI 76 virtual-incoming-args) [6 inode+0 S4 A32])) "fs/pipe.c":33:39 -1
+     (nil))
+(insn 103 102 104 14 (set (reg:SI 101 [ _19 ])
+        (mem:SI (plus:SI (reg/f:SI 134)
+                (const_int 4 [0x4])) [3 inode_43(D)->i_size+0 S4 A32])) "fs/pipe.c":33:39 -1
+     (nil))
+(insn 104 103 105 14 (parallel [
+            (set (reg:SI 102 [ _20 ])
+                (plus:SI (reg:SI 100 [ size.2_18 ])
+                    (reg:SI 101 [ _19 ])))
+            (clobber (reg:CC 17 flags))
+        ]) "fs/pipe.c":33:48 -1
+     (nil))
+(insn 105 104 106 14 (set (reg/f:SI 103 [ _21 ])
+        (reg:SI 102 [ _20 ])) "fs/pipe.c":33:48 -1
+     (nil))
+(insn 106 105 107 14 (set (reg:QI 104 [ _22 ])
+        (mem:QI (reg/f:SI 103 [ _21 ]) [0 *_21+0 S1 A8])) "fs/pipe.c":33:48 -1
+     (nil))
+(insn 107 106 108 14 (set (reg:SI 105 [ _23 ])
+        (sign_extend:SI (reg:QI 104 [ _22 ]))) "fs/pipe.c":33:13 -1
+     (nil))
+(insn 108 107 109 14 (parallel [
+            (set (reg/f:SI 7 sp)
+                (plus:SI (reg/f:SI 7 sp)
+                    (const_int -8 [0xfffffffffffffff8])))
+            (clobber (reg:CC 17 flags))
+        ]) "fs/pipe.c":33:13 -1
+     (expr_list:REG_ARGS_SIZE (const_int 8 [0x8])
+        (nil)))
+(insn 109 108 110 14 (set (mem/f:SI (pre_dec:SI (reg/f:SI 7 sp)) [16  S4 A32])
+        (reg/f:SI 98 [ buf.0_16 ])) "fs/pipe.c":33:13 -1
+     (expr_list:REG_ARGS_SIZE (const_int 12 [0xc])
+        (nil)))
+(insn 110 109 111 14 (set (mem:SI (pre_dec:SI (reg/f:SI 7 sp)) [11  S4 A32])
+        (reg:SI 105 [ _23 ])) "fs/pipe.c":33:13 -1
+     (expr_list:REG_ARGS_SIZE (const_int 16 [0x10])
+        (nil)))
+(call_insn 111 110 112 14 (call (mem:QI (symbol_ref:SI ("put_fs_byte") [flags 0x3]  <function_decl 0x709e81338f00 put_fs_byte>) [0 put_fs_byte S1 A8])
+        (const_int 16 [0x10])) "fs/pipe.c":33:13 -1
+     (nil)
+    (nil))
+(insn 112 111 113 14 (parallel [
+            (set (reg/f:SI 7 sp)
+                (plus:SI (reg/f:SI 7 sp)
+                    (const_int 16 [0x10])))
+            (clobber (reg:CC 17 flags))
+        ]) "fs/pipe.c":33:13 -1
+     (expr_list:REG_ARGS_SIZE (const_int 0 [0])
+        (nil)))
+(code_label 113 112 114 15 13 (nil) [1 uses])
+(note 114 113 115 15 [bb 15] NOTE_INSN_BASIC_BLOCK)
+(insn 115 114 116 15 (set (reg:SI 106 [ chars.3_24 ])
+        (mem/c:SI (plus:SI (reg/f:SI 77 virtual-stack-vars)
+                (const_int -4 [0xfffffffffffffffc])) [11 chars+0 S4 A32])) "fs/pipe.c":32:21 -1
+     (nil))
+(insn 116 115 117 15 (parallel [
+            (set (reg:SI 135)
+                (plus:SI (reg:SI 106 [ chars.3_24 ])
+                    (const_int -1 [0xffffffffffffffff])))
+            (clobber (reg:CC 17 flags))
+        ]) "fs/pipe.c":32:21 -1
+     (nil))
+(insn 117 116 121 15 (set (mem/c:SI (plus:SI (reg/f:SI 77 virtual-stack-vars)
+                (const_int -4 [0xfffffffffffffffc])) [11 chars+0 S4 A32])
+        (reg:SI 135)) "fs/pipe.c":32:21 -1
+     (nil))
+(insn 121 117 122 15 (set (reg:CCNO 17 flags)
+        (compare:CCNO (reg:SI 106 [ chars.3_24 ])
+            (const_int 0 [0]))) "fs/pipe.c":32:24 -1
+     (nil))
+(jump_insn 122 121 123 15 (set (pc)
+        (if_then_else (gt (reg:CCNO 17 flags)
+                (const_int 0 [0]))
+            (label_ref 118)
+            (pc))) "fs/pipe.c":32:24 -1
+     (nil)
+ -> 118)
+(code_label 123 122 124 16 6 (nil) [1 uses])
+(note 124 123 128 16 [bb 16] NOTE_INSN_BASIC_BLOCK)
+(insn 128 124 129 16 (set (reg:CCNO 17 flags)
+        (compare:CCNO (mem/c:SI (plus:SI (reg/f:SI 76 virtual-incoming-args)
+                    (const_int 8 [0x8])) [11 count+0 S4 A32])
+            (const_int 0 [0]))) "fs/pipe.c":15:18 -1
+     (nil))
+(jump_insn 129 128 130 16 (set (pc)
+        (if_then_else (gt (reg:CCNO 17 flags)
+                (const_int 0 [0]))
+            (label_ref 125)
+            (pc))) "fs/pipe.c":15:18 -1
+     (nil)
+ -> 125)
+(note 130 129 131 17 [bb 17] NOTE_INSN_BASIC_BLOCK)
+(insn 131 130 132 17 (set (reg/f:SI 136)
+        (mem/f/c:SI (reg/f:SI 76 virtual-incoming-args) [6 inode+0 S4 A32])) "fs/pipe.c":35:5 -1
+     (nil))
+(insn 132 131 133 17 (parallel [
+            (set (reg/f:SI 107 [ _25 ])
+                (plus:SI (reg/f:SI 136)
+                    (const_int 32 [0x20])))
+            (clobber (reg:CC 17 flags))
+        ]) "fs/pipe.c":35:5 -1
+     (expr_list:REG_EQUAL (plus:SI (mem/f/c:SI (reg/f:SI 76 virtual-incoming-args) [6 inode+0 S4 A32])
+            (const_int 32 [0x20]))
+        (nil)))
+(insn 133 132 134 17 (parallel [
+            (set (reg/f:SI 7 sp)
+                (plus:SI (reg/f:SI 7 sp)
+                    (const_int -12 [0xfffffffffffffff4])))
+            (clobber (reg:CC 17 flags))
+        ]) "fs/pipe.c":35:5 -1
+     (expr_list:REG_ARGS_SIZE (const_int 12 [0xc])
+        (nil)))
+(insn 134 133 135 17 (set (mem/f:SI (pre_dec:SI (reg/f:SI 7 sp)) [18  S4 A32])
+        (reg/f:SI 107 [ _25 ])) "fs/pipe.c":35:5 -1
+     (expr_list:REG_ARGS_SIZE (const_int 16 [0x10])
+        (nil)))
+(insn 135 134 136 17 (set (reg:SI 3 bx)
+        (reg:SI 82)) "fs/pipe.c":35:5 -1
+     (nil))
+(call_insn 136 135 137 17 (call (mem:QI (symbol_ref:SI ("wake_up") [flags 0x41]  <function_decl 0x709e81338400 wake_up>) [0 wake_up S1 A8])
+        (const_int 16 [0x10])) "fs/pipe.c":35:5 -1
+     (nil)
+    (expr_list (use (reg:SI 3 bx))
+        (nil)))
+(insn 137 136 138 17 (parallel [
+            (set (reg/f:SI 7 sp)
+                (plus:SI (reg/f:SI 7 sp)
+                    (const_int 16 [0x10])))
+            (clobber (reg:CC 17 flags))
+        ]) "fs/pipe.c":35:5 -1
+     (expr_list:REG_ARGS_SIZE (const_int 0 [0])
+        (nil)))
+(insn 138 137 139 17 (set (reg:SI 108 [ _34 ])
+        (mem/c:SI (plus:SI (reg/f:SI 77 virtual-stack-vars)
+                (const_int -12 [0xfffffffffffffff4])) [11 read+0 S4 A32])) "fs/pipe.c":36:12 -1
+     (nil))
+(code_label 139 138 140 18 9 (nil) [1 uses])
+(note 140 139 141 18 [bb 18] NOTE_INSN_BASIC_BLOCK)
+(insn 141 140 145 18 (set (reg:SI 109 [ <retval> ])
+        (reg:SI 108 [ _34 ])) "fs/pipe.c":37:1 -1
+     (nil))
+(insn 145 141 146 18 (set (reg/i:SI 0 ax)
+        (reg:SI 109 [ <retval> ])) "fs/pipe.c":37:1 -1
+     (nil))
+(insn 146 145 0 18 (use (reg/i:SI 0 ax)) "fs/pipe.c":37:1 -1
+     (nil))
+
+;; Function write_pipe (write_pipe, funcdef_no=9, decl_uid=1180, cgraph_uid=10, symbol_order=9)
+
+
+;; Generating RTL for gimple basic block 2
+
+;; Generating RTL for gimple basic block 3
+
+;; Generating RTL for gimple basic block 4
+
+;; Generating RTL for gimple basic block 5
+
+;; Generating RTL for gimple basic block 6
+
+;; Generating RTL for gimple basic block 7
+
+;; Generating RTL for gimple basic block 8
+
+;; Generating RTL for gimple basic block 9
+
+;; Generating RTL for gimple basic block 10
+
+;; Generating RTL for gimple basic block 11
+
+;; Generating RTL for gimple basic block 12
+
+;; Generating RTL for gimple basic block 13
+
+;; Generating RTL for gimple basic block 14
+
+;; Generating RTL for gimple basic block 15
+
+;; Generating RTL for gimple basic block 16
+
+;; Generating RTL for gimple basic block 17
+
+;; Generating RTL for gimple basic block 18
+
+;; Generating RTL for gimple basic block 19
+
+;; Generating RTL for gimple basic block 20
+
+
+try_optimize_cfg iteration 1
+
+Merging block 3 into block 2...
+Merged blocks 2 and 3.
+Merged 2 and 3 without moving.
+Redirecting jump 35 from 9 to 21.
+Merging block 9 into block 8...
+Merged blocks 8 and 9.
+Merged 8 and 9 without moving.
+Removing jump 160.
+Merging block 22 into block 21...
+Merged blocks 21 and 22.
+Merged 21 and 22 without moving.
+
+
+try_optimize_cfg iteration 2
+
+
+
+;;
+;; Full RTL generated for this function:
+;;
+(note 1 0 3 NOTE_INSN_DELETED)
+(note 3 1 2 2 [bb 2] NOTE_INSN_BASIC_BLOCK)
+(note 2 3 5 2 NOTE_INSN_FUNCTION_BEG)
+(insn 5 2 6 2 (set (mem/c:SI (plus:SI (reg/f:SI 77 virtual-stack-vars)
+                (const_int -12 [0xfffffffffffffff4])) [11 written+0 S4 A32])
+        (const_int 0 [0])) "fs/pipe.c":41:22 -1
+     (nil))
+(jump_insn 6 5 7 2 (set (pc)
+        (label_ref 141)) "fs/pipe.c":43:11 -1
+     (nil)
+ -> 141)
+(barrier 7 6 143)
+(code_label 143 7 8 4 28 (nil) [1 uses])
+(note 8 143 9 4 [bb 4] NOTE_INSN_BASIC_BLOCK)
+(jump_insn 9 8 10 4 (set (pc)
+        (label_ref 53)) "fs/pipe.c":44:15 -1
+     (nil)
+ -> 53)
+(barrier 10 9 64)
+(code_label 64 10 11 5 23 (nil) [1 uses])
+(note 11 64 12 5 [bb 5] NOTE_INSN_BASIC_BLOCK)
+(insn 12 11 13 5 (set (reg/f:SI 115)
+        (mem/f/c:SI (reg/f:SI 76 virtual-incoming-args) [6 inode+0 S4 A32])) "fs/pipe.c":45:13 -1
+     (nil))
+(insn 13 12 14 5 (parallel [
+            (set (reg/f:SI 83 [ _1 ])
+                (plus:SI (reg/f:SI 115)
+                    (const_int 32 [0x20])))
+            (clobber (reg:CC 17 flags))
+        ]) "fs/pipe.c":45:13 -1
+     (expr_list:REG_EQUAL (plus:SI (mem/f/c:SI (reg/f:SI 76 virtual-incoming-args) [6 inode+0 S4 A32])
+            (const_int 32 [0x20]))
+        (nil)))
+(insn 14 13 15 5 (parallel [
+            (set (reg/f:SI 7 sp)
+                (plus:SI (reg/f:SI 7 sp)
+                    (const_int -12 [0xfffffffffffffff4])))
+            (clobber (reg:CC 17 flags))
+        ]) "fs/pipe.c":45:13 -1
+     (expr_list:REG_ARGS_SIZE (const_int 12 [0xc])
+        (nil)))
+(insn 15 14 16 5 (set (mem/f:SI (pre_dec:SI (reg/f:SI 7 sp)) [18  S4 A32])
+        (reg/f:SI 83 [ _1 ])) "fs/pipe.c":45:13 -1
+     (expr_list:REG_ARGS_SIZE (const_int 16 [0x10])
+        (nil)))
+(insn 16 15 17 5 (set (reg:SI 3 bx)
+        (reg:SI 82)) "fs/pipe.c":45:13 -1
+     (nil))
+(call_insn 17 16 18 5 (call (mem:QI (symbol_ref:SI ("wake_up") [flags 0x41]  <function_decl 0x709e81338400 wake_up>) [0 wake_up S1 A8])
+        (const_int 16 [0x10])) "fs/pipe.c":45:13 -1
+     (nil)
+    (expr_list (use (reg:SI 3 bx))
+        (nil)))
+(insn 18 17 19 5 (parallel [
+            (set (reg/f:SI 7 sp)
+                (plus:SI (reg/f:SI 7 sp)
+                    (const_int 16 [0x10])))
+            (clobber (reg:CC 17 flags))
+        ]) "fs/pipe.c":45:13 -1
+     (expr_list:REG_ARGS_SIZE (const_int 0 [0])
+        (nil)))
+(insn 19 18 20 5 (set (reg/f:SI 116)
+        (mem/f/c:SI (reg/f:SI 76 virtual-incoming-args) [6 inode+0 S4 A32])) "fs/pipe.c":46:22 -1
+     (nil))
+(insn 20 19 21 5 (set (reg:HI 84 [ _2 ])
+        (mem:HI (plus:SI (reg/f:SI 116)
+                (const_int 48 [0x30])) [2 inode_49(D)->i_count+0 S2 A32])) "fs/pipe.c":46:22 -1
+     (nil))
+(insn 21 20 22 5 (set (reg:CCZ 17 flags)
+        (compare:CCZ (reg:HI 84 [ _2 ])
+            (const_int 2 [0x2]))) "fs/pipe.c":46:16 -1
+     (nil))
+(jump_insn 22 21 23 5 (set (pc)
+        (if_then_else (eq (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref 44)
+            (pc))) "fs/pipe.c":46:16 -1
+     (nil)
+ -> 44)
+(note 23 22 24 6 [bb 6] NOTE_INSN_BASIC_BLOCK)
+(insn 24 23 25 6 (set (reg/f:SI 117)
+        (mem/u/c:SI (plus:SI (reg:SI 82)
+                (const:SI (unspec:SI [
+                            (symbol_ref:SI ("current") [flags 0x40]  <var_decl 0x709e8132f120 current>)
+                        ] UNSPEC_GOT))) [19  S4 A8])) "fs/pipe.c":47:33 -1
+     (nil))
+(insn 25 24 26 6 (set (reg/f:SI 85 [ current.4_3 ])
+        (mem/f/c:SI (reg/f:SI 117) [4 current+0 S4 A32])) "fs/pipe.c":47:33 -1
+     (nil))
+(insn 26 25 27 6 (set (reg:SI 86 [ _4 ])
+        (mem:SI (plus:SI (reg/f:SI 85 [ current.4_3 ])
+                (const_int 12 [0xc])) [3 current.4_3->signal+0 S4 A32])) "fs/pipe.c":47:33 -1
+     (nil))
+(insn 27 26 28 6 (set (reg/f:SI 118)
+        (mem/u/c:SI (plus:SI (reg:SI 82)
+                (const:SI (unspec:SI [
+                            (symbol_ref:SI ("current") [flags 0x40]  <var_decl 0x709e8132f120 current>)
+                        ] UNSPEC_GOT))) [19  S4 A8])) "fs/pipe.c":47:33 -1
+     (nil))
+(insn 28 27 29 6 (set (reg/f:SI 87 [ current.5_5 ])
+        (mem/f/c:SI (reg/f:SI 118) [4 current+0 S4 A32])) "fs/pipe.c":47:33 -1
+     (nil))
+(insn 29 28 30 6 (parallel [
+            (set (reg:SI 88 [ _6 ])
+                (ior:SI (reg:SI 86 [ _4 ])
+                    (const_int 4096 [0x1000])))
+            (clobber (reg:CC 17 flags))
+        ]) "fs/pipe.c":47:33 -1
+     (nil))
+(insn 30 29 31 6 (set (mem:SI (plus:SI (reg/f:SI 87 [ current.5_5 ])
+                (const_int 12 [0xc])) [3 current.5_5->signal+0 S4 A32])
+        (reg:SI 88 [ _6 ])) "fs/pipe.c":47:33 -1
+     (nil))
+(insn 31 30 32 6 (set (reg:CCZ 17 flags)
+        (compare:CCZ (mem/c:SI (plus:SI (reg/f:SI 77 virtual-stack-vars)
+                    (const_int -12 [0xfffffffffffffff4])) [11 written+0 S4 A32])
+            (const_int 0 [0]))) "fs/pipe.c":48:42 -1
+     (nil))
+(jump_insn 32 31 33 6 (set (pc)
+        (if_then_else (eq (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref 37)
+            (pc))) "fs/pipe.c":48:42 -1
+     (nil)
+ -> 37)
+(note 33 32 34 7 [bb 7] NOTE_INSN_BASIC_BLOCK)
+(insn 34 33 35 7 (set (reg:SI 113 [ iftmp.6_40 ])
+        (mem/c:SI (plus:SI (reg/f:SI 77 virtual-stack-vars)
+                (const_int -12 [0xfffffffffffffff4])) [11 written+0 S4 A32])) "fs/pipe.c":48:42 -1
+     (nil))
+(jump_insn 35 34 36 7 (set (pc)
+        (label_ref:SI 157)) 807 {jump}
+     (nil)
+ -> 157)
+(barrier 36 35 37)
+(code_label 37 36 38 8 20 (nil) [1 uses])
+(note 38 37 39 8 [bb 8] NOTE_INSN_BASIC_BLOCK)
+(insn 39 38 42 8 (set (reg:SI 113 [ iftmp.6_40 ])
+        (const_int -1 [0xffffffffffffffff])) "fs/pipe.c":48:42 -1
+     (nil))
+(jump_insn 42 39 43 8 (set (pc)
+        (label_ref 157)) "fs/pipe.c":48:42 -1
+     (nil)
+ -> 157)
+(barrier 43 42 44)
+(code_label 44 43 45 10 19 (nil) [1 uses])
+(note 45 44 46 10 [bb 10] NOTE_INSN_BASIC_BLOCK)
+(insn 46 45 47 10 (set (reg/f:SI 119)
+        (mem/f/c:SI (reg/f:SI 76 virtual-incoming-args) [6 inode+0 S4 A32])) "fs/pipe.c":50:13 -1
+     (nil))
+(insn 47 46 48 10 (parallel [
+            (set (reg/f:SI 89 [ _7 ])
+                (plus:SI (reg/f:SI 119)
+                    (const_int 32 [0x20])))
+            (clobber (reg:CC 17 flags))
+        ]) "fs/pipe.c":50:13 -1
+     (expr_list:REG_EQUAL (plus:SI (mem/f/c:SI (reg/f:SI 76 virtual-incoming-args) [6 inode+0 S4 A32])
+            (const_int 32 [0x20]))
+        (nil)))
+(insn 48 47 49 10 (parallel [
+            (set (reg/f:SI 7 sp)
+                (plus:SI (reg/f:SI 7 sp)
+                    (const_int -12 [0xfffffffffffffff4])))
+            (clobber (reg:CC 17 flags))
+        ]) "fs/pipe.c":50:13 -1
+     (expr_list:REG_ARGS_SIZE (const_int 12 [0xc])
+        (nil)))
+(insn 49 48 50 10 (set (mem/f:SI (pre_dec:SI (reg/f:SI 7 sp)) [18  S4 A32])
+        (reg/f:SI 89 [ _7 ])) "fs/pipe.c":50:13 -1
+     (expr_list:REG_ARGS_SIZE (const_int 16 [0x10])
+        (nil)))
+(insn 50 49 51 10 (set (reg:SI 3 bx)
+        (reg:SI 82)) "fs/pipe.c":50:13 -1
+     (nil))
+(call_insn 51 50 52 10 (call (mem:QI (symbol_ref:SI ("sleep_on") [flags 0x41]  <function_decl 0x709e81338000 sleep_on>) [0 sleep_on S1 A8])
+        (const_int 16 [0x10])) "fs/pipe.c":50:13 -1
+     (nil)
+    (expr_list (use (reg:SI 3 bx))
+        (nil)))
+(insn 52 51 53 10 (parallel [
+            (set (reg/f:SI 7 sp)
+                (plus:SI (reg/f:SI 7 sp)
+                    (const_int 16 [0x10])))
+            (clobber (reg:CC 17 flags))
+        ]) "fs/pipe.c":50:13 -1
+     (expr_list:REG_ARGS_SIZE (const_int 0 [0])
+        (nil)))
+(code_label 53 52 54 11 18 (nil) [1 uses])
+(note 54 53 55 11 [bb 11] NOTE_INSN_BASIC_BLOCK)
+(insn 55 54 56 11 (set (reg/f:SI 120)
+        (mem/f/c:SI (reg/f:SI 76 virtual-incoming-args) [6 inode+0 S4 A32])) "fs/pipe.c":44:43 -1
+     (nil))
+(insn 56 55 57 11 (set (reg:HI 90 [ _8 ])
+        (mem:HI (plus:SI (reg/f:SI 120)
+                (const_int 14 [0xe])) [2 inode_49(D)->i_zone[0]+0 S2 A16])) "fs/pipe.c":44:43 -1
+     (nil))
+(insn 57 56 58 11 (set (reg/f:SI 121)
+        (mem/f/c:SI (reg/f:SI 76 virtual-incoming-args) [6 inode+0 S4 A32])) "fs/pipe.c":44:43 -1
+     (nil))
+(insn 58 57 59 11 (set (reg:HI 91 [ _9 ])
+        (mem:HI (plus:SI (reg/f:SI 121)
+                (const_int 16 [0x10])) [2 inode_49(D)->i_zone[1]+0 S2 A32])) "fs/pipe.c":44:43 -1
+     (nil))
+(insn 59 58 60 11 (parallel [
+            (set (reg:HI 92 [ _10 ])
+                (minus:HI (reg:HI 90 [ _8 ])
+                    (reg:HI 91 [ _9 ])))
+            (clobber (reg:CC 17 flags))
+        ]) "fs/pipe.c":44:43 -1
+     (nil))
+(insn 60 59 61 11 (set (reg:SI 93 [ _11 ])
+        (zero_extend:SI (reg:HI 92 [ _10 ]))) "fs/pipe.c":44:43 -1
+     (nil))
+(insn 61 60 62 11 (set (reg:SI 94 [ _12 ])
+        (not:SI (reg:SI 93 [ _11 ]))) "fs/pipe.c":44:41 -1
+     (nil))
+(insn 62 61 63 11 (parallel [
+            (set (reg:SI 122)
+                (and:SI (reg:SI 94 [ _12 ])
+                    (const_int 4095 [0xfff])))
+            (clobber (reg:CC 17 flags))
+        ]) "fs/pipe.c":44:23 -1
+     (nil))
+(insn 63 62 65 11 (set (mem/c:SI (plus:SI (reg/f:SI 77 virtual-stack-vars)
+                (const_int -8 [0xfffffffffffffff8])) [11 size+0 S4 A32])
+        (reg:SI 122)) "fs/pipe.c":44:23 -1
+     (nil))
+(insn 65 63 66 11 (set (reg:CCZ 17 flags)
+        (compare:CCZ (mem/c:SI (plus:SI (reg/f:SI 77 virtual-stack-vars)
+                    (const_int -8 [0xfffffffffffffff8])) [11 size+0 S4 A32])
+            (const_int 0 [0]))) "fs/pipe.c":44:16 -1
+     (nil))
+(jump_insn 66 65 67 11 (set (pc)
+        (if_then_else (eq (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref 64)
+            (pc))) "fs/pipe.c":44:16 -1
+     (nil)
+ -> 64)
+(note 67 66 68 12 [bb 12] NOTE_INSN_BASIC_BLOCK)
+(insn 68 67 69 12 (set (reg/f:SI 123)
+        (mem/f/c:SI (reg/f:SI 76 virtual-incoming-args) [6 inode+0 S4 A32])) "fs/pipe.c":52:29 -1
+     (nil))
+(insn 69 68 70 12 (set (reg:HI 95 [ _13 ])
+        (mem:HI (plus:SI (reg/f:SI 123)
+                (const_int 14 [0xe])) [2 inode_49(D)->i_zone[0]+0 S2 A16])) "fs/pipe.c":52:29 -1
+     (nil))
+(insn 70 69 71 12 (set (reg:SI 96 [ _14 ])
+        (zero_extend:SI (reg:HI 95 [ _13 ]))) "fs/pipe.c":52:29 -1
+     (nil))
+(insn 71 70 72 12 (set (reg:SI 124)
+        (const_int 4096 [0x1000])) "fs/pipe.c":52:15 -1
+     (nil))
+(insn 72 71 73 12 (parallel [
+            (set (reg:SI 125)
+                (minus:SI (reg:SI 124)
+                    (reg:SI 96 [ _14 ])))
+            (clobber (reg:CC 17 flags))
+        ]) "fs/pipe.c":52:15 -1
+     (nil))
+(insn 73 72 74 12 (set (mem/c:SI (plus:SI (reg/f:SI 77 virtual-stack-vars)
+                (const_int -4 [0xfffffffffffffffc])) [11 chars+0 S4 A32])
+        (reg:SI 125)) "fs/pipe.c":52:15 -1
+     (nil))
+(insn 74 73 75 12 (set (reg:SI 126)
+        (mem/c:SI (plus:SI (reg/f:SI 77 virtual-stack-vars)
+                (const_int -4 [0xfffffffffffffffc])) [11 chars+0 S4 A32])) "fs/pipe.c":53:12 -1
+     (nil))
+(insn 75 74 76 12 (set (reg:CCGC 17 flags)
+        (compare:CCGC (reg:SI 126)
+            (mem/c:SI (plus:SI (reg/f:SI 76 virtual-incoming-args)
+                    (const_int 8 [0x8])) [11 count+0 S4 A32]))) "fs/pipe.c":53:12 -1
+     (nil))
+(jump_insn 76 75 77 12 (set (pc)
+        (if_then_else (le (reg:CCGC 17 flags)
+                (const_int 0 [0]))
+            (label_ref 80)
+            (pc))) "fs/pipe.c":53:12 -1
+     (nil)
+ -> 80)
+(note 77 76 78 13 [bb 13] NOTE_INSN_BASIC_BLOCK)
+(insn 78 77 79 13 (set (reg:SI 127)
+        (mem/c:SI (plus:SI (reg/f:SI 76 virtual-incoming-args)
+                (const_int 8 [0x8])) [11 count+0 S4 A32])) "fs/pipe.c":54:19 -1
+     (nil))
+(insn 79 78 80 13 (set (mem/c:SI (plus:SI (reg/f:SI 77 virtual-stack-vars)
+                (const_int -4 [0xfffffffffffffffc])) [11 chars+0 S4 A32])
+        (reg:SI 127)) "fs/pipe.c":54:19 -1
+     (nil))
+(code_label 80 79 81 14 24 (nil) [1 uses])
+(note 81 80 82 14 [bb 14] NOTE_INSN_BASIC_BLOCK)
+(insn 82 81 83 14 (set (reg:SI 128)
+        (mem/c:SI (plus:SI (reg/f:SI 77 virtual-stack-vars)
+                (const_int -4 [0xfffffffffffffffc])) [11 chars+0 S4 A32])) "fs/pipe.c":55:12 -1
+     (nil))
+(insn 83 82 84 14 (set (reg:CCGC 17 flags)
+        (compare:CCGC (reg:SI 128)
+            (mem/c:SI (plus:SI (reg/f:SI 77 virtual-stack-vars)
+                    (const_int -8 [0xfffffffffffffff8])) [11 size+0 S4 A32]))) "fs/pipe.c":55:12 -1
+     (nil))
+(jump_insn 84 83 85 14 (set (pc)
+        (if_then_else (le (reg:CCGC 17 flags)
+                (const_int 0 [0]))
+            (label_ref 88)
+            (pc))) "fs/pipe.c":55:12 -1
+     (nil)
+ -> 88)
+(note 85 84 86 15 [bb 15] NOTE_INSN_BASIC_BLOCK)
+(insn 86 85 87 15 (set (reg:SI 129)
+        (mem/c:SI (plus:SI (reg/f:SI 77 virtual-stack-vars)
+                (const_int -8 [0xfffffffffffffff8])) [11 size+0 S4 A32])) "fs/pipe.c":56:19 -1
+     (nil))
+(insn 87 86 88 15 (set (mem/c:SI (plus:SI (reg/f:SI 77 virtual-stack-vars)
+                (const_int -4 [0xfffffffffffffffc])) [11 chars+0 S4 A32])
+        (reg:SI 129)) "fs/pipe.c":56:19 -1
+     (nil))
+(code_label 88 87 89 16 25 (nil) [1 uses])
+(note 89 88 90 16 [bb 16] NOTE_INSN_BASIC_BLOCK)
+(insn 90 89 91 16 (set (reg:SI 130)
+        (mem/c:SI (plus:SI (reg/f:SI 77 virtual-stack-vars)
+                (const_int -4 [0xfffffffffffffffc])) [11 chars+0 S4 A32])) "fs/pipe.c":57:15 -1
+     (nil))
+(insn 91 90 92 16 (parallel [
+            (set (mem/c:SI (plus:SI (reg/f:SI 76 virtual-incoming-args)
+                        (const_int 8 [0x8])) [11 count+0 S4 A32])
+                (minus:SI (mem/c:SI (plus:SI (reg/f:SI 76 virtual-incoming-args)
+                            (const_int 8 [0x8])) [11 count+0 S4 A32])
+                    (reg:SI 130)))
+            (clobber (reg:CC 17 flags))
+        ]) "fs/pipe.c":57:15 -1
+     (nil))
+(insn 92 91 93 16 (set (reg:SI 131)
+        (mem/c:SI (plus:SI (reg/f:SI 77 virtual-stack-vars)
+                (const_int -4 [0xfffffffffffffffc])) [11 chars+0 S4 A32])) "fs/pipe.c":58:17 -1
+     (nil))
+(insn 93 92 94 16 (parallel [
+            (set (mem/c:SI (plus:SI (reg/f:SI 77 virtual-stack-vars)
+                        (const_int -12 [0xfffffffffffffff4])) [11 written+0 S4 A32])
+                (plus:SI (mem/c:SI (plus:SI (reg/f:SI 77 virtual-stack-vars)
+                            (const_int -12 [0xfffffffffffffff4])) [11 written+0 S4 A32])
+                    (reg:SI 131)))
+            (clobber (reg:CC 17 flags))
+        ]) "fs/pipe.c":58:17 -1
+     (nil))
+(insn 94 93 95 16 (set (reg/f:SI 132)
+        (mem/f/c:SI (reg/f:SI 76 virtual-incoming-args) [6 inode+0 S4 A32])) "fs/pipe.c":59:16 -1
+     (nil))
+(insn 95 94 96 16 (set (reg:HI 97 [ _15 ])
+        (mem:HI (plus:SI (reg/f:SI 132)
+                (const_int 14 [0xe])) [2 inode_49(D)->i_zone[0]+0 S2 A16])) "fs/pipe.c":59:16 -1
+     (nil))
+(insn 96 95 97 16 (set (reg:SI 133)
+        (zero_extend:SI (reg:HI 97 [ _15 ]))) "fs/pipe.c":59:14 -1
+     (nil))
+(insn 97 96 98 16 (set (mem/c:SI (plus:SI (reg/f:SI 77 virtual-stack-vars)
+                (const_int -8 [0xfffffffffffffff8])) [11 size+0 S4 A32])
+        (reg:SI 133)) "fs/pipe.c":59:14 -1
+     (nil))
+(insn 98 97 99 16 (set (reg/f:SI 134)
+        (mem/f/c:SI (reg/f:SI 76 virtual-incoming-args) [6 inode+0 S4 A32])) "fs/pipe.c":60:27 -1
+     (nil))
+(insn 99 98 100 16 (set (reg:HI 98 [ _16 ])
+        (mem:HI (plus:SI (reg/f:SI 134)
+                (const_int 14 [0xe])) [2 inode_49(D)->i_zone[0]+0 S2 A16])) "fs/pipe.c":60:27 -1
+     (nil))
+(insn 100 99 101 16 (set (reg:SI 135)
+        (mem/c:SI (plus:SI (reg/f:SI 77 virtual-stack-vars)
+                (const_int -4 [0xfffffffffffffffc])) [11 chars+0 S4 A32])) "fs/pipe.c":60:27 -1
+     (nil))
+(insn 101 100 102 16 (set (reg:HI 99 [ _17 ])
+        (subreg:HI (reg:SI 135) 0)) "fs/pipe.c":60:27 -1
+     (nil))
+(insn 102 101 103 16 (parallel [
+            (set (reg:HI 100 [ _18 ])
+                (plus:HI (reg:HI 98 [ _16 ])
+                    (reg:HI 99 [ _17 ])))
+            (clobber (reg:CC 17 flags))
+        ]) "fs/pipe.c":60:27 -1
+     (nil))
+(insn 103 102 104 16 (set (reg/f:SI 136)
+        (mem/f/c:SI (reg/f:SI 76 virtual-incoming-args) [6 inode+0 S4 A32])) "fs/pipe.c":60:27 -1
+     (nil))
+(insn 104 103 105 16 (set (mem:HI (plus:SI (reg/f:SI 136)
+                (const_int 14 [0xe])) [2 inode_49(D)->i_zone[0]+0 S2 A16])
+        (reg:HI 100 [ _18 ])) "fs/pipe.c":60:27 -1
+     (nil))
+(insn 105 104 106 16 (set (reg/f:SI 137)
+        (mem/f/c:SI (reg/f:SI 76 virtual-incoming-args) [6 inode+0 S4 A32])) "fs/pipe.c":61:27 -1
+     (nil))
+(insn 106 105 107 16 (set (reg:HI 101 [ _19 ])
+        (mem:HI (plus:SI (reg/f:SI 137)
+                (const_int 14 [0xe])) [2 inode_49(D)->i_zone[0]+0 S2 A16])) "fs/pipe.c":61:27 -1
+     (nil))
+(insn 107 106 108 16 (parallel [
+            (set (reg:HI 102 [ _20 ])
+                (and:HI (reg:HI 101 [ _19 ])
+                    (const_int 4095 [0xfff])))
+            (clobber (reg:CC 17 flags))
+        ]) "fs/pipe.c":61:27 -1
+     (nil))
+(insn 108 107 109 16 (set (reg/f:SI 138)
+        (mem/f/c:SI (reg/f:SI 76 virtual-incoming-args) [6 inode+0 S4 A32])) "fs/pipe.c":61:27 -1
+     (nil))
+(insn 109 108 110 16 (set (mem:HI (plus:SI (reg/f:SI 138)
+                (const_int 14 [0xe])) [2 inode_49(D)->i_zone[0]+0 S2 A16])
+        (reg:HI 102 [ _20 ])) "fs/pipe.c":61:27 -1
+     (nil))
+(jump_insn 110 109 111 16 (set (pc)
+        (label_ref 131)) "fs/pipe.c":62:15 -1
+     (nil)
+ -> 131)
+(barrier 111 110 136)
+(code_label 136 111 112 17 27 (nil) [1 uses])
+(note 112 136 113 17 [bb 17] NOTE_INSN_BASIC_BLOCK)
+(insn 113 112 114 17 (set (reg/f:SI 103 [ buf.7_21 ])
+        (mem/f/c:SI (plus:SI (reg/f:SI 76 virtual-incoming-args)
+                (const_int 4 [0x4])) [16 buf+0 S4 A32])) "fs/pipe.c":63:47 -1
+     (nil))
+(insn 114 113 115 17 (parallel [
+            (set (reg:SI 139)
+                (plus:SI (reg/f:SI 103 [ buf.7_21 ])
+                    (const_int 1 [0x1])))
+            (clobber (reg:CC 17 flags))
+        ]) "fs/pipe.c":63:47 -1
+     (nil))
+(insn 115 114 116 17 (set (mem/f/c:SI (plus:SI (reg/f:SI 76 virtual-incoming-args)
+                (const_int 4 [0x4])) [16 buf+0 S4 A32])
+        (reg:SI 139)) "fs/pipe.c":63:47 -1
+     (nil))
+(insn 116 115 117 17 (parallel [
+            (set (reg/f:SI 7 sp)
+                (plus:SI (reg/f:SI 7 sp)
+                    (const_int -12 [0xfffffffffffffff4])))
+            (clobber (reg:CC 17 flags))
+        ]) "fs/pipe.c":63:47 -1
+     (expr_list:REG_ARGS_SIZE (const_int 12 [0xc])
+        (nil)))
+(insn 117 116 118 17 (set (mem/f:SI (pre_dec:SI (reg/f:SI 7 sp)) [16  S4 A32])
+        (reg/f:SI 103 [ buf.7_21 ])) "fs/pipe.c":63:47 -1
+     (expr_list:REG_ARGS_SIZE (const_int 16 [0x10])
+        (nil)))
+(call_insn 118 117 119 17 (set (reg:QI 0 ax)
+        (call (mem:QI (symbol_ref:SI ("get_fs_byte") [flags 0x3]  <function_decl 0x709e81338d00 get_fs_byte>) [0 get_fs_byte S1 A8])
+            (const_int 16 [0x10]))) "fs/pipe.c":63:47 -1
+     (nil)
+    (nil))
+(insn 119 118 120 17 (parallel [
+            (set (reg/f:SI 7 sp)
+                (plus:SI (reg/f:SI 7 sp)
+                    (const_int 16 [0x10])))
+            (clobber (reg:CC 17 flags))
+        ]) "fs/pipe.c":63:47 -1
+     (expr_list:REG_ARGS_SIZE (const_int 0 [0])
+        (nil)))
+(insn 120 119 121 17 (set (reg:QI 104 [ _22 ])
+        (reg:QI 0 ax)) "fs/pipe.c":63:47 -1
+     (nil))
+(insn 121 120 122 17 (set (reg:SI 105 [ size.8_23 ])
+        (mem/c:SI (plus:SI (reg/f:SI 77 virtual-stack-vars)
+                (const_int -8 [0xfffffffffffffff8])) [11 size+0 S4 A32])) "fs/pipe.c":63:41 -1
+     (nil))
+(insn 122 121 123 17 (parallel [
+            (set (reg:SI 140)
+                (plus:SI (reg:SI 105 [ size.8_23 ])
+                    (const_int 1 [0x1])))
+            (clobber (reg:CC 17 flags))
+        ]) "fs/pipe.c":63:41 -1
+     (nil))
+(insn 123 122 124 17 (set (mem/c:SI (plus:SI (reg/f:SI 77 virtual-stack-vars)
+                (const_int -8 [0xfffffffffffffff8])) [11 size+0 S4 A32])
+        (reg:SI 140)) "fs/pipe.c":63:41 -1
+     (nil))
+(insn 124 123 125 17 (set (reg:SI 106 [ size.9_24 ])
+        (reg:SI 105 [ size.8_23 ])) "fs/pipe.c":63:36 -1
+     (nil))
+(insn 125 124 126 17 (set (reg/f:SI 141)
+        (mem/f/c:SI (reg/f:SI 76 virtual-incoming-args) [6 inode+0 S4 A32])) "fs/pipe.c":63:27 -1
+     (nil))
+(insn 126 125 127 17 (set (reg:SI 107 [ _25 ])
+        (mem:SI (plus:SI (reg/f:SI 141)
+                (const_int 4 [0x4])) [3 inode_49(D)->i_size+0 S4 A32])) "fs/pipe.c":63:27 -1
+     (nil))
+(insn 127 126 128 17 (parallel [
+            (set (reg:SI 108 [ _26 ])
+                (plus:SI (reg:SI 106 [ size.9_24 ])
+                    (reg:SI 107 [ _25 ])))
+            (clobber (reg:CC 17 flags))
+        ]) "fs/pipe.c":63:36 -1
+     (nil))
+(insn 128 127 129 17 (set (reg/f:SI 109 [ _27 ])
+        (reg:SI 108 [ _26 ])) "fs/pipe.c":63:36 -1
+     (nil))
+(insn 129 128 130 17 (set (reg:QI 110 [ _28 ])
+        (reg:QI 104 [ _22 ])) "fs/pipe.c":63:47 -1
+     (nil))
+(insn 130 129 131 17 (set (mem:QI (reg/f:SI 109 [ _27 ]) [0 *_27+0 S1 A8])
+        (reg:QI 110 [ _28 ])) "fs/pipe.c":63:45 -1
+     (nil))
+(code_label 131 130 132 18 26 (nil) [1 uses])
+(note 132 131 133 18 [bb 18] NOTE_INSN_BASIC_BLOCK)
+(insn 133 132 134 18 (set (reg:SI 111 [ chars.10_29 ])
+        (mem/c:SI (plus:SI (reg/f:SI 77 virtual-stack-vars)
+                (const_int -4 [0xfffffffffffffffc])) [11 chars+0 S4 A32])) "fs/pipe.c":62:21 -1
+     (nil))
+(insn 134 133 135 18 (parallel [
+            (set (reg:SI 142)
+                (plus:SI (reg:SI 111 [ chars.10_29 ])
+                    (const_int -1 [0xffffffffffffffff])))
+            (clobber (reg:CC 17 flags))
+        ]) "fs/pipe.c":62:21 -1
+     (nil))
+(insn 135 134 139 18 (set (mem/c:SI (plus:SI (reg/f:SI 77 virtual-stack-vars)
+                (const_int -4 [0xfffffffffffffffc])) [11 chars+0 S4 A32])
+        (reg:SI 142)) "fs/pipe.c":62:21 -1
+     (nil))
+(insn 139 135 140 18 (set (reg:CCNO 17 flags)
+        (compare:CCNO (reg:SI 111 [ chars.10_29 ])
+            (const_int 0 [0]))) "fs/pipe.c":62:24 -1
+     (nil))
+(jump_insn 140 139 141 18 (set (pc)
+        (if_then_else (gt (reg:CCNO 17 flags)
+                (const_int 0 [0]))
+            (label_ref 136)
+            (pc))) "fs/pipe.c":62:24 -1
+     (nil)
+ -> 136)
+(code_label 141 140 142 19 17 (nil) [1 uses])
+(note 142 141 146 19 [bb 19] NOTE_INSN_BASIC_BLOCK)
+(insn 146 142 147 19 (set (reg:CCNO 17 flags)
+        (compare:CCNO (mem/c:SI (plus:SI (reg/f:SI 76 virtual-incoming-args)
+                    (const_int 8 [0x8])) [11 count+0 S4 A32])
+            (const_int 0 [0]))) "fs/pipe.c":43:18 -1
+     (nil))
+(jump_insn 147 146 148 19 (set (pc)
+        (if_then_else (gt (reg:CCNO 17 flags)
+                (const_int 0 [0]))
+            (label_ref 143)
+            (pc))) "fs/pipe.c":43:18 -1
+     (nil)
+ -> 143)
+(note 148 147 149 20 [bb 20] NOTE_INSN_BASIC_BLOCK)
+(insn 149 148 150 20 (set (reg/f:SI 143)
+        (mem/f/c:SI (reg/f:SI 76 virtual-incoming-args) [6 inode+0 S4 A32])) "fs/pipe.c":65:5 -1
+     (nil))
+(insn 150 149 151 20 (parallel [
+            (set (reg/f:SI 112 [ _30 ])
+                (plus:SI (reg/f:SI 143)
+                    (const_int 32 [0x20])))
+            (clobber (reg:CC 17 flags))
+        ]) "fs/pipe.c":65:5 -1
+     (expr_list:REG_EQUAL (plus:SI (mem/f/c:SI (reg/f:SI 76 virtual-incoming-args) [6 inode+0 S4 A32])
+            (const_int 32 [0x20]))
+        (nil)))
+(insn 151 150 152 20 (parallel [
+            (set (reg/f:SI 7 sp)
+                (plus:SI (reg/f:SI 7 sp)
+                    (const_int -12 [0xfffffffffffffff4])))
+            (clobber (reg:CC 17 flags))
+        ]) "fs/pipe.c":65:5 -1
+     (expr_list:REG_ARGS_SIZE (const_int 12 [0xc])
+        (nil)))
+(insn 152 151 153 20 (set (mem/f:SI (pre_dec:SI (reg/f:SI 7 sp)) [18  S4 A32])
+        (reg/f:SI 112 [ _30 ])) "fs/pipe.c":65:5 -1
+     (expr_list:REG_ARGS_SIZE (const_int 16 [0x10])
+        (nil)))
+(insn 153 152 154 20 (set (reg:SI 3 bx)
+        (reg:SI 82)) "fs/pipe.c":65:5 -1
+     (nil))
+(call_insn 154 153 155 20 (call (mem:QI (symbol_ref:SI ("wake_up") [flags 0x41]  <function_decl 0x709e81338400 wake_up>) [0 wake_up S1 A8])
+        (const_int 16 [0x10])) "fs/pipe.c":65:5 -1
+     (nil)
+    (expr_list (use (reg:SI 3 bx))
+        (nil)))
+(insn 155 154 156 20 (parallel [
+            (set (reg/f:SI 7 sp)
+                (plus:SI (reg/f:SI 7 sp)
+                    (const_int 16 [0x10])))
+            (clobber (reg:CC 17 flags))
+        ]) "fs/pipe.c":65:5 -1
+     (expr_list:REG_ARGS_SIZE (const_int 0 [0])
+        (nil)))
+(insn 156 155 157 20 (set (reg:SI 113 [ iftmp.6_40 ])
+        (mem/c:SI (plus:SI (reg/f:SI 77 virtual-stack-vars)
+                (const_int -12 [0xfffffffffffffff4])) [11 written+0 S4 A32])) "fs/pipe.c":66:12 -1
+     (nil))
+(code_label 157 156 158 21 22 (nil) [2 uses])
+(note 158 157 159 21 [bb 21] NOTE_INSN_BASIC_BLOCK)
+(insn 159 158 163 21 (set (reg:SI 114 [ <retval> ])
+        (reg:SI 113 [ iftmp.6_40 ])) "fs/pipe.c":67:1 -1
+     (nil))
+(insn 163 159 164 21 (set (reg/i:SI 0 ax)
+        (reg:SI 114 [ <retval> ])) "fs/pipe.c":67:1 -1
+     (nil))
+(insn 164 163 0 21 (use (reg/i:SI 0 ax)) "fs/pipe.c":67:1 -1
+     (nil))
+
+;; Function sys_pipe (sys_pipe, funcdef_no=10, decl_uid=1393, cgraph_uid=11, symbol_order=10)
+
+
+;; Generating RTL for gimple basic block 2
+
+;; Generating RTL for gimple basic block 3
+
+;; Generating RTL for gimple basic block 4
+
+;; Generating RTL for gimple basic block 5
+
+;; Generating RTL for gimple basic block 6
+
+;; Generating RTL for gimple basic block 7
+
+;; Generating RTL for gimple basic block 8
+
+;; Generating RTL for gimple basic block 9
+
+;; Generating RTL for gimple basic block 10
+
+;; Generating RTL for gimple basic block 11
+
+;; Generating RTL for gimple basic block 12
+
+;; Generating RTL for gimple basic block 13
+
+;; Generating RTL for gimple basic block 14
+
+;; Generating RTL for gimple basic block 15
+
+;; Generating RTL for gimple basic block 16
+
+;; Generating RTL for gimple basic block 17
+
+;; Generating RTL for gimple basic block 18
+
+;; Generating RTL for gimple basic block 19
+
+;; Generating RTL for gimple basic block 20
+
+;; Generating RTL for gimple basic block 21
+
+;; Generating RTL for gimple basic block 22
+
+;; Generating RTL for gimple basic block 23
+
+;; Generating RTL for gimple basic block 24
+
+;; Generating RTL for gimple basic block 25
+
+;; Generating RTL for gimple basic block 26
+
+
+try_optimize_cfg iteration 1
+
+Merging block 3 into block 2...
+Merged blocks 2 and 3.
+Merged 2 and 3 without moving.
+Redirecting jump 62 from 26 to 27.
+Redirecting jump 129 from 26 to 27.
+Redirecting jump 158 from 26 to 27.
+Merging block 26 into block 25...
+Merged blocks 25 and 26.
+Merged 25 and 26 without moving.
+Removing jump 199.
+Merging block 28 into block 27...
+Merged blocks 27 and 28.
+Merged 27 and 28 without moving.
+
+
+try_optimize_cfg iteration 2
+
+
+
+;;
+;; Full RTL generated for this function:
+;;
+(note 1 0 3 NOTE_INSN_DELETED)
+(note 3 1 2 2 [bb 2] NOTE_INSN_BASIC_BLOCK)
+(note 2 3 5 2 NOTE_INSN_FUNCTION_BEG)
+(insn 5 2 6 2 (set (mem/c:SI (plus:SI (reg/f:SI 77 virtual-stack-vars)
+                (const_int -8 [0xfffffffffffffff8])) [11 j+0 S4 A32])
+        (const_int 0 [0])) "fs/pipe.c":76:7 -1
+     (nil))
+(insn 6 5 7 2 (set (mem/c:SI (plus:SI (reg/f:SI 77 virtual-stack-vars)
+                (const_int -4 [0xfffffffffffffffc])) [11 i+0 S4 A32])
+        (const_int 0 [0])) "fs/pipe.c":77:12 -1
+     (nil))
+(jump_insn 7 6 8 2 (set (pc)
+        (label_ref 35)) "fs/pipe.c":77:5 -1
+     (nil)
+ -> 35)
+(barrier 8 7 42)
+(code_label 42 8 9 4 33 (nil) [1 uses])
+(note 9 42 10 4 [bb 4] NOTE_INSN_BASIC_BLOCK)
+(insn 10 9 11 4 (set (reg/f:SI 125)
+        (mem/u/c:SI (plus:SI (reg:SI 82)
+                (const:SI (unspec:SI [
+                            (symbol_ref:SI ("file_table") [flags 0x40]  <var_decl 0x709e82ca1d80 file_table>)
+                        ] UNSPEC_GOT))) [19  S4 A8])) "fs/pipe.c":78:27 -1
+     (nil))
+(insn 11 10 12 4 (set (reg:SI 126)
+        (mem/c:SI (plus:SI (reg/f:SI 77 virtual-stack-vars)
+                (const_int -4 [0xfffffffffffffffc])) [11 i+0 S4 A32])) "fs/pipe.c":78:27 -1
+     (nil))
+(insn 12 11 13 4 (parallel [
+            (set (reg:SI 127)
+                (ashift:SI (reg:SI 126)
+                    (const_int 4 [0x4])))
+            (clobber (reg:CC 17 flags))
+        ]) "fs/pipe.c":78:27 -1
+     (nil))
+(insn 13 12 14 4 (parallel [
+            (set (reg:SI 128)
+                (plus:SI (reg/f:SI 125)
+                    (reg:SI 127)))
+            (clobber (reg:CC 17 flags))
+        ]) "fs/pipe.c":78:27 -1
+     (nil))
+(insn 14 13 15 4 (parallel [
+            (set (reg/f:SI 129)
+                (plus:SI (reg:SI 128)
+                    (const_int 4 [0x4])))
+            (clobber (reg:CC 17 flags))
+        ]) "fs/pipe.c":78:27 -1
+     (nil))
+(insn 15 14 16 4 (set (reg:HI 83 [ _1 ])
+        (mem:HI (reg/f:SI 129) [2 file_table[i_42].f_count+0 S2 A32])) "fs/pipe.c":78:27 -1
+     (nil))
+(insn 16 15 17 4 (set (reg:CCZ 17 flags)
+        (compare:CCZ (reg:HI 83 [ _1 ])
+            (const_int 0 [0]))) "fs/pipe.c":78:12 -1
+     (nil))
+(jump_insn 17 16 18 4 (set (pc)
+        (if_then_else (ne (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref 32)
+            (pc))) "fs/pipe.c":78:12 -1
+     (nil)
+ -> 32)
+(note 18 17 19 5 [bb 5] NOTE_INSN_BASIC_BLOCK)
+(insn 19 18 20 5 (set (reg:SI 84 [ i.11_2 ])
+        (mem/c:SI (plus:SI (reg/f:SI 77 virtual-stack-vars)
+                (const_int -4 [0xfffffffffffffffc])) [11 i+0 S4 A32])) "fs/pipe.c":79:25 -1
+     (nil))
+(insn 20 19 21 5 (parallel [
+            (set (reg:SI 85 [ _3 ])
+                (ashift:SI (reg:SI 84 [ i.11_2 ])
+                    (const_int 4 [0x4])))
+            (clobber (reg:CC 17 flags))
+        ]) "fs/pipe.c":79:25 -1
+     (nil))
+(insn 21 20 22 5 (set (reg:SI 86 [ j.12_4 ])
+        (mem/c:SI (plus:SI (reg/f:SI 77 virtual-stack-vars)
+                (const_int -8 [0xfffffffffffffff8])) [11 j+0 S4 A32])) "fs/pipe.c":79:17 -1
+     (nil))
+(insn 22 21 23 5 (parallel [
+            (set (reg:SI 130)
+                (plus:SI (reg:SI 86 [ j.12_4 ])
+                    (const_int 1 [0x1])))
+            (clobber (reg:CC 17 flags))
+        ]) "fs/pipe.c":79:17 -1
+     (nil))
+(insn 23 22 24 5 (set (mem/c:SI (plus:SI (reg/f:SI 77 virtual-stack-vars)
+                (const_int -8 [0xfffffffffffffff8])) [11 j+0 S4 A32])
+        (reg:SI 130)) "fs/pipe.c":79:17 -1
+     (nil))
+(insn 24 23 25 5 (set (reg:SI 132)
+        (mem/u/c:SI (plus:SI (reg:SI 82)
+                (const:SI (unspec:SI [
+                            (symbol_ref:SI ("file_table") [flags 0x40]  <var_decl 0x709e82ca1d80 file_table>)
+                        ] UNSPEC_GOT))) [19  S4 A8])) "fs/pipe.c":79:25 -1
+     (nil))
+(insn 25 24 26 5 (set (reg:SI 131)
+        (reg:SI 132)) "fs/pipe.c":79:25 -1
+     (expr_list:REG_EQUAL (symbol_ref:SI ("file_table") [flags 0x40]  <var_decl 0x709e82ca1d80 file_table>)
+        (nil)))
+(insn 26 25 27 5 (parallel [
+            (set (reg/f:SI 87 [ _5 ])
+                (plus:SI (reg:SI 85 [ _3 ])
+                    (reg:SI 131)))
+            (clobber (reg:CC 17 flags))
+        ]) "fs/pipe.c":79:25 -1
+     (nil))
+(insn 27 26 28 5 (set (mem/f:SI (plus:SI (plus:SI (mult:SI (reg:SI 86 [ j.12_4 ])
+                        (const_int 4 [0x4]))
+                    (reg/f:SI 77 virtual-stack-vars))
+                (const_int -20 [0xffffffffffffffec])) [7 f[j.12_4]+0 S4 A32])
+        (reg/f:SI 87 [ _5 ])) "fs/pipe.c":79:21 -1
+     (nil))
+(insn 28 27 29 5 (set (reg/f:SI 88 [ _6 ])
+        (mem/f:SI (plus:SI (plus:SI (mult:SI (reg:SI 86 [ j.12_4 ])
+                        (const_int 4 [0x4]))
+                    (reg/f:SI 77 virtual-stack-vars))
+                (const_int -20 [0xffffffffffffffec])) [7 f[j.12_4]+0 S4 A32])) "fs/pipe.c":79:15 -1
+     (nil))
+(insn 29 28 30 5 (set (reg:HI 89 [ _7 ])
+        (mem:HI (plus:SI (reg/f:SI 88 [ _6 ])
+                (const_int 4 [0x4])) [2 _6->f_count+0 S2 A32])) "fs/pipe.c":79:38 -1
+     (nil))
+(insn 30 29 31 5 (parallel [
+            (set (reg:HI 90 [ _9 ])
+                (plus:HI (reg:HI 89 [ _7 ])
+                    (const_int 1 [0x1])))
+            (clobber (reg:CC 17 flags))
+        ]) "fs/pipe.c":79:47 -1
+     (nil))
+(insn 31 30 32 5 (set (mem:HI (plus:SI (reg/f:SI 88 [ _6 ])
+                (const_int 4 [0x4])) [2 _6->f_count+0 S2 A32])
+        (reg:HI 90 [ _9 ])) "fs/pipe.c":79:47 -1
+     (nil))
+(code_label 32 31 33 6 31 (nil) [1 uses])
+(note 33 32 34 6 [bb 6] NOTE_INSN_BASIC_BLOCK)
+(insn 34 33 35 6 (parallel [
+            (set (mem/c:SI (plus:SI (reg/f:SI 77 virtual-stack-vars)
+                        (const_int -4 [0xfffffffffffffffc])) [11 i+0 S4 A32])
+                (plus:SI (mem/c:SI (plus:SI (reg/f:SI 77 virtual-stack-vars)
+                            (const_int -4 [0xfffffffffffffffc])) [11 i+0 S4 A32])
+                    (const_int 1 [0x1])))
+            (clobber (reg:CC 17 flags))
+        ]) "fs/pipe.c":77:40 -1
+     (nil))
+(code_label 35 34 36 7 30 (nil) [1 uses])
+(note 36 35 39 7 [bb 7] NOTE_INSN_BASIC_BLOCK)
+(insn 39 36 40 7 (set (reg:CCGC 17 flags)
+        (compare:CCGC (mem/c:SI (plus:SI (reg/f:SI 77 virtual-stack-vars)
+                    (const_int -8 [0xfffffffffffffff8])) [11 j+0 S4 A32])
+            (const_int 1 [0x1]))) "fs/pipe.c":77:23 -1
+     (nil))
+(jump_insn 40 39 41 7 (set (pc)
+        (if_then_else (gt (reg:CCGC 17 flags)
+                (const_int 0 [0]))
+            (label_ref 47)
+            (pc))) "fs/pipe.c":77:23 -1
+     (nil)
+ -> 47)
+(note 41 40 45 8 [bb 8] NOTE_INSN_BASIC_BLOCK)
+(insn 45 41 46 8 (set (reg:CCGC 17 flags)
+        (compare:CCGC (mem/c:SI (plus:SI (reg/f:SI 77 virtual-stack-vars)
+                    (const_int -4 [0xfffffffffffffffc])) [11 i+0 S4 A32])
+            (const_int 63 [0x3f]))) "fs/pipe.c":77:23 -1
+     (nil))
+(jump_insn 46 45 47 8 (set (pc)
+        (if_then_else (le (reg:CCGC 17 flags)
+                (const_int 0 [0]))
+            (label_ref 42)
+            (pc))) "fs/pipe.c":77:23 -1
+     (nil)
+ -> 42)
+(code_label 47 46 48 9 32 (nil) [1 uses])
+(note 48 47 49 9 [bb 9] NOTE_INSN_BASIC_BLOCK)
+(insn 49 48 50 9 (set (reg:CCZ 17 flags)
+        (compare:CCZ (mem/c:SI (plus:SI (reg/f:SI 77 virtual-stack-vars)
+                    (const_int -8 [0xfffffffffffffff8])) [11 j+0 S4 A32])
+            (const_int 1 [0x1]))) "fs/pipe.c":80:8 -1
+     (nil))
+(jump_insn 50 49 51 9 (set (pc)
+        (if_then_else (ne (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref 54)
+            (pc))) "fs/pipe.c":80:8 -1
+     (nil)
+ -> 54)
+(note 51 50 52 10 [bb 10] NOTE_INSN_BASIC_BLOCK)
+(insn 52 51 53 10 (set (reg/f:SI 91 [ _10 ])
+        (mem/f/c:SI (plus:SI (reg/f:SI 77 virtual-stack-vars)
+                (const_int -20 [0xffffffffffffffec])) [7 f[0]+0 S4 A32])) "fs/pipe.c":81:10 -1
+     (nil))
+(insn 53 52 54 10 (set (mem:HI (plus:SI (reg/f:SI 91 [ _10 ])
+                (const_int 4 [0x4])) [2 _10->f_count+0 S2 A32])
+        (const_int 0 [0])) "fs/pipe.c":81:23 -1
+     (nil))
+(code_label 54 53 55 11 34 (nil) [1 uses])
+(note 55 54 58 11 [bb 11] NOTE_INSN_BASIC_BLOCK)
+(insn 58 55 59 11 (set (reg:CCGC 17 flags)
+        (compare:CCGC (mem/c:SI (plus:SI (reg/f:SI 77 virtual-stack-vars)
+                    (const_int -8 [0xfffffffffffffff8])) [11 j+0 S4 A32])
+            (const_int 1 [0x1]))) "fs/pipe.c":82:8 -1
+     (nil))
+(jump_insn 59 58 60 11 (set (pc)
+        (if_then_else (gt (reg:CCGC 17 flags)
+                (const_int 0 [0]))
+            (label_ref 64)
+            (pc))) "fs/pipe.c":82:8 -1
+     (nil)
+ -> 64)
+(note 60 59 61 12 [bb 12] NOTE_INSN_BASIC_BLOCK)
+(insn 61 60 62 12 (set (reg:SI 123 [ _48 ])
+        (const_int -1 [0xffffffffffffffff])) "fs/pipe.c":83:16 -1
+     (nil))
+(jump_insn 62 61 63 12 (set (pc)
+        (label_ref:SI 196)) "fs/pipe.c":83:16 807 {jump}
+     (nil)
+ -> 196)
+(barrier 63 62 64)
+(code_label 64 63 65 13 35 (nil) [1 uses])
+(note 65 64 66 13 [bb 13] NOTE_INSN_BASIC_BLOCK)
+(insn 66 65 67 13 (set (mem/c:SI (plus:SI (reg/f:SI 77 virtual-stack-vars)
+                (const_int -8 [0xfffffffffffffff8])) [11 j+0 S4 A32])
+        (const_int 0 [0])) "fs/pipe.c":84:7 -1
+     (nil))
+(insn 67 66 68 13 (set (mem/c:SI (plus:SI (reg/f:SI 77 virtual-stack-vars)
+                (const_int -4 [0xfffffffffffffffc])) [11 i+0 S4 A32])
+        (const_int 0 [0])) "fs/pipe.c":85:12 -1
+     (nil))
+(jump_insn 68 67 69 13 (set (pc)
+        (label_ref 94)) "fs/pipe.c":85:5 -1
+     (nil)
+ -> 94)
+(barrier 69 68 101)
+(code_label 101 69 70 14 40 (nil) [1 uses])
+(note 70 101 71 14 [bb 14] NOTE_INSN_BASIC_BLOCK)
+(insn 71 70 72 14 (set (reg/f:SI 133)
+        (mem/u/c:SI (plus:SI (reg:SI 82)
+                (const:SI (unspec:SI [
+                            (symbol_ref:SI ("current") [flags 0x40]  <var_decl 0x709e8132f120 current>)
+                        ] UNSPEC_GOT))) [19  S4 A8])) "fs/pipe.c":86:21 -1
+     (nil))
+(insn 72 71 73 14 (set (reg/f:SI 92 [ current.13_11 ])
+        (mem/f/c:SI (reg/f:SI 133) [4 current+0 S4 A32])) "fs/pipe.c":86:21 -1
+     (nil))
+(insn 73 72 74 14 (set (reg:SI 135)
+        (mem/c:SI (plus:SI (reg/f:SI 77 virtual-stack-vars)
+                (const_int -4 [0xfffffffffffffffc])) [11 i+0 S4 A32])) "fs/pipe.c":86:27 -1
+     (nil))
+(insn 74 73 75 14 (parallel [
+            (set (reg:SI 134)
+                (plus:SI (reg:SI 135)
+                    (const_int 160 [0xa0])))
+            (clobber (reg:CC 17 flags))
+        ]) "fs/pipe.c":86:27 -1
+     (expr_list:REG_EQUAL (plus:SI (mem/c:SI (plus:SI (reg/f:SI 77 virtual-stack-vars)
+                    (const_int -4 [0xfffffffffffffffc])) [11 i+0 S4 A32])
+            (const_int 160 [0xa0]))
+        (nil)))
+(insn 75 74 76 14 (set (reg/f:SI 93 [ _12 ])
+        (mem/f:SI (plus:SI (mult:SI (reg:SI 134)
+                    (const_int 4 [0x4]))
+                (reg/f:SI 92 [ current.13_11 ])) [7 current.13_11->filp[i_43]+0 S4 A32])) "fs/pipe.c":86:27 -1
+     (nil))
+(insn 76 75 77 14 (set (reg:CCZ 17 flags)
+        (compare:CCZ (reg/f:SI 93 [ _12 ])
+            (const_int 0 [0]))) "fs/pipe.c":86:12 -1
+     (nil))
+(jump_insn 77 76 78 14 (set (pc)
+        (if_then_else (ne (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref 91)
+            (pc))) "fs/pipe.c":86:12 -1
+     (nil)
+ -> 91)
+(note 78 77 79 15 [bb 15] NOTE_INSN_BASIC_BLOCK)
+(insn 79 78 80 15 (set (reg/f:SI 136)
+        (mem/u/c:SI (plus:SI (reg:SI 82)
+                (const:SI (unspec:SI [
+                            (symbol_ref:SI ("current") [flags 0x40]  <var_decl 0x709e8132f120 current>)
+                        ] UNSPEC_GOT))) [19  S4 A8])) "fs/pipe.c":87:20 -1
+     (nil))
+(insn 80 79 81 15 (set (reg/f:SI 94 [ current.14_13 ])
+        (mem/f/c:SI (reg/f:SI 136) [4 current+0 S4 A32])) "fs/pipe.c":87:20 -1
+     (nil))
+(insn 81 80 82 15 (set (reg:SI 137)
+        (mem/c:SI (plus:SI (reg/f:SI 77 virtual-stack-vars)
+                (const_int -8 [0xfffffffffffffff8])) [11 j+0 S4 A32])) "fs/pipe.c":87:33 -1
+     (nil))
+(insn 82 81 83 15 (set (reg:SI 138)
+        (mem/c:SI (plus:SI (reg/f:SI 77 virtual-stack-vars)
+                (const_int -4 [0xfffffffffffffffc])) [11 i+0 S4 A32])) "fs/pipe.c":87:33 -1
+     (nil))
+(insn 83 82 84 15 (set (mem:SI (plus:SI (plus:SI (mult:SI (reg:SI 137)
+                        (const_int 4 [0x4]))
+                    (reg/f:SI 77 virtual-stack-vars))
+                (const_int -28 [0xffffffffffffffe4])) [11 fd[j_47]+0 S4 A32])
+        (reg:SI 138)) "fs/pipe.c":87:33 -1
+     (nil))
+(insn 84 83 85 15 (set (reg:SI 139)
+        (mem/c:SI (plus:SI (reg/f:SI 77 virtual-stack-vars)
+                (const_int -8 [0xfffffffffffffff8])) [11 j+0 S4 A32])) "fs/pipe.c":87:29 -1
+     (nil))
+(insn 85 84 86 15 (set (reg:SI 95 [ _14 ])
+        (mem:SI (plus:SI (plus:SI (mult:SI (reg:SI 139)
+                        (const_int 4 [0x4]))
+                    (reg/f:SI 77 virtual-stack-vars))
+                (const_int -28 [0xffffffffffffffe4])) [11 fd[j_47]+0 S4 A32])) "fs/pipe.c":87:29 -1
+     (nil))
+(insn 86 85 87 15 (set (reg:SI 140)
+        (mem/c:SI (plus:SI (reg/f:SI 77 virtual-stack-vars)
+                (const_int -8 [0xfffffffffffffff8])) [11 j+0 S4 A32])) "fs/pipe.c":87:41 -1
+     (nil))
+(insn 87 86 88 15 (set (reg/f:SI 96 [ _15 ])
+        (mem/f:SI (plus:SI (plus:SI (mult:SI (reg:SI 140)
+                        (const_int 4 [0x4]))
+                    (reg/f:SI 77 virtual-stack-vars))
+                (const_int -20 [0xffffffffffffffec])) [7 f[j_47]+0 S4 A32])) "fs/pipe.c":87:41 -1
+     (nil))
+(insn 88 87 89 15 (parallel [
+            (set (reg:SI 141)
+                (plus:SI (reg:SI 95 [ _14 ])
+                    (const_int 160 [0xa0])))
+            (clobber (reg:CC 17 flags))
+        ]) "fs/pipe.c":87:38 -1
+     (nil))
+(insn 89 88 90 15 (set (mem/f:SI (plus:SI (mult:SI (reg:SI 141)
+                    (const_int 4 [0x4]))
+                (reg/f:SI 94 [ current.14_13 ])) [7 current.14_13->filp[_14]+0 S4 A32])
+        (reg/f:SI 96 [ _15 ])) "fs/pipe.c":87:38 -1
+     (nil))
+(insn 90 89 91 15 (parallel [
+            (set (mem/c:SI (plus:SI (reg/f:SI 77 virtual-stack-vars)
+                        (const_int -8 [0xfffffffffffffff8])) [11 j+0 S4 A32])
+                (plus:SI (mem/c:SI (plus:SI (reg/f:SI 77 virtual-stack-vars)
+                            (const_int -8 [0xfffffffffffffff8])) [11 j+0 S4 A32])
+                    (const_int 1 [0x1])))
+            (clobber (reg:CC 17 flags))
+        ]) "fs/pipe.c":88:14 -1
+     (nil))
+(code_label 91 90 92 16 38 (nil) [1 uses])
+(note 92 91 93 16 [bb 16] NOTE_INSN_BASIC_BLOCK)
+(insn 93 92 94 16 (parallel [
+            (set (mem/c:SI (plus:SI (reg/f:SI 77 virtual-stack-vars)
+                        (const_int -4 [0xfffffffffffffffc])) [11 i+0 S4 A32])
+                (plus:SI (mem/c:SI (plus:SI (reg/f:SI 77 virtual-stack-vars)
+                            (const_int -4 [0xfffffffffffffffc])) [11 i+0 S4 A32])
+                    (const_int 1 [0x1])))
+            (clobber (reg:CC 17 flags))
+        ]) "fs/pipe.c":85:40 -1
+     (nil))
+(code_label 94 93 95 17 37 (nil) [1 uses])
+(note 95 94 98 17 [bb 17] NOTE_INSN_BASIC_BLOCK)
+(insn 98 95 99 17 (set (reg:CCGC 17 flags)
+        (compare:CCGC (mem/c:SI (plus:SI (reg/f:SI 77 virtual-stack-vars)
+                    (const_int -8 [0xfffffffffffffff8])) [11 j+0 S4 A32])
+            (const_int 1 [0x1]))) "fs/pipe.c":85:23 -1
+     (nil))
+(jump_insn 99 98 100 17 (set (pc)
+        (if_then_else (gt (reg:CCGC 17 flags)
+                (const_int 0 [0]))
+            (label_ref 106)
+            (pc))) "fs/pipe.c":85:23 -1
+     (nil)
+ -> 106)
+(note 100 99 104 18 [bb 18] NOTE_INSN_BASIC_BLOCK)
+(insn 104 100 105 18 (set (reg:CCGC 17 flags)
+        (compare:CCGC (mem/c:SI (plus:SI (reg/f:SI 77 virtual-stack-vars)
+                    (const_int -4 [0xfffffffffffffffc])) [11 i+0 S4 A32])
+            (const_int 19 [0x13]))) "fs/pipe.c":85:23 -1
+     (nil))
+(jump_insn 105 104 106 18 (set (pc)
+        (if_then_else (le (reg:CCGC 17 flags)
+                (const_int 0 [0]))
+            (label_ref 101)
+            (pc))) "fs/pipe.c":85:23 -1
+     (nil)
+ -> 101)
+(code_label 106 105 107 19 39 (nil) [1 uses])
+(note 107 106 108 19 [bb 19] NOTE_INSN_BASIC_BLOCK)
+(insn 108 107 109 19 (set (reg:CCZ 17 flags)
+        (compare:CCZ (mem/c:SI (plus:SI (reg/f:SI 77 virtual-stack-vars)
+                    (const_int -8 [0xfffffffffffffff8])) [11 j+0 S4 A32])
+            (const_int 1 [0x1]))) "fs/pipe.c":90:8 -1
+     (nil))
+(jump_insn 109 108 110 19 (set (pc)
+        (if_then_else (ne (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref 116)
+            (pc))) "fs/pipe.c":90:8 -1
+     (nil)
+ -> 116)
+(note 110 109 111 20 [bb 20] NOTE_INSN_BASIC_BLOCK)
+(insn 111 110 112 20 (set (reg/f:SI 142)
+        (mem/u/c:SI (plus:SI (reg:SI 82)
+                (const:SI (unspec:SI [
+                            (symbol_ref:SI ("current") [flags 0x40]  <var_decl 0x709e8132f120 current>)
+                        ] UNSPEC_GOT))) [19  S4 A8])) "fs/pipe.c":91:16 -1
+     (nil))
+(insn 112 111 113 20 (set (reg/f:SI 97 [ current.15_16 ])
+        (mem/f/c:SI (reg/f:SI 142) [4 current+0 S4 A32])) "fs/pipe.c":91:16 -1
+     (nil))
+(insn 113 112 114 20 (set (reg:SI 98 [ _17 ])
+        (mem/c:SI (plus:SI (reg/f:SI 77 virtual-stack-vars)
+                (const_int -28 [0xffffffffffffffe4])) [11 fd[0]+0 S4 A32])) "fs/pipe.c":91:25 -1
+     (nil))
+(insn 114 113 115 20 (parallel [
+            (set (reg:SI 143)
+                (plus:SI (reg:SI 98 [ _17 ])
+                    (const_int 160 [0xa0])))
+            (clobber (reg:CC 17 flags))
+        ]) "fs/pipe.c":91:30 -1
+     (nil))
+(insn 115 114 116 20 (set (mem/f:SI (plus:SI (mult:SI (reg:SI 143)
+                    (const_int 4 [0x4]))
+                (reg/f:SI 97 [ current.15_16 ])) [7 current.15_16->filp[_17]+0 S4 A32])
+        (const_int 0 [0])) "fs/pipe.c":91:30 -1
+     (nil))
+(code_label 116 115 117 21 41 (nil) [1 uses])
+(note 117 116 120 21 [bb 21] NOTE_INSN_BASIC_BLOCK)
+(insn 120 117 121 21 (set (reg:CCGC 17 flags)
+        (compare:CCGC (mem/c:SI (plus:SI (reg/f:SI 77 virtual-stack-vars)
+                    (const_int -8 [0xfffffffffffffff8])) [11 j+0 S4 A32])
+            (const_int 1 [0x1]))) "fs/pipe.c":92:8 -1
+     (nil))
+(jump_insn 121 120 122 21 (set (pc)
+        (if_then_else (gt (reg:CCGC 17 flags)
+                (const_int 0 [0]))
+            (label_ref 131)
+            (pc))) "fs/pipe.c":92:8 -1
+     (nil)
+ -> 131)
+(note 122 121 123 22 [bb 22] NOTE_INSN_BASIC_BLOCK)
+(insn 123 122 124 22 (set (reg/f:SI 99 [ _18 ])
+        (mem/f/c:SI (plus:SI (reg/f:SI 77 virtual-stack-vars)
+                (const_int -16 [0xfffffffffffffff0])) [7 f[1]+0 S4 A32])) "fs/pipe.c":93:26 -1
+     (nil))
+(insn 124 123 125 22 (set (mem:HI (plus:SI (reg/f:SI 99 [ _18 ])
+                (const_int 4 [0x4])) [2 _18->f_count+0 S2 A32])
+        (const_int 0 [0])) "fs/pipe.c":93:39 -1
+     (nil))
+(insn 125 124 126 22 (set (reg/f:SI 100 [ _19 ])
+        (mem/f/c:SI (plus:SI (reg/f:SI 77 virtual-stack-vars)
+                (const_int -20 [0xffffffffffffffec])) [7 f[0]+0 S4 A32])) "fs/pipe.c":93:10 -1
+     (nil))
+(insn 126 125 127 22 (set (reg:HI 101 [ _20 ])
+        (mem:HI (plus:SI (reg/f:SI 99 [ _18 ])
+                (const_int 4 [0x4])) [2 _18->f_count+0 S2 A32])) "fs/pipe.c":93:29 -1
+     (nil))
+(insn 127 126 128 22 (set (mem:HI (plus:SI (reg/f:SI 100 [ _19 ])
+                (const_int 4 [0x4])) [2 _19->f_count+0 S2 A32])
+        (reg:HI 101 [ _20 ])) "fs/pipe.c":93:23 -1
+     (nil))
+(insn 128 127 129 22 (set (reg:SI 123 [ _48 ])
+        (const_int -1 [0xffffffffffffffff])) "fs/pipe.c":94:16 -1
+     (nil))
+(jump_insn 129 128 130 22 (set (pc)
+        (label_ref:SI 196)) "fs/pipe.c":94:16 807 {jump}
+     (nil)
+ -> 196)
+(barrier 130 129 131)
+(code_label 131 130 132 23 42 (nil) [1 uses])
+(note 132 131 133 23 [bb 23] NOTE_INSN_BASIC_BLOCK)
+(insn 133 132 134 23 (set (reg:SI 3 bx)
+        (reg:SI 82)) "fs/pipe.c":96:19 -1
+     (nil))
+(call_insn 134 133 135 23 (set (reg:SI 0 ax)
+        (call (mem:QI (symbol_ref:SI ("get_pipe_inode") [flags 0x41]  <function_decl 0x709e81316b00 get_pipe_inode>) [0 get_pipe_inode S1 A8])
+            (const_int 0 [0]))) "fs/pipe.c":96:19 -1
+     (nil)
+    (expr_list (use (reg:SI 3 bx))
+        (nil)))
+(insn 135 134 136 23 (set (reg:SI 144)
+        (reg:SI 0 ax)) "fs/pipe.c":96:19 -1
+     (nil))
+(insn 136 135 137 23 (set (mem/f/c:SI (plus:SI (reg/f:SI 77 virtual-stack-vars)
+                (const_int -12 [0xfffffffffffffff4])) [6 inode+0 S4 A32])
+        (reg:SI 144)) "fs/pipe.c":96:19 -1
+     (nil))
+(insn 137 136 138 23 (set (reg:CCZ 17 flags)
+        (compare:CCZ (mem/f/c:SI (plus:SI (reg/f:SI 77 virtual-stack-vars)
+                    (const_int -12 [0xfffffffffffffff4])) [6 inode+0 S4 A32])
+            (const_int 0 [0]))) "fs/pipe.c":96:8 -1
+     (nil))
+(jump_insn 138 137 139 23 (set (pc)
+        (if_then_else (ne (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref 160)
+            (pc))) "fs/pipe.c":96:8 -1
+     (nil)
+ -> 160)
+(note 139 138 140 24 [bb 24] NOTE_INSN_BASIC_BLOCK)
+(insn 140 139 141 24 (set (reg/f:SI 145)
+        (mem/u/c:SI (plus:SI (reg:SI 82)
+                (const:SI (unspec:SI [
+                            (symbol_ref:SI ("current") [flags 0x40]  <var_decl 0x709e8132f120 current>)
+                        ] UNSPEC_GOT))) [19  S4 A8])) "fs/pipe.c":98:20 -1
+     (nil))
+(insn 141 140 142 24 (set (reg/f:SI 102 [ current.16_21 ])
+        (mem/f/c:SI (reg/f:SI 145) [4 current+0 S4 A32])) "fs/pipe.c":98:20 -1
+     (nil))
+(insn 142 141 143 24 (set (reg:SI 103 [ _22 ])
+        (mem/c:SI (plus:SI (reg/f:SI 77 virtual-stack-vars)
+                (const_int -24 [0xffffffffffffffe8])) [11 fd[1]+0 S4 A32])) "fs/pipe.c":98:29 -1
+     (nil))
+(insn 143 142 144 24 (parallel [
+            (set (reg:SI 146)
+                (plus:SI (reg:SI 103 [ _22 ])
+                    (const_int 160 [0xa0])))
+            (clobber (reg:CC 17 flags))
+        ]) "fs/pipe.c":98:34 -1
+     (nil))
+(insn 144 143 145 24 (set (mem/f:SI (plus:SI (mult:SI (reg:SI 146)
+                    (const_int 4 [0x4]))
+                (reg/f:SI 102 [ current.16_21 ])) [7 current.16_21->filp[_22]+0 S4 A32])
+        (const_int 0 [0])) "fs/pipe.c":98:34 -1
+     (nil))
+(insn 145 144 146 24 (set (reg/f:SI 147)
+        (mem/u/c:SI (plus:SI (reg:SI 82)
+                (const:SI (unspec:SI [
+                            (symbol_ref:SI ("current") [flags 0x40]  <var_decl 0x709e8132f120 current>)
+                        ] UNSPEC_GOT))) [19  S4 A8])) "fs/pipe.c":97:16 -1
+     (nil))
+(insn 146 145 147 24 (set (reg/f:SI 104 [ current.17_23 ])
+        (mem/f/c:SI (reg/f:SI 147) [4 current+0 S4 A32])) "fs/pipe.c":97:16 -1
+     (nil))
+(insn 147 146 148 24 (set (reg:SI 105 [ _24 ])
+        (mem/c:SI (plus:SI (reg/f:SI 77 virtual-stack-vars)
+                (const_int -28 [0xffffffffffffffe4])) [11 fd[0]+0 S4 A32])) "fs/pipe.c":97:25 -1
+     (nil))
+(insn 148 147 149 24 (parallel [
+            (set (reg:SI 148)
+                (plus:SI (reg:SI 103 [ _22 ])
+                    (const_int 160 [0xa0])))
+            (clobber (reg:CC 17 flags))
+        ]) "fs/pipe.c":98:26 -1
+     (nil))
+(insn 149 148 150 24 (set (reg/f:SI 106 [ _25 ])
+        (mem/f:SI (plus:SI (mult:SI (reg:SI 148)
+                    (const_int 4 [0x4]))
+                (reg/f:SI 102 [ current.16_21 ])) [7 current.16_21->filp[_22]+0 S4 A32])) "fs/pipe.c":98:26 -1
+     (nil))
+(insn 150 149 151 24 (parallel [
+            (set (reg:SI 149)
+                (plus:SI (reg:SI 105 [ _24 ])
+                    (const_int 160 [0xa0])))
+            (clobber (reg:CC 17 flags))
+        ]) "fs/pipe.c":97:30 -1
+     (nil))
+(insn 151 150 152 24 (set (mem/f:SI (plus:SI (mult:SI (reg:SI 149)
+                    (const_int 4 [0x4]))
+                (reg/f:SI 104 [ current.17_23 ])) [7 current.17_23->filp[_24]+0 S4 A32])
+        (reg/f:SI 106 [ _25 ])) "fs/pipe.c":97:30 -1
+     (nil))
+(insn 152 151 153 24 (set (reg/f:SI 107 [ _26 ])
+        (mem/f/c:SI (plus:SI (reg/f:SI 77 virtual-stack-vars)
+                (const_int -16 [0xfffffffffffffff0])) [7 f[1]+0 S4 A32])) "fs/pipe.c":99:26 -1
+     (nil))
+(insn 153 152 154 24 (set (mem:HI (plus:SI (reg/f:SI 107 [ _26 ])
+                (const_int 4 [0x4])) [2 _26->f_count+0 S2 A32])
+        (const_int 0 [0])) "fs/pipe.c":99:39 -1
+     (nil))
+(insn 154 153 155 24 (set (reg/f:SI 108 [ _27 ])
+        (mem/f/c:SI (plus:SI (reg/f:SI 77 virtual-stack-vars)
+                (const_int -20 [0xffffffffffffffec])) [7 f[0]+0 S4 A32])) "fs/pipe.c":99:10 -1
+     (nil))
+(insn 155 154 156 24 (set (reg:HI 109 [ _28 ])
+        (mem:HI (plus:SI (reg/f:SI 107 [ _26 ])
+                (const_int 4 [0x4])) [2 _26->f_count+0 S2 A32])) "fs/pipe.c":99:29 -1
+     (nil))
+(insn 156 155 157 24 (set (mem:HI (plus:SI (reg/f:SI 108 [ _27 ])
+                (const_int 4 [0x4])) [2 _27->f_count+0 S2 A32])
+        (reg:HI 109 [ _28 ])) "fs/pipe.c":99:23 -1
+     (nil))
+(insn 157 156 158 24 (set (reg:SI 123 [ _48 ])
+        (const_int -1 [0xffffffffffffffff])) "fs/pipe.c":100:16 -1
+     (nil))
+(jump_insn 158 157 159 24 (set (pc)
+        (label_ref:SI 196)) "fs/pipe.c":100:16 807 {jump}
+     (nil)
+ -> 196)
+(barrier 159 158 160)
+(code_label 160 159 161 25 43 (nil) [1 uses])
+(note 161 160 162 25 [bb 25] NOTE_INSN_BASIC_BLOCK)
+(insn 162 161 163 25 (set (reg/f:SI 110 [ _29 ])
+        (mem/f/c:SI (plus:SI (reg/f:SI 77 virtual-stack-vars)
+                (const_int -16 [0xfffffffffffffff0])) [7 f[1]+0 S4 A32])) "fs/pipe.c":102:22 -1
+     (nil))
+(insn 163 162 164 25 (set (reg/f:SI 150)
+        (mem/f/c:SI (plus:SI (reg/f:SI 77 virtual-stack-vars)
+                (const_int -12 [0xfffffffffffffff4])) [6 inode+0 S4 A32])) "fs/pipe.c":102:35 -1
+     (nil))
+(insn 164 163 165 25 (set (mem/f:SI (plus:SI (reg/f:SI 110 [ _29 ])
+                (const_int 8 [0x8])) [6 _29->f_inode+0 S4 A32])
+        (reg/f:SI 150)) "fs/pipe.c":102:35 -1
+     (nil))
+(insn 165 164 166 25 (set (reg/f:SI 111 [ _30 ])
+        (mem/f/c:SI (plus:SI (reg/f:SI 77 virtual-stack-vars)
+                (const_int -20 [0xffffffffffffffec])) [7 f[0]+0 S4 A32])) "fs/pipe.c":102:6 -1
+     (nil))
+(insn 166 165 167 25 (set (reg/f:SI 112 [ _31 ])
+        (mem/f:SI (plus:SI (reg/f:SI 110 [ _29 ])
+                (const_int 8 [0x8])) [6 _29->f_inode+0 S4 A32])) "fs/pipe.c":102:25 -1
+     (nil))
+(insn 167 166 168 25 (set (mem/f:SI (plus:SI (reg/f:SI 111 [ _30 ])
+                (const_int 8 [0x8])) [6 _30->f_inode+0 S4 A32])
+        (reg/f:SI 112 [ _31 ])) "fs/pipe.c":102:19 -1
+     (nil))
+(insn 168 167 169 25 (set (reg/f:SI 113 [ _32 ])
+        (mem/f/c:SI (plus:SI (reg/f:SI 77 virtual-stack-vars)
+                (const_int -16 [0xfffffffffffffff0])) [7 f[1]+0 S4 A32])) "fs/pipe.c":103:22 -1
+     (nil))
+(insn 169 168 170 25 (set (mem:SI (plus:SI (reg/f:SI 113 [ _32 ])
+                (const_int 12 [0xc])) [3 _32->f_pos+0 S4 A32])
+        (const_int 0 [0])) "fs/pipe.c":103:35 -1
+     (nil))
+(insn 170 169 171 25 (set (reg/f:SI 114 [ _33 ])
+        (mem/f/c:SI (plus:SI (reg/f:SI 77 virtual-stack-vars)
+                (const_int -20 [0xffffffffffffffec])) [7 f[0]+0 S4 A32])) "fs/pipe.c":103:6 -1
+     (nil))
+(insn 171 170 172 25 (set (reg:SI 115 [ _34 ])
+        (mem:SI (plus:SI (reg/f:SI 113 [ _32 ])
+                (const_int 12 [0xc])) [3 _32->f_pos+0 S4 A32])) "fs/pipe.c":103:25 -1
+     (nil))
+(insn 172 171 173 25 (set (mem:SI (plus:SI (reg/f:SI 114 [ _33 ])
+                (const_int 12 [0xc])) [3 _33->f_pos+0 S4 A32])
+        (reg:SI 115 [ _34 ])) "fs/pipe.c":103:19 -1
+     (nil))
+(insn 173 172 174 25 (set (reg/f:SI 116 [ _35 ])
+        (mem/f/c:SI (plus:SI (reg/f:SI 77 virtual-stack-vars)
+                (const_int -20 [0xffffffffffffffec])) [7 f[0]+0 S4 A32])) "fs/pipe.c":104:6 -1
+     (nil))
+(insn 174 173 175 25 (set (mem:HI (reg/f:SI 116 [ _35 ]) [2 _35->f_mode+0 S2 A32])
+        (const_int 1 [0x1])) "fs/pipe.c":104:19 -1
+     (nil))
+(insn 175 174 176 25 (set (reg/f:SI 117 [ _36 ])
+        (mem/f/c:SI (plus:SI (reg/f:SI 77 virtual-stack-vars)
+                (const_int -16 [0xfffffffffffffff0])) [7 f[1]+0 S4 A32])) "fs/pipe.c":105:6 -1
+     (nil))
+(insn 176 175 177 25 (set (mem:HI (reg/f:SI 117 [ _36 ]) [2 _36->f_mode+0 S2 A32])
+        (const_int 2 [0x2])) "fs/pipe.c":105:19 -1
+     (nil))
+(insn 177 176 178 25 (set (reg:SI 118 [ _37 ])
+        (mem/c:SI (plus:SI (reg/f:SI 77 virtual-stack-vars)
+                (const_int -28 [0xffffffffffffffe4])) [11 fd[0]+0 S4 A32])) "fs/pipe.c":106:19 -1
+     (nil))
+(insn 178 177 179 25 (set (reg:SI 119 [ _38 ])
+        (reg:SI 118 [ _37 ])) "fs/pipe.c":106:5 -1
+     (nil))
+(insn 179 178 180 25 (parallel [
+            (set (reg/f:SI 7 sp)
+                (plus:SI (reg/f:SI 7 sp)
+                    (const_int -8 [0xfffffffffffffff8])))
+            (clobber (reg:CC 17 flags))
+        ]) "fs/pipe.c":106:5 -1
+     (expr_list:REG_ARGS_SIZE (const_int 8 [0x8])
+        (nil)))
+(insn 180 179 181 25 (set (mem/f:SI (pre_dec:SI (reg/f:SI 7 sp)) [17  S4 A32])
+        (mem/f/c:SI (reg/f:SI 76 virtual-incoming-args) [17 fildes+0 S4 A32])) "fs/pipe.c":106:5 -1
+     (expr_list:REG_ARGS_SIZE (const_int 12 [0xc])
+        (nil)))
+(insn 181 180 182 25 (set (mem:SI (pre_dec:SI (reg/f:SI 7 sp)) [3  S4 A32])
+        (reg:SI 119 [ _38 ])) "fs/pipe.c":106:5 -1
+     (expr_list:REG_ARGS_SIZE (const_int 16 [0x10])
+        (nil)))
+(call_insn 182 181 183 25 (call (mem:QI (symbol_ref:SI ("put_fs_long") [flags 0x3]  <function_decl 0x709e8133a100 put_fs_long>) [0 put_fs_long S1 A8])
+        (const_int 16 [0x10])) "fs/pipe.c":106:5 -1
+     (nil)
+    (nil))
+(insn 183 182 184 25 (parallel [
+            (set (reg/f:SI 7 sp)
+                (plus:SI (reg/f:SI 7 sp)
+                    (const_int 16 [0x10])))
+            (clobber (reg:CC 17 flags))
+        ]) "fs/pipe.c":106:5 -1
+     (expr_list:REG_ARGS_SIZE (const_int 0 [0])
+        (nil)))
+(insn 184 183 185 25 (set (reg/f:SI 151)
+        (mem/f/c:SI (reg/f:SI 76 virtual-incoming-args) [17 fildes+0 S4 A32])) "fs/pipe.c":107:5 -1
+     (nil))
+(insn 185 184 186 25 (parallel [
+            (set (reg/f:SI 120 [ _39 ])
+                (plus:SI (reg/f:SI 151)
+                    (const_int 4 [0x4])))
+            (clobber (reg:CC 17 flags))
+        ]) "fs/pipe.c":107:5 -1
+     (expr_list:REG_EQUAL (plus:SI (mem/f/c:SI (reg/f:SI 76 virtual-incoming-args) [17 fildes+0 S4 A32])
+            (const_int 4 [0x4]))
+        (nil)))
+(insn 186 185 187 25 (set (reg:SI 121 [ _40 ])
+        (mem/c:SI (plus:SI (reg/f:SI 77 virtual-stack-vars)
+                (const_int -24 [0xffffffffffffffe8])) [11 fd[1]+0 S4 A32])) "fs/pipe.c":107:19 -1
+     (nil))
+(insn 187 186 188 25 (set (reg:SI 122 [ _41 ])
+        (reg:SI 121 [ _40 ])) "fs/pipe.c":107:5 -1
+     (nil))
+(insn 188 187 189 25 (parallel [
+            (set (reg/f:SI 7 sp)
+                (plus:SI (reg/f:SI 7 sp)
+                    (const_int -8 [0xfffffffffffffff8])))
+            (clobber (reg:CC 17 flags))
+        ]) "fs/pipe.c":107:5 -1
+     (expr_list:REG_ARGS_SIZE (const_int 8 [0x8])
+        (nil)))
+(insn 189 188 190 25 (set (mem/f:SI (pre_dec:SI (reg/f:SI 7 sp)) [17  S4 A32])
+        (reg/f:SI 120 [ _39 ])) "fs/pipe.c":107:5 -1
+     (expr_list:REG_ARGS_SIZE (const_int 12 [0xc])
+        (nil)))
+(insn 190 189 191 25 (set (mem:SI (pre_dec:SI (reg/f:SI 7 sp)) [3  S4 A32])
+        (reg:SI 122 [ _41 ])) "fs/pipe.c":107:5 -1
+     (expr_list:REG_ARGS_SIZE (const_int 16 [0x10])
+        (nil)))
+(call_insn 191 190 192 25 (call (mem:QI (symbol_ref:SI ("put_fs_long") [flags 0x3]  <function_decl 0x709e8133a100 put_fs_long>) [0 put_fs_long S1 A8])
+        (const_int 16 [0x10])) "fs/pipe.c":107:5 -1
+     (nil)
+    (nil))
+(insn 192 191 193 25 (parallel [
+            (set (reg/f:SI 7 sp)
+                (plus:SI (reg/f:SI 7 sp)
+                    (const_int 16 [0x10])))
+            (clobber (reg:CC 17 flags))
+        ]) "fs/pipe.c":107:5 -1
+     (expr_list:REG_ARGS_SIZE (const_int 0 [0])
+        (nil)))
+(insn 193 192 196 25 (set (reg:SI 123 [ _48 ])
+        (const_int 0 [0])) "fs/pipe.c":108:12 -1
+     (nil))
+(code_label 196 193 197 27 44 (nil) [3 uses])
+(note 197 196 198 27 [bb 27] NOTE_INSN_BASIC_BLOCK)
+(insn 198 197 202 27 (set (reg:SI 124 [ <retval> ])
+        (reg:SI 123 [ _48 ])) "fs/pipe.c":109:1 -1
+     (nil))
+(insn 202 198 203 27 (set (reg/i:SI 0 ax)
+        (reg:SI 124 [ <retval> ])) "fs/pipe.c":109:1 -1
+     (nil))
+(insn 203 202 0 27 (use (reg/i:SI 0 ax)) "fs/pipe.c":109:1 -1
+     (nil))

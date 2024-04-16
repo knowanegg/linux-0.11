@@ -1,0 +1,28 @@
+
+;; Function _exit (_exit, funcdef_no=0, decl_uid=1089, cgraph_uid=1, symbol_order=0)
+
+(note 1 0 3 NOTE_INSN_DELETED)
+(note 3 1 2 2 [bb 2] NOTE_INSN_BASIC_BLOCK)
+(note 2 3 5 2 NOTE_INSN_FUNCTION_BEG)
+(insn 5 2 6 2 (set (reg:SI 83)
+        (const_int 1 [0x1])) "lib/_exit.c":12:5 75 {*movsi_internal}
+     (nil))
+(insn 6 5 7 2 (set (reg:SI 84)
+        (mem/c:SI (reg/f:SI 16 argp) [1 exit_code+0 S4 A32])) "lib/_exit.c":12:5 75 {*movsi_internal}
+     (nil))
+(insn 7 6 10 2 (parallel [
+            (asm_operands/v ("int $0x80") ("") 0 [
+                    (reg:SI 83)
+                    (reg:SI 84)
+                ]
+                 [
+                    (asm_input:SI ("a") lib/_exit.c:12)
+                    (asm_input:SI ("b") lib/_exit.c:12)
+                ]
+                 [] lib/_exit.c:12)
+            (clobber (reg:CC 17 flags))
+        ]) "lib/_exit.c":12:5 -1
+     (nil))
+(note 10 7 11 3 [bb 3] NOTE_INSN_BASIC_BLOCK)
+(insn 11 10 0 3 (const_int 0 [0]) "lib/_exit.c":13:1 -1
+     (nil))

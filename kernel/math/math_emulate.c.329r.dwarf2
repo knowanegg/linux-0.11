@@ -1,0 +1,737 @@
+
+;; Function get_fs_byte (get_fs_byte, funcdef_no=1, decl_uid=1332, cgraph_uid=2, symbol_order=1)
+
+Creating trace 0 : start at note 1
+Creating trace 1 : start at note 21
+Creating trace 2 : start at note 22
+Processing trace 0 : start at note 1
+   saw edge from trace 0 to 1 (via fallthru 0)
+	push trace 1 to worklist
+Processing trace 1 : start at note 21
+   saw edge from trace 1 to 2 (via fallthru 0)
+	push trace 2 to worklist
+Processing trace 2 : start at note 22
+
+
+get_fs_byte
+
+Dataflow summary:
+;;  fully invalidated by EH 	 0 [ax] 1 [dx] 2 [cx] 8 [st] 9 [st(1)] 10 [st(2)] 11 [st(3)] 12 [st(4)] 13 [st(5)] 14 [st(6)] 15 [st(7)] 17 [flags] 18 [fpsr] 20 [xmm0] 21 [xmm1] 22 [xmm2] 23 [xmm3] 24 [xmm4] 25 [xmm5] 26 [xmm6] 27 [xmm7] 28 [mm0] 29 [mm1] 30 [mm2] 31 [mm3] 32 [mm4] 33 [mm5] 34 [mm6] 35 [mm7] 36 [r8] 37 [r9] 38 [r10] 39 [r11] 40 [r12] 41 [r13] 42 [r14] 43 [r15] 44 [xmm8] 45 [xmm9] 46 [xmm10] 47 [xmm11] 48 [xmm12] 49 [xmm13] 50 [xmm14] 51 [xmm15] 52 [xmm16] 53 [xmm17] 54 [xmm18] 55 [xmm19] 56 [xmm20] 57 [xmm21] 58 [xmm22] 59 [xmm23] 60 [xmm24] 61 [xmm25] 62 [xmm26] 63 [xmm27] 64 [xmm28] 65 [xmm29] 66 [xmm30] 67 [xmm31] 68 [k0] 69 [k1] 70 [k2] 71 [k3] 72 [k4] 73 [k5] 74 [k6] 75 [k7]
+;;  hardware regs used 	 7 [sp]
+;;  regular block artificial uses 	 7 [sp]
+;;  eh block artificial uses 	 7 [sp] 16 [argp]
+;;  entry block defs 	 0 [ax] 1 [dx] 2 [cx] 3 [bx] 7 [sp]
+;;  exit block uses 	 0 [ax] 3 [bx] 7 [sp]
+;;  regs ever live 	 0 [ax] 3 [bx] 7 [sp] 17 [flags]
+;;  ref usage 	r0={5d,4u} r1={1d} r2={1d} r3={3d,3u} r7={3d,5u} r17={2d} 
+;;    total ref usage 27{15d,12u,0e} in 9{9 regular + 0 call} insns.
+(note 1 0 3 NOTE_INSN_DELETED)
+(note 3 1 20 2 [bb 2] NOTE_INSN_BASIC_BLOCK)
+(insn/f 20 3 26 2 (set (mem:SI (pre_dec:SI (reg/f:SI 7 sp)) [0  S4 A8])
+        (reg:SI 3 bx)) "include/asm/segment.h":5:1 54 {*pushsi2}
+     (nil))
+(note 26 20 27 2
+	.cfi_def_cfa_offset 8
+	 NOTE_INSN_CFI)
+(note 27 26 21 2
+	.cfi_offset 3, -8
+	 NOTE_INSN_CFI)
+(note 21 27 18 2 NOTE_INSN_PROLOGUE_END)
+(insn/f 18 21 2 2 (parallel [
+            (set (reg:SI 0 ax [82])
+                (unspec:SI [
+                        (const_int 0 [0])
+                    ] UNSPEC_SET_GOT))
+            (clobber (reg:CC 17 flags))
+        ]) 846 {*set_got}
+     (expr_list:REG_CFA_FLUSH_QUEUE (nil)
+        (nil)))
+(note 2 18 6 2 NOTE_INSN_FUNCTION_BEG)
+(insn 6 2 7 2 (set (reg/f:SI 0 ax [87])
+        (mem/f/c:SI (plus:SI (reg/f:SI 7 sp)
+                (const_int 8 [0x8])) [2 addr+0 S4 A32])) "include/asm/segment.h":8:5 75 {*movsi_internal}
+     (nil))
+(insn 7 6 5 2 (parallel [
+            (set (reg:QI 0 ax [orig:86 _v ] [86])
+                (asm_operands:QI ("movb %%fs:%1, %0") ("=r") 0 [
+                        (mem:QI (reg/f:SI 0 ax [87]) [0 *addr_2(D)+0 S1 A8])
+                    ]
+                     [
+                        (asm_input:QI ("m") include/asm/segment.h:8)
+                    ]
+                     [] include/asm/segment.h:8))
+            (clobber (reg:CC 17 flags))
+        ]) "include/asm/segment.h":8:5 -1
+     (nil))
+(insn 5 7 8 2 (set (reg/v:QI 3 bx [orig:83 _v ] [83])
+        (reg:QI 0 ax [orig:86 _v ] [86])) "include/asm/segment.h":8:5 77 {*movqi_internal}
+     (nil))
+(insn 8 5 16 2 (set (reg:QI 0 ax [orig:84 _4 ] [84])
+        (reg/v:QI 3 bx [orig:83 _v ] [83])) "include/asm/segment.h":9:12 77 {*movqi_internal}
+     (nil))
+(insn 16 8 22 2 (use (reg/i:QI 0 ax)) "include/asm/segment.h":10:1 -1
+     (nil))
+(note 22 16 23 2 NOTE_INSN_EPILOGUE_BEG)
+(insn/f 23 22 28 2 (set (reg:SI 3 bx)
+        (mem:SI (post_inc:SI (reg/f:SI 7 sp)) [0  S4 A8])) "include/asm/segment.h":10:1 59 {*popsi1}
+     (expr_list:REG_CFA_ADJUST_CFA (set (reg/f:SI 7 sp)
+            (plus:SI (reg/f:SI 7 sp)
+                (const_int 4 [0x4])))
+        (expr_list:REG_CFA_RESTORE (reg:SI 3 bx)
+            (nil))))
+(note 28 23 29 2
+	.cfi_restore 3
+	 NOTE_INSN_CFI)
+(note 29 28 24 2
+	.cfi_def_cfa_offset 4
+	 NOTE_INSN_CFI)
+(jump_insn 24 29 25 2 (simple_return) "include/asm/segment.h":10:1 837 {simple_return_internal}
+     (nil)
+ -> simple_return)
+(barrier 25 24 19)
+(note 19 25 0 NOTE_INSN_DELETED)
+
+;; Function math_error (math_error, funcdef_no=8, decl_uid=1359, cgraph_uid=9, symbol_order=8)
+
+Creating trace 0 : start at note 1
+Creating trace 1 : start at note 29
+Creating trace 2 : start at code_label 25
+Creating trace 3 : start at note 30
+Processing trace 0 : start at note 1
+   saw edge from trace 0 to 1 (via fallthru 0)
+	push trace 1 to worklist
+Processing trace 1 : start at note 29
+   saw edge from trace 1 to 2 (via jump_insn 9)
+	push trace 2 to worklist
+   saw edge from trace 1 to 2 (via fallthru 0)
+Processing trace 2 : start at code_label 25
+   saw edge from trace 2 to 3 (via fallthru 0)
+	push trace 3 to worklist
+Processing trace 3 : start at note 30
+
+
+math_error
+
+Dataflow summary:
+;;  fully invalidated by EH 	 0 [ax] 1 [dx] 2 [cx] 8 [st] 9 [st(1)] 10 [st(2)] 11 [st(3)] 12 [st(4)] 13 [st(5)] 14 [st(6)] 15 [st(7)] 17 [flags] 18 [fpsr] 20 [xmm0] 21 [xmm1] 22 [xmm2] 23 [xmm3] 24 [xmm4] 25 [xmm5] 26 [xmm6] 27 [xmm7] 28 [mm0] 29 [mm1] 30 [mm2] 31 [mm3] 32 [mm4] 33 [mm5] 34 [mm6] 35 [mm7] 36 [r8] 37 [r9] 38 [r10] 39 [r11] 40 [r12] 41 [r13] 42 [r14] 43 [r15] 44 [xmm8] 45 [xmm9] 46 [xmm10] 47 [xmm11] 48 [xmm12] 49 [xmm13] 50 [xmm14] 51 [xmm15] 52 [xmm16] 53 [xmm17] 54 [xmm18] 55 [xmm19] 56 [xmm20] 57 [xmm21] 58 [xmm22] 59 [xmm23] 60 [xmm24] 61 [xmm25] 62 [xmm26] 63 [xmm27] 64 [xmm28] 65 [xmm29] 66 [xmm30] 67 [xmm31] 68 [k0] 69 [k1] 70 [k2] 71 [k3] 72 [k4] 73 [k5] 74 [k6] 75 [k7]
+;;  hardware regs used 	 7 [sp]
+;;  regular block artificial uses 	 7 [sp]
+;;  eh block artificial uses 	 7 [sp] 16 [argp]
+;;  entry block defs 	 0 [ax] 1 [dx] 2 [cx] 7 [sp]
+;;  exit block uses 	 7 [sp]
+;;  regs ever live 	 0 [ax] 1 [dx] 17 [flags]
+;;  ref usage 	r0={4d,5u} r1={7d,7u} r2={1d} r7={1d,4u} r17={4d,1u} 
+;;    total ref usage 34{17d,17u,0e} in 15{15 regular + 0 call} insns.
+(note 1 0 3 NOTE_INSN_DELETED)
+(note 3 1 29 2 [bb 2] NOTE_INSN_BASIC_BLOCK)
+(note 29 3 27 2 NOTE_INSN_PROLOGUE_END)
+(insn/f 27 29 2 2 (parallel [
+            (set (reg:SI 0 ax [82])
+                (unspec:SI [
+                        (const_int 0 [0])
+                    ] UNSPEC_SET_GOT))
+            (clobber (reg:CC 17 flags))
+        ]) 846 {*set_got}
+     (expr_list:REG_CFA_FLUSH_QUEUE (nil)
+        (nil)))
+(note 2 27 5 2 NOTE_INSN_FUNCTION_BEG)
+(insn 5 2 6 2 (parallel [
+            (asm_input/v ("fnclex") kernel/math/math_emulate.c:11)
+            (clobber (mem:BLK (scratch) [0  A8]))
+            (clobber (reg:CC 17 flags))
+        ]) "kernel/math/math_emulate.c":11:2 -1
+     (nil))
+(insn 6 5 7 2 (set (reg/f:SI 1 dx [88])
+        (mem/u/c:SI (plus:SI (reg:SI 0 ax [82])
+                (const:SI (unspec:SI [
+                            (symbol_ref:SI ("last_task_used_math") [flags 0x40]  <var_decl 0x7752a0f2e240 last_task_used_math>)
+                        ] UNSPEC_GOT))) [4  S4 A8])) "kernel/math/math_emulate.c":12:6 75 {*movsi_internal}
+     (nil))
+(insn 7 6 8 2 (set (reg/f:SI 1 dx [orig:83 last_task_used_math.0_1 ] [83])
+        (mem/f/c:SI (reg/f:SI 1 dx [88]) [3 last_task_used_math+0 S4 A32])) "kernel/math/math_emulate.c":12:6 75 {*movsi_internal}
+     (nil))
+(insn 8 7 9 2 (set (reg:CCZ 17 flags)
+        (compare:CCZ (reg/f:SI 1 dx [orig:83 last_task_used_math.0_1 ] [83])
+            (const_int 0 [0]))) "kernel/math/math_emulate.c":12:5 7 {*cmpsi_ccno_1}
+     (nil))
+(jump_insn 9 8 10 2 (set (pc)
+        (if_then_else (eq (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref:SI 25)
+            (pc))) "kernel/math/math_emulate.c":12:5 806 {*jcc}
+     (nil)
+ -> 25)
+(note 10 9 11 3 [bb 3] NOTE_INSN_BASIC_BLOCK)
+(insn 11 10 12 3 (set (reg/f:SI 1 dx [89])
+        (mem/u/c:SI (plus:SI (reg:SI 0 ax [82])
+                (const:SI (unspec:SI [
+                            (symbol_ref:SI ("last_task_used_math") [flags 0x40]  <var_decl 0x7752a0f2e240 last_task_used_math>)
+                        ] UNSPEC_GOT))) [4  S4 A8])) "kernel/math/math_emulate.c":13:31 75 {*movsi_internal}
+     (nil))
+(insn 12 11 13 3 (set (reg/f:SI 1 dx [orig:84 last_task_used_math.1_2 ] [84])
+        (mem/f/c:SI (reg/f:SI 1 dx [89]) [3 last_task_used_math+0 S4 A32])) "kernel/math/math_emulate.c":13:31 75 {*movsi_internal}
+     (nil))
+(insn 13 12 14 3 (set (reg:SI 1 dx [orig:85 _3 ] [85])
+        (mem:SI (plus:SI (reg/f:SI 1 dx [orig:84 last_task_used_math.1_2 ] [84])
+                (const_int 12 [0xc])) [1 last_task_used_math.1_2->signal+0 S4 A32])) "kernel/math/math_emulate.c":13:31 75 {*movsi_internal}
+     (nil))
+(insn 14 13 15 3 (set (reg/f:SI 0 ax [90])
+        (mem/u/c:SI (plus:SI (reg:SI 0 ax [82])
+                (const:SI (unspec:SI [
+                            (symbol_ref:SI ("last_task_used_math") [flags 0x40]  <var_decl 0x7752a0f2e240 last_task_used_math>)
+                        ] UNSPEC_GOT))) [4  S4 A8])) "kernel/math/math_emulate.c":13:31 75 {*movsi_internal}
+     (nil))
+(insn 15 14 33 3 (set (reg/f:SI 0 ax [orig:86 last_task_used_math.2_4 ] [86])
+        (mem/f/c:SI (reg/f:SI 0 ax [90]) [3 last_task_used_math+0 S4 A32])) "kernel/math/math_emulate.c":13:31 75 {*movsi_internal}
+     (nil))
+(insn 33 15 17 3 (parallel [
+            (set (strict_low_part (reg:QI 1 dx [orig:87 _5 ] [87]))
+                (ior:QI (reg:QI 1 dx [orig:85 _3 ] [85])
+                    (const_int -128 [0xffffffffffffff80])))
+            (clobber (reg:CC 17 flags))
+        ]) "kernel/math/math_emulate.c":13:31 532 {*iorqi_1_slp}
+     (nil))
+(insn 17 33 25 3 (set (mem:SI (plus:SI (reg/f:SI 0 ax [orig:86 last_task_used_math.2_4 ] [86])
+                (const_int 12 [0xc])) [1 last_task_used_math.2_4->signal+0 S4 A32])
+        (reg:SI 1 dx [orig:87 _5 ] [87])) "kernel/math/math_emulate.c":13:31 75 {*movsi_internal}
+     (nil))
+(code_label 25 17 24 4 5 (nil) [1 uses])
+(note 24 25 26 4 [bb 4] NOTE_INSN_BASIC_BLOCK)
+(insn 26 24 30 4 (const_int 0 [0]) "kernel/math/math_emulate.c":14:1 843 {nop}
+     (nil))
+(note 30 26 31 4 NOTE_INSN_EPILOGUE_BEG)
+(jump_insn 31 30 32 4 (simple_return) "kernel/math/math_emulate.c":14:1 837 {simple_return_internal}
+     (nil)
+ -> simple_return)
+(barrier 32 31 28)
+(note 28 32 0 NOTE_INSN_DELETED)
+
+;; Function math_emulate (math_emulate, funcdef_no=9, decl_uid=1377, cgraph_uid=10, symbol_order=9)
+
+Creating trace 0 : start at note 1
+Creating trace 1 : start at note 93
+Creating trace 2 : start at code_label 39
+Creating trace 3 : start at note 94
+Processing trace 0 : start at note 1
+   saw edge from trace 0 to 1 (via fallthru 0)
+	push trace 1 to worklist
+Processing trace 1 : start at note 93
+   saw edge from trace 1 to 2 (via jump_insn 21)
+	push trace 2 to worklist
+   saw edge from trace 1 to 2 (via fallthru 0)
+Processing trace 2 : start at code_label 39
+   saw edge from trace 2 to 3 (via fallthru 0)
+	push trace 3 to worklist
+Processing trace 3 : start at note 94
+
+
+math_emulate
+
+Dataflow summary:
+;;  fully invalidated by EH 	 0 [ax] 1 [dx] 2 [cx] 8 [st] 9 [st(1)] 10 [st(2)] 11 [st(3)] 12 [st(4)] 13 [st(5)] 14 [st(6)] 15 [st(7)] 17 [flags] 18 [fpsr] 20 [xmm0] 21 [xmm1] 22 [xmm2] 23 [xmm3] 24 [xmm4] 25 [xmm5] 26 [xmm6] 27 [xmm7] 28 [mm0] 29 [mm1] 30 [mm2] 31 [mm3] 32 [mm4] 33 [mm5] 34 [mm6] 35 [mm7] 36 [r8] 37 [r9] 38 [r10] 39 [r11] 40 [r12] 41 [r13] 42 [r14] 43 [r15] 44 [xmm8] 45 [xmm9] 46 [xmm10] 47 [xmm11] 48 [xmm12] 49 [xmm13] 50 [xmm14] 51 [xmm15] 52 [xmm16] 53 [xmm17] 54 [xmm18] 55 [xmm19] 56 [xmm20] 57 [xmm21] 58 [xmm22] 59 [xmm23] 60 [xmm24] 61 [xmm25] 62 [xmm26] 63 [xmm27] 64 [xmm28] 65 [xmm29] 66 [xmm30] 67 [xmm31] 68 [k0] 69 [k1] 70 [k2] 71 [k3] 72 [k4] 73 [k5] 74 [k6] 75 [k7]
+;;  hardware regs used 	 7 [sp]
+;;  regular block artificial uses 	 7 [sp]
+;;  eh block artificial uses 	 7 [sp] 16 [argp]
+;;  entry block defs 	 0 [ax] 1 [dx] 2 [cx] 3 [bx] 4 [si] 5 [di] 7 [sp]
+;;  exit block uses 	 3 [bx] 4 [si] 5 [di] 7 [sp]
+;;  regs ever live 	 0 [ax] 1 [dx] 2 [cx] 3 [bx] 4 [si] 5 [di] 7 [sp] 17 [flags]
+;;  ref usage 	r0={19d,17u} r1={13d,8u} r2={8d,2u} r3={3d,10u} r4={4d,4u} r5={3d,3u} r7={30d,73u} r8={5d} r9={5d} r10={5d} r11={5d} r12={5d} r13={5d} r14={5d} r15={5d} r17={20d,1u} r18={5d} r20={5d} r21={5d} r22={5d} r23={5d} r24={5d} r25={5d} r26={5d} r27={5d} r28={5d} r29={5d} r30={5d} r31={5d} r32={5d} r33={5d} r34={5d} r35={5d} r36={5d} r37={5d} r38={5d} r39={5d} r40={5d} r41={5d} r42={5d} r43={5d} r44={5d} r45={5d} r46={5d} r47={5d} r48={5d} r49={5d} r50={5d} r51={5d} r52={5d} r53={5d} r54={5d} r55={5d} r56={5d} r57={5d} r58={5d} r59={5d} r60={5d} r61={5d} r62={5d} r63={5d} r64={5d} r65={5d} r66={5d} r67={5d} r68={5d} r69={5d} r70={5d} r71={5d} r72={5d} r73={5d} r74={5d} r75={5d} 
+;;    total ref usage 543{425d,118u,0e} in 74{69 regular + 5 call} insns.
+(note 1 0 18 NOTE_INSN_DELETED)
+(note 18 1 89 2 [bb 2] NOTE_INSN_BASIC_BLOCK)
+(insn/f 89 18 105 2 (set (mem:SI (pre_dec:SI (reg/f:SI 7 sp)) [0  S4 A8])
+        (reg:SI 5 di)) "kernel/math/math_emulate.c":21:1 54 {*pushsi2}
+     (nil))
+(note 105 89 106 2
+	.cfi_def_cfa_offset 8
+	 NOTE_INSN_CFI)
+(note 106 105 90 2
+	.cfi_offset 7, -8
+	 NOTE_INSN_CFI)
+(insn/f 90 106 107 2 (set (mem:SI (pre_dec:SI (reg/f:SI 7 sp)) [0  S4 A8])
+        (reg:SI 4 si)) "kernel/math/math_emulate.c":21:1 54 {*pushsi2}
+     (nil))
+(note 107 90 108 2
+	.cfi_def_cfa_offset 12
+	 NOTE_INSN_CFI)
+(note 108 107 91 2
+	.cfi_offset 6, -12
+	 NOTE_INSN_CFI)
+(insn/f 91 108 109 2 (set (mem:SI (pre_dec:SI (reg/f:SI 7 sp)) [0  S4 A8])
+        (reg:SI 3 bx)) "kernel/math/math_emulate.c":21:1 54 {*pushsi2}
+     (nil))
+(note 109 91 110 2
+	.cfi_def_cfa_offset 16
+	 NOTE_INSN_CFI)
+(note 110 109 92 2
+	.cfi_offset 3, -16
+	 NOTE_INSN_CFI)
+(insn/f 92 110 111 2 (parallel [
+            (set (reg/f:SI 7 sp)
+                (plus:SI (reg/f:SI 7 sp)
+                    (const_int -48 [0xffffffffffffffd0])))
+            (clobber (reg:CC 17 flags))
+            (clobber (mem:BLK (scratch) [0  A8]))
+        ]) "kernel/math/math_emulate.c":21:1 1141 {pro_epilogue_adjust_stack_add_si}
+     (expr_list:REG_CFA_ADJUST_CFA (set (reg/f:SI 7 sp)
+            (plus:SI (reg/f:SI 7 sp)
+                (const_int -48 [0xffffffffffffffd0])))
+        (nil)))
+(note 111 92 93 2
+	.cfi_def_cfa_offset 64
+	 NOTE_INSN_CFI)
+(note 93 111 87 2 NOTE_INSN_PROLOGUE_END)
+(insn/f 87 93 2 2 (parallel [
+            (set (reg:SI 3 bx [82])
+                (unspec:SI [
+                        (const_int 0 [0])
+                    ] UNSPEC_SET_GOT))
+            (clobber (reg:CC 17 flags))
+        ]) 846 {*set_got}
+     (expr_list:REG_CFA_FLUSH_QUEUE (nil)
+        (nil)))
+(insn 2 87 5 2 (set (reg:SI 5 di [100])
+        (mem/c:SI (plus:SI (reg/f:SI 7 sp)
+                (const_int 96 [0x60])) [10 fs+0 S4 A32])) "kernel/math/math_emulate.c":21:1 75 {*movsi_internal}
+     (nil))
+(insn 5 2 8 2 (set (reg:SI 4 si [102])
+        (mem/c:SI (plus:SI (reg/f:SI 7 sp)
+                (const_int 100 [0x64])) [10 es+0 S4 A32])) "kernel/math/math_emulate.c":21:1 75 {*movsi_internal}
+     (nil))
+(insn 8 5 11 2 (set (reg:SI 2 cx [104])
+        (mem/c:SI (plus:SI (reg/f:SI 7 sp)
+                (const_int 104 [0x68])) [10 ds+0 S4 A32])) "kernel/math/math_emulate.c":21:1 75 {*movsi_internal}
+     (nil))
+(insn 11 8 14 2 (set (reg:SI 1 dx [106])
+        (mem/c:SI (plus:SI (reg/f:SI 7 sp)
+                (const_int 112 [0x70])) [10 cs+0 S4 A32])) "kernel/math/math_emulate.c":21:1 75 {*movsi_internal}
+     (nil))
+(insn 14 11 4 2 (set (reg:SI 0 ax [108])
+        (mem/c:SI (plus:SI (reg/f:SI 7 sp)
+                (const_int 120 [0x78])) [10 ss+0 S4 A32])) "kernel/math/math_emulate.c":21:1 75 {*movsi_internal}
+     (nil))
+(insn 4 14 7 2 (set (mem/c:HI (plus:SI (reg/f:SI 7 sp)
+                (const_int 28 [0x1c])) [10 fs+0 S2 A32])
+        (reg:HI 5 di [101])) "kernel/math/math_emulate.c":21:1 76 {*movhi_internal}
+     (nil))
+(insn 7 4 10 2 (set (mem/c:HI (plus:SI (reg/f:SI 7 sp)
+                (const_int 24 [0x18])) [10 es+0 S2 A32])
+        (reg:HI 4 si [103])) "kernel/math/math_emulate.c":21:1 76 {*movhi_internal}
+     (nil))
+(insn 10 7 13 2 (set (mem/c:HI (plus:SI (reg/f:SI 7 sp)
+                (const_int 20 [0x14])) [10 ds+0 S2 A32])
+        (reg:HI 2 cx [105])) "kernel/math/math_emulate.c":21:1 76 {*movhi_internal}
+     (nil))
+(insn 13 10 16 2 (set (mem/c:HI (plus:SI (reg/f:SI 7 sp)
+                (const_int 16 [0x10])) [10 cs+0 S2 A32])
+        (reg:HI 1 dx [107])) "kernel/math/math_emulate.c":21:1 76 {*movhi_internal}
+     (nil))
+(insn 16 13 17 2 (set (mem/c:HI (plus:SI (reg/f:SI 7 sp)
+                (const_int 12 [0xc])) [10 ss+0 S2 A32])
+        (reg:HI 0 ax [109])) "kernel/math/math_emulate.c":21:1 76 {*movhi_internal}
+     (nil))
+(note 17 16 20 2 NOTE_INSN_FUNCTION_BEG)
+(insn 20 17 21 2 (set (reg:CCZ 17 flags)
+        (compare:CCZ (mem/c:HI (plus:SI (reg/f:SI 7 sp)
+                    (const_int 16 [0x10])) [10 cs+0 S2 A32])
+            (const_int 15 [0xf]))) "kernel/math/math_emulate.c":25:5 10 {*cmphi_1}
+     (nil))
+(jump_insn 21 20 22 2 (set (pc)
+        (if_then_else (eq (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref 39)
+            (pc))) "kernel/math/math_emulate.c":25:5 806 {*jcc}
+     (nil)
+ -> 39)
+(note 22 21 23 3 [bb 3] NOTE_INSN_BASIC_BLOCK)
+(insn 23 22 24 3 (set (reg:SI 1 dx [orig:83 eip.3_1 ] [83])
+        (mem/c:SI (plus:SI (reg/f:SI 7 sp)
+                (const_int 108 [0x6c])) [1 eip+0 S4 A32])) "kernel/math/math_emulate.c":26:3 75 {*movsi_internal}
+     (nil))
+(insn 24 23 25 3 (set (reg:SI 0 ax [orig:84 _2 ] [84])
+        (zero_extend:SI (mem/c:HI (plus:SI (reg/f:SI 7 sp)
+                    (const_int 16 [0x10])) [10 cs+0 S2 A32]))) "kernel/math/math_emulate.c":26:3 144 {*zero_extendhisi2}
+     (nil))
+(insn 25 24 112 3 (parallel [
+            (set (reg/f:SI 7 sp)
+                (plus:SI (reg/f:SI 7 sp)
+                    (const_int -4 [0xfffffffffffffffc])))
+            (clobber (reg:CC 17 flags))
+        ]) "kernel/math/math_emulate.c":26:3 209 {*addsi_1}
+     (expr_list:REG_ARGS_SIZE (const_int 4 [0x4])
+        (nil)))
+(note 112 25 26 3
+	.cfi_def_cfa_offset 68
+	 NOTE_INSN_CFI)
+(insn 26 112 113 3 (set (mem:SI (pre_dec:SI (reg/f:SI 7 sp)) [1  S4 A32])
+        (reg:SI 1 dx [orig:83 eip.3_1 ] [83])) "kernel/math/math_emulate.c":26:3 54 {*pushsi2}
+     (expr_list:REG_ARGS_SIZE (const_int 8 [0x8])
+        (nil)))
+(note 113 26 27 3
+	.cfi_def_cfa_offset 72
+	 NOTE_INSN_CFI)
+(insn 27 113 114 3 (set (mem:SI (pre_dec:SI (reg/f:SI 7 sp)) [8  S4 A32])
+        (reg:SI 0 ax [orig:84 _2 ] [84])) "kernel/math/math_emulate.c":26:3 54 {*pushsi2}
+     (expr_list:REG_ARGS_SIZE (const_int 12 [0xc])
+        (nil)))
+(note 114 27 28 3
+	.cfi_def_cfa_offset 76
+	 NOTE_INSN_CFI)
+(insn 28 114 29 3 (set (reg/f:SI 0 ax [110])
+        (plus:SI (reg:SI 3 bx [82])
+            (const:SI (unspec:SI [
+                        (symbol_ref/f:SI ("*.LC0") [flags 0x2]  <var_decl 0x7752a0f2ecf0 *.LC0>)
+                    ] UNSPEC_GOTOFF)))) "kernel/math/math_emulate.c":26:3 205 {*leasi}
+     (expr_list:REG_EQUAL (symbol_ref/f:SI ("*.LC0") [flags 0x2]  <var_decl 0x7752a0f2ecf0 *.LC0>)
+        (nil)))
+(insn 29 28 115 3 (set (mem/f:SI (pre_dec:SI (reg/f:SI 7 sp)) [2  S4 A32])
+        (reg/f:SI 0 ax [110])) "kernel/math/math_emulate.c":26:3 54 {*pushsi2}
+     (expr_list:REG_ARGS_SIZE (const_int 16 [0x10])
+        (nil)))
+(note 115 29 31 3
+	.cfi_def_cfa_offset 80
+	 NOTE_INSN_CFI)
+(call_insn 31 115 32 3 (set (reg:SI 0 ax)
+        (call (mem:QI (symbol_ref:SI ("printk") [flags 0x41]  <function_decl 0x7752a0f38900 printk>) [0 printk S1 A8])
+            (const_int 16 [0x10]))) "kernel/math/math_emulate.c":26:3 823 {*call_value}
+     (nil)
+    (expr_list (use (reg:SI 3 bx))
+        (nil)))
+(insn 32 31 116 3 (parallel [
+            (set (reg/f:SI 7 sp)
+                (plus:SI (reg/f:SI 7 sp)
+                    (const_int 16 [0x10])))
+            (clobber (reg:CC 17 flags))
+        ]) "kernel/math/math_emulate.c":26:3 209 {*addsi_1}
+     (expr_list:REG_ARGS_SIZE (const_int 0 [0])
+        (nil)))
+(note 116 32 33 3
+	.cfi_def_cfa_offset 64
+	 NOTE_INSN_CFI)
+(insn 33 116 117 3 (parallel [
+            (set (reg/f:SI 7 sp)
+                (plus:SI (reg/f:SI 7 sp)
+                    (const_int -12 [0xfffffffffffffff4])))
+            (clobber (reg:CC 17 flags))
+        ]) "kernel/math/math_emulate.c":27:3 209 {*addsi_1}
+     (expr_list:REG_ARGS_SIZE (const_int 12 [0xc])
+        (nil)))
+(note 117 33 34 3
+	.cfi_def_cfa_offset 76
+	 NOTE_INSN_CFI)
+(insn 34 117 35 3 (set (reg/f:SI 0 ax [111])
+        (plus:SI (reg:SI 3 bx [82])
+            (const:SI (unspec:SI [
+                        (symbol_ref/f:SI ("*.LC1") [flags 0x2]  <var_decl 0x7752a0f2ed80 *.LC1>)
+                    ] UNSPEC_GOTOFF)))) "kernel/math/math_emulate.c":27:3 205 {*leasi}
+     (expr_list:REG_EQUAL (symbol_ref/f:SI ("*.LC1") [flags 0x2]  <var_decl 0x7752a0f2ed80 *.LC1>)
+        (nil)))
+(insn 35 34 118 3 (set (mem/f:SI (pre_dec:SI (reg/f:SI 7 sp)) [2  S4 A32])
+        (reg/f:SI 0 ax [111])) "kernel/math/math_emulate.c":27:3 54 {*pushsi2}
+     (expr_list:REG_ARGS_SIZE (const_int 16 [0x10])
+        (nil)))
+(note 118 35 37 3
+	.cfi_def_cfa_offset 80
+	 NOTE_INSN_CFI)
+(call_insn 37 118 38 3 (call (mem:QI (symbol_ref:SI ("panic") [flags 0x41]  <function_decl 0x7752a0f38700 panic>) [0 panic S1 A8])
+        (const_int 16 [0x10])) "kernel/math/math_emulate.c":27:3 812 {*call}
+     (nil)
+    (expr_list (use (reg:SI 3 bx))
+        (nil)))
+(insn 38 37 119 3 (parallel [
+            (set (reg/f:SI 7 sp)
+                (plus:SI (reg/f:SI 7 sp)
+                    (const_int 16 [0x10])))
+            (clobber (reg:CC 17 flags))
+        ]) "kernel/math/math_emulate.c":27:3 209 {*addsi_1}
+     (expr_list:REG_ARGS_SIZE (const_int 0 [0])
+        (nil)))
+(note 119 38 39 3
+	.cfi_def_cfa_offset 64
+	 NOTE_INSN_CFI)
+(code_label 39 119 40 4 7 (nil) [1 uses])
+(note 40 39 41 4 [bb 4] NOTE_INSN_BASIC_BLOCK)
+(insn 41 40 101 4 (set (reg:SI 0 ax [orig:85 eip.4_3 ] [85])
+        (mem/c:SI (plus:SI (reg/f:SI 7 sp)
+                (const_int 108 [0x6c])) [1 eip+0 S4 A32])) "kernel/math/math_emulate.c":29:38 75 {*movsi_internal}
+     (nil))
+(insn 101 41 43 4 (set (reg:SI 1 dx [orig:86 _5 ] [86])
+        (plus:SI (reg:SI 0 ax [orig:85 eip.4_3 ] [85])
+            (const_int 1 [0x1]))) "kernel/math/math_emulate.c":29:38 205 {*leasi}
+     (nil))
+(insn 43 101 45 4 (set (mem/c:SI (plus:SI (reg/f:SI 7 sp)
+                (const_int 108 [0x6c])) [1 eip+0 S4 A32])
+        (reg:SI 1 dx [orig:86 _5 ] [86])) "kernel/math/math_emulate.c":29:38 75 {*movsi_internal}
+     (nil))
+(insn 45 43 120 4 (parallel [
+            (set (reg/f:SI 7 sp)
+                (plus:SI (reg/f:SI 7 sp)
+                    (const_int -12 [0xfffffffffffffff4])))
+            (clobber (reg:CC 17 flags))
+        ]) "kernel/math/math_emulate.c":29:10 209 {*addsi_1}
+     (expr_list:REG_ARGS_SIZE (const_int 12 [0xc])
+        (nil)))
+(note 120 45 46 4
+	.cfi_def_cfa_offset 76
+	 NOTE_INSN_CFI)
+(insn 46 120 121 4 (set (mem/f:SI (pre_dec:SI (reg/f:SI 7 sp)) [2  S4 A32])
+        (reg/f:SI 0 ax [orig:87 eip.6_6 ] [87])) "kernel/math/math_emulate.c":29:10 54 {*pushsi2}
+     (expr_list:REG_ARGS_SIZE (const_int 16 [0x10])
+        (nil)))
+(note 121 46 47 4
+	.cfi_def_cfa_offset 80
+	 NOTE_INSN_CFI)
+(call_insn 47 121 48 4 (set (reg:QI 0 ax)
+        (call (mem:QI (symbol_ref:SI ("get_fs_byte") [flags 0x3]  <function_decl 0x7752a0f38c00 get_fs_byte>) [0 get_fs_byte S1 A8])
+            (const_int 16 [0x10]))) "kernel/math/math_emulate.c":29:10 823 {*call_value}
+     (nil)
+    (nil))
+(insn 48 47 122 4 (parallel [
+            (set (reg/f:SI 7 sp)
+                (plus:SI (reg/f:SI 7 sp)
+                    (const_int 16 [0x10])))
+            (clobber (reg:CC 17 flags))
+        ]) "kernel/math/math_emulate.c":29:10 209 {*addsi_1}
+     (expr_list:REG_ARGS_SIZE (const_int 0 [0])
+        (nil)))
+(note 122 48 50 4
+	.cfi_def_cfa_offset 64
+	 NOTE_INSN_CFI)
+(insn 50 122 51 4 (set (mem/c:QI (plus:SI (reg/f:SI 7 sp)
+                (const_int 47 [0x2f])) [0 first+0 S1 A8])
+        (reg:QI 0 ax [112])) "kernel/math/math_emulate.c":29:10 77 {*movqi_internal}
+     (nil))
+(insn 51 50 102 4 (set (reg:SI 0 ax [orig:88 eip.7_7 ] [88])
+        (mem/c:SI (plus:SI (reg/f:SI 7 sp)
+                (const_int 108 [0x6c])) [1 eip+0 S4 A32])) "kernel/math/math_emulate.c":30:39 75 {*movsi_internal}
+     (nil))
+(insn 102 51 53 4 (set (reg:SI 1 dx [orig:89 _9 ] [89])
+        (plus:SI (reg:SI 0 ax [orig:88 eip.7_7 ] [88])
+            (const_int 1 [0x1]))) "kernel/math/math_emulate.c":30:39 205 {*leasi}
+     (nil))
+(insn 53 102 55 4 (set (mem/c:SI (plus:SI (reg/f:SI 7 sp)
+                (const_int 108 [0x6c])) [1 eip+0 S4 A32])
+        (reg:SI 1 dx [orig:89 _9 ] [89])) "kernel/math/math_emulate.c":30:39 75 {*movsi_internal}
+     (nil))
+(insn 55 53 123 4 (parallel [
+            (set (reg/f:SI 7 sp)
+                (plus:SI (reg/f:SI 7 sp)
+                    (const_int -12 [0xfffffffffffffff4])))
+            (clobber (reg:CC 17 flags))
+        ]) "kernel/math/math_emulate.c":30:11 209 {*addsi_1}
+     (expr_list:REG_ARGS_SIZE (const_int 12 [0xc])
+        (nil)))
+(note 123 55 56 4
+	.cfi_def_cfa_offset 76
+	 NOTE_INSN_CFI)
+(insn 56 123 124 4 (set (mem/f:SI (pre_dec:SI (reg/f:SI 7 sp)) [2  S4 A32])
+        (reg/f:SI 0 ax [orig:90 eip.9_10 ] [90])) "kernel/math/math_emulate.c":30:11 54 {*pushsi2}
+     (expr_list:REG_ARGS_SIZE (const_int 16 [0x10])
+        (nil)))
+(note 124 56 57 4
+	.cfi_def_cfa_offset 80
+	 NOTE_INSN_CFI)
+(call_insn 57 124 58 4 (set (reg:QI 0 ax)
+        (call (mem:QI (symbol_ref:SI ("get_fs_byte") [flags 0x3]  <function_decl 0x7752a0f38c00 get_fs_byte>) [0 get_fs_byte S1 A8])
+            (const_int 16 [0x10]))) "kernel/math/math_emulate.c":30:11 823 {*call_value}
+     (nil)
+    (nil))
+(insn 58 57 125 4 (parallel [
+            (set (reg/f:SI 7 sp)
+                (plus:SI (reg/f:SI 7 sp)
+                    (const_int 16 [0x10])))
+            (clobber (reg:CC 17 flags))
+        ]) "kernel/math/math_emulate.c":30:11 209 {*addsi_1}
+     (expr_list:REG_ARGS_SIZE (const_int 0 [0])
+        (nil)))
+(note 125 58 60 4
+	.cfi_def_cfa_offset 64
+	 NOTE_INSN_CFI)
+(insn 60 125 61 4 (set (mem/c:QI (plus:SI (reg/f:SI 7 sp)
+                (const_int 46 [0x2e])) [0 second+0 S1 A16])
+        (reg:QI 0 ax [113])) "kernel/math/math_emulate.c":30:11 77 {*movqi_internal}
+     (nil))
+(insn 61 60 62 4 (set (reg:SI 2 cx [orig:91 _11 ] [91])
+        (zero_extend:SI (mem/c:QI (plus:SI (reg/f:SI 7 sp)
+                    (const_int 46 [0x2e])) [0 second+0 S1 A16]))) "kernel/math/math_emulate.c":31:2 143 {*zero_extendqisi2}
+     (nil))
+(insn 62 61 63 4 (set (reg:SI 1 dx [orig:92 _12 ] [92])
+        (zero_extend:SI (mem/c:QI (plus:SI (reg/f:SI 7 sp)
+                    (const_int 47 [0x2f])) [0 first+0 S1 A8]))) "kernel/math/math_emulate.c":31:2 143 {*zero_extendqisi2}
+     (nil))
+(insn 63 62 103 4 (set (reg:SI 0 ax [orig:93 eip.10_13 ] [93])
+        (mem/c:SI (plus:SI (reg/f:SI 7 sp)
+                (const_int 108 [0x6c])) [1 eip+0 S4 A32])) "kernel/math/math_emulate.c":31:2 75 {*movsi_internal}
+     (nil))
+(insn 103 63 65 4 (set (reg:SI 4 si [orig:94 _14 ] [94])
+        (plus:SI (reg:SI 0 ax [orig:93 eip.10_13 ] [93])
+            (const_int -2 [0xfffffffffffffffe]))) "kernel/math/math_emulate.c":31:2 205 {*leasi}
+     (nil))
+(insn 65 103 66 4 (set (reg:SI 0 ax [orig:95 _15 ] [95])
+        (zero_extend:SI (mem/c:HI (plus:SI (reg/f:SI 7 sp)
+                    (const_int 16 [0x10])) [10 cs+0 S2 A32]))) "kernel/math/math_emulate.c":31:2 144 {*zero_extendhisi2}
+     (nil))
+(insn 66 65 126 4 (parallel [
+            (set (reg/f:SI 7 sp)
+                (plus:SI (reg/f:SI 7 sp)
+                    (const_int -12 [0xfffffffffffffff4])))
+            (clobber (reg:CC 17 flags))
+        ]) "kernel/math/math_emulate.c":31:2 209 {*addsi_1}
+     (expr_list:REG_ARGS_SIZE (const_int 12 [0xc])
+        (nil)))
+(note 126 66 67 4
+	.cfi_def_cfa_offset 76
+	 NOTE_INSN_CFI)
+(insn 67 126 127 4 (set (mem:SI (pre_dec:SI (reg/f:SI 7 sp)) [8  S4 A32])
+        (reg:SI 2 cx [orig:91 _11 ] [91])) "kernel/math/math_emulate.c":31:2 54 {*pushsi2}
+     (expr_list:REG_ARGS_SIZE (const_int 16 [0x10])
+        (nil)))
+(note 127 67 68 4
+	.cfi_def_cfa_offset 80
+	 NOTE_INSN_CFI)
+(insn 68 127 128 4 (set (mem:SI (pre_dec:SI (reg/f:SI 7 sp)) [8  S4 A32])
+        (reg:SI 1 dx [orig:92 _12 ] [92])) "kernel/math/math_emulate.c":31:2 54 {*pushsi2}
+     (expr_list:REG_ARGS_SIZE (const_int 20 [0x14])
+        (nil)))
+(note 128 68 69 4
+	.cfi_def_cfa_offset 84
+	 NOTE_INSN_CFI)
+(insn 69 128 129 4 (set (mem:SI (pre_dec:SI (reg/f:SI 7 sp)) [1  S4 A32])
+        (reg:SI 4 si [orig:94 _14 ] [94])) "kernel/math/math_emulate.c":31:2 54 {*pushsi2}
+     (expr_list:REG_ARGS_SIZE (const_int 24 [0x18])
+        (nil)))
+(note 129 69 70 4
+	.cfi_def_cfa_offset 88
+	 NOTE_INSN_CFI)
+(insn 70 129 130 4 (set (mem:SI (pre_dec:SI (reg/f:SI 7 sp)) [8  S4 A32])
+        (reg:SI 0 ax [orig:95 _15 ] [95])) "kernel/math/math_emulate.c":31:2 54 {*pushsi2}
+     (expr_list:REG_ARGS_SIZE (const_int 28 [0x1c])
+        (nil)))
+(note 130 70 71 4
+	.cfi_def_cfa_offset 92
+	 NOTE_INSN_CFI)
+(insn 71 130 72 4 (set (reg/f:SI 0 ax [114])
+        (plus:SI (reg:SI 3 bx [82])
+            (const:SI (unspec:SI [
+                        (symbol_ref/f:SI ("*.LC2") [flags 0x2]  <var_decl 0x7752a0f2ee10 *.LC2>)
+                    ] UNSPEC_GOTOFF)))) "kernel/math/math_emulate.c":31:2 205 {*leasi}
+     (expr_list:REG_EQUAL (symbol_ref/f:SI ("*.LC2") [flags 0x2]  <var_decl 0x7752a0f2ee10 *.LC2>)
+        (nil)))
+(insn 72 71 131 4 (set (mem/f:SI (pre_dec:SI (reg/f:SI 7 sp)) [2  S4 A32])
+        (reg/f:SI 0 ax [114])) "kernel/math/math_emulate.c":31:2 54 {*pushsi2}
+     (expr_list:REG_ARGS_SIZE (const_int 32 [0x20])
+        (nil)))
+(note 131 72 74 4
+	.cfi_def_cfa_offset 96
+	 NOTE_INSN_CFI)
+(call_insn 74 131 75 4 (set (reg:SI 0 ax)
+        (call (mem:QI (symbol_ref:SI ("printk") [flags 0x41]  <function_decl 0x7752a0f38900 printk>) [0 printk S1 A8])
+            (const_int 32 [0x20]))) "kernel/math/math_emulate.c":31:2 823 {*call_value}
+     (nil)
+    (expr_list (use (reg:SI 3 bx))
+        (nil)))
+(insn 75 74 132 4 (parallel [
+            (set (reg/f:SI 7 sp)
+                (plus:SI (reg/f:SI 7 sp)
+                    (const_int 32 [0x20])))
+            (clobber (reg:CC 17 flags))
+        ]) "kernel/math/math_emulate.c":31:2 209 {*addsi_1}
+     (expr_list:REG_ARGS_SIZE (const_int 0 [0])
+        (nil)))
+(note 132 75 76 4
+	.cfi_def_cfa_offset 64
+	 NOTE_INSN_CFI)
+(insn 76 132 77 4 (set (reg/f:SI 0 ax [115])
+        (mem/u/c:SI (plus:SI (reg:SI 3 bx [82])
+                (const:SI (unspec:SI [
+                            (symbol_ref:SI ("current") [flags 0x40]  <var_decl 0x7752a0f2e120 current>)
+                        ] UNSPEC_GOT))) [4  S4 A8])) "kernel/math/math_emulate.c":32:18 75 {*movsi_internal}
+     (nil))
+(insn 77 76 78 4 (set (reg/f:SI 0 ax [orig:96 current.11_16 ] [96])
+        (mem/f/c:SI (reg/f:SI 0 ax [115]) [3 current+0 S4 A32])) "kernel/math/math_emulate.c":32:18 75 {*movsi_internal}
+     (nil))
+(insn 78 77 79 4 (set (reg:SI 1 dx [orig:97 _17 ] [97])
+        (mem:SI (plus:SI (reg/f:SI 0 ax [orig:96 current.11_16 ] [96])
+                (const_int 12 [0xc])) [1 current.11_16->signal+0 S4 A32])) "kernel/math/math_emulate.c":32:18 75 {*movsi_internal}
+     (nil))
+(insn 79 78 80 4 (set (reg/f:SI 0 ax [116])
+        (mem/u/c:SI (plus:SI (reg:SI 3 bx [82])
+                (const:SI (unspec:SI [
+                            (symbol_ref:SI ("current") [flags 0x40]  <var_decl 0x7752a0f2e120 current>)
+                        ] UNSPEC_GOT))) [4  S4 A8])) "kernel/math/math_emulate.c":32:18 75 {*movsi_internal}
+     (nil))
+(insn 80 79 104 4 (set (reg/f:SI 0 ax [orig:98 current.12_18 ] [98])
+        (mem/f/c:SI (reg/f:SI 0 ax [116]) [3 current+0 S4 A32])) "kernel/math/math_emulate.c":32:18 75 {*movsi_internal}
+     (nil))
+(insn 104 80 82 4 (parallel [
+            (set (strict_low_part (reg:QI 1 dx [orig:99 _19 ] [99]))
+                (ior:QI (reg:QI 1 dx [orig:97 _17 ] [97])
+                    (const_int -128 [0xffffffffffffff80])))
+            (clobber (reg:CC 17 flags))
+        ]) "kernel/math/math_emulate.c":32:18 532 {*iorqi_1_slp}
+     (nil))
+(insn 82 104 86 4 (set (mem:SI (plus:SI (reg/f:SI 0 ax [orig:98 current.12_18 ] [98])
+                (const_int 12 [0xc])) [1 current.12_18->signal+0 S4 A32])
+        (reg:SI 1 dx [orig:99 _19 ] [99])) "kernel/math/math_emulate.c":32:18 75 {*movsi_internal}
+     (nil))
+(insn 86 82 94 4 (const_int 0 [0]) "kernel/math/math_emulate.c":33:1 843 {nop}
+     (nil))
+(note 94 86 95 4 NOTE_INSN_EPILOGUE_BEG)
+(insn/f 95 94 133 4 (parallel [
+            (set (reg/f:SI 7 sp)
+                (plus:SI (reg/f:SI 7 sp)
+                    (const_int 48 [0x30])))
+            (clobber (reg:CC 17 flags))
+            (clobber (mem:BLK (scratch) [0  A8]))
+        ]) "kernel/math/math_emulate.c":33:1 1141 {pro_epilogue_adjust_stack_add_si}
+     (expr_list:REG_CFA_ADJUST_CFA (set (reg/f:SI 7 sp)
+            (plus:SI (reg/f:SI 7 sp)
+                (const_int 48 [0x30])))
+        (nil)))
+(note 133 95 96 4
+	.cfi_def_cfa_offset 16
+	 NOTE_INSN_CFI)
+(insn/f 96 133 134 4 (set (reg:SI 3 bx)
+        (mem:SI (post_inc:SI (reg/f:SI 7 sp)) [0  S4 A8])) "kernel/math/math_emulate.c":33:1 59 {*popsi1}
+     (expr_list:REG_CFA_ADJUST_CFA (set (reg/f:SI 7 sp)
+            (plus:SI (reg/f:SI 7 sp)
+                (const_int 4 [0x4])))
+        (expr_list:REG_CFA_RESTORE (reg:SI 3 bx)
+            (nil))))
+(note 134 96 135 4
+	.cfi_restore 3
+	 NOTE_INSN_CFI)
+(note 135 134 97 4
+	.cfi_def_cfa_offset 12
+	 NOTE_INSN_CFI)
+(insn/f 97 135 136 4 (set (reg:SI 4 si)
+        (mem:SI (post_inc:SI (reg/f:SI 7 sp)) [0  S4 A8])) "kernel/math/math_emulate.c":33:1 59 {*popsi1}
+     (expr_list:REG_CFA_ADJUST_CFA (set (reg/f:SI 7 sp)
+            (plus:SI (reg/f:SI 7 sp)
+                (const_int 4 [0x4])))
+        (expr_list:REG_CFA_RESTORE (reg:SI 4 si)
+            (nil))))
+(note 136 97 137 4
+	.cfi_restore 6
+	 NOTE_INSN_CFI)
+(note 137 136 98 4
+	.cfi_def_cfa_offset 8
+	 NOTE_INSN_CFI)
+(insn/f 98 137 138 4 (set (reg:SI 5 di)
+        (mem:SI (post_inc:SI (reg/f:SI 7 sp)) [0  S4 A8])) "kernel/math/math_emulate.c":33:1 59 {*popsi1}
+     (expr_list:REG_CFA_ADJUST_CFA (set (reg/f:SI 7 sp)
+            (plus:SI (reg/f:SI 7 sp)
+                (const_int 4 [0x4])))
+        (expr_list:REG_CFA_RESTORE (reg:SI 5 di)
+            (nil))))
+(note 138 98 139 4
+	.cfi_restore 7
+	 NOTE_INSN_CFI)
+(note 139 138 99 4
+	.cfi_def_cfa_offset 4
+	 NOTE_INSN_CFI)
+(jump_insn 99 139 100 4 (simple_return) "kernel/math/math_emulate.c":33:1 837 {simple_return_internal}
+     (nil)
+ -> simple_return)
+(barrier 100 99 88)
+(note 88 100 0 NOTE_INSN_DELETED)

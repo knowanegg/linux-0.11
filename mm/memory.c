@@ -60,12 +60,62 @@ void mem_init(long start_mem, long end_mem)
  * Get physical address of first (actully last :-) free page, and mark it
  * used. If no free pages left, return 0.
  */
+// 它首先扫描内存页面字节图数组 mem_map[]，寻找值是 0 的字节项（对应空闲页面）。
+// 若无则返回 0 结束，表示物理内存已使用完。若找到值为 0 的字节，则将其置 1，并换算出对应空闲页
+// 面的起始地址。然后对该内存页面作清零操作，并且最后返回该空闲页面的物理内存起始地址。
 unsigned long get_free_page(void)
 {
 	register unsigned long __res asm("ax");
 
-	__asm__("std ; repne ; scasb\n\t"
-			"jne 1f\n\t"
+// => 0x00006573 <+0>:     push   edi
+//    0x00006574 <+1>:     call   0x190ec <__x86.get_pc_thunk.ax>
+//    0x00006579 <+6>:     add    eax,0x19acb
+//    0x0000657e <+11>:    lea    edx,[eax+0x473b]
+// <__x86.get_pc_thunk.ax> 函数在 x86 架构的汇编语言编程中主要用于支持生成位置无关代码（Position-Independent Code, PIC）
+// 尤其在创建共享库或动态链接库时非常重要。这个函数的作用是将当前的程序计数器（PC）的值加载到 ax 寄存器中。
+// 程序计数器是一个寄存器，包含了正在执行的指令的内存地址。
+// esp 通常指向调用该 thunk 的指令之后的返回地址。因此，这条指令实际上是在读取调用 __x86.get_pc_thunk.ax 后应当返回的地址，这是调用该函数的下一条指令的地址。
+// 然后再add 0x19acb，应该是找到相对于下一条地址偏移0x19acb的位置
+// 这里为何是0x19acb,编译器是如何取值的呢？
+// 通过gdb跟踪发现，eax加上0x19acb后是0x20044,查看内存,这是<startup_32>的位置，里面放的类似描述符的东西
+// pwndbg> x /20x *0x20044
+// 0x0 <startup_32>:       0x00001027      0x00002007      0x00003007      0x00004007
+// 0x10 <startup_32+16>:   0x00000000      0x00000000      0x00000000      0x00000000
+// 0x20 <startup_32+32>:   0x00000000      0x00000000      0x00000000      0x00000000
+// startup_32 通常是 Linux 内核启动过程中的一个重要函数，用于 32 位系统的初始化。
+// 这里就回到boot三个汇编文件中的head.s
+// pg_dir:
+//	.globl startup_32
+// 下面有setup_paging，就是在这里循环设置了页表，内容为0x1007,0x2007,0x3007....
+// 也就是说0x20044是页表开头的位置
+// 那么反推，eax（当前pc地址）加上0x19acb后是0x20044是页表开头地址，那么0x19acb就是当前地址pc距离页表开头地址的偏移
+// 这个地址编译器是怎么得到的呢？
+// 这涉及到编译器在生成位置无关代码（PIC）时的地址解析机制。
+// 编译器如何计算偏移值：
+// 静态链接阶段的地址计算：
+// 在编译和链接程序时，编译器（和链接器）已知所有符号（函数、变量等）的相对位置。
+// 即使在生成位置无关代码时，编译器仍然会构建一个完整的符号表，其中包含每个符号相对于某个基点的偏移。
+// 这个偏移值是在编译时确定的，基于代码和数据的布局，然后硬编码到最终的机器代码中。
+// call __x86.get_pc_thunk.ax
+// add $offset, %eax   ; %eax now contains the address of the page table
+// 这里$offset是编译器计算出的从当前PC到页表开始位置的偏移。
+// 这种方式确保了，无论代码被加载到内存的什么位置，计算出的地址都能正确指向页表。
+// offset可以硬编码是因为整个内核二进制文件已经写死了
+// 内核中的相对位移也就是offset一定是固定的，而在不同硬件中，内核被加载的位置可能不是固定的
+
+// 这里 "0" (0) 表示将输入寄存器 eax（由于 ax 是 eax 的一部分，因此影响 ax）的值设置为 0。
+// 在 GNU 汇编的约定中，数字标签（如 "0"）引用第一个输出操作数
+// 这里是 "=a" (__res)。所以 "0" (0) 实际上是将 eax 初始化为 0。
+//"i" 是一个约束，用于说明后面的变量（这里是 LOW_MEM）应当被作为立即数（即编译时常量）处理。
+//"c" 指示使用 ecx 寄存器来传递变量 PAGING_PAGES 的值。
+//"D" 指示使用 edi 寄存器来传递变量 mem_map + PAGING_PAGES - 1 的值。
+// mem_map是内存页目录地址，PAGING_PAGES是页目录的数量，-1就是最后一项
+//       				   lea    edx, [eax + 0x473b]  //0x473b就是3840个页表-1然后*4长度
+//    0x00006584 <+17>:    mov    eax,0x0
+//    0x00006589 <+22>:    mov    ecx,0xf00
+//    0x0000658e <+27>:    mov    edi,edx
+	__asm__("std ; repne ; scasb\n\t"  // scasb = scan stringbtye ,重复检测ax和di位置
+			"jne 1f\n\t"			   // 看到这里
 			"movb $1, 1(%%edi)\n\t"
 			"sall $12, %%ecx\n\t"
 			"addl %2, %%ecx\n\t"

@@ -1,0 +1,1683 @@
+
+;; Function sys_read (sys_read, funcdef_no=1, decl_uid=1370, cgraph_uid=2, symbol_order=1)
+
+(note 3 0 2 2 [bb 2] NOTE_INSN_BASIC_BLOCK)
+(note 2 3 7 2 NOTE_INSN_FUNCTION_BEG)
+(insn 7 2 8 2 (set (reg:CC 17 flags)
+        (compare:CC (mem/c:SI (reg/f:SI 16 argp) [6 fd+0 S4 A32])
+            (const_int 19 [0x13]))) "fs/read_write.c":25:8 11 {*cmpsi_1}
+     (nil))
+(jump_insn 8 7 9 2 (set (pc)
+        (if_then_else (gtu (reg:CC 17 flags)
+                (const_int 0 [0]))
+            (label_ref 23)
+            (pc))) "fs/read_write.c":25:8 806 {*jcc}
+     (nil)
+ -> 23)
+(note 9 8 12 3 [bb 3] NOTE_INSN_BASIC_BLOCK)
+(insn 12 9 13 3 (set (reg:CCGOC 17 flags)
+        (compare:CCGOC (mem/c:SI (plus:SI (reg/f:SI 16 argp)
+                    (const_int 8 [0x8])) [6 count+0 S4 A32])
+            (const_int 0 [0]))) "fs/read_write.c":25:23 7 {*cmpsi_ccno_1}
+     (nil))
+(jump_insn 13 12 14 3 (set (pc)
+        (if_then_else (lt (reg:CCGOC 17 flags)
+                (const_int 0 [0]))
+            (label_ref 23)
+            (pc))) "fs/read_write.c":25:23 806 {*jcc}
+     (nil)
+ -> 23)
+(note 14 13 15 4 [bb 4] NOTE_INSN_BASIC_BLOCK)
+(insn 15 14 16 4 (set (reg/f:SI 118)
+        (mem/u/c:SI (plus:SI (reg:SI 82)
+                (const:SI (unspec:SI [
+                            (symbol_ref:SI ("current") [flags 0x40]  <var_decl 0x78f44172e120 current>)
+                        ] UNSPEC_GOT))) [9  S4 A8])) "fs/read_write.c":25:55 75 {*movsi_internal}
+     (nil))
+(insn 16 15 17 4 (set (reg/f:SI 83 [ current.0_1 ])
+        (mem/f/c:SI (reg/f:SI 118) [8 current+0 S4 A32])) "fs/read_write.c":25:55 75 {*movsi_internal}
+     (nil))
+(insn 17 16 18 4 (set (reg:SI 120)
+        (mem/c:SI (reg/f:SI 16 argp) [6 fd+0 S4 A32])) "fs/read_write.c":25:46 75 {*movsi_internal}
+     (nil))
+(insn 18 17 19 4 (parallel [
+            (set (reg:SI 119)
+                (plus:SI (reg:SI 120)
+                    (const_int 160 [0xa0])))
+            (clobber (reg:CC 17 flags))
+        ]) "fs/read_write.c":25:46 209 {*addsi_1}
+     (expr_list:REG_EQUAL (plus:SI (mem/c:SI (reg/f:SI 16 argp) [6 fd+0 S4 A32])
+            (const_int 160 [0xa0]))
+        (nil)))
+(insn 19 18 20 4 (set (reg/f:SI 121)
+        (mem/f:SI (plus:SI (mult:SI (reg:SI 119)
+                    (const_int 4 [0x4]))
+                (reg/f:SI 83 [ current.0_1 ])) [5 current.0_1->filp[fd_39(D)]+0 S4 A32])) "fs/read_write.c":25:46 75 {*movsi_internal}
+     (nil))
+(insn 20 19 21 4 (set (mem/f/c:SI (plus:SI (reg/f:SI 19 frame)
+                (const_int -4 [0xfffffffffffffffc])) [5 file+0 S4 A32])
+        (reg/f:SI 121)) "fs/read_write.c":25:46 75 {*movsi_internal}
+     (nil))
+(insn 21 20 22 4 (set (reg:CCZ 17 flags)
+        (compare:CCZ (mem/f/c:SI (plus:SI (reg/f:SI 19 frame)
+                    (const_int -4 [0xfffffffffffffffc])) [5 file+0 S4 A32])
+            (const_int 0 [0]))) "fs/read_write.c":25:36 7 {*cmpsi_ccno_1}
+     (nil))
+(jump_insn 22 21 23 4 (set (pc)
+        (if_then_else (ne (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref 28)
+            (pc))) "fs/read_write.c":25:36 806 {*jcc}
+     (nil)
+ -> 28)
+(code_label 23 22 24 5 2 (nil) [2 uses])
+(note 24 23 25 5 [bb 5] NOTE_INSN_BASIC_BLOCK)
+(insn 25 24 28 5 (set (reg:SI 116 [ iftmp.1_36 ])
+        (const_int -22 [0xffffffffffffffea])) "fs/read_write.c":26:16 75 {*movsi_internal}
+     (nil))
+      ; pc falls through to BB 24
+(code_label 28 25 29 6 3 (nil) [1 uses])
+(note 29 28 30 6 [bb 6] NOTE_INSN_BASIC_BLOCK)
+(insn 30 29 31 6 (set (reg:CCZ 17 flags)
+        (compare:CCZ (mem/c:SI (plus:SI (reg/f:SI 16 argp)
+                    (const_int 8 [0x8])) [6 count+0 S4 A32])
+            (const_int 0 [0]))) "fs/read_write.c":27:8 7 {*cmpsi_ccno_1}
+     (nil))
+(jump_insn 31 30 32 6 (set (pc)
+        (if_then_else (ne (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref 36)
+            (pc))) "fs/read_write.c":27:8 806 {*jcc}
+     (nil)
+ -> 36)
+(note 32 31 33 7 [bb 7] NOTE_INSN_BASIC_BLOCK)
+(insn 33 32 36 7 (set (reg:SI 116 [ iftmp.1_36 ])
+        (const_int 0 [0])) "fs/read_write.c":28:16 75 {*movsi_internal}
+     (nil))
+      ; pc falls through to BB 24
+(code_label 36 33 37 8 5 (nil) [1 uses])
+(note 37 36 38 8 [bb 8] NOTE_INSN_BASIC_BLOCK)
+(insn 38 37 39 8 (parallel [
+            (set (reg/f:SI 7 sp)
+                (plus:SI (reg/f:SI 7 sp)
+                    (const_int -8 [0xfffffffffffffff8])))
+            (clobber (reg:CC 17 flags))
+        ]) "fs/read_write.c":29:5 209 {*addsi_1}
+     (expr_list:REG_ARGS_SIZE (const_int 8 [0x8])
+        (nil)))
+(insn 39 38 40 8 (set (mem:SI (pre_dec:SI (reg/f:SI 7 sp)) [6  S4 A32])
+        (mem/c:SI (plus:SI (reg/f:SI 16 argp)
+                (const_int 8 [0x8])) [6 count+0 S4 A32])) "fs/read_write.c":29:5 54 {*pushsi2}
+     (expr_list:REG_ARGS_SIZE (const_int 12 [0xc])
+        (nil)))
+(insn 40 39 41 8 (set (mem/f:SI (pre_dec:SI (reg/f:SI 7 sp)) [7  S4 A32])
+        (mem/f/c:SI (plus:SI (reg/f:SI 16 argp)
+                (const_int 4 [0x4])) [7 buf+0 S4 A32])) "fs/read_write.c":29:5 54 {*pushsi2}
+     (expr_list:REG_ARGS_SIZE (const_int 16 [0x10])
+        (nil)))
+(insn 41 40 42 8 (set (reg:SI 3 bx)
+        (reg:SI 82)) "fs/read_write.c":29:5 75 {*movsi_internal}
+     (nil))
+(call_insn 42 41 43 8 (call (mem:QI (symbol_ref:SI ("verify_area") [flags 0x41]  <function_decl 0x78f441738500 verify_area>) [0 verify_area S1 A8])
+        (const_int 16 [0x10])) "fs/read_write.c":29:5 812 {*call}
+     (nil)
+    (expr_list (use (reg:SI 3 bx))
+        (nil)))
+(insn 43 42 44 8 (parallel [
+            (set (reg/f:SI 7 sp)
+                (plus:SI (reg/f:SI 7 sp)
+                    (const_int 16 [0x10])))
+            (clobber (reg:CC 17 flags))
+        ]) "fs/read_write.c":29:5 209 {*addsi_1}
+     (expr_list:REG_ARGS_SIZE (const_int 0 [0])
+        (nil)))
+(insn 44 43 45 8 (set (reg/f:SI 122)
+        (mem/f/c:SI (plus:SI (reg/f:SI 19 frame)
+                (const_int -4 [0xfffffffffffffffc])) [5 file+0 S4 A32])) "fs/read_write.c":30:11 75 {*movsi_internal}
+     (nil))
+(insn 45 44 46 8 (set (reg/f:SI 123)
+        (mem/f:SI (plus:SI (reg/f:SI 122)
+                (const_int 8 [0x8])) [3 file_42->f_inode+0 S4 A32])) "fs/read_write.c":30:11 75 {*movsi_internal}
+     (nil))
+(insn 46 45 47 8 (set (mem/f/c:SI (plus:SI (reg/f:SI 19 frame)
+                (const_int -8 [0xfffffffffffffff8])) [3 inode+0 S4 A32])
+        (reg/f:SI 123)) "fs/read_write.c":30:11 75 {*movsi_internal}
+     (nil))
+(insn 47 46 48 8 (set (reg/f:SI 124)
+        (mem/f/c:SI (plus:SI (reg/f:SI 19 frame)
+                (const_int -8 [0xfffffffffffffff8])) [3 inode+0 S4 A32])) "fs/read_write.c":31:14 75 {*movsi_internal}
+     (nil))
+(insn 48 47 49 8 (set (reg:QI 84 [ _2 ])
+        (mem:QI (plus:SI (reg/f:SI 124)
+                (const_int 52 [0x34])) [0 inode_45->i_pipe+0 S1 A32])) "fs/read_write.c":31:14 77 {*movqi_internal}
+     (nil))
+(insn 49 48 50 8 (set (reg:CCZ 17 flags)
+        (compare:CCZ (reg:QI 84 [ _2 ])
+            (const_int 0 [0]))) "fs/read_write.c":31:8 5 {*cmpqi_ccno_1}
+     (nil))
+(jump_insn 50 49 51 8 (set (pc)
+        (if_then_else (eq (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref 76)
+            (pc))) "fs/read_write.c":31:8 806 {*jcc}
+     (nil)
+ -> 76)
+(note 51 50 52 9 [bb 9] NOTE_INSN_BASIC_BLOCK)
+(insn 52 51 53 9 (set (reg/f:SI 125)
+        (mem/f/c:SI (plus:SI (reg/f:SI 19 frame)
+                (const_int -4 [0xfffffffffffffffc])) [5 file+0 S4 A32])) "fs/read_write.c":32:21 75 {*movsi_internal}
+     (nil))
+(insn 53 52 54 9 (set (reg:HI 85 [ _3 ])
+        (mem:HI (reg/f:SI 125) [2 file_42->f_mode+0 S2 A32])) "fs/read_write.c":32:21 76 {*movhi_internal}
+     (nil))
+(insn 54 53 55 9 (set (reg:SI 86 [ _4 ])
+        (zero_extend:SI (reg:HI 85 [ _3 ]))) "fs/read_write.c":32:30 144 {*zero_extendhisi2}
+     (nil))
+(insn 55 54 56 9 (parallel [
+            (set (reg:SI 87 [ _5 ])
+                (and:SI (reg:SI 86 [ _4 ])
+                    (const_int 1 [0x1])))
+            (clobber (reg:CC 17 flags))
+        ]) "fs/read_write.c":32:30 490 {*andsi_1}
+     (nil))
+(insn 56 55 57 9 (set (reg:CCZ 17 flags)
+        (compare:CCZ (reg:SI 87 [ _5 ])
+            (const_int 0 [0]))) "fs/read_write.c":32:66 7 {*cmpsi_ccno_1}
+     (nil))
+(jump_insn 57 56 58 9 (set (pc)
+        (if_then_else (eq (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref 69)
+            (pc))) "fs/read_write.c":32:66 806 {*jcc}
+     (nil)
+ -> 69)
+(note 58 57 59 10 [bb 10] NOTE_INSN_BASIC_BLOCK)
+(insn 59 58 60 10 (parallel [
+            (set (reg/f:SI 7 sp)
+                (plus:SI (reg/f:SI 7 sp)
+                    (const_int -4 [0xfffffffffffffffc])))
+            (clobber (reg:CC 17 flags))
+        ]) "fs/read_write.c":32:37 209 {*addsi_1}
+     (expr_list:REG_ARGS_SIZE (const_int 4 [0x4])
+        (nil)))
+(insn 60 59 61 10 (set (mem:SI (pre_dec:SI (reg/f:SI 7 sp)) [6  S4 A32])
+        (mem/c:SI (plus:SI (reg/f:SI 16 argp)
+                (const_int 8 [0x8])) [6 count+0 S4 A32])) "fs/read_write.c":32:37 54 {*pushsi2}
+     (expr_list:REG_ARGS_SIZE (const_int 8 [0x8])
+        (nil)))
+(insn 61 60 62 10 (set (mem/f:SI (pre_dec:SI (reg/f:SI 7 sp)) [7  S4 A32])
+        (mem/f/c:SI (plus:SI (reg/f:SI 16 argp)
+                (const_int 4 [0x4])) [7 buf+0 S4 A32])) "fs/read_write.c":32:37 54 {*pushsi2}
+     (expr_list:REG_ARGS_SIZE (const_int 12 [0xc])
+        (nil)))
+(insn 62 61 63 10 (set (mem/f:SI (pre_dec:SI (reg/f:SI 7 sp)) [3  S4 A32])
+        (mem/f/c:SI (plus:SI (reg/f:SI 19 frame)
+                (const_int -8 [0xfffffffffffffff8])) [3 inode+0 S4 A32])) "fs/read_write.c":32:37 54 {*pushsi2}
+     (expr_list:REG_ARGS_SIZE (const_int 16 [0x10])
+        (nil)))
+(insn 63 62 64 10 (set (reg:SI 3 bx)
+        (reg:SI 82)) "fs/read_write.c":32:37 75 {*movsi_internal}
+     (nil))
+(call_insn 64 63 65 10 (set (reg:SI 0 ax)
+        (call (mem:QI (symbol_ref:SI ("read_pipe") [flags 0x41]  <function_decl 0x78f441738d00 read_pipe>) [0 read_pipe S1 A8])
+            (const_int 16 [0x10]))) "fs/read_write.c":32:37 823 {*call_value}
+     (nil)
+    (expr_list (use (reg:SI 3 bx))
+        (nil)))
+(insn 65 64 66 10 (parallel [
+            (set (reg/f:SI 7 sp)
+                (plus:SI (reg/f:SI 7 sp)
+                    (const_int 16 [0x10])))
+            (clobber (reg:CC 17 flags))
+        ]) "fs/read_write.c":32:37 209 {*addsi_1}
+     (expr_list:REG_ARGS_SIZE (const_int 0 [0])
+        (nil)))
+(insn 66 65 69 10 (set (reg:SI 116 [ iftmp.1_36 ])
+        (reg:SI 0 ax)) "fs/read_write.c":32:37 75 {*movsi_internal}
+     (nil))
+      ; pc falls through to BB 24
+(code_label 69 66 70 11 7 (nil) [1 uses])
+(note 70 69 71 11 [bb 11] NOTE_INSN_BASIC_BLOCK)
+(insn 71 70 76 11 (set (reg:SI 116 [ iftmp.1_36 ])
+        (const_int -5 [0xfffffffffffffffb])) "fs/read_write.c":32:66 75 {*movsi_internal}
+     (nil))
+      ; pc falls through to BB 24
+(code_label 76 71 77 12 6 (nil) [1 uses])
+(note 77 76 78 12 [bb 12] NOTE_INSN_BASIC_BLOCK)
+(insn 78 77 79 12 (set (reg/f:SI 126)
+        (mem/f/c:SI (plus:SI (reg/f:SI 19 frame)
+                (const_int -8 [0xfffffffffffffff8])) [3 inode+0 S4 A32])) "fs/read_write.c":33:9 75 {*movsi_internal}
+     (nil))
+(insn 79 78 80 12 (set (reg:HI 88 [ _6 ])
+        (mem:HI (reg/f:SI 126) [2 inode_45->i_mode+0 S2 A32])) "fs/read_write.c":33:9 76 {*movhi_internal}
+     (nil))
+(insn 80 79 81 12 (set (reg:SI 89 [ _7 ])
+        (zero_extend:SI (reg:HI 88 [ _6 ]))) "fs/read_write.c":33:9 144 {*zero_extendhisi2}
+     (nil))
+(insn 81 80 82 12 (parallel [
+            (set (reg:SI 90 [ _8 ])
+                (and:SI (reg:SI 89 [ _7 ])
+                    (const_int 61440 [0xf000])))
+            (clobber (reg:CC 17 flags))
+        ]) "fs/read_write.c":33:9 490 {*andsi_1}
+     (nil))
+(insn 82 81 83 12 (set (reg:CCZ 17 flags)
+        (compare:CCZ (reg:SI 90 [ _8 ])
+            (const_int 8192 [0x2000]))) "fs/read_write.c":33:8 11 {*cmpsi_1}
+     (nil))
+(jump_insn 83 82 84 12 (set (pc)
+        (if_then_else (ne (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref 102)
+            (pc))) "fs/read_write.c":33:8 806 {*jcc}
+     (nil)
+ -> 102)
+(note 84 83 85 13 [bb 13] NOTE_INSN_BASIC_BLOCK)
+(insn 85 84 86 13 (set (reg/f:SI 127)
+        (mem/f/c:SI (plus:SI (reg/f:SI 19 frame)
+                (const_int -4 [0xfffffffffffffffc])) [5 file+0 S4 A32])) "fs/read_write.c":34:16 75 {*movsi_internal}
+     (nil))
+(insn 86 85 87 13 (parallel [
+            (set (reg/f:SI 91 [ _9 ])
+                (plus:SI (reg/f:SI 127)
+                    (const_int 12 [0xc])))
+            (clobber (reg:CC 17 flags))
+        ]) "fs/read_write.c":34:16 209 {*addsi_1}
+     (expr_list:REG_EQUAL (plus:SI (mem/f/c:SI (plus:SI (reg/f:SI 19 frame)
+                    (const_int -4 [0xfffffffffffffffc])) [5 file+0 S4 A32])
+            (const_int 12 [0xc]))
+        (nil)))
+(insn 87 86 88 13 (set (reg/f:SI 128)
+        (mem/f/c:SI (plus:SI (reg/f:SI 19 frame)
+                (const_int -8 [0xfffffffffffffff8])) [3 inode+0 S4 A32])) "fs/read_write.c":34:43 75 {*movsi_internal}
+     (nil))
+(insn 88 87 89 13 (set (reg:HI 92 [ _10 ])
+        (mem:HI (plus:SI (reg/f:SI 128)
+                (const_int 14 [0xe])) [2 inode_45->i_zone[0]+0 S2 A16])) "fs/read_write.c":34:43 76 {*movhi_internal}
+     (nil))
+(insn 89 88 90 13 (set (reg:SI 93 [ _11 ])
+        (zero_extend:SI (reg:HI 92 [ _10 ]))) "fs/read_write.c":34:16 144 {*zero_extendhisi2}
+     (nil))
+(insn 90 89 91 13 (parallel [
+            (set (reg/f:SI 7 sp)
+                (plus:SI (reg/f:SI 7 sp)
+                    (const_int -12 [0xfffffffffffffff4])))
+            (clobber (reg:CC 17 flags))
+        ]) "fs/read_write.c":34:16 209 {*addsi_1}
+     (expr_list:REG_ARGS_SIZE (const_int 12 [0xc])
+        (nil)))
+(insn 91 90 92 13 (set (mem/f:SI (pre_dec:SI (reg/f:SI 7 sp)) [18  S4 A32])
+        (reg/f:SI 91 [ _9 ])) "fs/read_write.c":34:16 54 {*pushsi2}
+     (expr_list:REG_ARGS_SIZE (const_int 16 [0x10])
+        (nil)))
+(insn 92 91 93 13 (set (mem:SI (pre_dec:SI (reg/f:SI 7 sp)) [6  S4 A32])
+        (mem/c:SI (plus:SI (reg/f:SI 16 argp)
+                (const_int 8 [0x8])) [6 count+0 S4 A32])) "fs/read_write.c":34:16 54 {*pushsi2}
+     (expr_list:REG_ARGS_SIZE (const_int 20 [0x14])
+        (nil)))
+(insn 93 92 94 13 (set (mem/f:SI (pre_dec:SI (reg/f:SI 7 sp)) [7  S4 A32])
+        (mem/f/c:SI (plus:SI (reg/f:SI 16 argp)
+                (const_int 4 [0x4])) [7 buf+0 S4 A32])) "fs/read_write.c":34:16 54 {*pushsi2}
+     (expr_list:REG_ARGS_SIZE (const_int 24 [0x18])
+        (nil)))
+(insn 94 93 95 13 (set (mem:SI (pre_dec:SI (reg/f:SI 7 sp)) [6  S4 A32])
+        (reg:SI 93 [ _11 ])) "fs/read_write.c":34:16 54 {*pushsi2}
+     (expr_list:REG_ARGS_SIZE (const_int 28 [0x1c])
+        (nil)))
+(insn 95 94 96 13 (set (mem:SI (pre_dec:SI (reg/f:SI 7 sp)) [6  S4 A32])
+        (const_int 0 [0])) "fs/read_write.c":34:16 54 {*pushsi2}
+     (expr_list:REG_ARGS_SIZE (const_int 32 [0x20])
+        (nil)))
+(insn 96 95 97 13 (set (reg:SI 3 bx)
+        (reg:SI 82)) "fs/read_write.c":34:16 75 {*movsi_internal}
+     (nil))
+(call_insn 97 96 98 13 (set (reg:SI 0 ax)
+        (call (mem:QI (symbol_ref:SI ("rw_char") [flags 0x41]  <function_decl 0x78f441738e00 rw_char>) [0 rw_char S1 A8])
+            (const_int 32 [0x20]))) "fs/read_write.c":34:16 823 {*call_value}
+     (nil)
+    (expr_list (use (reg:SI 3 bx))
+        (nil)))
+(insn 98 97 99 13 (parallel [
+            (set (reg/f:SI 7 sp)
+                (plus:SI (reg/f:SI 7 sp)
+                    (const_int 32 [0x20])))
+            (clobber (reg:CC 17 flags))
+        ]) "fs/read_write.c":34:16 209 {*addsi_1}
+     (expr_list:REG_ARGS_SIZE (const_int 0 [0])
+        (nil)))
+(insn 99 98 102 13 (set (reg:SI 116 [ iftmp.1_36 ])
+        (reg:SI 0 ax)) "fs/read_write.c":34:16 75 {*movsi_internal}
+     (nil))
+      ; pc falls through to BB 24
+(code_label 102 99 103 14 9 (nil) [1 uses])
+(note 103 102 104 14 [bb 14] NOTE_INSN_BASIC_BLOCK)
+(insn 104 103 105 14 (set (reg/f:SI 129)
+        (mem/f/c:SI (plus:SI (reg/f:SI 19 frame)
+                (const_int -8 [0xfffffffffffffff8])) [3 inode+0 S4 A32])) "fs/read_write.c":35:9 75 {*movsi_internal}
+     (nil))
+(insn 105 104 106 14 (set (reg:HI 94 [ _12 ])
+        (mem:HI (reg/f:SI 129) [2 inode_45->i_mode+0 S2 A32])) "fs/read_write.c":35:9 76 {*movhi_internal}
+     (nil))
+(insn 106 105 107 14 (set (reg:SI 95 [ _13 ])
+        (zero_extend:SI (reg:HI 94 [ _12 ]))) "fs/read_write.c":35:9 144 {*zero_extendhisi2}
+     (nil))
+(insn 107 106 108 14 (parallel [
+            (set (reg:SI 96 [ _14 ])
+                (and:SI (reg:SI 95 [ _13 ])
+                    (const_int 61440 [0xf000])))
+            (clobber (reg:CC 17 flags))
+        ]) "fs/read_write.c":35:9 490 {*andsi_1}
+     (nil))
+(insn 108 107 109 14 (set (reg:CCZ 17 flags)
+        (compare:CCZ (reg:SI 96 [ _14 ])
+            (const_int 24576 [0x6000]))) "fs/read_write.c":35:8 11 {*cmpsi_1}
+     (nil))
+(jump_insn 109 108 110 14 (set (pc)
+        (if_then_else (ne (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref 126)
+            (pc))) "fs/read_write.c":35:8 806 {*jcc}
+     (nil)
+ -> 126)
+(note 110 109 111 15 [bb 15] NOTE_INSN_BASIC_BLOCK)
+(insn 111 110 112 15 (set (reg/f:SI 130)
+        (mem/f/c:SI (plus:SI (reg/f:SI 19 frame)
+                (const_int -4 [0xfffffffffffffffc])) [5 file+0 S4 A32])) "fs/read_write.c":37:48 75 {*movsi_internal}
+     (nil))
+(insn 112 111 113 15 (parallel [
+            (set (reg/f:SI 97 [ _15 ])
+                (plus:SI (reg/f:SI 130)
+                    (const_int 12 [0xc])))
+            (clobber (reg:CC 17 flags))
+        ]) "fs/read_write.c":37:48 209 {*addsi_1}
+     (expr_list:REG_EQUAL (plus:SI (mem/f/c:SI (plus:SI (reg/f:SI 19 frame)
+                    (const_int -4 [0xfffffffffffffffc])) [5 file+0 S4 A32])
+            (const_int 12 [0xc]))
+        (nil)))
+(insn 113 112 114 15 (set (reg/f:SI 131)
+        (mem/f/c:SI (plus:SI (reg/f:SI 19 frame)
+                (const_int -8 [0xfffffffffffffff8])) [3 inode+0 S4 A32])) "fs/read_write.c":36:40 75 {*movsi_internal}
+     (nil))
+(insn 114 113 115 15 (set (reg:HI 98 [ _16 ])
+        (mem:HI (plus:SI (reg/f:SI 131)
+                (const_int 14 [0xe])) [2 inode_45->i_zone[0]+0 S2 A16])) "fs/read_write.c":36:40 76 {*movhi_internal}
+     (nil))
+(insn 115 114 116 15 (set (reg:SI 99 [ _17 ])
+        (zero_extend:SI (reg:HI 98 [ _16 ]))) "fs/read_write.c":36:16 144 {*zero_extendhisi2}
+     (nil))
+(insn 116 115 117 15 (set (mem:SI (pre_dec:SI (reg/f:SI 7 sp)) [6  S4 A32])
+        (mem/c:SI (plus:SI (reg/f:SI 16 argp)
+                (const_int 8 [0x8])) [6 count+0 S4 A32])) "fs/read_write.c":36:16 54 {*pushsi2}
+     (expr_list:REG_ARGS_SIZE (const_int 4 [0x4])
+        (nil)))
+(insn 117 116 118 15 (set (mem/f:SI (pre_dec:SI (reg/f:SI 7 sp)) [7  S4 A32])
+        (mem/f/c:SI (plus:SI (reg/f:SI 16 argp)
+                (const_int 4 [0x4])) [7 buf+0 S4 A32])) "fs/read_write.c":36:16 54 {*pushsi2}
+     (expr_list:REG_ARGS_SIZE (const_int 8 [0x8])
+        (nil)))
+(insn 118 117 119 15 (set (mem/f:SI (pre_dec:SI (reg/f:SI 7 sp)) [18  S4 A32])
+        (reg/f:SI 97 [ _15 ])) "fs/read_write.c":36:16 54 {*pushsi2}
+     (expr_list:REG_ARGS_SIZE (const_int 12 [0xc])
+        (nil)))
+(insn 119 118 120 15 (set (mem:SI (pre_dec:SI (reg/f:SI 7 sp)) [6  S4 A32])
+        (reg:SI 99 [ _17 ])) "fs/read_write.c":36:16 54 {*pushsi2}
+     (expr_list:REG_ARGS_SIZE (const_int 16 [0x10])
+        (nil)))
+(insn 120 119 121 15 (set (reg:SI 3 bx)
+        (reg:SI 82)) "fs/read_write.c":36:16 75 {*movsi_internal}
+     (nil))
+(call_insn 121 120 122 15 (set (reg:SI 0 ax)
+        (call (mem:QI (symbol_ref:SI ("block_read") [flags 0x41]  <function_decl 0x78f441738a00 block_read>) [0 block_read S1 A8])
+            (const_int 16 [0x10]))) "fs/read_write.c":36:16 823 {*call_value}
+     (nil)
+    (expr_list (use (reg:SI 3 bx))
+        (nil)))
+(insn 122 121 123 15 (parallel [
+            (set (reg/f:SI 7 sp)
+                (plus:SI (reg/f:SI 7 sp)
+                    (const_int 16 [0x10])))
+            (clobber (reg:CC 17 flags))
+        ]) "fs/read_write.c":36:16 209 {*addsi_1}
+     (expr_list:REG_ARGS_SIZE (const_int 0 [0])
+        (nil)))
+(insn 123 122 126 15 (set (reg:SI 116 [ iftmp.1_36 ])
+        (reg:SI 0 ax)) "fs/read_write.c":36:16 75 {*movsi_internal}
+     (nil))
+      ; pc falls through to BB 24
+(code_label 126 123 127 16 10 (nil) [1 uses])
+(note 127 126 128 16 [bb 16] NOTE_INSN_BASIC_BLOCK)
+(insn 128 127 129 16 (set (reg/f:SI 132)
+        (mem/f/c:SI (plus:SI (reg/f:SI 19 frame)
+                (const_int -8 [0xfffffffffffffff8])) [3 inode+0 S4 A32])) "fs/read_write.c":38:9 75 {*movsi_internal}
+     (nil))
+(insn 129 128 130 16 (set (reg:HI 100 [ _18 ])
+        (mem:HI (reg/f:SI 132) [2 inode_45->i_mode+0 S2 A32])) "fs/read_write.c":38:9 76 {*movhi_internal}
+     (nil))
+(insn 130 129 131 16 (set (reg:SI 101 [ _19 ])
+        (zero_extend:SI (reg:HI 100 [ _18 ]))) "fs/read_write.c":38:9 144 {*zero_extendhisi2}
+     (nil))
+(insn 131 130 132 16 (parallel [
+            (set (reg:SI 102 [ _20 ])
+                (and:SI (reg:SI 101 [ _19 ])
+                    (const_int 61440 [0xf000])))
+            (clobber (reg:CC 17 flags))
+        ]) "fs/read_write.c":38:9 490 {*andsi_1}
+     (nil))
+(insn 132 131 133 16 (set (reg:CCZ 17 flags)
+        (compare:CCZ (reg:SI 102 [ _20 ])
+            (const_int 16384 [0x4000]))) "fs/read_write.c":38:8 11 {*cmpsi_1}
+     (nil))
+(jump_insn 133 132 134 16 (set (pc)
+        (if_then_else (eq (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref 141)
+            (pc))) "fs/read_write.c":38:8 806 {*jcc}
+     (nil)
+ -> 141)
+(note 134 133 135 17 [bb 17] NOTE_INSN_BASIC_BLOCK)
+(insn 135 134 136 17 (set (reg/f:SI 133)
+        (mem/f/c:SI (plus:SI (reg/f:SI 19 frame)
+                (const_int -8 [0xfffffffffffffff8])) [3 inode+0 S4 A32])) "fs/read_write.c":38:35 75 {*movsi_internal}
+     (nil))
+(insn 136 135 137 17 (set (reg:HI 103 [ _21 ])
+        (mem:HI (reg/f:SI 133) [2 inode_45->i_mode+0 S2 A32])) "fs/read_write.c":38:35 76 {*movhi_internal}
+     (nil))
+(insn 137 136 138 17 (set (reg:SI 104 [ _22 ])
+        (zero_extend:SI (reg:HI 103 [ _21 ]))) "fs/read_write.c":38:35 144 {*zero_extendhisi2}
+     (nil))
+(insn 138 137 139 17 (parallel [
+            (set (reg:SI 105 [ _23 ])
+                (and:SI (reg:SI 104 [ _22 ])
+                    (const_int 61440 [0xf000])))
+            (clobber (reg:CC 17 flags))
+        ]) "fs/read_write.c":38:35 490 {*andsi_1}
+     (nil))
+(insn 139 138 140 17 (set (reg:CCZ 17 flags)
+        (compare:CCZ (reg:SI 105 [ _23 ])
+            (const_int 32768 [0x8000]))) "fs/read_write.c":38:32 11 {*cmpsi_1}
+     (nil))
+(jump_insn 140 139 141 17 (set (pc)
+        (if_then_else (ne (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref 182)
+            (pc))) "fs/read_write.c":38:32 806 {*jcc}
+     (nil)
+ -> 182)
+(code_label 141 140 142 18 11 (nil) [1 uses])
+(note 142 141 143 18 [bb 18] NOTE_INSN_BASIC_BLOCK)
+(insn 143 142 144 18 (set (reg/f:SI 134)
+        (mem/f/c:SI (plus:SI (reg/f:SI 19 frame)
+                (const_int -4 [0xfffffffffffffffc])) [5 file+0 S4 A32])) "fs/read_write.c":39:25 75 {*movsi_internal}
+     (nil))
+(insn 144 143 145 18 (set (reg:SI 106 [ _24 ])
+        (mem:SI (plus:SI (reg/f:SI 134)
+                (const_int 12 [0xc])) [4 file_42->f_pos+0 S4 A32])) "fs/read_write.c":39:25 75 {*movsi_internal}
+     (nil))
+(insn 145 144 146 18 (set (reg:SI 135)
+        (mem/c:SI (plus:SI (reg/f:SI 16 argp)
+                (const_int 8 [0x8])) [6 count+0 S4 A32])) "fs/read_write.c":39:19 75 {*movsi_internal}
+     (nil))
+(insn 146 145 147 18 (parallel [
+            (set (reg:SI 107 [ _25 ])
+                (plus:SI (reg:SI 106 [ _24 ])
+                    (reg:SI 135)))
+            (clobber (reg:CC 17 flags))
+        ]) "fs/read_write.c":39:19 209 {*addsi_1}
+     (expr_list:REG_EQUAL (plus:SI (reg:SI 106 [ _24 ])
+            (mem/c:SI (plus:SI (reg/f:SI 16 argp)
+                    (const_int 8 [0x8])) [6 count+0 S4 A32]))
+        (nil)))
+(insn 147 146 148 18 (set (reg:SI 108 [ _26 ])
+        (reg:SI 107 [ _25 ])) "fs/read_write.c":39:19 75 {*movsi_internal}
+     (nil))
+(insn 148 147 149 18 (set (reg/f:SI 136)
+        (mem/f/c:SI (plus:SI (reg/f:SI 19 frame)
+                (const_int -8 [0xfffffffffffffff8])) [3 inode+0 S4 A32])) "fs/read_write.c":39:40 75 {*movsi_internal}
+     (nil))
+(insn 149 148 150 18 (set (reg:SI 109 [ _27 ])
+        (mem:SI (plus:SI (reg/f:SI 136)
+                (const_int 4 [0x4])) [4 inode_45->i_size+0 S4 A32])) "fs/read_write.c":39:40 75 {*movsi_internal}
+     (nil))
+(insn 150 149 151 18 (set (reg:CC 17 flags)
+        (compare:CC (reg:SI 108 [ _26 ])
+            (reg:SI 109 [ _27 ]))) "fs/read_write.c":39:12 11 {*cmpsi_1}
+     (nil))
+(jump_insn 151 150 152 18 (set (pc)
+        (if_then_else (leu (reg:CC 17 flags)
+                (const_int 0 [0]))
+            (label_ref 160)
+            (pc))) "fs/read_write.c":39:12 806 {*jcc}
+     (nil)
+ -> 160)
+(note 152 151 153 19 [bb 19] NOTE_INSN_BASIC_BLOCK)
+(insn 153 152 154 19 (set (reg/f:SI 137)
+        (mem/f/c:SI (plus:SI (reg/f:SI 19 frame)
+                (const_int -8 [0xfffffffffffffff8])) [3 inode+0 S4 A32])) "fs/read_write.c":40:26 75 {*movsi_internal}
+     (nil))
+(insn 154 153 155 19 (set (reg:SI 110 [ _28 ])
+        (mem:SI (plus:SI (reg/f:SI 137)
+                (const_int 4 [0x4])) [4 inode_45->i_size+0 S4 A32])) "fs/read_write.c":40:26 75 {*movsi_internal}
+     (nil))
+(insn 155 154 156 19 (set (reg/f:SI 138)
+        (mem/f/c:SI (plus:SI (reg/f:SI 19 frame)
+                (const_int -4 [0xfffffffffffffffc])) [5 file+0 S4 A32])) "fs/read_write.c":40:41 75 {*movsi_internal}
+     (nil))
+(insn 156 155 157 19 (set (reg:SI 111 [ _29 ])
+        (mem:SI (plus:SI (reg/f:SI 138)
+                (const_int 12 [0xc])) [4 file_42->f_pos+0 S4 A32])) "fs/read_write.c":40:41 75 {*movsi_internal}
+     (nil))
+(insn 157 156 158 19 (set (reg:SI 112 [ _30 ])
+        (reg:SI 111 [ _29 ])) "fs/read_write.c":40:41 75 {*movsi_internal}
+     (nil))
+(insn 158 157 159 19 (parallel [
+            (set (reg:SI 113 [ _31 ])
+                (minus:SI (reg:SI 110 [ _28 ])
+                    (reg:SI 112 [ _30 ])))
+            (clobber (reg:CC 17 flags))
+        ]) "fs/read_write.c":40:35 282 {*subsi_1}
+     (nil))
+(insn 159 158 160 19 (set (mem/c:SI (plus:SI (reg/f:SI 16 argp)
+                (const_int 8 [0x8])) [6 count+0 S4 A32])
+        (reg:SI 113 [ _31 ])) "fs/read_write.c":40:19 75 {*movsi_internal}
+     (nil))
+(code_label 160 159 161 20 13 (nil) [1 uses])
+(note 161 160 164 20 [bb 20] NOTE_INSN_BASIC_BLOCK)
+(insn 164 161 165 20 (set (reg:CCNO 17 flags)
+        (compare:CCNO (mem/c:SI (plus:SI (reg/f:SI 16 argp)
+                    (const_int 8 [0x8])) [6 count+0 S4 A32])
+            (const_int 0 [0]))) "fs/read_write.c":41:12 7 {*cmpsi_ccno_1}
+     (nil))
+(jump_insn 165 164 166 20 (set (pc)
+        (if_then_else (gt (reg:CCNO 17 flags)
+                (const_int 0 [0]))
+            (label_ref 170)
+            (pc))) "fs/read_write.c":41:12 806 {*jcc}
+     (nil)
+ -> 170)
+(note 166 165 167 21 [bb 21] NOTE_INSN_BASIC_BLOCK)
+(insn 167 166 170 21 (set (reg:SI 116 [ iftmp.1_36 ])
+        (const_int 0 [0])) "fs/read_write.c":42:20 75 {*movsi_internal}
+     (nil))
+      ; pc falls through to BB 24
+(code_label 170 167 171 22 14 (nil) [1 uses])
+(note 171 170 172 22 [bb 22] NOTE_INSN_BASIC_BLOCK)
+(insn 172 171 173 22 (set (mem:SI (pre_dec:SI (reg/f:SI 7 sp)) [6  S4 A32])
+        (mem/c:SI (plus:SI (reg/f:SI 16 argp)
+                (const_int 8 [0x8])) [6 count+0 S4 A32])) "fs/read_write.c":43:16 54 {*pushsi2}
+     (expr_list:REG_ARGS_SIZE (const_int 4 [0x4])
+        (nil)))
+(insn 173 172 174 22 (set (mem/f:SI (pre_dec:SI (reg/f:SI 7 sp)) [7  S4 A32])
+        (mem/f/c:SI (plus:SI (reg/f:SI 16 argp)
+                (const_int 4 [0x4])) [7 buf+0 S4 A32])) "fs/read_write.c":43:16 54 {*pushsi2}
+     (expr_list:REG_ARGS_SIZE (const_int 8 [0x8])
+        (nil)))
+(insn 174 173 175 22 (set (mem/f:SI (pre_dec:SI (reg/f:SI 7 sp)) [5  S4 A32])
+        (mem/f/c:SI (plus:SI (reg/f:SI 19 frame)
+                (const_int -4 [0xfffffffffffffffc])) [5 file+0 S4 A32])) "fs/read_write.c":43:16 54 {*pushsi2}
+     (expr_list:REG_ARGS_SIZE (const_int 12 [0xc])
+        (nil)))
+(insn 175 174 176 22 (set (mem/f:SI (pre_dec:SI (reg/f:SI 7 sp)) [3  S4 A32])
+        (mem/f/c:SI (plus:SI (reg/f:SI 19 frame)
+                (const_int -8 [0xfffffffffffffff8])) [3 inode+0 S4 A32])) "fs/read_write.c":43:16 54 {*pushsi2}
+     (expr_list:REG_ARGS_SIZE (const_int 16 [0x10])
+        (nil)))
+(insn 176 175 177 22 (set (reg:SI 3 bx)
+        (reg:SI 82)) "fs/read_write.c":43:16 75 {*movsi_internal}
+     (nil))
+(call_insn 177 176 178 22 (set (reg:SI 0 ax)
+        (call (mem:QI (symbol_ref:SI ("file_read") [flags 0x41]  <function_decl 0x78f441738f00 file_read>) [0 file_read S1 A8])
+            (const_int 16 [0x10]))) "fs/read_write.c":43:16 823 {*call_value}
+     (nil)
+    (expr_list (use (reg:SI 3 bx))
+        (nil)))
+(insn 178 177 179 22 (parallel [
+            (set (reg/f:SI 7 sp)
+                (plus:SI (reg/f:SI 7 sp)
+                    (const_int 16 [0x10])))
+            (clobber (reg:CC 17 flags))
+        ]) "fs/read_write.c":43:16 209 {*addsi_1}
+     (expr_list:REG_ARGS_SIZE (const_int 0 [0])
+        (nil)))
+(insn 179 178 182 22 (set (reg:SI 116 [ iftmp.1_36 ])
+        (reg:SI 0 ax)) "fs/read_write.c":43:16 75 {*movsi_internal}
+     (nil))
+      ; pc falls through to BB 24
+(code_label 182 179 183 23 12 (nil) [1 uses])
+(note 183 182 184 23 [bb 23] NOTE_INSN_BASIC_BLOCK)
+(insn 184 183 185 23 (set (reg/f:SI 139)
+        (mem/f/c:SI (plus:SI (reg/f:SI 19 frame)
+                (const_int -8 [0xfffffffffffffff8])) [3 inode+0 S4 A32])) "fs/read_write.c":45:49 75 {*movsi_internal}
+     (nil))
+(insn 185 184 186 23 (set (reg:HI 114 [ _32 ])
+        (mem:HI (reg/f:SI 139) [2 inode_45->i_mode+0 S2 A32])) "fs/read_write.c":45:49 76 {*movhi_internal}
+     (nil))
+(insn 186 185 187 23 (set (reg:SI 115 [ _33 ])
+        (zero_extend:SI (reg:HI 114 [ _32 ]))) "fs/read_write.c":45:5 144 {*zero_extendhisi2}
+     (nil))
+(insn 187 186 188 23 (parallel [
+            (set (reg/f:SI 7 sp)
+                (plus:SI (reg/f:SI 7 sp)
+                    (const_int -8 [0xfffffffffffffff8])))
+            (clobber (reg:CC 17 flags))
+        ]) "fs/read_write.c":45:5 209 {*addsi_1}
+     (expr_list:REG_ARGS_SIZE (const_int 8 [0x8])
+        (nil)))
+(insn 188 187 189 23 (set (mem:SI (pre_dec:SI (reg/f:SI 7 sp)) [6  S4 A32])
+        (reg:SI 115 [ _33 ])) "fs/read_write.c":45:5 54 {*pushsi2}
+     (expr_list:REG_ARGS_SIZE (const_int 12 [0xc])
+        (nil)))
+(insn 189 188 190 23 (set (reg/f:SI 140)
+        (plus:SI (reg:SI 82)
+            (const:SI (unspec:SI [
+                        (symbol_ref/f:SI ("*.LC0") [flags 0x2]  <var_decl 0x78f44172e2d0 *.LC0>)
+                    ] UNSPEC_GOTOFF)))) "fs/read_write.c":45:5 205 {*leasi}
+     (expr_list:REG_EQUAL (symbol_ref/f:SI ("*.LC0") [flags 0x2]  <var_decl 0x78f44172e2d0 *.LC0>)
+        (nil)))
+(insn 190 189 191 23 (set (mem/f:SI (pre_dec:SI (reg/f:SI 7 sp)) [7  S4 A32])
+        (reg/f:SI 140)) "fs/read_write.c":45:5 54 {*pushsi2}
+     (expr_list:REG_ARGS_SIZE (const_int 16 [0x10])
+        (nil)))
+(insn 191 190 192 23 (set (reg:SI 3 bx)
+        (reg:SI 82)) "fs/read_write.c":45:5 75 {*movsi_internal}
+     (nil))
+(call_insn 192 191 193 23 (set (reg:SI 0 ax)
+        (call (mem:QI (symbol_ref:SI ("printk") [flags 0x41]  <function_decl 0x78f441738900 printk>) [0 printk S1 A8])
+            (const_int 16 [0x10]))) "fs/read_write.c":45:5 823 {*call_value}
+     (nil)
+    (expr_list (use (reg:SI 3 bx))
+        (nil)))
+(insn 193 192 194 23 (parallel [
+            (set (reg/f:SI 7 sp)
+                (plus:SI (reg/f:SI 7 sp)
+                    (const_int 16 [0x10])))
+            (clobber (reg:CC 17 flags))
+        ]) "fs/read_write.c":45:5 209 {*addsi_1}
+     (expr_list:REG_ARGS_SIZE (const_int 0 [0])
+        (nil)))
+(insn 194 193 195 23 (set (reg:SI 116 [ iftmp.1_36 ])
+        (const_int -22 [0xffffffffffffffea])) "fs/read_write.c":46:12 75 {*movsi_internal}
+     (nil))
+(code_label 195 194 196 24 4 (nil) [0 uses])
+(note 196 195 197 24 [bb 24] NOTE_INSN_BASIC_BLOCK)
+(insn 197 196 201 24 (set (reg:SI 117 [ <retval> ])
+        (reg:SI 116 [ iftmp.1_36 ])) "fs/read_write.c":47:1 75 {*movsi_internal}
+     (nil))
+(insn 201 197 202 24 (set (reg/i:SI 0 ax)
+        (reg:SI 117 [ <retval> ])) "fs/read_write.c":47:1 75 {*movsi_internal}
+     (nil))
+(insn 202 201 0 24 (use (reg/i:SI 0 ax)) "fs/read_write.c":47:1 -1
+     (nil))
+
+;; Function sys_lseek (sys_lseek, funcdef_no=2, decl_uid=1377, cgraph_uid=3, symbol_order=2)
+
+(note 3 0 2 2 [bb 2] NOTE_INSN_BASIC_BLOCK)
+(note 2 3 7 2 NOTE_INSN_FUNCTION_BEG)
+(insn 7 2 8 2 (set (reg:CC 17 flags)
+        (compare:CC (mem/c:SI (reg/f:SI 16 argp) [6 fd+0 S4 A32])
+            (const_int 19 [0x13]))) "fs/read_write.c":54:8 11 {*cmpsi_1}
+     (nil))
+(jump_insn 8 7 9 2 (set (pc)
+        (if_then_else (gtu (reg:CC 17 flags)
+                (const_int 0 [0]))
+            (label_ref 39)
+            (pc))) "fs/read_write.c":54:8 806 {*jcc}
+     (nil)
+ -> 39)
+(note 9 8 10 3 [bb 3] NOTE_INSN_BASIC_BLOCK)
+(insn 10 9 11 3 (set (reg/f:SI 103)
+        (mem/u/c:SI (plus:SI (reg:SI 82)
+                (const:SI (unspec:SI [
+                            (symbol_ref:SI ("current") [flags 0x40]  <var_decl 0x78f44172e120 current>)
+                        ] UNSPEC_GOT))) [9  S4 A8])) "fs/read_write.c":54:42 75 {*movsi_internal}
+     (nil))
+(insn 11 10 12 3 (set (reg/f:SI 83 [ current.2_1 ])
+        (mem/f/c:SI (reg/f:SI 103) [8 current+0 S4 A32])) "fs/read_write.c":54:42 75 {*movsi_internal}
+     (nil))
+(insn 12 11 13 3 (set (reg:SI 105)
+        (mem/c:SI (reg/f:SI 16 argp) [6 fd+0 S4 A32])) "fs/read_write.c":54:33 75 {*movsi_internal}
+     (nil))
+(insn 13 12 14 3 (parallel [
+            (set (reg:SI 104)
+                (plus:SI (reg:SI 105)
+                    (const_int 160 [0xa0])))
+            (clobber (reg:CC 17 flags))
+        ]) "fs/read_write.c":54:33 209 {*addsi_1}
+     (expr_list:REG_EQUAL (plus:SI (mem/c:SI (reg/f:SI 16 argp) [6 fd+0 S4 A32])
+            (const_int 160 [0xa0]))
+        (nil)))
+(insn 14 13 15 3 (set (reg/f:SI 106)
+        (mem/f:SI (plus:SI (mult:SI (reg:SI 104)
+                    (const_int 4 [0x4]))
+                (reg/f:SI 83 [ current.2_1 ])) [5 current.2_1->filp[fd_22(D)]+0 S4 A32])) "fs/read_write.c":54:33 75 {*movsi_internal}
+     (nil))
+(insn 15 14 16 3 (set (mem/f/c:SI (plus:SI (reg/f:SI 19 frame)
+                (const_int -4 [0xfffffffffffffffc])) [5 file+0 S4 A32])
+        (reg/f:SI 106)) "fs/read_write.c":54:33 75 {*movsi_internal}
+     (nil))
+(insn 16 15 17 3 (set (reg:CCZ 17 flags)
+        (compare:CCZ (mem/f/c:SI (plus:SI (reg/f:SI 19 frame)
+                    (const_int -4 [0xfffffffffffffffc])) [5 file+0 S4 A32])
+            (const_int 0 [0]))) "fs/read_write.c":54:23 7 {*cmpsi_ccno_1}
+     (nil))
+(jump_insn 17 16 18 3 (set (pc)
+        (if_then_else (eq (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref 39)
+            (pc))) "fs/read_write.c":54:23 806 {*jcc}
+     (nil)
+ -> 39)
+(note 18 17 19 4 [bb 4] NOTE_INSN_BASIC_BLOCK)
+(insn 19 18 20 4 (set (reg/f:SI 107)
+        (mem/f/c:SI (plus:SI (reg/f:SI 19 frame)
+                (const_int -4 [0xfffffffffffffffc])) [5 file+0 S4 A32])) "fs/read_write.c":54:63 75 {*movsi_internal}
+     (nil))
+(insn 20 19 21 4 (set (reg/f:SI 84 [ _2 ])
+        (mem/f:SI (plus:SI (reg/f:SI 107)
+                (const_int 8 [0x8])) [3 file_24->f_inode+0 S4 A32])) "fs/read_write.c":54:63 75 {*movsi_internal}
+     (nil))
+(insn 21 20 22 4 (set (reg:CCZ 17 flags)
+        (compare:CCZ (reg/f:SI 84 [ _2 ])
+            (const_int 0 [0]))) "fs/read_write.c":54:54 7 {*cmpsi_ccno_1}
+     (nil))
+(jump_insn 22 21 23 4 (set (pc)
+        (if_then_else (eq (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref 39)
+            (pc))) "fs/read_write.c":54:54 806 {*jcc}
+     (nil)
+ -> 39)
+(note 23 22 24 5 [bb 5] NOTE_INSN_BASIC_BLOCK)
+(insn 24 23 25 5 (set (reg/f:SI 108)
+        (mem/f/c:SI (plus:SI (reg/f:SI 19 frame)
+                (const_int -4 [0xfffffffffffffffc])) [5 file+0 S4 A32])) "fs/read_write.c":55:13 75 {*movsi_internal}
+     (nil))
+(insn 25 24 26 5 (set (reg/f:SI 85 [ _3 ])
+        (mem/f:SI (plus:SI (reg/f:SI 108)
+                (const_int 8 [0x8])) [3 file_24->f_inode+0 S4 A32])) "fs/read_write.c":55:13 75 {*movsi_internal}
+     (nil))
+(insn 26 25 27 5 (set (reg:HI 86 [ _4 ])
+        (mem:HI (plus:SI (reg/f:SI 85 [ _3 ])
+                (const_int 44 [0x2c])) [2 _3->i_dev+0 S2 A32])) "fs/read_write.c":55:13 76 {*movhi_internal}
+     (nil))
+(insn 27 26 28 5 (parallel [
+            (set (reg:HI 87 [ _5 ])
+                (lshiftrt:HI (reg:HI 86 [ _4 ])
+                    (const_int 8 [0x8])))
+            (clobber (reg:CC 17 flags))
+        ]) "fs/read_write.c":55:13 711 {*lshrhi3_1}
+     (nil))
+(insn 28 27 29 5 (set (reg:CCZ 17 flags)
+        (compare:CCZ (reg:HI 87 [ _5 ])
+            (const_int 0 [0]))) "fs/read_write.c":55:9 6 {*cmphi_ccno_1}
+     (nil))
+(jump_insn 29 28 30 5 (set (pc)
+        (if_then_else (eq (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref 39)
+            (pc))) "fs/read_write.c":55:9 806 {*jcc}
+     (nil)
+ -> 39)
+(note 30 29 31 6 [bb 6] NOTE_INSN_BASIC_BLOCK)
+(insn 31 30 32 6 (set (reg/f:SI 109)
+        (mem/f/c:SI (plus:SI (reg/f:SI 19 frame)
+                (const_int -4 [0xfffffffffffffffc])) [5 file+0 S4 A32])) "fs/read_write.c":55:13 75 {*movsi_internal}
+     (nil))
+(insn 32 31 33 6 (set (reg/f:SI 88 [ _6 ])
+        (mem/f:SI (plus:SI (reg/f:SI 109)
+                (const_int 8 [0x8])) [3 file_24->f_inode+0 S4 A32])) "fs/read_write.c":55:13 75 {*movsi_internal}
+     (nil))
+(insn 33 32 34 6 (set (reg:HI 89 [ _7 ])
+        (mem:HI (plus:SI (reg/f:SI 88 [ _6 ])
+                (const_int 44 [0x2c])) [2 _6->i_dev+0 S2 A32])) "fs/read_write.c":55:13 76 {*movhi_internal}
+     (nil))
+(insn 34 33 37 6 (parallel [
+            (set (reg:HI 90 [ _8 ])
+                (lshiftrt:HI (reg:HI 89 [ _7 ])
+                    (const_int 8 [0x8])))
+            (clobber (reg:CC 17 flags))
+        ]) "fs/read_write.c":55:13 711 {*lshrhi3_1}
+     (nil))
+(insn 37 34 38 6 (set (reg:CC 17 flags)
+        (compare:CC (reg:HI 90 [ _8 ])
+            (const_int 3 [0x3]))) "fs/read_write.c":55:12 10 {*cmphi_1}
+     (nil))
+(jump_insn 38 37 39 6 (set (pc)
+        (if_then_else (leu (reg:CC 17 flags)
+                (const_int 0 [0]))
+            (label_ref 44)
+            (pc))) "fs/read_write.c":55:12 806 {*jcc}
+     (nil)
+ -> 44)
+(code_label 39 38 40 7 16 (nil) [4 uses])
+(note 40 39 41 7 [bb 7] NOTE_INSN_BASIC_BLOCK)
+(insn 41 40 44 7 (set (reg:SI 101 [ _19 ])
+        (const_int -9 [0xfffffffffffffff7])) "fs/read_write.c":56:16 75 {*movsi_internal}
+     (nil))
+      ; pc falls through to BB 25
+(code_label 44 41 45 8 17 (nil) [1 uses])
+(note 45 44 46 8 [bb 8] NOTE_INSN_BASIC_BLOCK)
+(insn 46 45 47 8 (set (reg/f:SI 110)
+        (mem/f/c:SI (plus:SI (reg/f:SI 19 frame)
+                (const_int -4 [0xfffffffffffffffc])) [5 file+0 S4 A32])) "fs/read_write.c":57:13 75 {*movsi_internal}
+     (nil))
+(insn 47 46 48 8 (set (reg/f:SI 91 [ _9 ])
+        (mem/f:SI (plus:SI (reg/f:SI 110)
+                (const_int 8 [0x8])) [3 file_24->f_inode+0 S4 A32])) "fs/read_write.c":57:13 75 {*movsi_internal}
+     (nil))
+(insn 48 47 49 8 (set (reg:QI 92 [ _10 ])
+        (mem:QI (plus:SI (reg/f:SI 91 [ _9 ])
+                (const_int 52 [0x34])) [0 _9->i_pipe+0 S1 A32])) "fs/read_write.c":57:22 77 {*movqi_internal}
+     (nil))
+(insn 49 48 50 8 (set (reg:CCZ 17 flags)
+        (compare:CCZ (reg:QI 92 [ _10 ])
+            (const_int 0 [0]))) "fs/read_write.c":57:8 5 {*cmpqi_ccno_1}
+     (nil))
+(jump_insn 50 49 51 8 (set (pc)
+        (if_then_else (eq (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref 55)
+            (pc))) "fs/read_write.c":57:8 806 {*jcc}
+     (nil)
+ -> 55)
+(note 51 50 52 9 [bb 9] NOTE_INSN_BASIC_BLOCK)
+(insn 52 51 55 9 (set (reg:SI 101 [ _19 ])
+        (const_int -29 [0xffffffffffffffe3])) "fs/read_write.c":58:16 75 {*movsi_internal}
+     (nil))
+      ; pc falls through to BB 25
+(code_label 55 52 56 10 19 (nil) [1 uses])
+(note 56 55 57 10 [bb 10] NOTE_INSN_BASIC_BLOCK)
+(insn 57 56 58 10 (set (reg:CCZ 17 flags)
+        (compare:CCZ (mem/c:SI (plus:SI (reg/f:SI 16 argp)
+                    (const_int 8 [0x8])) [6 origin+0 S4 A32])
+            (const_int 2 [0x2]))) "fs/read_write.c":59:5 11 {*cmpsi_1}
+     (nil))
+(jump_insn 58 57 59 10 (set (pc)
+        (if_then_else (eq (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref 114)
+            (pc))) "fs/read_write.c":59:5 806 {*jcc}
+     (nil)
+ -> 114)
+(note 59 58 62 11 [bb 11] NOTE_INSN_BASIC_BLOCK)
+(insn 62 59 63 11 (set (reg:CCGC 17 flags)
+        (compare:CCGC (mem/c:SI (plus:SI (reg/f:SI 16 argp)
+                    (const_int 8 [0x8])) [6 origin+0 S4 A32])
+            (const_int 2 [0x2]))) "fs/read_write.c":59:5 11 {*cmpsi_1}
+     (nil))
+(jump_insn 63 62 64 11 (set (pc)
+        (if_then_else (gt (reg:CCGC 17 flags)
+                (const_int 0 [0]))
+            (label_ref 137)
+            (pc))) "fs/read_write.c":59:5 806 {*jcc}
+     (nil)
+ -> 137)
+(note 64 63 65 12 [bb 12] NOTE_INSN_BASIC_BLOCK)
+(insn 65 64 66 12 (set (reg:CCZ 17 flags)
+        (compare:CCZ (mem/c:SI (plus:SI (reg/f:SI 16 argp)
+                    (const_int 8 [0x8])) [6 origin+0 S4 A32])
+            (const_int 0 [0]))) "fs/read_write.c":59:5 7 {*cmpsi_ccno_1}
+     (nil))
+(jump_insn 66 65 67 12 (set (pc)
+        (if_then_else (eq (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref 73)
+            (pc))) "fs/read_write.c":59:5 806 {*jcc}
+     (nil)
+ -> 73)
+(note 67 66 68 13 [bb 13] NOTE_INSN_BASIC_BLOCK)
+(insn 68 67 69 13 (set (reg:CCZ 17 flags)
+        (compare:CCZ (mem/c:SI (plus:SI (reg/f:SI 16 argp)
+                    (const_int 8 [0x8])) [6 origin+0 S4 A32])
+            (const_int 1 [0x1]))) "fs/read_write.c":59:5 11 {*cmpsi_1}
+     (nil))
+(jump_insn 69 68 73 13 (set (pc)
+        (if_then_else (eq (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref 90)
+            (pc))) "fs/read_write.c":59:5 806 {*jcc}
+     (nil)
+ -> 90)
+      ; pc falls through to BB 23
+(code_label 73 69 74 14 22 (nil) [1 uses])
+(note 74 73 77 14 [bb 14] NOTE_INSN_BASIC_BLOCK)
+(insn 77 74 78 14 (set (reg:CCGOC 17 flags)
+        (compare:CCGOC (mem/c:SI (plus:SI (reg/f:SI 16 argp)
+                    (const_int 4 [0x4])) [4 offset+0 S4 A32])
+            (const_int 0 [0]))) "fs/read_write.c":61:12 7 {*cmpsi_ccno_1}
+     (nil))
+(jump_insn 78 77 79 14 (set (pc)
+        (if_then_else (ge (reg:CCGOC 17 flags)
+                (const_int 0 [0]))
+            (label_ref 83)
+            (pc))) "fs/read_write.c":61:12 806 {*jcc}
+     (nil)
+ -> 83)
+(note 79 78 80 15 [bb 15] NOTE_INSN_BASIC_BLOCK)
+(insn 80 79 83 15 (set (reg:SI 101 [ _19 ])
+        (const_int -22 [0xffffffffffffffea])) "fs/read_write.c":62:20 75 {*movsi_internal}
+     (nil))
+      ; pc falls through to BB 25
+(code_label 83 80 84 16 24 (nil) [1 uses])
+(note 84 83 85 16 [bb 16] NOTE_INSN_BASIC_BLOCK)
+(insn 85 84 86 16 (set (reg/f:SI 111)
+        (mem/f/c:SI (plus:SI (reg/f:SI 19 frame)
+                (const_int -4 [0xfffffffffffffffc])) [5 file+0 S4 A32])) "fs/read_write.c":63:21 75 {*movsi_internal}
+     (nil))
+(insn 86 85 87 16 (set (reg:SI 112)
+        (mem/c:SI (plus:SI (reg/f:SI 16 argp)
+                (const_int 4 [0x4])) [4 offset+0 S4 A32])) "fs/read_write.c":63:21 75 {*movsi_internal}
+     (nil))
+(insn 87 86 90 16 (set (mem:SI (plus:SI (reg/f:SI 111)
+                (const_int 12 [0xc])) [4 file_24->f_pos+0 S4 A32])
+        (reg:SI 112)) "fs/read_write.c":63:21 75 {*movsi_internal}
+     (nil))
+      ; pc falls through to BB 24
+(code_label 90 87 91 17 23 (nil) [1 uses])
+(note 91 90 92 17 [bb 17] NOTE_INSN_BASIC_BLOCK)
+(insn 92 91 93 17 (set (reg/f:SI 113)
+        (mem/f/c:SI (plus:SI (reg/f:SI 19 frame)
+                (const_int -4 [0xfffffffffffffffc])) [5 file+0 S4 A32])) "fs/read_write.c":66:17 75 {*movsi_internal}
+     (nil))
+(insn 93 92 94 17 (set (reg:SI 93 [ _11 ])
+        (mem:SI (plus:SI (reg/f:SI 113)
+                (const_int 12 [0xc])) [4 file_24->f_pos+0 S4 A32])) "fs/read_write.c":66:17 75 {*movsi_internal}
+     (nil))
+(insn 94 93 95 17 (set (reg:SI 114)
+        (mem/c:SI (plus:SI (reg/f:SI 16 argp)
+                (const_int 4 [0x4])) [4 offset+0 S4 A32])) "fs/read_write.c":66:25 75 {*movsi_internal}
+     (nil))
+(insn 95 94 98 17 (parallel [
+            (set (reg:SI 94 [ _12 ])
+                (plus:SI (reg:SI 93 [ _11 ])
+                    (reg:SI 114)))
+            (clobber (reg:CC 17 flags))
+        ]) "fs/read_write.c":66:25 209 {*addsi_1}
+     (expr_list:REG_EQUAL (plus:SI (reg:SI 93 [ _11 ])
+            (mem/c:SI (plus:SI (reg/f:SI 16 argp)
+                    (const_int 4 [0x4])) [4 offset+0 S4 A32]))
+        (nil)))
+(insn 98 95 99 17 (set (reg:CCGOC 17 flags)
+        (compare:CCGOC (reg:SI 94 [ _12 ])
+            (const_int 0 [0]))) "fs/read_write.c":66:12 7 {*cmpsi_ccno_1}
+     (nil))
+(jump_insn 99 98 100 17 (set (pc)
+        (if_then_else (ge (reg:CCGOC 17 flags)
+                (const_int 0 [0]))
+            (label_ref 104)
+            (pc))) "fs/read_write.c":66:12 806 {*jcc}
+     (nil)
+ -> 104)
+(note 100 99 101 18 [bb 18] NOTE_INSN_BASIC_BLOCK)
+(insn 101 100 104 18 (set (reg:SI 101 [ _19 ])
+        (const_int -22 [0xffffffffffffffea])) "fs/read_write.c":67:20 75 {*movsi_internal}
+     (nil))
+      ; pc falls through to BB 25
+(code_label 104 101 105 19 26 (nil) [1 uses])
+(note 105 104 106 19 [bb 19] NOTE_INSN_BASIC_BLOCK)
+(insn 106 105 107 19 (set (reg/f:SI 115)
+        (mem/f/c:SI (plus:SI (reg/f:SI 19 frame)
+                (const_int -4 [0xfffffffffffffffc])) [5 file+0 S4 A32])) "fs/read_write.c":68:21 75 {*movsi_internal}
+     (nil))
+(insn 107 106 108 19 (set (reg:SI 95 [ _13 ])
+        (mem:SI (plus:SI (reg/f:SI 115)
+                (const_int 12 [0xc])) [4 file_24->f_pos+0 S4 A32])) "fs/read_write.c":68:21 75 {*movsi_internal}
+     (nil))
+(insn 108 107 109 19 (set (reg:SI 116)
+        (mem/c:SI (plus:SI (reg/f:SI 16 argp)
+                (const_int 4 [0x4])) [4 offset+0 S4 A32])) "fs/read_write.c":68:21 75 {*movsi_internal}
+     (nil))
+(insn 109 108 110 19 (parallel [
+            (set (reg:SI 96 [ _14 ])
+                (plus:SI (reg:SI 95 [ _13 ])
+                    (reg:SI 116)))
+            (clobber (reg:CC 17 flags))
+        ]) "fs/read_write.c":68:21 209 {*addsi_1}
+     (expr_list:REG_EQUAL (plus:SI (reg:SI 95 [ _13 ])
+            (mem/c:SI (plus:SI (reg/f:SI 16 argp)
+                    (const_int 4 [0x4])) [4 offset+0 S4 A32]))
+        (nil)))
+(insn 110 109 111 19 (set (reg/f:SI 117)
+        (mem/f/c:SI (plus:SI (reg/f:SI 19 frame)
+                (const_int -4 [0xfffffffffffffffc])) [5 file+0 S4 A32])) "fs/read_write.c":68:21 75 {*movsi_internal}
+     (nil))
+(insn 111 110 114 19 (set (mem:SI (plus:SI (reg/f:SI 117)
+                (const_int 12 [0xc])) [4 file_24->f_pos+0 S4 A32])
+        (reg:SI 96 [ _14 ])) "fs/read_write.c":68:21 75 {*movsi_internal}
+     (nil))
+      ; pc falls through to BB 24
+(code_label 114 111 115 20 20 (nil) [1 uses])
+(note 115 114 116 20 [bb 20] NOTE_INSN_BASIC_BLOCK)
+(insn 116 115 117 20 (set (reg/f:SI 118)
+        (mem/f/c:SI (plus:SI (reg/f:SI 19 frame)
+                (const_int -4 [0xfffffffffffffffc])) [5 file+0 S4 A32])) "fs/read_write.c":71:24 75 {*movsi_internal}
+     (nil))
+(insn 117 116 118 20 (set (reg/f:SI 97 [ _15 ])
+        (mem/f:SI (plus:SI (reg/f:SI 118)
+                (const_int 8 [0x8])) [3 file_24->f_inode+0 S4 A32])) "fs/read_write.c":71:24 75 {*movsi_internal}
+     (nil))
+(insn 118 117 119 20 (set (reg:SI 98 [ _16 ])
+        (mem:SI (plus:SI (reg/f:SI 97 [ _15 ])
+                (const_int 4 [0x4])) [4 _15->i_size+0 S4 A32])) "fs/read_write.c":71:33 75 {*movsi_internal}
+     (nil))
+(insn 119 118 120 20 (set (reg:SI 99 [ offset.3_17 ])
+        (mem/c:SI (plus:SI (reg/f:SI 16 argp)
+                (const_int 4 [0x4])) [4 offset+0 S4 A32])) "fs/read_write.c":71:42 75 {*movsi_internal}
+     (nil))
+(insn 120 119 121 20 (parallel [
+            (set (reg:SI 100 [ _18 ])
+                (plus:SI (reg:SI 98 [ _16 ])
+                    (reg:SI 99 [ offset.3_17 ])))
+            (clobber (reg:CC 17 flags))
+        ]) "fs/read_write.c":71:42 209 {*addsi_1}
+     (nil))
+(insn 121 120 124 20 (set (mem/c:SI (plus:SI (reg/f:SI 19 frame)
+                (const_int -8 [0xfffffffffffffff8])) [6 tmp+0 S4 A32])
+        (reg:SI 100 [ _18 ])) "fs/read_write.c":71:18 75 {*movsi_internal}
+     (nil))
+(insn 124 121 125 20 (set (reg:CCGOC 17 flags)
+        (compare:CCGOC (mem/c:SI (plus:SI (reg/f:SI 19 frame)
+                    (const_int -8 [0xfffffffffffffff8])) [6 tmp+0 S4 A32])
+            (const_int 0 [0]))) "fs/read_write.c":71:12 7 {*cmpsi_ccno_1}
+     (nil))
+(jump_insn 125 124 126 20 (set (pc)
+        (if_then_else (ge (reg:CCGOC 17 flags)
+                (const_int 0 [0]))
+            (label_ref 130)
+            (pc))) "fs/read_write.c":71:12 806 {*jcc}
+     (nil)
+ -> 130)
+(note 126 125 127 21 [bb 21] NOTE_INSN_BASIC_BLOCK)
+(insn 127 126 130 21 (set (reg:SI 101 [ _19 ])
+        (const_int -22 [0xffffffffffffffea])) "fs/read_write.c":72:20 75 {*movsi_internal}
+     (nil))
+      ; pc falls through to BB 25
+(code_label 130 127 131 22 27 (nil) [1 uses])
+(note 131 130 132 22 [bb 22] NOTE_INSN_BASIC_BLOCK)
+(insn 132 131 133 22 (set (reg/f:SI 119)
+        (mem/f/c:SI (plus:SI (reg/f:SI 19 frame)
+                (const_int -4 [0xfffffffffffffffc])) [5 file+0 S4 A32])) "fs/read_write.c":73:21 75 {*movsi_internal}
+     (nil))
+(insn 133 132 134 22 (set (reg:SI 120)
+        (mem/c:SI (plus:SI (reg/f:SI 19 frame)
+                (const_int -8 [0xfffffffffffffff8])) [6 tmp+0 S4 A32])) "fs/read_write.c":73:21 75 {*movsi_internal}
+     (nil))
+(insn 134 133 137 22 (set (mem:SI (plus:SI (reg/f:SI 119)
+                (const_int 12 [0xc])) [4 file_24->f_pos+0 S4 A32])
+        (reg:SI 120)) "fs/read_write.c":73:21 75 {*movsi_internal}
+     (nil))
+      ; pc falls through to BB 24
+(code_label 137 134 138 23 21 (nil) [1 uses])
+(note 138 137 139 23 [bb 23] NOTE_INSN_BASIC_BLOCK)
+(insn 139 138 142 23 (set (reg:SI 101 [ _19 ])
+        (const_int -22 [0xffffffffffffffea])) "fs/read_write.c":76:16 75 {*movsi_internal}
+     (nil))
+      ; pc falls through to BB 25
+(code_label 142 139 143 24 25 (nil) [0 uses])
+(note 143 142 144 24 [bb 24] NOTE_INSN_BASIC_BLOCK)
+(insn 144 143 145 24 (set (reg/f:SI 121)
+        (mem/f/c:SI (plus:SI (reg/f:SI 19 frame)
+                (const_int -4 [0xfffffffffffffffc])) [5 file+0 S4 A32])) "fs/read_write.c":78:16 75 {*movsi_internal}
+     (nil))
+(insn 145 144 146 24 (set (reg:SI 101 [ _19 ])
+        (mem:SI (plus:SI (reg/f:SI 121)
+                (const_int 12 [0xc])) [4 file_24->f_pos+0 S4 A32])) "fs/read_write.c":78:16 75 {*movsi_internal}
+     (nil))
+(code_label 146 145 147 25 18 (nil) [0 uses])
+(note 147 146 148 25 [bb 25] NOTE_INSN_BASIC_BLOCK)
+(insn 148 147 152 25 (set (reg:SI 102 [ <retval> ])
+        (reg:SI 101 [ _19 ])) "fs/read_write.c":79:1 75 {*movsi_internal}
+     (nil))
+(insn 152 148 153 25 (set (reg/i:SI 0 ax)
+        (reg:SI 102 [ <retval> ])) "fs/read_write.c":79:1 75 {*movsi_internal}
+     (nil))
+(insn 153 152 0 25 (use (reg/i:SI 0 ax)) "fs/read_write.c":79:1 -1
+     (nil))
+
+;; Function sys_write (sys_write, funcdef_no=3, decl_uid=1389, cgraph_uid=4, symbol_order=3)
+
+(note 3 0 2 2 [bb 2] NOTE_INSN_BASIC_BLOCK)
+(note 2 3 7 2 NOTE_INSN_FUNCTION_BEG)
+(insn 7 2 8 2 (set (reg:CC 17 flags)
+        (compare:CC (mem/c:SI (reg/f:SI 16 argp) [6 fd+0 S4 A32])
+            (const_int 19 [0x13]))) "fs/read_write.c":86:8 11 {*cmpsi_1}
+     (nil))
+(jump_insn 8 7 9 2 (set (pc)
+        (if_then_else (gtu (reg:CC 17 flags)
+                (const_int 0 [0]))
+            (label_ref 23)
+            (pc))) "fs/read_write.c":86:8 806 {*jcc}
+     (nil)
+ -> 23)
+(note 9 8 12 3 [bb 3] NOTE_INSN_BASIC_BLOCK)
+(insn 12 9 13 3 (set (reg:CCGOC 17 flags)
+        (compare:CCGOC (mem/c:SI (plus:SI (reg/f:SI 16 argp)
+                    (const_int 8 [0x8])) [6 count+0 S4 A32])
+            (const_int 0 [0]))) "fs/read_write.c":86:23 7 {*cmpsi_ccno_1}
+     (nil))
+(jump_insn 13 12 14 3 (set (pc)
+        (if_then_else (lt (reg:CCGOC 17 flags)
+                (const_int 0 [0]))
+            (label_ref 23)
+            (pc))) "fs/read_write.c":86:23 806 {*jcc}
+     (nil)
+ -> 23)
+(note 14 13 15 4 [bb 4] NOTE_INSN_BASIC_BLOCK)
+(insn 15 14 16 4 (set (reg/f:SI 107)
+        (mem/u/c:SI (plus:SI (reg:SI 82)
+                (const:SI (unspec:SI [
+                            (symbol_ref:SI ("current") [flags 0x40]  <var_decl 0x78f44172e120 current>)
+                        ] UNSPEC_GOT))) [9  S4 A8])) "fs/read_write.c":86:55 75 {*movsi_internal}
+     (nil))
+(insn 16 15 17 4 (set (reg/f:SI 83 [ current.4_1 ])
+        (mem/f/c:SI (reg/f:SI 107) [8 current+0 S4 A32])) "fs/read_write.c":86:55 75 {*movsi_internal}
+     (nil))
+(insn 17 16 18 4 (set (reg:SI 109)
+        (mem/c:SI (reg/f:SI 16 argp) [6 fd+0 S4 A32])) "fs/read_write.c":86:46 75 {*movsi_internal}
+     (nil))
+(insn 18 17 19 4 (parallel [
+            (set (reg:SI 108)
+                (plus:SI (reg:SI 109)
+                    (const_int 160 [0xa0])))
+            (clobber (reg:CC 17 flags))
+        ]) "fs/read_write.c":86:46 209 {*addsi_1}
+     (expr_list:REG_EQUAL (plus:SI (mem/c:SI (reg/f:SI 16 argp) [6 fd+0 S4 A32])
+            (const_int 160 [0xa0]))
+        (nil)))
+(insn 19 18 20 4 (set (reg/f:SI 110)
+        (mem/f:SI (plus:SI (mult:SI (reg:SI 108)
+                    (const_int 4 [0x4]))
+                (reg/f:SI 83 [ current.4_1 ])) [5 current.4_1->filp[fd_27(D)]+0 S4 A32])) "fs/read_write.c":86:46 75 {*movsi_internal}
+     (nil))
+(insn 20 19 21 4 (set (mem/f/c:SI (plus:SI (reg/f:SI 19 frame)
+                (const_int -4 [0xfffffffffffffffc])) [5 file+0 S4 A32])
+        (reg/f:SI 110)) "fs/read_write.c":86:46 75 {*movsi_internal}
+     (nil))
+(insn 21 20 22 4 (set (reg:CCZ 17 flags)
+        (compare:CCZ (mem/f/c:SI (plus:SI (reg/f:SI 19 frame)
+                    (const_int -4 [0xfffffffffffffffc])) [5 file+0 S4 A32])
+            (const_int 0 [0]))) "fs/read_write.c":86:36 7 {*cmpsi_ccno_1}
+     (nil))
+(jump_insn 22 21 23 4 (set (pc)
+        (if_then_else (ne (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref 28)
+            (pc))) "fs/read_write.c":86:36 806 {*jcc}
+     (nil)
+ -> 28)
+(code_label 23 22 24 5 29 (nil) [2 uses])
+(note 24 23 25 5 [bb 5] NOTE_INSN_BASIC_BLOCK)
+(insn 25 24 28 5 (set (reg:SI 105 [ iftmp.5_24 ])
+        (const_int -22 [0xffffffffffffffea])) "fs/read_write.c":87:16 75 {*movsi_internal}
+     (nil))
+      ; pc falls through to BB 19
+(code_label 28 25 29 6 30 (nil) [1 uses])
+(note 29 28 30 6 [bb 6] NOTE_INSN_BASIC_BLOCK)
+(insn 30 29 31 6 (set (reg:CCZ 17 flags)
+        (compare:CCZ (mem/c:SI (plus:SI (reg/f:SI 16 argp)
+                    (const_int 8 [0x8])) [6 count+0 S4 A32])
+            (const_int 0 [0]))) "fs/read_write.c":88:8 7 {*cmpsi_ccno_1}
+     (nil))
+(jump_insn 31 30 32 6 (set (pc)
+        (if_then_else (ne (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref 36)
+            (pc))) "fs/read_write.c":88:8 806 {*jcc}
+     (nil)
+ -> 36)
+(note 32 31 33 7 [bb 7] NOTE_INSN_BASIC_BLOCK)
+(insn 33 32 36 7 (set (reg:SI 105 [ iftmp.5_24 ])
+        (const_int 0 [0])) "fs/read_write.c":89:16 75 {*movsi_internal}
+     (nil))
+      ; pc falls through to BB 19
+(code_label 36 33 37 8 32 (nil) [1 uses])
+(note 37 36 38 8 [bb 8] NOTE_INSN_BASIC_BLOCK)
+(insn 38 37 39 8 (set (reg/f:SI 111)
+        (mem/f/c:SI (plus:SI (reg/f:SI 19 frame)
+                (const_int -4 [0xfffffffffffffffc])) [5 file+0 S4 A32])) "fs/read_write.c":90:11 75 {*movsi_internal}
+     (nil))
+(insn 39 38 40 8 (set (reg/f:SI 112)
+        (mem/f:SI (plus:SI (reg/f:SI 111)
+                (const_int 8 [0x8])) [3 file_30->f_inode+0 S4 A32])) "fs/read_write.c":90:11 75 {*movsi_internal}
+     (nil))
+(insn 40 39 41 8 (set (mem/f/c:SI (plus:SI (reg/f:SI 19 frame)
+                (const_int -8 [0xfffffffffffffff8])) [3 inode+0 S4 A32])
+        (reg/f:SI 112)) "fs/read_write.c":90:11 75 {*movsi_internal}
+     (nil))
+(insn 41 40 42 8 (set (reg/f:SI 113)
+        (mem/f/c:SI (plus:SI (reg/f:SI 19 frame)
+                (const_int -8 [0xfffffffffffffff8])) [3 inode+0 S4 A32])) "fs/read_write.c":91:14 75 {*movsi_internal}
+     (nil))
+(insn 42 41 43 8 (set (reg:QI 84 [ _2 ])
+        (mem:QI (plus:SI (reg/f:SI 113)
+                (const_int 52 [0x34])) [0 inode_31->i_pipe+0 S1 A32])) "fs/read_write.c":91:14 77 {*movqi_internal}
+     (nil))
+(insn 43 42 44 8 (set (reg:CCZ 17 flags)
+        (compare:CCZ (reg:QI 84 [ _2 ])
+            (const_int 0 [0]))) "fs/read_write.c":91:8 5 {*cmpqi_ccno_1}
+     (nil))
+(jump_insn 44 43 45 8 (set (pc)
+        (if_then_else (eq (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref 70)
+            (pc))) "fs/read_write.c":91:8 806 {*jcc}
+     (nil)
+ -> 70)
+(note 45 44 46 9 [bb 9] NOTE_INSN_BASIC_BLOCK)
+(insn 46 45 47 9 (set (reg/f:SI 114)
+        (mem/f/c:SI (plus:SI (reg/f:SI 19 frame)
+                (const_int -4 [0xfffffffffffffffc])) [5 file+0 S4 A32])) "fs/read_write.c":92:21 75 {*movsi_internal}
+     (nil))
+(insn 47 46 48 9 (set (reg:HI 85 [ _3 ])
+        (mem:HI (reg/f:SI 114) [2 file_30->f_mode+0 S2 A32])) "fs/read_write.c":92:21 76 {*movhi_internal}
+     (nil))
+(insn 48 47 49 9 (set (reg:SI 86 [ _4 ])
+        (zero_extend:SI (reg:HI 85 [ _3 ]))) "fs/read_write.c":92:30 144 {*zero_extendhisi2}
+     (nil))
+(insn 49 48 50 9 (parallel [
+            (set (reg:SI 87 [ _5 ])
+                (and:SI (reg:SI 86 [ _4 ])
+                    (const_int 2 [0x2])))
+            (clobber (reg:CC 17 flags))
+        ]) "fs/read_write.c":92:30 490 {*andsi_1}
+     (nil))
+(insn 50 49 51 9 (set (reg:CCZ 17 flags)
+        (compare:CCZ (reg:SI 87 [ _5 ])
+            (const_int 0 [0]))) "fs/read_write.c":92:67 7 {*cmpsi_ccno_1}
+     (nil))
+(jump_insn 51 50 52 9 (set (pc)
+        (if_then_else (eq (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref 63)
+            (pc))) "fs/read_write.c":92:67 806 {*jcc}
+     (nil)
+ -> 63)
+(note 52 51 53 10 [bb 10] NOTE_INSN_BASIC_BLOCK)
+(insn 53 52 54 10 (parallel [
+            (set (reg/f:SI 7 sp)
+                (plus:SI (reg/f:SI 7 sp)
+                    (const_int -4 [0xfffffffffffffffc])))
+            (clobber (reg:CC 17 flags))
+        ]) "fs/read_write.c":92:37 209 {*addsi_1}
+     (expr_list:REG_ARGS_SIZE (const_int 4 [0x4])
+        (nil)))
+(insn 54 53 55 10 (set (mem:SI (pre_dec:SI (reg/f:SI 7 sp)) [6  S4 A32])
+        (mem/c:SI (plus:SI (reg/f:SI 16 argp)
+                (const_int 8 [0x8])) [6 count+0 S4 A32])) "fs/read_write.c":92:37 54 {*pushsi2}
+     (expr_list:REG_ARGS_SIZE (const_int 8 [0x8])
+        (nil)))
+(insn 55 54 56 10 (set (mem/f:SI (pre_dec:SI (reg/f:SI 7 sp)) [7  S4 A32])
+        (mem/f/c:SI (plus:SI (reg/f:SI 16 argp)
+                (const_int 4 [0x4])) [7 buf+0 S4 A32])) "fs/read_write.c":92:37 54 {*pushsi2}
+     (expr_list:REG_ARGS_SIZE (const_int 12 [0xc])
+        (nil)))
+(insn 56 55 57 10 (set (mem/f:SI (pre_dec:SI (reg/f:SI 7 sp)) [3  S4 A32])
+        (mem/f/c:SI (plus:SI (reg/f:SI 19 frame)
+                (const_int -8 [0xfffffffffffffff8])) [3 inode+0 S4 A32])) "fs/read_write.c":92:37 54 {*pushsi2}
+     (expr_list:REG_ARGS_SIZE (const_int 16 [0x10])
+        (nil)))
+(insn 57 56 58 10 (set (reg:SI 3 bx)
+        (reg:SI 82)) "fs/read_write.c":92:37 75 {*movsi_internal}
+     (nil))
+(call_insn 58 57 59 10 (set (reg:SI 0 ax)
+        (call (mem:QI (symbol_ref:SI ("write_pipe") [flags 0x41]  <function_decl 0x78f441710100 write_pipe>) [0 write_pipe S1 A8])
+            (const_int 16 [0x10]))) "fs/read_write.c":92:37 823 {*call_value}
+     (nil)
+    (expr_list (use (reg:SI 3 bx))
+        (nil)))
+(insn 59 58 60 10 (parallel [
+            (set (reg/f:SI 7 sp)
+                (plus:SI (reg/f:SI 7 sp)
+                    (const_int 16 [0x10])))
+            (clobber (reg:CC 17 flags))
+        ]) "fs/read_write.c":92:37 209 {*addsi_1}
+     (expr_list:REG_ARGS_SIZE (const_int 0 [0])
+        (nil)))
+(insn 60 59 63 10 (set (reg:SI 105 [ iftmp.5_24 ])
+        (reg:SI 0 ax)) "fs/read_write.c":92:37 75 {*movsi_internal}
+     (nil))
+      ; pc falls through to BB 19
+(code_label 63 60 64 11 34 (nil) [1 uses])
+(note 64 63 65 11 [bb 11] NOTE_INSN_BASIC_BLOCK)
+(insn 65 64 70 11 (set (reg:SI 105 [ iftmp.5_24 ])
+        (const_int -5 [0xfffffffffffffffb])) "fs/read_write.c":92:67 75 {*movsi_internal}
+     (nil))
+      ; pc falls through to BB 19
+(code_label 70 65 71 12 33 (nil) [1 uses])
+(note 71 70 72 12 [bb 12] NOTE_INSN_BASIC_BLOCK)
+(insn 72 71 73 12 (set (reg/f:SI 115)
+        (mem/f/c:SI (plus:SI (reg/f:SI 19 frame)
+                (const_int -8 [0xfffffffffffffff8])) [3 inode+0 S4 A32])) "fs/read_write.c":93:9 75 {*movsi_internal}
+     (nil))
+(insn 73 72 74 12 (set (reg:HI 88 [ _6 ])
+        (mem:HI (reg/f:SI 115) [2 inode_31->i_mode+0 S2 A32])) "fs/read_write.c":93:9 76 {*movhi_internal}
+     (nil))
+(insn 74 73 75 12 (set (reg:SI 89 [ _7 ])
+        (zero_extend:SI (reg:HI 88 [ _6 ]))) "fs/read_write.c":93:9 144 {*zero_extendhisi2}
+     (nil))
+(insn 75 74 76 12 (parallel [
+            (set (reg:SI 90 [ _8 ])
+                (and:SI (reg:SI 89 [ _7 ])
+                    (const_int 61440 [0xf000])))
+            (clobber (reg:CC 17 flags))
+        ]) "fs/read_write.c":93:9 490 {*andsi_1}
+     (nil))
+(insn 76 75 77 12 (set (reg:CCZ 17 flags)
+        (compare:CCZ (reg:SI 90 [ _8 ])
+            (const_int 8192 [0x2000]))) "fs/read_write.c":93:8 11 {*cmpsi_1}
+     (nil))
+(jump_insn 77 76 78 12 (set (pc)
+        (if_then_else (ne (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref 96)
+            (pc))) "fs/read_write.c":93:8 806 {*jcc}
+     (nil)
+ -> 96)
+(note 78 77 79 13 [bb 13] NOTE_INSN_BASIC_BLOCK)
+(insn 79 78 80 13 (set (reg/f:SI 116)
+        (mem/f/c:SI (plus:SI (reg/f:SI 19 frame)
+                (const_int -4 [0xfffffffffffffffc])) [5 file+0 S4 A32])) "fs/read_write.c":94:16 75 {*movsi_internal}
+     (nil))
+(insn 80 79 81 13 (parallel [
+            (set (reg/f:SI 91 [ _9 ])
+                (plus:SI (reg/f:SI 116)
+                    (const_int 12 [0xc])))
+            (clobber (reg:CC 17 flags))
+        ]) "fs/read_write.c":94:16 209 {*addsi_1}
+     (expr_list:REG_EQUAL (plus:SI (mem/f/c:SI (plus:SI (reg/f:SI 19 frame)
+                    (const_int -4 [0xfffffffffffffffc])) [5 file+0 S4 A32])
+            (const_int 12 [0xc]))
+        (nil)))
+(insn 81 80 82 13 (set (reg/f:SI 117)
+        (mem/f/c:SI (plus:SI (reg/f:SI 19 frame)
+                (const_int -8 [0xfffffffffffffff8])) [3 inode+0 S4 A32])) "fs/read_write.c":94:44 75 {*movsi_internal}
+     (nil))
+(insn 82 81 83 13 (set (reg:HI 92 [ _10 ])
+        (mem:HI (plus:SI (reg/f:SI 117)
+                (const_int 14 [0xe])) [2 inode_31->i_zone[0]+0 S2 A16])) "fs/read_write.c":94:44 76 {*movhi_internal}
+     (nil))
+(insn 83 82 84 13 (set (reg:SI 93 [ _11 ])
+        (zero_extend:SI (reg:HI 92 [ _10 ]))) "fs/read_write.c":94:16 144 {*zero_extendhisi2}
+     (nil))
+(insn 84 83 85 13 (parallel [
+            (set (reg/f:SI 7 sp)
+                (plus:SI (reg/f:SI 7 sp)
+                    (const_int -12 [0xfffffffffffffff4])))
+            (clobber (reg:CC 17 flags))
+        ]) "fs/read_write.c":94:16 209 {*addsi_1}
+     (expr_list:REG_ARGS_SIZE (const_int 12 [0xc])
+        (nil)))
+(insn 85 84 86 13 (set (mem/f:SI (pre_dec:SI (reg/f:SI 7 sp)) [18  S4 A32])
+        (reg/f:SI 91 [ _9 ])) "fs/read_write.c":94:16 54 {*pushsi2}
+     (expr_list:REG_ARGS_SIZE (const_int 16 [0x10])
+        (nil)))
+(insn 86 85 87 13 (set (mem:SI (pre_dec:SI (reg/f:SI 7 sp)) [6  S4 A32])
+        (mem/c:SI (plus:SI (reg/f:SI 16 argp)
+                (const_int 8 [0x8])) [6 count+0 S4 A32])) "fs/read_write.c":94:16 54 {*pushsi2}
+     (expr_list:REG_ARGS_SIZE (const_int 20 [0x14])
+        (nil)))
+(insn 87 86 88 13 (set (mem/f:SI (pre_dec:SI (reg/f:SI 7 sp)) [7  S4 A32])
+        (mem/f/c:SI (plus:SI (reg/f:SI 16 argp)
+                (const_int 4 [0x4])) [7 buf+0 S4 A32])) "fs/read_write.c":94:16 54 {*pushsi2}
+     (expr_list:REG_ARGS_SIZE (const_int 24 [0x18])
+        (nil)))
+(insn 88 87 89 13 (set (mem:SI (pre_dec:SI (reg/f:SI 7 sp)) [6  S4 A32])
+        (reg:SI 93 [ _11 ])) "fs/read_write.c":94:16 54 {*pushsi2}
+     (expr_list:REG_ARGS_SIZE (const_int 28 [0x1c])
+        (nil)))
+(insn 89 88 90 13 (set (mem:SI (pre_dec:SI (reg/f:SI 7 sp)) [6  S4 A32])
+        (const_int 1 [0x1])) "fs/read_write.c":94:16 54 {*pushsi2}
+     (expr_list:REG_ARGS_SIZE (const_int 32 [0x20])
+        (nil)))
+(insn 90 89 91 13 (set (reg:SI 3 bx)
+        (reg:SI 82)) "fs/read_write.c":94:16 75 {*movsi_internal}
+     (nil))
+(call_insn 91 90 92 13 (set (reg:SI 0 ax)
+        (call (mem:QI (symbol_ref:SI ("rw_char") [flags 0x41]  <function_decl 0x78f441738e00 rw_char>) [0 rw_char S1 A8])
+            (const_int 32 [0x20]))) "fs/read_write.c":94:16 823 {*call_value}
+     (nil)
+    (expr_list (use (reg:SI 3 bx))
+        (nil)))
+(insn 92 91 93 13 (parallel [
+            (set (reg/f:SI 7 sp)
+                (plus:SI (reg/f:SI 7 sp)
+                    (const_int 32 [0x20])))
+            (clobber (reg:CC 17 flags))
+        ]) "fs/read_write.c":94:16 209 {*addsi_1}
+     (expr_list:REG_ARGS_SIZE (const_int 0 [0])
+        (nil)))
+(insn 93 92 96 13 (set (reg:SI 105 [ iftmp.5_24 ])
+        (reg:SI 0 ax)) "fs/read_write.c":94:16 75 {*movsi_internal}
+     (nil))
+      ; pc falls through to BB 19
+(code_label 96 93 97 14 36 (nil) [1 uses])
+(note 97 96 98 14 [bb 14] NOTE_INSN_BASIC_BLOCK)
+(insn 98 97 99 14 (set (reg/f:SI 118)
+        (mem/f/c:SI (plus:SI (reg/f:SI 19 frame)
+                (const_int -8 [0xfffffffffffffff8])) [3 inode+0 S4 A32])) "fs/read_write.c":95:9 75 {*movsi_internal}
+     (nil))
+(insn 99 98 100 14 (set (reg:HI 94 [ _12 ])
+        (mem:HI (reg/f:SI 118) [2 inode_31->i_mode+0 S2 A32])) "fs/read_write.c":95:9 76 {*movhi_internal}
+     (nil))
+(insn 100 99 101 14 (set (reg:SI 95 [ _13 ])
+        (zero_extend:SI (reg:HI 94 [ _12 ]))) "fs/read_write.c":95:9 144 {*zero_extendhisi2}
+     (nil))
+(insn 101 100 102 14 (parallel [
+            (set (reg:SI 96 [ _14 ])
+                (and:SI (reg:SI 95 [ _13 ])
+                    (const_int 61440 [0xf000])))
+            (clobber (reg:CC 17 flags))
+        ]) "fs/read_write.c":95:9 490 {*andsi_1}
+     (nil))
+(insn 102 101 103 14 (set (reg:CCZ 17 flags)
+        (compare:CCZ (reg:SI 96 [ _14 ])
+            (const_int 24576 [0x6000]))) "fs/read_write.c":95:8 11 {*cmpsi_1}
+     (nil))
+(jump_insn 103 102 104 14 (set (pc)
+        (if_then_else (ne (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref 120)
+            (pc))) "fs/read_write.c":95:8 806 {*jcc}
+     (nil)
+ -> 120)
+(note 104 103 105 15 [bb 15] NOTE_INSN_BASIC_BLOCK)
+(insn 105 104 106 15 (set (reg/f:SI 119)
+        (mem/f/c:SI (plus:SI (reg/f:SI 19 frame)
+                (const_int -4 [0xfffffffffffffffc])) [5 file+0 S4 A32])) "fs/read_write.c":96:46 75 {*movsi_internal}
+     (nil))
+(insn 106 105 107 15 (parallel [
+            (set (reg/f:SI 97 [ _15 ])
+                (plus:SI (reg/f:SI 119)
+                    (const_int 12 [0xc])))
+            (clobber (reg:CC 17 flags))
+        ]) "fs/read_write.c":96:46 209 {*addsi_1}
+     (expr_list:REG_EQUAL (plus:SI (mem/f/c:SI (plus:SI (reg/f:SI 19 frame)
+                    (const_int -4 [0xfffffffffffffffc])) [5 file+0 S4 A32])
+            (const_int 12 [0xc]))
+        (nil)))
+(insn 107 106 108 15 (set (reg/f:SI 120)
+        (mem/f/c:SI (plus:SI (reg/f:SI 19 frame)
+                (const_int -8 [0xfffffffffffffff8])) [3 inode+0 S4 A32])) "fs/read_write.c":96:41 75 {*movsi_internal}
+     (nil))
+(insn 108 107 109 15 (set (reg:HI 98 [ _16 ])
+        (mem:HI (plus:SI (reg/f:SI 120)
+                (const_int 14 [0xe])) [2 inode_31->i_zone[0]+0 S2 A16])) "fs/read_write.c":96:41 76 {*movhi_internal}
+     (nil))
+(insn 109 108 110 15 (set (reg:SI 99 [ _17 ])
+        (zero_extend:SI (reg:HI 98 [ _16 ]))) "fs/read_write.c":96:16 144 {*zero_extendhisi2}
+     (nil))
+(insn 110 109 111 15 (set (mem:SI (pre_dec:SI (reg/f:SI 7 sp)) [6  S4 A32])
+        (mem/c:SI (plus:SI (reg/f:SI 16 argp)
+                (const_int 8 [0x8])) [6 count+0 S4 A32])) "fs/read_write.c":96:16 54 {*pushsi2}
+     (expr_list:REG_ARGS_SIZE (const_int 4 [0x4])
+        (nil)))
+(insn 111 110 112 15 (set (mem/f:SI (pre_dec:SI (reg/f:SI 7 sp)) [7  S4 A32])
+        (mem/f/c:SI (plus:SI (reg/f:SI 16 argp)
+                (const_int 4 [0x4])) [7 buf+0 S4 A32])) "fs/read_write.c":96:16 54 {*pushsi2}
+     (expr_list:REG_ARGS_SIZE (const_int 8 [0x8])
+        (nil)))
+(insn 112 111 113 15 (set (mem/f:SI (pre_dec:SI (reg/f:SI 7 sp)) [18  S4 A32])
+        (reg/f:SI 97 [ _15 ])) "fs/read_write.c":96:16 54 {*pushsi2}
+     (expr_list:REG_ARGS_SIZE (const_int 12 [0xc])
+        (nil)))
+(insn 113 112 114 15 (set (mem:SI (pre_dec:SI (reg/f:SI 7 sp)) [6  S4 A32])
+        (reg:SI 99 [ _17 ])) "fs/read_write.c":96:16 54 {*pushsi2}
+     (expr_list:REG_ARGS_SIZE (const_int 16 [0x10])
+        (nil)))
+(insn 114 113 115 15 (set (reg:SI 3 bx)
+        (reg:SI 82)) "fs/read_write.c":96:16 75 {*movsi_internal}
+     (nil))
+(call_insn 115 114 116 15 (set (reg:SI 0 ax)
+        (call (mem:QI (symbol_ref:SI ("block_write") [flags 0x41]  <function_decl 0x78f441710000 block_write>) [0 block_write S1 A8])
+            (const_int 16 [0x10]))) "fs/read_write.c":96:16 823 {*call_value}
+     (nil)
+    (expr_list (use (reg:SI 3 bx))
+        (nil)))
+(insn 116 115 117 15 (parallel [
+            (set (reg/f:SI 7 sp)
+                (plus:SI (reg/f:SI 7 sp)
+                    (const_int 16 [0x10])))
+            (clobber (reg:CC 17 flags))
+        ]) "fs/read_write.c":96:16 209 {*addsi_1}
+     (expr_list:REG_ARGS_SIZE (const_int 0 [0])
+        (nil)))
+(insn 117 116 120 15 (set (reg:SI 105 [ iftmp.5_24 ])
+        (reg:SI 0 ax)) "fs/read_write.c":96:16 75 {*movsi_internal}
+     (nil))
+      ; pc falls through to BB 19
+(code_label 120 117 121 16 37 (nil) [1 uses])
+(note 121 120 122 16 [bb 16] NOTE_INSN_BASIC_BLOCK)
+(insn 122 121 123 16 (set (reg/f:SI 121)
+        (mem/f/c:SI (plus:SI (reg/f:SI 19 frame)
+                (const_int -8 [0xfffffffffffffff8])) [3 inode+0 S4 A32])) "fs/read_write.c":97:9 75 {*movsi_internal}
+     (nil))
+(insn 123 122 124 16 (set (reg:HI 100 [ _18 ])
+        (mem:HI (reg/f:SI 121) [2 inode_31->i_mode+0 S2 A32])) "fs/read_write.c":97:9 76 {*movhi_internal}
+     (nil))
+(insn 124 123 125 16 (set (reg:SI 101 [ _19 ])
+        (zero_extend:SI (reg:HI 100 [ _18 ]))) "fs/read_write.c":97:9 144 {*zero_extendhisi2}
+     (nil))
+(insn 125 124 126 16 (parallel [
+            (set (reg:SI 102 [ _20 ])
+                (and:SI (reg:SI 101 [ _19 ])
+                    (const_int 61440 [0xf000])))
+            (clobber (reg:CC 17 flags))
+        ]) "fs/read_write.c":97:9 490 {*andsi_1}
+     (nil))
+(insn 126 125 127 16 (set (reg:CCZ 17 flags)
+        (compare:CCZ (reg:SI 102 [ _20 ])
+            (const_int 32768 [0x8000]))) "fs/read_write.c":97:8 11 {*cmpsi_1}
+     (nil))
+(jump_insn 127 126 128 16 (set (pc)
+        (if_then_else (ne (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref 139)
+            (pc))) "fs/read_write.c":97:8 806 {*jcc}
+     (nil)
+ -> 139)
+(note 128 127 129 17 [bb 17] NOTE_INSN_BASIC_BLOCK)
+(insn 129 128 130 17 (set (mem:SI (pre_dec:SI (reg/f:SI 7 sp)) [6  S4 A32])
+        (mem/c:SI (plus:SI (reg/f:SI 16 argp)
+                (const_int 8 [0x8])) [6 count+0 S4 A32])) "fs/read_write.c":98:16 54 {*pushsi2}
+     (expr_list:REG_ARGS_SIZE (const_int 4 [0x4])
+        (nil)))
+(insn 130 129 131 17 (set (mem/f:SI (pre_dec:SI (reg/f:SI 7 sp)) [7  S4 A32])
+        (mem/f/c:SI (plus:SI (reg/f:SI 16 argp)
+                (const_int 4 [0x4])) [7 buf+0 S4 A32])) "fs/read_write.c":98:16 54 {*pushsi2}
+     (expr_list:REG_ARGS_SIZE (const_int 8 [0x8])
+        (nil)))
+(insn 131 130 132 17 (set (mem/f:SI (pre_dec:SI (reg/f:SI 7 sp)) [5  S4 A32])
+        (mem/f/c:SI (plus:SI (reg/f:SI 19 frame)
+                (const_int -4 [0xfffffffffffffffc])) [5 file+0 S4 A32])) "fs/read_write.c":98:16 54 {*pushsi2}
+     (expr_list:REG_ARGS_SIZE (const_int 12 [0xc])
+        (nil)))
+(insn 132 131 133 17 (set (mem/f:SI (pre_dec:SI (reg/f:SI 7 sp)) [3  S4 A32])
+        (mem/f/c:SI (plus:SI (reg/f:SI 19 frame)
+                (const_int -8 [0xfffffffffffffff8])) [3 inode+0 S4 A32])) "fs/read_write.c":98:16 54 {*pushsi2}
+     (expr_list:REG_ARGS_SIZE (const_int 16 [0x10])
+        (nil)))
+(insn 133 132 134 17 (set (reg:SI 3 bx)
+        (reg:SI 82)) "fs/read_write.c":98:16 75 {*movsi_internal}
+     (nil))
+(call_insn 134 133 135 17 (set (reg:SI 0 ax)
+        (call (mem:QI (symbol_ref:SI ("file_write") [flags 0x41]  <function_decl 0x78f44170ef00 file_write>) [0 file_write S1 A8])
+            (const_int 16 [0x10]))) "fs/read_write.c":98:16 823 {*call_value}
+     (nil)
+    (expr_list (use (reg:SI 3 bx))
+        (nil)))
+(insn 135 134 136 17 (parallel [
+            (set (reg/f:SI 7 sp)
+                (plus:SI (reg/f:SI 7 sp)
+                    (const_int 16 [0x10])))
+            (clobber (reg:CC 17 flags))
+        ]) "fs/read_write.c":98:16 209 {*addsi_1}
+     (expr_list:REG_ARGS_SIZE (const_int 0 [0])
+        (nil)))
+(insn 136 135 139 17 (set (reg:SI 105 [ iftmp.5_24 ])
+        (reg:SI 0 ax)) "fs/read_write.c":98:16 75 {*movsi_internal}
+     (nil))
+      ; pc falls through to BB 19
+(code_label 139 136 140 18 38 (nil) [1 uses])
+(note 140 139 141 18 [bb 18] NOTE_INSN_BASIC_BLOCK)
+(insn 141 140 142 18 (set (reg/f:SI 122)
+        (mem/f/c:SI (plus:SI (reg/f:SI 19 frame)
+                (const_int -8 [0xfffffffffffffff8])) [3 inode+0 S4 A32])) "fs/read_write.c":99:50 75 {*movsi_internal}
+     (nil))
+(insn 142 141 143 18 (set (reg:HI 103 [ _21 ])
+        (mem:HI (reg/f:SI 122) [2 inode_31->i_mode+0 S2 A32])) "fs/read_write.c":99:50 76 {*movhi_internal}
+     (nil))
+(insn 143 142 144 18 (set (reg:SI 104 [ _22 ])
+        (zero_extend:SI (reg:HI 103 [ _21 ]))) "fs/read_write.c":99:5 144 {*zero_extendhisi2}
+     (nil))
+(insn 144 143 145 18 (parallel [
+            (set (reg/f:SI 7 sp)
+                (plus:SI (reg/f:SI 7 sp)
+                    (const_int -8 [0xfffffffffffffff8])))
+            (clobber (reg:CC 17 flags))
+        ]) "fs/read_write.c":99:5 209 {*addsi_1}
+     (expr_list:REG_ARGS_SIZE (const_int 8 [0x8])
+        (nil)))
+(insn 145 144 146 18 (set (mem:SI (pre_dec:SI (reg/f:SI 7 sp)) [6  S4 A32])
+        (reg:SI 104 [ _22 ])) "fs/read_write.c":99:5 54 {*pushsi2}
+     (expr_list:REG_ARGS_SIZE (const_int 12 [0xc])
+        (nil)))
+(insn 146 145 147 18 (set (reg/f:SI 123)
+        (plus:SI (reg:SI 82)
+            (const:SI (unspec:SI [
+                        (symbol_ref/f:SI ("*.LC1") [flags 0x2]  <var_decl 0x78f44177f090 *.LC1>)
+                    ] UNSPEC_GOTOFF)))) "fs/read_write.c":99:5 205 {*leasi}
+     (expr_list:REG_EQUAL (symbol_ref/f:SI ("*.LC1") [flags 0x2]  <var_decl 0x78f44177f090 *.LC1>)
+        (nil)))
+(insn 147 146 148 18 (set (mem/f:SI (pre_dec:SI (reg/f:SI 7 sp)) [7  S4 A32])
+        (reg/f:SI 123)) "fs/read_write.c":99:5 54 {*pushsi2}
+     (expr_list:REG_ARGS_SIZE (const_int 16 [0x10])
+        (nil)))
+(insn 148 147 149 18 (set (reg:SI 3 bx)
+        (reg:SI 82)) "fs/read_write.c":99:5 75 {*movsi_internal}
+     (nil))
+(call_insn 149 148 150 18 (set (reg:SI 0 ax)
+        (call (mem:QI (symbol_ref:SI ("printk") [flags 0x41]  <function_decl 0x78f441738900 printk>) [0 printk S1 A8])
+            (const_int 16 [0x10]))) "fs/read_write.c":99:5 823 {*call_value}
+     (nil)
+    (expr_list (use (reg:SI 3 bx))
+        (nil)))
+(insn 150 149 151 18 (parallel [
+            (set (reg/f:SI 7 sp)
+                (plus:SI (reg/f:SI 7 sp)
+                    (const_int 16 [0x10])))
+            (clobber (reg:CC 17 flags))
+        ]) "fs/read_write.c":99:5 209 {*addsi_1}
+     (expr_list:REG_ARGS_SIZE (const_int 0 [0])
+        (nil)))
+(insn 151 150 152 18 (set (reg:SI 105 [ iftmp.5_24 ])
+        (const_int -22 [0xffffffffffffffea])) "fs/read_write.c":100:12 75 {*movsi_internal}
+     (nil))
+(code_label 152 151 153 19 31 (nil) [0 uses])
+(note 153 152 154 19 [bb 19] NOTE_INSN_BASIC_BLOCK)
+(insn 154 153 158 19 (set (reg:SI 106 [ <retval> ])
+        (reg:SI 105 [ iftmp.5_24 ])) "fs/read_write.c":101:1 75 {*movsi_internal}
+     (nil))
+(insn 158 154 159 19 (set (reg/i:SI 0 ax)
+        (reg:SI 106 [ <retval> ])) "fs/read_write.c":101:1 75 {*movsi_internal}
+     (nil))
+(insn 159 158 0 19 (use (reg/i:SI 0 ax)) "fs/read_write.c":101:1 -1
+     (nil))
