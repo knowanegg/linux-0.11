@@ -95,26 +95,29 @@ int copy_process(int nr, long ebp, long edi, long esi, long gs, long none, // �
     int i;
     struct file *f;
 
+    // 通过get_free_page找到并返回一个填充了0x0的4K页物理地址
     p = (struct task_struct *) get_free_page();
-    if (!p)
+    if (!p) // 如果返回的是0x0，那么就是没找到
         return -EAGAIN;
-    task[nr] = p;
+
+    // task[]在<linux/sched.c中定义>，0是init_task.task
+    task[nr] = p; // 这里只是存了一个简单的指针地址，其实指向一个4K的页
 
     /*
      * NOTE!: the following statement now work with gcc 4.3.2 now, and you
      * must compile _THIS_ memory without no -O of gcc.#ifndef GCC4_3
      */
-    *p = *current;
-    p->state = TASK_UNINTERRUPTIBLE;
-    p->pid = last_pid;          // 在这里直接用上一个函数计算的last_pid
-    p->father = current->pid;
-    p->counter = p->priority;
-    p->signal = 0;
-    p->alarm = 0;
+    *p = *current; // 这个current就是前面手写一堆数据构造出来的init的task_struct
+    p->state = TASK_UNINTERRUPTIBLE; // 不可中断的睡眠状态，不可被信号打断
+    p->pid = last_pid;          // 在这里直接用上一个函数计算的last_pid init来说上一个函数是find_empty_process
+    p->father = current->pid;   // init的father应该是自己吧
+    p->counter = p->priority;   // 
+    p->signal = 0;              //  看到这里，GPT-4 oracle批量建表里面有struct注释
+    p->alarm = 0;               //
     p->leader = 0;
-    p->utime = p->stime = 0;
-    p->cutime = p->cstime = 0;
-    p->start_time = jiffies;
+    p->utime = p->stime = 0;    //
+    p->cutime = p->cstime = 0;  // 
+    p->start_time = jiffies;    // 
     p->tss.back_link = 0;
     p->tss.esp0 = PAGE_SIZE + (long) p;
     p->tss.ss0 = 0x10;

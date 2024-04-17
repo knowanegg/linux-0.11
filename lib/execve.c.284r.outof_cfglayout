@@ -84,7 +84,7 @@ Reordered sequence:
 (insn 23 22 24 4 (set (reg/f:SI 92)
         (mem/u/c:SI (plus:SI (reg:SI 82)
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("errno") [flags 0x40]  <var_decl 0x72f4be7c6b40 errno>)
+                            (symbol_ref:SI ("errno") [flags 0x40]  <var_decl 0x7c2235d60b40 errno>)
                         ] UNSPEC_GOT))) [5  S4 A8])) "lib/execve.c":9:1 75 {*movsi_internal}
      (nil))
 (insn 24 23 25 4 (set (mem/c:SI (reg/f:SI 92) [4 errno+0 S4 A32])

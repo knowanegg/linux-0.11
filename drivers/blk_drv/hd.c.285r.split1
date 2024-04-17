@@ -34,9 +34,9 @@
 (insn 11 10 12 3 (set (reg/f:SI 86)
         (plus:SI (reg:SI 82)
             (const:SI (unspec:SI [
-                        (symbol_ref/f:SI ("*.LC0") [flags 0x2]  <var_decl 0x7733361c2000 *.LC0>)
+                        (symbol_ref/f:SI ("*.LC0") [flags 0x2]  <var_decl 0x7cd64bdc2000 *.LC0>)
                     ] UNSPEC_GOTOFF)))) "drivers/blk_drv/hd.c":94:3 205 {*leasi}
-     (expr_list:REG_EQUAL (symbol_ref/f:SI ("*.LC0") [flags 0x2]  <var_decl 0x7733361c2000 *.LC0>)
+     (expr_list:REG_EQUAL (symbol_ref/f:SI ("*.LC0") [flags 0x2]  <var_decl 0x7cd64bdc2000 *.LC0>)
         (nil)))
 (insn 12 11 13 3 (set (mem/f:SI (pre_dec:SI (reg/f:SI 7 sp)) [5  S4 A32])
         (reg/f:SI 86)) "drivers/blk_drv/hd.c":94:3 54 {*pushsi2}
@@ -46,7 +46,7 @@
         (reg:SI 82)) "drivers/blk_drv/hd.c":94:3 75 {*movsi_internal}
      (nil))
 (call_insn 14 13 15 3 (set (reg:SI 0 ax)
-        (call (mem:QI (symbol_ref:SI ("printk") [flags 0x41]  <function_decl 0x773336118900 printk>) [0 printk S1 A8])
+        (call (mem:QI (symbol_ref:SI ("printk") [flags 0x41]  <function_decl 0x7cd64bd18900 printk>) [0 printk S1 A8])
             (const_int 16 [0x10]))) "drivers/blk_drv/hd.c":94:3 823 {*call_value}
      (nil)
     (expr_list (use (reg:SI 3 bx))
@@ -95,7 +95,7 @@
 (insn 24 23 25 4 (set (reg:SI 3 bx)
         (reg:SI 82)) "drivers/blk_drv/hd.c":96:2 75 {*movsi_internal}
      (nil))
-(call_insn 25 24 26 4 (call (mem:QI (symbol_ref:SI ("wake_up") [flags 0x41]  <function_decl 0x77333613e300 wake_up>) [0 wake_up S1 A8])
+(call_insn 25 24 26 4 (call (mem:QI (symbol_ref:SI ("wake_up") [flags 0x41]  <function_decl 0x7cd64bd3e300 wake_up>) [0 wake_up S1 A8])
         (const_int 16 [0x10])) "drivers/blk_drv/hd.c":96:2 812 {*call}
      (nil)
     (expr_list (use (reg:SI 3 bx))
@@ -120,7 +120,7 @@
 (insn 5 2 6 2 (set (reg/f:SI 100)
         (mem/u/c:SI (plus:SI (reg:SI 82)
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("blk_dev") [flags 0x40]  <var_decl 0x77333611a6c0 blk_dev>)
+                            (symbol_ref:SI ("blk_dev") [flags 0x40]  <var_decl 0x7cd64bd1a6c0 blk_dev>)
                         ] UNSPEC_GOT))) [16  S4 A8])) "drivers/blk_drv/hd.c":101:6 75 {*movsi_internal}
      (nil))
 (insn 6 5 7 2 (set (reg/f:SI 83 [ _1 ])
@@ -146,7 +146,7 @@
 (insn 11 10 12 3 (set (reg/f:SI 101)
         (mem/u/c:SI (plus:SI (reg:SI 82)
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("blk_dev") [flags 0x40]  <var_decl 0x77333611a6c0 blk_dev>)
+                            (symbol_ref:SI ("blk_dev") [flags 0x40]  <var_decl 0x7cd64bd1a6c0 blk_dev>)
                         ] UNSPEC_GOT))) [16  S4 A8])) "drivers/blk_drv/hd.c":102:3 75 {*movsi_internal}
      (nil))
 (insn 12 11 13 3 (set (reg/f:SI 85 [ _3 ])
@@ -170,7 +170,7 @@
 (insn 17 16 18 3 (set (reg/f:SI 103)
         (mem/u/c:SI (plus:SI (reg:SI 82)
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("blk_dev") [flags 0x40]  <var_decl 0x77333611a6c0 blk_dev>)
+                            (symbol_ref:SI ("blk_dev") [flags 0x40]  <var_decl 0x7cd64bd1a6c0 blk_dev>)
                         ] UNSPEC_GOT))) [16  S4 A8])) "drivers/blk_drv/hd.c":103:17 75 {*movsi_internal}
      (nil))
 (insn 18 17 19 3 (set (reg/f:SI 88 [ _6 ])
@@ -193,7 +193,7 @@
         (reg/f:SI 89 [ _7 ])) "drivers/blk_drv/hd.c":103:3 54 {*pushsi2}
      (expr_list:REG_ARGS_SIZE (const_int 16 [0x10])
         (nil)))
-(call_insn 22 21 23 3 (call (mem:QI (symbol_ref:SI ("unlock_buffer") [flags 0x3]  <function_decl 0x773336149200 unlock_buffer>) [0 unlock_buffer S1 A8])
+(call_insn 22 21 23 3 (call (mem:QI (symbol_ref:SI ("unlock_buffer") [flags 0x3]  <function_decl 0x7cd64bd49200 unlock_buffer>) [0 unlock_buffer S1 A8])
         (const_int 16 [0x10])) "drivers/blk_drv/hd.c":103:3 812 {*call}
      (nil)
     (nil))
@@ -230,9 +230,9 @@
 (insn 30 29 31 5 (set (reg/f:SI 104)
         (plus:SI (reg:SI 82)
             (const:SI (unspec:SI [
-                        (symbol_ref/f:SI ("*.LC1") [flags 0x2]  <var_decl 0x7733361c2120 *.LC1>)
+                        (symbol_ref/f:SI ("*.LC1") [flags 0x2]  <var_decl 0x7cd64bdc2120 *.LC1>)
                     ] UNSPEC_GOTOFF)))) "drivers/blk_drv/hd.c":106:3 205 {*leasi}
-     (expr_list:REG_EQUAL (symbol_ref/f:SI ("*.LC1") [flags 0x2]  <var_decl 0x7733361c2120 *.LC1>)
+     (expr_list:REG_EQUAL (symbol_ref/f:SI ("*.LC1") [flags 0x2]  <var_decl 0x7cd64bdc2120 *.LC1>)
         (nil)))
 (insn 31 30 32 5 (set (mem/f:SI (pre_dec:SI (reg/f:SI 7 sp)) [5  S4 A32])
         (reg/f:SI 104)) "drivers/blk_drv/hd.c":106:3 54 {*pushsi2}
@@ -242,7 +242,7 @@
         (reg:SI 82)) "drivers/blk_drv/hd.c":106:3 75 {*movsi_internal}
      (nil))
 (call_insn 33 32 34 5 (set (reg:SI 0 ax)
-        (call (mem:QI (symbol_ref:SI ("printk") [flags 0x41]  <function_decl 0x773336118900 printk>) [0 printk S1 A8])
+        (call (mem:QI (symbol_ref:SI ("printk") [flags 0x41]  <function_decl 0x7cd64bd18900 printk>) [0 printk S1 A8])
             (const_int 16 [0x10]))) "drivers/blk_drv/hd.c":106:3 823 {*call_value}
      (nil)
     (expr_list (use (reg:SI 3 bx))
@@ -258,7 +258,7 @@
 (insn 35 34 36 5 (set (reg/f:SI 105)
         (mem/u/c:SI (plus:SI (reg:SI 82)
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("blk_dev") [flags 0x40]  <var_decl 0x77333611a6c0 blk_dev>)
+                            (symbol_ref:SI ("blk_dev") [flags 0x40]  <var_decl 0x7cd64bd1a6c0 blk_dev>)
                         ] UNSPEC_GOT))) [16  S4 A8])) "drivers/blk_drv/hd.c":108:10 75 {*movsi_internal}
      (nil))
 (insn 36 35 37 5 (set (reg/f:SI 90 [ _8 ])
@@ -276,7 +276,7 @@
 (insn 39 38 40 5 (set (reg/f:SI 106)
         (mem/u/c:SI (plus:SI (reg:SI 82)
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("blk_dev") [flags 0x40]  <var_decl 0x77333611a6c0 blk_dev>)
+                            (symbol_ref:SI ("blk_dev") [flags 0x40]  <var_decl 0x7cd64bd1a6c0 blk_dev>)
                         ] UNSPEC_GOT))) [16  S4 A8])) "drivers/blk_drv/hd.c":107:36 75 {*movsi_internal}
      (nil))
 (insn 40 39 41 5 (set (reg/f:SI 93 [ _11 ])
@@ -305,9 +305,9 @@
 (insn 45 44 46 5 (set (reg/f:SI 107)
         (plus:SI (reg:SI 82)
             (const:SI (unspec:SI [
-                        (symbol_ref/f:SI ("*.LC2") [flags 0x2]  <var_decl 0x7733361c21b0 *.LC2>)
+                        (symbol_ref/f:SI ("*.LC2") [flags 0x2]  <var_decl 0x7cd64bdc21b0 *.LC2>)
                     ] UNSPEC_GOTOFF)))) "drivers/blk_drv/hd.c":107:3 205 {*leasi}
-     (expr_list:REG_EQUAL (symbol_ref/f:SI ("*.LC2") [flags 0x2]  <var_decl 0x7733361c21b0 *.LC2>)
+     (expr_list:REG_EQUAL (symbol_ref/f:SI ("*.LC2") [flags 0x2]  <var_decl 0x7cd64bdc21b0 *.LC2>)
         (nil)))
 (insn 46 45 47 5 (set (mem/f:SI (pre_dec:SI (reg/f:SI 7 sp)) [5  S4 A32])
         (reg/f:SI 107)) "drivers/blk_drv/hd.c":107:3 54 {*pushsi2}
@@ -317,7 +317,7 @@
         (reg:SI 82)) "drivers/blk_drv/hd.c":107:3 75 {*movsi_internal}
      (nil))
 (call_insn 48 47 49 5 (set (reg:SI 0 ax)
-        (call (mem:QI (symbol_ref:SI ("printk") [flags 0x41]  <function_decl 0x773336118900 printk>) [0 printk S1 A8])
+        (call (mem:QI (symbol_ref:SI ("printk") [flags 0x41]  <function_decl 0x7cd64bd18900 printk>) [0 printk S1 A8])
             (const_int 16 [0x10]))) "drivers/blk_drv/hd.c":107:3 823 {*call_value}
      (nil)
     (expr_list (use (reg:SI 3 bx))
@@ -335,7 +335,7 @@
 (insn 52 51 53 6 (set (reg/f:SI 108)
         (mem/u/c:SI (plus:SI (reg:SI 82)
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("blk_dev") [flags 0x40]  <var_decl 0x77333611a6c0 blk_dev>)
+                            (symbol_ref:SI ("blk_dev") [flags 0x40]  <var_decl 0x7cd64bd1a6c0 blk_dev>)
                         ] UNSPEC_GOT))) [16  S4 A8])) "drivers/blk_drv/hd.c":110:11 75 {*movsi_internal}
      (nil))
 (insn 53 52 54 6 (set (reg/f:SI 95 [ _13 ])
@@ -364,7 +364,7 @@
 (insn 57 56 58 6 (set (reg:SI 3 bx)
         (reg:SI 82)) "drivers/blk_drv/hd.c":110:2 75 {*movsi_internal}
      (nil))
-(call_insn 58 57 59 6 (call (mem:QI (symbol_ref:SI ("wake_up") [flags 0x41]  <function_decl 0x77333613e300 wake_up>) [0 wake_up S1 A8])
+(call_insn 58 57 59 6 (call (mem:QI (symbol_ref:SI ("wake_up") [flags 0x41]  <function_decl 0x7cd64bd3e300 wake_up>) [0 wake_up S1 A8])
         (const_int 16 [0x10])) "drivers/blk_drv/hd.c":110:2 812 {*call}
      (nil)
     (expr_list (use (reg:SI 3 bx))
@@ -388,12 +388,12 @@
 (insn 61 60 62 6 (set (reg:SI 110)
         (mem/u/c:SI (plus:SI (reg:SI 82)
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("wait_for_request") [flags 0x40]  <var_decl 0x77333611a750 wait_for_request>)
+                            (symbol_ref:SI ("wait_for_request") [flags 0x40]  <var_decl 0x7cd64bd1a750 wait_for_request>)
                         ] UNSPEC_GOT))) [16  S4 A8])) "drivers/blk_drv/hd.c":111:2 75 {*movsi_internal}
      (nil))
 (insn 62 61 63 6 (set (reg/f:SI 109)
         (reg:SI 110)) "drivers/blk_drv/hd.c":111:2 75 {*movsi_internal}
-     (expr_list:REG_EQUAL (symbol_ref:SI ("wait_for_request") [flags 0x40]  <var_decl 0x77333611a750 wait_for_request>)
+     (expr_list:REG_EQUAL (symbol_ref:SI ("wait_for_request") [flags 0x40]  <var_decl 0x7cd64bd1a750 wait_for_request>)
         (nil)))
 (insn 63 62 64 6 (set (mem/f:SI (pre_dec:SI (reg/f:SI 7 sp)) [15  S4 A32])
         (reg/f:SI 109)) "drivers/blk_drv/hd.c":111:2 54 {*pushsi2}
@@ -402,7 +402,7 @@
 (insn 64 63 65 6 (set (reg:SI 3 bx)
         (reg:SI 82)) "drivers/blk_drv/hd.c":111:2 75 {*movsi_internal}
      (nil))
-(call_insn 65 64 66 6 (call (mem:QI (symbol_ref:SI ("wake_up") [flags 0x41]  <function_decl 0x77333613e300 wake_up>) [0 wake_up S1 A8])
+(call_insn 65 64 66 6 (call (mem:QI (symbol_ref:SI ("wake_up") [flags 0x41]  <function_decl 0x7cd64bd3e300 wake_up>) [0 wake_up S1 A8])
         (const_int 16 [0x10])) "drivers/blk_drv/hd.c":111:2 812 {*call}
      (nil)
     (expr_list (use (reg:SI 3 bx))
@@ -418,7 +418,7 @@
 (insn 67 66 68 6 (set (reg/f:SI 111)
         (mem/u/c:SI (plus:SI (reg:SI 82)
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("blk_dev") [flags 0x40]  <var_decl 0x77333611a6c0 blk_dev>)
+                            (symbol_ref:SI ("blk_dev") [flags 0x40]  <var_decl 0x7cd64bd1a6c0 blk_dev>)
                         ] UNSPEC_GOT))) [16  S4 A8])) "drivers/blk_drv/hd.c":112:2 75 {*movsi_internal}
      (nil))
 (insn 68 67 69 6 (set (reg/f:SI 97 [ _15 ])
@@ -431,7 +431,7 @@
 (insn 70 69 71 6 (set (reg/f:SI 112)
         (mem/u/c:SI (plus:SI (reg:SI 82)
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("blk_dev") [flags 0x40]  <var_decl 0x77333611a6c0 blk_dev>)
+                            (symbol_ref:SI ("blk_dev") [flags 0x40]  <var_decl 0x7cd64bd1a6c0 blk_dev>)
                         ] UNSPEC_GOT))) [16  S4 A8])) "drivers/blk_drv/hd.c":113:12 75 {*movsi_internal}
      (nil))
 (insn 71 70 72 6 (set (reg/f:SI 98 [ _16 ])
@@ -445,7 +445,7 @@
 (insn 73 72 74 6 (set (reg/f:SI 113)
         (mem/u/c:SI (plus:SI (reg:SI 82)
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("blk_dev") [flags 0x40]  <var_decl 0x77333611a6c0 blk_dev>)
+                            (symbol_ref:SI ("blk_dev") [flags 0x40]  <var_decl 0x7cd64bd1a6c0 blk_dev>)
                         ] UNSPEC_GOT))) [16  S4 A8])) "drivers/blk_drv/hd.c":113:10 75 {*movsi_internal}
      (nil))
 (insn 74 73 77 6 (set (mem/f:SI (plus:SI (reg/f:SI 113)
@@ -628,9 +628,9 @@
 (insn 48 47 49 8 (set (reg/f:SI 94)
         (plus:SI (reg:SI 82)
             (const:SI (unspec:SI [
-                        (symbol_ref/f:SI ("*.LC3") [flags 0x2]  <var_decl 0x7733361c23f0 *.LC3>)
+                        (symbol_ref/f:SI ("*.LC3") [flags 0x2]  <var_decl 0x7cd64bdc23f0 *.LC3>)
                     ] UNSPEC_GOTOFF)))) "drivers/blk_drv/hd.c":127:2 205 {*leasi}
-     (expr_list:REG_EQUAL (symbol_ref/f:SI ("*.LC3") [flags 0x2]  <var_decl 0x7733361c23f0 *.LC3>)
+     (expr_list:REG_EQUAL (symbol_ref/f:SI ("*.LC3") [flags 0x2]  <var_decl 0x7cd64bdc23f0 *.LC3>)
         (nil)))
 (insn 49 48 50 8 (set (mem/f:SI (pre_dec:SI (reg/f:SI 7 sp)) [5  S4 A32])
         (reg/f:SI 94)) "drivers/blk_drv/hd.c":127:2 54 {*pushsi2}
@@ -640,7 +640,7 @@
         (reg:SI 82)) "drivers/blk_drv/hd.c":127:2 75 {*movsi_internal}
      (nil))
 (call_insn 51 50 52 8 (set (reg:SI 0 ax)
-        (call (mem:QI (symbol_ref:SI ("printk") [flags 0x41]  <function_decl 0x773336118900 printk>) [0 printk S1 A8])
+        (call (mem:QI (symbol_ref:SI ("printk") [flags 0x41]  <function_decl 0x7cd64bd18900 printk>) [0 printk S1 A8])
             (const_int 16 [0x10]))) "drivers/blk_drv/hd.c":127:2 823 {*call_value}
      (nil)
     (expr_list (use (reg:SI 3 bx))
@@ -800,9 +800,9 @@
 (insn 17 16 18 4 (set (reg/f:SI 105)
         (plus:SI (reg:SI 82)
             (const:SI (unspec:SI [
-                        (symbol_ref/f:SI ("*.LC4") [flags 0x2]  <var_decl 0x7733361c25a0 *.LC4>)
+                        (symbol_ref/f:SI ("*.LC4") [flags 0x2]  <var_decl 0x7cd64bdc25a0 *.LC4>)
                     ] UNSPEC_GOTOFF)))) "drivers/blk_drv/hd.c":146:9 205 {*leasi}
-     (expr_list:REG_EQUAL (symbol_ref/f:SI ("*.LC4") [flags 0x2]  <var_decl 0x7733361c25a0 *.LC4>)
+     (expr_list:REG_EQUAL (symbol_ref/f:SI ("*.LC4") [flags 0x2]  <var_decl 0x7cd64bdc25a0 *.LC4>)
         (nil)))
 (insn 18 17 19 4 (set (mem/f:SI (pre_dec:SI (reg/f:SI 7 sp)) [5  S4 A32])
         (reg/f:SI 105)) "drivers/blk_drv/hd.c":146:9 54 {*pushsi2}
@@ -811,7 +811,7 @@
 (insn 19 18 20 4 (set (reg:SI 3 bx)
         (reg:SI 82)) "drivers/blk_drv/hd.c":146:9 75 {*movsi_internal}
      (nil))
-(call_insn 20 19 21 4 (call (mem:QI (symbol_ref:SI ("panic") [flags 0x41]  <function_decl 0x773336118b00 panic>) [0 panic S1 A8])
+(call_insn 20 19 21 4 (call (mem:QI (symbol_ref:SI ("panic") [flags 0x41]  <function_decl 0x7cd64bd18b00 panic>) [0 panic S1 A8])
         (const_int 16 [0x10])) "drivers/blk_drv/hd.c":146:9 812 {*call}
      (nil)
     (expr_list (use (reg:SI 3 bx))
@@ -827,7 +827,7 @@
 (code_label 22 21 23 5 20 (nil) [1 uses])
 (note 23 22 24 5 [bb 5] NOTE_INSN_BASIC_BLOCK)
 (call_insn 24 23 25 5 (set (reg:SI 0 ax)
-        (call (mem:QI (symbol_ref:SI ("controller_ready") [flags 0x3]  <function_decl 0x773336149900 controller_ready>) [0 controller_ready S1 A8])
+        (call (mem:QI (symbol_ref:SI ("controller_ready") [flags 0x3]  <function_decl 0x7cd64bd49900 controller_ready>) [0 controller_ready S1 A8])
             (const_int 0 [0]))) "drivers/blk_drv/hd.c":147:10 823 {*call_value}
      (nil)
     (nil))
@@ -857,9 +857,9 @@
 (insn 30 29 31 6 (set (reg/f:SI 106)
         (plus:SI (reg:SI 82)
             (const:SI (unspec:SI [
-                        (symbol_ref/f:SI ("*.LC5") [flags 0x2]  <var_decl 0x7733361c2630 *.LC5>)
+                        (symbol_ref/f:SI ("*.LC5") [flags 0x2]  <var_decl 0x7cd64bdc2630 *.LC5>)
                     ] UNSPEC_GOTOFF)))) "drivers/blk_drv/hd.c":148:9 205 {*leasi}
-     (expr_list:REG_EQUAL (symbol_ref/f:SI ("*.LC5") [flags 0x2]  <var_decl 0x7733361c2630 *.LC5>)
+     (expr_list:REG_EQUAL (symbol_ref/f:SI ("*.LC5") [flags 0x2]  <var_decl 0x7cd64bdc2630 *.LC5>)
         (nil)))
 (insn 31 30 32 6 (set (mem/f:SI (pre_dec:SI (reg/f:SI 7 sp)) [5  S4 A32])
         (reg/f:SI 106)) "drivers/blk_drv/hd.c":148:9 54 {*pushsi2}
@@ -868,7 +868,7 @@
 (insn 32 31 33 6 (set (reg:SI 3 bx)
         (reg:SI 82)) "drivers/blk_drv/hd.c":148:9 75 {*movsi_internal}
      (nil))
-(call_insn 33 32 34 6 (call (mem:QI (symbol_ref:SI ("panic") [flags 0x41]  <function_decl 0x773336118b00 panic>) [0 panic S1 A8])
+(call_insn 33 32 34 6 (call (mem:QI (symbol_ref:SI ("panic") [flags 0x41]  <function_decl 0x7cd64bd18b00 panic>) [0 panic S1 A8])
         (const_int 16 [0x10])) "drivers/blk_drv/hd.c":148:9 812 {*call}
      (nil)
     (expr_list (use (reg:SI 3 bx))
@@ -889,7 +889,7 @@
      (nil))
 (insn 38 37 39 7 (set (mem/f/c:SI (plus:SI (reg:SI 82)
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("do_hd") [flags 0x2]  <var_decl 0x77333611a7e0 do_hd>)
+                            (symbol_ref:SI ("do_hd") [flags 0x2]  <var_decl 0x7cd64bd1a7e0 do_hd>)
                         ] UNSPEC_GOTOFF))) [2 do_hd+0 S4 A32])
         (reg/f:SI 107)) "drivers/blk_drv/hd.c":149:11 75 {*movsi_internal}
      (nil))
@@ -899,7 +899,7 @@
 (insn 40 39 41 7 (set (reg:SI 109)
         (plus:SI (reg:SI 82)
             (const:SI (plus:SI (unspec:SI [
-                            (symbol_ref:SI ("hd_info") [flags 0x2]  <var_decl 0x77333611aa20 hd_info>)
+                            (symbol_ref:SI ("hd_info") [flags 0x2]  <var_decl 0x7cd64bd1aa20 hd_info>)
                         ] UNSPEC_GOTOFF)
                     (const_int 4 [0x4]))))) "drivers/blk_drv/hd.c":150:5 205 {*leasi}
      (nil))
@@ -979,7 +979,7 @@
 (insn 53 52 54 7 (set (reg:SI 116)
         (plus:SI (reg:SI 82)
             (const:SI (plus:SI (unspec:SI [
-                            (symbol_ref:SI ("hd_info") [flags 0x2]  <var_decl 0x77333611aa20 hd_info>)
+                            (symbol_ref:SI ("hd_info") [flags 0x2]  <var_decl 0x7cd64bd1aa20 hd_info>)
                         ] UNSPEC_GOTOFF)
                     (const_int 12 [0xc]))))) "drivers/blk_drv/hd.c":152:5 205 {*leasi}
      (nil))
@@ -1364,7 +1364,7 @@
 (insn 22 21 23 5 (set (reg:SI 83 [ _1 ])
         (mem/c:SI (plus:SI (reg:SI 82)
                 (const:SI (plus:SI (unspec:SI [
-                                (symbol_ref:SI ("hd_info") [flags 0x2]  <var_decl 0x77333611aa20 hd_info>)
+                                (symbol_ref:SI ("hd_info") [flags 0x2]  <var_decl 0x7cd64bd1aa20 hd_info>)
                             ] UNSPEC_GOTOFF)
                         (const_int 20 [0x14])))) [11 hd_info[0].ctl+0 S4 A32])) "drivers/blk_drv/hd.c":169:2 75 {*movsi_internal}
      (nil))
@@ -1392,7 +1392,7 @@
         ]) "drivers/blk_drv/hd.c":169:2 -1
      (nil))
 (call_insn 26 25 27 5 (set (reg:SI 0 ax)
-        (call (mem:QI (symbol_ref:SI ("drive_busy") [flags 0x3]  <function_decl 0x773336149600 drive_busy>) [0 drive_busy S1 A8])
+        (call (mem:QI (symbol_ref:SI ("drive_busy") [flags 0x3]  <function_decl 0x7cd64bd49600 drive_busy>) [0 drive_busy S1 A8])
             (const_int 0 [0]))) "drivers/blk_drv/hd.c":170:6 823 {*call_value}
      (nil)
     (nil))
@@ -1422,9 +1422,9 @@
 (insn 32 31 33 6 (set (reg/f:SI 90)
         (plus:SI (reg:SI 82)
             (const:SI (unspec:SI [
-                        (symbol_ref/f:SI ("*.LC6") [flags 0x2]  <var_decl 0x7733361c2750 *.LC6>)
+                        (symbol_ref/f:SI ("*.LC6") [flags 0x2]  <var_decl 0x7cd64bdc2750 *.LC6>)
                     ] UNSPEC_GOTOFF)))) "drivers/blk_drv/hd.c":171:3 205 {*leasi}
-     (expr_list:REG_EQUAL (symbol_ref/f:SI ("*.LC6") [flags 0x2]  <var_decl 0x7733361c2750 *.LC6>)
+     (expr_list:REG_EQUAL (symbol_ref/f:SI ("*.LC6") [flags 0x2]  <var_decl 0x7cd64bdc2750 *.LC6>)
         (nil)))
 (insn 33 32 34 6 (set (mem/f:SI (pre_dec:SI (reg/f:SI 7 sp)) [5  S4 A32])
         (reg/f:SI 90)) "drivers/blk_drv/hd.c":171:3 54 {*pushsi2}
@@ -1434,7 +1434,7 @@
         (reg:SI 82)) "drivers/blk_drv/hd.c":171:3 75 {*movsi_internal}
      (nil))
 (call_insn 35 34 36 6 (set (reg:SI 0 ax)
-        (call (mem:QI (symbol_ref:SI ("printk") [flags 0x41]  <function_decl 0x773336118900 printk>) [0 printk S1 A8])
+        (call (mem:QI (symbol_ref:SI ("printk") [flags 0x41]  <function_decl 0x7cd64bd18900 printk>) [0 printk S1 A8])
             (const_int 16 [0x10]))) "drivers/blk_drv/hd.c":171:3 823 {*call_value}
      (nil)
     (expr_list (use (reg:SI 3 bx))
@@ -1508,9 +1508,9 @@
 (insn 50 49 51 8 (set (reg/f:SI 94)
         (plus:SI (reg:SI 82)
             (const:SI (unspec:SI [
-                        (symbol_ref/f:SI ("*.LC7") [flags 0x2]  <var_decl 0x7733361c2870 *.LC7>)
+                        (symbol_ref/f:SI ("*.LC7") [flags 0x2]  <var_decl 0x7cd64bdc2870 *.LC7>)
                     ] UNSPEC_GOTOFF)))) "drivers/blk_drv/hd.c":173:3 205 {*leasi}
-     (expr_list:REG_EQUAL (symbol_ref/f:SI ("*.LC7") [flags 0x2]  <var_decl 0x7733361c2870 *.LC7>)
+     (expr_list:REG_EQUAL (symbol_ref/f:SI ("*.LC7") [flags 0x2]  <var_decl 0x7cd64bdc2870 *.LC7>)
         (nil)))
 (insn 51 50 52 8 (set (mem/f:SI (pre_dec:SI (reg/f:SI 7 sp)) [5  S4 A32])
         (reg/f:SI 94)) "drivers/blk_drv/hd.c":173:3 54 {*pushsi2}
@@ -1520,7 +1520,7 @@
         (reg:SI 82)) "drivers/blk_drv/hd.c":173:3 75 {*movsi_internal}
      (nil))
 (call_insn 53 52 54 8 (set (reg:SI 0 ax)
-        (call (mem:QI (symbol_ref:SI ("printk") [flags 0x41]  <function_decl 0x773336118900 printk>) [0 printk S1 A8])
+        (call (mem:QI (symbol_ref:SI ("printk") [flags 0x41]  <function_decl 0x7cd64bd18900 printk>) [0 printk S1 A8])
             (const_int 16 [0x10]))) "drivers/blk_drv/hd.c":173:3 823 {*call_value}
      (nil)
     (expr_list (use (reg:SI 3 bx))
@@ -1694,7 +1694,7 @@
 (insn 5 2 6 2 (set (reg/f:SI 89)
         (mem/u/c:SI (plus:SI (reg:SI 82)
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("blk_dev") [flags 0x40]  <var_decl 0x77333611a6c0 blk_dev>)
+                            (symbol_ref:SI ("blk_dev") [flags 0x40]  <var_decl 0x7cd64bd1a6c0 blk_dev>)
                         ] UNSPEC_GOT))) [16  S4 A8])) "drivers/blk_drv/hd.c":190:8 75 {*movsi_internal}
      (nil))
 (insn 6 5 7 2 (set (reg/f:SI 83 [ _1 ])
@@ -1744,7 +1744,7 @@
         (const_int 0 [0])) "drivers/blk_drv/hd.c":191:3 54 {*pushsi2}
      (expr_list:REG_ARGS_SIZE (const_int 16 [0x10])
         (nil)))
-(call_insn 18 17 19 3 (call (mem:QI (symbol_ref:SI ("end_request") [flags 0x3]  <function_decl 0x773336149400 end_request>) [0 end_request S1 A8])
+(call_insn 18 17 19 3 (call (mem:QI (symbol_ref:SI ("end_request") [flags 0x3]  <function_decl 0x7cd64bd49400 end_request>) [0 end_request S1 A8])
         (const_int 16 [0x10])) "drivers/blk_drv/hd.c":191:3 812 {*call}
      (nil)
     (nil))
@@ -1761,7 +1761,7 @@
 (insn 22 21 23 4 (set (reg/f:SI 90)
         (mem/u/c:SI (plus:SI (reg:SI 82)
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("blk_dev") [flags 0x40]  <var_decl 0x77333611a6c0 blk_dev>)
+                            (symbol_ref:SI ("blk_dev") [flags 0x40]  <var_decl 0x7cd64bd1a6c0 blk_dev>)
                         ] UNSPEC_GOT))) [16  S4 A8])) "drivers/blk_drv/hd.c":192:6 75 {*movsi_internal}
      (nil))
 (insn 23 22 24 4 (set (reg/f:SI 87 [ _5 ])
@@ -1786,7 +1786,7 @@
 (note 29 28 30 5 [bb 5] NOTE_INSN_BASIC_BLOCK)
 (insn 30 29 38 5 (set (mem/c:SI (plus:SI (reg:SI 82)
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("reset") [flags 0x2]  <var_decl 0x77333611a900 reset>)
+                            (symbol_ref:SI ("reset") [flags 0x2]  <var_decl 0x7cd64bd1a900 reset>)
                         ] UNSPEC_GOTOFF))) [11 reset+0 S4 A32])
         (const_int 1 [0x1])) "drivers/blk_drv/hd.c":193:9 75 {*movsi_internal}
      (nil))
@@ -1803,7 +1803,7 @@
 (note 3 1 2 2 [bb 2] NOTE_INSN_BASIC_BLOCK)
 (note 2 3 5 2 NOTE_INSN_FUNCTION_BEG)
 (call_insn 5 2 6 2 (set (reg:SI 0 ax)
-        (call (mem:QI (symbol_ref:SI ("win_result") [flags 0x3]  <function_decl 0x773336156500 win_result>) [0 win_result S1 A8])
+        (call (mem:QI (symbol_ref:SI ("win_result") [flags 0x3]  <function_decl 0x7cd64bd56500 win_result>) [0 win_result S1 A8])
             (const_int 0 [0]))) "drivers/blk_drv/hd.c":198:6 823 {*call_value}
      (nil)
     (nil))
@@ -1822,13 +1822,13 @@
      (nil)
  -> 11)
 (note 9 8 10 3 [bb 3] NOTE_INSN_BASIC_BLOCK)
-(call_insn 10 9 11 3 (call (mem:QI (symbol_ref:SI ("bad_rw_intr") [flags 0x3]  <function_decl 0x773336156800 bad_rw_intr>) [0 bad_rw_intr S1 A8])
+(call_insn 10 9 11 3 (call (mem:QI (symbol_ref:SI ("bad_rw_intr") [flags 0x3]  <function_decl 0x7cd64bd56800 bad_rw_intr>) [0 bad_rw_intr S1 A8])
         (const_int 0 [0])) "drivers/blk_drv/hd.c":199:3 812 {*call}
      (nil)
     (nil))
 (code_label 11 10 12 4 37 (nil) [1 uses])
 (note 12 11 13 4 [bb 4] NOTE_INSN_BASIC_BLOCK)
-(call_insn 13 12 16 4 (call (mem:QI (symbol_ref:SI ("do_hd_request") [flags 0x3]  <function_decl 0x773336149000 do_hd_request>) [0 do_hd_request S1 A8])
+(call_insn 13 12 16 4 (call (mem:QI (symbol_ref:SI ("do_hd_request") [flags 0x3]  <function_decl 0x7cd64bd49000 do_hd_request>) [0 do_hd_request S1 A8])
         (const_int 0 [0])) "drivers/blk_drv/hd.c":200:2 812 {*call}
      (nil)
     (nil))
@@ -1841,7 +1841,7 @@
 (note 1 0 3 NOTE_INSN_DELETED)
 (note 3 1 2 2 [bb 2] NOTE_INSN_BASIC_BLOCK)
 (note 2 3 5 2 NOTE_INSN_FUNCTION_BEG)
-(call_insn 5 2 6 2 (call (mem:QI (symbol_ref:SI ("reset_controller") [flags 0x3]  <function_decl 0x773336156100 reset_controller>) [0 reset_controller S1 A8])
+(call_insn 5 2 6 2 (call (mem:QI (symbol_ref:SI ("reset_controller") [flags 0x3]  <function_decl 0x7cd64bd56100 reset_controller>) [0 reset_controller S1 A8])
         (const_int 0 [0])) "drivers/blk_drv/hd.c":205:2 812 {*call}
      (nil)
     (nil))
@@ -1851,7 +1851,7 @@
 (insn 7 6 8 2 (set (reg:SI 94)
         (plus:SI (reg:SI 82)
             (const:SI (plus:SI (unspec:SI [
-                            (symbol_ref:SI ("hd_info") [flags 0x2]  <var_decl 0x77333611aa20 hd_info>)
+                            (symbol_ref:SI ("hd_info") [flags 0x2]  <var_decl 0x7cd64bd1aa20 hd_info>)
                         ] UNSPEC_GOTOFF)
                     (const_int 8 [0x8]))))) "drivers/blk_drv/hd.c":207:20 205 {*leasi}
      (nil))
@@ -1908,7 +1908,7 @@
 (insn 18 17 19 2 (set (reg:SI 100)
         (plus:SI (reg:SI 82)
             (const:SI (unspec:SI [
-                        (symbol_ref:SI ("hd_info") [flags 0x2]  <var_decl 0x77333611aa20 hd_info>)
+                        (symbol_ref:SI ("hd_info") [flags 0x2]  <var_decl 0x7cd64bd1aa20 hd_info>)
                     ] UNSPEC_GOTOFF)))) "drivers/blk_drv/hd.c":206:60 205 {*leasi}
      (nil))
 (insn 19 18 20 2 (set (reg:SI 102)
@@ -1971,7 +1971,7 @@
 (insn 30 29 31 2 (set (reg:SI 106)
         (plus:SI (reg:SI 82)
             (const:SI (plus:SI (unspec:SI [
-                            (symbol_ref:SI ("hd_info") [flags 0x2]  <var_decl 0x77333611aa20 hd_info>)
+                            (symbol_ref:SI ("hd_info") [flags 0x2]  <var_decl 0x7cd64bd1aa20 hd_info>)
                         ] UNSPEC_GOTOFF)
                     (const_int 4 [0x4]))))) "drivers/blk_drv/hd.c":206:42 205 {*leasi}
      (nil))
@@ -2028,7 +2028,7 @@
 (insn 41 40 42 2 (set (reg:SI 112)
         (plus:SI (reg:SI 82)
             (const:SI (plus:SI (unspec:SI [
-                            (symbol_ref:SI ("hd_info") [flags 0x2]  <var_decl 0x77333611aa20 hd_info>)
+                            (symbol_ref:SI ("hd_info") [flags 0x2]  <var_decl 0x7cd64bd1aa20 hd_info>)
                         ] UNSPEC_GOTOFF)
                     (const_int 4 [0x4]))))) "drivers/blk_drv/hd.c":206:24 205 {*leasi}
      (nil))
@@ -2093,9 +2093,9 @@
 (insn 53 52 54 2 (set (reg/f:SI 117)
         (plus:SI (reg:SI 82)
             (const:SI (unspec:SI [
-                        (symbol_ref:SI ("recal_intr") [flags 0x3]  <function_decl 0x773336149100 recal_intr>)
+                        (symbol_ref:SI ("recal_intr") [flags 0x3]  <function_decl 0x7cd64bd49100 recal_intr>)
                     ] UNSPEC_GOTOFF)))) "drivers/blk_drv/hd.c":206:2 205 {*leasi}
-     (expr_list:REG_EQUAL (symbol_ref:SI ("recal_intr") [flags 0x3]  <function_decl 0x773336149100 recal_intr>)
+     (expr_list:REG_EQUAL (symbol_ref:SI ("recal_intr") [flags 0x3]  <function_decl 0x7cd64bd49100 recal_intr>)
         (nil)))
 (insn 54 53 55 2 (set (mem/f:SI (pre_dec:SI (reg/f:SI 7 sp)) [2  S4 A32])
         (reg/f:SI 117)) "drivers/blk_drv/hd.c":206:2 54 {*pushsi2}
@@ -2125,7 +2125,7 @@
         (reg:SI 92 [ nr.7_10 ])) "drivers/blk_drv/hd.c":206:2 54 {*pushsi2}
      (expr_list:REG_ARGS_SIZE (const_int 32 [0x20])
         (nil)))
-(call_insn 61 60 62 2 (call (mem:QI (symbol_ref:SI ("hd_out") [flags 0x3]  <function_decl 0x773336149b00 hd_out>) [0 hd_out S1 A8])
+(call_insn 61 60 62 2 (call (mem:QI (symbol_ref:SI ("hd_out") [flags 0x3]  <function_decl 0x7cd64bd49b00 hd_out>) [0 hd_out S1 A8])
         (const_int 32 [0x20])) "drivers/blk_drv/hd.c":206:2 812 {*call}
      (nil)
     (nil))
@@ -2147,7 +2147,7 @@
 (note 3 1 2 2 [bb 2] NOTE_INSN_BASIC_BLOCK)
 (note 2 3 5 2 NOTE_INSN_FUNCTION_BEG)
 (call_insn 5 2 6 2 (set (reg:SI 0 ax)
-        (call (mem:QI (symbol_ref:SI ("win_result") [flags 0x3]  <function_decl 0x773336156500 win_result>) [0 win_result S1 A8])
+        (call (mem:QI (symbol_ref:SI ("win_result") [flags 0x3]  <function_decl 0x7cd64bd56500 win_result>) [0 win_result S1 A8])
             (const_int 0 [0]))) "drivers/blk_drv/hd.c":212:6 823 {*call_value}
      (nil)
     (nil))
@@ -2166,11 +2166,11 @@
      (nil)
  -> 14)
 (note 9 8 10 3 [bb 3] NOTE_INSN_BASIC_BLOCK)
-(call_insn 10 9 11 3 (call (mem:QI (symbol_ref:SI ("bad_rw_intr") [flags 0x3]  <function_decl 0x773336156800 bad_rw_intr>) [0 bad_rw_intr S1 A8])
+(call_insn 10 9 11 3 (call (mem:QI (symbol_ref:SI ("bad_rw_intr") [flags 0x3]  <function_decl 0x7cd64bd56800 bad_rw_intr>) [0 bad_rw_intr S1 A8])
         (const_int 0 [0])) "drivers/blk_drv/hd.c":213:3 812 {*call}
      (nil)
     (nil))
-(call_insn 11 10 58 3 (call (mem:QI (symbol_ref:SI ("do_hd_request") [flags 0x3]  <function_decl 0x773336149000 do_hd_request>) [0 do_hd_request S1 A8])
+(call_insn 11 10 58 3 (call (mem:QI (symbol_ref:SI ("do_hd_request") [flags 0x3]  <function_decl 0x7cd64bd49000 do_hd_request>) [0 do_hd_request S1 A8])
         (const_int 0 [0])) "drivers/blk_drv/hd.c":214:3 812 {*call}
      (nil)
     (nil))
@@ -2184,7 +2184,7 @@
 (insn 16 15 17 4 (set (reg/f:SI 97)
         (mem/u/c:SI (plus:SI (reg:SI 82)
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("blk_dev") [flags 0x40]  <var_decl 0x77333611a6c0 blk_dev>)
+                            (symbol_ref:SI ("blk_dev") [flags 0x40]  <var_decl 0x7cd64bd1a6c0 blk_dev>)
                         ] UNSPEC_GOT))) [16  S4 A8])) "drivers/blk_drv/hd.c":217:8 75 {*movsi_internal}
      (nil))
 (insn 17 16 18 4 (set (reg/f:SI 84 [ _2 ])
@@ -2225,7 +2225,7 @@
 (insn 25 24 26 5 (set (reg/f:SI 98)
         (mem/u/c:SI (plus:SI (reg:SI 82)
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("blk_dev") [flags 0x40]  <var_decl 0x77333611a6c0 blk_dev>)
+                            (symbol_ref:SI ("blk_dev") [flags 0x40]  <var_decl 0x7cd64bd1a6c0 blk_dev>)
                         ] UNSPEC_GOT))) [16  S4 A8])) "drivers/blk_drv/hd.c":218:3 75 {*movsi_internal}
      (nil))
 (insn 26 25 27 5 (set (reg/f:SI 88 [ _6 ])
@@ -2250,7 +2250,7 @@
 (insn 30 29 31 5 (set (reg/f:SI 99)
         (mem/u/c:SI (plus:SI (reg:SI 82)
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("blk_dev") [flags 0x40]  <var_decl 0x77333611a6c0 blk_dev>)
+                            (symbol_ref:SI ("blk_dev") [flags 0x40]  <var_decl 0x7cd64bd1a6c0 blk_dev>)
                         ] UNSPEC_GOT))) [16  S4 A8])) "drivers/blk_drv/hd.c":219:3 75 {*movsi_internal}
      (nil))
 (insn 31 30 32 5 (set (reg/f:SI 91 [ _9 ])
@@ -2264,7 +2264,7 @@
 (insn 33 32 34 5 (set (reg/f:SI 100)
         (mem/u/c:SI (plus:SI (reg:SI 82)
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("blk_dev") [flags 0x40]  <var_decl 0x77333611a6c0 blk_dev>)
+                            (symbol_ref:SI ("blk_dev") [flags 0x40]  <var_decl 0x7cd64bd1a6c0 blk_dev>)
                         ] UNSPEC_GOT))) [16  S4 A8])) "drivers/blk_drv/hd.c":219:3 75 {*movsi_internal}
      (nil))
 (insn 34 33 35 5 (set (reg/f:SI 93 [ _11 ])
@@ -2285,20 +2285,20 @@
 (insn 37 36 38 5 (set (reg/f:SI 101)
         (plus:SI (reg:SI 82)
             (const:SI (unspec:SI [
-                        (symbol_ref:SI ("write_intr") [flags 0x3]  <function_decl 0x773336156e00 write_intr>)
+                        (symbol_ref:SI ("write_intr") [flags 0x3]  <function_decl 0x7cd64bd56e00 write_intr>)
                     ] UNSPEC_GOTOFF)))) "drivers/blk_drv/hd.c":220:9 205 {*leasi}
-     (expr_list:REG_EQUAL (symbol_ref:SI ("write_intr") [flags 0x3]  <function_decl 0x773336156e00 write_intr>)
+     (expr_list:REG_EQUAL (symbol_ref:SI ("write_intr") [flags 0x3]  <function_decl 0x7cd64bd56e00 write_intr>)
         (nil)))
 (insn 38 37 39 5 (set (mem/f/c:SI (plus:SI (reg:SI 82)
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("do_hd") [flags 0x2]  <var_decl 0x77333611a7e0 do_hd>)
+                            (symbol_ref:SI ("do_hd") [flags 0x2]  <var_decl 0x7cd64bd1a7e0 do_hd>)
                         ] UNSPEC_GOTOFF))) [2 do_hd+0 S4 A32])
         (reg/f:SI 101)) "drivers/blk_drv/hd.c":220:9 75 {*movsi_internal}
      (nil))
 (insn 39 38 40 5 (set (reg/f:SI 102)
         (mem/u/c:SI (plus:SI (reg:SI 82)
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("blk_dev") [flags 0x40]  <var_decl 0x77333611a6c0 blk_dev>)
+                            (symbol_ref:SI ("blk_dev") [flags 0x40]  <var_decl 0x7cd64bd1a6c0 blk_dev>)
                         ] UNSPEC_GOT))) [16  S4 A8])) "drivers/blk_drv/hd.c":221:3 75 {*movsi_internal}
      (nil))
 (insn 40 39 41 5 (set (reg/f:SI 95 [ _13 ])
@@ -2349,7 +2349,7 @@
         (const_int 1 [0x1])) "drivers/blk_drv/hd.c":224:2 54 {*pushsi2}
      (expr_list:REG_ARGS_SIZE (const_int 16 [0x10])
         (nil)))
-(call_insn 51 50 52 6 (call (mem:QI (symbol_ref:SI ("end_request") [flags 0x3]  <function_decl 0x773336149400 end_request>) [0 end_request S1 A8])
+(call_insn 51 50 52 6 (call (mem:QI (symbol_ref:SI ("end_request") [flags 0x3]  <function_decl 0x7cd64bd49400 end_request>) [0 end_request S1 A8])
         (const_int 16 [0x10])) "drivers/blk_drv/hd.c":224:2 812 {*call}
      (nil)
     (nil))
@@ -2361,7 +2361,7 @@
         ]) "drivers/blk_drv/hd.c":224:2 209 {*addsi_1}
      (expr_list:REG_ARGS_SIZE (const_int 0 [0])
         (nil)))
-(call_insn 53 52 56 6 (call (mem:QI (symbol_ref:SI ("do_hd_request") [flags 0x3]  <function_decl 0x773336149000 do_hd_request>) [0 do_hd_request S1 A8])
+(call_insn 53 52 56 6 (call (mem:QI (symbol_ref:SI ("do_hd_request") [flags 0x3]  <function_decl 0x7cd64bd49000 do_hd_request>) [0 do_hd_request S1 A8])
         (const_int 0 [0])) "drivers/blk_drv/hd.c":225:2 812 {*call}
      (nil)
     (nil))
@@ -2374,7 +2374,7 @@
 (note 3 1 2 2 [bb 2] NOTE_INSN_BASIC_BLOCK)
 (note 2 3 5 2 NOTE_INSN_FUNCTION_BEG)
 (call_insn 5 2 6 2 (set (reg:SI 0 ax)
-        (call (mem:QI (symbol_ref:SI ("win_result") [flags 0x3]  <function_decl 0x773336156500 win_result>) [0 win_result S1 A8])
+        (call (mem:QI (symbol_ref:SI ("win_result") [flags 0x3]  <function_decl 0x7cd64bd56500 win_result>) [0 win_result S1 A8])
             (const_int 0 [0]))) "drivers/blk_drv/hd.c":230:9 823 {*call_value}
      (nil)
     (nil))
@@ -2393,11 +2393,11 @@
      (nil)
  -> 14)
 (note 9 8 10 3 [bb 3] NOTE_INSN_BASIC_BLOCK)
-(call_insn 10 9 11 3 (call (mem:QI (symbol_ref:SI ("bad_rw_intr") [flags 0x3]  <function_decl 0x773336156800 bad_rw_intr>) [0 bad_rw_intr S1 A8])
+(call_insn 10 9 11 3 (call (mem:QI (symbol_ref:SI ("bad_rw_intr") [flags 0x3]  <function_decl 0x7cd64bd56800 bad_rw_intr>) [0 bad_rw_intr S1 A8])
         (const_int 0 [0])) "drivers/blk_drv/hd.c":231:9 812 {*call}
      (nil)
     (nil))
-(call_insn 11 10 61 3 (call (mem:QI (symbol_ref:SI ("do_hd_request") [flags 0x3]  <function_decl 0x773336149000 do_hd_request>) [0 do_hd_request S1 A8])
+(call_insn 11 10 61 3 (call (mem:QI (symbol_ref:SI ("do_hd_request") [flags 0x3]  <function_decl 0x7cd64bd49000 do_hd_request>) [0 do_hd_request S1 A8])
         (const_int 0 [0])) "drivers/blk_drv/hd.c":232:9 812 {*call}
      (nil)
     (nil))
@@ -2411,7 +2411,7 @@
 (insn 16 15 17 4 (set (reg/f:SI 98)
         (mem/u/c:SI (plus:SI (reg:SI 82)
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("blk_dev") [flags 0x40]  <var_decl 0x77333611a6c0 blk_dev>)
+                            (symbol_ref:SI ("blk_dev") [flags 0x40]  <var_decl 0x7cd64bd1a6c0 blk_dev>)
                         ] UNSPEC_GOT))) [16  S4 A8])) "drivers/blk_drv/hd.c":235:5 75 {*movsi_internal}
      (nil))
 (insn 17 16 18 4 (set (reg/f:SI 84 [ _2 ])
@@ -2446,7 +2446,7 @@
 (insn 22 21 23 4 (set (reg/f:SI 101)
         (mem/u/c:SI (plus:SI (reg:SI 82)
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("blk_dev") [flags 0x40]  <var_decl 0x77333611a6c0 blk_dev>)
+                            (symbol_ref:SI ("blk_dev") [flags 0x40]  <var_decl 0x7cd64bd1a6c0 blk_dev>)
                         ] UNSPEC_GOT))) [16  S4 A8])) "drivers/blk_drv/hd.c":236:5 75 {*movsi_internal}
      (nil))
 (insn 23 22 24 4 (set (reg/f:SI 86 [ _4 ])
@@ -2460,7 +2460,7 @@
 (insn 25 24 26 4 (set (reg/f:SI 102)
         (mem/u/c:SI (plus:SI (reg:SI 82)
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("blk_dev") [flags 0x40]  <var_decl 0x77333611a6c0 blk_dev>)
+                            (symbol_ref:SI ("blk_dev") [flags 0x40]  <var_decl 0x7cd64bd1a6c0 blk_dev>)
                         ] UNSPEC_GOT))) [16  S4 A8])) "drivers/blk_drv/hd.c":237:5 75 {*movsi_internal}
      (nil))
 (insn 26 25 27 4 (set (reg/f:SI 87 [ _5 ])
@@ -2474,7 +2474,7 @@
 (insn 28 27 29 4 (set (reg/f:SI 103)
         (mem/u/c:SI (plus:SI (reg:SI 82)
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("blk_dev") [flags 0x40]  <var_decl 0x77333611a6c0 blk_dev>)
+                            (symbol_ref:SI ("blk_dev") [flags 0x40]  <var_decl 0x7cd64bd1a6c0 blk_dev>)
                         ] UNSPEC_GOT))) [16  S4 A8])) "drivers/blk_drv/hd.c":237:5 75 {*movsi_internal}
      (nil))
 (insn 29 28 30 4 (set (reg/f:SI 89 [ _7 ])
@@ -2495,7 +2495,7 @@
 (insn 32 31 33 4 (set (reg/f:SI 104)
         (mem/u/c:SI (plus:SI (reg:SI 82)
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("blk_dev") [flags 0x40]  <var_decl 0x77333611a6c0 blk_dev>)
+                            (symbol_ref:SI ("blk_dev") [flags 0x40]  <var_decl 0x7cd64bd1a6c0 blk_dev>)
                         ] UNSPEC_GOT))) [16  S4 A8])) "drivers/blk_drv/hd.c":238:5 75 {*movsi_internal}
      (nil))
 (insn 33 32 34 4 (set (reg/f:SI 91 [ _9 ])
@@ -2520,7 +2520,7 @@
 (insn 37 36 38 4 (set (reg/f:SI 105)
         (mem/u/c:SI (plus:SI (reg:SI 82)
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("blk_dev") [flags 0x40]  <var_decl 0x77333611a6c0 blk_dev>)
+                            (symbol_ref:SI ("blk_dev") [flags 0x40]  <var_decl 0x7cd64bd1a6c0 blk_dev>)
                         ] UNSPEC_GOT))) [16  S4 A8])) "drivers/blk_drv/hd.c":240:11 75 {*movsi_internal}
      (nil))
 (insn 38 37 39 4 (set (reg/f:SI 94 [ _12 ])
@@ -2561,13 +2561,13 @@
 (insn 46 45 47 5 (set (reg/f:SI 106)
         (plus:SI (reg:SI 82)
             (const:SI (unspec:SI [
-                        (symbol_ref:SI ("read_intr") [flags 0x3]  <function_decl 0x773336156a00 read_intr>)
+                        (symbol_ref:SI ("read_intr") [flags 0x3]  <function_decl 0x7cd64bd56a00 read_intr>)
                     ] UNSPEC_GOTOFF)))) "drivers/blk_drv/hd.c":241:15 205 {*leasi}
-     (expr_list:REG_EQUAL (symbol_ref:SI ("read_intr") [flags 0x3]  <function_decl 0x773336156a00 read_intr>)
+     (expr_list:REG_EQUAL (symbol_ref:SI ("read_intr") [flags 0x3]  <function_decl 0x7cd64bd56a00 read_intr>)
         (nil)))
 (insn 47 46 63 5 (set (mem/f/c:SI (plus:SI (reg:SI 82)
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("do_hd") [flags 0x2]  <var_decl 0x77333611a7e0 do_hd>)
+                            (symbol_ref:SI ("do_hd") [flags 0x2]  <var_decl 0x7cd64bd1a7e0 do_hd>)
                         ] UNSPEC_GOTOFF))) [2 do_hd+0 S4 A32])
         (reg/f:SI 106)) "drivers/blk_drv/hd.c":241:15 75 {*movsi_internal}
      (nil))
@@ -2590,7 +2590,7 @@
         (const_int 1 [0x1])) "drivers/blk_drv/hd.c":244:5 54 {*pushsi2}
      (expr_list:REG_ARGS_SIZE (const_int 16 [0x10])
         (nil)))
-(call_insn 54 53 55 6 (call (mem:QI (symbol_ref:SI ("end_request") [flags 0x3]  <function_decl 0x773336149400 end_request>) [0 end_request S1 A8])
+(call_insn 54 53 55 6 (call (mem:QI (symbol_ref:SI ("end_request") [flags 0x3]  <function_decl 0x7cd64bd49400 end_request>) [0 end_request S1 A8])
         (const_int 16 [0x10])) "drivers/blk_drv/hd.c":244:5 812 {*call}
      (nil)
     (nil))
@@ -2602,7 +2602,7 @@
         ]) "drivers/blk_drv/hd.c":244:5 209 {*addsi_1}
      (expr_list:REG_ARGS_SIZE (const_int 0 [0])
         (nil)))
-(call_insn 56 55 59 6 (call (mem:QI (symbol_ref:SI ("do_hd_request") [flags 0x3]  <function_decl 0x773336149000 do_hd_request>) [0 do_hd_request S1 A8])
+(call_insn 56 55 59 6 (call (mem:QI (symbol_ref:SI ("do_hd_request") [flags 0x3]  <function_decl 0x7cd64bd49000 do_hd_request>) [0 do_hd_request S1 A8])
         (const_int 0 [0])) "drivers/blk_drv/hd.c":245:5 812 {*call}
      (nil)
     (nil))
@@ -2623,7 +2623,7 @@
 (insn 8 7 9 3 (set (reg/f:SI 128)
         (mem/u/c:SI (plus:SI (reg:SI 82)
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("blk_dev") [flags 0x40]  <var_decl 0x77333611a6c0 blk_dev>)
+                            (symbol_ref:SI ("blk_dev") [flags 0x40]  <var_decl 0x7cd64bd1a6c0 blk_dev>)
                         ] UNSPEC_GOT))) [16  S4 A8])) "drivers/blk_drv/hd.c":256:10 75 {*movsi_internal}
      (nil))
 (insn 9 8 10 3 (set (reg/f:SI 83 [ _1 ])
@@ -2645,7 +2645,7 @@
 (insn 17 16 18 4 (set (reg/f:SI 129)
         (mem/u/c:SI (plus:SI (reg:SI 82)
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("blk_dev") [flags 0x40]  <var_decl 0x77333611a6c0 blk_dev>)
+                            (symbol_ref:SI ("blk_dev") [flags 0x40]  <var_decl 0x7cd64bd1a6c0 blk_dev>)
                         ] UNSPEC_GOT))) [16  S4 A8])) "drivers/blk_drv/hd.c":258:9 75 {*movsi_internal}
      (nil))
 (insn 18 17 19 4 (set (reg/f:SI 84 [ _2 ])
@@ -2688,9 +2688,9 @@
 (insn 26 25 27 5 (set (reg/f:SI 130)
         (plus:SI (reg:SI 82)
             (const:SI (unspec:SI [
-                        (symbol_ref/f:SI ("*.LC8") [flags 0x2]  <var_decl 0x7733361c2e10 *.LC8>)
+                        (symbol_ref/f:SI ("*.LC8") [flags 0x2]  <var_decl 0x7cd64bdc2e10 *.LC8>)
                     ] UNSPEC_GOTOFF)))) "drivers/blk_drv/hd.c":259:9 205 {*leasi}
-     (expr_list:REG_EQUAL (symbol_ref/f:SI ("*.LC8") [flags 0x2]  <var_decl 0x7733361c2e10 *.LC8>)
+     (expr_list:REG_EQUAL (symbol_ref/f:SI ("*.LC8") [flags 0x2]  <var_decl 0x7cd64bdc2e10 *.LC8>)
         (nil)))
 (insn 27 26 28 5 (set (mem/f:SI (pre_dec:SI (reg/f:SI 7 sp)) [5  S4 A32])
         (reg/f:SI 130)) "drivers/blk_drv/hd.c":259:9 54 {*pushsi2}
@@ -2699,7 +2699,7 @@
 (insn 28 27 29 5 (set (reg:SI 3 bx)
         (reg:SI 82)) "drivers/blk_drv/hd.c":259:9 75 {*movsi_internal}
      (nil))
-(call_insn 29 28 30 5 (call (mem:QI (symbol_ref:SI ("panic") [flags 0x41]  <function_decl 0x773336118b00 panic>) [0 panic S1 A8])
+(call_insn 29 28 30 5 (call (mem:QI (symbol_ref:SI ("panic") [flags 0x41]  <function_decl 0x7cd64bd18b00 panic>) [0 panic S1 A8])
         (const_int 16 [0x10])) "drivers/blk_drv/hd.c":259:9 812 {*call}
      (nil)
     (expr_list (use (reg:SI 3 bx))
@@ -2717,7 +2717,7 @@
 (insn 33 32 34 6 (set (reg/f:SI 131)
         (mem/u/c:SI (plus:SI (reg:SI 82)
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("blk_dev") [flags 0x40]  <var_decl 0x77333611a6c0 blk_dev>)
+                            (symbol_ref:SI ("blk_dev") [flags 0x40]  <var_decl 0x7cd64bd1a6c0 blk_dev>)
                         ] UNSPEC_GOT))) [16  S4 A8])) "drivers/blk_drv/hd.c":260:9 75 {*movsi_internal}
      (nil))
 (insn 34 33 35 6 (set (reg/f:SI 88 [ _6 ])
@@ -2743,7 +2743,7 @@
 (insn 39 38 40 7 (set (reg/f:SI 132)
         (mem/u/c:SI (plus:SI (reg:SI 82)
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("blk_dev") [flags 0x40]  <var_decl 0x77333611a6c0 blk_dev>)
+                            (symbol_ref:SI ("blk_dev") [flags 0x40]  <var_decl 0x7cd64bd1a6c0 blk_dev>)
                         ] UNSPEC_GOT))) [16  S4 A8])) "drivers/blk_drv/hd.c":261:14 75 {*movsi_internal}
      (nil))
 (insn 40 39 41 7 (set (reg/f:SI 90 [ _8 ])
@@ -2781,9 +2781,9 @@
 (insn 47 46 48 8 (set (reg/f:SI 133)
         (plus:SI (reg:SI 82)
             (const:SI (unspec:SI [
-                        (symbol_ref/f:SI ("*.LC9") [flags 0x2]  <var_decl 0x7733361c2ea0 *.LC9>)
+                        (symbol_ref/f:SI ("*.LC9") [flags 0x2]  <var_decl 0x7cd64bdc2ea0 *.LC9>)
                     ] UNSPEC_GOTOFF)))) "drivers/blk_drv/hd.c":262:13 205 {*leasi}
-     (expr_list:REG_EQUAL (symbol_ref/f:SI ("*.LC9") [flags 0x2]  <var_decl 0x7733361c2ea0 *.LC9>)
+     (expr_list:REG_EQUAL (symbol_ref/f:SI ("*.LC9") [flags 0x2]  <var_decl 0x7cd64bdc2ea0 *.LC9>)
         (nil)))
 (insn 48 47 49 8 (set (mem/f:SI (pre_dec:SI (reg/f:SI 7 sp)) [5  S4 A32])
         (reg/f:SI 133)) "drivers/blk_drv/hd.c":262:13 54 {*pushsi2}
@@ -2792,7 +2792,7 @@
 (insn 49 48 50 8 (set (reg:SI 3 bx)
         (reg:SI 82)) "drivers/blk_drv/hd.c":262:13 75 {*movsi_internal}
      (nil))
-(call_insn 50 49 51 8 (call (mem:QI (symbol_ref:SI ("panic") [flags 0x41]  <function_decl 0x773336118b00 panic>) [0 panic S1 A8])
+(call_insn 50 49 51 8 (call (mem:QI (symbol_ref:SI ("panic") [flags 0x41]  <function_decl 0x7cd64bd18b00 panic>) [0 panic S1 A8])
         (const_int 16 [0x10])) "drivers/blk_drv/hd.c":262:13 812 {*call}
      (nil)
     (expr_list (use (reg:SI 3 bx))
@@ -2810,7 +2810,7 @@
 (insn 54 53 55 9 (set (reg/f:SI 134)
         (mem/u/c:SI (plus:SI (reg:SI 82)
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("blk_dev") [flags 0x40]  <var_decl 0x77333611a6c0 blk_dev>)
+                            (symbol_ref:SI ("blk_dev") [flags 0x40]  <var_decl 0x7cd64bd1a6c0 blk_dev>)
                         ] UNSPEC_GOT))) [16  S4 A8])) "drivers/blk_drv/hd.c":265:11 75 {*movsi_internal}
      (nil))
 (insn 55 54 56 9 (set (reg/f:SI 93 [ _11 ])
@@ -2837,7 +2837,7 @@
 (insn 60 59 61 9 (set (reg/f:SI 136)
         (mem/u/c:SI (plus:SI (reg:SI 82)
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("blk_dev") [flags 0x40]  <var_decl 0x77333611a6c0 blk_dev>)
+                            (symbol_ref:SI ("blk_dev") [flags 0x40]  <var_decl 0x7cd64bd1a6c0 blk_dev>)
                         ] UNSPEC_GOT))) [16  S4 A8])) "drivers/blk_drv/hd.c":266:13 75 {*movsi_internal}
      (nil))
 (insn 61 60 62 9 (set (reg/f:SI 96 [ _14 ])
@@ -2855,7 +2855,7 @@
 (insn 64 63 65 9 (set (reg:SI 97 [ NR_HD.8_15 ])
         (mem/c:SI (plus:SI (reg:SI 82)
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("NR_HD") [flags 0x2]  <var_decl 0x77333611abd0 NR_HD>)
+                            (symbol_ref:SI ("NR_HD") [flags 0x2]  <var_decl 0x7cd64bd1abd0 NR_HD>)
                         ] UNSPEC_GOTOFF))) [11 NR_HD+0 S4 A32])) "drivers/blk_drv/hd.c":268:18 75 {*movsi_internal}
      (nil))
 (insn 65 64 66 9 (set (reg:SI 138)
@@ -2916,7 +2916,7 @@
                         (const_int 8 [0x8]))
                     (reg:SI 82))
                 (const:SI (plus:SI (unspec:SI [
-                                (symbol_ref:SI ("hd") [flags 0x2]  <var_decl 0x77333611ac60 hd>)
+                                (symbol_ref:SI ("hd") [flags 0x2]  <var_decl 0x7cd64bd1ac60 hd>)
                             ] UNSPEC_GOTOFF)
                         (const_int 4 [0x4])))) [6 hd[dev_57].nr_sects+0 S4 A32])) "drivers/blk_drv/hd.c":268:48 75 {*movsi_internal}
      (nil))
@@ -2948,7 +2948,7 @@
         (const_int 0 [0])) "drivers/blk_drv/hd.c":269:9 54 {*pushsi2}
      (expr_list:REG_ARGS_SIZE (const_int 16 [0x10])
         (nil)))
-(call_insn 83 82 84 11 (call (mem:QI (symbol_ref:SI ("end_request") [flags 0x3]  <function_decl 0x773336149400 end_request>) [0 end_request S1 A8])
+(call_insn 83 82 84 11 (call (mem:QI (symbol_ref:SI ("end_request") [flags 0x3]  <function_decl 0x7cd64bd49400 end_request>) [0 end_request S1 A8])
         (const_int 16 [0x10])) "drivers/blk_drv/hd.c":269:9 812 {*call}
      (nil)
     (nil))
@@ -2976,7 +2976,7 @@
                         (const_int 8 [0x8]))
                     (reg:SI 82))
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("hd") [flags 0x2]  <var_decl 0x77333611ac60 hd>)
+                            (symbol_ref:SI ("hd") [flags 0x2]  <var_decl 0x7cd64bd1ac60 hd>)
                         ] UNSPEC_GOTOFF))) [6 hd[dev_57].start_sect+0 S4 A64])) "drivers/blk_drv/hd.c":272:21 75 {*movsi_internal}
      (nil))
 (insn 91 90 92 12 (set (reg:SI 104 [ _22 ])
@@ -3027,7 +3027,7 @@
 (insn 99 98 100 12 (set (reg:SI 147)
         (plus:SI (reg:SI 82)
             (const:SI (plus:SI (unspec:SI [
-                            (symbol_ref:SI ("hd_info") [flags 0x2]  <var_decl 0x77333611aa20 hd_info>)
+                            (symbol_ref:SI ("hd_info") [flags 0x2]  <var_decl 0x7cd64bd1aa20 hd_info>)
                         ] UNSPEC_GOTOFF)
                     (const_int 4 [0x4]))))) "drivers/blk_drv/hd.c":275:31 205 {*leasi}
      (nil))
@@ -3125,7 +3125,7 @@
 (insn 114 113 115 12 (set (reg:SI 157)
         (plus:SI (reg:SI 82)
             (const:SI (unspec:SI [
-                        (symbol_ref:SI ("hd_info") [flags 0x2]  <var_decl 0x77333611aa20 hd_info>)
+                        (symbol_ref:SI ("hd_info") [flags 0x2]  <var_decl 0x7cd64bd1aa20 hd_info>)
                     ] UNSPEC_GOTOFF)))) "drivers/blk_drv/hd.c":277:30 205 {*leasi}
      (nil))
 (insn 115 114 116 12 (set (reg:SI 159)
@@ -3227,7 +3227,7 @@
 (insn 129 128 130 12 (set (reg/f:SI 166)
         (mem/u/c:SI (plus:SI (reg:SI 82)
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("blk_dev") [flags 0x40]  <var_decl 0x77333611a6c0 blk_dev>)
+                            (symbol_ref:SI ("blk_dev") [flags 0x40]  <var_decl 0x7cd64bd1a6c0 blk_dev>)
                         ] UNSPEC_GOT))) [16  S4 A8])) "drivers/blk_drv/hd.c":279:13 75 {*movsi_internal}
      (nil))
 (insn 130 129 131 12 (set (reg/f:SI 107 [ _25 ])
@@ -3245,7 +3245,7 @@
 (insn 133 132 134 12 (set (reg:SI 108 [ reset.9_26 ])
         (mem/c:SI (plus:SI (reg:SI 82)
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("reset") [flags 0x2]  <var_decl 0x77333611a900 reset>)
+                            (symbol_ref:SI ("reset") [flags 0x2]  <var_decl 0x7cd64bd1a900 reset>)
                         ] UNSPEC_GOTOFF))) [11 reset+0 S4 A32])) "drivers/blk_drv/hd.c":280:9 75 {*movsi_internal}
      (nil))
 (insn 134 133 135 12 (set (reg:CCZ 17 flags)
@@ -3262,20 +3262,20 @@
 (note 136 135 137 13 [bb 13] NOTE_INSN_BASIC_BLOCK)
 (insn 137 136 138 13 (set (mem/c:SI (plus:SI (reg:SI 82)
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("reset") [flags 0x2]  <var_decl 0x77333611a900 reset>)
+                            (symbol_ref:SI ("reset") [flags 0x2]  <var_decl 0x7cd64bd1a900 reset>)
                         ] UNSPEC_GOTOFF))) [11 reset+0 S4 A32])
         (const_int 0 [0])) "drivers/blk_drv/hd.c":281:15 75 {*movsi_internal}
      (nil))
 (insn 138 137 139 13 (set (mem/c:SI (plus:SI (reg:SI 82)
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("recalibrate") [flags 0x2]  <var_decl 0x77333611a870 recalibrate>)
+                            (symbol_ref:SI ("recalibrate") [flags 0x2]  <var_decl 0x7cd64bd1a870 recalibrate>)
                         ] UNSPEC_GOTOFF))) [11 recalibrate+0 S4 A32])
         (const_int 1 [0x1])) "drivers/blk_drv/hd.c":282:21 75 {*movsi_internal}
      (nil))
 (insn 139 138 140 13 (set (reg/f:SI 168)
         (mem/u/c:SI (plus:SI (reg:SI 82)
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("blk_dev") [flags 0x40]  <var_decl 0x77333611a6c0 blk_dev>)
+                            (symbol_ref:SI ("blk_dev") [flags 0x40]  <var_decl 0x7cd64bd1a6c0 blk_dev>)
                         ] UNSPEC_GOT))) [16  S4 A8])) "drivers/blk_drv/hd.c":283:18 75 {*movsi_internal}
      (nil))
 (insn 140 139 141 13 (set (reg/f:SI 109 [ _27 ])
@@ -3335,7 +3335,7 @@
         (reg:SI 112 [ _30 ])) "drivers/blk_drv/hd.c":283:9 54 {*pushsi2}
      (expr_list:REG_ARGS_SIZE (const_int 16 [0x10])
         (nil)))
-(call_insn 150 149 151 13 (call (mem:QI (symbol_ref:SI ("reset_hd") [flags 0x3]  <function_decl 0x773336156c00 reset_hd>) [0 reset_hd S1 A8])
+(call_insn 150 149 151 13 (call (mem:QI (symbol_ref:SI ("reset_hd") [flags 0x3]  <function_decl 0x7cd64bd56c00 reset_hd>) [0 reset_hd S1 A8])
         (const_int 16 [0x10])) "drivers/blk_drv/hd.c":283:9 812 {*call}
      (nil)
     (nil))
@@ -3357,7 +3357,7 @@
 (insn 156 155 157 14 (set (reg:SI 113 [ recalibrate.10_31 ])
         (mem/c:SI (plus:SI (reg:SI 82)
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("recalibrate") [flags 0x2]  <var_decl 0x77333611a870 recalibrate>)
+                            (symbol_ref:SI ("recalibrate") [flags 0x2]  <var_decl 0x7cd64bd1a870 recalibrate>)
                         ] UNSPEC_GOTOFF))) [11 recalibrate+0 S4 A32])) "drivers/blk_drv/hd.c":287:9 75 {*movsi_internal}
      (nil))
 (insn 157 156 158 14 (set (reg:CCZ 17 flags)
@@ -3374,14 +3374,14 @@
 (note 159 158 160 15 [bb 15] NOTE_INSN_BASIC_BLOCK)
 (insn 160 159 161 15 (set (mem/c:SI (plus:SI (reg:SI 82)
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("recalibrate") [flags 0x2]  <var_decl 0x77333611a870 recalibrate>)
+                            (symbol_ref:SI ("recalibrate") [flags 0x2]  <var_decl 0x7cd64bd1a870 recalibrate>)
                         ] UNSPEC_GOTOFF))) [11 recalibrate+0 S4 A32])
         (const_int 0 [0])) "drivers/blk_drv/hd.c":288:21 75 {*movsi_internal}
      (nil))
 (insn 161 160 162 15 (set (reg/f:SI 173)
         (mem/u/c:SI (plus:SI (reg:SI 82)
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("blk_dev") [flags 0x40]  <var_decl 0x77333611a6c0 blk_dev>)
+                            (symbol_ref:SI ("blk_dev") [flags 0x40]  <var_decl 0x7cd64bd1a6c0 blk_dev>)
                         ] UNSPEC_GOT))) [16  S4 A8])) "drivers/blk_drv/hd.c":289:29 75 {*movsi_internal}
      (nil))
 (insn 162 161 163 15 (set (reg/f:SI 114 [ _32 ])
@@ -3432,7 +3432,7 @@
 (insn 170 169 171 15 (set (reg:SI 178)
         (plus:SI (reg:SI 82)
             (const:SI (plus:SI (unspec:SI [
-                            (symbol_ref:SI ("hd_info") [flags 0x2]  <var_decl 0x77333611aa20 hd_info>)
+                            (symbol_ref:SI ("hd_info") [flags 0x2]  <var_decl 0x7cd64bd1aa20 hd_info>)
                         ] UNSPEC_GOTOFF)
                     (const_int 4 [0x4]))))) "drivers/blk_drv/hd.c":289:41 205 {*leasi}
      (nil))
@@ -3494,9 +3494,9 @@
 (insn 181 180 182 15 (set (reg/f:SI 183)
         (plus:SI (reg:SI 82)
             (const:SI (unspec:SI [
-                        (symbol_ref:SI ("recal_intr") [flags 0x3]  <function_decl 0x773336149100 recal_intr>)
+                        (symbol_ref:SI ("recal_intr") [flags 0x3]  <function_decl 0x7cd64bd49100 recal_intr>)
                     ] UNSPEC_GOTOFF)))) "drivers/blk_drv/hd.c":289:9 205 {*leasi}
-     (expr_list:REG_EQUAL (symbol_ref:SI ("recal_intr") [flags 0x3]  <function_decl 0x773336149100 recal_intr>)
+     (expr_list:REG_EQUAL (symbol_ref:SI ("recal_intr") [flags 0x3]  <function_decl 0x7cd64bd49100 recal_intr>)
         (nil)))
 (insn 182 181 183 15 (set (mem/f:SI (pre_dec:SI (reg/f:SI 7 sp)) [2  S4 A32])
         (reg/f:SI 183)) "drivers/blk_drv/hd.c":289:9 54 {*pushsi2}
@@ -3527,7 +3527,7 @@
                 (const_int -12 [0xfffffffffffffff4])) [11 dev+0 S4 A32])) "drivers/blk_drv/hd.c":289:9 54 {*pushsi2}
      (expr_list:REG_ARGS_SIZE (const_int 32 [0x20])
         (nil)))
-(call_insn 189 188 190 15 (call (mem:QI (symbol_ref:SI ("hd_out") [flags 0x3]  <function_decl 0x773336149b00 hd_out>) [0 hd_out S1 A8])
+(call_insn 189 188 190 15 (call (mem:QI (symbol_ref:SI ("hd_out") [flags 0x3]  <function_decl 0x7cd64bd49b00 hd_out>) [0 hd_out S1 A8])
         (const_int 32 [0x20])) "drivers/blk_drv/hd.c":289:9 812 {*call}
      (nil)
     (nil))
@@ -3549,7 +3549,7 @@
 (insn 195 194 196 16 (set (reg/f:SI 184)
         (mem/u/c:SI (plus:SI (reg:SI 82)
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("blk_dev") [flags 0x40]  <var_decl 0x77333611a6c0 blk_dev>)
+                            (symbol_ref:SI ("blk_dev") [flags 0x40]  <var_decl 0x7cd64bd1a6c0 blk_dev>)
                         ] UNSPEC_GOT))) [16  S4 A8])) "drivers/blk_drv/hd.c":294:9 75 {*movsi_internal}
      (nil))
 (insn 196 195 197 16 (set (reg/f:SI 120 [ _38 ])
@@ -3583,9 +3583,9 @@
 (insn 202 201 203 17 (set (reg/f:SI 185)
         (plus:SI (reg:SI 82)
             (const:SI (unspec:SI [
-                        (symbol_ref:SI ("write_intr") [flags 0x3]  <function_decl 0x773336156e00 write_intr>)
+                        (symbol_ref:SI ("write_intr") [flags 0x3]  <function_decl 0x7cd64bd56e00 write_intr>)
                     ] UNSPEC_GOTOFF)))) "drivers/blk_drv/hd.c":295:9 205 {*leasi}
-     (expr_list:REG_EQUAL (symbol_ref:SI ("write_intr") [flags 0x3]  <function_decl 0x773336156e00 write_intr>)
+     (expr_list:REG_EQUAL (symbol_ref:SI ("write_intr") [flags 0x3]  <function_decl 0x7cd64bd56e00 write_intr>)
         (nil)))
 (insn 203 202 204 17 (set (mem/f:SI (pre_dec:SI (reg/f:SI 7 sp)) [2  S4 A32])
         (reg/f:SI 185)) "drivers/blk_drv/hd.c":295:9 54 {*pushsi2}
@@ -3620,7 +3620,7 @@
                 (const_int -12 [0xfffffffffffffff4])) [11 dev+0 S4 A32])) "drivers/blk_drv/hd.c":295:9 54 {*pushsi2}
      (expr_list:REG_ARGS_SIZE (const_int 32 [0x20])
         (nil)))
-(call_insn 210 209 211 17 (call (mem:QI (symbol_ref:SI ("hd_out") [flags 0x3]  <function_decl 0x773336149b00 hd_out>) [0 hd_out S1 A8])
+(call_insn 210 209 211 17 (call (mem:QI (symbol_ref:SI ("hd_out") [flags 0x3]  <function_decl 0x7cd64bd49b00 hd_out>) [0 hd_out S1 A8])
         (const_int 32 [0x20])) "drivers/blk_drv/hd.c":295:9 812 {*call}
      (nil)
     (nil))
@@ -3734,7 +3734,7 @@
      (nil)
  -> 242)
 (note 238 237 239 22 [bb 22] NOTE_INSN_BASIC_BLOCK)
-(call_insn 239 238 293 22 (call (mem:QI (symbol_ref:SI ("bad_rw_intr") [flags 0x3]  <function_decl 0x773336156800 bad_rw_intr>) [0 bad_rw_intr S1 A8])
+(call_insn 239 238 293 22 (call (mem:QI (symbol_ref:SI ("bad_rw_intr") [flags 0x3]  <function_decl 0x7cd64bd56800 bad_rw_intr>) [0 bad_rw_intr S1 A8])
         (const_int 0 [0])) "drivers/blk_drv/hd.c":299:13 812 {*call}
      (nil)
     (nil))
@@ -3748,7 +3748,7 @@
 (insn 244 243 245 23 (set (reg/f:SI 189)
         (mem/u/c:SI (plus:SI (reg:SI 82)
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("blk_dev") [flags 0x40]  <var_decl 0x77333611a6c0 blk_dev>)
+                            (symbol_ref:SI ("blk_dev") [flags 0x40]  <var_decl 0x7cd64bd1a6c0 blk_dev>)
                         ] UNSPEC_GOT))) [16  S4 A8])) "drivers/blk_drv/hd.c":302:9 75 {*movsi_internal}
      (nil))
 (insn 245 244 246 23 (set (reg/f:SI 123 [ _41 ])
@@ -3790,7 +3790,7 @@
 (insn 254 253 255 24 (set (reg/f:SI 192)
         (mem/u/c:SI (plus:SI (reg:SI 82)
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("blk_dev") [flags 0x40]  <var_decl 0x77333611a6c0 blk_dev>)
+                            (symbol_ref:SI ("blk_dev") [flags 0x40]  <var_decl 0x7cd64bd1a6c0 blk_dev>)
                         ] UNSPEC_GOT))) [16  S4 A8])) "drivers/blk_drv/hd.c":303:16 75 {*movsi_internal}
      (nil))
 (insn 255 254 256 24 (set (reg/f:SI 125 [ _43 ])
@@ -3824,9 +3824,9 @@
 (insn 261 260 262 25 (set (reg/f:SI 193)
         (plus:SI (reg:SI 82)
             (const:SI (unspec:SI [
-                        (symbol_ref:SI ("read_intr") [flags 0x3]  <function_decl 0x773336156a00 read_intr>)
+                        (symbol_ref:SI ("read_intr") [flags 0x3]  <function_decl 0x7cd64bd56a00 read_intr>)
                     ] UNSPEC_GOTOFF)))) "drivers/blk_drv/hd.c":304:9 205 {*leasi}
-     (expr_list:REG_EQUAL (symbol_ref:SI ("read_intr") [flags 0x3]  <function_decl 0x773336156a00 read_intr>)
+     (expr_list:REG_EQUAL (symbol_ref:SI ("read_intr") [flags 0x3]  <function_decl 0x7cd64bd56a00 read_intr>)
         (nil)))
 (insn 262 261 263 25 (set (mem/f:SI (pre_dec:SI (reg/f:SI 7 sp)) [2  S4 A32])
         (reg/f:SI 193)) "drivers/blk_drv/hd.c":304:9 54 {*pushsi2}
@@ -3861,7 +3861,7 @@
                 (const_int -12 [0xfffffffffffffff4])) [11 dev+0 S4 A32])) "drivers/blk_drv/hd.c":304:9 54 {*pushsi2}
      (expr_list:REG_ARGS_SIZE (const_int 32 [0x20])
         (nil)))
-(call_insn 269 268 270 25 (call (mem:QI (symbol_ref:SI ("hd_out") [flags 0x3]  <function_decl 0x773336149b00 hd_out>) [0 hd_out S1 A8])
+(call_insn 269 268 270 25 (call (mem:QI (symbol_ref:SI ("hd_out") [flags 0x3]  <function_decl 0x7cd64bd49b00 hd_out>) [0 hd_out S1 A8])
         (const_int 32 [0x20])) "drivers/blk_drv/hd.c":304:9 812 {*call}
      (nil)
     (nil))
@@ -3891,9 +3891,9 @@
 (insn 276 275 277 26 (set (reg/f:SI 194)
         (plus:SI (reg:SI 82)
             (const:SI (unspec:SI [
-                        (symbol_ref/f:SI ("*.LC10") [flags 0x2]  <var_decl 0x773335e06120 *.LC10>)
+                        (symbol_ref/f:SI ("*.LC10") [flags 0x2]  <var_decl 0x7cd64ba06120 *.LC10>)
                     ] UNSPEC_GOTOFF)))) "drivers/blk_drv/hd.c":306:9 205 {*leasi}
-     (expr_list:REG_EQUAL (symbol_ref/f:SI ("*.LC10") [flags 0x2]  <var_decl 0x773335e06120 *.LC10>)
+     (expr_list:REG_EQUAL (symbol_ref/f:SI ("*.LC10") [flags 0x2]  <var_decl 0x7cd64ba06120 *.LC10>)
         (nil)))
 (insn 277 276 278 26 (set (mem/f:SI (pre_dec:SI (reg/f:SI 7 sp)) [5  S4 A32])
         (reg/f:SI 194)) "drivers/blk_drv/hd.c":306:9 54 {*pushsi2}
@@ -3902,7 +3902,7 @@
 (insn 278 277 279 26 (set (reg:SI 3 bx)
         (reg:SI 82)) "drivers/blk_drv/hd.c":306:9 75 {*movsi_internal}
      (nil))
-(call_insn 279 278 280 26 (call (mem:QI (symbol_ref:SI ("panic") [flags 0x41]  <function_decl 0x773336118b00 panic>) [0 panic S1 A8])
+(call_insn 279 278 280 26 (call (mem:QI (symbol_ref:SI ("panic") [flags 0x41]  <function_decl 0x7cd64bd18b00 panic>) [0 panic S1 A8])
         (const_int 16 [0x10])) "drivers/blk_drv/hd.c":306:9 812 {*call}
      (nil)
     (expr_list (use (reg:SI 3 bx))
@@ -3935,15 +3935,15 @@
 (insn 5 2 6 2 (set (reg/f:SI 91)
         (mem/u/c:SI (plus:SI (reg:SI 82)
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("blk_dev") [flags 0x40]  <var_decl 0x77333611a6c0 blk_dev>)
+                            (symbol_ref:SI ("blk_dev") [flags 0x40]  <var_decl 0x7cd64bd1a6c0 blk_dev>)
                         ] UNSPEC_GOT))) [16  S4 A8])) "drivers/blk_drv/hd.c":311:34 75 {*movsi_internal}
      (nil))
 (insn 6 5 7 2 (set (reg/f:SI 92)
         (plus:SI (reg:SI 82)
             (const:SI (unspec:SI [
-                        (symbol_ref:SI ("do_hd_request") [flags 0x3]  <function_decl 0x773336149000 do_hd_request>)
+                        (symbol_ref:SI ("do_hd_request") [flags 0x3]  <function_decl 0x7cd64bd49000 do_hd_request>)
                     ] UNSPEC_GOTOFF)))) "drivers/blk_drv/hd.c":311:34 205 {*leasi}
-     (expr_list:REG_EQUAL (symbol_ref:SI ("do_hd_request") [flags 0x3]  <function_decl 0x773336149000 do_hd_request>)
+     (expr_list:REG_EQUAL (symbol_ref:SI ("do_hd_request") [flags 0x3]  <function_decl 0x7cd64bd49000 do_hd_request>)
         (nil)))
 (insn 7 6 8 2 (set (mem/f:SI (plus:SI (reg/f:SI 91)
                 (const_int 24 [0x18])) [2 blk_dev[3].request_fn+0 S4 A32])
@@ -3952,36 +3952,36 @@
 (insn 8 7 9 2 (set (reg:SI 93)
         (mem/u/c:SI (plus:SI (reg:SI 82)
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("idt") [flags 0x40]  <var_decl 0x773337a5be10 idt>)
+                            (symbol_ref:SI ("idt") [flags 0x40]  <var_decl 0x7cd64d565e10 idt>)
                         ] UNSPEC_GOT))) [16  S4 A8])) "drivers/blk_drv/hd.c":312:5 75 {*movsi_internal}
      (nil))
 (insn 9 8 10 2 (set (reg/f:SI 83 [ _1 ])
         (plus:SI (reg:SI 93)
             (const_int 368 [0x170]))) "drivers/blk_drv/hd.c":312:5 205 {*leasi}
-     (expr_list:REG_EQUAL (const:SI (plus:SI (symbol_ref:SI ("idt") [flags 0x40]  <var_decl 0x773337a5be10 idt>)
+     (expr_list:REG_EQUAL (const:SI (plus:SI (symbol_ref:SI ("idt") [flags 0x40]  <var_decl 0x7cd64d565e10 idt>)
                 (const_int 368 [0x170])))
         (nil)))
 (insn 10 9 11 2 (set (reg:SI 94)
         (mem/u/c:SI (plus:SI (reg:SI 82)
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("idt") [flags 0x40]  <var_decl 0x773337a5be10 idt>)
+                            (symbol_ref:SI ("idt") [flags 0x40]  <var_decl 0x7cd64d565e10 idt>)
                         ] UNSPEC_GOT))) [16  S4 A8])) "drivers/blk_drv/hd.c":312:5 75 {*movsi_internal}
      (nil))
 (insn 11 10 12 2 (set (reg/f:SI 84 [ _2 ])
         (plus:SI (reg:SI 94)
             (const_int 372 [0x174]))) "drivers/blk_drv/hd.c":312:5 205 {*leasi}
-     (expr_list:REG_EQUAL (const:SI (plus:SI (symbol_ref:SI ("idt") [flags 0x40]  <var_decl 0x773337a5be10 idt>)
+     (expr_list:REG_EQUAL (const:SI (plus:SI (symbol_ref:SI ("idt") [flags 0x40]  <var_decl 0x7cd64d565e10 idt>)
                 (const_int 372 [0x174])))
         (nil)))
 (insn 12 11 13 2 (set (reg:SI 96)
         (mem/u/c:SI (plus:SI (reg:SI 82)
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("hd_interrupt") [flags 0x41]  <function_decl 0x77333613eb00 hd_interrupt>)
+                            (symbol_ref:SI ("hd_interrupt") [flags 0x41]  <function_decl 0x7cd64bd3eb00 hd_interrupt>)
                         ] UNSPEC_GOT))) [16  S4 A8])) "drivers/blk_drv/hd.c":312:5 75 {*movsi_internal}
      (nil))
 (insn 13 12 14 2 (set (reg/f:SI 95)
         (reg:SI 96)) "drivers/blk_drv/hd.c":312:5 75 {*movsi_internal}
-     (expr_list:REG_EQUAL (symbol_ref:SI ("hd_interrupt") [flags 0x41]  <function_decl 0x77333613eb00 hd_interrupt>)
+     (expr_list:REG_EQUAL (symbol_ref:SI ("hd_interrupt") [flags 0x41]  <function_decl 0x7cd64bd3eb00 hd_interrupt>)
         (nil)))
 (insn 14 13 15 2 (set (reg:SI 97)
         (const_int 524288 [0x80000])) "drivers/blk_drv/hd.c":312:5 75 {*movsi_internal}
@@ -4127,7 +4127,7 @@
 (insn 5 2 6 2 (set (reg:SI 83 [ callable.11_1 ])
         (mem/c:SI (plus:SI (reg:SI 82)
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("callable.0") [flags 0x2]  <var_decl 0x773336153d80 callable>)
+                            (symbol_ref:SI ("callable.0") [flags 0x2]  <var_decl 0x7cd64bd53d80 callable>)
                         ] UNSPEC_GOTOFF))) [11 callable+0 S4 A32])) "drivers/blk_drv/hd.c":326:9 75 {*movsi_internal}
      (nil))
 (insn 6 5 7 2 (set (reg:CCZ 17 flags)
@@ -4154,7 +4154,7 @@
 (note 13 12 14 4 [bb 4] NOTE_INSN_BASIC_BLOCK)
 (insn 14 13 15 4 (set (mem/c:SI (plus:SI (reg:SI 82)
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("callable.0") [flags 0x2]  <var_decl 0x773336153d80 callable>)
+                            (symbol_ref:SI ("callable.0") [flags 0x2]  <var_decl 0x7cd64bd53d80 callable>)
                         ] UNSPEC_GOTOFF))) [11 callable+0 S4 A32])
         (const_int 0 [0])) "drivers/blk_drv/hd.c":328:14 75 {*movsi_internal}
      (nil))
@@ -4185,7 +4185,7 @@
 (insn 23 22 24 5 (set (reg:SI 142)
         (plus:SI (reg:SI 82)
             (const:SI (plus:SI (unspec:SI [
-                            (symbol_ref:SI ("hd_info") [flags 0x2]  <var_decl 0x77333611aa20 hd_info>)
+                            (symbol_ref:SI ("hd_info") [flags 0x2]  <var_decl 0x7cd64bd1aa20 hd_info>)
                         ] UNSPEC_GOTOFF)
                     (const_int 8 [0x8]))))) "drivers/blk_drv/hd.c":331:31 205 {*leasi}
      (nil))
@@ -4258,7 +4258,7 @@
 (insn 37 36 38 5 (set (reg:SI 149)
         (plus:SI (reg:SI 82)
             (const:SI (unspec:SI [
-                        (symbol_ref:SI ("hd_info") [flags 0x2]  <var_decl 0x77333611aa20 hd_info>)
+                        (symbol_ref:SI ("hd_info") [flags 0x2]  <var_decl 0x7cd64bd1aa20 hd_info>)
                     ] UNSPEC_GOTOFF)))) "drivers/blk_drv/hd.c":332:31 205 {*leasi}
      (nil))
 (insn 38 37 39 5 (set (reg:SI 151)
@@ -4330,7 +4330,7 @@
 (insn 51 50 52 5 (set (reg:SI 156)
         (plus:SI (reg:SI 82)
             (const:SI (plus:SI (unspec:SI [
-                            (symbol_ref:SI ("hd_info") [flags 0x2]  <var_decl 0x77333611aa20 hd_info>)
+                            (symbol_ref:SI ("hd_info") [flags 0x2]  <var_decl 0x7cd64bd1aa20 hd_info>)
                         ] UNSPEC_GOTOFF)
                     (const_int 12 [0xc]))))) "drivers/blk_drv/hd.c":333:31 205 {*leasi}
      (nil))
@@ -4403,7 +4403,7 @@
 (insn 65 64 66 5 (set (reg:SI 163)
         (plus:SI (reg:SI 82)
             (const:SI (plus:SI (unspec:SI [
-                            (symbol_ref:SI ("hd_info") [flags 0x2]  <var_decl 0x77333611aa20 hd_info>)
+                            (symbol_ref:SI ("hd_info") [flags 0x2]  <var_decl 0x7cd64bd1aa20 hd_info>)
                         ] UNSPEC_GOTOFF)
                     (const_int 4 [0x4]))))) "drivers/blk_drv/hd.c":334:31 205 {*leasi}
      (nil))
@@ -4480,7 +4480,7 @@
 (insn 79 78 80 5 (set (reg:SI 170)
         (plus:SI (reg:SI 82)
             (const:SI (unspec:SI [
-                        (symbol_ref:SI ("hd_info") [flags 0x2]  <var_decl 0x77333611aa20 hd_info>)
+                        (symbol_ref:SI ("hd_info") [flags 0x2]  <var_decl 0x7cd64bd1aa20 hd_info>)
                     ] UNSPEC_GOTOFF)))) "drivers/blk_drv/hd.c":335:31 205 {*leasi}
      (nil))
 (insn 80 79 81 5 (set (reg:SI 171)
@@ -4556,7 +4556,7 @@
 (insn 93 92 94 5 (set (reg:SI 177)
         (plus:SI (reg:SI 82)
             (const:SI (plus:SI (unspec:SI [
-                            (symbol_ref:SI ("hd_info") [flags 0x2]  <var_decl 0x77333611aa20 hd_info>)
+                            (symbol_ref:SI ("hd_info") [flags 0x2]  <var_decl 0x7cd64bd1aa20 hd_info>)
                         ] UNSPEC_GOTOFF)
                     (const_int 4 [0x4]))))) "drivers/blk_drv/hd.c":336:31 205 {*leasi}
      (nil))
@@ -4638,7 +4638,7 @@
 (insn 112 111 113 7 (set (reg:SI 101 [ _19 ])
         (mem/c:SI (plus:SI (reg:SI 82)
                 (const:SI (plus:SI (unspec:SI [
-                                (symbol_ref:SI ("hd_info") [flags 0x2]  <var_decl 0x77333611aa20 hd_info>)
+                                (symbol_ref:SI ("hd_info") [flags 0x2]  <var_decl 0x7cd64bd1aa20 hd_info>)
                             ] UNSPEC_GOTOFF)
                         (const_int 32 [0x20])))) [11 hd_info[1].cyl+0 S4 A256])) "drivers/blk_drv/hd.c":339:19 75 {*movsi_internal}
      (nil))
@@ -4656,7 +4656,7 @@
 (note 115 114 116 8 [bb 8] NOTE_INSN_BASIC_BLOCK)
 (insn 116 115 394 8 (set (mem/c:SI (plus:SI (reg:SI 82)
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("NR_HD") [flags 0x2]  <var_decl 0x77333611abd0 NR_HD>)
+                            (symbol_ref:SI ("NR_HD") [flags 0x2]  <var_decl 0x7cd64bd1abd0 NR_HD>)
                         ] UNSPEC_GOTOFF))) [11 NR_HD+0 S4 A32])
         (const_int 2 [0x2])) "drivers/blk_drv/hd.c":340:15 75 {*movsi_internal}
      (nil))
@@ -4669,7 +4669,7 @@
 (note 120 119 121 9 [bb 9] NOTE_INSN_BASIC_BLOCK)
 (insn 121 120 122 9 (set (mem/c:SI (plus:SI (reg:SI 82)
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("NR_HD") [flags 0x2]  <var_decl 0x77333611abd0 NR_HD>)
+                            (symbol_ref:SI ("NR_HD") [flags 0x2]  <var_decl 0x7cd64bd1abd0 NR_HD>)
                         ] UNSPEC_GOTOFF))) [11 NR_HD+0 S4 A32])
         (const_int 1 [0x1])) "drivers/blk_drv/hd.c":342:15 75 {*movsi_internal}
      (nil))
@@ -4713,7 +4713,7 @@
                         (const_int 8 [0x8]))
                     (reg:SI 82))
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("hd") [flags 0x2]  <var_decl 0x77333611ac60 hd>)
+                            (symbol_ref:SI ("hd") [flags 0x2]  <var_decl 0x7cd64bd1ac60 hd>)
                         ] UNSPEC_GOTOFF))) [6 hd[_20].start_sect+0 S4 A64])
         (const_int 0 [0])) "drivers/blk_drv/hd.c":345:30 75 {*movsi_internal}
      (nil))
@@ -4724,7 +4724,7 @@
 (insn 134 133 135 11 (set (reg:SI 185)
         (plus:SI (reg:SI 82)
             (const:SI (unspec:SI [
-                        (symbol_ref:SI ("hd_info") [flags 0x2]  <var_decl 0x77333611aa20 hd_info>)
+                        (symbol_ref:SI ("hd_info") [flags 0x2]  <var_decl 0x7cd64bd1aa20 hd_info>)
                     ] UNSPEC_GOTOFF)))) "drivers/blk_drv/hd.c":346:42 205 {*leasi}
      (nil))
 (insn 135 134 136 11 (set (reg:SI 187)
@@ -4778,7 +4778,7 @@
 (insn 144 143 145 11 (set (reg:SI 191)
         (plus:SI (reg:SI 82)
             (const:SI (plus:SI (unspec:SI [
-                            (symbol_ref:SI ("hd_info") [flags 0x2]  <var_decl 0x77333611aa20 hd_info>)
+                            (symbol_ref:SI ("hd_info") [flags 0x2]  <var_decl 0x7cd64bd1aa20 hd_info>)
                         ] UNSPEC_GOTOFF)
                     (const_int 4 [0x4]))))) "drivers/blk_drv/hd.c":347:42 205 {*leasi}
      (nil))
@@ -4840,7 +4840,7 @@
 (insn 155 154 156 11 (set (reg:SI 197)
         (plus:SI (reg:SI 82)
             (const:SI (plus:SI (unspec:SI [
-                            (symbol_ref:SI ("hd_info") [flags 0x2]  <var_decl 0x77333611aa20 hd_info>)
+                            (symbol_ref:SI ("hd_info") [flags 0x2]  <var_decl 0x7cd64bd1aa20 hd_info>)
                         ] UNSPEC_GOTOFF)
                     (const_int 8 [0x8]))))) "drivers/blk_drv/hd.c":347:60 205 {*leasi}
      (nil))
@@ -4922,7 +4922,7 @@
                         (const_int 8 [0x8]))
                     (reg:SI 82))
                 (const:SI (plus:SI (unspec:SI [
-                                (symbol_ref:SI ("hd") [flags 0x2]  <var_decl 0x77333611ac60 hd>)
+                                (symbol_ref:SI ("hd") [flags 0x2]  <var_decl 0x7cd64bd1ac60 hd>)
                             ] UNSPEC_GOTOFF)
                         (const_int 4 [0x4])))) [6 hd[_25].nr_sects+0 S4 A32])
         (reg:SI 108 [ _26 ])) "drivers/blk_drv/hd.c":346:30 75 {*movsi_internal}
@@ -4941,7 +4941,7 @@
 (insn 173 172 175 12 (set (reg:SI 109 [ NR_HD.12_27 ])
         (mem/c:SI (plus:SI (reg:SI 82)
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("NR_HD") [flags 0x2]  <var_decl 0x77333611abd0 NR_HD>)
+                            (symbol_ref:SI ("NR_HD") [flags 0x2]  <var_decl 0x7cd64bd1abd0 NR_HD>)
                         ] UNSPEC_GOTOFF))) [11 NR_HD+0 S4 A32])) "drivers/blk_drv/hd.c":344:19 75 {*movsi_internal}
      (nil))
 (insn 175 173 176 12 (set (reg:CCGC 17 flags)
@@ -5057,7 +5057,7 @@
 (note 195 194 196 15 [bb 15] NOTE_INSN_BASIC_BLOCK)
 (insn 196 195 398 15 (set (mem/c:SI (plus:SI (reg:SI 82)
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("NR_HD") [flags 0x2]  <var_decl 0x77333611abd0 NR_HD>)
+                            (symbol_ref:SI ("NR_HD") [flags 0x2]  <var_decl 0x7cd64bd1abd0 NR_HD>)
                         ] UNSPEC_GOTOFF))) [11 NR_HD+0 S4 A32])
         (const_int 2 [0x2])) "drivers/blk_drv/hd.c":370:19 75 {*movsi_internal}
      (nil))
@@ -5070,7 +5070,7 @@
 (note 200 199 201 16 [bb 16] NOTE_INSN_BASIC_BLOCK)
 (insn 201 200 400 16 (set (mem/c:SI (plus:SI (reg:SI 82)
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("NR_HD") [flags 0x2]  <var_decl 0x77333611abd0 NR_HD>)
+                            (symbol_ref:SI ("NR_HD") [flags 0x2]  <var_decl 0x7cd64bd1abd0 NR_HD>)
                         ] UNSPEC_GOTOFF))) [11 NR_HD+0 S4 A32])
         (const_int 1 [0x1])) "drivers/blk_drv/hd.c":372:19 75 {*movsi_internal}
      (nil))
@@ -5083,7 +5083,7 @@
 (note 205 204 206 17 [bb 17] NOTE_INSN_BASIC_BLOCK)
 (insn 206 205 207 17 (set (mem/c:SI (plus:SI (reg:SI 82)
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("NR_HD") [flags 0x2]  <var_decl 0x77333611abd0 NR_HD>)
+                            (symbol_ref:SI ("NR_HD") [flags 0x2]  <var_decl 0x7cd64bd1abd0 NR_HD>)
                         ] UNSPEC_GOTOFF))) [11 NR_HD+0 S4 A32])
         (const_int 0 [0])) "drivers/blk_drv/hd.c":374:15 75 {*movsi_internal}
      (nil))
@@ -5092,7 +5092,7 @@
 (insn 209 208 210 18 (set (reg:SI 208)
         (mem/c:SI (plus:SI (reg:SI 82)
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("NR_HD") [flags 0x2]  <var_decl 0x77333611abd0 NR_HD>)
+                            (symbol_ref:SI ("NR_HD") [flags 0x2]  <var_decl 0x7cd64bd1abd0 NR_HD>)
                         ] UNSPEC_GOTOFF))) [11 NR_HD+0 S4 A32])) "drivers/blk_drv/hd.c":376:12 75 {*movsi_internal}
      (nil))
 (insn 210 209 402 18 (set (mem/c:SI (plus:SI (reg/f:SI 19 frame)
@@ -5133,7 +5133,7 @@
                         (const_int 8 [0x8]))
                     (reg:SI 82))
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("hd") [flags 0x2]  <var_decl 0x77333611ac60 hd>)
+                            (symbol_ref:SI ("hd") [flags 0x2]  <var_decl 0x7cd64bd1ac60 hd>)
                         ] UNSPEC_GOTOFF))) [6 hd[_32].start_sect+0 S4 A64])
         (const_int 0 [0])) "drivers/blk_drv/hd.c":377:30 75 {*movsi_internal}
      (nil))
@@ -5164,7 +5164,7 @@
                         (const_int 8 [0x8]))
                     (reg:SI 82))
                 (const:SI (plus:SI (unspec:SI [
-                                (symbol_ref:SI ("hd") [flags 0x2]  <var_decl 0x77333611ac60 hd>)
+                                (symbol_ref:SI ("hd") [flags 0x2]  <var_decl 0x7cd64bd1ac60 hd>)
                             ] UNSPEC_GOTOFF)
                         (const_int 4 [0x4])))) [6 hd[_33].nr_sects+0 S4 A32])
         (const_int 0 [0])) "drivers/blk_drv/hd.c":378:28 75 {*movsi_internal}
@@ -5254,7 +5254,7 @@
         (reg:SI 82)) "drivers/blk_drv/hd.c":381:20 75 {*movsi_internal}
      (nil))
 (call_insn 246 245 247 22 (set (reg:SI 0 ax)
-        (call (mem:QI (symbol_ref:SI ("bread") [flags 0x41]  <function_decl 0x773336115100 bread>) [0 bread S1 A8])
+        (call (mem:QI (symbol_ref:SI ("bread") [flags 0x41]  <function_decl 0x7cd64bd15100 bread>) [0 bread S1 A8])
             (const_int 16 [0x10]))) "drivers/blk_drv/hd.c":381:20 823 {*call_value}
      (nil)
     (expr_list (use (reg:SI 3 bx))
@@ -5303,9 +5303,9 @@
 (insn 255 254 256 23 (set (reg/f:SI 216)
         (plus:SI (reg:SI 82)
             (const:SI (unspec:SI [
-                        (symbol_ref/f:SI ("*.LC11") [flags 0x2]  <var_decl 0x773335e062d0 *.LC11>)
+                        (symbol_ref/f:SI ("*.LC11") [flags 0x2]  <var_decl 0x7cd64ba062d0 *.LC11>)
                     ] UNSPEC_GOTOFF)))) "drivers/blk_drv/hd.c":382:13 205 {*leasi}
-     (expr_list:REG_EQUAL (symbol_ref/f:SI ("*.LC11") [flags 0x2]  <var_decl 0x773335e062d0 *.LC11>)
+     (expr_list:REG_EQUAL (symbol_ref/f:SI ("*.LC11") [flags 0x2]  <var_decl 0x7cd64ba062d0 *.LC11>)
         (nil)))
 (insn 256 255 257 23 (set (mem/f:SI (pre_dec:SI (reg/f:SI 7 sp)) [5  S4 A32])
         (reg/f:SI 216)) "drivers/blk_drv/hd.c":382:13 54 {*pushsi2}
@@ -5315,7 +5315,7 @@
         (reg:SI 82)) "drivers/blk_drv/hd.c":382:13 75 {*movsi_internal}
      (nil))
 (call_insn 258 257 259 23 (set (reg:SI 0 ax)
-        (call (mem:QI (symbol_ref:SI ("printk") [flags 0x41]  <function_decl 0x773336118900 printk>) [0 printk S1 A8])
+        (call (mem:QI (symbol_ref:SI ("printk") [flags 0x41]  <function_decl 0x7cd64bd18900 printk>) [0 printk S1 A8])
             (const_int 16 [0x10]))) "drivers/blk_drv/hd.c":382:13 823 {*call_value}
      (nil)
     (expr_list (use (reg:SI 3 bx))
@@ -5339,9 +5339,9 @@
 (insn 261 260 262 23 (set (reg/f:SI 217)
         (plus:SI (reg:SI 82)
             (const:SI (unspec:SI [
-                        (symbol_ref/f:SI ("*.LC12") [flags 0x2]  <var_decl 0x773335e06360 *.LC12>)
+                        (symbol_ref/f:SI ("*.LC12") [flags 0x2]  <var_decl 0x7cd64ba06360 *.LC12>)
                     ] UNSPEC_GOTOFF)))) "drivers/blk_drv/hd.c":384:13 205 {*leasi}
-     (expr_list:REG_EQUAL (symbol_ref/f:SI ("*.LC12") [flags 0x2]  <var_decl 0x773335e06360 *.LC12>)
+     (expr_list:REG_EQUAL (symbol_ref/f:SI ("*.LC12") [flags 0x2]  <var_decl 0x7cd64ba06360 *.LC12>)
         (nil)))
 (insn 262 261 263 23 (set (mem/f:SI (pre_dec:SI (reg/f:SI 7 sp)) [5  S4 A32])
         (reg/f:SI 217)) "drivers/blk_drv/hd.c":384:13 54 {*pushsi2}
@@ -5350,7 +5350,7 @@
 (insn 263 262 264 23 (set (reg:SI 3 bx)
         (reg:SI 82)) "drivers/blk_drv/hd.c":384:13 75 {*movsi_internal}
      (nil))
-(call_insn 264 263 265 23 (call (mem:QI (symbol_ref:SI ("panic") [flags 0x41]  <function_decl 0x773336118b00 panic>) [0 panic S1 A8])
+(call_insn 264 263 265 23 (call (mem:QI (symbol_ref:SI ("panic") [flags 0x41]  <function_decl 0x7cd64bd18b00 panic>) [0 panic S1 A8])
         (const_int 16 [0x10])) "drivers/blk_drv/hd.c":384:13 812 {*call}
      (nil)
     (expr_list (use (reg:SI 3 bx))
@@ -5440,9 +5440,9 @@
 (insn 285 284 286 26 (set (reg/f:SI 220)
         (plus:SI (reg:SI 82)
             (const:SI (unspec:SI [
-                        (symbol_ref/f:SI ("*.LC13") [flags 0x2]  <var_decl 0x773335e063f0 *.LC13>)
+                        (symbol_ref/f:SI ("*.LC13") [flags 0x2]  <var_decl 0x7cd64ba063f0 *.LC13>)
                     ] UNSPEC_GOTOFF)))) "drivers/blk_drv/hd.c":388:13 205 {*leasi}
-     (expr_list:REG_EQUAL (symbol_ref/f:SI ("*.LC13") [flags 0x2]  <var_decl 0x773335e063f0 *.LC13>)
+     (expr_list:REG_EQUAL (symbol_ref/f:SI ("*.LC13") [flags 0x2]  <var_decl 0x7cd64ba063f0 *.LC13>)
         (nil)))
 (insn 286 285 287 26 (set (mem/f:SI (pre_dec:SI (reg/f:SI 7 sp)) [5  S4 A32])
         (reg/f:SI 220)) "drivers/blk_drv/hd.c":388:13 54 {*pushsi2}
@@ -5452,7 +5452,7 @@
         (reg:SI 82)) "drivers/blk_drv/hd.c":388:13 75 {*movsi_internal}
      (nil))
 (call_insn 288 287 289 26 (set (reg:SI 0 ax)
-        (call (mem:QI (symbol_ref:SI ("printk") [flags 0x41]  <function_decl 0x773336118900 printk>) [0 printk S1 A8])
+        (call (mem:QI (symbol_ref:SI ("printk") [flags 0x41]  <function_decl 0x7cd64bd18900 printk>) [0 printk S1 A8])
             (const_int 16 [0x10]))) "drivers/blk_drv/hd.c":388:13 823 {*call_value}
      (nil)
     (expr_list (use (reg:SI 3 bx))
@@ -5476,9 +5476,9 @@
 (insn 291 290 292 26 (set (reg/f:SI 221)
         (plus:SI (reg:SI 82)
             (const:SI (unspec:SI [
-                        (symbol_ref/f:SI ("*.LC12") [flags 0x2]  <var_decl 0x773335e06360 *.LC12>)
+                        (symbol_ref/f:SI ("*.LC12") [flags 0x2]  <var_decl 0x7cd64ba06360 *.LC12>)
                     ] UNSPEC_GOTOFF)))) "drivers/blk_drv/hd.c":389:13 205 {*leasi}
-     (expr_list:REG_EQUAL (symbol_ref/f:SI ("*.LC12") [flags 0x2]  <var_decl 0x773335e06360 *.LC12>)
+     (expr_list:REG_EQUAL (symbol_ref/f:SI ("*.LC12") [flags 0x2]  <var_decl 0x7cd64ba06360 *.LC12>)
         (nil)))
 (insn 292 291 293 26 (set (mem/f:SI (pre_dec:SI (reg/f:SI 7 sp)) [5  S4 A32])
         (reg/f:SI 221)) "drivers/blk_drv/hd.c":389:13 54 {*pushsi2}
@@ -5487,7 +5487,7 @@
 (insn 293 292 294 26 (set (reg:SI 3 bx)
         (reg:SI 82)) "drivers/blk_drv/hd.c":389:13 75 {*movsi_internal}
      (nil))
-(call_insn 294 293 295 26 (call (mem:QI (symbol_ref:SI ("panic") [flags 0x41]  <function_decl 0x773336118b00 panic>) [0 panic S1 A8])
+(call_insn 294 293 295 26 (call (mem:QI (symbol_ref:SI ("panic") [flags 0x41]  <function_decl 0x7cd64bd18b00 panic>) [0 panic S1 A8])
         (const_int 16 [0x10])) "drivers/blk_drv/hd.c":389:13 812 {*call}
      (nil)
     (expr_list (use (reg:SI 3 bx))
@@ -5583,7 +5583,7 @@
                         (const_int 8 [0x8]))
                     (reg:SI 82))
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("hd") [flags 0x2]  <var_decl 0x77333611ac60 hd>)
+                            (symbol_ref:SI ("hd") [flags 0x2]  <var_decl 0x7cd64bd1ac60 hd>)
                         ] UNSPEC_GOTOFF))) [6 hd[_45].start_sect+0 S4 A64])
         (reg:SI 128 [ _46 ])) "drivers/blk_drv/hd.c":393:42 75 {*movsi_internal}
      (nil))
@@ -5639,7 +5639,7 @@
                         (const_int 8 [0x8]))
                     (reg:SI 82))
                 (const:SI (plus:SI (unspec:SI [
-                                (symbol_ref:SI ("hd") [flags 0x2]  <var_decl 0x77333611ac60 hd>)
+                                (symbol_ref:SI ("hd") [flags 0x2]  <var_decl 0x7cd64bd1ac60 hd>)
                             ] UNSPEC_GOTOFF)
                         (const_int 4 [0x4])))) [6 hd[_49].nr_sects+0 S4 A32])
         (reg:SI 132 [ _50 ])) "drivers/blk_drv/hd.c":394:42 75 {*movsi_internal}
@@ -5693,7 +5693,7 @@
 (insn 338 337 339 30 (set (reg:SI 3 bx)
         (reg:SI 82)) "drivers/blk_drv/hd.c":396:9 75 {*movsi_internal}
      (nil))
-(call_insn 339 338 340 30 (call (mem:QI (symbol_ref:SI ("brelse") [flags 0x41]  <function_decl 0x773336115200 brelse>) [0 brelse S1 A8])
+(call_insn 339 338 340 30 (call (mem:QI (symbol_ref:SI ("brelse") [flags 0x41]  <function_decl 0x7cd64bd15200 brelse>) [0 brelse S1 A8])
         (const_int 16 [0x10])) "drivers/blk_drv/hd.c":396:9 812 {*call}
      (nil)
     (expr_list (use (reg:SI 3 bx))
@@ -5720,7 +5720,7 @@
 (insn 344 343 346 31 (set (reg:SI 133 [ NR_HD.13_51 ])
         (mem/c:SI (plus:SI (reg:SI 82)
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("NR_HD") [flags 0x2]  <var_decl 0x77333611abd0 NR_HD>)
+                            (symbol_ref:SI ("NR_HD") [flags 0x2]  <var_decl 0x7cd64bd1abd0 NR_HD>)
                         ] UNSPEC_GOTOFF))) [11 NR_HD+0 S4 A32])) "drivers/blk_drv/hd.c":380:27 75 {*movsi_internal}
      (nil))
 (insn 346 344 347 31 (set (reg:CCGC 17 flags)
@@ -5739,7 +5739,7 @@
 (insn 349 348 350 32 (set (reg:SI 134 [ NR_HD.14_52 ])
         (mem/c:SI (plus:SI (reg:SI 82)
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("NR_HD") [flags 0x2]  <var_decl 0x77333611abd0 NR_HD>)
+                            (symbol_ref:SI ("NR_HD") [flags 0x2]  <var_decl 0x7cd64bd1abd0 NR_HD>)
                         ] UNSPEC_GOTOFF))) [11 NR_HD+0 S4 A32])) "drivers/blk_drv/hd.c":398:9 75 {*movsi_internal}
      (nil))
 (insn 350 349 351 32 (set (reg:CCZ 17 flags)
@@ -5757,7 +5757,7 @@
 (insn 353 352 356 33 (set (reg:SI 135 [ NR_HD.16_53 ])
         (mem/c:SI (plus:SI (reg:SI 82)
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("NR_HD") [flags 0x2]  <var_decl 0x77333611abd0 NR_HD>)
+                            (symbol_ref:SI ("NR_HD") [flags 0x2]  <var_decl 0x7cd64bd1abd0 NR_HD>)
                         ] UNSPEC_GOTOFF))) [11 NR_HD+0 S4 A32])) "drivers/blk_drv/hd.c":399:52 75 {*movsi_internal}
      (nil))
 (insn 356 353 357 33 (set (reg:CCGC 17 flags)
@@ -5775,9 +5775,9 @@
 (insn 359 358 408 34 (set (reg/f:SI 137 [ iftmp.15_62 ])
         (plus:SI (reg:SI 82)
             (const:SI (unspec:SI [
-                        (symbol_ref/f:SI ("*.LC14") [flags 0x2]  <var_decl 0x773335e06480 *.LC14>)
+                        (symbol_ref/f:SI ("*.LC14") [flags 0x2]  <var_decl 0x7cd64ba06480 *.LC14>)
                     ] UNSPEC_GOTOFF)))) "drivers/blk_drv/hd.c":399:9 205 {*leasi}
-     (expr_list:REG_EQUAL (symbol_ref/f:SI ("*.LC14") [flags 0x2]  <var_decl 0x773335e06480 *.LC14>)
+     (expr_list:REG_EQUAL (symbol_ref/f:SI ("*.LC14") [flags 0x2]  <var_decl 0x7cd64ba06480 *.LC14>)
         (nil)))
 (jump_insn 408 359 409 34 (set (pc)
         (label_ref 365)) -1
@@ -5789,9 +5789,9 @@
 (insn 364 363 365 35 (set (reg/f:SI 137 [ iftmp.15_62 ])
         (plus:SI (reg:SI 82)
             (const:SI (unspec:SI [
-                        (symbol_ref/f:SI ("*.LC12") [flags 0x2]  <var_decl 0x773335e06360 *.LC12>)
+                        (symbol_ref/f:SI ("*.LC12") [flags 0x2]  <var_decl 0x7cd64ba06360 *.LC12>)
                     ] UNSPEC_GOTOFF)))) "drivers/blk_drv/hd.c":399:9 205 {*leasi}
-     (expr_list:REG_EQUAL (symbol_ref/f:SI ("*.LC12") [flags 0x2]  <var_decl 0x773335e06360 *.LC12>)
+     (expr_list:REG_EQUAL (symbol_ref/f:SI ("*.LC12") [flags 0x2]  <var_decl 0x7cd64ba06360 *.LC12>)
         (nil)))
 (code_label 365 364 366 36 88 (nil) [1 uses])
 (note 366 365 367 36 [bb 36] NOTE_INSN_BASIC_BLOCK)
@@ -5810,9 +5810,9 @@
 (insn 369 368 370 36 (set (reg/f:SI 232)
         (plus:SI (reg:SI 82)
             (const:SI (unspec:SI [
-                        (symbol_ref/f:SI ("*.LC15") [flags 0x2]  <var_decl 0x773335e06510 *.LC15>)
+                        (symbol_ref/f:SI ("*.LC15") [flags 0x2]  <var_decl 0x7cd64ba06510 *.LC15>)
                     ] UNSPEC_GOTOFF)))) "drivers/blk_drv/hd.c":399:9 205 {*leasi}
-     (expr_list:REG_EQUAL (symbol_ref/f:SI ("*.LC15") [flags 0x2]  <var_decl 0x773335e06510 *.LC15>)
+     (expr_list:REG_EQUAL (symbol_ref/f:SI ("*.LC15") [flags 0x2]  <var_decl 0x7cd64ba06510 *.LC15>)
         (nil)))
 (insn 370 369 371 36 (set (mem/f:SI (pre_dec:SI (reg/f:SI 7 sp)) [5  S4 A32])
         (reg/f:SI 232)) "drivers/blk_drv/hd.c":399:9 54 {*pushsi2}
@@ -5822,7 +5822,7 @@
         (reg:SI 82)) "drivers/blk_drv/hd.c":399:9 75 {*movsi_internal}
      (nil))
 (call_insn 372 371 373 36 (set (reg:SI 0 ax)
-        (call (mem:QI (symbol_ref:SI ("printk") [flags 0x41]  <function_decl 0x773336118900 printk>) [0 printk S1 A8])
+        (call (mem:QI (symbol_ref:SI ("printk") [flags 0x41]  <function_decl 0x7cd64bd18900 printk>) [0 printk S1 A8])
             (const_int 16 [0x10]))) "drivers/blk_drv/hd.c":399:9 823 {*call_value}
      (nil)
     (expr_list (use (reg:SI 3 bx))
@@ -5840,7 +5840,7 @@
 (insn 376 375 377 37 (set (reg:SI 3 bx)
         (reg:SI 82)) "drivers/blk_drv/hd.c":401:5 75 {*movsi_internal}
      (nil))
-(call_insn 377 376 378 37 (call (mem:QI (symbol_ref:SI ("rd_load") [flags 0x41]  <function_decl 0x77333613e100 rd_load>) [0 rd_load S1 A8])
+(call_insn 377 376 378 37 (call (mem:QI (symbol_ref:SI ("rd_load") [flags 0x41]  <function_decl 0x7cd64bd3e100 rd_load>) [0 rd_load S1 A8])
         (const_int 0 [0])) "drivers/blk_drv/hd.c":401:5 812 {*call}
      (nil)
     (expr_list (use (reg:SI 3 bx))
@@ -5848,7 +5848,7 @@
 (insn 378 377 379 37 (set (reg:SI 3 bx)
         (reg:SI 82)) "drivers/blk_drv/hd.c":403:5 75 {*movsi_internal}
      (nil))
-(call_insn 379 378 380 37 (call (mem:QI (symbol_ref:SI ("mount_root") [flags 0x41]  <function_decl 0x773336115b00 mount_root>) [0 mount_root S1 A8])
+(call_insn 379 378 380 37 (call (mem:QI (symbol_ref:SI ("mount_root") [flags 0x41]  <function_decl 0x7cd64bd15b00 mount_root>) [0 mount_root S1 A8])
         (const_int 0 [0])) "drivers/blk_drv/hd.c":403:5 812 {*call}
      (nil)
     (expr_list (use (reg:SI 3 bx))
@@ -5883,9 +5883,9 @@
 (insn 6 5 7 2 (set (reg/f:SI 83)
         (plus:SI (reg:SI 82)
             (const:SI (unspec:SI [
-                        (symbol_ref/f:SI ("*.LC16") [flags 0x2]  <var_decl 0x773336193510 *.LC16>)
+                        (symbol_ref/f:SI ("*.LC16") [flags 0x2]  <var_decl 0x7cd64bd93510 *.LC16>)
                     ] UNSPEC_GOTOFF)))) "drivers/blk_drv/hd.c":412:5 205 {*leasi}
-     (expr_list:REG_EQUAL (symbol_ref/f:SI ("*.LC16") [flags 0x2]  <var_decl 0x773336193510 *.LC16>)
+     (expr_list:REG_EQUAL (symbol_ref/f:SI ("*.LC16") [flags 0x2]  <var_decl 0x7cd64bd93510 *.LC16>)
         (nil)))
 (insn 7 6 8 2 (set (mem/f:SI (pre_dec:SI (reg/f:SI 7 sp)) [5  S4 A32])
         (reg/f:SI 83)) "drivers/blk_drv/hd.c":412:5 54 {*pushsi2}
@@ -5895,7 +5895,7 @@
         (reg:SI 82)) "drivers/blk_drv/hd.c":412:5 75 {*movsi_internal}
      (nil))
 (call_insn 9 8 10 2 (set (reg:SI 0 ax)
-        (call (mem:QI (symbol_ref:SI ("printk") [flags 0x41]  <function_decl 0x773336118900 printk>) [0 printk S1 A8])
+        (call (mem:QI (symbol_ref:SI ("printk") [flags 0x41]  <function_decl 0x7cd64bd18900 printk>) [0 printk S1 A8])
             (const_int 16 [0x10]))) "drivers/blk_drv/hd.c":412:5 823 {*call_value}
      (nil)
     (expr_list (use (reg:SI 3 bx))

@@ -79,7 +79,7 @@
 (insn 5 2 6 2 (set (reg:SI 3 bx)
         (reg:SI 82)) "drivers/chr_drv/tty_io.c":114:5 75 {*movsi_internal}
      (nil))
-(call_insn 6 5 7 2 (call (mem:QI (symbol_ref:SI ("rs_init") [flags 0x41]  <function_decl 0x7ed907538c00 rs_init>) [0 rs_init S1 A8])
+(call_insn 6 5 7 2 (call (mem:QI (symbol_ref:SI ("rs_init") [flags 0x41]  <function_decl 0x78fb27b38c00 rs_init>) [0 rs_init S1 A8])
         (const_int 0 [0])) "drivers/chr_drv/tty_io.c":114:5 812 {*call}
      (nil)
     (expr_list (use (reg:SI 3 bx))
@@ -87,7 +87,7 @@
 (insn 7 6 8 2 (set (reg:SI 3 bx)
         (reg:SI 82)) "drivers/chr_drv/tty_io.c":116:5 75 {*movsi_internal}
      (nil))
-(call_insn 8 7 0 2 (call (mem:QI (symbol_ref:SI ("con_init") [flags 0x41]  <function_decl 0x7ed907538b00 con_init>) [0 con_init S1 A8])
+(call_insn 8 7 0 2 (call (mem:QI (symbol_ref:SI ("con_init") [flags 0x41]  <function_decl 0x78fb27b38b00 con_init>) [0 con_init S1 A8])
         (const_int 0 [0])) "drivers/chr_drv/tty_io.c":116:5 812 {*call}
      (nil)
     (expr_list (use (reg:SI 3 bx))
@@ -138,7 +138,7 @@
 (insn 20 19 21 6 (set (reg/f:SI 93)
         (mem/u/c:SI (plus:SI (reg:SI 82)
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("task") [flags 0x40]  <var_decl 0x7ed90752e1b0 task>)
+                            (symbol_ref:SI ("task") [flags 0x40]  <var_decl 0x78fb27b2e1b0 task>)
                         ] UNSPEC_GOT))) [21  S4 A8])) "drivers/chr_drv/tty_io.c":127:11 75 {*movsi_internal}
      (nil))
 (insn 21 20 22 6 (set (reg:SI 94)
@@ -165,7 +165,7 @@
 (insn 26 25 27 7 (set (reg/f:SI 95)
         (mem/u/c:SI (plus:SI (reg:SI 82)
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("task") [flags 0x40]  <var_decl 0x7ed90752e1b0 task>)
+                            (symbol_ref:SI ("task") [flags 0x40]  <var_decl 0x78fb27b2e1b0 task>)
                         ] UNSPEC_GOT))) [21  S4 A8])) "drivers/chr_drv/tty_io.c":127:22 75 {*movsi_internal}
      (nil))
 (insn 27 26 28 7 (set (reg:SI 96)
@@ -203,7 +203,7 @@
 (insn 35 34 36 8 (set (reg/f:SI 98)
         (mem/u/c:SI (plus:SI (reg:SI 82)
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("task") [flags 0x40]  <var_decl 0x7ed90752e1b0 task>)
+                            (symbol_ref:SI ("task") [flags 0x40]  <var_decl 0x78fb27b2e1b0 task>)
                         ] UNSPEC_GOT))) [21  S4 A8])) "drivers/chr_drv/tty_io.c":128:8 75 {*movsi_internal}
      (nil))
 (insn 36 35 37 8 (set (reg:SI 99)
@@ -222,7 +222,7 @@
 (insn 39 38 40 8 (set (reg/f:SI 100)
         (mem/u/c:SI (plus:SI (reg:SI 82)
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("task") [flags 0x40]  <var_decl 0x7ed90752e1b0 task>)
+                            (symbol_ref:SI ("task") [flags 0x40]  <var_decl 0x78fb27b2e1b0 task>)
                         ] UNSPEC_GOT))) [21  S4 A8])) "drivers/chr_drv/tty_io.c":128:8 75 {*movsi_internal}
      (nil))
 (insn 40 39 41 8 (set (reg:SI 101)
@@ -375,7 +375,7 @@
 (insn 27 26 28 6 (set (reg:SI 3 bx)
         (reg:SI 82)) "drivers/chr_drv/tty_io.c":138:3 75 {*movsi_internal}
      (nil))
-(call_insn 28 27 29 6 (call (mem:QI (symbol_ref:SI ("interruptible_sleep_on") [flags 0x41]  <function_decl 0x7ed907515e00 interruptible_sleep_on>) [0 interruptible_sleep_on S1 A8])
+(call_insn 28 27 29 6 (call (mem:QI (symbol_ref:SI ("interruptible_sleep_on") [flags 0x41]  <function_decl 0x78fb27b15e00 interruptible_sleep_on>) [0 interruptible_sleep_on S1 A8])
         (const_int 16 [0x10])) "drivers/chr_drv/tty_io.c":138:3 812 {*call}
      (nil)
     (expr_list (use (reg:SI 3 bx))
@@ -393,7 +393,7 @@
 (insn 32 31 33 7 (set (reg/f:SI 99)
         (mem/u/c:SI (plus:SI (reg:SI 82)
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("current") [flags 0x40]  <var_decl 0x7ed90752e120 current>)
+                            (symbol_ref:SI ("current") [flags 0x40]  <var_decl 0x78fb27b2e120 current>)
                         ] UNSPEC_GOT))) [21  S4 A8])) "drivers/chr_drv/tty_io.c":137:17 75 {*movsi_internal}
      (nil))
 (insn 33 32 34 7 (set (reg/f:SI 89 [ current.0_7 ])
@@ -519,7 +519,7 @@
 (insn 13 12 14 4 (set (reg:SI 3 bx)
         (reg:SI 82)) "drivers/chr_drv/tty_io.c":146:9 75 {*movsi_internal}
      (nil))
-(call_insn 14 13 15 4 (call (mem:QI (symbol_ref:SI ("interruptible_sleep_on") [flags 0x41]  <function_decl 0x7ed907515e00 interruptible_sleep_on>) [0 interruptible_sleep_on S1 A8])
+(call_insn 14 13 15 4 (call (mem:QI (symbol_ref:SI ("interruptible_sleep_on") [flags 0x41]  <function_decl 0x78fb27b15e00 interruptible_sleep_on>) [0 interruptible_sleep_on S1 A8])
         (const_int 16 [0x10])) "drivers/chr_drv/tty_io.c":146:9 812 {*call}
      (nil)
     (expr_list (use (reg:SI 3 bx))
@@ -537,7 +537,7 @@
 (insn 18 17 19 5 (set (reg/f:SI 89)
         (mem/u/c:SI (plus:SI (reg:SI 82)
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("current") [flags 0x40]  <var_decl 0x7ed90752e120 current>)
+                            (symbol_ref:SI ("current") [flags 0x40]  <var_decl 0x78fb27b2e120 current>)
                         ] UNSPEC_GOT))) [21  S4 A8])) "drivers/chr_drv/tty_io.c":145:20 75 {*movsi_internal}
      (nil))
 (insn 19 18 20 5 (set (reg/f:SI 84 [ current.1_2 ])
@@ -817,7 +817,7 @@
 (insn 64 63 65 13 (set (reg/f:SI 239)
         (mem/u/c:SI (plus:SI (reg:SI 82)
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("_ctmp") [flags 0x40]  <var_decl 0x7ed90752ea20 _ctmp>)
+                            (symbol_ref:SI ("_ctmp") [flags 0x40]  <var_decl 0x78fb27b2ea20 _ctmp>)
                         ] UNSPEC_GOT))) [21  S4 A8])) "drivers/chr_drv/tty_io.c":165:8 75 {*movsi_internal}
      (nil))
 (insn 65 64 66 13 (set (mem/c:QI (reg/f:SI 239) [0 _ctmp+0 S1 A8])
@@ -826,7 +826,7 @@
 (insn 66 65 67 13 (set (reg/f:SI 240)
         (mem/u/c:SI (plus:SI (reg:SI 82)
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("_ctmp") [flags 0x40]  <var_decl 0x7ed90752ea20 _ctmp>)
+                            (symbol_ref:SI ("_ctmp") [flags 0x40]  <var_decl 0x78fb27b2ea20 _ctmp>)
                         ] UNSPEC_GOT))) [21  S4 A8])) "drivers/chr_drv/tty_io.c":165:8 75 {*movsi_internal}
      (nil))
 (insn 67 66 68 13 (set (reg:QI 96 [ _ctmp.4_14 ])
@@ -845,12 +845,12 @@
 (insn 70 69 71 13 (set (reg:SI 242)
         (mem/u/c:SI (plus:SI (reg:SI 82)
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("_ctype") [flags 0x40]  <var_decl 0x7ed90752e990 _ctype>)
+                            (symbol_ref:SI ("_ctype") [flags 0x40]  <var_decl 0x78fb27b2e990 _ctype>)
                         ] UNSPEC_GOT))) [21  S4 A8])) "drivers/chr_drv/tty_io.c":165:8 75 {*movsi_internal}
      (nil))
 (insn 71 70 72 13 (set (reg:SI 241)
         (reg:SI 242)) "drivers/chr_drv/tty_io.c":165:8 75 {*movsi_internal}
-     (expr_list:REG_EQUAL (symbol_ref:SI ("_ctype") [flags 0x40]  <var_decl 0x7ed90752e990 _ctype>)
+     (expr_list:REG_EQUAL (symbol_ref:SI ("_ctype") [flags 0x40]  <var_decl 0x78fb27b2e990 _ctype>)
         (nil)))
 (insn 72 71 73 13 (parallel [
             (set (reg/f:SI 99 [ _17 ])
@@ -887,7 +887,7 @@
 (insn 79 78 80 14 (set (reg/f:SI 243)
         (mem/u/c:SI (plus:SI (reg:SI 82)
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("_ctmp") [flags 0x40]  <var_decl 0x7ed90752ea20 _ctmp>)
+                            (symbol_ref:SI ("_ctmp") [flags 0x40]  <var_decl 0x78fb27b2ea20 _ctmp>)
                         ] UNSPEC_GOT))) [21  S4 A8])) "drivers/chr_drv/tty_io.c":165:8 75 {*movsi_internal}
      (nil))
 (insn 80 79 81 14 (set (reg:QI 103 [ _ctmp.5_21 ])
@@ -913,7 +913,7 @@
 (insn 87 86 88 15 (set (reg/f:SI 244)
         (mem/u/c:SI (plus:SI (reg:SI 82)
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("_ctmp") [flags 0x40]  <var_decl 0x7ed90752ea20 _ctmp>)
+                            (symbol_ref:SI ("_ctmp") [flags 0x40]  <var_decl 0x78fb27b2ea20 _ctmp>)
                         ] UNSPEC_GOT))) [21  S4 A8])) "drivers/chr_drv/tty_io.c":165:6 75 {*movsi_internal}
      (nil))
 (insn 88 87 89 15 (set (reg:QI 105 [ _ctmp.6_23 ])
@@ -1788,7 +1788,7 @@
         (mem/f/c:SI (reg/f:SI 16 argp) [20 tty+0 S4 A32])) "drivers/chr_drv/tty_io.c":208:5 54 {*pushsi2}
      (expr_list:REG_ARGS_SIZE (const_int 16 [0x10])
         (nil)))
-(call_insn 327 326 328 45 (call (mem:QI (symbol_ref:SI ("tty_intr") [flags 0x3]  <function_decl 0x7ed90755a400 tty_intr>) [0 tty_intr S1 A8])
+(call_insn 327 326 328 45 (call (mem:QI (symbol_ref:SI ("tty_intr") [flags 0x3]  <function_decl 0x78fb27b5a400 tty_intr>) [0 tty_intr S1 A8])
         (const_int 16 [0x10])) "drivers/chr_drv/tty_io.c":208:5 812 {*call}
      (nil)
     (nil))
@@ -1849,7 +1849,7 @@
         (mem/f/c:SI (reg/f:SI 16 argp) [20 tty+0 S4 A32])) "drivers/chr_drv/tty_io.c":212:5 54 {*pushsi2}
      (expr_list:REG_ARGS_SIZE (const_int 16 [0x10])
         (nil)))
-(call_insn 343 342 344 47 (call (mem:QI (symbol_ref:SI ("tty_intr") [flags 0x3]  <function_decl 0x7ed90755a400 tty_intr>) [0 tty_intr S1 A8])
+(call_insn 343 342 344 47 (call (mem:QI (symbol_ref:SI ("tty_intr") [flags 0x3]  <function_decl 0x78fb27b5a400 tty_intr>) [0 tty_intr S1 A8])
         (const_int 16 [0x10])) "drivers/chr_drv/tty_io.c":212:5 812 {*call}
      (nil)
     (nil))
@@ -2483,7 +2483,7 @@
 (insn 507 506 508 62 (set (reg:SI 3 bx)
         (reg:SI 82)) "drivers/chr_drv/tty_io.c":233:2 75 {*movsi_internal}
      (nil))
-(call_insn 508 507 509 62 (call (mem:QI (symbol_ref:SI ("wake_up") [flags 0x41]  <function_decl 0x7ed907515f00 wake_up>) [0 wake_up S1 A8])
+(call_insn 508 507 509 62 (call (mem:QI (symbol_ref:SI ("wake_up") [flags 0x41]  <function_decl 0x78fb27b15f00 wake_up>) [0 wake_up S1 A8])
         (const_int 16 [0x10])) "drivers/chr_drv/tty_io.c":233:2 812 {*call}
      (nil)
     (expr_list (use (reg:SI 3 bx))
@@ -2559,9 +2559,9 @@
 (insn 25 24 26 6 (set (reg:SI 131)
         (plus:SI (reg:SI 82)
             (const:SI (unspec:SI [
-                        (symbol_ref:SI ("tty_table") [flags 0x2]  <var_decl 0x7ed90752e480 tty_table>)
+                        (symbol_ref:SI ("tty_table") [flags 0x2]  <var_decl 0x78fb27b2e480 tty_table>)
                     ] UNSPEC_GOTOFF)))) "drivers/chr_drv/tty_io.c":244:9 205 {*leasi}
-     (expr_list:REG_EQUAL (symbol_ref:SI ("tty_table") [flags 0x2]  <var_decl 0x7ed90752e480 tty_table>)
+     (expr_list:REG_EQUAL (symbol_ref:SI ("tty_table") [flags 0x2]  <var_decl 0x78fb27b2e480 tty_table>)
         (nil)))
 (insn 26 25 27 6 (parallel [
             (set (reg:SI 132)
@@ -2607,7 +2607,7 @@
         (reg/f:SI 84 [ _2 ])) "drivers/chr_drv/tty_io.c":247:9 54 {*pushsi2}
      (expr_list:REG_ARGS_SIZE (const_int 16 [0x10])
         (nil)))
-(call_insn 35 34 36 7 (call (mem:QI (symbol_ref:SI ("sleep_if_full") [flags 0x3]  <function_decl 0x7ed90755a600 sleep_if_full>) [0 sleep_if_full S1 A8])
+(call_insn 35 34 36 7 (call (mem:QI (symbol_ref:SI ("sleep_if_full") [flags 0x3]  <function_decl 0x78fb27b5a600 sleep_if_full>) [0 sleep_if_full S1 A8])
         (const_int 16 [0x10])) "drivers/chr_drv/tty_io.c":247:9 812 {*call}
      (nil)
     (nil))
@@ -2622,7 +2622,7 @@
 (insn 37 36 38 7 (set (reg/f:SI 134)
         (mem/u/c:SI (plus:SI (reg:SI 82)
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("current") [flags 0x40]  <var_decl 0x7ed90752e120 current>)
+                            (symbol_ref:SI ("current") [flags 0x40]  <var_decl 0x78fb27b2e120 current>)
                         ] UNSPEC_GOT))) [21  S4 A8])) "drivers/chr_drv/tty_io.c":248:20 75 {*movsi_internal}
      (nil))
 (insn 38 37 39 7 (set (reg/f:SI 85 [ current.8_3 ])
@@ -2672,7 +2672,7 @@
      (expr_list:REG_ARGS_SIZE (const_int 16 [0x10])
         (nil)))
 (call_insn 52 51 53 10 (set (reg:QI 0 ax)
-        (call (mem:QI (symbol_ref:SI ("get_fs_byte") [flags 0x3]  <function_decl 0x7ed907538f00 get_fs_byte>) [0 get_fs_byte S1 A8])
+        (call (mem:QI (symbol_ref:SI ("get_fs_byte") [flags 0x3]  <function_decl 0x78fb27b38f00 get_fs_byte>) [0 get_fs_byte S1 A8])
             (const_int 16 [0x10]))) "drivers/chr_drv/tty_io.c":251:17 823 {*call_value}
      (nil)
     (nil))
@@ -2831,7 +2831,7 @@
 (insn 91 90 92 18 (set (reg:SI 94 [ cr_flag.9_12 ])
         (mem/c:SI (plus:SI (reg:SI 82)
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("cr_flag.0") [flags 0x2]  <var_decl 0x7ed90755ccf0 cr_flag>)
+                            (symbol_ref:SI ("cr_flag.0") [flags 0x2]  <var_decl 0x78fb27b5ccf0 cr_flag>)
                         ] UNSPEC_GOTOFF))) [6 cr_flag+0 S4 A32])) "drivers/chr_drv/tty_io.c":257:34 75 {*movsi_internal}
      (nil))
 (insn 92 91 93 18 (set (reg:CCZ 17 flags)
@@ -2875,7 +2875,7 @@
 (note 100 99 101 20 [bb 20] NOTE_INSN_BASIC_BLOCK)
 (insn 101 100 102 20 (set (mem/c:SI (plus:SI (reg:SI 82)
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("cr_flag.0") [flags 0x2]  <var_decl 0x7ed90755ccf0 cr_flag>)
+                            (symbol_ref:SI ("cr_flag.0") [flags 0x2]  <var_decl 0x78fb27b5ccf0 cr_flag>)
                         ] UNSPEC_GOTOFF))) [6 cr_flag+0 S4 A32])
         (const_int 1 [0x1])) "drivers/chr_drv/tty_io.c":258:29 75 {*movsi_internal}
      (nil))
@@ -2975,7 +2975,7 @@
 (insn 125 124 126 22 (set (reg/f:SI 145)
         (mem/u/c:SI (plus:SI (reg:SI 82)
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("_ctmp") [flags 0x40]  <var_decl 0x7ed90752ea20 _ctmp>)
+                            (symbol_ref:SI ("_ctmp") [flags 0x40]  <var_decl 0x78fb27b2ea20 _ctmp>)
                         ] UNSPEC_GOT))) [21  S4 A8])) "drivers/chr_drv/tty_io.c":263:25 75 {*movsi_internal}
      (nil))
 (insn 126 125 127 22 (set (mem/c:QI (reg/f:SI 145) [0 _ctmp+0 S1 A8])
@@ -2984,7 +2984,7 @@
 (insn 127 126 128 22 (set (reg/f:SI 146)
         (mem/u/c:SI (plus:SI (reg:SI 82)
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("_ctmp") [flags 0x40]  <var_decl 0x7ed90752ea20 _ctmp>)
+                            (symbol_ref:SI ("_ctmp") [flags 0x40]  <var_decl 0x78fb27b2ea20 _ctmp>)
                         ] UNSPEC_GOT))) [21  S4 A8])) "drivers/chr_drv/tty_io.c":263:25 75 {*movsi_internal}
      (nil))
 (insn 128 127 129 22 (set (reg:QI 104 [ _ctmp.12_22 ])
@@ -3003,12 +3003,12 @@
 (insn 131 130 132 22 (set (reg:SI 148)
         (mem/u/c:SI (plus:SI (reg:SI 82)
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("_ctype") [flags 0x40]  <var_decl 0x7ed90752e990 _ctype>)
+                            (symbol_ref:SI ("_ctype") [flags 0x40]  <var_decl 0x78fb27b2e990 _ctype>)
                         ] UNSPEC_GOT))) [21  S4 A8])) "drivers/chr_drv/tty_io.c":263:25 75 {*movsi_internal}
      (nil))
 (insn 132 131 133 22 (set (reg:SI 147)
         (reg:SI 148)) "drivers/chr_drv/tty_io.c":263:25 75 {*movsi_internal}
-     (expr_list:REG_EQUAL (symbol_ref:SI ("_ctype") [flags 0x40]  <var_decl 0x7ed90752e990 _ctype>)
+     (expr_list:REG_EQUAL (symbol_ref:SI ("_ctype") [flags 0x40]  <var_decl 0x78fb27b2e990 _ctype>)
         (nil)))
 (insn 133 132 134 22 (parallel [
             (set (reg/f:SI 107 [ _25 ])
@@ -3045,7 +3045,7 @@
 (insn 140 139 141 23 (set (reg/f:SI 149)
         (mem/u/c:SI (plus:SI (reg:SI 82)
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("_ctmp") [flags 0x40]  <var_decl 0x7ed90752ea20 _ctmp>)
+                            (symbol_ref:SI ("_ctmp") [flags 0x40]  <var_decl 0x78fb27b2ea20 _ctmp>)
                         ] UNSPEC_GOT))) [21  S4 A8])) "drivers/chr_drv/tty_io.c":263:25 75 {*movsi_internal}
      (nil))
 (insn 141 140 142 23 (set (reg:QI 111 [ _ctmp.13_29 ])
@@ -3071,7 +3071,7 @@
 (insn 148 147 149 24 (set (reg/f:SI 150)
         (mem/u/c:SI (plus:SI (reg:SI 82)
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("_ctmp") [flags 0x40]  <var_decl 0x7ed90752ea20 _ctmp>)
+                            (symbol_ref:SI ("_ctmp") [flags 0x40]  <var_decl 0x78fb27b2ea20 _ctmp>)
                         ] UNSPEC_GOT))) [21  S4 A8])) "drivers/chr_drv/tty_io.c":263:23 75 {*movsi_internal}
      (nil))
 (insn 149 148 150 24 (set (reg:QI 113 [ _ctmp.14_31 ])
@@ -3108,7 +3108,7 @@
      (nil))
 (insn 158 157 159 26 (set (mem/c:SI (plus:SI (reg:SI 82)
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("cr_flag.0") [flags 0x2]  <var_decl 0x7ed90755ccf0 cr_flag>)
+                            (symbol_ref:SI ("cr_flag.0") [flags 0x2]  <var_decl 0x78fb27b5ccf0 cr_flag>)
                         ] UNSPEC_GOTOFF))) [6 cr_flag+0 S4 A32])
         (const_int 0 [0])) "drivers/chr_drv/tty_io.c":267:21 75 {*movsi_internal}
      (nil))
@@ -3285,7 +3285,7 @@
 (insn 202 201 203 30 (set (reg:SI 3 bx)
         (reg:SI 82)) "drivers/chr_drv/tty_io.c":272:13 75 {*movsi_internal}
      (nil))
-(call_insn 203 202 204 30 (call (mem:QI (symbol_ref:SI ("schedule") [flags 0x41]  <function_decl 0x7ed907515c00 schedule>) [0 schedule S1 A8])
+(call_insn 203 202 204 30 (call (mem:QI (symbol_ref:SI ("schedule") [flags 0x41]  <function_decl 0x78fb27b15c00 schedule>) [0 schedule S1 A8])
         (const_int 0 [0])) "drivers/chr_drv/tty_io.c":272:13 812 {*call}
      (nil)
     (expr_list (use (reg:SI 3 bx))
@@ -3351,9 +3351,9 @@
 (insn 7 6 8 2 (set (reg:SI 86)
         (plus:SI (reg:SI 82)
             (const:SI (unspec:SI [
-                        (symbol_ref:SI ("tty_table") [flags 0x2]  <var_decl 0x7ed90752e480 tty_table>)
+                        (symbol_ref:SI ("tty_table") [flags 0x2]  <var_decl 0x78fb27b2e480 tty_table>)
                     ] UNSPEC_GOTOFF)))) "drivers/chr_drv/tty_io.c":293:2 205 {*leasi}
-     (expr_list:REG_EQUAL (symbol_ref:SI ("tty_table") [flags 0x2]  <var_decl 0x7ed90752e480 tty_table>)
+     (expr_list:REG_EQUAL (symbol_ref:SI ("tty_table") [flags 0x2]  <var_decl 0x78fb27b2e480 tty_table>)
         (nil)))
 (insn 8 7 9 2 (parallel [
             (set (reg/f:SI 85 [ _3 ])
@@ -3374,7 +3374,7 @@
         (reg/f:SI 85 [ _3 ])) "drivers/chr_drv/tty_io.c":293:2 54 {*pushsi2}
      (expr_list:REG_ARGS_SIZE (const_int 16 [0x10])
         (nil)))
-(call_insn 11 10 12 2 (call (mem:QI (symbol_ref:SI ("copy_to_cooked") [flags 0x3]  <function_decl 0x7ed907538e00 copy_to_cooked>) [0 copy_to_cooked S1 A8])
+(call_insn 11 10 12 2 (call (mem:QI (symbol_ref:SI ("copy_to_cooked") [flags 0x3]  <function_decl 0x78fb27b38e00 copy_to_cooked>) [0 copy_to_cooked S1 A8])
         (const_int 16 [0x10])) "drivers/chr_drv/tty_io.c":293:2 812 {*call}
      (nil)
     (nil))
@@ -3409,17 +3409,17 @@
 (insn 6 5 7 2 (set (reg/f:SI 83)
         (plus:SI (reg:SI 82)
             (const:SI (plus:SI (unspec:SI [
-                            (symbol_ref:SI ("tty_table") [flags 0x2]  <var_decl 0x7ed90752e480 tty_table>)
+                            (symbol_ref:SI ("tty_table") [flags 0x2]  <var_decl 0x78fb27b2e480 tty_table>)
                         ] UNSPEC_GOTOFF)
                     (const_int 2128 [0x850]))))) "drivers/chr_drv/tty_io.c":302:5 205 {*leasi}
-     (expr_list:REG_EQUAL (const:SI (plus:SI (symbol_ref:SI ("tty_table") [flags 0x2]  <var_decl 0x7ed90752e480 tty_table>)
+     (expr_list:REG_EQUAL (const:SI (plus:SI (symbol_ref:SI ("tty_table") [flags 0x2]  <var_decl 0x78fb27b2e480 tty_table>)
                 (const_int 2128 [0x850])))
         (nil)))
 (insn 7 6 8 2 (set (mem/f:SI (pre_dec:SI (reg/f:SI 7 sp)) [19  S4 A32])
         (reg/f:SI 83)) "drivers/chr_drv/tty_io.c":302:5 54 {*pushsi2}
      (expr_list:REG_ARGS_SIZE (const_int 16 [0x10])
         (nil)))
-(call_insn 8 7 9 2 (call (mem:QI (symbol_ref:SI ("sleep_if_empty") [flags 0x3]  <function_decl 0x7ed90755aa00 sleep_if_empty>) [0 sleep_if_empty S1 A8])
+(call_insn 8 7 9 2 (call (mem:QI (symbol_ref:SI ("sleep_if_empty") [flags 0x3]  <function_decl 0x78fb27b5aa00 sleep_if_empty>) [0 sleep_if_empty S1 A8])
         (const_int 16 [0x10])) "drivers/chr_drv/tty_io.c":302:5 812 {*call}
      (nil)
     (nil))
@@ -3498,9 +3498,9 @@
 (insn 26 25 27 6 (set (reg:SI 152)
         (plus:SI (reg:SI 82)
             (const:SI (unspec:SI [
-                        (symbol_ref:SI ("tty_table") [flags 0x2]  <var_decl 0x7ed90752e480 tty_table>)
+                        (symbol_ref:SI ("tty_table") [flags 0x2]  <var_decl 0x78fb27b2e480 tty_table>)
                     ] UNSPEC_GOTOFF)))) "drivers/chr_drv/tty_io.c":314:9 205 {*leasi}
-     (expr_list:REG_EQUAL (symbol_ref:SI ("tty_table") [flags 0x2]  <var_decl 0x7ed90752e480 tty_table>)
+     (expr_list:REG_EQUAL (symbol_ref:SI ("tty_table") [flags 0x2]  <var_decl 0x78fb27b2e480 tty_table>)
         (nil)))
 (insn 27 26 28 6 (parallel [
             (set (reg:SI 153)
@@ -3516,7 +3516,7 @@
 (insn 29 28 30 6 (set (reg/f:SI 154)
         (mem/u/c:SI (plus:SI (reg:SI 82)
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("current") [flags 0x40]  <var_decl 0x7ed90752e120 current>)
+                            (symbol_ref:SI ("current") [flags 0x40]  <var_decl 0x78fb27b2e120 current>)
                         ] UNSPEC_GOT))) [21  S4 A8])) "drivers/chr_drv/tty_io.c":315:23 75 {*movsi_internal}
      (nil))
 (insn 30 29 31 6 (set (reg/f:SI 83 [ current.16_1 ])
@@ -3637,7 +3637,7 @@
 (insn 56 55 57 9 (set (reg/f:SI 161)
         (mem/u/c:SI (plus:SI (reg:SI 82)
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("jiffies") [flags 0x40]  <var_decl 0x7ed90752e360 jiffies>)
+                            (symbol_ref:SI ("jiffies") [flags 0x40]  <var_decl 0x78fb27b2e360 jiffies>)
                         ] UNSPEC_GOT))) [21  S4 A8])) "drivers/chr_drv/tty_io.c":320:40 75 {*movsi_internal}
      (nil))
 (insn 57 56 58 9 (set (reg:SI 87 [ jiffies.18_5 ])
@@ -3706,7 +3706,7 @@
 (insn 76 75 77 13 (set (reg/f:SI 163)
         (mem/u/c:SI (plus:SI (reg:SI 82)
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("jiffies") [flags 0x40]  <var_decl 0x7ed90752e360 jiffies>)
+                            (symbol_ref:SI ("jiffies") [flags 0x40]  <var_decl 0x78fb27b2e360 jiffies>)
                         ] UNSPEC_GOT))) [21  S4 A8])) "drivers/chr_drv/tty_io.c":321:35 75 {*movsi_internal}
      (nil))
 (insn 77 76 78 13 (set (reg:SI 89 [ jiffies.19_7 ])
@@ -3715,7 +3715,7 @@
 (insn 78 77 79 13 (set (reg/f:SI 164)
         (mem/u/c:SI (plus:SI (reg:SI 82)
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("current") [flags 0x40]  <var_decl 0x7ed90752e120 current>)
+                            (symbol_ref:SI ("current") [flags 0x40]  <var_decl 0x78fb27b2e120 current>)
                         ] UNSPEC_GOT))) [21  S4 A8])) "drivers/chr_drv/tty_io.c":321:20 75 {*movsi_internal}
      (nil))
 (insn 79 78 80 13 (set (reg/f:SI 90 [ current.20_8 ])
@@ -3791,7 +3791,7 @@
 (insn 99 98 100 18 (set (reg/f:SI 168)
         (mem/u/c:SI (plus:SI (reg:SI 82)
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("current") [flags 0x40]  <var_decl 0x7ed90752e120 current>)
+                            (symbol_ref:SI ("current") [flags 0x40]  <var_decl 0x78fb27b2e120 current>)
                         ] UNSPEC_GOT))) [21  S4 A8])) "drivers/chr_drv/tty_io.c":326:29 75 {*movsi_internal}
      (nil))
 (insn 100 99 101 18 (set (reg/f:SI 92 [ current.21_10 ])
@@ -3823,7 +3823,7 @@
 (insn 106 105 107 19 (set (reg/f:SI 169)
         (mem/u/c:SI (plus:SI (reg:SI 82)
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("current") [flags 0x40]  <var_decl 0x7ed90752e120 current>)
+                            (symbol_ref:SI ("current") [flags 0x40]  <var_decl 0x78fb27b2e120 current>)
                         ] UNSPEC_GOT))) [21  S4 A8])) "drivers/chr_drv/tty_io.c":327:29 75 {*movsi_internal}
      (nil))
 (insn 107 106 108 19 (set (reg/f:SI 95 [ current.22_13 ])
@@ -3836,7 +3836,7 @@
 (insn 109 108 110 19 (set (reg/f:SI 170)
         (mem/u/c:SI (plus:SI (reg:SI 82)
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("current") [flags 0x40]  <var_decl 0x7ed90752e120 current>)
+                            (symbol_ref:SI ("current") [flags 0x40]  <var_decl 0x78fb27b2e120 current>)
                         ] UNSPEC_GOT))) [21  S4 A8])) "drivers/chr_drv/tty_io.c":327:29 75 {*movsi_internal}
      (nil))
 (insn 110 109 111 19 (set (reg/f:SI 97 [ current.23_15 ])
@@ -3863,7 +3863,7 @@
 (insn 117 116 118 20 (set (reg/f:SI 171)
         (mem/u/c:SI (plus:SI (reg:SI 82)
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("current") [flags 0x40]  <var_decl 0x7ed90752e120 current>)
+                            (symbol_ref:SI ("current") [flags 0x40]  <var_decl 0x78fb27b2e120 current>)
                         ] UNSPEC_GOT))) [21  S4 A8])) "drivers/chr_drv/tty_io.c":330:20 75 {*movsi_internal}
      (nil))
 (insn 118 117 119 20 (set (reg/f:SI 99 [ current.24_17 ])
@@ -4043,7 +4043,7 @@
         (reg/f:SI 111 [ _29 ])) "drivers/chr_drv/tty_io.c":334:13 54 {*pushsi2}
      (expr_list:REG_ARGS_SIZE (const_int 16 [0x10])
         (nil)))
-(call_insn 162 161 163 26 (call (mem:QI (symbol_ref:SI ("sleep_if_empty") [flags 0x3]  <function_decl 0x7ed90755aa00 sleep_if_empty>) [0 sleep_if_empty S1 A8])
+(call_insn 162 161 163 26 (call (mem:QI (symbol_ref:SI ("sleep_if_empty") [flags 0x3]  <function_decl 0x78fb27b5aa00 sleep_if_empty>) [0 sleep_if_empty S1 A8])
         (const_int 16 [0x10])) "drivers/chr_drv/tty_io.c":334:13 812 {*call}
      (nil)
     (nil))
@@ -4301,7 +4301,7 @@
         (reg:SI 127 [ _45 ])) "drivers/chr_drv/tty_io.c":344:17 54 {*pushsi2}
      (expr_list:REG_ARGS_SIZE (const_int 16 [0x10])
         (nil)))
-(call_insn 226 225 227 34 (call (mem:QI (symbol_ref:SI ("put_fs_byte") [flags 0x3]  <function_decl 0x7ed90754d100 put_fs_byte>) [0 put_fs_byte S1 A8])
+(call_insn 226 225 227 34 (call (mem:QI (symbol_ref:SI ("put_fs_byte") [flags 0x3]  <function_decl 0x78fb27b4d100 put_fs_byte>) [0 put_fs_byte S1 A8])
         (const_int 16 [0x10])) "drivers/chr_drv/tty_io.c":344:17 812 {*call}
      (nil)
     (nil))
@@ -4440,7 +4440,7 @@
 (insn 262 261 263 41 (set (reg/f:SI 195)
         (mem/u/c:SI (plus:SI (reg:SI 82)
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("jiffies") [flags 0x40]  <var_decl 0x7ed90752e360 jiffies>)
+                            (symbol_ref:SI ("jiffies") [flags 0x40]  <var_decl 0x78fb27b2e360 jiffies>)
                         ] UNSPEC_GOT))) [21  S4 A8])) "drivers/chr_drv/tty_io.c":350:44 75 {*movsi_internal}
      (nil))
 (insn 263 262 264 41 (set (reg:SI 132 [ jiffies.27_50 ])
@@ -4509,7 +4509,7 @@
 (insn 282 281 283 45 (set (reg/f:SI 197)
         (mem/u/c:SI (plus:SI (reg:SI 82)
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("jiffies") [flags 0x40]  <var_decl 0x7ed90752e360 jiffies>)
+                            (symbol_ref:SI ("jiffies") [flags 0x40]  <var_decl 0x78fb27b2e360 jiffies>)
                         ] UNSPEC_GOT))) [21  S4 A8])) "drivers/chr_drv/tty_io.c":351:39 75 {*movsi_internal}
      (nil))
 (insn 283 282 284 45 (set (reg:SI 134 [ jiffies.28_52 ])
@@ -4518,7 +4518,7 @@
 (insn 284 283 285 45 (set (reg/f:SI 198)
         (mem/u/c:SI (plus:SI (reg:SI 82)
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("current") [flags 0x40]  <var_decl 0x7ed90752e120 current>)
+                            (symbol_ref:SI ("current") [flags 0x40]  <var_decl 0x78fb27b2e120 current>)
                         ] UNSPEC_GOT))) [21  S4 A8])) "drivers/chr_drv/tty_io.c":351:24 75 {*movsi_internal}
      (nil))
 (insn 285 284 286 45 (set (reg/f:SI 135 [ current.29_53 ])
@@ -4552,7 +4552,7 @@
 (insn 293 292 294 46 (set (reg/f:SI 200)
         (mem/u/c:SI (plus:SI (reg:SI 82)
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("current") [flags 0x40]  <var_decl 0x7ed90752e120 current>)
+                            (symbol_ref:SI ("current") [flags 0x40]  <var_decl 0x78fb27b2e120 current>)
                         ] UNSPEC_GOT))) [21  S4 A8])) "drivers/chr_drv/tty_io.c":353:24 75 {*movsi_internal}
      (nil))
 (insn 294 293 295 46 (set (reg/f:SI 137 [ current.30_55 ])
@@ -4672,7 +4672,7 @@
 (insn 329 328 330 53 (set (reg/f:SI 205)
         (mem/u/c:SI (plus:SI (reg:SI 82)
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("current") [flags 0x40]  <var_decl 0x7ed90752e120 current>)
+                            (symbol_ref:SI ("current") [flags 0x40]  <var_decl 0x78fb27b2e120 current>)
                         ] UNSPEC_GOT))) [21  S4 A8])) "drivers/chr_drv/tty_io.c":361:12 75 {*movsi_internal}
      (nil))
 (insn 330 329 331 53 (set (reg/f:SI 141 [ current.31_59 ])
@@ -4689,7 +4689,7 @@
 (insn 333 332 334 53 (set (reg/f:SI 207)
         (mem/u/c:SI (plus:SI (reg:SI 82)
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("current") [flags 0x40]  <var_decl 0x7ed90752e120 current>)
+                            (symbol_ref:SI ("current") [flags 0x40]  <var_decl 0x78fb27b2e120 current>)
                         ] UNSPEC_GOT))) [21  S4 A8])) "drivers/chr_drv/tty_io.c":362:16 75 {*movsi_internal}
      (nil))
 (insn 334 333 335 53 (set (reg/f:SI 142 [ current.32_60 ])

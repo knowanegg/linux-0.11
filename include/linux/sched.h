@@ -73,9 +73,9 @@ struct tss_struct {
 struct task_struct {
 	/* these are hardcoded - don't touch */
 	long state;		/* -1 unrunable, 0 runable, >0 stopped */
-	long counter;
-	long priority;
-	long signal;
+	long counter;   // 时间片计数
+	long priority;  // 优先级，这里还没上CFS那种算法
+	long signal;    // 这个字段是一个指向 signal_struct 类型的指针。
 	struct sigaction sigaction[32];
 	long blocked;        /* bitmap of masked signals */
 	/* various fields */

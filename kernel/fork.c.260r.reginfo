@@ -127,7 +127,7 @@
 (insn 13 12 14 2 (set (reg/f:SI 91)
         (mem/u/c:SI (plus:SI (reg:SI 82)
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("current") [flags 0x40]  <var_decl 0x77287f72e120 current>)
+                            (symbol_ref:SI ("current") [flags 0x40]  <var_decl 0x77e52d72e120 current>)
                         ] UNSPEC_GOT))) [18  S4 A8])) "kernel/fork.c":24:14 75 {*movsi_internal}
      (nil))
 (insn 14 13 15 2 (set (reg/f:SI 86 [ current.1_4 ])
@@ -145,7 +145,7 @@
      (expr_list:REG_ARGS_SIZE (const_int 4 [0x4])
         (nil)))
 (call_insn 17 16 18 2 (set (reg:SI 0 ax)
-        (call (mem:QI (symbol_ref:SI ("_get_base") [flags 0x3]  <function_decl 0x77287f715900 _get_base>) [0 _get_base S1 A8])
+        (call (mem:QI (symbol_ref:SI ("_get_base") [flags 0x3]  <function_decl 0x77e52d715900 _get_base>) [0 _get_base S1 A8])
             (const_int 4 [0x4]))) "kernel/fork.c":24:14 823 {*call_value}
      (nil)
     (nil))
@@ -197,7 +197,7 @@
 (insn 27 26 28 3 (set (reg:SI 3 bx)
         (reg:SI 82)) "kernel/fork.c":27:9 75 {*movsi_internal}
      (nil))
-(call_insn 28 27 29 3 (call (mem:QI (symbol_ref:SI ("write_verify") [flags 0x41]  <function_decl 0x77287f738f00 write_verify>) [0 write_verify S1 A8])
+(call_insn 28 27 29 3 (call (mem:QI (symbol_ref:SI ("write_verify") [flags 0x41]  <function_decl 0x77e52d738f00 write_verify>) [0 write_verify S1 A8])
         (const_int 16 [0x10])) "kernel/fork.c":27:9 812 {*call}
      (nil)
     (expr_list (use (reg:SI 3 bx))
@@ -244,7 +244,7 @@
 (insn 6 5 7 3 (set (reg:SI 83 [ last_pid.2_1 ])
         (mem/c:SI (plus:SI (reg:SI 82)
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("last_pid") [flags 0x2]  <var_decl 0x77287f72e750 last_pid>)
+                            (symbol_ref:SI ("last_pid") [flags 0x2]  <var_decl 0x77e52d72e750 last_pid>)
                         ] UNSPEC_GOTOFF))) [1 last_pid+0 S4 A32])) "kernel/fork.c":37:10 75 {*movsi_internal}
      (nil))
 (insn 7 6 8 3 (parallel [
@@ -256,14 +256,14 @@
      (nil))
 (insn 8 7 9 3 (set (mem/c:SI (plus:SI (reg:SI 82)
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("last_pid") [flags 0x2]  <var_decl 0x77287f72e750 last_pid>)
+                            (symbol_ref:SI ("last_pid") [flags 0x2]  <var_decl 0x77e52d72e750 last_pid>)
                         ] UNSPEC_GOTOFF))) [1 last_pid+0 S4 A32])
         (reg:SI 84 [ _2 ])) "kernel/fork.c":37:8 75 {*movsi_internal}
      (nil))
 (insn 9 8 12 3 (set (reg:SI 85 [ last_pid.3_3 ])
         (mem/c:SI (plus:SI (reg:SI 82)
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("last_pid") [flags 0x2]  <var_decl 0x77287f72e750 last_pid>)
+                            (symbol_ref:SI ("last_pid") [flags 0x2]  <var_decl 0x77e52d72e750 last_pid>)
                         ] UNSPEC_GOTOFF))) [1 last_pid+0 S4 A32])) "kernel/fork.c":37:10 75 {*movsi_internal}
      (nil))
 (insn 12 9 13 3 (set (reg:CCGOC 17 flags)
@@ -280,7 +280,7 @@
 (note 14 13 15 4 [bb 4] NOTE_INSN_BASIC_BLOCK)
 (insn 15 14 16 4 (set (mem/c:SI (plus:SI (reg:SI 82)
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("last_pid") [flags 0x2]  <var_decl 0x77287f72e750 last_pid>)
+                            (symbol_ref:SI ("last_pid") [flags 0x2]  <var_decl 0x77e52d72e750 last_pid>)
                         ] UNSPEC_GOTOFF))) [1 last_pid+0 S4 A32])
         (const_int 1 [0x1])) "kernel/fork.c":38:18 75 {*movsi_internal}
      (nil))
@@ -296,7 +296,7 @@
 (insn 22 21 23 6 (set (reg/f:SI 93)
         (mem/u/c:SI (plus:SI (reg:SI 82)
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("task") [flags 0x40]  <var_decl 0x77287f72e1b0 task>)
+                            (symbol_ref:SI ("task") [flags 0x40]  <var_decl 0x77e52d72e1b0 task>)
                         ] UNSPEC_GOT))) [18  S4 A8])) "kernel/fork.c":42:17 75 {*movsi_internal}
      (nil))
 (insn 23 22 24 6 (set (reg:SI 94)
@@ -323,7 +323,7 @@
 (insn 28 27 29 7 (set (reg/f:SI 95)
         (mem/u/c:SI (plus:SI (reg:SI 82)
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("task") [flags 0x40]  <var_decl 0x77287f72e1b0 task>)
+                            (symbol_ref:SI ("task") [flags 0x40]  <var_decl 0x77e52d72e1b0 task>)
                         ] UNSPEC_GOT))) [18  S4 A8])) "kernel/fork.c":42:28 75 {*movsi_internal}
      (nil))
 (insn 29 28 30 7 (set (reg:SI 96)
@@ -342,7 +342,7 @@
 (insn 32 31 33 7 (set (reg:SI 89 [ last_pid.4_7 ])
         (mem/c:SI (plus:SI (reg:SI 82)
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("last_pid") [flags 0x2]  <var_decl 0x77287f72e750 last_pid>)
+                            (symbol_ref:SI ("last_pid") [flags 0x2]  <var_decl 0x77e52d72e750 last_pid>)
                         ] UNSPEC_GOTOFF))) [1 last_pid+0 S4 A32])) "kernel/fork.c":42:37 75 {*movsi_internal}
      (nil))
 (insn 33 32 34 7 (set (reg:CCZ 17 flags)
@@ -394,7 +394,7 @@
 (insn 53 52 54 12 (set (reg/f:SI 97)
         (mem/u/c:SI (plus:SI (reg:SI 82)
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("task") [flags 0x40]  <var_decl 0x77287f72e1b0 task>)
+                            (symbol_ref:SI ("task") [flags 0x40]  <var_decl 0x77e52d72e1b0 task>)
                         ] UNSPEC_GOT))) [18  S4 A8])) "kernel/fork.c":47:18 75 {*movsi_internal}
      (nil))
 (insn 54 53 55 12 (set (reg:SI 98)
@@ -526,7 +526,7 @@
 (insn 15 14 16 2 (set (reg/f:SI 110)
         (mem/u/c:SI (plus:SI (reg:SI 82)
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("current") [flags 0x40]  <var_decl 0x77287f72e120 current>)
+                            (symbol_ref:SI ("current") [flags 0x40]  <var_decl 0x77e52d72e120 current>)
                         ] UNSPEC_GOT))) [18  S4 A8])) "kernel/fork.c":60:21 75 {*movsi_internal}
      (nil))
 (insn 16 15 17 2 (set (reg/f:SI 83 [ current.5_1 ])
@@ -544,7 +544,7 @@
      (expr_list:REG_ARGS_SIZE (const_int 4 [0x4])
         (nil)))
 (call_insn 19 18 20 2 (set (reg:SI 0 ax)
-        (call (mem:QI (symbol_ref:SI ("_get_base") [flags 0x3]  <function_decl 0x77287f715900 _get_base>) [0 _get_base S1 A8])
+        (call (mem:QI (symbol_ref:SI ("_get_base") [flags 0x3]  <function_decl 0x77e52d715900 _get_base>) [0 _get_base S1 A8])
             (const_int 4 [0x4]))) "kernel/fork.c":60:21 823 {*call_value}
      (nil)
     (nil))
@@ -566,7 +566,7 @@
 (insn 23 22 24 2 (set (reg/f:SI 112)
         (mem/u/c:SI (plus:SI (reg:SI 82)
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("current") [flags 0x40]  <var_decl 0x77287f72e120 current>)
+                            (symbol_ref:SI ("current") [flags 0x40]  <var_decl 0x77e52d72e120 current>)
                         ] UNSPEC_GOT))) [18  S4 A8])) "kernel/fork.c":61:21 75 {*movsi_internal}
      (nil))
 (insn 24 23 25 2 (set (reg/f:SI 85 [ current.6_3 ])
@@ -584,7 +584,7 @@
      (expr_list:REG_ARGS_SIZE (const_int 4 [0x4])
         (nil)))
 (call_insn 27 26 28 2 (set (reg:SI 0 ax)
-        (call (mem:QI (symbol_ref:SI ("_get_base") [flags 0x3]  <function_decl 0x77287f715900 _get_base>) [0 _get_base S1 A8])
+        (call (mem:QI (symbol_ref:SI ("_get_base") [flags 0x3]  <function_decl 0x77e52d715900 _get_base>) [0 _get_base S1 A8])
             (const_int 4 [0x4]))) "kernel/fork.c":61:21 823 {*call_value}
      (nil)
     (nil))
@@ -631,9 +631,9 @@
 (insn 36 35 37 3 (set (reg/f:SI 115)
         (plus:SI (reg:SI 82)
             (const:SI (unspec:SI [
-                        (symbol_ref/f:SI ("*.LC0") [flags 0x2]  <var_decl 0x77287f77f2d0 *.LC0>)
+                        (symbol_ref/f:SI ("*.LC0") [flags 0x2]  <var_decl 0x77e52d77f2d0 *.LC0>)
                     ] UNSPEC_GOTOFF)))) "kernel/fork.c":63:9 205 {*leasi}
-     (expr_list:REG_EQUAL (symbol_ref/f:SI ("*.LC0") [flags 0x2]  <var_decl 0x77287f77f2d0 *.LC0>)
+     (expr_list:REG_EQUAL (symbol_ref/f:SI ("*.LC0") [flags 0x2]  <var_decl 0x77e52d77f2d0 *.LC0>)
         (nil)))
 (insn 37 36 38 3 (set (mem/f:SI (pre_dec:SI (reg/f:SI 7 sp)) [16  S4 A32])
         (reg/f:SI 115)) "kernel/fork.c":63:9 54 {*pushsi2}
@@ -642,7 +642,7 @@
 (insn 38 37 39 3 (set (reg:SI 3 bx)
         (reg:SI 82)) "kernel/fork.c":63:9 75 {*movsi_internal}
      (nil))
-(call_insn 39 38 40 3 (call (mem:QI (symbol_ref:SI ("panic") [flags 0x41]  <function_decl 0x77287f738700 panic>) [0 panic S1 A8])
+(call_insn 39 38 40 3 (call (mem:QI (symbol_ref:SI ("panic") [flags 0x41]  <function_decl 0x77e52d738700 panic>) [0 panic S1 A8])
         (const_int 16 [0x10])) "kernel/fork.c":63:9 812 {*call}
      (nil)
     (expr_list (use (reg:SI 3 bx))
@@ -685,9 +685,9 @@
 (insn 48 47 49 5 (set (reg/f:SI 117)
         (plus:SI (reg:SI 82)
             (const:SI (unspec:SI [
-                        (symbol_ref/f:SI ("*.LC1") [flags 0x2]  <var_decl 0x77287f77f360 *.LC1>)
+                        (symbol_ref/f:SI ("*.LC1") [flags 0x2]  <var_decl 0x77e52d77f360 *.LC1>)
                     ] UNSPEC_GOTOFF)))) "kernel/fork.c":65:9 205 {*leasi}
-     (expr_list:REG_EQUAL (symbol_ref/f:SI ("*.LC1") [flags 0x2]  <var_decl 0x77287f77f360 *.LC1>)
+     (expr_list:REG_EQUAL (symbol_ref/f:SI ("*.LC1") [flags 0x2]  <var_decl 0x77e52d77f360 *.LC1>)
         (nil)))
 (insn 49 48 50 5 (set (mem/f:SI (pre_dec:SI (reg/f:SI 7 sp)) [16  S4 A32])
         (reg/f:SI 117)) "kernel/fork.c":65:9 54 {*pushsi2}
@@ -696,7 +696,7 @@
 (insn 50 49 51 5 (set (reg:SI 3 bx)
         (reg:SI 82)) "kernel/fork.c":65:9 75 {*movsi_internal}
      (nil))
-(call_insn 51 50 52 5 (call (mem:QI (symbol_ref:SI ("panic") [flags 0x41]  <function_decl 0x77287f738700 panic>) [0 panic S1 A8])
+(call_insn 51 50 52 5 (call (mem:QI (symbol_ref:SI ("panic") [flags 0x41]  <function_decl 0x77e52d738700 panic>) [0 panic S1 A8])
         (const_int 16 [0x10])) "kernel/fork.c":65:9 812 {*call}
      (nil)
     (expr_list (use (reg:SI 3 bx))
@@ -955,7 +955,7 @@
         (reg:SI 82)) "kernel/fork.c":70:9 75 {*movsi_internal}
      (nil))
 (call_insn 91 90 92 6 (set (reg:SI 0 ax)
-        (call (mem:QI (symbol_ref:SI ("copy_page_tables") [flags 0x41]  <function_decl 0x77287f738300 copy_page_tables>) [0 copy_page_tables S1 A8])
+        (call (mem:QI (symbol_ref:SI ("copy_page_tables") [flags 0x41]  <function_decl 0x77e52d738300 copy_page_tables>) [0 copy_page_tables S1 A8])
             (const_int 16 [0x10]))) "kernel/fork.c":70:9 823 {*call_value}
      (nil)
     (expr_list (use (reg:SI 3 bx))
@@ -994,9 +994,9 @@
 (insn 98 97 99 7 (set (reg/f:SI 130)
         (plus:SI (reg:SI 82)
             (const:SI (unspec:SI [
-                        (symbol_ref/f:SI ("*.LC2") [flags 0x2]  <var_decl 0x77287f77f3f0 *.LC2>)
+                        (symbol_ref/f:SI ("*.LC2") [flags 0x2]  <var_decl 0x77e52d77f3f0 *.LC2>)
                     ] UNSPEC_GOTOFF)))) "kernel/fork.c":71:9 205 {*leasi}
-     (expr_list:REG_EQUAL (symbol_ref/f:SI ("*.LC2") [flags 0x2]  <var_decl 0x77287f77f3f0 *.LC2>)
+     (expr_list:REG_EQUAL (symbol_ref/f:SI ("*.LC2") [flags 0x2]  <var_decl 0x77e52d77f3f0 *.LC2>)
         (nil)))
 (insn 99 98 100 7 (set (mem/f:SI (pre_dec:SI (reg/f:SI 7 sp)) [16  S4 A32])
         (reg/f:SI 130)) "kernel/fork.c":71:9 54 {*pushsi2}
@@ -1006,7 +1006,7 @@
         (reg:SI 82)) "kernel/fork.c":71:9 75 {*movsi_internal}
      (nil))
 (call_insn 101 100 102 7 (set (reg:SI 0 ax)
-        (call (mem:QI (symbol_ref:SI ("printk") [flags 0x41]  <function_decl 0x77287f738e00 printk>) [0 printk S1 A8])
+        (call (mem:QI (symbol_ref:SI ("printk") [flags 0x41]  <function_decl 0x77e52d738e00 printk>) [0 printk S1 A8])
             (const_int 16 [0x10]))) "kernel/fork.c":71:9 823 {*call_value}
      (nil)
     (expr_list (use (reg:SI 3 bx))
@@ -1041,7 +1041,7 @@
         (reg:SI 82)) "kernel/fork.c":72:9 75 {*movsi_internal}
      (nil))
 (call_insn 107 106 108 7 (set (reg:SI 0 ax)
-        (call (mem:QI (symbol_ref:SI ("free_page_tables") [flags 0x41]  <function_decl 0x77287f738400 free_page_tables>) [0 free_page_tables S1 A8])
+        (call (mem:QI (symbol_ref:SI ("free_page_tables") [flags 0x41]  <function_decl 0x77e52d738400 free_page_tables>) [0 free_page_tables S1 A8])
             (const_int 16 [0x10]))) "kernel/fork.c":72:9 823 {*call_value}
      (nil)
     (expr_list (use (reg:SI 3 bx))
@@ -1079,36 +1079,36 @@
 (note 3 0 2 2 [bb 2] NOTE_INSN_BASIC_BLOCK)
 (note 2 3 5 2 NOTE_INSN_FUNCTION_BEG)
 (insn 5 2 6 2 (set (reg:SI 3 bx)
-        (reg:SI 82)) "kernel/fork.c":98:32 75 {*movsi_internal}
+        (reg:SI 82)) "kernel/fork.c":99:32 75 {*movsi_internal}
      (nil))
 (call_insn 6 5 7 2 (set (reg:SI 0 ax)
-        (call (mem:QI (symbol_ref:SI ("get_free_page") [flags 0x41]  <function_decl 0x77287f738900 get_free_page>) [0 get_free_page S1 A8])
-            (const_int 0 [0]))) "kernel/fork.c":98:32 823 {*call_value}
+        (call (mem:QI (symbol_ref:SI ("get_free_page") [flags 0x41]  <function_decl 0x77e52d738900 get_free_page>) [0 get_free_page S1 A8])
+            (const_int 0 [0]))) "kernel/fork.c":99:32 823 {*call_value}
      (nil)
     (expr_list (use (reg:SI 3 bx))
         (nil)))
 (insn 7 6 8 2 (set (reg:SI 83 [ _1 ])
-        (reg:SI 0 ax)) "kernel/fork.c":98:32 75 {*movsi_internal}
+        (reg:SI 0 ax)) "kernel/fork.c":99:32 75 {*movsi_internal}
      (nil))
 (insn 8 7 9 2 (set (mem/f/c:SI (plus:SI (reg/f:SI 19 frame)
                 (const_int -8 [0xfffffffffffffff8])) [13 p+0 S4 A32])
-        (reg:SI 83 [ _1 ])) "kernel/fork.c":98:7 75 {*movsi_internal}
+        (reg:SI 83 [ _1 ])) "kernel/fork.c":99:7 75 {*movsi_internal}
      (nil))
 (insn 9 8 10 2 (set (reg:CCZ 17 flags)
         (compare:CCZ (mem/f/c:SI (plus:SI (reg/f:SI 19 frame)
                     (const_int -8 [0xfffffffffffffff8])) [13 p+0 S4 A32])
-            (const_int 0 [0]))) "kernel/fork.c":99:8 7 {*cmpsi_ccno_1}
+            (const_int 0 [0]))) "kernel/fork.c":100:8 7 {*cmpsi_ccno_1}
      (nil))
 (jump_insn 10 9 11 2 (set (pc)
         (if_then_else (ne (reg:CCZ 17 flags)
                 (const_int 0 [0]))
             (label_ref 15)
-            (pc))) "kernel/fork.c":99:8 806 {*jcc}
+            (pc))) "kernel/fork.c":100:8 806 {*jcc}
      (nil)
  -> 15)
 (note 11 10 12 3 [bb 3] NOTE_INSN_BASIC_BLOCK)
 (insn 12 11 15 3 (set (reg:SI 202 [ _125 ])
-        (const_int -11 [0xfffffffffffffff5])) "kernel/fork.c":100:16 75 {*movsi_internal}
+        (const_int -11 [0xfffffffffffffff5])) "kernel/fork.c":101:16 75 {*movsi_internal}
      (nil))
       ; pc falls through to BB 20
 (code_label 15 12 16 4 22 (nil) [1 uses])
@@ -1116,42 +1116,42 @@
 (insn 17 16 18 4 (set (reg/f:SI 204)
         (mem/u/c:SI (plus:SI (reg:SI 82)
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("task") [flags 0x40]  <var_decl 0x77287f72e1b0 task>)
-                        ] UNSPEC_GOT))) [18  S4 A8])) "kernel/fork.c":101:14 75 {*movsi_internal}
+                            (symbol_ref:SI ("task") [flags 0x40]  <var_decl 0x77e52d72e1b0 task>)
+                        ] UNSPEC_GOT))) [18  S4 A8])) "kernel/fork.c":104:14 75 {*movsi_internal}
      (nil))
 (insn 18 17 19 4 (set (reg:SI 205)
-        (mem/c:SI (reg/f:SI 16 argp) [5 nr+0 S4 A32])) "kernel/fork.c":101:14 75 {*movsi_internal}
+        (mem/c:SI (reg/f:SI 16 argp) [5 nr+0 S4 A32])) "kernel/fork.c":104:14 75 {*movsi_internal}
      (nil))
 (insn 19 18 20 4 (set (reg/f:SI 206)
         (mem/f/c:SI (plus:SI (reg/f:SI 19 frame)
-                (const_int -8 [0xfffffffffffffff8])) [13 p+0 S4 A32])) "kernel/fork.c":101:14 75 {*movsi_internal}
+                (const_int -8 [0xfffffffffffffff8])) [13 p+0 S4 A32])) "kernel/fork.c":104:14 75 {*movsi_internal}
      (nil))
 (insn 20 19 21 4 (set (mem/f:SI (plus:SI (mult:SI (reg:SI 205)
                     (const_int 4 [0x4]))
                 (reg/f:SI 204)) [13 task[nr_135(D)]+0 S4 A32])
-        (reg/f:SI 206)) "kernel/fork.c":101:14 75 {*movsi_internal}
+        (reg/f:SI 206)) "kernel/fork.c":104:14 75 {*movsi_internal}
      (nil))
 (insn 21 20 22 4 (set (reg/f:SI 207)
         (mem/u/c:SI (plus:SI (reg:SI 82)
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("current") [flags 0x40]  <var_decl 0x77287f72e120 current>)
-                        ] UNSPEC_GOT))) [18  S4 A8])) "kernel/fork.c":107:10 75 {*movsi_internal}
+                            (symbol_ref:SI ("current") [flags 0x40]  <var_decl 0x77e52d72e120 current>)
+                        ] UNSPEC_GOT))) [18  S4 A8])) "kernel/fork.c":110:10 75 {*movsi_internal}
      (nil))
 (insn 22 21 23 4 (set (reg/f:SI 84 [ current.8_2 ])
-        (mem/f/c:SI (reg/f:SI 207) [13 current+0 S4 A32])) "kernel/fork.c":107:10 75 {*movsi_internal}
+        (mem/f/c:SI (reg/f:SI 207) [13 current+0 S4 A32])) "kernel/fork.c":110:10 75 {*movsi_internal}
      (nil))
 (insn 23 22 24 4 (set (reg/f:SI 208)
         (mem/f/c:SI (plus:SI (reg/f:SI 19 frame)
-                (const_int -8 [0xfffffffffffffff8])) [13 p+0 S4 A32])) "kernel/fork.c":107:8 75 {*movsi_internal}
+                (const_int -8 [0xfffffffffffffff8])) [13 p+0 S4 A32])) "kernel/fork.c":110:8 75 {*movsi_internal}
      (nil))
 (insn 24 23 25 4 (set (reg/f:SI 209)
-        (reg/f:SI 208)) "kernel/fork.c":107:8 75 {*movsi_internal}
+        (reg/f:SI 208)) "kernel/fork.c":110:8 75 {*movsi_internal}
      (nil))
 (insn 25 24 26 4 (set (reg/f:SI 210)
-        (reg/f:SI 84 [ current.8_2 ])) "kernel/fork.c":107:8 75 {*movsi_internal}
+        (reg/f:SI 84 [ current.8_2 ])) "kernel/fork.c":110:8 75 {*movsi_internal}
      (nil))
 (insn 26 25 27 4 (set (reg:SI 211)
-        (const_int 239 [0xef])) "kernel/fork.c":107:8 75 {*movsi_internal}
+        (const_int 239 [0xef])) "kernel/fork.c":110:8 75 {*movsi_internal}
      (nil))
 (insn 27 26 28 4 (parallel [
             (set (reg:SI 211)
@@ -1167,483 +1167,483 @@
             (set (mem:BLK (reg/f:SI 209) [2 *p_134+0 S956 A32])
                 (mem:BLK (reg/f:SI 210) [2 *current.8_2+0 S956 A32]))
             (use (reg:SI 211))
-        ]) "kernel/fork.c":107:8 1067 {*rep_movsi}
+        ]) "kernel/fork.c":110:8 1067 {*rep_movsi}
      (nil))
 (insn 28 27 29 4 (set (reg/f:SI 212)
         (mem/f/c:SI (plus:SI (reg/f:SI 19 frame)
-                (const_int -8 [0xfffffffffffffff8])) [13 p+0 S4 A32])) "kernel/fork.c":108:14 75 {*movsi_internal}
+                (const_int -8 [0xfffffffffffffff8])) [13 p+0 S4 A32])) "kernel/fork.c":111:14 75 {*movsi_internal}
      (nil))
 (insn 29 28 30 4 (set (mem:SI (reg/f:SI 212) [1 p_134->state+0 S4 A32])
-        (const_int 2 [0x2])) "kernel/fork.c":108:14 75 {*movsi_internal}
+        (const_int 2 [0x2])) "kernel/fork.c":111:14 75 {*movsi_internal}
      (nil))
 (insn 30 29 31 4 (set (reg:SI 85 [ last_pid.9_3 ])
         (mem/c:SI (plus:SI (reg:SI 82)
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("last_pid") [flags 0x2]  <var_decl 0x77287f72e750 last_pid>)
-                        ] UNSPEC_GOTOFF))) [1 last_pid+0 S4 A32])) "kernel/fork.c":109:12 75 {*movsi_internal}
+                            (symbol_ref:SI ("last_pid") [flags 0x2]  <var_decl 0x77e52d72e750 last_pid>)
+                        ] UNSPEC_GOTOFF))) [1 last_pid+0 S4 A32])) "kernel/fork.c":112:12 75 {*movsi_internal}
      (nil))
 (insn 31 30 32 4 (set (reg/f:SI 213)
         (mem/f/c:SI (plus:SI (reg/f:SI 19 frame)
-                (const_int -8 [0xfffffffffffffff8])) [13 p+0 S4 A32])) "kernel/fork.c":109:12 75 {*movsi_internal}
+                (const_int -8 [0xfffffffffffffff8])) [13 p+0 S4 A32])) "kernel/fork.c":112:12 75 {*movsi_internal}
      (nil))
 (insn 32 31 33 4 (set (mem:SI (plus:SI (reg/f:SI 213)
                 (const_int 556 [0x22c])) [1 p_134->pid+0 S4 A32])
-        (reg:SI 85 [ last_pid.9_3 ])) "kernel/fork.c":109:12 75 {*movsi_internal}
+        (reg:SI 85 [ last_pid.9_3 ])) "kernel/fork.c":112:12 75 {*movsi_internal}
      (nil))
 (insn 33 32 34 4 (set (reg/f:SI 214)
         (mem/u/c:SI (plus:SI (reg:SI 82)
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("current") [flags 0x40]  <var_decl 0x77287f72e120 current>)
-                        ] UNSPEC_GOT))) [18  S4 A8])) "kernel/fork.c":110:24 75 {*movsi_internal}
+                            (symbol_ref:SI ("current") [flags 0x40]  <var_decl 0x77e52d72e120 current>)
+                        ] UNSPEC_GOT))) [18  S4 A8])) "kernel/fork.c":113:24 75 {*movsi_internal}
      (nil))
 (insn 34 33 35 4 (set (reg/f:SI 86 [ current.10_4 ])
-        (mem/f/c:SI (reg/f:SI 214) [13 current+0 S4 A32])) "kernel/fork.c":110:24 75 {*movsi_internal}
+        (mem/f/c:SI (reg/f:SI 214) [13 current+0 S4 A32])) "kernel/fork.c":113:24 75 {*movsi_internal}
      (nil))
 (insn 35 34 36 4 (set (reg:SI 87 [ _5 ])
         (mem:SI (plus:SI (reg/f:SI 86 [ current.10_4 ])
-                (const_int 556 [0x22c])) [1 current.10_4->pid+0 S4 A32])) "kernel/fork.c":110:24 75 {*movsi_internal}
+                (const_int 556 [0x22c])) [1 current.10_4->pid+0 S4 A32])) "kernel/fork.c":113:24 75 {*movsi_internal}
      (nil))
 (insn 36 35 37 4 (set (reg/f:SI 215)
         (mem/f/c:SI (plus:SI (reg/f:SI 19 frame)
-                (const_int -8 [0xfffffffffffffff8])) [13 p+0 S4 A32])) "kernel/fork.c":110:15 75 {*movsi_internal}
+                (const_int -8 [0xfffffffffffffff8])) [13 p+0 S4 A32])) "kernel/fork.c":113:15 75 {*movsi_internal}
      (nil))
 (insn 37 36 38 4 (set (mem:SI (plus:SI (reg/f:SI 215)
                 (const_int 560 [0x230])) [1 p_134->father+0 S4 A32])
-        (reg:SI 87 [ _5 ])) "kernel/fork.c":110:15 75 {*movsi_internal}
+        (reg:SI 87 [ _5 ])) "kernel/fork.c":113:15 75 {*movsi_internal}
      (nil))
 (insn 38 37 39 4 (set (reg/f:SI 216)
         (mem/f/c:SI (plus:SI (reg/f:SI 19 frame)
-                (const_int -8 [0xfffffffffffffff8])) [13 p+0 S4 A32])) "kernel/fork.c":111:19 75 {*movsi_internal}
+                (const_int -8 [0xfffffffffffffff8])) [13 p+0 S4 A32])) "kernel/fork.c":114:19 75 {*movsi_internal}
      (nil))
 (insn 39 38 40 4 (set (reg:SI 88 [ _6 ])
         (mem:SI (plus:SI (reg/f:SI 216)
-                (const_int 8 [0x8])) [1 p_134->priority+0 S4 A32])) "kernel/fork.c":111:19 75 {*movsi_internal}
+                (const_int 8 [0x8])) [1 p_134->priority+0 S4 A32])) "kernel/fork.c":114:19 75 {*movsi_internal}
      (nil))
 (insn 40 39 41 4 (set (reg/f:SI 217)
         (mem/f/c:SI (plus:SI (reg/f:SI 19 frame)
-                (const_int -8 [0xfffffffffffffff8])) [13 p+0 S4 A32])) "kernel/fork.c":111:16 75 {*movsi_internal}
+                (const_int -8 [0xfffffffffffffff8])) [13 p+0 S4 A32])) "kernel/fork.c":114:16 75 {*movsi_internal}
      (nil))
 (insn 41 40 42 4 (set (mem:SI (plus:SI (reg/f:SI 217)
                 (const_int 4 [0x4])) [1 p_134->counter+0 S4 A32])
-        (reg:SI 88 [ _6 ])) "kernel/fork.c":111:16 75 {*movsi_internal}
+        (reg:SI 88 [ _6 ])) "kernel/fork.c":114:16 75 {*movsi_internal}
      (nil))
 (insn 42 41 43 4 (set (reg/f:SI 218)
         (mem/f/c:SI (plus:SI (reg/f:SI 19 frame)
-                (const_int -8 [0xfffffffffffffff8])) [13 p+0 S4 A32])) "kernel/fork.c":112:15 75 {*movsi_internal}
+                (const_int -8 [0xfffffffffffffff8])) [13 p+0 S4 A32])) "kernel/fork.c":115:15 75 {*movsi_internal}
      (nil))
 (insn 43 42 44 4 (set (mem:SI (plus:SI (reg/f:SI 218)
                 (const_int 12 [0xc])) [1 p_134->signal+0 S4 A32])
-        (const_int 0 [0])) "kernel/fork.c":112:15 75 {*movsi_internal}
+        (const_int 0 [0])) "kernel/fork.c":115:15 75 {*movsi_internal}
      (nil))
 (insn 44 43 45 4 (set (reg/f:SI 219)
         (mem/f/c:SI (plus:SI (reg/f:SI 19 frame)
-                (const_int -8 [0xfffffffffffffff8])) [13 p+0 S4 A32])) "kernel/fork.c":113:14 75 {*movsi_internal}
+                (const_int -8 [0xfffffffffffffff8])) [13 p+0 S4 A32])) "kernel/fork.c":116:14 75 {*movsi_internal}
      (nil))
 (insn 45 44 46 4 (set (mem:SI (plus:SI (reg/f:SI 219)
                 (const_int 588 [0x24c])) [1 p_134->alarm+0 S4 A32])
-        (const_int 0 [0])) "kernel/fork.c":113:14 75 {*movsi_internal}
+        (const_int 0 [0])) "kernel/fork.c":116:14 75 {*movsi_internal}
      (nil))
 (insn 46 45 47 4 (set (reg/f:SI 220)
         (mem/f/c:SI (plus:SI (reg/f:SI 19 frame)
-                (const_int -8 [0xfffffffffffffff8])) [13 p+0 S4 A32])) "kernel/fork.c":114:15 75 {*movsi_internal}
+                (const_int -8 [0xfffffffffffffff8])) [13 p+0 S4 A32])) "kernel/fork.c":117:15 75 {*movsi_internal}
      (nil))
 (insn 47 46 48 4 (set (mem:SI (plus:SI (reg/f:SI 220)
                 (const_int 572 [0x23c])) [1 p_134->leader+0 S4 A32])
-        (const_int 0 [0])) "kernel/fork.c":114:15 75 {*movsi_internal}
+        (const_int 0 [0])) "kernel/fork.c":117:15 75 {*movsi_internal}
      (nil))
 (insn 48 47 49 4 (set (reg/f:SI 221)
         (mem/f/c:SI (plus:SI (reg/f:SI 19 frame)
-                (const_int -8 [0xfffffffffffffff8])) [13 p+0 S4 A32])) "kernel/fork.c":115:25 75 {*movsi_internal}
+                (const_int -8 [0xfffffffffffffff8])) [13 p+0 S4 A32])) "kernel/fork.c":118:25 75 {*movsi_internal}
      (nil))
 (insn 49 48 50 4 (set (mem:SI (plus:SI (reg/f:SI 221)
                 (const_int 596 [0x254])) [1 p_134->stime+0 S4 A32])
-        (const_int 0 [0])) "kernel/fork.c":115:25 75 {*movsi_internal}
+        (const_int 0 [0])) "kernel/fork.c":118:25 75 {*movsi_internal}
      (nil))
 (insn 50 49 51 4 (set (reg/f:SI 222)
         (mem/f/c:SI (plus:SI (reg/f:SI 19 frame)
-                (const_int -8 [0xfffffffffffffff8])) [13 p+0 S4 A32])) "kernel/fork.c":115:17 75 {*movsi_internal}
+                (const_int -8 [0xfffffffffffffff8])) [13 p+0 S4 A32])) "kernel/fork.c":118:17 75 {*movsi_internal}
      (nil))
 (insn 51 50 52 4 (set (reg:SI 89 [ _7 ])
         (mem:SI (plus:SI (reg/f:SI 222)
-                (const_int 596 [0x254])) [1 p_134->stime+0 S4 A32])) "kernel/fork.c":115:17 75 {*movsi_internal}
+                (const_int 596 [0x254])) [1 p_134->stime+0 S4 A32])) "kernel/fork.c":118:17 75 {*movsi_internal}
      (nil))
 (insn 52 51 53 4 (set (reg/f:SI 223)
         (mem/f/c:SI (plus:SI (reg/f:SI 19 frame)
-                (const_int -8 [0xfffffffffffffff8])) [13 p+0 S4 A32])) "kernel/fork.c":115:14 75 {*movsi_internal}
+                (const_int -8 [0xfffffffffffffff8])) [13 p+0 S4 A32])) "kernel/fork.c":118:14 75 {*movsi_internal}
      (nil))
 (insn 53 52 54 4 (set (mem:SI (plus:SI (reg/f:SI 223)
                 (const_int 592 [0x250])) [1 p_134->utime+0 S4 A32])
-        (reg:SI 89 [ _7 ])) "kernel/fork.c":115:14 75 {*movsi_internal}
+        (reg:SI 89 [ _7 ])) "kernel/fork.c":118:14 75 {*movsi_internal}
      (nil))
 (insn 54 53 55 4 (set (reg/f:SI 224)
         (mem/f/c:SI (plus:SI (reg/f:SI 19 frame)
-                (const_int -8 [0xfffffffffffffff8])) [13 p+0 S4 A32])) "kernel/fork.c":116:27 75 {*movsi_internal}
+                (const_int -8 [0xfffffffffffffff8])) [13 p+0 S4 A32])) "kernel/fork.c":119:27 75 {*movsi_internal}
      (nil))
 (insn 55 54 56 4 (set (mem:SI (plus:SI (reg/f:SI 224)
                 (const_int 604 [0x25c])) [1 p_134->cstime+0 S4 A32])
-        (const_int 0 [0])) "kernel/fork.c":116:27 75 {*movsi_internal}
+        (const_int 0 [0])) "kernel/fork.c":119:27 75 {*movsi_internal}
      (nil))
 (insn 56 55 57 4 (set (reg/f:SI 225)
         (mem/f/c:SI (plus:SI (reg/f:SI 19 frame)
-                (const_int -8 [0xfffffffffffffff8])) [13 p+0 S4 A32])) "kernel/fork.c":116:18 75 {*movsi_internal}
+                (const_int -8 [0xfffffffffffffff8])) [13 p+0 S4 A32])) "kernel/fork.c":119:18 75 {*movsi_internal}
      (nil))
 (insn 57 56 58 4 (set (reg:SI 90 [ _8 ])
         (mem:SI (plus:SI (reg/f:SI 225)
-                (const_int 604 [0x25c])) [1 p_134->cstime+0 S4 A32])) "kernel/fork.c":116:18 75 {*movsi_internal}
+                (const_int 604 [0x25c])) [1 p_134->cstime+0 S4 A32])) "kernel/fork.c":119:18 75 {*movsi_internal}
      (nil))
 (insn 58 57 59 4 (set (reg/f:SI 226)
         (mem/f/c:SI (plus:SI (reg/f:SI 19 frame)
-                (const_int -8 [0xfffffffffffffff8])) [13 p+0 S4 A32])) "kernel/fork.c":116:15 75 {*movsi_internal}
+                (const_int -8 [0xfffffffffffffff8])) [13 p+0 S4 A32])) "kernel/fork.c":119:15 75 {*movsi_internal}
      (nil))
 (insn 59 58 60 4 (set (mem:SI (plus:SI (reg/f:SI 226)
                 (const_int 600 [0x258])) [1 p_134->cutime+0 S4 A32])
-        (reg:SI 90 [ _8 ])) "kernel/fork.c":116:15 75 {*movsi_internal}
+        (reg:SI 90 [ _8 ])) "kernel/fork.c":119:15 75 {*movsi_internal}
      (nil))
 (insn 60 59 61 4 (set (reg/f:SI 227)
         (mem/u/c:SI (plus:SI (reg:SI 82)
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("jiffies") [flags 0x40]  <var_decl 0x77287f72e360 jiffies>)
-                        ] UNSPEC_GOT))) [18  S4 A8])) "kernel/fork.c":117:19 75 {*movsi_internal}
+                            (symbol_ref:SI ("jiffies") [flags 0x40]  <var_decl 0x77e52d72e360 jiffies>)
+                        ] UNSPEC_GOT))) [18  S4 A8])) "kernel/fork.c":120:19 75 {*movsi_internal}
      (nil))
 (insn 61 60 62 4 (set (reg:SI 91 [ jiffies.11_9 ])
-        (mem/v/c:SI (reg/f:SI 227) [1 jiffies+0 S4 A32])) "kernel/fork.c":117:19 75 {*movsi_internal}
+        (mem/v/c:SI (reg/f:SI 227) [1 jiffies+0 S4 A32])) "kernel/fork.c":120:19 75 {*movsi_internal}
      (nil))
 (insn 62 61 63 4 (set (reg/f:SI 228)
         (mem/f/c:SI (plus:SI (reg/f:SI 19 frame)
-                (const_int -8 [0xfffffffffffffff8])) [13 p+0 S4 A32])) "kernel/fork.c":117:19 75 {*movsi_internal}
+                (const_int -8 [0xfffffffffffffff8])) [13 p+0 S4 A32])) "kernel/fork.c":120:19 75 {*movsi_internal}
      (nil))
 (insn 63 62 64 4 (set (mem:SI (plus:SI (reg/f:SI 228)
                 (const_int 608 [0x260])) [1 p_134->start_time+0 S4 A32])
-        (reg:SI 91 [ jiffies.11_9 ])) "kernel/fork.c":117:19 75 {*movsi_internal}
+        (reg:SI 91 [ jiffies.11_9 ])) "kernel/fork.c":120:19 75 {*movsi_internal}
      (nil))
 (insn 64 63 65 4 (set (reg/f:SI 229)
         (mem/f/c:SI (plus:SI (reg/f:SI 19 frame)
-                (const_int -8 [0xfffffffffffffff8])) [13 p+0 S4 A32])) "kernel/fork.c":118:22 75 {*movsi_internal}
+                (const_int -8 [0xfffffffffffffff8])) [13 p+0 S4 A32])) "kernel/fork.c":121:22 75 {*movsi_internal}
      (nil))
 (insn 65 64 66 4 (set (mem:SI (plus:SI (reg/f:SI 229)
                 (const_int 744 [0x2e8])) [1 p_134->tss.back_link+0 S4 A32])
-        (const_int 0 [0])) "kernel/fork.c":118:22 75 {*movsi_internal}
+        (const_int 0 [0])) "kernel/fork.c":121:22 75 {*movsi_internal}
      (nil))
 (insn 66 65 67 4 (set (reg:SI 92 [ p.12_10 ])
         (mem/f/c:SI (plus:SI (reg/f:SI 19 frame)
-                (const_int -8 [0xfffffffffffffff8])) [13 p+0 S4 A32])) "kernel/fork.c":119:31 75 {*movsi_internal}
+                (const_int -8 [0xfffffffffffffff8])) [13 p+0 S4 A32])) "kernel/fork.c":122:31 75 {*movsi_internal}
      (nil))
 (insn 67 66 68 4 (parallel [
             (set (reg:SI 93 [ _11 ])
                 (plus:SI (reg:SI 92 [ p.12_10 ])
                     (const_int 4096 [0x1000])))
             (clobber (reg:CC 17 flags))
-        ]) "kernel/fork.c":119:29 209 {*addsi_1}
+        ]) "kernel/fork.c":122:29 209 {*addsi_1}
      (nil))
 (insn 68 67 69 4 (set (reg/f:SI 230)
         (mem/f/c:SI (plus:SI (reg/f:SI 19 frame)
-                (const_int -8 [0xfffffffffffffff8])) [13 p+0 S4 A32])) "kernel/fork.c":119:17 75 {*movsi_internal}
+                (const_int -8 [0xfffffffffffffff8])) [13 p+0 S4 A32])) "kernel/fork.c":122:17 75 {*movsi_internal}
      (nil))
 (insn 69 68 70 4 (set (mem:SI (plus:SI (reg/f:SI 230)
                 (const_int 748 [0x2ec])) [1 p_134->tss.esp0+0 S4 A32])
-        (reg:SI 93 [ _11 ])) "kernel/fork.c":119:17 75 {*movsi_internal}
+        (reg:SI 93 [ _11 ])) "kernel/fork.c":122:17 75 {*movsi_internal}
      (nil))
 (insn 70 69 71 4 (set (reg/f:SI 231)
         (mem/f/c:SI (plus:SI (reg/f:SI 19 frame)
-                (const_int -8 [0xfffffffffffffff8])) [13 p+0 S4 A32])) "kernel/fork.c":120:16 75 {*movsi_internal}
+                (const_int -8 [0xfffffffffffffff8])) [13 p+0 S4 A32])) "kernel/fork.c":123:16 75 {*movsi_internal}
      (nil))
 (insn 71 70 72 4 (set (mem:SI (plus:SI (reg/f:SI 231)
                 (const_int 752 [0x2f0])) [1 p_134->tss.ss0+0 S4 A32])
-        (const_int 16 [0x10])) "kernel/fork.c":120:16 75 {*movsi_internal}
+        (const_int 16 [0x10])) "kernel/fork.c":123:16 75 {*movsi_internal}
      (nil))
 (insn 72 71 73 4 (set (reg/f:SI 232)
         (mem/f/c:SI (plus:SI (reg/f:SI 19 frame)
-                (const_int -8 [0xfffffffffffffff8])) [13 p+0 S4 A32])) "kernel/fork.c":121:16 75 {*movsi_internal}
+                (const_int -8 [0xfffffffffffffff8])) [13 p+0 S4 A32])) "kernel/fork.c":124:16 75 {*movsi_internal}
      (nil))
 (insn 73 72 74 4 (set (reg:SI 233)
         (mem/c:SI (plus:SI (reg/f:SI 16 argp)
-                (const_int 48 [0x30])) [1 eip+0 S4 A32])) "kernel/fork.c":121:16 75 {*movsi_internal}
+                (const_int 48 [0x30])) [1 eip+0 S4 A32])) "kernel/fork.c":124:16 75 {*movsi_internal}
      (nil))
 (insn 74 73 75 4 (set (mem:SI (plus:SI (reg/f:SI 232)
                 (const_int 776 [0x308])) [1 p_134->tss.eip+0 S4 A32])
-        (reg:SI 233)) "kernel/fork.c":121:16 75 {*movsi_internal}
+        (reg:SI 233)) "kernel/fork.c":124:16 75 {*movsi_internal}
      (nil))
 (insn 75 74 76 4 (set (reg/f:SI 234)
         (mem/f/c:SI (plus:SI (reg/f:SI 19 frame)
-                (const_int -8 [0xfffffffffffffff8])) [13 p+0 S4 A32])) "kernel/fork.c":122:19 75 {*movsi_internal}
+                (const_int -8 [0xfffffffffffffff8])) [13 p+0 S4 A32])) "kernel/fork.c":125:19 75 {*movsi_internal}
      (nil))
 (insn 76 75 77 4 (set (reg:SI 235)
         (mem/c:SI (plus:SI (reg/f:SI 16 argp)
-                (const_int 56 [0x38])) [1 eflags+0 S4 A32])) "kernel/fork.c":122:19 75 {*movsi_internal}
+                (const_int 56 [0x38])) [1 eflags+0 S4 A32])) "kernel/fork.c":125:19 75 {*movsi_internal}
      (nil))
 (insn 77 76 78 4 (set (mem:SI (plus:SI (reg/f:SI 234)
                 (const_int 780 [0x30c])) [1 p_134->tss.eflags+0 S4 A32])
-        (reg:SI 235)) "kernel/fork.c":122:19 75 {*movsi_internal}
+        (reg:SI 235)) "kernel/fork.c":125:19 75 {*movsi_internal}
      (nil))
 (insn 78 77 79 4 (set (reg/f:SI 236)
         (mem/f/c:SI (plus:SI (reg/f:SI 19 frame)
-                (const_int -8 [0xfffffffffffffff8])) [13 p+0 S4 A32])) "kernel/fork.c":123:16 75 {*movsi_internal}
+                (const_int -8 [0xfffffffffffffff8])) [13 p+0 S4 A32])) "kernel/fork.c":126:16 75 {*movsi_internal}
      (nil))
 (insn 79 78 80 4 (set (mem:SI (plus:SI (reg/f:SI 236)
                 (const_int 784 [0x310])) [1 p_134->tss.eax+0 S4 A32])
-        (const_int 0 [0])) "kernel/fork.c":123:16 75 {*movsi_internal}
+        (const_int 0 [0])) "kernel/fork.c":126:16 75 {*movsi_internal}
      (nil))
 (insn 80 79 81 4 (set (reg/f:SI 237)
         (mem/f/c:SI (plus:SI (reg/f:SI 19 frame)
-                (const_int -8 [0xfffffffffffffff8])) [13 p+0 S4 A32])) "kernel/fork.c":124:16 75 {*movsi_internal}
+                (const_int -8 [0xfffffffffffffff8])) [13 p+0 S4 A32])) "kernel/fork.c":127:16 75 {*movsi_internal}
      (nil))
 (insn 81 80 82 4 (set (reg:SI 238)
         (mem/c:SI (plus:SI (reg/f:SI 16 argp)
-                (const_int 28 [0x1c])) [1 ecx+0 S4 A32])) "kernel/fork.c":124:16 75 {*movsi_internal}
+                (const_int 28 [0x1c])) [1 ecx+0 S4 A32])) "kernel/fork.c":127:16 75 {*movsi_internal}
      (nil))
 (insn 82 81 83 4 (set (mem:SI (plus:SI (reg/f:SI 237)
                 (const_int 788 [0x314])) [1 p_134->tss.ecx+0 S4 A32])
-        (reg:SI 238)) "kernel/fork.c":124:16 75 {*movsi_internal}
+        (reg:SI 238)) "kernel/fork.c":127:16 75 {*movsi_internal}
      (nil))
 (insn 83 82 84 4 (set (reg/f:SI 239)
         (mem/f/c:SI (plus:SI (reg/f:SI 19 frame)
-                (const_int -8 [0xfffffffffffffff8])) [13 p+0 S4 A32])) "kernel/fork.c":125:16 75 {*movsi_internal}
+                (const_int -8 [0xfffffffffffffff8])) [13 p+0 S4 A32])) "kernel/fork.c":128:16 75 {*movsi_internal}
      (nil))
 (insn 84 83 85 4 (set (reg:SI 240)
         (mem/c:SI (plus:SI (reg/f:SI 16 argp)
-                (const_int 32 [0x20])) [1 edx+0 S4 A32])) "kernel/fork.c":125:16 75 {*movsi_internal}
+                (const_int 32 [0x20])) [1 edx+0 S4 A32])) "kernel/fork.c":128:16 75 {*movsi_internal}
      (nil))
 (insn 85 84 86 4 (set (mem:SI (plus:SI (reg/f:SI 239)
                 (const_int 792 [0x318])) [1 p_134->tss.edx+0 S4 A32])
-        (reg:SI 240)) "kernel/fork.c":125:16 75 {*movsi_internal}
+        (reg:SI 240)) "kernel/fork.c":128:16 75 {*movsi_internal}
      (nil))
 (insn 86 85 87 4 (set (reg/f:SI 241)
         (mem/f/c:SI (plus:SI (reg/f:SI 19 frame)
-                (const_int -8 [0xfffffffffffffff8])) [13 p+0 S4 A32])) "kernel/fork.c":126:16 75 {*movsi_internal}
+                (const_int -8 [0xfffffffffffffff8])) [13 p+0 S4 A32])) "kernel/fork.c":129:16 75 {*movsi_internal}
      (nil))
 (insn 87 86 88 4 (set (reg:SI 242)
         (mem/c:SI (plus:SI (reg/f:SI 16 argp)
-                (const_int 24 [0x18])) [1 ebx+0 S4 A32])) "kernel/fork.c":126:16 75 {*movsi_internal}
+                (const_int 24 [0x18])) [1 ebx+0 S4 A32])) "kernel/fork.c":129:16 75 {*movsi_internal}
      (nil))
 (insn 88 87 89 4 (set (mem:SI (plus:SI (reg/f:SI 241)
                 (const_int 796 [0x31c])) [1 p_134->tss.ebx+0 S4 A32])
-        (reg:SI 242)) "kernel/fork.c":126:16 75 {*movsi_internal}
+        (reg:SI 242)) "kernel/fork.c":129:16 75 {*movsi_internal}
      (nil))
 (insn 89 88 90 4 (set (reg/f:SI 243)
         (mem/f/c:SI (plus:SI (reg/f:SI 19 frame)
-                (const_int -8 [0xfffffffffffffff8])) [13 p+0 S4 A32])) "kernel/fork.c":127:16 75 {*movsi_internal}
+                (const_int -8 [0xfffffffffffffff8])) [13 p+0 S4 A32])) "kernel/fork.c":130:16 75 {*movsi_internal}
      (nil))
 (insn 90 89 91 4 (set (reg:SI 244)
         (mem/c:SI (plus:SI (reg/f:SI 16 argp)
-                (const_int 60 [0x3c])) [1 esp+0 S4 A32])) "kernel/fork.c":127:16 75 {*movsi_internal}
+                (const_int 60 [0x3c])) [1 esp+0 S4 A32])) "kernel/fork.c":130:16 75 {*movsi_internal}
      (nil))
 (insn 91 90 92 4 (set (mem:SI (plus:SI (reg/f:SI 243)
                 (const_int 800 [0x320])) [1 p_134->tss.esp+0 S4 A32])
-        (reg:SI 244)) "kernel/fork.c":127:16 75 {*movsi_internal}
+        (reg:SI 244)) "kernel/fork.c":130:16 75 {*movsi_internal}
      (nil))
 (insn 92 91 93 4 (set (reg/f:SI 245)
         (mem/f/c:SI (plus:SI (reg/f:SI 19 frame)
-                (const_int -8 [0xfffffffffffffff8])) [13 p+0 S4 A32])) "kernel/fork.c":128:16 75 {*movsi_internal}
+                (const_int -8 [0xfffffffffffffff8])) [13 p+0 S4 A32])) "kernel/fork.c":131:16 75 {*movsi_internal}
      (nil))
 (insn 93 92 94 4 (set (reg:SI 246)
         (mem/c:SI (plus:SI (reg/f:SI 16 argp)
-                (const_int 4 [0x4])) [1 ebp+0 S4 A32])) "kernel/fork.c":128:16 75 {*movsi_internal}
+                (const_int 4 [0x4])) [1 ebp+0 S4 A32])) "kernel/fork.c":131:16 75 {*movsi_internal}
      (nil))
 (insn 94 93 95 4 (set (mem:SI (plus:SI (reg/f:SI 245)
                 (const_int 804 [0x324])) [1 p_134->tss.ebp+0 S4 A32])
-        (reg:SI 246)) "kernel/fork.c":128:16 75 {*movsi_internal}
+        (reg:SI 246)) "kernel/fork.c":131:16 75 {*movsi_internal}
      (nil))
 (insn 95 94 96 4 (set (reg/f:SI 247)
         (mem/f/c:SI (plus:SI (reg/f:SI 19 frame)
-                (const_int -8 [0xfffffffffffffff8])) [13 p+0 S4 A32])) "kernel/fork.c":129:16 75 {*movsi_internal}
+                (const_int -8 [0xfffffffffffffff8])) [13 p+0 S4 A32])) "kernel/fork.c":132:16 75 {*movsi_internal}
      (nil))
 (insn 96 95 97 4 (set (reg:SI 248)
         (mem/c:SI (plus:SI (reg/f:SI 16 argp)
-                (const_int 12 [0xc])) [1 esi+0 S4 A32])) "kernel/fork.c":129:16 75 {*movsi_internal}
+                (const_int 12 [0xc])) [1 esi+0 S4 A32])) "kernel/fork.c":132:16 75 {*movsi_internal}
      (nil))
 (insn 97 96 98 4 (set (mem:SI (plus:SI (reg/f:SI 247)
                 (const_int 808 [0x328])) [1 p_134->tss.esi+0 S4 A32])
-        (reg:SI 248)) "kernel/fork.c":129:16 75 {*movsi_internal}
+        (reg:SI 248)) "kernel/fork.c":132:16 75 {*movsi_internal}
      (nil))
 (insn 98 97 99 4 (set (reg/f:SI 249)
         (mem/f/c:SI (plus:SI (reg/f:SI 19 frame)
-                (const_int -8 [0xfffffffffffffff8])) [13 p+0 S4 A32])) "kernel/fork.c":130:16 75 {*movsi_internal}
+                (const_int -8 [0xfffffffffffffff8])) [13 p+0 S4 A32])) "kernel/fork.c":133:16 75 {*movsi_internal}
      (nil))
 (insn 99 98 100 4 (set (reg:SI 250)
         (mem/c:SI (plus:SI (reg/f:SI 16 argp)
-                (const_int 8 [0x8])) [1 edi+0 S4 A32])) "kernel/fork.c":130:16 75 {*movsi_internal}
+                (const_int 8 [0x8])) [1 edi+0 S4 A32])) "kernel/fork.c":133:16 75 {*movsi_internal}
      (nil))
 (insn 100 99 101 4 (set (mem:SI (plus:SI (reg/f:SI 249)
                 (const_int 812 [0x32c])) [1 p_134->tss.edi+0 S4 A32])
-        (reg:SI 250)) "kernel/fork.c":130:16 75 {*movsi_internal}
+        (reg:SI 250)) "kernel/fork.c":133:16 75 {*movsi_internal}
      (nil))
 (insn 101 100 102 4 (set (reg:SI 251)
         (mem/c:SI (plus:SI (reg/f:SI 16 argp)
-                (const_int 40 [0x28])) [1 es+0 S4 A32])) "kernel/fork.c":131:20 75 {*movsi_internal}
+                (const_int 40 [0x28])) [1 es+0 S4 A32])) "kernel/fork.c":134:20 75 {*movsi_internal}
      (nil))
 (insn 102 101 103 4 (set (reg:SI 94 [ _12 ])
-        (zero_extend:SI (subreg:HI (reg:SI 251) 0))) "kernel/fork.c":131:20 144 {*zero_extendhisi2}
+        (zero_extend:SI (subreg:HI (reg:SI 251) 0))) "kernel/fork.c":134:20 144 {*zero_extendhisi2}
      (expr_list:REG_EQUAL (and:SI (mem/c:SI (plus:SI (reg/f:SI 16 argp)
                     (const_int 40 [0x28])) [1 es+0 S4 A32])
             (const_int 65535 [0xffff]))
         (nil)))
 (insn 103 102 104 4 (set (reg/f:SI 252)
         (mem/f/c:SI (plus:SI (reg/f:SI 19 frame)
-                (const_int -8 [0xfffffffffffffff8])) [13 p+0 S4 A32])) "kernel/fork.c":131:15 75 {*movsi_internal}
+                (const_int -8 [0xfffffffffffffff8])) [13 p+0 S4 A32])) "kernel/fork.c":134:15 75 {*movsi_internal}
      (nil))
 (insn 104 103 105 4 (set (mem:SI (plus:SI (reg/f:SI 252)
                 (const_int 816 [0x330])) [1 p_134->tss.es+0 S4 A32])
-        (reg:SI 94 [ _12 ])) "kernel/fork.c":131:15 75 {*movsi_internal}
+        (reg:SI 94 [ _12 ])) "kernel/fork.c":134:15 75 {*movsi_internal}
      (nil))
 (insn 105 104 106 4 (set (reg:SI 253)
         (mem/c:SI (plus:SI (reg/f:SI 16 argp)
-                (const_int 52 [0x34])) [1 cs+0 S4 A32])) "kernel/fork.c":132:20 75 {*movsi_internal}
+                (const_int 52 [0x34])) [1 cs+0 S4 A32])) "kernel/fork.c":135:20 75 {*movsi_internal}
      (nil))
 (insn 106 105 107 4 (set (reg:SI 95 [ _13 ])
-        (zero_extend:SI (subreg:HI (reg:SI 253) 0))) "kernel/fork.c":132:20 144 {*zero_extendhisi2}
+        (zero_extend:SI (subreg:HI (reg:SI 253) 0))) "kernel/fork.c":135:20 144 {*zero_extendhisi2}
      (expr_list:REG_EQUAL (and:SI (mem/c:SI (plus:SI (reg/f:SI 16 argp)
                     (const_int 52 [0x34])) [1 cs+0 S4 A32])
             (const_int 65535 [0xffff]))
         (nil)))
 (insn 107 106 108 4 (set (reg/f:SI 254)
         (mem/f/c:SI (plus:SI (reg/f:SI 19 frame)
-                (const_int -8 [0xfffffffffffffff8])) [13 p+0 S4 A32])) "kernel/fork.c":132:15 75 {*movsi_internal}
+                (const_int -8 [0xfffffffffffffff8])) [13 p+0 S4 A32])) "kernel/fork.c":135:15 75 {*movsi_internal}
      (nil))
 (insn 108 107 109 4 (set (mem:SI (plus:SI (reg/f:SI 254)
                 (const_int 820 [0x334])) [1 p_134->tss.cs+0 S4 A32])
-        (reg:SI 95 [ _13 ])) "kernel/fork.c":132:15 75 {*movsi_internal}
+        (reg:SI 95 [ _13 ])) "kernel/fork.c":135:15 75 {*movsi_internal}
      (nil))
 (insn 109 108 110 4 (set (reg:SI 255)
         (mem/c:SI (plus:SI (reg/f:SI 16 argp)
-                (const_int 64 [0x40])) [1 ss+0 S4 A32])) "kernel/fork.c":133:20 75 {*movsi_internal}
+                (const_int 64 [0x40])) [1 ss+0 S4 A32])) "kernel/fork.c":136:20 75 {*movsi_internal}
      (nil))
 (insn 110 109 111 4 (set (reg:SI 96 [ _14 ])
-        (zero_extend:SI (subreg:HI (reg:SI 255) 0))) "kernel/fork.c":133:20 144 {*zero_extendhisi2}
+        (zero_extend:SI (subreg:HI (reg:SI 255) 0))) "kernel/fork.c":136:20 144 {*zero_extendhisi2}
      (expr_list:REG_EQUAL (and:SI (mem/c:SI (plus:SI (reg/f:SI 16 argp)
                     (const_int 64 [0x40])) [1 ss+0 S4 A32])
             (const_int 65535 [0xffff]))
         (nil)))
 (insn 111 110 112 4 (set (reg/f:SI 256)
         (mem/f/c:SI (plus:SI (reg/f:SI 19 frame)
-                (const_int -8 [0xfffffffffffffff8])) [13 p+0 S4 A32])) "kernel/fork.c":133:15 75 {*movsi_internal}
+                (const_int -8 [0xfffffffffffffff8])) [13 p+0 S4 A32])) "kernel/fork.c":136:15 75 {*movsi_internal}
      (nil))
 (insn 112 111 113 4 (set (mem:SI (plus:SI (reg/f:SI 256)
                 (const_int 824 [0x338])) [1 p_134->tss.ss+0 S4 A32])
-        (reg:SI 96 [ _14 ])) "kernel/fork.c":133:15 75 {*movsi_internal}
+        (reg:SI 96 [ _14 ])) "kernel/fork.c":136:15 75 {*movsi_internal}
      (nil))
 (insn 113 112 114 4 (set (reg:SI 257)
         (mem/c:SI (plus:SI (reg/f:SI 16 argp)
-                (const_int 44 [0x2c])) [1 ds+0 S4 A32])) "kernel/fork.c":134:20 75 {*movsi_internal}
+                (const_int 44 [0x2c])) [1 ds+0 S4 A32])) "kernel/fork.c":137:20 75 {*movsi_internal}
      (nil))
 (insn 114 113 115 4 (set (reg:SI 97 [ _15 ])
-        (zero_extend:SI (subreg:HI (reg:SI 257) 0))) "kernel/fork.c":134:20 144 {*zero_extendhisi2}
+        (zero_extend:SI (subreg:HI (reg:SI 257) 0))) "kernel/fork.c":137:20 144 {*zero_extendhisi2}
      (expr_list:REG_EQUAL (and:SI (mem/c:SI (plus:SI (reg/f:SI 16 argp)
                     (const_int 44 [0x2c])) [1 ds+0 S4 A32])
             (const_int 65535 [0xffff]))
         (nil)))
 (insn 115 114 116 4 (set (reg/f:SI 258)
         (mem/f/c:SI (plus:SI (reg/f:SI 19 frame)
-                (const_int -8 [0xfffffffffffffff8])) [13 p+0 S4 A32])) "kernel/fork.c":134:15 75 {*movsi_internal}
+                (const_int -8 [0xfffffffffffffff8])) [13 p+0 S4 A32])) "kernel/fork.c":137:15 75 {*movsi_internal}
      (nil))
 (insn 116 115 117 4 (set (mem:SI (plus:SI (reg/f:SI 258)
                 (const_int 828 [0x33c])) [1 p_134->tss.ds+0 S4 A32])
-        (reg:SI 97 [ _15 ])) "kernel/fork.c":134:15 75 {*movsi_internal}
+        (reg:SI 97 [ _15 ])) "kernel/fork.c":137:15 75 {*movsi_internal}
      (nil))
 (insn 117 116 118 4 (set (reg:SI 259)
         (mem/c:SI (plus:SI (reg/f:SI 16 argp)
-                (const_int 36 [0x24])) [1 fs+0 S4 A32])) "kernel/fork.c":135:20 75 {*movsi_internal}
+                (const_int 36 [0x24])) [1 fs+0 S4 A32])) "kernel/fork.c":138:20 75 {*movsi_internal}
      (nil))
 (insn 118 117 119 4 (set (reg:SI 98 [ _16 ])
-        (zero_extend:SI (subreg:HI (reg:SI 259) 0))) "kernel/fork.c":135:20 144 {*zero_extendhisi2}
+        (zero_extend:SI (subreg:HI (reg:SI 259) 0))) "kernel/fork.c":138:20 144 {*zero_extendhisi2}
      (expr_list:REG_EQUAL (and:SI (mem/c:SI (plus:SI (reg/f:SI 16 argp)
                     (const_int 36 [0x24])) [1 fs+0 S4 A32])
             (const_int 65535 [0xffff]))
         (nil)))
 (insn 119 118 120 4 (set (reg/f:SI 260)
         (mem/f/c:SI (plus:SI (reg/f:SI 19 frame)
-                (const_int -8 [0xfffffffffffffff8])) [13 p+0 S4 A32])) "kernel/fork.c":135:15 75 {*movsi_internal}
+                (const_int -8 [0xfffffffffffffff8])) [13 p+0 S4 A32])) "kernel/fork.c":138:15 75 {*movsi_internal}
      (nil))
 (insn 120 119 121 4 (set (mem:SI (plus:SI (reg/f:SI 260)
                 (const_int 832 [0x340])) [1 p_134->tss.fs+0 S4 A32])
-        (reg:SI 98 [ _16 ])) "kernel/fork.c":135:15 75 {*movsi_internal}
+        (reg:SI 98 [ _16 ])) "kernel/fork.c":138:15 75 {*movsi_internal}
      (nil))
 (insn 121 120 122 4 (set (reg:SI 261)
         (mem/c:SI (plus:SI (reg/f:SI 16 argp)
-                (const_int 16 [0x10])) [1 gs+0 S4 A32])) "kernel/fork.c":136:20 75 {*movsi_internal}
+                (const_int 16 [0x10])) [1 gs+0 S4 A32])) "kernel/fork.c":139:20 75 {*movsi_internal}
      (nil))
 (insn 122 121 123 4 (set (reg:SI 99 [ _17 ])
-        (zero_extend:SI (subreg:HI (reg:SI 261) 0))) "kernel/fork.c":136:20 144 {*zero_extendhisi2}
+        (zero_extend:SI (subreg:HI (reg:SI 261) 0))) "kernel/fork.c":139:20 144 {*zero_extendhisi2}
      (expr_list:REG_EQUAL (and:SI (mem/c:SI (plus:SI (reg/f:SI 16 argp)
                     (const_int 16 [0x10])) [1 gs+0 S4 A32])
             (const_int 65535 [0xffff]))
         (nil)))
 (insn 123 122 124 4 (set (reg/f:SI 262)
         (mem/f/c:SI (plus:SI (reg/f:SI 19 frame)
-                (const_int -8 [0xfffffffffffffff8])) [13 p+0 S4 A32])) "kernel/fork.c":136:15 75 {*movsi_internal}
+                (const_int -8 [0xfffffffffffffff8])) [13 p+0 S4 A32])) "kernel/fork.c":139:15 75 {*movsi_internal}
      (nil))
 (insn 124 123 125 4 (set (mem:SI (plus:SI (reg/f:SI 262)
                 (const_int 836 [0x344])) [1 p_134->tss.gs+0 S4 A32])
-        (reg:SI 99 [ _17 ])) "kernel/fork.c":136:15 75 {*movsi_internal}
+        (reg:SI 99 [ _17 ])) "kernel/fork.c":139:15 75 {*movsi_internal}
      (nil))
 (insn 125 124 126 4 (set (reg:SI 100 [ nr.13_18 ])
-        (mem/c:SI (reg/f:SI 16 argp) [5 nr+0 S4 A32])) "kernel/fork.c":137:18 75 {*movsi_internal}
+        (mem/c:SI (reg/f:SI 16 argp) [5 nr+0 S4 A32])) "kernel/fork.c":140:18 75 {*movsi_internal}
      (nil))
 (insn 126 125 127 4 (parallel [
             (set (reg:SI 101 [ _19 ])
                 (ashift:SI (reg:SI 100 [ nr.13_18 ])
                     (const_int 4 [0x4])))
             (clobber (reg:CC 17 flags))
-        ]) "kernel/fork.c":137:18 655 {*ashlsi3_1}
+        ]) "kernel/fork.c":140:18 655 {*ashlsi3_1}
      (nil))
 (insn 127 126 128 4 (parallel [
             (set (reg:SI 102 [ _20 ])
                 (plus:SI (reg:SI 101 [ _19 ])
                     (const_int 40 [0x28])))
             (clobber (reg:CC 17 flags))
-        ]) "kernel/fork.c":137:18 209 {*addsi_1}
+        ]) "kernel/fork.c":140:18 209 {*addsi_1}
      (nil))
 (insn 128 127 129 4 (set (reg:SI 103 [ _21 ])
-        (reg:SI 102 [ _20 ])) "kernel/fork.c":137:18 75 {*movsi_internal}
+        (reg:SI 102 [ _20 ])) "kernel/fork.c":140:18 75 {*movsi_internal}
      (nil))
 (insn 129 128 130 4 (set (reg/f:SI 263)
         (mem/f/c:SI (plus:SI (reg/f:SI 19 frame)
-                (const_int -8 [0xfffffffffffffff8])) [13 p+0 S4 A32])) "kernel/fork.c":137:16 75 {*movsi_internal}
+                (const_int -8 [0xfffffffffffffff8])) [13 p+0 S4 A32])) "kernel/fork.c":140:16 75 {*movsi_internal}
      (nil))
 (insn 130 129 131 4 (set (mem:SI (plus:SI (reg/f:SI 263)
                 (const_int 840 [0x348])) [1 p_134->tss.ldt+0 S4 A32])
-        (reg:SI 103 [ _21 ])) "kernel/fork.c":137:16 75 {*movsi_internal}
+        (reg:SI 103 [ _21 ])) "kernel/fork.c":140:16 75 {*movsi_internal}
      (nil))
 (insn 131 130 132 4 (set (reg/f:SI 264)
         (mem/f/c:SI (plus:SI (reg/f:SI 19 frame)
-                (const_int -8 [0xfffffffffffffff8])) [13 p+0 S4 A32])) "kernel/fork.c":138:25 75 {*movsi_internal}
+                (const_int -8 [0xfffffffffffffff8])) [13 p+0 S4 A32])) "kernel/fork.c":141:25 75 {*movsi_internal}
      (nil))
 (insn 132 131 133 4 (set (mem:SI (plus:SI (reg/f:SI 264)
                 (const_int 844 [0x34c])) [1 p_134->tss.trace_bitmap+0 S4 A32])
-        (const_int -2147483648 [0xffffffff80000000])) "kernel/fork.c":138:25 75 {*movsi_internal}
+        (const_int -2147483648 [0xffffffff80000000])) "kernel/fork.c":141:25 75 {*movsi_internal}
      (nil))
 (insn 133 132 134 4 (set (reg/f:SI 265)
         (mem/u/c:SI (plus:SI (reg:SI 82)
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("last_task_used_math") [flags 0x40]  <var_decl 0x77287f72e240 last_task_used_math>)
-                        ] UNSPEC_GOT))) [18  S4 A8])) "kernel/fork.c":139:29 75 {*movsi_internal}
+                            (symbol_ref:SI ("last_task_used_math") [flags 0x40]  <var_decl 0x77e52d72e240 last_task_used_math>)
+                        ] UNSPEC_GOT))) [18  S4 A8])) "kernel/fork.c":142:29 75 {*movsi_internal}
      (nil))
 (insn 134 133 135 4 (set (reg/f:SI 104 [ last_task_used_math.14_22 ])
-        (mem/f/c:SI (reg/f:SI 265) [13 last_task_used_math+0 S4 A32])) "kernel/fork.c":139:29 75 {*movsi_internal}
+        (mem/f/c:SI (reg/f:SI 265) [13 last_task_used_math+0 S4 A32])) "kernel/fork.c":142:29 75 {*movsi_internal}
      (nil))
 (insn 135 134 136 4 (set (reg/f:SI 266)
         (mem/u/c:SI (plus:SI (reg:SI 82)
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("current") [flags 0x40]  <var_decl 0x77287f72e120 current>)
-                        ] UNSPEC_GOT))) [18  S4 A8])) "kernel/fork.c":139:29 75 {*movsi_internal}
+                            (symbol_ref:SI ("current") [flags 0x40]  <var_decl 0x77e52d72e120 current>)
+                        ] UNSPEC_GOT))) [18  S4 A8])) "kernel/fork.c":142:29 75 {*movsi_internal}
      (nil))
 (insn 136 135 137 4 (set (reg/f:SI 105 [ current.15_23 ])
-        (mem/f/c:SI (reg/f:SI 266) [13 current+0 S4 A32])) "kernel/fork.c":139:29 75 {*movsi_internal}
+        (mem/f/c:SI (reg/f:SI 266) [13 current+0 S4 A32])) "kernel/fork.c":142:29 75 {*movsi_internal}
      (nil))
 (insn 137 136 138 4 (set (reg:CCZ 17 flags)
         (compare:CCZ (reg/f:SI 104 [ last_task_used_math.14_22 ])
-            (reg/f:SI 105 [ current.15_23 ]))) "kernel/fork.c":139:8 11 {*cmpsi_1}
+            (reg/f:SI 105 [ current.15_23 ]))) "kernel/fork.c":142:8 11 {*cmpsi_1}
      (nil))
 (jump_insn 138 137 139 4 (set (pc)
         (if_then_else (ne (reg:CCZ 17 flags)
                 (const_int 0 [0]))
             (label_ref 142)
-            (pc))) "kernel/fork.c":139:8 806 {*jcc}
+            (pc))) "kernel/fork.c":142:8 806 {*jcc}
      (nil)
  -> 142)
 (note 139 138 140 5 [bb 5] NOTE_INSN_BASIC_BLOCK)
 (insn 140 139 141 5 (set (reg/f:SI 267)
         (mem/f/c:SI (plus:SI (reg/f:SI 19 frame)
-                (const_int -8 [0xfffffffffffffff8])) [13 p+0 S4 A32])) "kernel/fork.c":140:9 75 {*movsi_internal}
+                (const_int -8 [0xfffffffffffffff8])) [13 p+0 S4 A32])) "kernel/fork.c":143:9 75 {*movsi_internal}
      (nil))
 (insn 141 140 142 5 (parallel [
             (asm_operands/v ("clts ; fnsave %0") ("") 0 [
@@ -1651,11 +1651,11 @@
                             (const_int 848 [0x350])) [12 p_134->tss.i387+0 S108 A32])
                 ]
                  [
-                    (asm_input:BLK ("m") kernel/fork.c:140)
+                    (asm_input:BLK ("m") kernel/fork.c:143)
                 ]
-                 [] kernel/fork.c:140)
+                 [] kernel/fork.c:143)
             (clobber (reg:CC 17 flags))
-        ]) "kernel/fork.c":140:9 -1
+        ]) "kernel/fork.c":143:9 -1
      (nil))
 (code_label 142 141 143 6 24 (nil) [1 uses])
 (note 143 142 144 6 [bb 6] NOTE_INSN_BASIC_BLOCK)
@@ -1664,21 +1664,21 @@
                 (plus:SI (reg/f:SI 7 sp)
                     (const_int -8 [0xfffffffffffffff8])))
             (clobber (reg:CC 17 flags))
-        ]) "kernel/fork.c":141:9 209 {*addsi_1}
+        ]) "kernel/fork.c":144:9 209 {*addsi_1}
      (expr_list:REG_ARGS_SIZE (const_int 8 [0x8])
         (nil)))
 (insn 145 144 146 6 (set (mem/f:SI (pre_dec:SI (reg/f:SI 7 sp)) [13  S4 A32])
         (mem/f/c:SI (plus:SI (reg/f:SI 19 frame)
-                (const_int -8 [0xfffffffffffffff8])) [13 p+0 S4 A32])) "kernel/fork.c":141:9 54 {*pushsi2}
+                (const_int -8 [0xfffffffffffffff8])) [13 p+0 S4 A32])) "kernel/fork.c":144:9 54 {*pushsi2}
      (expr_list:REG_ARGS_SIZE (const_int 12 [0xc])
         (nil)))
 (insn 146 145 147 6 (set (mem:SI (pre_dec:SI (reg/f:SI 7 sp)) [5  S4 A32])
-        (mem/c:SI (reg/f:SI 16 argp) [5 nr+0 S4 A32])) "kernel/fork.c":141:9 54 {*pushsi2}
+        (mem/c:SI (reg/f:SI 16 argp) [5 nr+0 S4 A32])) "kernel/fork.c":144:9 54 {*pushsi2}
      (expr_list:REG_ARGS_SIZE (const_int 16 [0x10])
         (nil)))
 (call_insn 147 146 148 6 (set (reg:SI 0 ax)
-        (call (mem:QI (symbol_ref:SI ("copy_mem") [flags 0x3]  <function_decl 0x77287f740400 copy_mem>) [0 copy_mem S1 A8])
-            (const_int 16 [0x10]))) "kernel/fork.c":141:9 823 {*call_value}
+        (call (mem:QI (symbol_ref:SI ("copy_mem") [flags 0x3]  <function_decl 0x77e52d740400 copy_mem>) [0 copy_mem S1 A8])
+            (const_int 16 [0x10]))) "kernel/fork.c":144:9 823 {*call_value}
      (nil)
     (nil))
 (insn 148 147 149 6 (parallel [
@@ -1686,59 +1686,59 @@
                 (plus:SI (reg/f:SI 7 sp)
                     (const_int 16 [0x10])))
             (clobber (reg:CC 17 flags))
-        ]) "kernel/fork.c":141:9 209 {*addsi_1}
+        ]) "kernel/fork.c":144:9 209 {*addsi_1}
      (expr_list:REG_ARGS_SIZE (const_int 0 [0])
         (nil)))
 (insn 149 148 150 6 (set (reg:SI 106 [ _24 ])
-        (reg:SI 0 ax)) "kernel/fork.c":141:9 75 {*movsi_internal}
+        (reg:SI 0 ax)) "kernel/fork.c":144:9 75 {*movsi_internal}
      (nil))
 (insn 150 149 151 6 (set (reg:CCZ 17 flags)
         (compare:CCZ (reg:SI 106 [ _24 ])
-            (const_int 0 [0]))) "kernel/fork.c":141:8 7 {*cmpsi_ccno_1}
+            (const_int 0 [0]))) "kernel/fork.c":144:8 7 {*cmpsi_ccno_1}
      (nil))
 (jump_insn 151 150 152 6 (set (pc)
         (if_then_else (eq (reg:CCZ 17 flags)
                 (const_int 0 [0]))
             (label_ref 165)
-            (pc))) "kernel/fork.c":141:8 806 {*jcc}
+            (pc))) "kernel/fork.c":144:8 806 {*jcc}
      (nil)
  -> 165)
 (note 152 151 153 7 [bb 7] NOTE_INSN_BASIC_BLOCK)
 (insn 153 152 154 7 (set (reg/f:SI 268)
         (mem/u/c:SI (plus:SI (reg:SI 82)
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("task") [flags 0x40]  <var_decl 0x77287f72e1b0 task>)
-                        ] UNSPEC_GOT))) [18  S4 A8])) "kernel/fork.c":142:18 75 {*movsi_internal}
+                            (symbol_ref:SI ("task") [flags 0x40]  <var_decl 0x77e52d72e1b0 task>)
+                        ] UNSPEC_GOT))) [18  S4 A8])) "kernel/fork.c":145:18 75 {*movsi_internal}
      (nil))
 (insn 154 153 155 7 (set (reg:SI 269)
-        (mem/c:SI (reg/f:SI 16 argp) [5 nr+0 S4 A32])) "kernel/fork.c":142:18 75 {*movsi_internal}
+        (mem/c:SI (reg/f:SI 16 argp) [5 nr+0 S4 A32])) "kernel/fork.c":145:18 75 {*movsi_internal}
      (nil))
 (insn 155 154 156 7 (set (mem/f:SI (plus:SI (mult:SI (reg:SI 269)
                     (const_int 4 [0x4]))
                 (reg/f:SI 268)) [13 task[nr_135(D)]+0 S4 A32])
-        (const_int 0 [0])) "kernel/fork.c":142:18 75 {*movsi_internal}
+        (const_int 0 [0])) "kernel/fork.c":145:18 75 {*movsi_internal}
      (nil))
 (insn 156 155 157 7 (set (reg:SI 107 [ p.16_25 ])
         (mem/f/c:SI (plus:SI (reg/f:SI 19 frame)
-                (const_int -8 [0xfffffffffffffff8])) [13 p+0 S4 A32])) "kernel/fork.c":143:9 75 {*movsi_internal}
+                (const_int -8 [0xfffffffffffffff8])) [13 p+0 S4 A32])) "kernel/fork.c":146:9 75 {*movsi_internal}
      (nil))
 (insn 157 156 158 7 (parallel [
             (set (reg/f:SI 7 sp)
                 (plus:SI (reg/f:SI 7 sp)
                     (const_int -12 [0xfffffffffffffff4])))
             (clobber (reg:CC 17 flags))
-        ]) "kernel/fork.c":143:9 209 {*addsi_1}
+        ]) "kernel/fork.c":146:9 209 {*addsi_1}
      (expr_list:REG_ARGS_SIZE (const_int 12 [0xc])
         (nil)))
 (insn 158 157 159 7 (set (mem:SI (pre_dec:SI (reg/f:SI 7 sp)) [1  S4 A32])
-        (reg:SI 107 [ p.16_25 ])) "kernel/fork.c":143:9 54 {*pushsi2}
+        (reg:SI 107 [ p.16_25 ])) "kernel/fork.c":146:9 54 {*pushsi2}
      (expr_list:REG_ARGS_SIZE (const_int 16 [0x10])
         (nil)))
 (insn 159 158 160 7 (set (reg:SI 3 bx)
-        (reg:SI 82)) "kernel/fork.c":143:9 75 {*movsi_internal}
+        (reg:SI 82)) "kernel/fork.c":146:9 75 {*movsi_internal}
      (nil))
-(call_insn 160 159 161 7 (call (mem:QI (symbol_ref:SI ("free_page") [flags 0x41]  <function_decl 0x77287f738800 free_page>) [0 free_page S1 A8])
-        (const_int 16 [0x10])) "kernel/fork.c":143:9 812 {*call}
+(call_insn 160 159 161 7 (call (mem:QI (symbol_ref:SI ("free_page") [flags 0x41]  <function_decl 0x77e52d738800 free_page>) [0 free_page S1 A8])
+        (const_int 16 [0x10])) "kernel/fork.c":146:9 812 {*call}
      (nil)
     (expr_list (use (reg:SI 3 bx))
         (nil)))
@@ -1747,36 +1747,36 @@
                 (plus:SI (reg/f:SI 7 sp)
                     (const_int 16 [0x10])))
             (clobber (reg:CC 17 flags))
-        ]) "kernel/fork.c":143:9 209 {*addsi_1}
+        ]) "kernel/fork.c":146:9 209 {*addsi_1}
      (expr_list:REG_ARGS_SIZE (const_int 0 [0])
         (nil)))
 (insn 162 161 165 7 (set (reg:SI 202 [ _125 ])
-        (const_int -11 [0xfffffffffffffff5])) "kernel/fork.c":144:16 75 {*movsi_internal}
+        (const_int -11 [0xfffffffffffffff5])) "kernel/fork.c":147:16 75 {*movsi_internal}
      (nil))
       ; pc falls through to BB 20
 (code_label 165 162 166 8 25 (nil) [1 uses])
 (note 166 165 167 8 [bb 8] NOTE_INSN_BASIC_BLOCK)
 (insn 167 166 189 8 (set (mem/c:SI (plus:SI (reg/f:SI 19 frame)
                 (const_int -4 [0xfffffffffffffffc])) [5 i+0 S4 A32])
-        (const_int 0 [0])) "kernel/fork.c":146:12 75 {*movsi_internal}
+        (const_int 0 [0])) "kernel/fork.c":149:12 75 {*movsi_internal}
      (nil))
       ; pc falls through to BB 12
 (code_label 189 167 170 9 28 (nil) [1 uses])
 (note 170 189 171 9 [bb 9] NOTE_INSN_BASIC_BLOCK)
 (insn 171 170 172 9 (set (reg/f:SI 270)
         (mem/f/c:SI (plus:SI (reg/f:SI 19 frame)
-                (const_int -8 [0xfffffffffffffff8])) [13 p+0 S4 A32])) "kernel/fork.c":147:16 75 {*movsi_internal}
+                (const_int -8 [0xfffffffffffffff8])) [13 p+0 S4 A32])) "kernel/fork.c":150:16 75 {*movsi_internal}
      (nil))
 (insn 172 171 173 9 (set (reg:SI 272)
         (mem/c:SI (plus:SI (reg/f:SI 19 frame)
-                (const_int -4 [0xfffffffffffffffc])) [5 i+0 S4 A32])) "kernel/fork.c":147:16 75 {*movsi_internal}
+                (const_int -4 [0xfffffffffffffffc])) [5 i+0 S4 A32])) "kernel/fork.c":150:16 75 {*movsi_internal}
      (nil))
 (insn 173 172 174 9 (parallel [
             (set (reg:SI 271)
                 (plus:SI (reg:SI 272)
                     (const_int 160 [0xa0])))
             (clobber (reg:CC 17 flags))
-        ]) "kernel/fork.c":147:16 209 {*addsi_1}
+        ]) "kernel/fork.c":150:16 209 {*addsi_1}
      (expr_list:REG_EQUAL (plus:SI (mem/c:SI (plus:SI (reg/f:SI 19 frame)
                     (const_int -4 [0xfffffffffffffffc])) [5 i+0 S4 A32])
             (const_int 160 [0xa0]))
@@ -1784,47 +1784,47 @@
 (insn 174 173 175 9 (set (reg/f:SI 273)
         (mem/f:SI (plus:SI (mult:SI (reg:SI 271)
                     (const_int 4 [0x4]))
-                (reg/f:SI 270)) [9 p_134->filp[i_124]+0 S4 A32])) "kernel/fork.c":147:16 75 {*movsi_internal}
+                (reg/f:SI 270)) [9 p_134->filp[i_124]+0 S4 A32])) "kernel/fork.c":150:16 75 {*movsi_internal}
      (nil))
 (insn 175 174 176 9 (set (mem/f/c:SI (plus:SI (reg/f:SI 19 frame)
                 (const_int -12 [0xfffffffffffffff4])) [9 f+0 S4 A32])
-        (reg/f:SI 273)) "kernel/fork.c":147:16 75 {*movsi_internal}
+        (reg/f:SI 273)) "kernel/fork.c":150:16 75 {*movsi_internal}
      (nil))
 (insn 176 175 177 9 (set (reg:CCZ 17 flags)
         (compare:CCZ (mem/f/c:SI (plus:SI (reg/f:SI 19 frame)
                     (const_int -12 [0xfffffffffffffff4])) [9 f+0 S4 A32])
-            (const_int 0 [0]))) "kernel/fork.c":147:12 7 {*cmpsi_ccno_1}
+            (const_int 0 [0]))) "kernel/fork.c":150:12 7 {*cmpsi_ccno_1}
      (nil))
 (jump_insn 177 176 178 9 (set (pc)
         (if_then_else (eq (reg:CCZ 17 flags)
                 (const_int 0 [0]))
             (label_ref 184)
-            (pc))) "kernel/fork.c":147:12 806 {*jcc}
+            (pc))) "kernel/fork.c":150:12 806 {*jcc}
      (nil)
  -> 184)
 (note 178 177 179 10 [bb 10] NOTE_INSN_BASIC_BLOCK)
 (insn 179 178 180 10 (set (reg/f:SI 274)
         (mem/f/c:SI (plus:SI (reg/f:SI 19 frame)
-                (const_int -12 [0xfffffffffffffff4])) [9 f+0 S4 A32])) "kernel/fork.c":148:14 75 {*movsi_internal}
+                (const_int -12 [0xfffffffffffffff4])) [9 f+0 S4 A32])) "kernel/fork.c":151:14 75 {*movsi_internal}
      (nil))
 (insn 180 179 181 10 (set (reg:HI 108 [ _26 ])
         (mem:HI (plus:SI (reg/f:SI 274)
-                (const_int 4 [0x4])) [7 f_193->f_count+0 S2 A32])) "kernel/fork.c":148:14 76 {*movhi_internal}
+                (const_int 4 [0x4])) [7 f_193->f_count+0 S2 A32])) "kernel/fork.c":151:14 76 {*movhi_internal}
      (nil))
 (insn 181 180 182 10 (parallel [
             (set (reg:HI 109 [ _28 ])
                 (plus:HI (reg:HI 108 [ _26 ])
                     (const_int 1 [0x1])))
             (clobber (reg:CC 17 flags))
-        ]) "kernel/fork.c":148:23 212 {*addhi_1}
+        ]) "kernel/fork.c":151:23 212 {*addhi_1}
      (nil))
 (insn 182 181 183 10 (set (reg/f:SI 275)
         (mem/f/c:SI (plus:SI (reg/f:SI 19 frame)
-                (const_int -12 [0xfffffffffffffff4])) [9 f+0 S4 A32])) "kernel/fork.c":148:23 75 {*movsi_internal}
+                (const_int -12 [0xfffffffffffffff4])) [9 f+0 S4 A32])) "kernel/fork.c":151:23 75 {*movsi_internal}
      (nil))
 (insn 183 182 184 10 (set (mem:HI (plus:SI (reg/f:SI 275)
                 (const_int 4 [0x4])) [7 f_193->f_count+0 S2 A32])
-        (reg:HI 109 [ _28 ])) "kernel/fork.c":148:23 76 {*movhi_internal}
+        (reg:HI 109 [ _28 ])) "kernel/fork.c":151:23 76 {*movhi_internal}
      (nil))
 (code_label 184 183 185 11 27 (nil) [1 uses])
 (note 185 184 186 11 [bb 11] NOTE_INSN_BASIC_BLOCK)
@@ -1835,515 +1835,515 @@
                             (const_int -4 [0xfffffffffffffffc])) [5 i+0 S4 A32])
                     (const_int 1 [0x1])))
             (clobber (reg:CC 17 flags))
-        ]) "kernel/fork.c":146:31 209 {*addsi_1}
+        ]) "kernel/fork.c":149:31 209 {*addsi_1}
      (nil))
 (code_label 187 186 188 12 26 (nil) [0 uses])
 (note 188 187 192 12 [bb 12] NOTE_INSN_BASIC_BLOCK)
 (insn 192 188 193 12 (set (reg:CCGC 17 flags)
         (compare:CCGC (mem/c:SI (plus:SI (reg/f:SI 19 frame)
                     (const_int -4 [0xfffffffffffffffc])) [5 i+0 S4 A32])
-            (const_int 19 [0x13]))) "kernel/fork.c":146:19 11 {*cmpsi_1}
+            (const_int 19 [0x13]))) "kernel/fork.c":149:19 11 {*cmpsi_1}
      (nil))
 (jump_insn 193 192 194 12 (set (pc)
         (if_then_else (le (reg:CCGC 17 flags)
                 (const_int 0 [0]))
             (label_ref 189)
-            (pc))) "kernel/fork.c":146:19 806 {*jcc}
+            (pc))) "kernel/fork.c":149:19 806 {*jcc}
      (nil)
  -> 189)
 (note 194 193 195 13 [bb 13] NOTE_INSN_BASIC_BLOCK)
 (insn 195 194 196 13 (set (reg/f:SI 276)
         (mem/u/c:SI (plus:SI (reg:SI 82)
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("current") [flags 0x40]  <var_decl 0x77287f72e120 current>)
-                        ] UNSPEC_GOT))) [18  S4 A8])) "kernel/fork.c":149:16 75 {*movsi_internal}
+                            (symbol_ref:SI ("current") [flags 0x40]  <var_decl 0x77e52d72e120 current>)
+                        ] UNSPEC_GOT))) [18  S4 A8])) "kernel/fork.c":152:16 75 {*movsi_internal}
      (nil))
 (insn 196 195 197 13 (set (reg/f:SI 110 [ current.17_29 ])
-        (mem/f/c:SI (reg/f:SI 276) [13 current+0 S4 A32])) "kernel/fork.c":149:16 75 {*movsi_internal}
+        (mem/f/c:SI (reg/f:SI 276) [13 current+0 S4 A32])) "kernel/fork.c":152:16 75 {*movsi_internal}
      (nil))
 (insn 197 196 198 13 (set (reg/f:SI 111 [ _30 ])
         (mem/f:SI (plus:SI (reg/f:SI 110 [ current.17_29 ])
-                (const_int 624 [0x270])) [8 current.17_29->pwd+0 S4 A32])) "kernel/fork.c":149:16 75 {*movsi_internal}
+                (const_int 624 [0x270])) [8 current.17_29->pwd+0 S4 A32])) "kernel/fork.c":152:16 75 {*movsi_internal}
      (nil))
 (insn 198 197 199 13 (set (reg:CCZ 17 flags)
         (compare:CCZ (reg/f:SI 111 [ _30 ])
-            (const_int 0 [0]))) "kernel/fork.c":149:8 7 {*cmpsi_ccno_1}
+            (const_int 0 [0]))) "kernel/fork.c":152:8 7 {*cmpsi_ccno_1}
      (nil))
 (jump_insn 199 198 200 13 (set (pc)
         (if_then_else (eq (reg:CCZ 17 flags)
                 (const_int 0 [0]))
             (label_ref 207)
-            (pc))) "kernel/fork.c":149:8 806 {*jcc}
+            (pc))) "kernel/fork.c":152:8 806 {*jcc}
      (nil)
  -> 207)
 (note 200 199 201 14 [bb 14] NOTE_INSN_BASIC_BLOCK)
 (insn 201 200 202 14 (set (reg/f:SI 277)
         (mem/u/c:SI (plus:SI (reg:SI 82)
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("current") [flags 0x40]  <var_decl 0x77287f72e120 current>)
-                        ] UNSPEC_GOT))) [18  S4 A8])) "kernel/fork.c":150:16 75 {*movsi_internal}
+                            (symbol_ref:SI ("current") [flags 0x40]  <var_decl 0x77e52d72e120 current>)
+                        ] UNSPEC_GOT))) [18  S4 A8])) "kernel/fork.c":153:16 75 {*movsi_internal}
      (nil))
 (insn 202 201 203 14 (set (reg/f:SI 112 [ current.18_31 ])
-        (mem/f/c:SI (reg/f:SI 277) [13 current+0 S4 A32])) "kernel/fork.c":150:16 75 {*movsi_internal}
+        (mem/f/c:SI (reg/f:SI 277) [13 current+0 S4 A32])) "kernel/fork.c":153:16 75 {*movsi_internal}
      (nil))
 (insn 203 202 204 14 (set (reg/f:SI 113 [ _32 ])
         (mem/f:SI (plus:SI (reg/f:SI 112 [ current.18_31 ])
-                (const_int 624 [0x270])) [8 current.18_31->pwd+0 S4 A32])) "kernel/fork.c":150:16 75 {*movsi_internal}
+                (const_int 624 [0x270])) [8 current.18_31->pwd+0 S4 A32])) "kernel/fork.c":153:16 75 {*movsi_internal}
      (nil))
 (insn 204 203 205 14 (set (reg:HI 114 [ _33 ])
         (mem:HI (plus:SI (reg/f:SI 113 [ _32 ])
-                (const_int 48 [0x30])) [7 _32->i_count+0 S2 A32])) "kernel/fork.c":150:21 76 {*movhi_internal}
+                (const_int 48 [0x30])) [7 _32->i_count+0 S2 A32])) "kernel/fork.c":153:21 76 {*movhi_internal}
      (nil))
 (insn 205 204 206 14 (parallel [
             (set (reg:HI 115 [ _35 ])
                 (plus:HI (reg:HI 114 [ _33 ])
                     (const_int 1 [0x1])))
             (clobber (reg:CC 17 flags))
-        ]) "kernel/fork.c":150:30 212 {*addhi_1}
+        ]) "kernel/fork.c":153:30 212 {*addhi_1}
      (nil))
 (insn 206 205 207 14 (set (mem:HI (plus:SI (reg/f:SI 113 [ _32 ])
                 (const_int 48 [0x30])) [7 _32->i_count+0 S2 A32])
-        (reg:HI 115 [ _35 ])) "kernel/fork.c":150:30 76 {*movhi_internal}
+        (reg:HI 115 [ _35 ])) "kernel/fork.c":153:30 76 {*movhi_internal}
      (nil))
 (code_label 207 206 208 15 29 (nil) [1 uses])
 (note 208 207 209 15 [bb 15] NOTE_INSN_BASIC_BLOCK)
 (insn 209 208 210 15 (set (reg/f:SI 278)
         (mem/u/c:SI (plus:SI (reg:SI 82)
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("current") [flags 0x40]  <var_decl 0x77287f72e120 current>)
-                        ] UNSPEC_GOT))) [18  S4 A8])) "kernel/fork.c":151:16 75 {*movsi_internal}
+                            (symbol_ref:SI ("current") [flags 0x40]  <var_decl 0x77e52d72e120 current>)
+                        ] UNSPEC_GOT))) [18  S4 A8])) "kernel/fork.c":154:16 75 {*movsi_internal}
      (nil))
 (insn 210 209 211 15 (set (reg/f:SI 116 [ current.19_36 ])
-        (mem/f/c:SI (reg/f:SI 278) [13 current+0 S4 A32])) "kernel/fork.c":151:16 75 {*movsi_internal}
+        (mem/f/c:SI (reg/f:SI 278) [13 current+0 S4 A32])) "kernel/fork.c":154:16 75 {*movsi_internal}
      (nil))
 (insn 211 210 212 15 (set (reg/f:SI 117 [ _37 ])
         (mem/f:SI (plus:SI (reg/f:SI 116 [ current.19_36 ])
-                (const_int 628 [0x274])) [8 current.19_36->root+0 S4 A32])) "kernel/fork.c":151:16 75 {*movsi_internal}
+                (const_int 628 [0x274])) [8 current.19_36->root+0 S4 A32])) "kernel/fork.c":154:16 75 {*movsi_internal}
      (nil))
 (insn 212 211 213 15 (set (reg:CCZ 17 flags)
         (compare:CCZ (reg/f:SI 117 [ _37 ])
-            (const_int 0 [0]))) "kernel/fork.c":151:8 7 {*cmpsi_ccno_1}
+            (const_int 0 [0]))) "kernel/fork.c":154:8 7 {*cmpsi_ccno_1}
      (nil))
 (jump_insn 213 212 214 15 (set (pc)
         (if_then_else (eq (reg:CCZ 17 flags)
                 (const_int 0 [0]))
             (label_ref 221)
-            (pc))) "kernel/fork.c":151:8 806 {*jcc}
+            (pc))) "kernel/fork.c":154:8 806 {*jcc}
      (nil)
  -> 221)
 (note 214 213 215 16 [bb 16] NOTE_INSN_BASIC_BLOCK)
 (insn 215 214 216 16 (set (reg/f:SI 279)
         (mem/u/c:SI (plus:SI (reg:SI 82)
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("current") [flags 0x40]  <var_decl 0x77287f72e120 current>)
-                        ] UNSPEC_GOT))) [18  S4 A8])) "kernel/fork.c":152:16 75 {*movsi_internal}
+                            (symbol_ref:SI ("current") [flags 0x40]  <var_decl 0x77e52d72e120 current>)
+                        ] UNSPEC_GOT))) [18  S4 A8])) "kernel/fork.c":155:16 75 {*movsi_internal}
      (nil))
 (insn 216 215 217 16 (set (reg/f:SI 118 [ current.20_38 ])
-        (mem/f/c:SI (reg/f:SI 279) [13 current+0 S4 A32])) "kernel/fork.c":152:16 75 {*movsi_internal}
+        (mem/f/c:SI (reg/f:SI 279) [13 current+0 S4 A32])) "kernel/fork.c":155:16 75 {*movsi_internal}
      (nil))
 (insn 217 216 218 16 (set (reg/f:SI 119 [ _39 ])
         (mem/f:SI (plus:SI (reg/f:SI 118 [ current.20_38 ])
-                (const_int 628 [0x274])) [8 current.20_38->root+0 S4 A32])) "kernel/fork.c":152:16 75 {*movsi_internal}
+                (const_int 628 [0x274])) [8 current.20_38->root+0 S4 A32])) "kernel/fork.c":155:16 75 {*movsi_internal}
      (nil))
 (insn 218 217 219 16 (set (reg:HI 120 [ _40 ])
         (mem:HI (plus:SI (reg/f:SI 119 [ _39 ])
-                (const_int 48 [0x30])) [7 _39->i_count+0 S2 A32])) "kernel/fork.c":152:22 76 {*movhi_internal}
+                (const_int 48 [0x30])) [7 _39->i_count+0 S2 A32])) "kernel/fork.c":155:22 76 {*movhi_internal}
      (nil))
 (insn 219 218 220 16 (parallel [
             (set (reg:HI 121 [ _42 ])
                 (plus:HI (reg:HI 120 [ _40 ])
                     (const_int 1 [0x1])))
             (clobber (reg:CC 17 flags))
-        ]) "kernel/fork.c":152:31 212 {*addhi_1}
+        ]) "kernel/fork.c":155:31 212 {*addhi_1}
      (nil))
 (insn 220 219 221 16 (set (mem:HI (plus:SI (reg/f:SI 119 [ _39 ])
                 (const_int 48 [0x30])) [7 _39->i_count+0 S2 A32])
-        (reg:HI 121 [ _42 ])) "kernel/fork.c":152:31 76 {*movhi_internal}
+        (reg:HI 121 [ _42 ])) "kernel/fork.c":155:31 76 {*movhi_internal}
      (nil))
 (code_label 221 220 222 17 30 (nil) [1 uses])
 (note 222 221 223 17 [bb 17] NOTE_INSN_BASIC_BLOCK)
 (insn 223 222 224 17 (set (reg/f:SI 280)
         (mem/u/c:SI (plus:SI (reg:SI 82)
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("current") [flags 0x40]  <var_decl 0x77287f72e120 current>)
-                        ] UNSPEC_GOT))) [18  S4 A8])) "kernel/fork.c":153:16 75 {*movsi_internal}
+                            (symbol_ref:SI ("current") [flags 0x40]  <var_decl 0x77e52d72e120 current>)
+                        ] UNSPEC_GOT))) [18  S4 A8])) "kernel/fork.c":156:16 75 {*movsi_internal}
      (nil))
 (insn 224 223 225 17 (set (reg/f:SI 122 [ current.21_43 ])
-        (mem/f/c:SI (reg/f:SI 280) [13 current+0 S4 A32])) "kernel/fork.c":153:16 75 {*movsi_internal}
+        (mem/f/c:SI (reg/f:SI 280) [13 current+0 S4 A32])) "kernel/fork.c":156:16 75 {*movsi_internal}
      (nil))
 (insn 225 224 226 17 (set (reg/f:SI 123 [ _44 ])
         (mem/f:SI (plus:SI (reg/f:SI 122 [ current.21_43 ])
-                (const_int 632 [0x278])) [8 current.21_43->executable+0 S4 A32])) "kernel/fork.c":153:16 75 {*movsi_internal}
+                (const_int 632 [0x278])) [8 current.21_43->executable+0 S4 A32])) "kernel/fork.c":156:16 75 {*movsi_internal}
      (nil))
 (insn 226 225 227 17 (set (reg:CCZ 17 flags)
         (compare:CCZ (reg/f:SI 123 [ _44 ])
-            (const_int 0 [0]))) "kernel/fork.c":153:8 7 {*cmpsi_ccno_1}
+            (const_int 0 [0]))) "kernel/fork.c":156:8 7 {*cmpsi_ccno_1}
      (nil))
 (jump_insn 227 226 228 17 (set (pc)
         (if_then_else (eq (reg:CCZ 17 flags)
                 (const_int 0 [0]))
             (label_ref 235)
-            (pc))) "kernel/fork.c":153:8 806 {*jcc}
+            (pc))) "kernel/fork.c":156:8 806 {*jcc}
      (nil)
  -> 235)
 (note 228 227 229 18 [bb 18] NOTE_INSN_BASIC_BLOCK)
 (insn 229 228 230 18 (set (reg/f:SI 281)
         (mem/u/c:SI (plus:SI (reg:SI 82)
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("current") [flags 0x40]  <var_decl 0x77287f72e120 current>)
-                        ] UNSPEC_GOT))) [18  S4 A8])) "kernel/fork.c":154:16 75 {*movsi_internal}
+                            (symbol_ref:SI ("current") [flags 0x40]  <var_decl 0x77e52d72e120 current>)
+                        ] UNSPEC_GOT))) [18  S4 A8])) "kernel/fork.c":157:16 75 {*movsi_internal}
      (nil))
 (insn 230 229 231 18 (set (reg/f:SI 124 [ current.22_45 ])
-        (mem/f/c:SI (reg/f:SI 281) [13 current+0 S4 A32])) "kernel/fork.c":154:16 75 {*movsi_internal}
+        (mem/f/c:SI (reg/f:SI 281) [13 current+0 S4 A32])) "kernel/fork.c":157:16 75 {*movsi_internal}
      (nil))
 (insn 231 230 232 18 (set (reg/f:SI 125 [ _46 ])
         (mem/f:SI (plus:SI (reg/f:SI 124 [ current.22_45 ])
-                (const_int 632 [0x278])) [8 current.22_45->executable+0 S4 A32])) "kernel/fork.c":154:16 75 {*movsi_internal}
+                (const_int 632 [0x278])) [8 current.22_45->executable+0 S4 A32])) "kernel/fork.c":157:16 75 {*movsi_internal}
      (nil))
 (insn 232 231 233 18 (set (reg:HI 126 [ _47 ])
         (mem:HI (plus:SI (reg/f:SI 125 [ _46 ])
-                (const_int 48 [0x30])) [7 _46->i_count+0 S2 A32])) "kernel/fork.c":154:28 76 {*movhi_internal}
+                (const_int 48 [0x30])) [7 _46->i_count+0 S2 A32])) "kernel/fork.c":157:28 76 {*movhi_internal}
      (nil))
 (insn 233 232 234 18 (parallel [
             (set (reg:HI 127 [ _49 ])
                 (plus:HI (reg:HI 126 [ _47 ])
                     (const_int 1 [0x1])))
             (clobber (reg:CC 17 flags))
-        ]) "kernel/fork.c":154:37 212 {*addhi_1}
+        ]) "kernel/fork.c":157:37 212 {*addhi_1}
      (nil))
 (insn 234 233 235 18 (set (mem:HI (plus:SI (reg/f:SI 125 [ _46 ])
                 (const_int 48 [0x30])) [7 _46->i_count+0 S2 A32])
-        (reg:HI 127 [ _49 ])) "kernel/fork.c":154:37 76 {*movhi_internal}
+        (reg:HI 127 [ _49 ])) "kernel/fork.c":157:37 76 {*movhi_internal}
      (nil))
 (code_label 235 234 236 19 31 (nil) [1 uses])
 (note 236 235 237 19 [bb 19] NOTE_INSN_BASIC_BLOCK)
 (insn 237 236 238 19 (set (reg/f:SI 282)
         (mem/f/c:SI (plus:SI (reg/f:SI 19 frame)
-                (const_int -8 [0xfffffffffffffff8])) [13 p+0 S4 A32])) "kernel/fork.c":156:5 75 {*movsi_internal}
+                (const_int -8 [0xfffffffffffffff8])) [13 p+0 S4 A32])) "kernel/fork.c":159:5 75 {*movsi_internal}
      (nil))
 (insn 238 237 239 19 (parallel [
             (set (reg/f:SI 128 [ _50 ])
                 (plus:SI (reg/f:SI 282)
                     (const_int 744 [0x2e8])))
             (clobber (reg:CC 17 flags))
-        ]) "kernel/fork.c":156:5 209 {*addsi_1}
+        ]) "kernel/fork.c":159:5 209 {*addsi_1}
      (expr_list:REG_EQUAL (plus:SI (mem/f/c:SI (plus:SI (reg/f:SI 19 frame)
                     (const_int -8 [0xfffffffffffffff8])) [13 p+0 S4 A32])
             (const_int 744 [0x2e8]))
         (nil)))
 (insn 239 238 240 19 (set (reg:SI 129 [ _51 ])
-        (reg/f:SI 128 [ _50 ])) "kernel/fork.c":156:5 75 {*movsi_internal}
+        (reg/f:SI 128 [ _50 ])) "kernel/fork.c":159:5 75 {*movsi_internal}
      (nil))
 (insn 240 239 241 19 (set (reg:SI 283)
-        (mem/c:SI (reg/f:SI 16 argp) [5 nr+0 S4 A32])) "kernel/fork.c":156:5 75 {*movsi_internal}
+        (mem/c:SI (reg/f:SI 16 argp) [5 nr+0 S4 A32])) "kernel/fork.c":159:5 75 {*movsi_internal}
      (nil))
 (insn 241 240 242 19 (parallel [
             (set (reg:SI 130 [ _52 ])
                 (ashift:SI (reg:SI 283)
                     (const_int 1 [0x1])))
             (clobber (reg:CC 17 flags))
-        ]) "kernel/fork.c":156:5 655 {*ashlsi3_1}
+        ]) "kernel/fork.c":159:5 655 {*ashlsi3_1}
      (expr_list:REG_EQUAL (ashift:SI (mem/c:SI (reg/f:SI 16 argp) [5 nr+0 S4 A32])
             (const_int 1 [0x1]))
         (nil)))
 (insn 242 241 243 19 (set (reg:SI 131 [ _53 ])
-        (reg:SI 130 [ _52 ])) "kernel/fork.c":156:5 75 {*movsi_internal}
+        (reg:SI 130 [ _52 ])) "kernel/fork.c":159:5 75 {*movsi_internal}
      (nil))
 (insn 243 242 244 19 (parallel [
             (set (reg:SI 132 [ _54 ])
                 (plus:SI (reg:SI 131 [ _53 ])
                     (const_int 4 [0x4])))
             (clobber (reg:CC 17 flags))
-        ]) "kernel/fork.c":156:5 209 {*addsi_1}
+        ]) "kernel/fork.c":159:5 209 {*addsi_1}
      (nil))
 (insn 244 243 245 19 (parallel [
             (set (reg:SI 133 [ _55 ])
                 (ashift:SI (reg:SI 132 [ _54 ])
                     (const_int 3 [0x3])))
             (clobber (reg:CC 17 flags))
-        ]) "kernel/fork.c":156:5 655 {*ashlsi3_1}
+        ]) "kernel/fork.c":159:5 655 {*ashlsi3_1}
      (nil))
 (insn 245 244 246 19 (set (reg:SI 285)
         (mem/u/c:SI (plus:SI (reg:SI 82)
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("gdt") [flags 0x40]  <var_decl 0x772880f4cc60 gdt>)
-                        ] UNSPEC_GOT))) [18  S4 A8])) "kernel/fork.c":156:5 75 {*movsi_internal}
+                            (symbol_ref:SI ("gdt") [flags 0x40]  <var_decl 0x77e52efdac60 gdt>)
+                        ] UNSPEC_GOT))) [18  S4 A8])) "kernel/fork.c":159:5 75 {*movsi_internal}
      (nil))
 (insn 246 245 247 19 (set (reg:SI 284)
-        (reg:SI 285)) "kernel/fork.c":156:5 75 {*movsi_internal}
-     (expr_list:REG_EQUAL (symbol_ref:SI ("gdt") [flags 0x40]  <var_decl 0x772880f4cc60 gdt>)
+        (reg:SI 285)) "kernel/fork.c":159:5 75 {*movsi_internal}
+     (expr_list:REG_EQUAL (symbol_ref:SI ("gdt") [flags 0x40]  <var_decl 0x77e52efdac60 gdt>)
         (nil)))
 (insn 247 246 248 19 (parallel [
             (set (reg/f:SI 134 [ _56 ])
                 (plus:SI (reg:SI 133 [ _55 ])
                     (reg:SI 284)))
             (clobber (reg:CC 17 flags))
-        ]) "kernel/fork.c":156:5 209 {*addsi_1}
+        ]) "kernel/fork.c":159:5 209 {*addsi_1}
      (nil))
 (insn 248 247 249 19 (set (reg:SI 286)
-        (mem/c:SI (reg/f:SI 16 argp) [5 nr+0 S4 A32])) "kernel/fork.c":156:5 75 {*movsi_internal}
+        (mem/c:SI (reg/f:SI 16 argp) [5 nr+0 S4 A32])) "kernel/fork.c":159:5 75 {*movsi_internal}
      (nil))
 (insn 249 248 250 19 (parallel [
             (set (reg:SI 135 [ _57 ])
                 (ashift:SI (reg:SI 286)
                     (const_int 1 [0x1])))
             (clobber (reg:CC 17 flags))
-        ]) "kernel/fork.c":156:5 655 {*ashlsi3_1}
+        ]) "kernel/fork.c":159:5 655 {*ashlsi3_1}
      (expr_list:REG_EQUAL (ashift:SI (mem/c:SI (reg/f:SI 16 argp) [5 nr+0 S4 A32])
             (const_int 1 [0x1]))
         (nil)))
 (insn 250 249 251 19 (set (reg:SI 136 [ _58 ])
-        (reg:SI 135 [ _57 ])) "kernel/fork.c":156:5 75 {*movsi_internal}
+        (reg:SI 135 [ _57 ])) "kernel/fork.c":159:5 75 {*movsi_internal}
      (nil))
 (insn 251 250 252 19 (parallel [
             (set (reg:SI 137 [ _59 ])
                 (plus:SI (reg:SI 136 [ _58 ])
                     (const_int 4 [0x4])))
             (clobber (reg:CC 17 flags))
-        ]) "kernel/fork.c":156:5 209 {*addsi_1}
+        ]) "kernel/fork.c":159:5 209 {*addsi_1}
      (nil))
 (insn 252 251 253 19 (parallel [
             (set (reg:SI 138 [ _60 ])
                 (ashift:SI (reg:SI 137 [ _59 ])
                     (const_int 3 [0x3])))
             (clobber (reg:CC 17 flags))
-        ]) "kernel/fork.c":156:5 655 {*ashlsi3_1}
+        ]) "kernel/fork.c":159:5 655 {*ashlsi3_1}
      (nil))
 (insn 253 252 254 19 (parallel [
             (set (reg:SI 139 [ _61 ])
                 (plus:SI (reg:SI 138 [ _60 ])
                     (const_int 2 [0x2])))
             (clobber (reg:CC 17 flags))
-        ]) "kernel/fork.c":156:5 209 {*addsi_1}
+        ]) "kernel/fork.c":159:5 209 {*addsi_1}
      (nil))
 (insn 254 253 255 19 (set (reg:SI 288)
         (mem/u/c:SI (plus:SI (reg:SI 82)
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("gdt") [flags 0x40]  <var_decl 0x772880f4cc60 gdt>)
-                        ] UNSPEC_GOT))) [18  S4 A8])) "kernel/fork.c":156:5 75 {*movsi_internal}
+                            (symbol_ref:SI ("gdt") [flags 0x40]  <var_decl 0x77e52efdac60 gdt>)
+                        ] UNSPEC_GOT))) [18  S4 A8])) "kernel/fork.c":159:5 75 {*movsi_internal}
      (nil))
 (insn 255 254 256 19 (set (reg:SI 287)
-        (reg:SI 288)) "kernel/fork.c":156:5 75 {*movsi_internal}
-     (expr_list:REG_EQUAL (symbol_ref:SI ("gdt") [flags 0x40]  <var_decl 0x772880f4cc60 gdt>)
+        (reg:SI 288)) "kernel/fork.c":159:5 75 {*movsi_internal}
+     (expr_list:REG_EQUAL (symbol_ref:SI ("gdt") [flags 0x40]  <var_decl 0x77e52efdac60 gdt>)
         (nil)))
 (insn 256 255 257 19 (parallel [
             (set (reg/f:SI 140 [ _62 ])
                 (plus:SI (reg:SI 139 [ _61 ])
                     (reg:SI 287)))
             (clobber (reg:CC 17 flags))
-        ]) "kernel/fork.c":156:5 209 {*addsi_1}
+        ]) "kernel/fork.c":159:5 209 {*addsi_1}
      (nil))
 (insn 257 256 258 19 (set (reg:SI 289)
-        (mem/c:SI (reg/f:SI 16 argp) [5 nr+0 S4 A32])) "kernel/fork.c":156:5 75 {*movsi_internal}
+        (mem/c:SI (reg/f:SI 16 argp) [5 nr+0 S4 A32])) "kernel/fork.c":159:5 75 {*movsi_internal}
      (nil))
 (insn 258 257 259 19 (parallel [
             (set (reg:SI 141 [ _63 ])
                 (ashift:SI (reg:SI 289)
                     (const_int 1 [0x1])))
             (clobber (reg:CC 17 flags))
-        ]) "kernel/fork.c":156:5 655 {*ashlsi3_1}
+        ]) "kernel/fork.c":159:5 655 {*ashlsi3_1}
      (expr_list:REG_EQUAL (ashift:SI (mem/c:SI (reg/f:SI 16 argp) [5 nr+0 S4 A32])
             (const_int 1 [0x1]))
         (nil)))
 (insn 259 258 260 19 (set (reg:SI 142 [ _64 ])
-        (reg:SI 141 [ _63 ])) "kernel/fork.c":156:5 75 {*movsi_internal}
+        (reg:SI 141 [ _63 ])) "kernel/fork.c":159:5 75 {*movsi_internal}
      (nil))
 (insn 260 259 261 19 (parallel [
             (set (reg:SI 143 [ _65 ])
                 (plus:SI (reg:SI 142 [ _64 ])
                     (const_int 4 [0x4])))
             (clobber (reg:CC 17 flags))
-        ]) "kernel/fork.c":156:5 209 {*addsi_1}
+        ]) "kernel/fork.c":159:5 209 {*addsi_1}
      (nil))
 (insn 261 260 262 19 (parallel [
             (set (reg:SI 144 [ _66 ])
                 (ashift:SI (reg:SI 143 [ _65 ])
                     (const_int 3 [0x3])))
             (clobber (reg:CC 17 flags))
-        ]) "kernel/fork.c":156:5 655 {*ashlsi3_1}
+        ]) "kernel/fork.c":159:5 655 {*ashlsi3_1}
      (nil))
 (insn 262 261 263 19 (parallel [
             (set (reg:SI 145 [ _67 ])
                 (plus:SI (reg:SI 144 [ _66 ])
                     (const_int 4 [0x4])))
             (clobber (reg:CC 17 flags))
-        ]) "kernel/fork.c":156:5 209 {*addsi_1}
+        ]) "kernel/fork.c":159:5 209 {*addsi_1}
      (nil))
 (insn 263 262 264 19 (set (reg:SI 291)
         (mem/u/c:SI (plus:SI (reg:SI 82)
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("gdt") [flags 0x40]  <var_decl 0x772880f4cc60 gdt>)
-                        ] UNSPEC_GOT))) [18  S4 A8])) "kernel/fork.c":156:5 75 {*movsi_internal}
+                            (symbol_ref:SI ("gdt") [flags 0x40]  <var_decl 0x77e52efdac60 gdt>)
+                        ] UNSPEC_GOT))) [18  S4 A8])) "kernel/fork.c":159:5 75 {*movsi_internal}
      (nil))
 (insn 264 263 265 19 (set (reg:SI 290)
-        (reg:SI 291)) "kernel/fork.c":156:5 75 {*movsi_internal}
-     (expr_list:REG_EQUAL (symbol_ref:SI ("gdt") [flags 0x40]  <var_decl 0x772880f4cc60 gdt>)
+        (reg:SI 291)) "kernel/fork.c":159:5 75 {*movsi_internal}
+     (expr_list:REG_EQUAL (symbol_ref:SI ("gdt") [flags 0x40]  <var_decl 0x77e52efdac60 gdt>)
         (nil)))
 (insn 265 264 266 19 (parallel [
             (set (reg/f:SI 146 [ _68 ])
                 (plus:SI (reg:SI 145 [ _67 ])
                     (reg:SI 290)))
             (clobber (reg:CC 17 flags))
-        ]) "kernel/fork.c":156:5 209 {*addsi_1}
+        ]) "kernel/fork.c":159:5 209 {*addsi_1}
      (nil))
 (insn 266 265 267 19 (set (reg:SI 292)
-        (mem/c:SI (reg/f:SI 16 argp) [5 nr+0 S4 A32])) "kernel/fork.c":156:5 75 {*movsi_internal}
+        (mem/c:SI (reg/f:SI 16 argp) [5 nr+0 S4 A32])) "kernel/fork.c":159:5 75 {*movsi_internal}
      (nil))
 (insn 267 266 268 19 (parallel [
             (set (reg:SI 147 [ _69 ])
                 (ashift:SI (reg:SI 292)
                     (const_int 1 [0x1])))
             (clobber (reg:CC 17 flags))
-        ]) "kernel/fork.c":156:5 655 {*ashlsi3_1}
+        ]) "kernel/fork.c":159:5 655 {*ashlsi3_1}
      (expr_list:REG_EQUAL (ashift:SI (mem/c:SI (reg/f:SI 16 argp) [5 nr+0 S4 A32])
             (const_int 1 [0x1]))
         (nil)))
 (insn 268 267 269 19 (set (reg:SI 148 [ _70 ])
-        (reg:SI 147 [ _69 ])) "kernel/fork.c":156:5 75 {*movsi_internal}
+        (reg:SI 147 [ _69 ])) "kernel/fork.c":159:5 75 {*movsi_internal}
      (nil))
 (insn 269 268 270 19 (parallel [
             (set (reg:SI 149 [ _71 ])
                 (plus:SI (reg:SI 148 [ _70 ])
                     (const_int 4 [0x4])))
             (clobber (reg:CC 17 flags))
-        ]) "kernel/fork.c":156:5 209 {*addsi_1}
+        ]) "kernel/fork.c":159:5 209 {*addsi_1}
      (nil))
 (insn 270 269 271 19 (parallel [
             (set (reg:SI 150 [ _72 ])
                 (ashift:SI (reg:SI 149 [ _71 ])
                     (const_int 3 [0x3])))
             (clobber (reg:CC 17 flags))
-        ]) "kernel/fork.c":156:5 655 {*ashlsi3_1}
+        ]) "kernel/fork.c":159:5 655 {*ashlsi3_1}
      (nil))
 (insn 271 270 272 19 (parallel [
             (set (reg:SI 151 [ _73 ])
                 (plus:SI (reg:SI 150 [ _72 ])
                     (const_int 5 [0x5])))
             (clobber (reg:CC 17 flags))
-        ]) "kernel/fork.c":156:5 209 {*addsi_1}
+        ]) "kernel/fork.c":159:5 209 {*addsi_1}
      (nil))
 (insn 272 271 273 19 (set (reg:SI 294)
         (mem/u/c:SI (plus:SI (reg:SI 82)
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("gdt") [flags 0x40]  <var_decl 0x772880f4cc60 gdt>)
-                        ] UNSPEC_GOT))) [18  S4 A8])) "kernel/fork.c":156:5 75 {*movsi_internal}
+                            (symbol_ref:SI ("gdt") [flags 0x40]  <var_decl 0x77e52efdac60 gdt>)
+                        ] UNSPEC_GOT))) [18  S4 A8])) "kernel/fork.c":159:5 75 {*movsi_internal}
      (nil))
 (insn 273 272 274 19 (set (reg:SI 293)
-        (reg:SI 294)) "kernel/fork.c":156:5 75 {*movsi_internal}
-     (expr_list:REG_EQUAL (symbol_ref:SI ("gdt") [flags 0x40]  <var_decl 0x772880f4cc60 gdt>)
+        (reg:SI 294)) "kernel/fork.c":159:5 75 {*movsi_internal}
+     (expr_list:REG_EQUAL (symbol_ref:SI ("gdt") [flags 0x40]  <var_decl 0x77e52efdac60 gdt>)
         (nil)))
 (insn 274 273 275 19 (parallel [
             (set (reg/f:SI 152 [ _74 ])
                 (plus:SI (reg:SI 151 [ _73 ])
                     (reg:SI 293)))
             (clobber (reg:CC 17 flags))
-        ]) "kernel/fork.c":156:5 209 {*addsi_1}
+        ]) "kernel/fork.c":159:5 209 {*addsi_1}
      (nil))
 (insn 275 274 276 19 (set (reg:SI 295)
-        (mem/c:SI (reg/f:SI 16 argp) [5 nr+0 S4 A32])) "kernel/fork.c":156:5 75 {*movsi_internal}
+        (mem/c:SI (reg/f:SI 16 argp) [5 nr+0 S4 A32])) "kernel/fork.c":159:5 75 {*movsi_internal}
      (nil))
 (insn 276 275 277 19 (parallel [
             (set (reg:SI 153 [ _75 ])
                 (ashift:SI (reg:SI 295)
                     (const_int 1 [0x1])))
             (clobber (reg:CC 17 flags))
-        ]) "kernel/fork.c":156:5 655 {*ashlsi3_1}
+        ]) "kernel/fork.c":159:5 655 {*ashlsi3_1}
      (expr_list:REG_EQUAL (ashift:SI (mem/c:SI (reg/f:SI 16 argp) [5 nr+0 S4 A32])
             (const_int 1 [0x1]))
         (nil)))
 (insn 277 276 278 19 (set (reg:SI 154 [ _76 ])
-        (reg:SI 153 [ _75 ])) "kernel/fork.c":156:5 75 {*movsi_internal}
+        (reg:SI 153 [ _75 ])) "kernel/fork.c":159:5 75 {*movsi_internal}
      (nil))
 (insn 278 277 279 19 (parallel [
             (set (reg:SI 155 [ _77 ])
                 (plus:SI (reg:SI 154 [ _76 ])
                     (const_int 4 [0x4])))
             (clobber (reg:CC 17 flags))
-        ]) "kernel/fork.c":156:5 209 {*addsi_1}
+        ]) "kernel/fork.c":159:5 209 {*addsi_1}
      (nil))
 (insn 279 278 280 19 (parallel [
             (set (reg:SI 156 [ _78 ])
                 (ashift:SI (reg:SI 155 [ _77 ])
                     (const_int 3 [0x3])))
             (clobber (reg:CC 17 flags))
-        ]) "kernel/fork.c":156:5 655 {*ashlsi3_1}
+        ]) "kernel/fork.c":159:5 655 {*ashlsi3_1}
      (nil))
 (insn 280 279 281 19 (parallel [
             (set (reg:SI 157 [ _79 ])
                 (plus:SI (reg:SI 156 [ _78 ])
                     (const_int 6 [0x6])))
             (clobber (reg:CC 17 flags))
-        ]) "kernel/fork.c":156:5 209 {*addsi_1}
+        ]) "kernel/fork.c":159:5 209 {*addsi_1}
      (nil))
 (insn 281 280 282 19 (set (reg:SI 297)
         (mem/u/c:SI (plus:SI (reg:SI 82)
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("gdt") [flags 0x40]  <var_decl 0x772880f4cc60 gdt>)
-                        ] UNSPEC_GOT))) [18  S4 A8])) "kernel/fork.c":156:5 75 {*movsi_internal}
+                            (symbol_ref:SI ("gdt") [flags 0x40]  <var_decl 0x77e52efdac60 gdt>)
+                        ] UNSPEC_GOT))) [18  S4 A8])) "kernel/fork.c":159:5 75 {*movsi_internal}
      (nil))
 (insn 282 281 283 19 (set (reg:SI 296)
-        (reg:SI 297)) "kernel/fork.c":156:5 75 {*movsi_internal}
-     (expr_list:REG_EQUAL (symbol_ref:SI ("gdt") [flags 0x40]  <var_decl 0x772880f4cc60 gdt>)
+        (reg:SI 297)) "kernel/fork.c":159:5 75 {*movsi_internal}
+     (expr_list:REG_EQUAL (symbol_ref:SI ("gdt") [flags 0x40]  <var_decl 0x77e52efdac60 gdt>)
         (nil)))
 (insn 283 282 284 19 (parallel [
             (set (reg/f:SI 158 [ _80 ])
                 (plus:SI (reg:SI 157 [ _79 ])
                     (reg:SI 296)))
             (clobber (reg:CC 17 flags))
-        ]) "kernel/fork.c":156:5 209 {*addsi_1}
+        ]) "kernel/fork.c":159:5 209 {*addsi_1}
      (nil))
 (insn 284 283 285 19 (set (reg:SI 298)
-        (mem/c:SI (reg/f:SI 16 argp) [5 nr+0 S4 A32])) "kernel/fork.c":156:5 75 {*movsi_internal}
+        (mem/c:SI (reg/f:SI 16 argp) [5 nr+0 S4 A32])) "kernel/fork.c":159:5 75 {*movsi_internal}
      (nil))
 (insn 285 284 286 19 (parallel [
             (set (reg:SI 159 [ _81 ])
                 (ashift:SI (reg:SI 298)
                     (const_int 1 [0x1])))
             (clobber (reg:CC 17 flags))
-        ]) "kernel/fork.c":156:5 655 {*ashlsi3_1}
+        ]) "kernel/fork.c":159:5 655 {*ashlsi3_1}
      (expr_list:REG_EQUAL (ashift:SI (mem/c:SI (reg/f:SI 16 argp) [5 nr+0 S4 A32])
             (const_int 1 [0x1]))
         (nil)))
 (insn 286 285 287 19 (set (reg:SI 160 [ _82 ])
-        (reg:SI 159 [ _81 ])) "kernel/fork.c":156:5 75 {*movsi_internal}
+        (reg:SI 159 [ _81 ])) "kernel/fork.c":159:5 75 {*movsi_internal}
      (nil))
 (insn 287 286 288 19 (parallel [
             (set (reg:SI 161 [ _83 ])
                 (plus:SI (reg:SI 160 [ _82 ])
                     (const_int 4 [0x4])))
             (clobber (reg:CC 17 flags))
-        ]) "kernel/fork.c":156:5 209 {*addsi_1}
+        ]) "kernel/fork.c":159:5 209 {*addsi_1}
      (nil))
 (insn 288 287 289 19 (parallel [
             (set (reg:SI 162 [ _84 ])
                 (ashift:SI (reg:SI 161 [ _83 ])
                     (const_int 3 [0x3])))
             (clobber (reg:CC 17 flags))
-        ]) "kernel/fork.c":156:5 655 {*ashlsi3_1}
+        ]) "kernel/fork.c":159:5 655 {*ashlsi3_1}
      (nil))
 (insn 289 288 290 19 (parallel [
             (set (reg:SI 163 [ _85 ])
                 (plus:SI (reg:SI 162 [ _84 ])
                     (const_int 7 [0x7])))
             (clobber (reg:CC 17 flags))
-        ]) "kernel/fork.c":156:5 209 {*addsi_1}
+        ]) "kernel/fork.c":159:5 209 {*addsi_1}
      (nil))
 (insn 290 289 291 19 (set (reg:SI 300)
         (mem/u/c:SI (plus:SI (reg:SI 82)
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("gdt") [flags 0x40]  <var_decl 0x772880f4cc60 gdt>)
-                        ] UNSPEC_GOT))) [18  S4 A8])) "kernel/fork.c":156:5 75 {*movsi_internal}
+                            (symbol_ref:SI ("gdt") [flags 0x40]  <var_decl 0x77e52efdac60 gdt>)
+                        ] UNSPEC_GOT))) [18  S4 A8])) "kernel/fork.c":159:5 75 {*movsi_internal}
      (nil))
 (insn 291 290 292 19 (set (reg:SI 299)
-        (reg:SI 300)) "kernel/fork.c":156:5 75 {*movsi_internal}
-     (expr_list:REG_EQUAL (symbol_ref:SI ("gdt") [flags 0x40]  <var_decl 0x772880f4cc60 gdt>)
+        (reg:SI 300)) "kernel/fork.c":159:5 75 {*movsi_internal}
+     (expr_list:REG_EQUAL (symbol_ref:SI ("gdt") [flags 0x40]  <var_decl 0x77e52efdac60 gdt>)
         (nil)))
 (insn 292 291 293 19 (parallel [
             (set (reg/f:SI 164 [ _86 ])
                 (plus:SI (reg:SI 163 [ _85 ])
                     (reg:SI 299)))
             (clobber (reg:CC 17 flags))
-        ]) "kernel/fork.c":156:5 209 {*addsi_1}
+        ]) "kernel/fork.c":159:5 209 {*addsi_1}
      (nil))
 (insn 293 292 294 19 (parallel [
             (asm_operands/v ("movw $104, %1
@@ -2363,345 +2363,345 @@
                     (mem:QI (reg/f:SI 164 [ _86 ]) [0 *_86+0 S1 A8])
                 ]
                  [
-                    (asm_input:SI ("a") kernel/fork.c:156)
-                    (asm_input:QI ("m") kernel/fork.c:156)
-                    (asm_input:QI ("m") kernel/fork.c:156)
-                    (asm_input:QI ("m") kernel/fork.c:156)
-                    (asm_input:QI ("m") kernel/fork.c:156)
-                    (asm_input:QI ("m") kernel/fork.c:156)
-                    (asm_input:QI ("m") kernel/fork.c:156)
+                    (asm_input:SI ("a") kernel/fork.c:159)
+                    (asm_input:QI ("m") kernel/fork.c:159)
+                    (asm_input:QI ("m") kernel/fork.c:159)
+                    (asm_input:QI ("m") kernel/fork.c:159)
+                    (asm_input:QI ("m") kernel/fork.c:159)
+                    (asm_input:QI ("m") kernel/fork.c:159)
+                    (asm_input:QI ("m") kernel/fork.c:159)
                 ]
-                 [] kernel/fork.c:156)
+                 [] kernel/fork.c:159)
             (clobber (reg:CC 17 flags))
-        ]) "kernel/fork.c":156:5 -1
+        ]) "kernel/fork.c":159:5 -1
      (nil))
 (insn 294 293 295 19 (set (reg/f:SI 301)
         (mem/f/c:SI (plus:SI (reg/f:SI 19 frame)
-                (const_int -8 [0xfffffffffffffff8])) [13 p+0 S4 A32])) "kernel/fork.c":157:5 75 {*movsi_internal}
+                (const_int -8 [0xfffffffffffffff8])) [13 p+0 S4 A32])) "kernel/fork.c":160:5 75 {*movsi_internal}
      (nil))
 (insn 295 294 296 19 (parallel [
             (set (reg/f:SI 165 [ _87 ])
                 (plus:SI (reg/f:SI 301)
                     (const_int 720 [0x2d0])))
             (clobber (reg:CC 17 flags))
-        ]) "kernel/fork.c":157:5 209 {*addsi_1}
+        ]) "kernel/fork.c":160:5 209 {*addsi_1}
      (expr_list:REG_EQUAL (plus:SI (mem/f/c:SI (plus:SI (reg/f:SI 19 frame)
                     (const_int -8 [0xfffffffffffffff8])) [13 p+0 S4 A32])
             (const_int 720 [0x2d0]))
         (nil)))
 (insn 296 295 297 19 (set (reg:SI 166 [ _88 ])
-        (reg/f:SI 165 [ _87 ])) "kernel/fork.c":157:5 75 {*movsi_internal}
+        (reg/f:SI 165 [ _87 ])) "kernel/fork.c":160:5 75 {*movsi_internal}
      (nil))
 (insn 297 296 298 19 (set (reg:SI 302)
-        (mem/c:SI (reg/f:SI 16 argp) [5 nr+0 S4 A32])) "kernel/fork.c":157:5 75 {*movsi_internal}
+        (mem/c:SI (reg/f:SI 16 argp) [5 nr+0 S4 A32])) "kernel/fork.c":160:5 75 {*movsi_internal}
      (nil))
 (insn 298 297 299 19 (parallel [
             (set (reg:SI 167 [ _89 ])
                 (ashift:SI (reg:SI 302)
                     (const_int 1 [0x1])))
             (clobber (reg:CC 17 flags))
-        ]) "kernel/fork.c":157:5 655 {*ashlsi3_1}
+        ]) "kernel/fork.c":160:5 655 {*ashlsi3_1}
      (expr_list:REG_EQUAL (ashift:SI (mem/c:SI (reg/f:SI 16 argp) [5 nr+0 S4 A32])
             (const_int 1 [0x1]))
         (nil)))
 (insn 299 298 300 19 (set (reg:SI 168 [ _90 ])
-        (reg:SI 167 [ _89 ])) "kernel/fork.c":157:5 75 {*movsi_internal}
+        (reg:SI 167 [ _89 ])) "kernel/fork.c":160:5 75 {*movsi_internal}
      (nil))
 (insn 300 299 301 19 (parallel [
             (set (reg:SI 169 [ _91 ])
                 (plus:SI (reg:SI 168 [ _90 ])
                     (const_int 5 [0x5])))
             (clobber (reg:CC 17 flags))
-        ]) "kernel/fork.c":157:5 209 {*addsi_1}
+        ]) "kernel/fork.c":160:5 209 {*addsi_1}
      (nil))
 (insn 301 300 302 19 (parallel [
             (set (reg:SI 170 [ _92 ])
                 (ashift:SI (reg:SI 169 [ _91 ])
                     (const_int 3 [0x3])))
             (clobber (reg:CC 17 flags))
-        ]) "kernel/fork.c":157:5 655 {*ashlsi3_1}
+        ]) "kernel/fork.c":160:5 655 {*ashlsi3_1}
      (nil))
 (insn 302 301 303 19 (set (reg:SI 304)
         (mem/u/c:SI (plus:SI (reg:SI 82)
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("gdt") [flags 0x40]  <var_decl 0x772880f4cc60 gdt>)
-                        ] UNSPEC_GOT))) [18  S4 A8])) "kernel/fork.c":157:5 75 {*movsi_internal}
+                            (symbol_ref:SI ("gdt") [flags 0x40]  <var_decl 0x77e52efdac60 gdt>)
+                        ] UNSPEC_GOT))) [18  S4 A8])) "kernel/fork.c":160:5 75 {*movsi_internal}
      (nil))
 (insn 303 302 304 19 (set (reg:SI 303)
-        (reg:SI 304)) "kernel/fork.c":157:5 75 {*movsi_internal}
-     (expr_list:REG_EQUAL (symbol_ref:SI ("gdt") [flags 0x40]  <var_decl 0x772880f4cc60 gdt>)
+        (reg:SI 304)) "kernel/fork.c":160:5 75 {*movsi_internal}
+     (expr_list:REG_EQUAL (symbol_ref:SI ("gdt") [flags 0x40]  <var_decl 0x77e52efdac60 gdt>)
         (nil)))
 (insn 304 303 305 19 (parallel [
             (set (reg/f:SI 171 [ _93 ])
                 (plus:SI (reg:SI 170 [ _92 ])
                     (reg:SI 303)))
             (clobber (reg:CC 17 flags))
-        ]) "kernel/fork.c":157:5 209 {*addsi_1}
+        ]) "kernel/fork.c":160:5 209 {*addsi_1}
      (nil))
 (insn 305 304 306 19 (set (reg:SI 305)
-        (mem/c:SI (reg/f:SI 16 argp) [5 nr+0 S4 A32])) "kernel/fork.c":157:5 75 {*movsi_internal}
+        (mem/c:SI (reg/f:SI 16 argp) [5 nr+0 S4 A32])) "kernel/fork.c":160:5 75 {*movsi_internal}
      (nil))
 (insn 306 305 307 19 (parallel [
             (set (reg:SI 172 [ _94 ])
                 (ashift:SI (reg:SI 305)
                     (const_int 1 [0x1])))
             (clobber (reg:CC 17 flags))
-        ]) "kernel/fork.c":157:5 655 {*ashlsi3_1}
+        ]) "kernel/fork.c":160:5 655 {*ashlsi3_1}
      (expr_list:REG_EQUAL (ashift:SI (mem/c:SI (reg/f:SI 16 argp) [5 nr+0 S4 A32])
             (const_int 1 [0x1]))
         (nil)))
 (insn 307 306 308 19 (set (reg:SI 173 [ _95 ])
-        (reg:SI 172 [ _94 ])) "kernel/fork.c":157:5 75 {*movsi_internal}
+        (reg:SI 172 [ _94 ])) "kernel/fork.c":160:5 75 {*movsi_internal}
      (nil))
 (insn 308 307 309 19 (parallel [
             (set (reg:SI 174 [ _96 ])
                 (plus:SI (reg:SI 173 [ _95 ])
                     (const_int 5 [0x5])))
             (clobber (reg:CC 17 flags))
-        ]) "kernel/fork.c":157:5 209 {*addsi_1}
+        ]) "kernel/fork.c":160:5 209 {*addsi_1}
      (nil))
 (insn 309 308 310 19 (parallel [
             (set (reg:SI 175 [ _97 ])
                 (ashift:SI (reg:SI 174 [ _96 ])
                     (const_int 3 [0x3])))
             (clobber (reg:CC 17 flags))
-        ]) "kernel/fork.c":157:5 655 {*ashlsi3_1}
+        ]) "kernel/fork.c":160:5 655 {*ashlsi3_1}
      (nil))
 (insn 310 309 311 19 (parallel [
             (set (reg:SI 176 [ _98 ])
                 (plus:SI (reg:SI 175 [ _97 ])
                     (const_int 2 [0x2])))
             (clobber (reg:CC 17 flags))
-        ]) "kernel/fork.c":157:5 209 {*addsi_1}
+        ]) "kernel/fork.c":160:5 209 {*addsi_1}
      (nil))
 (insn 311 310 312 19 (set (reg:SI 307)
         (mem/u/c:SI (plus:SI (reg:SI 82)
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("gdt") [flags 0x40]  <var_decl 0x772880f4cc60 gdt>)
-                        ] UNSPEC_GOT))) [18  S4 A8])) "kernel/fork.c":157:5 75 {*movsi_internal}
+                            (symbol_ref:SI ("gdt") [flags 0x40]  <var_decl 0x77e52efdac60 gdt>)
+                        ] UNSPEC_GOT))) [18  S4 A8])) "kernel/fork.c":160:5 75 {*movsi_internal}
      (nil))
 (insn 312 311 313 19 (set (reg:SI 306)
-        (reg:SI 307)) "kernel/fork.c":157:5 75 {*movsi_internal}
-     (expr_list:REG_EQUAL (symbol_ref:SI ("gdt") [flags 0x40]  <var_decl 0x772880f4cc60 gdt>)
+        (reg:SI 307)) "kernel/fork.c":160:5 75 {*movsi_internal}
+     (expr_list:REG_EQUAL (symbol_ref:SI ("gdt") [flags 0x40]  <var_decl 0x77e52efdac60 gdt>)
         (nil)))
 (insn 313 312 314 19 (parallel [
             (set (reg/f:SI 177 [ _99 ])
                 (plus:SI (reg:SI 176 [ _98 ])
                     (reg:SI 306)))
             (clobber (reg:CC 17 flags))
-        ]) "kernel/fork.c":157:5 209 {*addsi_1}
+        ]) "kernel/fork.c":160:5 209 {*addsi_1}
      (nil))
 (insn 314 313 315 19 (set (reg:SI 308)
-        (mem/c:SI (reg/f:SI 16 argp) [5 nr+0 S4 A32])) "kernel/fork.c":157:5 75 {*movsi_internal}
+        (mem/c:SI (reg/f:SI 16 argp) [5 nr+0 S4 A32])) "kernel/fork.c":160:5 75 {*movsi_internal}
      (nil))
 (insn 315 314 316 19 (parallel [
             (set (reg:SI 178 [ _100 ])
                 (ashift:SI (reg:SI 308)
                     (const_int 1 [0x1])))
             (clobber (reg:CC 17 flags))
-        ]) "kernel/fork.c":157:5 655 {*ashlsi3_1}
+        ]) "kernel/fork.c":160:5 655 {*ashlsi3_1}
      (expr_list:REG_EQUAL (ashift:SI (mem/c:SI (reg/f:SI 16 argp) [5 nr+0 S4 A32])
             (const_int 1 [0x1]))
         (nil)))
 (insn 316 315 317 19 (set (reg:SI 179 [ _101 ])
-        (reg:SI 178 [ _100 ])) "kernel/fork.c":157:5 75 {*movsi_internal}
+        (reg:SI 178 [ _100 ])) "kernel/fork.c":160:5 75 {*movsi_internal}
      (nil))
 (insn 317 316 318 19 (parallel [
             (set (reg:SI 180 [ _102 ])
                 (plus:SI (reg:SI 179 [ _101 ])
                     (const_int 5 [0x5])))
             (clobber (reg:CC 17 flags))
-        ]) "kernel/fork.c":157:5 209 {*addsi_1}
+        ]) "kernel/fork.c":160:5 209 {*addsi_1}
      (nil))
 (insn 318 317 319 19 (parallel [
             (set (reg:SI 181 [ _103 ])
                 (ashift:SI (reg:SI 180 [ _102 ])
                     (const_int 3 [0x3])))
             (clobber (reg:CC 17 flags))
-        ]) "kernel/fork.c":157:5 655 {*ashlsi3_1}
+        ]) "kernel/fork.c":160:5 655 {*ashlsi3_1}
      (nil))
 (insn 319 318 320 19 (parallel [
             (set (reg:SI 182 [ _104 ])
                 (plus:SI (reg:SI 181 [ _103 ])
                     (const_int 4 [0x4])))
             (clobber (reg:CC 17 flags))
-        ]) "kernel/fork.c":157:5 209 {*addsi_1}
+        ]) "kernel/fork.c":160:5 209 {*addsi_1}
      (nil))
 (insn 320 319 321 19 (set (reg:SI 310)
         (mem/u/c:SI (plus:SI (reg:SI 82)
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("gdt") [flags 0x40]  <var_decl 0x772880f4cc60 gdt>)
-                        ] UNSPEC_GOT))) [18  S4 A8])) "kernel/fork.c":157:5 75 {*movsi_internal}
+                            (symbol_ref:SI ("gdt") [flags 0x40]  <var_decl 0x77e52efdac60 gdt>)
+                        ] UNSPEC_GOT))) [18  S4 A8])) "kernel/fork.c":160:5 75 {*movsi_internal}
      (nil))
 (insn 321 320 322 19 (set (reg:SI 309)
-        (reg:SI 310)) "kernel/fork.c":157:5 75 {*movsi_internal}
-     (expr_list:REG_EQUAL (symbol_ref:SI ("gdt") [flags 0x40]  <var_decl 0x772880f4cc60 gdt>)
+        (reg:SI 310)) "kernel/fork.c":160:5 75 {*movsi_internal}
+     (expr_list:REG_EQUAL (symbol_ref:SI ("gdt") [flags 0x40]  <var_decl 0x77e52efdac60 gdt>)
         (nil)))
 (insn 322 321 323 19 (parallel [
             (set (reg/f:SI 183 [ _105 ])
                 (plus:SI (reg:SI 182 [ _104 ])
                     (reg:SI 309)))
             (clobber (reg:CC 17 flags))
-        ]) "kernel/fork.c":157:5 209 {*addsi_1}
+        ]) "kernel/fork.c":160:5 209 {*addsi_1}
      (nil))
 (insn 323 322 324 19 (set (reg:SI 311)
-        (mem/c:SI (reg/f:SI 16 argp) [5 nr+0 S4 A32])) "kernel/fork.c":157:5 75 {*movsi_internal}
+        (mem/c:SI (reg/f:SI 16 argp) [5 nr+0 S4 A32])) "kernel/fork.c":160:5 75 {*movsi_internal}
      (nil))
 (insn 324 323 325 19 (parallel [
             (set (reg:SI 184 [ _106 ])
                 (ashift:SI (reg:SI 311)
                     (const_int 1 [0x1])))
             (clobber (reg:CC 17 flags))
-        ]) "kernel/fork.c":157:5 655 {*ashlsi3_1}
+        ]) "kernel/fork.c":160:5 655 {*ashlsi3_1}
      (expr_list:REG_EQUAL (ashift:SI (mem/c:SI (reg/f:SI 16 argp) [5 nr+0 S4 A32])
             (const_int 1 [0x1]))
         (nil)))
 (insn 325 324 326 19 (set (reg:SI 185 [ _107 ])
-        (reg:SI 184 [ _106 ])) "kernel/fork.c":157:5 75 {*movsi_internal}
+        (reg:SI 184 [ _106 ])) "kernel/fork.c":160:5 75 {*movsi_internal}
      (nil))
 (insn 326 325 327 19 (parallel [
             (set (reg:SI 186 [ _108 ])
                 (plus:SI (reg:SI 185 [ _107 ])
                     (const_int 5 [0x5])))
             (clobber (reg:CC 17 flags))
-        ]) "kernel/fork.c":157:5 209 {*addsi_1}
+        ]) "kernel/fork.c":160:5 209 {*addsi_1}
      (nil))
 (insn 327 326 328 19 (parallel [
             (set (reg:SI 187 [ _109 ])
                 (ashift:SI (reg:SI 186 [ _108 ])
                     (const_int 3 [0x3])))
             (clobber (reg:CC 17 flags))
-        ]) "kernel/fork.c":157:5 655 {*ashlsi3_1}
+        ]) "kernel/fork.c":160:5 655 {*ashlsi3_1}
      (nil))
 (insn 328 327 329 19 (parallel [
             (set (reg:SI 188 [ _110 ])
                 (plus:SI (reg:SI 187 [ _109 ])
                     (const_int 5 [0x5])))
             (clobber (reg:CC 17 flags))
-        ]) "kernel/fork.c":157:5 209 {*addsi_1}
+        ]) "kernel/fork.c":160:5 209 {*addsi_1}
      (nil))
 (insn 329 328 330 19 (set (reg:SI 313)
         (mem/u/c:SI (plus:SI (reg:SI 82)
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("gdt") [flags 0x40]  <var_decl 0x772880f4cc60 gdt>)
-                        ] UNSPEC_GOT))) [18  S4 A8])) "kernel/fork.c":157:5 75 {*movsi_internal}
+                            (symbol_ref:SI ("gdt") [flags 0x40]  <var_decl 0x77e52efdac60 gdt>)
+                        ] UNSPEC_GOT))) [18  S4 A8])) "kernel/fork.c":160:5 75 {*movsi_internal}
      (nil))
 (insn 330 329 331 19 (set (reg:SI 312)
-        (reg:SI 313)) "kernel/fork.c":157:5 75 {*movsi_internal}
-     (expr_list:REG_EQUAL (symbol_ref:SI ("gdt") [flags 0x40]  <var_decl 0x772880f4cc60 gdt>)
+        (reg:SI 313)) "kernel/fork.c":160:5 75 {*movsi_internal}
+     (expr_list:REG_EQUAL (symbol_ref:SI ("gdt") [flags 0x40]  <var_decl 0x77e52efdac60 gdt>)
         (nil)))
 (insn 331 330 332 19 (parallel [
             (set (reg/f:SI 189 [ _111 ])
                 (plus:SI (reg:SI 188 [ _110 ])
                     (reg:SI 312)))
             (clobber (reg:CC 17 flags))
-        ]) "kernel/fork.c":157:5 209 {*addsi_1}
+        ]) "kernel/fork.c":160:5 209 {*addsi_1}
      (nil))
 (insn 332 331 333 19 (set (reg:SI 314)
-        (mem/c:SI (reg/f:SI 16 argp) [5 nr+0 S4 A32])) "kernel/fork.c":157:5 75 {*movsi_internal}
+        (mem/c:SI (reg/f:SI 16 argp) [5 nr+0 S4 A32])) "kernel/fork.c":160:5 75 {*movsi_internal}
      (nil))
 (insn 333 332 334 19 (parallel [
             (set (reg:SI 190 [ _112 ])
                 (ashift:SI (reg:SI 314)
                     (const_int 1 [0x1])))
             (clobber (reg:CC 17 flags))
-        ]) "kernel/fork.c":157:5 655 {*ashlsi3_1}
+        ]) "kernel/fork.c":160:5 655 {*ashlsi3_1}
      (expr_list:REG_EQUAL (ashift:SI (mem/c:SI (reg/f:SI 16 argp) [5 nr+0 S4 A32])
             (const_int 1 [0x1]))
         (nil)))
 (insn 334 333 335 19 (set (reg:SI 191 [ _113 ])
-        (reg:SI 190 [ _112 ])) "kernel/fork.c":157:5 75 {*movsi_internal}
+        (reg:SI 190 [ _112 ])) "kernel/fork.c":160:5 75 {*movsi_internal}
      (nil))
 (insn 335 334 336 19 (parallel [
             (set (reg:SI 192 [ _114 ])
                 (plus:SI (reg:SI 191 [ _113 ])
                     (const_int 5 [0x5])))
             (clobber (reg:CC 17 flags))
-        ]) "kernel/fork.c":157:5 209 {*addsi_1}
+        ]) "kernel/fork.c":160:5 209 {*addsi_1}
      (nil))
 (insn 336 335 337 19 (parallel [
             (set (reg:SI 193 [ _115 ])
                 (ashift:SI (reg:SI 192 [ _114 ])
                     (const_int 3 [0x3])))
             (clobber (reg:CC 17 flags))
-        ]) "kernel/fork.c":157:5 655 {*ashlsi3_1}
+        ]) "kernel/fork.c":160:5 655 {*ashlsi3_1}
      (nil))
 (insn 337 336 338 19 (parallel [
             (set (reg:SI 194 [ _116 ])
                 (plus:SI (reg:SI 193 [ _115 ])
                     (const_int 6 [0x6])))
             (clobber (reg:CC 17 flags))
-        ]) "kernel/fork.c":157:5 209 {*addsi_1}
+        ]) "kernel/fork.c":160:5 209 {*addsi_1}
      (nil))
 (insn 338 337 339 19 (set (reg:SI 316)
         (mem/u/c:SI (plus:SI (reg:SI 82)
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("gdt") [flags 0x40]  <var_decl 0x772880f4cc60 gdt>)
-                        ] UNSPEC_GOT))) [18  S4 A8])) "kernel/fork.c":157:5 75 {*movsi_internal}
+                            (symbol_ref:SI ("gdt") [flags 0x40]  <var_decl 0x77e52efdac60 gdt>)
+                        ] UNSPEC_GOT))) [18  S4 A8])) "kernel/fork.c":160:5 75 {*movsi_internal}
      (nil))
 (insn 339 338 340 19 (set (reg:SI 315)
-        (reg:SI 316)) "kernel/fork.c":157:5 75 {*movsi_internal}
-     (expr_list:REG_EQUAL (symbol_ref:SI ("gdt") [flags 0x40]  <var_decl 0x772880f4cc60 gdt>)
+        (reg:SI 316)) "kernel/fork.c":160:5 75 {*movsi_internal}
+     (expr_list:REG_EQUAL (symbol_ref:SI ("gdt") [flags 0x40]  <var_decl 0x77e52efdac60 gdt>)
         (nil)))
 (insn 340 339 341 19 (parallel [
             (set (reg/f:SI 195 [ _117 ])
                 (plus:SI (reg:SI 194 [ _116 ])
                     (reg:SI 315)))
             (clobber (reg:CC 17 flags))
-        ]) "kernel/fork.c":157:5 209 {*addsi_1}
+        ]) "kernel/fork.c":160:5 209 {*addsi_1}
      (nil))
 (insn 341 340 342 19 (set (reg:SI 317)
-        (mem/c:SI (reg/f:SI 16 argp) [5 nr+0 S4 A32])) "kernel/fork.c":157:5 75 {*movsi_internal}
+        (mem/c:SI (reg/f:SI 16 argp) [5 nr+0 S4 A32])) "kernel/fork.c":160:5 75 {*movsi_internal}
      (nil))
 (insn 342 341 343 19 (parallel [
             (set (reg:SI 196 [ _118 ])
                 (ashift:SI (reg:SI 317)
                     (const_int 1 [0x1])))
             (clobber (reg:CC 17 flags))
-        ]) "kernel/fork.c":157:5 655 {*ashlsi3_1}
+        ]) "kernel/fork.c":160:5 655 {*ashlsi3_1}
      (expr_list:REG_EQUAL (ashift:SI (mem/c:SI (reg/f:SI 16 argp) [5 nr+0 S4 A32])
             (const_int 1 [0x1]))
         (nil)))
 (insn 343 342 344 19 (set (reg:SI 197 [ _119 ])
-        (reg:SI 196 [ _118 ])) "kernel/fork.c":157:5 75 {*movsi_internal}
+        (reg:SI 196 [ _118 ])) "kernel/fork.c":160:5 75 {*movsi_internal}
      (nil))
 (insn 344 343 345 19 (parallel [
             (set (reg:SI 198 [ _120 ])
                 (plus:SI (reg:SI 197 [ _119 ])
                     (const_int 5 [0x5])))
             (clobber (reg:CC 17 flags))
-        ]) "kernel/fork.c":157:5 209 {*addsi_1}
+        ]) "kernel/fork.c":160:5 209 {*addsi_1}
      (nil))
 (insn 345 344 346 19 (parallel [
             (set (reg:SI 199 [ _121 ])
                 (ashift:SI (reg:SI 198 [ _120 ])
                     (const_int 3 [0x3])))
             (clobber (reg:CC 17 flags))
-        ]) "kernel/fork.c":157:5 655 {*ashlsi3_1}
+        ]) "kernel/fork.c":160:5 655 {*ashlsi3_1}
      (nil))
 (insn 346 345 347 19 (parallel [
             (set (reg:SI 200 [ _122 ])
                 (plus:SI (reg:SI 199 [ _121 ])
                     (const_int 7 [0x7])))
             (clobber (reg:CC 17 flags))
-        ]) "kernel/fork.c":157:5 209 {*addsi_1}
+        ]) "kernel/fork.c":160:5 209 {*addsi_1}
      (nil))
 (insn 347 346 348 19 (set (reg:SI 319)
         (mem/u/c:SI (plus:SI (reg:SI 82)
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("gdt") [flags 0x40]  <var_decl 0x772880f4cc60 gdt>)
-                        ] UNSPEC_GOT))) [18  S4 A8])) "kernel/fork.c":157:5 75 {*movsi_internal}
+                            (symbol_ref:SI ("gdt") [flags 0x40]  <var_decl 0x77e52efdac60 gdt>)
+                        ] UNSPEC_GOT))) [18  S4 A8])) "kernel/fork.c":160:5 75 {*movsi_internal}
      (nil))
 (insn 348 347 349 19 (set (reg:SI 318)
-        (reg:SI 319)) "kernel/fork.c":157:5 75 {*movsi_internal}
-     (expr_list:REG_EQUAL (symbol_ref:SI ("gdt") [flags 0x40]  <var_decl 0x772880f4cc60 gdt>)
+        (reg:SI 319)) "kernel/fork.c":160:5 75 {*movsi_internal}
+     (expr_list:REG_EQUAL (symbol_ref:SI ("gdt") [flags 0x40]  <var_decl 0x77e52efdac60 gdt>)
         (nil)))
 (insn 349 348 350 19 (parallel [
             (set (reg/f:SI 201 [ _123 ])
                 (plus:SI (reg:SI 200 [ _122 ])
                     (reg:SI 318)))
             (clobber (reg:CC 17 flags))
-        ]) "kernel/fork.c":157:5 209 {*addsi_1}
+        ]) "kernel/fork.c":160:5 209 {*addsi_1}
      (nil))
 (insn 350 349 351 19 (parallel [
             (asm_operands/v ("movw $104, %1
@@ -2721,38 +2721,38 @@
                     (mem:QI (reg/f:SI 201 [ _123 ]) [0 *_123+0 S1 A8])
                 ]
                  [
-                    (asm_input:SI ("a") kernel/fork.c:157)
-                    (asm_input:QI ("m") kernel/fork.c:157)
-                    (asm_input:QI ("m") kernel/fork.c:157)
-                    (asm_input:QI ("m") kernel/fork.c:157)
-                    (asm_input:QI ("m") kernel/fork.c:157)
-                    (asm_input:QI ("m") kernel/fork.c:157)
-                    (asm_input:QI ("m") kernel/fork.c:157)
+                    (asm_input:SI ("a") kernel/fork.c:160)
+                    (asm_input:QI ("m") kernel/fork.c:160)
+                    (asm_input:QI ("m") kernel/fork.c:160)
+                    (asm_input:QI ("m") kernel/fork.c:160)
+                    (asm_input:QI ("m") kernel/fork.c:160)
+                    (asm_input:QI ("m") kernel/fork.c:160)
+                    (asm_input:QI ("m") kernel/fork.c:160)
                 ]
-                 [] kernel/fork.c:157)
+                 [] kernel/fork.c:160)
             (clobber (reg:CC 17 flags))
-        ]) "kernel/fork.c":157:5 -1
+        ]) "kernel/fork.c":160:5 -1
      (nil))
 (insn 351 350 352 19 (set (reg/f:SI 320)
         (mem/f/c:SI (plus:SI (reg/f:SI 19 frame)
-                (const_int -8 [0xfffffffffffffff8])) [13 p+0 S4 A32])) "kernel/fork.c":158:14 75 {*movsi_internal}
+                (const_int -8 [0xfffffffffffffff8])) [13 p+0 S4 A32])) "kernel/fork.c":161:14 75 {*movsi_internal}
      (nil))
 (insn 352 351 353 19 (set (mem:SI (reg/f:SI 320) [1 p_134->state+0 S4 A32])
-        (const_int 0 [0])) "kernel/fork.c":158:14 75 {*movsi_internal}
+        (const_int 0 [0])) "kernel/fork.c":161:14 75 {*movsi_internal}
      (nil))
 (insn 353 352 354 19 (set (reg:SI 202 [ _125 ])
         (mem/c:SI (plus:SI (reg:SI 82)
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("last_pid") [flags 0x2]  <var_decl 0x77287f72e750 last_pid>)
-                        ] UNSPEC_GOTOFF))) [1 last_pid+0 S4 A32])) "kernel/fork.c":159:12 75 {*movsi_internal}
+                            (symbol_ref:SI ("last_pid") [flags 0x2]  <var_decl 0x77e52d72e750 last_pid>)
+                        ] UNSPEC_GOTOFF))) [1 last_pid+0 S4 A32])) "kernel/fork.c":162:12 75 {*movsi_internal}
      (nil))
 (code_label 354 353 355 20 23 (nil) [0 uses])
 (note 355 354 356 20 [bb 20] NOTE_INSN_BASIC_BLOCK)
 (insn 356 355 360 20 (set (reg:SI 203 [ <retval> ])
-        (reg:SI 202 [ _125 ])) "kernel/fork.c":160:1 75 {*movsi_internal}
+        (reg:SI 202 [ _125 ])) "kernel/fork.c":163:1 75 {*movsi_internal}
      (nil))
 (insn 360 356 361 20 (set (reg/i:SI 0 ax)
-        (reg:SI 203 [ <retval> ])) "kernel/fork.c":160:1 75 {*movsi_internal}
+        (reg:SI 203 [ <retval> ])) "kernel/fork.c":163:1 75 {*movsi_internal}
      (nil))
-(insn 361 360 0 20 (use (reg/i:SI 0 ax)) "kernel/fork.c":160:1 -1
+(insn 361 360 0 20 (use (reg/i:SI 0 ax)) "kernel/fork.c":163:1 -1
      (nil))

@@ -10,7 +10,9 @@
  * These are not to be changed without changing head.s etc.
  * Current version only support litter than 16Mb.
  */
-#define LOW_MEM        0x100000
+
+
+#define LOW_MEM        0x100000 //用于标识系统中可用于普通分配的最低物理内存地址。
 #define PAGING_MEMORY  (15 * 1024 * 1024)
 #define PAGING_PAGES   (PAGING_MEMORY >> 12)
 #define MAP_NR(addr)   (((addr) - LOW_MEM) >> 12)
@@ -115,16 +117,21 @@ unsigned long get_free_page(void)
 //    0x00006589 <+22>:    mov    ecx,0xf00
 //    0x0000658e <+27>:    mov    edi,edx
 	__asm__("std ; repne ; scasb\n\t"  // scasb = scan stringbtye ,重复检测ax和di位置
-			"jne 1f\n\t"			   // 看到这里
-			"movb $1, 1(%%edi)\n\t"
-			"sall $12, %%ecx\n\t"
-			"addl %2, %%ecx\n\t"
-			"movl %%ecx, %%edx\n\t"
-			"movl $1024, %%ecx\n\t"
-			"leal 4092(%%edx), %%edi\n\t"
-			"rep ; stosl\n\t"
-			" movl %%edx, %%eax\n"
-			"1:cld"
+									   // 看内存内容的话，字符串一直都是dddddddd(64646464)
+									   // 0x24756 <mem_map+3798>: 0x00000000      0x00000000      0x64640000      0x64646464
+									   // 0x24766 <mem_map+3814>: 0x64646464      0x64646464      0x64646464      0x64646464
+									   // 0x24776 <mem_map+3830>: 0x64646464      0x64646464      0x00006464      0x000000fe
+			"jne 1f\n\t"			   // 直到从后往前第一个00， 0x2475e,注意这里地址是数组地址！
+			"movb $1, 1(%%edi)\n\t"    // 把1写入找到的位置  0x64640100
+			"sall $12, %%ecx\n\t"      // ecx左移12位，也就是*4K，这里ecx应该是循环剩下的计数0xedf,*4K是前面对应的页的总大小
+			"addl %2, %%ecx\n\t"       // ecx加上参数2，"i" (LOW_MEM)，0x100000，最低可用物理地址，加上后就是现在设1的页物理地址
+			"movl %%ecx, %%edx\n\t"    // 赋值给edx，现在edx成了设1的物理地址，也就是抓到的页 0xfdf000 这个位置是物理地址，free的，可以拿来当一个页存数据
+			"movl $1024, %%ecx\n\t"    // ecx设置成立即数1024
+			"leal 4092(%%edx), %%edi\n\t"  // 4092+edx -> esi:[edi] ,4092看起来是不是很熟悉？熟悉就错了，不是页表最后一项，看下面
+									   // 这里edx+4092，那么就是挪到了当前抓到的页的最后4byte，这里放着的是什么呢?这里面就是页表
+			"rep ; stosl\n\t"          // 看这里，为什么是4092，不是为了操作页表最后一位，而是从最后4字节开始往前覆盖0x0
+			"movl %%edx, %%eax\n"      // 把edx放进eax中，就是物理地址放进eax，返回的时候就知道free页的地址了
+			"1:cld"                    // 没找到的话就清除方向位，直接返回eax，这里是0x0
 			: "=a" (__res)
 			: "0" (0), "i" (LOW_MEM), "c" (PAGING_PAGES),
 			  "D" (mem_map + PAGING_PAGES - 1)

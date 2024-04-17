@@ -47,7 +47,7 @@ Dataflow summary:
         (nil)))
 (note 2 51 6 2 NOTE_INSN_FUNCTION_BEG)
 (call_insn 6 2 8 2 (set (reg:SI 0 ax)
-        (call (mem:QI (symbol_ref:SI ("get_free_page") [flags 0x41]  <function_decl 0x72d5cb6d2b00 get_free_page>) [0 get_free_page S1 A8])
+        (call (mem:QI (symbol_ref:SI ("get_free_page") [flags 0x41]  <function_decl 0x7c386e4d2b00 get_free_page>) [0 get_free_page S1 A8])
             (const_int 0 [0]))) "lib/malloc.c":104:41 823 {*call_value}
      (nil)
     (expr_list (use (reg:SI 3 bx))
@@ -88,15 +88,15 @@ Dataflow summary:
 (insn 15 14 16 3 (set (reg/f:SI 0 ax [87])
         (plus:SI (reg:SI 3 bx [82])
             (const:SI (unspec:SI [
-                        (symbol_ref/f:SI ("*.LC0") [flags 0x2]  <var_decl 0x72d5cb6fbcf0 *.LC0>)
+                        (symbol_ref/f:SI ("*.LC0") [flags 0x2]  <var_decl 0x7c386e4fbcf0 *.LC0>)
                     ] UNSPEC_GOTOFF)))) "lib/malloc.c":106:3 205 {*leasi}
-     (expr_list:REG_EQUAL (symbol_ref/f:SI ("*.LC0") [flags 0x2]  <var_decl 0x72d5cb6fbcf0 *.LC0>)
+     (expr_list:REG_EQUAL (symbol_ref/f:SI ("*.LC0") [flags 0x2]  <var_decl 0x7c386e4fbcf0 *.LC0>)
         (nil)))
 (insn 16 15 18 3 (set (mem/f:SI (pre_dec:SI (reg/f:SI 7 sp)) [7  S4 A32])
         (reg/f:SI 0 ax [87])) "lib/malloc.c":106:3 54 {*pushsi2}
      (expr_list:REG_ARGS_SIZE (const_int 16 [0x10])
         (nil)))
-(call_insn 18 16 19 3 (call (mem:QI (symbol_ref:SI ("panic") [flags 0x41]  <function_decl 0x72d5cb6d2900 panic>) [0 panic S1 A8])
+(call_insn 18 16 19 3 (call (mem:QI (symbol_ref:SI ("panic") [flags 0x41]  <function_decl 0x7c386e4d2900 panic>) [0 panic S1 A8])
         (const_int 16 [0x10])) "lib/malloc.c":106:3 812 {*call}
      (nil)
     (expr_list (use (reg:SI 3 bx))
@@ -174,7 +174,7 @@ Dataflow summary:
 (insn 40 39 41 7 (set (reg/f:SI 1 dx [orig:85 free_bucket_desc.1_3 ] [85])
         (mem/f/c:SI (plus:SI (reg:SI 3 bx [82])
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("free_bucket_desc") [flags 0x2]  <var_decl 0x72d5cd093f30 free_bucket_desc>)
+                            (symbol_ref:SI ("free_bucket_desc") [flags 0x2]  <var_decl 0x7c386fe6ef30 free_bucket_desc>)
                         ] UNSPEC_GOTOFF))) [1 free_bucket_desc+0 S4 A32])) "lib/malloc.c":115:14 75 {*movsi_internal}
      (nil))
 (insn 41 40 42 7 (set (reg/f:SI 0 ax [90])
@@ -191,7 +191,7 @@ Dataflow summary:
      (nil))
 (insn 44 43 50 7 (set (mem/f/c:SI (plus:SI (reg:SI 3 bx [82])
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("free_bucket_desc") [flags 0x2]  <var_decl 0x72d5cd093f30 free_bucket_desc>)
+                            (symbol_ref:SI ("free_bucket_desc") [flags 0x2]  <var_decl 0x7c386fe6ef30 free_bucket_desc>)
                         ] UNSPEC_GOTOFF))) [1 free_bucket_desc+0 S4 A32])
         (reg/f:SI 0 ax [91])) "lib/malloc.c":116:19 75 {*movsi_internal}
      (nil))
@@ -277,9 +277,9 @@ Dataflow summary:
 (insn 5 2 6 2 (set (reg/f:SI 0 ax [106])
         (plus:SI (reg:SI 3 bx [82])
             (const:SI (unspec:SI [
-                        (symbol_ref:SI ("bucket_dir") [flags 0x2]  <var_decl 0x72d5cd093d80 bucket_dir>)
+                        (symbol_ref:SI ("bucket_dir") [flags 0x2]  <var_decl 0x7c386fe6ed80 bucket_dir>)
                     ] UNSPEC_GOTOFF)))) "lib/malloc.c":129:12 205 {*leasi}
-     (expr_list:REG_EQUAL (symbol_ref:SI ("bucket_dir") [flags 0x2]  <var_decl 0x72d5cd093d80 bucket_dir>)
+     (expr_list:REG_EQUAL (symbol_ref:SI ("bucket_dir") [flags 0x2]  <var_decl 0x7c386fe6ed80 bucket_dir>)
         (nil)))
 (insn 6 5 182 2 (set (mem/f/c:SI (plus:SI (reg/f:SI 7 sp)
                 (const_int 28 [0x1c])) [8 bdir+0 S4 A32])
@@ -388,16 +388,16 @@ Dataflow summary:
 (insn 37 36 38 9 (set (reg/f:SI 0 ax [110])
         (plus:SI (reg:SI 3 bx [82])
             (const:SI (unspec:SI [
-                        (symbol_ref/f:SI ("*.LC1") [flags 0x2]  <var_decl 0x72d5cb6fbf30 *.LC1>)
+                        (symbol_ref/f:SI ("*.LC1") [flags 0x2]  <var_decl 0x7c386e4fbf30 *.LC1>)
                     ] UNSPEC_GOTOFF)))) "lib/malloc.c":133:3 205 {*leasi}
-     (expr_list:REG_EQUAL (symbol_ref/f:SI ("*.LC1") [flags 0x2]  <var_decl 0x72d5cb6fbf30 *.LC1>)
+     (expr_list:REG_EQUAL (symbol_ref/f:SI ("*.LC1") [flags 0x2]  <var_decl 0x7c386e4fbf30 *.LC1>)
         (nil)))
 (insn 38 37 40 9 (set (mem/f:SI (pre_dec:SI (reg/f:SI 7 sp)) [7  S4 A32])
         (reg/f:SI 0 ax [110])) "lib/malloc.c":133:3 54 {*pushsi2}
      (expr_list:REG_ARGS_SIZE (const_int 16 [0x10])
         (nil)))
 (call_insn 40 38 41 9 (set (reg:SI 0 ax)
-        (call (mem:QI (symbol_ref:SI ("printk") [flags 0x41]  <function_decl 0x72d5cb6d2700 printk>) [0 printk S1 A8])
+        (call (mem:QI (symbol_ref:SI ("printk") [flags 0x41]  <function_decl 0x7c386e4d2700 printk>) [0 printk S1 A8])
             (const_int 16 [0x10]))) "lib/malloc.c":133:3 823 {*call_value}
      (nil)
     (expr_list (use (reg:SI 3 bx))
@@ -421,15 +421,15 @@ Dataflow summary:
 (insn 43 42 44 9 (set (reg/f:SI 0 ax [111])
         (plus:SI (reg:SI 3 bx [82])
             (const:SI (unspec:SI [
-                        (symbol_ref/f:SI ("*.LC2") [flags 0x2]  <var_decl 0x72d5cb6fbd80 *.LC2>)
+                        (symbol_ref/f:SI ("*.LC2") [flags 0x2]  <var_decl 0x7c386e4fbd80 *.LC2>)
                     ] UNSPEC_GOTOFF)))) "lib/malloc.c":135:3 205 {*leasi}
-     (expr_list:REG_EQUAL (symbol_ref/f:SI ("*.LC2") [flags 0x2]  <var_decl 0x72d5cb6fbd80 *.LC2>)
+     (expr_list:REG_EQUAL (symbol_ref/f:SI ("*.LC2") [flags 0x2]  <var_decl 0x7c386e4fbd80 *.LC2>)
         (nil)))
 (insn 44 43 46 9 (set (mem/f:SI (pre_dec:SI (reg/f:SI 7 sp)) [7  S4 A32])
         (reg/f:SI 0 ax [111])) "lib/malloc.c":135:3 54 {*pushsi2}
      (expr_list:REG_ARGS_SIZE (const_int 16 [0x10])
         (nil)))
-(call_insn 46 44 47 9 (call (mem:QI (symbol_ref:SI ("panic") [flags 0x41]  <function_decl 0x72d5cb6d2900 panic>) [0 panic S1 A8])
+(call_insn 46 44 47 9 (call (mem:QI (symbol_ref:SI ("panic") [flags 0x41]  <function_decl 0x7c386e4d2900 panic>) [0 panic S1 A8])
         (const_int 16 [0x10])) "lib/malloc.c":135:3 812 {*call}
      (nil)
     (expr_list (use (reg:SI 3 bx))
@@ -544,7 +544,7 @@ Dataflow summary:
 (insn 79 78 80 17 (set (reg/f:SI 0 ax [orig:88 free_bucket_desc.0_6 ] [88])
         (mem/f/c:SI (plus:SI (reg:SI 3 bx [82])
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("free_bucket_desc") [flags 0x2]  <var_decl 0x72d5cd093f30 free_bucket_desc>)
+                            (symbol_ref:SI ("free_bucket_desc") [flags 0x2]  <var_decl 0x7c386fe6ef30 free_bucket_desc>)
                         ] UNSPEC_GOTOFF))) [1 free_bucket_desc+0 S4 A32])) "lib/malloc.c":152:7 75 {*movsi_internal}
      (nil))
 (insn 80 79 81 17 (set (reg:CCZ 17 flags)
@@ -559,7 +559,7 @@ Dataflow summary:
      (nil)
  -> 84)
 (note 82 81 83 18 [bb 18] NOTE_INSN_BASIC_BLOCK)
-(call_insn 83 82 84 18 (call (mem:QI (symbol_ref:SI ("init_bucket_desc") [flags 0x3]  <function_decl 0x72d5cb6f9000 init_bucket_desc>) [0 init_bucket_desc S1 A8])
+(call_insn 83 82 84 18 (call (mem:QI (symbol_ref:SI ("init_bucket_desc") [flags 0x3]  <function_decl 0x7c386e4f9000 init_bucket_desc>) [0 init_bucket_desc S1 A8])
         (const_int 0 [0])) "lib/malloc.c":153:4 812 {*call}
      (nil)
     (nil))
@@ -568,7 +568,7 @@ Dataflow summary:
 (insn 86 85 87 19 (set (reg/f:SI 0 ax [117])
         (mem/f/c:SI (plus:SI (reg:SI 3 bx [82])
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("free_bucket_desc") [flags 0x2]  <var_decl 0x72d5cd093f30 free_bucket_desc>)
+                            (symbol_ref:SI ("free_bucket_desc") [flags 0x2]  <var_decl 0x7c386fe6ef30 free_bucket_desc>)
                         ] UNSPEC_GOTOFF))) [1 free_bucket_desc+0 S4 A32])) "lib/malloc.c":154:9 75 {*movsi_internal}
      (nil))
 (insn 87 86 88 19 (set (mem/f/c:SI (plus:SI (reg/f:SI 7 sp)
@@ -585,7 +585,7 @@ Dataflow summary:
      (nil))
 (insn 90 89 91 19 (set (mem/f/c:SI (plus:SI (reg:SI 3 bx [82])
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("free_bucket_desc") [flags 0x2]  <var_decl 0x72d5cd093f30 free_bucket_desc>)
+                            (symbol_ref:SI ("free_bucket_desc") [flags 0x2]  <var_decl 0x7c386fe6ef30 free_bucket_desc>)
                         ] UNSPEC_GOTOFF))) [1 free_bucket_desc+0 S4 A32])
         (reg/f:SI 0 ax [orig:89 _7 ] [89])) "lib/malloc.c":155:20 75 {*movsi_internal}
      (nil))
@@ -616,7 +616,7 @@ Dataflow summary:
         (reg:HI 1 dx [orig:91 _9 ] [91])) "lib/malloc.c":157:22 76 {*movhi_internal}
      (nil))
 (call_insn 99 97 101 19 (set (reg:SI 0 ax)
-        (call (mem:QI (symbol_ref:SI ("get_free_page") [flags 0x41]  <function_decl 0x72d5cb6d2b00 get_free_page>) [0 get_free_page S1 A8])
+        (call (mem:QI (symbol_ref:SI ("get_free_page") [flags 0x41]  <function_decl 0x7c386e4d2b00 get_free_page>) [0 get_free_page S1 A8])
             (const_int 0 [0]))) "lib/malloc.c":158:57 823 {*call_value}
      (nil)
     (expr_list (use (reg:SI 3 bx))
@@ -676,15 +676,15 @@ Dataflow summary:
 (insn 113 112 114 20 (set (reg/f:SI 0 ax [126])
         (plus:SI (reg:SI 3 bx [82])
             (const:SI (unspec:SI [
-                        (symbol_ref/f:SI ("*.LC3") [flags 0x2]  <var_decl 0x72d5cb72c000 *.LC3>)
+                        (symbol_ref/f:SI ("*.LC3") [flags 0x2]  <var_decl 0x7c386e52c000 *.LC3>)
                     ] UNSPEC_GOTOFF)))) "lib/malloc.c":160:4 205 {*leasi}
-     (expr_list:REG_EQUAL (symbol_ref/f:SI ("*.LC3") [flags 0x2]  <var_decl 0x72d5cb72c000 *.LC3>)
+     (expr_list:REG_EQUAL (symbol_ref/f:SI ("*.LC3") [flags 0x2]  <var_decl 0x7c386e52c000 *.LC3>)
         (nil)))
 (insn 114 113 116 20 (set (mem/f:SI (pre_dec:SI (reg/f:SI 7 sp)) [7  S4 A32])
         (reg/f:SI 0 ax [126])) "lib/malloc.c":160:4 54 {*pushsi2}
      (expr_list:REG_ARGS_SIZE (const_int 16 [0x10])
         (nil)))
-(call_insn 116 114 117 20 (call (mem:QI (symbol_ref:SI ("panic") [flags 0x41]  <function_decl 0x72d5cb6d2900 panic>) [0 panic S1 A8])
+(call_insn 116 114 117 20 (call (mem:QI (symbol_ref:SI ("panic") [flags 0x41]  <function_decl 0x7c386e4d2900 panic>) [0 panic S1 A8])
         (const_int 16 [0x10])) "lib/malloc.c":160:4 812 {*call}
      (nil)
     (expr_list (use (reg:SI 3 bx))
@@ -1007,9 +1007,9 @@ Dataflow summary:
 (insn 11 10 12 2 (set (reg/f:SI 0 ax [102])
         (plus:SI (reg:SI 3 bx [82])
             (const:SI (unspec:SI [
-                        (symbol_ref:SI ("bucket_dir") [flags 0x2]  <var_decl 0x72d5cd093d80 bucket_dir>)
+                        (symbol_ref:SI ("bucket_dir") [flags 0x2]  <var_decl 0x7c386fe6ed80 bucket_dir>)
                     ] UNSPEC_GOTOFF)))) "lib/malloc.c":193:12 205 {*leasi}
-     (expr_list:REG_EQUAL (symbol_ref:SI ("bucket_dir") [flags 0x2]  <var_decl 0x72d5cd093d80 bucket_dir>)
+     (expr_list:REG_EQUAL (symbol_ref:SI ("bucket_dir") [flags 0x2]  <var_decl 0x7c386fe6ed80 bucket_dir>)
         (nil)))
 (insn 12 11 182 2 (set (mem/f/c:SI (plus:SI (reg/f:SI 7 sp)
                 (const_int 12 [0xc])) [8 bdir+0 S4 A32])
@@ -1171,15 +1171,15 @@ Dataflow summary:
 (insn 63 62 64 12 (set (reg/f:SI 0 ax [111])
         (plus:SI (reg:SI 3 bx [82])
             (const:SI (unspec:SI [
-                        (symbol_ref/f:SI ("*.LC4") [flags 0x2]  <var_decl 0x72d5cb72c1b0 *.LC4>)
+                        (symbol_ref/f:SI ("*.LC4") [flags 0x2]  <var_decl 0x7c386e52c1b0 *.LC4>)
                     ] UNSPEC_GOTOFF)))) "lib/malloc.c":204:2 205 {*leasi}
-     (expr_list:REG_EQUAL (symbol_ref/f:SI ("*.LC4") [flags 0x2]  <var_decl 0x72d5cb72c1b0 *.LC4>)
+     (expr_list:REG_EQUAL (symbol_ref/f:SI ("*.LC4") [flags 0x2]  <var_decl 0x7c386e52c1b0 *.LC4>)
         (nil)))
 (insn 64 63 66 12 (set (mem/f:SI (pre_dec:SI (reg/f:SI 7 sp)) [7  S4 A32])
         (reg/f:SI 0 ax [111])) "lib/malloc.c":204:2 54 {*pushsi2}
      (expr_list:REG_ARGS_SIZE (const_int 16 [0x10])
         (nil)))
-(call_insn 66 64 67 12 (call (mem:QI (symbol_ref:SI ("panic") [flags 0x41]  <function_decl 0x72d5cb6d2900 panic>) [0 panic S1 A8])
+(call_insn 66 64 67 12 (call (mem:QI (symbol_ref:SI ("panic") [flags 0x41]  <function_decl 0x7c386e4d2900 panic>) [0 panic S1 A8])
         (const_int 16 [0x10])) "lib/malloc.c":204:2 812 {*call}
      (nil)
     (expr_list (use (reg:SI 3 bx))
@@ -1493,15 +1493,15 @@ Dataflow summary:
 (insn 148 147 149 28 (set (reg/f:SI 0 ax [129])
         (plus:SI (reg:SI 3 bx [82])
             (const:SI (unspec:SI [
-                        (symbol_ref/f:SI ("*.LC5") [flags 0x2]  <var_decl 0x72d5cb72c240 *.LC5>)
+                        (symbol_ref/f:SI ("*.LC5") [flags 0x2]  <var_decl 0x7c386e52c240 *.LC5>)
                     ] UNSPEC_GOTOFF)))) "lib/malloc.c":224:5 205 {*leasi}
-     (expr_list:REG_EQUAL (symbol_ref/f:SI ("*.LC5") [flags 0x2]  <var_decl 0x72d5cb72c240 *.LC5>)
+     (expr_list:REG_EQUAL (symbol_ref/f:SI ("*.LC5") [flags 0x2]  <var_decl 0x7c386e52c240 *.LC5>)
         (nil)))
 (insn 149 148 151 28 (set (mem/f:SI (pre_dec:SI (reg/f:SI 7 sp)) [7  S4 A32])
         (reg/f:SI 0 ax [129])) "lib/malloc.c":224:5 54 {*pushsi2}
      (expr_list:REG_ARGS_SIZE (const_int 16 [0x10])
         (nil)))
-(call_insn 151 149 152 28 (call (mem:QI (symbol_ref:SI ("panic") [flags 0x41]  <function_decl 0x72d5cb6d2900 panic>) [0 panic S1 A8])
+(call_insn 151 149 152 28 (call (mem:QI (symbol_ref:SI ("panic") [flags 0x41]  <function_decl 0x7c386e4d2900 panic>) [0 panic S1 A8])
         (const_int 16 [0x10])) "lib/malloc.c":224:5 812 {*call}
      (nil)
     (expr_list (use (reg:SI 3 bx))
@@ -1553,7 +1553,7 @@ Dataflow summary:
         (reg:SI 0 ax [orig:99 _18 ] [99])) "lib/malloc.c":227:3 54 {*pushsi2}
      (expr_list:REG_ARGS_SIZE (const_int 16 [0x10])
         (nil)))
-(call_insn 167 165 168 30 (call (mem:QI (symbol_ref:SI ("free_page") [flags 0x41]  <function_decl 0x72d5cb6d2a00 free_page>) [0 free_page S1 A8])
+(call_insn 167 165 168 30 (call (mem:QI (symbol_ref:SI ("free_page") [flags 0x41]  <function_decl 0x7c386e4d2a00 free_page>) [0 free_page S1 A8])
         (const_int 16 [0x10])) "lib/malloc.c":227:3 812 {*call}
      (nil)
     (expr_list (use (reg:SI 3 bx))
@@ -1569,7 +1569,7 @@ Dataflow summary:
 (insn 169 168 170 30 (set (reg/f:SI 1 dx [orig:100 free_bucket_desc.3_19 ] [100])
         (mem/f/c:SI (plus:SI (reg:SI 3 bx [82])
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("free_bucket_desc") [flags 0x2]  <var_decl 0x72d5cd093f30 free_bucket_desc>)
+                            (symbol_ref:SI ("free_bucket_desc") [flags 0x2]  <var_decl 0x7c386fe6ef30 free_bucket_desc>)
                         ] UNSPEC_GOTOFF))) [1 free_bucket_desc+0 S4 A32])) "lib/malloc.c":228:15 75 {*movsi_internal}
      (nil))
 (insn 170 169 171 30 (set (reg/f:SI 0 ax [133])
@@ -1586,7 +1586,7 @@ Dataflow summary:
      (nil))
 (insn 173 172 174 30 (set (mem/f/c:SI (plus:SI (reg:SI 3 bx [82])
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("free_bucket_desc") [flags 0x2]  <var_decl 0x72d5cd093f30 free_bucket_desc>)
+                            (symbol_ref:SI ("free_bucket_desc") [flags 0x2]  <var_decl 0x7c386fe6ef30 free_bucket_desc>)
                         ] UNSPEC_GOTOFF))) [1 free_bucket_desc+0 S4 A32])
         (reg/f:SI 0 ax [134])) "lib/malloc.c":229:20 75 {*movsi_internal}
      (nil))

@@ -81,7 +81,7 @@ Dataflow summary:
         (reg/f:SI 0 ax [orig:83 _1 ] [83])) "fs/super.c":37:9 54 {*pushsi2}
      (expr_list:REG_ARGS_SIZE (const_int 16 [0x10])
         (nil)))
-(call_insn 14 12 15 3 (call (mem:QI (symbol_ref:SI ("sleep_on") [flags 0x41]  <function_decl 0x77d7fb110f00 sleep_on>) [0 sleep_on S1 A8])
+(call_insn 14 12 15 3 (call (mem:QI (symbol_ref:SI ("sleep_on") [flags 0x41]  <function_decl 0x7f4596310f00 sleep_on>) [0 sleep_on S1 A8])
         (const_int 16 [0x10])) "fs/super.c":37:9 812 {*call}
      (nil)
     (expr_list (use (reg:SI 3 bx))
@@ -219,9 +219,9 @@ Dataflow summary:
 (insn 13 12 14 4 (set (reg/f:SI 0 ax [90])
         (plus:SI (reg:SI 3 bx [82])
             (const:SI (unspec:SI [
-                        (symbol_ref:SI ("super_block") [flags 0x2]  <var_decl 0x77d7fc948c60 super_block>)
+                        (symbol_ref:SI ("super_block") [flags 0x2]  <var_decl 0x7f4597cacc60 super_block>)
                     ] UNSPEC_GOTOFF)))) "fs/super.c":48:6 205 {*leasi}
-     (expr_list:REG_EQUAL (symbol_ref:SI ("super_block") [flags 0x2]  <var_decl 0x77d7fc948c60 super_block>)
+     (expr_list:REG_EQUAL (symbol_ref:SI ("super_block") [flags 0x2]  <var_decl 0x7f4597cacc60 super_block>)
         (nil)))
 (insn 14 13 65 4 (set (mem/f/c:SI (plus:SI (reg/f:SI 7 sp)
                 (const_int 12 [0xc])) [19 s+0 S4 A32])
@@ -271,7 +271,7 @@ Dataflow summary:
                 (const_int 24 [0x18])) [19 s+0 S4 A32])) "fs/super.c":51:12 54 {*pushsi2}
      (expr_list:REG_ARGS_SIZE (const_int 16 [0x10])
         (nil)))
-(call_insn 26 25 27 6 (call (mem:QI (symbol_ref:SI ("wait_on_super") [flags 0x3]  <function_decl 0x77d7fb137f00 wait_on_super>) [0 wait_on_super S1 A8])
+(call_insn 26 25 27 6 (call (mem:QI (symbol_ref:SI ("wait_on_super") [flags 0x3]  <function_decl 0x7f4596337f00 wait_on_super>) [0 wait_on_super S1 A8])
         (const_int 16 [0x10])) "fs/super.c":51:12 812 {*call}
      (nil)
     (nil))
@@ -321,9 +321,9 @@ Dataflow summary:
 (insn 39 38 40 8 (set (reg/f:SI 0 ax [93])
         (plus:SI (reg:SI 3 bx [82])
             (const:SI (unspec:SI [
-                        (symbol_ref:SI ("super_block") [flags 0x2]  <var_decl 0x77d7fc948c60 super_block>)
+                        (symbol_ref:SI ("super_block") [flags 0x2]  <var_decl 0x7f4597cacc60 super_block>)
                     ] UNSPEC_GOTOFF)))) "fs/super.c":54:14 205 {*leasi}
-     (expr_list:REG_EQUAL (symbol_ref:SI ("super_block") [flags 0x2]  <var_decl 0x77d7fc948c60 super_block>)
+     (expr_list:REG_EQUAL (symbol_ref:SI ("super_block") [flags 0x2]  <var_decl 0x7f4597cacc60 super_block>)
         (nil)))
 (insn 40 39 69 8 (set (mem/f/c:SI (plus:SI (reg/f:SI 7 sp)
                 (const_int 12 [0xc])) [19 s+0 S4 A32])
@@ -350,10 +350,10 @@ Dataflow summary:
 (insn 48 47 50 10 (set (reg/f:SI 0 ax [orig:87 _5 ] [87])
         (plus:SI (reg:SI 3 bx [82])
             (const:SI (plus:SI (unspec:SI [
-                            (symbol_ref:SI ("super_block") [flags 0x2]  <var_decl 0x77d7fc948c60 super_block>)
+                            (symbol_ref:SI ("super_block") [flags 0x2]  <var_decl 0x7f4597cacc60 super_block>)
                         ] UNSPEC_GOTOFF)
                     (const_int 864 [0x360]))))) "fs/super.c":49:24 205 {*leasi}
-     (expr_list:REG_EQUAL (const:SI (plus:SI (symbol_ref:SI ("super_block") [flags 0x2]  <var_decl 0x77d7fc948c60 super_block>)
+     (expr_list:REG_EQUAL (const:SI (plus:SI (symbol_ref:SI ("super_block") [flags 0x2]  <var_decl 0x7f4597cacc60 super_block>)
                 (const_int 864 [0x360])))
         (nil)))
 (insn 50 48 51 10 (set (reg:CC 17 flags)
@@ -483,7 +483,7 @@ Dataflow summary:
         (reg/f:SI 0 ax [orig:83 _1 ] [83])) "fs/super.c":64:9 54 {*pushsi2}
      (expr_list:REG_ARGS_SIZE (const_int 16 [0x10])
         (nil)))
-(call_insn 14 12 15 3 (call (mem:QI (symbol_ref:SI ("sleep_on") [flags 0x41]  <function_decl 0x77d7fb110f00 sleep_on>) [0 sleep_on S1 A8])
+(call_insn 14 12 15 3 (call (mem:QI (symbol_ref:SI ("sleep_on") [flags 0x41]  <function_decl 0x7f4596310f00 sleep_on>) [0 sleep_on S1 A8])
         (const_int 16 [0x10])) "fs/super.c":64:9 812 {*call}
      (nil)
     (expr_list (use (reg:SI 3 bx))
@@ -646,7 +646,7 @@ Dataflow summary:
 (insn 12 11 13 2 (set (reg:SI 3 bx)
         (reg:SI 0 ax [82])) "fs/super.c":73:5 75 {*movsi_internal}
      (nil))
-(call_insn 13 12 14 2 (call (mem:QI (symbol_ref:SI ("wake_up") [flags 0x41]  <function_decl 0x77d7fb137300 wake_up>) [0 wake_up S1 A8])
+(call_insn 13 12 14 2 (call (mem:QI (symbol_ref:SI ("wake_up") [flags 0x41]  <function_decl 0x7f4596337300 wake_up>) [0 wake_up S1 A8])
         (const_int 16 [0x10])) "fs/super.c":73:5 812 {*call}
      (nil)
     (expr_list (use (reg:SI 3 bx))
@@ -772,7 +772,7 @@ Dataflow summary:
                 (const_int 44 [0x2c])) [9 dev+0 S4 A32])) "fs/super.c":85:5 54 {*pushsi2}
      (expr_list:REG_ARGS_SIZE (const_int 16 [0x10])
         (nil)))
-(call_insn 16 14 17 4 (call (mem:QI (symbol_ref:SI ("check_disk_change") [flags 0x41]  <function_decl 0x77d7fb10ea00 check_disk_change>) [0 check_disk_change S1 A8])
+(call_insn 16 14 17 4 (call (mem:QI (symbol_ref:SI ("check_disk_change") [flags 0x41]  <function_decl 0x7f459630ea00 check_disk_change>) [0 check_disk_change S1 A8])
         (const_int 16 [0x10])) "fs/super.c":85:5 812 {*call}
      (nil)
     (expr_list (use (reg:SI 3 bx))
@@ -799,7 +799,7 @@ Dataflow summary:
      (expr_list:REG_ARGS_SIZE (const_int 16 [0x10])
         (nil)))
 (call_insn 20 19 21 4 (set (reg:SI 0 ax)
-        (call (mem:QI (symbol_ref:SI ("get_super") [flags 0x3]  <function_decl 0x77d7fb10e000 get_super>) [0 get_super S1 A8])
+        (call (mem:QI (symbol_ref:SI ("get_super") [flags 0x3]  <function_decl 0x7f459630e000 get_super>) [0 get_super S1 A8])
             (const_int 16 [0x10]))) "fs/super.c":86:14 823 {*call_value}
      (nil)
     (nil))
@@ -842,9 +842,9 @@ Dataflow summary:
 (insn 32 31 33 6 (set (reg/f:SI 0 ax [120])
         (plus:SI (reg:SI 3 bx [82])
             (const:SI (unspec:SI [
-                        (symbol_ref:SI ("super_block") [flags 0x2]  <var_decl 0x77d7fc948c60 super_block>)
+                        (symbol_ref:SI ("super_block") [flags 0x2]  <var_decl 0x7f4597cacc60 super_block>)
                     ] UNSPEC_GOTOFF)))) "fs/super.c":89:12 205 {*leasi}
-     (expr_list:REG_EQUAL (symbol_ref:SI ("super_block") [flags 0x2]  <var_decl 0x77d7fc948c60 super_block>)
+     (expr_list:REG_EQUAL (symbol_ref:SI ("super_block") [flags 0x2]  <var_decl 0x7f4597cacc60 super_block>)
         (nil)))
 (insn 33 32 54 6 (set (mem/f/c:SI (plus:SI (reg/f:SI 7 sp)
                 (const_int 12 [0xc])) [19 s+0 S4 A32])
@@ -855,10 +855,10 @@ Dataflow summary:
 (insn 35 34 36 7 (set (reg/f:SI 0 ax [orig:83 _1 ] [83])
         (plus:SI (reg:SI 3 bx [82])
             (const:SI (plus:SI (unspec:SI [
-                            (symbol_ref:SI ("super_block") [flags 0x2]  <var_decl 0x77d7fc948c60 super_block>)
+                            (symbol_ref:SI ("super_block") [flags 0x2]  <var_decl 0x7f4597cacc60 super_block>)
                         ] UNSPEC_GOTOFF)
                     (const_int 864 [0x360]))))) "fs/super.c":90:27 205 {*leasi}
-     (expr_list:REG_EQUAL (const:SI (plus:SI (symbol_ref:SI ("super_block") [flags 0x2]  <var_decl 0x77d7fc948c60 super_block>)
+     (expr_list:REG_EQUAL (const:SI (plus:SI (symbol_ref:SI ("super_block") [flags 0x2]  <var_decl 0x7f4597cacc60 super_block>)
                 (const_int 864 [0x360])))
         (nil)))
 (insn 36 35 37 7 (set (reg:CC 17 flags)
@@ -990,7 +990,7 @@ Dataflow summary:
                 (const_int 24 [0x18])) [19 s+0 S4 A32])) "fs/super.c":101:5 54 {*pushsi2}
      (expr_list:REG_ARGS_SIZE (const_int 16 [0x10])
         (nil)))
-(call_insn 75 74 76 11 (call (mem:QI (symbol_ref:SI ("lock_super") [flags 0x3]  <function_decl 0x77d7fb137d00 lock_super>) [0 lock_super S1 A8])
+(call_insn 75 74 76 11 (call (mem:QI (symbol_ref:SI ("lock_super") [flags 0x3]  <function_decl 0x7f4596337d00 lock_super>) [0 lock_super S1 A8])
         (const_int 16 [0x10])) "fs/super.c":101:5 812 {*call}
      (nil)
     (nil))
@@ -1020,7 +1020,7 @@ Dataflow summary:
      (expr_list:REG_ARGS_SIZE (const_int 16 [0x10])
         (nil)))
 (call_insn 81 79 82 11 (set (reg:SI 0 ax)
-        (call (mem:QI (symbol_ref:SI ("bread") [flags 0x41]  <function_decl 0x77d7fb10e100 bread>) [0 bread S1 A8])
+        (call (mem:QI (symbol_ref:SI ("bread") [flags 0x41]  <function_decl 0x7f459630e100 bread>) [0 bread S1 A8])
             (const_int 16 [0x10]))) "fs/super.c":102:16 823 {*call_value}
      (nil)
     (expr_list (use (reg:SI 3 bx))
@@ -1069,7 +1069,7 @@ Dataflow summary:
                 (const_int 24 [0x18])) [19 s+0 S4 A32])) "fs/super.c":104:9 54 {*pushsi2}
      (expr_list:REG_ARGS_SIZE (const_int 16 [0x10])
         (nil)))
-(call_insn 92 91 93 12 (call (mem:QI (symbol_ref:SI ("free_super") [flags 0x3]  <function_decl 0x77d7fb145100 free_super>) [0 free_super S1 A8])
+(call_insn 92 91 93 12 (call (mem:QI (symbol_ref:SI ("free_super") [flags 0x3]  <function_decl 0x7f4596345100 free_super>) [0 free_super S1 A8])
         (const_int 16 [0x10])) "fs/super.c":104:9 812 {*call}
      (nil)
     (nil))
@@ -1152,7 +1152,7 @@ Dataflow summary:
                 (const_int 12 [0xc])) [4 bh+0 S4 A32])) "fs/super.c":109:5 54 {*pushsi2}
      (expr_list:REG_ARGS_SIZE (const_int 16 [0x10])
         (nil)))
-(call_insn 115 113 116 13 (call (mem:QI (symbol_ref:SI ("brelse") [flags 0x41]  <function_decl 0x77d7fb10e200 brelse>) [0 brelse S1 A8])
+(call_insn 115 113 116 13 (call (mem:QI (symbol_ref:SI ("brelse") [flags 0x41]  <function_decl 0x7f459630e200 brelse>) [0 brelse S1 A8])
         (const_int 16 [0x10])) "fs/super.c":109:5 812 {*call}
      (nil)
     (expr_list (use (reg:SI 3 bx))
@@ -1226,7 +1226,7 @@ Dataflow summary:
                 (const_int 24 [0x18])) [19 s+0 S4 A32])) "fs/super.c":113:9 54 {*pushsi2}
      (expr_list:REG_ARGS_SIZE (const_int 16 [0x10])
         (nil)))
-(call_insn 131 130 132 15 (call (mem:QI (symbol_ref:SI ("free_super") [flags 0x3]  <function_decl 0x77d7fb145100 free_super>) [0 free_super S1 A8])
+(call_insn 131 130 132 15 (call (mem:QI (symbol_ref:SI ("free_super") [flags 0x3]  <function_decl 0x7f4596345100 free_super>) [0 free_super S1 A8])
         (const_int 16 [0x10])) "fs/super.c":113:9 812 {*call}
      (nil)
     (nil))
@@ -1400,7 +1400,7 @@ Dataflow summary:
      (expr_list:REG_ARGS_SIZE (const_int 16 [0x10])
         (nil)))
 (call_insn 181 179 182 23 (set (reg:SI 0 ax)
-        (call (mem:QI (symbol_ref:SI ("bread") [flags 0x41]  <function_decl 0x77d7fb10e100 bread>) [0 bread S1 A8])
+        (call (mem:QI (symbol_ref:SI ("bread") [flags 0x41]  <function_decl 0x7f459630e100 bread>) [0 bread S1 A8])
             (const_int 16 [0x10]))) "fs/super.c":122:29 823 {*call_value}
      (nil)
     (expr_list (use (reg:SI 3 bx))
@@ -1558,7 +1558,7 @@ Dataflow summary:
      (expr_list:REG_ARGS_SIZE (const_int 16 [0x10])
         (nil)))
 (call_insn 223 221 224 29 (set (reg:SI 0 ax)
-        (call (mem:QI (symbol_ref:SI ("bread") [flags 0x41]  <function_decl 0x77d7fb10e100 bread>) [0 bread S1 A8])
+        (call (mem:QI (symbol_ref:SI ("bread") [flags 0x41]  <function_decl 0x7f459630e100 bread>) [0 bread S1 A8])
             (const_int 16 [0x10]))) "fs/super.c":127:29 823 {*call_value}
      (nil)
     (expr_list (use (reg:SI 3 bx))
@@ -1779,7 +1779,7 @@ Dataflow summary:
         (reg/f:SI 0 ax [orig:103 _21 ] [103])) "fs/super.c":133:13 54 {*pushsi2}
      (expr_list:REG_ARGS_SIZE (const_int 16 [0x10])
         (nil)))
-(call_insn 279 277 280 36 (call (mem:QI (symbol_ref:SI ("brelse") [flags 0x41]  <function_decl 0x77d7fb10e200 brelse>) [0 brelse S1 A8])
+(call_insn 279 277 280 36 (call (mem:QI (symbol_ref:SI ("brelse") [flags 0x41]  <function_decl 0x7f459630e200 brelse>) [0 brelse S1 A8])
         (const_int 16 [0x10])) "fs/super.c":133:13 812 {*call}
      (nil)
     (expr_list (use (reg:SI 3 bx))
@@ -1863,7 +1863,7 @@ Dataflow summary:
         (reg/f:SI 0 ax [orig:104 _22 ] [104])) "fs/super.c":135:13 54 {*pushsi2}
      (expr_list:REG_ARGS_SIZE (const_int 16 [0x10])
         (nil)))
-(call_insn 301 299 302 39 (call (mem:QI (symbol_ref:SI ("brelse") [flags 0x41]  <function_decl 0x77d7fb10e200 brelse>) [0 brelse S1 A8])
+(call_insn 301 299 302 39 (call (mem:QI (symbol_ref:SI ("brelse") [flags 0x41]  <function_decl 0x7f459630e200 brelse>) [0 brelse S1 A8])
         (const_int 16 [0x10])) "fs/super.c":135:13 812 {*call}
      (nil)
     (expr_list (use (reg:SI 3 bx))
@@ -1921,7 +1921,7 @@ Dataflow summary:
                 (const_int 24 [0x18])) [19 s+0 S4 A32])) "fs/super.c":137:9 54 {*pushsi2}
      (expr_list:REG_ARGS_SIZE (const_int 16 [0x10])
         (nil)))
-(call_insn 316 315 317 41 (call (mem:QI (symbol_ref:SI ("free_super") [flags 0x3]  <function_decl 0x77d7fb145100 free_super>) [0 free_super S1 A8])
+(call_insn 316 315 317 41 (call (mem:QI (symbol_ref:SI ("free_super") [flags 0x3]  <function_decl 0x7f4596345100 free_super>) [0 free_super S1 A8])
         (const_int 16 [0x10])) "fs/super.c":137:9 812 {*call}
      (nil)
     (nil))
@@ -2026,7 +2026,7 @@ Dataflow summary:
                 (const_int 24 [0x18])) [19 s+0 S4 A32])) "fs/super.c":142:5 54 {*pushsi2}
      (expr_list:REG_ARGS_SIZE (const_int 16 [0x10])
         (nil)))
-(call_insn 343 342 344 42 (call (mem:QI (symbol_ref:SI ("free_super") [flags 0x3]  <function_decl 0x77d7fb145100 free_super>) [0 free_super S1 A8])
+(call_insn 343 342 344 42 (call (mem:QI (symbol_ref:SI ("free_super") [flags 0x3]  <function_decl 0x7f4596345100 free_super>) [0 free_super S1 A8])
         (const_int 16 [0x10])) "fs/super.c":142:5 812 {*call}
      (nil)
     (nil))
@@ -2131,7 +2131,7 @@ Dataflow summary:
 (insn 10 9 11 3 (set (reg/f:SI 1 dx [112])
         (mem/u/c:SI (plus:SI (reg:SI 3 bx [82])
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("file_table") [flags 0x40]  <var_decl 0x77d7fc948bd0 file_table>)
+                            (symbol_ref:SI ("file_table") [flags 0x40]  <var_decl 0x7f4597cacbd0 file_table>)
                         ] UNSPEC_GOT))) [23  S4 A8])) "fs/super.c":155:31 75 {*movsi_internal}
      (nil))
 (insn 11 10 12 3 (set (reg:SI 0 ax [113])
@@ -2189,7 +2189,7 @@ Dataflow summary:
 (insn 25 24 27 5 (set (reg:SI 0 ax [orig:83 ROOT_DEV.0_1 ] [83])
         (mem/c:SI (plus:SI (reg:SI 3 bx [82])
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("ROOT_DEV") [flags 0x2]  <var_decl 0x77d7fc948b40 ROOT_DEV>)
+                            (symbol_ref:SI ("ROOT_DEV") [flags 0x2]  <var_decl 0x7f4597cacb40 ROOT_DEV>)
                         ] UNSPEC_GOTOFF))) [9 ROOT_DEV+0 S4 A32])) "fs/super.c":156:9 75 {*movsi_internal}
      (nil))
 (insn 27 25 28 5 (parallel [
@@ -2222,16 +2222,16 @@ Dataflow summary:
 (insn 32 31 33 6 (set (reg/f:SI 0 ax [117])
         (plus:SI (reg:SI 3 bx [82])
             (const:SI (unspec:SI [
-                        (symbol_ref/f:SI ("*.LC0") [flags 0x2]  <var_decl 0x77d7fb17dc60 *.LC0>)
+                        (symbol_ref/f:SI ("*.LC0") [flags 0x2]  <var_decl 0x7f459637dc60 *.LC0>)
                     ] UNSPEC_GOTOFF)))) "fs/super.c":157:9 205 {*leasi}
-     (expr_list:REG_EQUAL (symbol_ref/f:SI ("*.LC0") [flags 0x2]  <var_decl 0x77d7fb17dc60 *.LC0>)
+     (expr_list:REG_EQUAL (symbol_ref/f:SI ("*.LC0") [flags 0x2]  <var_decl 0x7f459637dc60 *.LC0>)
         (nil)))
 (insn 33 32 35 6 (set (mem/f:SI (pre_dec:SI (reg/f:SI 7 sp)) [8  S4 A32])
         (reg/f:SI 0 ax [117])) "fs/super.c":157:9 54 {*pushsi2}
      (expr_list:REG_ARGS_SIZE (const_int 16 [0x10])
         (nil)))
 (call_insn 35 33 36 6 (set (reg:SI 0 ax)
-        (call (mem:QI (symbol_ref:SI ("printk") [flags 0x41]  <function_decl 0x77d7fb110900 printk>) [0 printk S1 A8])
+        (call (mem:QI (symbol_ref:SI ("printk") [flags 0x41]  <function_decl 0x7f4596310900 printk>) [0 printk S1 A8])
             (const_int 16 [0x10]))) "fs/super.c":157:9 823 {*call_value}
      (nil)
     (expr_list (use (reg:SI 3 bx))
@@ -2244,7 +2244,7 @@ Dataflow summary:
         ]) "fs/super.c":157:9 209 {*addsi_1}
      (expr_list:REG_ARGS_SIZE (const_int 0 [0])
         (nil)))
-(call_insn 38 36 39 6 (call (mem:QI (symbol_ref:SI ("wait_for_keypress") [flags 0x41]  <function_decl 0x77d7fb137e00 wait_for_keypress>) [0 wait_for_keypress S1 A8])
+(call_insn 38 36 39 6 (call (mem:QI (symbol_ref:SI ("wait_for_keypress") [flags 0x41]  <function_decl 0x7f4596337e00 wait_for_keypress>) [0 wait_for_keypress S1 A8])
         (const_int 0 [0])) "fs/super.c":158:9 812 {*call}
      (nil)
     (expr_list (use (reg:SI 3 bx))
@@ -2254,9 +2254,9 @@ Dataflow summary:
 (insn 41 40 42 7 (set (reg/f:SI 0 ax [118])
         (plus:SI (reg:SI 3 bx [82])
             (const:SI (unspec:SI [
-                        (symbol_ref:SI ("super_block") [flags 0x2]  <var_decl 0x77d7fc948c60 super_block>)
+                        (symbol_ref:SI ("super_block") [flags 0x2]  <var_decl 0x7f4597cacc60 super_block>)
                     ] UNSPEC_GOTOFF)))) "fs/super.c":160:12 205 {*leasi}
-     (expr_list:REG_EQUAL (symbol_ref:SI ("super_block") [flags 0x2]  <var_decl 0x77d7fc948c60 super_block>)
+     (expr_list:REG_EQUAL (symbol_ref:SI ("super_block") [flags 0x2]  <var_decl 0x7f4597cacc60 super_block>)
         (nil)))
 (insn 42 41 211 7 (set (mem/f/c:SI (plus:SI (reg/f:SI 7 sp)
                 (const_int 4 [0x4])) [19 p+0 S4 A32])
@@ -2307,10 +2307,10 @@ Dataflow summary:
 (insn 56 54 57 9 (set (reg:SI 0 ax [122])
         (plus:SI (reg:SI 3 bx [82])
             (const:SI (plus:SI (unspec:SI [
-                            (symbol_ref:SI ("super_block") [flags 0x2]  <var_decl 0x77d7fc948c60 super_block>)
+                            (symbol_ref:SI ("super_block") [flags 0x2]  <var_decl 0x7f4597cacc60 super_block>)
                         ] UNSPEC_GOTOFF)
                     (const_int 864 [0x360]))))) "fs/super.c":160:33 205 {*leasi}
-     (expr_list:REG_EQUAL (const:SI (plus:SI (symbol_ref:SI ("super_block") [flags 0x2]  <var_decl 0x77d7fc948c60 super_block>)
+     (expr_list:REG_EQUAL (const:SI (plus:SI (symbol_ref:SI ("super_block") [flags 0x2]  <var_decl 0x7f4597cacc60 super_block>)
                 (const_int 864 [0x360])))
         (nil)))
 (insn 57 56 58 9 (set (reg:CC 17 flags)
@@ -2329,7 +2329,7 @@ Dataflow summary:
 (insn 60 59 61 10 (set (reg:SI 0 ax [orig:86 ROOT_DEV.2_4 ] [86])
         (mem/c:SI (plus:SI (reg:SI 3 bx [82])
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("ROOT_DEV") [flags 0x2]  <var_decl 0x77d7fc948b40 ROOT_DEV>)
+                            (symbol_ref:SI ("ROOT_DEV") [flags 0x2]  <var_decl 0x7f4597cacb40 ROOT_DEV>)
                         ] UNSPEC_GOTOFF))) [9 ROOT_DEV+0 S4 A32])) "fs/super.c":165:15 75 {*movsi_internal}
      (nil))
 (insn 61 60 62 10 (parallel [
@@ -2345,7 +2345,7 @@ Dataflow summary:
      (expr_list:REG_ARGS_SIZE (const_int 16 [0x10])
         (nil)))
 (call_insn 63 62 64 10 (set (reg:SI 0 ax)
-        (call (mem:QI (symbol_ref:SI ("read_super") [flags 0x3]  <function_decl 0x77d7fb145300 read_super>) [0 read_super S1 A8])
+        (call (mem:QI (symbol_ref:SI ("read_super") [flags 0x3]  <function_decl 0x7f4596345300 read_super>) [0 read_super S1 A8])
             (const_int 16 [0x10]))) "fs/super.c":165:15 823 {*call_value}
      (nil)
     (nil))
@@ -2385,15 +2385,15 @@ Dataflow summary:
 (insn 71 70 72 11 (set (reg/f:SI 0 ax [124])
         (plus:SI (reg:SI 3 bx [82])
             (const:SI (unspec:SI [
-                        (symbol_ref/f:SI ("*.LC1") [flags 0x2]  <var_decl 0x77d7fb17dcf0 *.LC1>)
+                        (symbol_ref/f:SI ("*.LC1") [flags 0x2]  <var_decl 0x7f459637dcf0 *.LC1>)
                     ] UNSPEC_GOTOFF)))) "fs/super.c":166:9 205 {*leasi}
-     (expr_list:REG_EQUAL (symbol_ref/f:SI ("*.LC1") [flags 0x2]  <var_decl 0x77d7fb17dcf0 *.LC1>)
+     (expr_list:REG_EQUAL (symbol_ref/f:SI ("*.LC1") [flags 0x2]  <var_decl 0x7f459637dcf0 *.LC1>)
         (nil)))
 (insn 72 71 74 11 (set (mem/f:SI (pre_dec:SI (reg/f:SI 7 sp)) [8  S4 A32])
         (reg/f:SI 0 ax [124])) "fs/super.c":166:9 54 {*pushsi2}
      (expr_list:REG_ARGS_SIZE (const_int 16 [0x10])
         (nil)))
-(call_insn 74 72 75 11 (call (mem:QI (symbol_ref:SI ("panic") [flags 0x41]  <function_decl 0x77d7fb110b00 panic>) [0 panic S1 A8])
+(call_insn 74 72 75 11 (call (mem:QI (symbol_ref:SI ("panic") [flags 0x41]  <function_decl 0x7f4596310b00 panic>) [0 panic S1 A8])
         (const_int 16 [0x10])) "fs/super.c":166:9 812 {*call}
      (nil)
     (expr_list (use (reg:SI 3 bx))
@@ -2411,7 +2411,7 @@ Dataflow summary:
 (insn 78 77 79 12 (set (reg:SI 0 ax [orig:87 ROOT_DEV.3_5 ] [87])
         (mem/c:SI (plus:SI (reg:SI 3 bx [82])
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("ROOT_DEV") [flags 0x2]  <var_decl 0x77d7fc948b40 ROOT_DEV>)
+                            (symbol_ref:SI ("ROOT_DEV") [flags 0x2]  <var_decl 0x7f4597cacb40 ROOT_DEV>)
                         ] UNSPEC_GOTOFF))) [9 ROOT_DEV+0 S4 A32])) "fs/super.c":167:16 75 {*movsi_internal}
      (nil))
 (insn 79 78 80 12 (parallel [
@@ -2431,7 +2431,7 @@ Dataflow summary:
      (expr_list:REG_ARGS_SIZE (const_int 16 [0x10])
         (nil)))
 (call_insn 83 81 84 12 (set (reg:SI 0 ax)
-        (call (mem:QI (symbol_ref:SI ("iget") [flags 0x41]  <function_decl 0x77d7fb10e900 iget>) [0 iget S1 A8])
+        (call (mem:QI (symbol_ref:SI ("iget") [flags 0x41]  <function_decl 0x7f459630e900 iget>) [0 iget S1 A8])
             (const_int 16 [0x10]))) "fs/super.c":167:16 823 {*call_value}
      (nil)
     (expr_list (use (reg:SI 3 bx))
@@ -2470,15 +2470,15 @@ Dataflow summary:
 (insn 91 90 92 13 (set (reg/f:SI 0 ax [126])
         (plus:SI (reg:SI 3 bx [82])
             (const:SI (unspec:SI [
-                        (symbol_ref/f:SI ("*.LC2") [flags 0x2]  <var_decl 0x77d7fb17dd80 *.LC2>)
+                        (symbol_ref/f:SI ("*.LC2") [flags 0x2]  <var_decl 0x7f459637dd80 *.LC2>)
                     ] UNSPEC_GOTOFF)))) "fs/super.c":168:9 205 {*leasi}
-     (expr_list:REG_EQUAL (symbol_ref/f:SI ("*.LC2") [flags 0x2]  <var_decl 0x77d7fb17dd80 *.LC2>)
+     (expr_list:REG_EQUAL (symbol_ref/f:SI ("*.LC2") [flags 0x2]  <var_decl 0x7f459637dd80 *.LC2>)
         (nil)))
 (insn 92 91 94 13 (set (mem/f:SI (pre_dec:SI (reg/f:SI 7 sp)) [8  S4 A32])
         (reg/f:SI 0 ax [126])) "fs/super.c":168:9 54 {*pushsi2}
      (expr_list:REG_ARGS_SIZE (const_int 16 [0x10])
         (nil)))
-(call_insn 94 92 95 13 (call (mem:QI (symbol_ref:SI ("panic") [flags 0x41]  <function_decl 0x77d7fb110b00 panic>) [0 panic S1 A8])
+(call_insn 94 92 95 13 (call (mem:QI (symbol_ref:SI ("panic") [flags 0x41]  <function_decl 0x7f4596310b00 panic>) [0 panic S1 A8])
         (const_int 16 [0x10])) "fs/super.c":168:9 812 {*call}
      (nil)
     (expr_list (use (reg:SI 3 bx))
@@ -2541,7 +2541,7 @@ Dataflow summary:
 (insn 110 109 111 14 (set (reg/f:SI 0 ax [133])
         (mem/u/c:SI (plus:SI (reg:SI 3 bx [82])
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("current") [flags 0x40]  <var_decl 0x77d7fb12f120 current>)
+                            (symbol_ref:SI ("current") [flags 0x40]  <var_decl 0x7f459632f120 current>)
                         ] UNSPEC_GOT))) [23  S4 A8])) "fs/super.c":171:12 75 {*movsi_internal}
      (nil))
 (insn 111 110 112 14 (set (reg/f:SI 0 ax [orig:91 current.4_9 ] [91])
@@ -2557,7 +2557,7 @@ Dataflow summary:
 (insn 114 113 115 14 (set (reg/f:SI 0 ax [135])
         (mem/u/c:SI (plus:SI (reg:SI 3 bx [82])
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("current") [flags 0x40]  <var_decl 0x77d7fb12f120 current>)
+                            (symbol_ref:SI ("current") [flags 0x40]  <var_decl 0x7f459632f120 current>)
                         ] UNSPEC_GOT))) [23  S4 A8])) "fs/super.c":172:12 75 {*movsi_internal}
      (nil))
 (insn 115 114 116 14 (set (reg/f:SI 0 ax [orig:92 current.5_10 ] [92])
@@ -2596,7 +2596,7 @@ Dataflow summary:
 (barrier 214 213 145)
 (code_label 145 214 125 15 57 (nil) [1 uses])
 (note 125 145 276 15 [bb 15] NOTE_INSN_BASIC_BLOCK)
-(note 276 125 126 15 0x77d7fb0d74e0 NOTE_INSN_BLOCK_BEG)
+(note 276 125 126 15 0x7f45962d74e0 NOTE_INSN_BLOCK_BEG)
 (insn 126 276 127 15 (set (reg:SI 0 ax [139])
         (mem/c:SI (plus:SI (reg/f:SI 7 sp)
                 (const_int 12 [0xc])) [9 i+0 S4 A32])) "fs/super.c":176:14 75 {*movsi_internal}
@@ -2676,7 +2676,7 @@ Dataflow summary:
 (insn 137 134 277 15 (set (reg:SI 0 ax [orig:111 _65 ] [111])
         (reg/v:SI 4 si [orig:110 __res ] [110])) "fs/super.c":176:14 75 {*movsi_internal}
      (nil))
-(note 277 137 138 15 0x77d7fb0d74e0 NOTE_INSN_BLOCK_END)
+(note 277 137 138 15 0x7f45962d74e0 NOTE_INSN_BLOCK_END)
 (insn 138 277 139 15 (set (reg:CCZ 17 flags)
         (compare:CCZ (reg:SI 0 ax [orig:111 _65 ] [111])
             (const_int 0 [0]))) "fs/super.c":176:12 7 {*cmpsi_ccno_1}
@@ -2753,16 +2753,16 @@ Dataflow summary:
 (insn 157 156 158 18 (set (reg/f:SI 0 ax [146])
         (plus:SI (reg:SI 3 bx [82])
             (const:SI (unspec:SI [
-                        (symbol_ref/f:SI ("*.LC3") [flags 0x2]  <var_decl 0x77d7fb17dea0 *.LC3>)
+                        (symbol_ref/f:SI ("*.LC3") [flags 0x2]  <var_decl 0x7f459637dea0 *.LC3>)
                     ] UNSPEC_GOTOFF)))) "fs/super.c":178:5 205 {*leasi}
-     (expr_list:REG_EQUAL (symbol_ref/f:SI ("*.LC3") [flags 0x2]  <var_decl 0x77d7fb17dea0 *.LC3>)
+     (expr_list:REG_EQUAL (symbol_ref/f:SI ("*.LC3") [flags 0x2]  <var_decl 0x7f459637dea0 *.LC3>)
         (nil)))
 (insn 158 157 160 18 (set (mem/f:SI (pre_dec:SI (reg/f:SI 7 sp)) [8  S4 A32])
         (reg/f:SI 0 ax [146])) "fs/super.c":178:5 54 {*pushsi2}
      (expr_list:REG_ARGS_SIZE (const_int 16 [0x10])
         (nil)))
 (call_insn 160 158 161 18 (set (reg:SI 0 ax)
-        (call (mem:QI (symbol_ref:SI ("printk") [flags 0x41]  <function_decl 0x77d7fb110900 printk>) [0 printk S1 A8])
+        (call (mem:QI (symbol_ref:SI ("printk") [flags 0x41]  <function_decl 0x7f4596310900 printk>) [0 printk S1 A8])
             (const_int 16 [0x10]))) "fs/super.c":178:5 823 {*call_value}
      (nil)
     (expr_list (use (reg:SI 3 bx))
@@ -2807,7 +2807,7 @@ Dataflow summary:
 (barrier 216 215 190)
 (code_label 190 216 170 19 59 (nil) [1 uses])
 (note 170 190 278 19 [bb 19] NOTE_INSN_BASIC_BLOCK)
-(note 278 170 171 19 0x77d7fb0d7540 NOTE_INSN_BLOCK_BEG)
+(note 278 170 171 19 0x7f45962d7540 NOTE_INSN_BLOCK_BEG)
 (insn 171 278 172 19 (set (reg:SI 0 ax [149])
         (mem/c:SI (plus:SI (reg/f:SI 7 sp)
                 (const_int 12 [0xc])) [9 i+0 S4 A32])) "fs/super.c":182:14 75 {*movsi_internal}
@@ -2887,7 +2887,7 @@ Dataflow summary:
 (insn 182 179 279 19 (set (reg:SI 0 ax [orig:109 _62 ] [109])
         (reg/v:SI 4 si [orig:108 __res ] [108])) "fs/super.c":182:14 75 {*movsi_internal}
      (nil))
-(note 279 182 183 19 0x77d7fb0d7540 NOTE_INSN_BLOCK_END)
+(note 279 182 183 19 0x7f45962d7540 NOTE_INSN_BLOCK_END)
 (insn 183 279 184 19 (set (reg:CCZ 17 flags)
         (compare:CCZ (reg:SI 0 ax [orig:109 _62 ] [109])
             (const_int 0 [0]))) "fs/super.c":182:12 7 {*cmpsi_ccno_1}
@@ -2963,16 +2963,16 @@ Dataflow summary:
 (insn 202 201 203 22 (set (reg/f:SI 0 ax [156])
         (plus:SI (reg:SI 3 bx [82])
             (const:SI (unspec:SI [
-                        (symbol_ref/f:SI ("*.LC4") [flags 0x2]  <var_decl 0x77d7fb17d5a0 *.LC4>)
+                        (symbol_ref/f:SI ("*.LC4") [flags 0x2]  <var_decl 0x7f459637d5a0 *.LC4>)
                     ] UNSPEC_GOTOFF)))) "fs/super.c":184:5 205 {*leasi}
-     (expr_list:REG_EQUAL (symbol_ref/f:SI ("*.LC4") [flags 0x2]  <var_decl 0x77d7fb17d5a0 *.LC4>)
+     (expr_list:REG_EQUAL (symbol_ref/f:SI ("*.LC4") [flags 0x2]  <var_decl 0x7f459637d5a0 *.LC4>)
         (nil)))
 (insn 203 202 205 22 (set (mem/f:SI (pre_dec:SI (reg/f:SI 7 sp)) [8  S4 A32])
         (reg/f:SI 0 ax [156])) "fs/super.c":184:5 54 {*pushsi2}
      (expr_list:REG_ARGS_SIZE (const_int 16 [0x10])
         (nil)))
 (call_insn 205 203 206 22 (set (reg:SI 0 ax)
-        (call (mem:QI (symbol_ref:SI ("printk") [flags 0x41]  <function_decl 0x77d7fb110900 printk>) [0 printk S1 A8])
+        (call (mem:QI (symbol_ref:SI ("printk") [flags 0x41]  <function_decl 0x7f4596310900 printk>) [0 printk S1 A8])
             (const_int 16 [0x10]))) "fs/super.c":184:5 823 {*call_value}
      (nil)
     (expr_list (use (reg:SI 3 bx))
@@ -3065,7 +3065,7 @@ Dataflow summary:
 (insn 5 2 6 2 (set (reg:SI 0 ax [orig:83 ROOT_DEV.6_1 ] [83])
         (mem/c:SI (plus:SI (reg:SI 3 bx [82])
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("ROOT_DEV") [flags 0x2]  <var_decl 0x77d7fc948b40 ROOT_DEV>)
+                            (symbol_ref:SI ("ROOT_DEV") [flags 0x2]  <var_decl 0x7f4597cacb40 ROOT_DEV>)
                         ] UNSPEC_GOTOFF))) [9 ROOT_DEV+0 S4 A32])) "fs/super.c":193:13 75 {*movsi_internal}
      (nil))
 (insn 6 5 7 2 (set (reg:CCZ 17 flags)
@@ -3092,16 +3092,16 @@ Dataflow summary:
 (insn 10 9 11 3 (set (reg/f:SI 0 ax [87])
         (plus:SI (reg:SI 3 bx [82])
             (const:SI (unspec:SI [
-                        (symbol_ref/f:SI ("*.LC5") [flags 0x2]  <var_decl 0x77d7fb17dbd0 *.LC5>)
+                        (symbol_ref/f:SI ("*.LC5") [flags 0x2]  <var_decl 0x7f459637dbd0 *.LC5>)
                     ] UNSPEC_GOTOFF)))) "fs/super.c":194:9 205 {*leasi}
-     (expr_list:REG_EQUAL (symbol_ref/f:SI ("*.LC5") [flags 0x2]  <var_decl 0x77d7fb17dbd0 *.LC5>)
+     (expr_list:REG_EQUAL (symbol_ref/f:SI ("*.LC5") [flags 0x2]  <var_decl 0x7f459637dbd0 *.LC5>)
         (nil)))
 (insn 11 10 13 3 (set (mem/f:SI (pre_dec:SI (reg/f:SI 7 sp)) [8  S4 A32])
         (reg/f:SI 0 ax [87])) "fs/super.c":194:9 54 {*pushsi2}
      (expr_list:REG_ARGS_SIZE (const_int 16 [0x10])
         (nil)))
 (call_insn 13 11 14 3 (set (reg:SI 0 ax)
-        (call (mem:QI (symbol_ref:SI ("printk") [flags 0x41]  <function_decl 0x77d7fb110900 printk>) [0 printk S1 A8])
+        (call (mem:QI (symbol_ref:SI ("printk") [flags 0x41]  <function_decl 0x7f4596310900 printk>) [0 printk S1 A8])
             (const_int 16 [0x10]))) "fs/super.c":194:9 823 {*call_value}
      (nil)
     (expr_list (use (reg:SI 3 bx))
@@ -3135,7 +3135,7 @@ Dataflow summary:
      (expr_list:REG_ARGS_SIZE (const_int 16 [0x10])
         (nil)))
 (call_insn 21 20 22 4 (set (reg:SI 0 ax)
-        (call (mem:QI (symbol_ref:SI ("get_super") [flags 0x3]  <function_decl 0x77d7fb10e000 get_super>) [0 get_super S1 A8])
+        (call (mem:QI (symbol_ref:SI ("get_super") [flags 0x3]  <function_decl 0x7f459630e000 get_super>) [0 get_super S1 A8])
             (const_int 16 [0x10]))) "fs/super.c":197:16 823 {*call_value}
      (nil)
     (nil))
@@ -3195,16 +3195,16 @@ Dataflow summary:
 (insn 38 37 39 6 (set (reg/f:SI 0 ax [90])
         (plus:SI (reg:SI 3 bx [82])
             (const:SI (unspec:SI [
-                        (symbol_ref/f:SI ("*.LC6") [flags 0x2]  <var_decl 0x77d7fb17dab0 *.LC6>)
+                        (symbol_ref/f:SI ("*.LC6") [flags 0x2]  <var_decl 0x7f459637dab0 *.LC6>)
                     ] UNSPEC_GOTOFF)))) "fs/super.c":200:9 205 {*leasi}
-     (expr_list:REG_EQUAL (symbol_ref/f:SI ("*.LC6") [flags 0x2]  <var_decl 0x77d7fb17dab0 *.LC6>)
+     (expr_list:REG_EQUAL (symbol_ref/f:SI ("*.LC6") [flags 0x2]  <var_decl 0x7f459637dab0 *.LC6>)
         (nil)))
 (insn 39 38 41 6 (set (mem/f:SI (pre_dec:SI (reg/f:SI 7 sp)) [8  S4 A32])
         (reg/f:SI 0 ax [90])) "fs/super.c":200:9 54 {*pushsi2}
      (expr_list:REG_ARGS_SIZE (const_int 16 [0x10])
         (nil)))
 (call_insn 41 39 42 6 (set (reg:SI 0 ax)
-        (call (mem:QI (symbol_ref:SI ("printk") [flags 0x41]  <function_decl 0x77d7fb110900 printk>) [0 printk S1 A8])
+        (call (mem:QI (symbol_ref:SI ("printk") [flags 0x41]  <function_decl 0x7f4596310900 printk>) [0 printk S1 A8])
             (const_int 16 [0x10]))) "fs/super.c":200:9 823 {*call_value}
      (nil)
     (expr_list (use (reg:SI 3 bx))
@@ -3237,7 +3237,7 @@ Dataflow summary:
                 (const_int 20 [0x14])) [19 sb+0 S4 A32])) "fs/super.c":203:5 54 {*pushsi2}
      (expr_list:REG_ARGS_SIZE (const_int 16 [0x10])
         (nil)))
-(call_insn 49 48 50 7 (call (mem:QI (symbol_ref:SI ("lock_super") [flags 0x3]  <function_decl 0x77d7fb137d00 lock_super>) [0 lock_super S1 A8])
+(call_insn 49 48 50 7 (call (mem:QI (symbol_ref:SI ("lock_super") [flags 0x3]  <function_decl 0x7f4596337d00 lock_super>) [0 lock_super S1 A8])
         (const_int 16 [0x10])) "fs/super.c":203:5 812 {*call}
      (nil)
     (nil))
@@ -3304,7 +3304,7 @@ Dataflow summary:
         (reg/f:SI 0 ax [orig:85 _3 ] [85])) "fs/super.c":206:9 54 {*pushsi2}
      (expr_list:REG_ARGS_SIZE (const_int 16 [0x10])
         (nil)))
-(call_insn 64 62 65 8 (call (mem:QI (symbol_ref:SI ("brelse") [flags 0x41]  <function_decl 0x77d7fb10e200 brelse>) [0 brelse S1 A8])
+(call_insn 64 62 65 8 (call (mem:QI (symbol_ref:SI ("brelse") [flags 0x41]  <function_decl 0x7f459630e200 brelse>) [0 brelse S1 A8])
         (const_int 16 [0x10])) "fs/super.c":206:9 812 {*call}
      (nil)
     (expr_list (use (reg:SI 3 bx))
@@ -3388,7 +3388,7 @@ Dataflow summary:
         (reg/f:SI 0 ax [orig:86 _4 ] [86])) "fs/super.c":208:9 54 {*pushsi2}
      (expr_list:REG_ARGS_SIZE (const_int 16 [0x10])
         (nil)))
-(call_insn 86 84 87 11 (call (mem:QI (symbol_ref:SI ("brelse") [flags 0x41]  <function_decl 0x77d7fb10e200 brelse>) [0 brelse S1 A8])
+(call_insn 86 84 87 11 (call (mem:QI (symbol_ref:SI ("brelse") [flags 0x41]  <function_decl 0x7f459630e200 brelse>) [0 brelse S1 A8])
         (const_int 16 [0x10])) "fs/super.c":208:9 812 {*call}
      (nil)
     (expr_list (use (reg:SI 3 bx))
@@ -3438,7 +3438,7 @@ Dataflow summary:
                 (const_int 20 [0x14])) [19 sb+0 S4 A32])) "fs/super.c":209:5 54 {*pushsi2}
      (expr_list:REG_ARGS_SIZE (const_int 16 [0x10])
         (nil)))
-(call_insn 99 98 100 13 (call (mem:QI (symbol_ref:SI ("free_super") [flags 0x3]  <function_decl 0x77d7fb145100 free_super>) [0 free_super S1 A8])
+(call_insn 99 98 100 13 (call (mem:QI (symbol_ref:SI ("free_super") [flags 0x3]  <function_decl 0x7f4596345100 free_super>) [0 free_super S1 A8])
         (const_int 16 [0x10])) "fs/super.c":209:5 812 {*call}
      (nil)
     (nil))
@@ -3543,7 +3543,7 @@ Dataflow summary:
      (expr_list:REG_ARGS_SIZE (const_int 16 [0x10])
         (nil)))
 (call_insn 8 6 9 2 (set (reg:SI 0 ax)
-        (call (mem:QI (symbol_ref:SI ("namei") [flags 0x41]  <function_decl 0x77d7fb110500 namei>) [0 namei S1 A8])
+        (call (mem:QI (symbol_ref:SI ("namei") [flags 0x41]  <function_decl 0x7f4596310500 namei>) [0 namei S1 A8])
             (const_int 16 [0x10]))) "fs/super.c":219:19 823 {*call_value}
      (nil)
     (expr_list (use (reg:SI 3 bx))
@@ -3640,7 +3640,7 @@ Dataflow summary:
                 (const_int 24 [0x18])) [5 dev_i+0 S4 A32])) "fs/super.c":223:9 54 {*pushsi2}
      (expr_list:REG_ARGS_SIZE (const_int 16 [0x10])
         (nil)))
-(call_insn 34 32 35 5 (call (mem:QI (symbol_ref:SI ("iput") [flags 0x41]  <function_decl 0x77d7fb0d2d00 iput>) [0 iput S1 A8])
+(call_insn 34 32 35 5 (call (mem:QI (symbol_ref:SI ("iput") [flags 0x41]  <function_decl 0x7f45962d2d00 iput>) [0 iput S1 A8])
         (const_int 16 [0x10])) "fs/super.c":223:9 812 {*call}
      (nil)
     (expr_list (use (reg:SI 3 bx))
@@ -3676,7 +3676,7 @@ Dataflow summary:
                 (const_int 24 [0x18])) [5 dev_i+0 S4 A32])) "fs/super.c":226:5 54 {*pushsi2}
      (expr_list:REG_ARGS_SIZE (const_int 16 [0x10])
         (nil)))
-(call_insn 44 42 45 6 (call (mem:QI (symbol_ref:SI ("iput") [flags 0x41]  <function_decl 0x77d7fb0d2d00 iput>) [0 iput S1 A8])
+(call_insn 44 42 45 6 (call (mem:QI (symbol_ref:SI ("iput") [flags 0x41]  <function_decl 0x7f45962d2d00 iput>) [0 iput S1 A8])
         (const_int 16 [0x10])) "fs/super.c":226:5 812 {*call}
      (nil)
     (expr_list (use (reg:SI 3 bx))
@@ -3703,7 +3703,7 @@ Dataflow summary:
      (expr_list:REG_ARGS_SIZE (const_int 16 [0x10])
         (nil)))
 (call_insn 49 47 50 6 (set (reg:SI 0 ax)
-        (call (mem:QI (symbol_ref:SI ("namei") [flags 0x41]  <function_decl 0x77d7fb110500 namei>) [0 namei S1 A8])
+        (call (mem:QI (symbol_ref:SI ("namei") [flags 0x41]  <function_decl 0x7f4596310500 namei>) [0 namei S1 A8])
             (const_int 16 [0x10]))) "fs/super.c":227:19 823 {*call_value}
      (nil)
     (expr_list (use (reg:SI 3 bx))
@@ -3797,7 +3797,7 @@ Dataflow summary:
                 (const_int 16 [0x10])) [5 dir_i+0 S4 A32])) "fs/super.c":230:9 54 {*pushsi2}
      (expr_list:REG_ARGS_SIZE (const_int 16 [0x10])
         (nil)))
-(call_insn 75 73 76 10 (call (mem:QI (symbol_ref:SI ("iput") [flags 0x41]  <function_decl 0x77d7fb0d2d00 iput>) [0 iput S1 A8])
+(call_insn 75 73 76 10 (call (mem:QI (symbol_ref:SI ("iput") [flags 0x41]  <function_decl 0x7f45962d2d00 iput>) [0 iput S1 A8])
         (const_int 16 [0x10])) "fs/super.c":230:9 812 {*call}
      (nil)
     (expr_list (use (reg:SI 3 bx))
@@ -3862,7 +3862,7 @@ Dataflow summary:
                 (const_int 16 [0x10])) [5 dir_i+0 S4 A32])) "fs/super.c":234:9 54 {*pushsi2}
      (expr_list:REG_ARGS_SIZE (const_int 16 [0x10])
         (nil)))
-(call_insn 92 90 93 12 (call (mem:QI (symbol_ref:SI ("iput") [flags 0x41]  <function_decl 0x77d7fb0d2d00 iput>) [0 iput S1 A8])
+(call_insn 92 90 93 12 (call (mem:QI (symbol_ref:SI ("iput") [flags 0x41]  <function_decl 0x7f45962d2d00 iput>) [0 iput S1 A8])
         (const_int 16 [0x10])) "fs/super.c":234:9 812 {*call}
      (nil)
     (expr_list (use (reg:SI 3 bx))
@@ -3899,7 +3899,7 @@ Dataflow summary:
      (expr_list:REG_ARGS_SIZE (const_int 16 [0x10])
         (nil)))
 (call_insn 101 100 102 13 (set (reg:SI 0 ax)
-        (call (mem:QI (symbol_ref:SI ("read_super") [flags 0x3]  <function_decl 0x77d7fb145300 read_super>) [0 read_super S1 A8])
+        (call (mem:QI (symbol_ref:SI ("read_super") [flags 0x3]  <function_decl 0x7f4596345300 read_super>) [0 read_super S1 A8])
             (const_int 16 [0x10]))) "fs/super.c":237:16 823 {*call_value}
      (nil)
     (nil))
@@ -3939,7 +3939,7 @@ Dataflow summary:
                 (const_int 16 [0x10])) [5 dir_i+0 S4 A32])) "fs/super.c":238:9 54 {*pushsi2}
      (expr_list:REG_ARGS_SIZE (const_int 16 [0x10])
         (nil)))
-(call_insn 111 109 112 14 (call (mem:QI (symbol_ref:SI ("iput") [flags 0x41]  <function_decl 0x77d7fb0d2d00 iput>) [0 iput S1 A8])
+(call_insn 111 109 112 14 (call (mem:QI (symbol_ref:SI ("iput") [flags 0x41]  <function_decl 0x7f45962d2d00 iput>) [0 iput S1 A8])
         (const_int 16 [0x10])) "fs/super.c":238:9 812 {*call}
      (nil)
     (expr_list (use (reg:SI 3 bx))
@@ -3994,7 +3994,7 @@ Dataflow summary:
                 (const_int 16 [0x10])) [5 dir_i+0 S4 A32])) "fs/super.c":242:9 54 {*pushsi2}
      (expr_list:REG_ARGS_SIZE (const_int 16 [0x10])
         (nil)))
-(call_insn 126 124 127 16 (call (mem:QI (symbol_ref:SI ("iput") [flags 0x41]  <function_decl 0x77d7fb0d2d00 iput>) [0 iput S1 A8])
+(call_insn 126 124 127 16 (call (mem:QI (symbol_ref:SI ("iput") [flags 0x41]  <function_decl 0x7f45962d2d00 iput>) [0 iput S1 A8])
         (const_int 16 [0x10])) "fs/super.c":242:9 812 {*call}
      (nil)
     (expr_list (use (reg:SI 3 bx))
@@ -4050,7 +4050,7 @@ Dataflow summary:
                 (const_int 16 [0x10])) [5 dir_i+0 S4 A32])) "fs/super.c":246:9 54 {*pushsi2}
      (expr_list:REG_ARGS_SIZE (const_int 16 [0x10])
         (nil)))
-(call_insn 141 139 142 18 (call (mem:QI (symbol_ref:SI ("iput") [flags 0x41]  <function_decl 0x77d7fb0d2d00 iput>) [0 iput S1 A8])
+(call_insn 141 139 142 18 (call (mem:QI (symbol_ref:SI ("iput") [flags 0x41]  <function_decl 0x7f45962d2d00 iput>) [0 iput S1 A8])
         (const_int 16 [0x10])) "fs/super.c":246:9 812 {*call}
      (nil)
     (expr_list (use (reg:SI 3 bx))
@@ -4189,7 +4189,7 @@ Dataflow summary:
      (expr_list:REG_ARGS_SIZE (const_int 16 [0x10])
         (nil)))
 (call_insn 8 6 9 2 (set (reg:SI 0 ax)
-        (call (mem:QI (symbol_ref:SI ("namei") [flags 0x41]  <function_decl 0x77d7fb110500 namei>) [0 namei S1 A8])
+        (call (mem:QI (symbol_ref:SI ("namei") [flags 0x41]  <function_decl 0x7f4596310500 namei>) [0 namei S1 A8])
             (const_int 16 [0x10]))) "fs/super.c":261:19 823 {*call_value}
      (nil)
     (expr_list (use (reg:SI 3 bx))
@@ -4286,7 +4286,7 @@ Dataflow summary:
                 (const_int 24 [0x18])) [5 inode+0 S4 A32])) "fs/super.c":265:9 54 {*pushsi2}
      (expr_list:REG_ARGS_SIZE (const_int 16 [0x10])
         (nil)))
-(call_insn 34 32 35 5 (call (mem:QI (symbol_ref:SI ("iput") [flags 0x41]  <function_decl 0x77d7fb0d2d00 iput>) [0 iput S1 A8])
+(call_insn 34 32 35 5 (call (mem:QI (symbol_ref:SI ("iput") [flags 0x41]  <function_decl 0x7f45962d2d00 iput>) [0 iput S1 A8])
         (const_int 16 [0x10])) "fs/super.c":265:9 812 {*call}
      (nil)
     (expr_list (use (reg:SI 3 bx))
@@ -4322,7 +4322,7 @@ Dataflow summary:
                 (const_int 24 [0x18])) [5 inode+0 S4 A32])) "fs/super.c":268:5 54 {*pushsi2}
      (expr_list:REG_ARGS_SIZE (const_int 16 [0x10])
         (nil)))
-(call_insn 44 42 45 6 (call (mem:QI (symbol_ref:SI ("iput") [flags 0x41]  <function_decl 0x77d7fb0d2d00 iput>) [0 iput S1 A8])
+(call_insn 44 42 45 6 (call (mem:QI (symbol_ref:SI ("iput") [flags 0x41]  <function_decl 0x7f45962d2d00 iput>) [0 iput S1 A8])
         (const_int 16 [0x10])) "fs/super.c":268:5 812 {*call}
      (nil)
     (expr_list (use (reg:SI 3 bx))
@@ -4338,7 +4338,7 @@ Dataflow summary:
 (insn 46 45 47 6 (set (reg:SI 0 ax [orig:87 ROOT_DEV.7_5 ] [87])
         (mem/c:SI (plus:SI (reg:SI 3 bx [82])
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("ROOT_DEV") [flags 0x2]  <var_decl 0x77d7fc948b40 ROOT_DEV>)
+                            (symbol_ref:SI ("ROOT_DEV") [flags 0x2]  <var_decl 0x7f4597cacb40 ROOT_DEV>)
                         ] UNSPEC_GOTOFF))) [9 ROOT_DEV+0 S4 A32])) "fs/super.c":269:13 75 {*movsi_internal}
      (nil))
 (insn 47 46 48 6 (set (reg:CCZ 17 flags)
@@ -4378,7 +4378,7 @@ Dataflow summary:
      (expr_list:REG_ARGS_SIZE (const_int 16 [0x10])
         (nil)))
 (call_insn 57 56 58 8 (set (reg:SI 0 ax)
-        (call (mem:QI (symbol_ref:SI ("get_super") [flags 0x3]  <function_decl 0x77d7fb10e000 get_super>) [0 get_super S1 A8])
+        (call (mem:QI (symbol_ref:SI ("get_super") [flags 0x3]  <function_decl 0x7f459630e000 get_super>) [0 get_super S1 A8])
             (const_int 16 [0x10]))) "fs/super.c":271:16 823 {*call_value}
      (nil)
     (nil))
@@ -4473,16 +4473,16 @@ Dataflow summary:
 (insn 82 81 83 12 (set (reg/f:SI 0 ax [107])
         (plus:SI (reg:SI 3 bx [82])
             (const:SI (unspec:SI [
-                        (symbol_ref/f:SI ("*.LC7") [flags 0x2]  <var_decl 0x77d7fb17db40 *.LC7>)
+                        (symbol_ref/f:SI ("*.LC7") [flags 0x2]  <var_decl 0x7f459637db40 *.LC7>)
                     ] UNSPEC_GOTOFF)))) "fs/super.c":274:9 205 {*leasi}
-     (expr_list:REG_EQUAL (symbol_ref/f:SI ("*.LC7") [flags 0x2]  <var_decl 0x77d7fb17db40 *.LC7>)
+     (expr_list:REG_EQUAL (symbol_ref/f:SI ("*.LC7") [flags 0x2]  <var_decl 0x7f459637db40 *.LC7>)
         (nil)))
 (insn 83 82 85 12 (set (mem/f:SI (pre_dec:SI (reg/f:SI 7 sp)) [8  S4 A32])
         (reg/f:SI 0 ax [107])) "fs/super.c":274:9 54 {*pushsi2}
      (expr_list:REG_ARGS_SIZE (const_int 16 [0x10])
         (nil)))
 (call_insn 85 83 86 12 (set (reg:SI 0 ax)
-        (call (mem:QI (symbol_ref:SI ("printk") [flags 0x41]  <function_decl 0x77d7fb110900 printk>) [0 printk S1 A8])
+        (call (mem:QI (symbol_ref:SI ("printk") [flags 0x41]  <function_decl 0x7f4596310900 printk>) [0 printk S1 A8])
             (const_int 16 [0x10]))) "fs/super.c":274:9 823 {*call_value}
      (nil)
     (expr_list (use (reg:SI 3 bx))
@@ -4500,7 +4500,7 @@ Dataflow summary:
 (insn 89 88 91 13 (set (reg:SI 0 ax [109])
         (mem/u/c:SI (plus:SI (reg:SI 3 bx [82])
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("inode_table") [flags 0x40]  <var_decl 0x77d7fc948cf0 inode_table>)
+                            (symbol_ref:SI ("inode_table") [flags 0x40]  <var_decl 0x7f4597caccf0 inode_table>)
                         ] UNSPEC_GOT))) [23  S4 A8])) "fs/super.c":275:16 75 {*movsi_internal}
      (nil))
 (insn 91 89 168 13 (set (mem/f/c:SI (plus:SI (reg/f:SI 7 sp)
@@ -4582,13 +4582,13 @@ Dataflow summary:
 (insn 114 113 115 18 (set (reg:SI 0 ax [112])
         (mem/u/c:SI (plus:SI (reg:SI 3 bx [82])
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("inode_table") [flags 0x40]  <var_decl 0x77d7fc948cf0 inode_table>)
+                            (symbol_ref:SI ("inode_table") [flags 0x40]  <var_decl 0x7f4597caccf0 inode_table>)
                         ] UNSPEC_GOT))) [23  S4 A8])) "fs/super.c":275:55 75 {*movsi_internal}
      (nil))
 (insn 115 114 117 18 (set (reg/f:SI 0 ax [orig:94 _12 ] [94])
         (plus:SI (reg:SI 0 ax [112])
             (const_int 1792 [0x700]))) "fs/super.c":275:55 205 {*leasi}
-     (expr_list:REG_EQUAL (const:SI (plus:SI (symbol_ref:SI ("inode_table") [flags 0x40]  <var_decl 0x77d7fc948cf0 inode_table>)
+     (expr_list:REG_EQUAL (const:SI (plus:SI (symbol_ref:SI ("inode_table") [flags 0x40]  <var_decl 0x7f4597caccf0 inode_table>)
                 (const_int 1792 [0x700])))
         (nil)))
 (insn 117 115 118 18 (set (reg:CC 17 flags)
@@ -4636,7 +4636,7 @@ Dataflow summary:
         (reg/f:SI 0 ax [orig:96 _14 ] [96])) "fs/super.c":279:5 54 {*pushsi2}
      (expr_list:REG_ARGS_SIZE (const_int 16 [0x10])
         (nil)))
-(call_insn 128 126 129 19 (call (mem:QI (symbol_ref:SI ("iput") [flags 0x41]  <function_decl 0x77d7fb0d2d00 iput>) [0 iput S1 A8])
+(call_insn 128 126 129 19 (call (mem:QI (symbol_ref:SI ("iput") [flags 0x41]  <function_decl 0x7f45962d2d00 iput>) [0 iput S1 A8])
         (const_int 16 [0x10])) "fs/super.c":279:5 812 {*call}
      (nil)
     (expr_list (use (reg:SI 3 bx))
@@ -4677,7 +4677,7 @@ Dataflow summary:
         (reg/f:SI 0 ax [orig:97 _15 ] [97])) "fs/super.c":281:5 54 {*pushsi2}
      (expr_list:REG_ARGS_SIZE (const_int 16 [0x10])
         (nil)))
-(call_insn 137 135 138 19 (call (mem:QI (symbol_ref:SI ("iput") [flags 0x41]  <function_decl 0x77d7fb0d2d00 iput>) [0 iput S1 A8])
+(call_insn 137 135 138 19 (call (mem:QI (symbol_ref:SI ("iput") [flags 0x41]  <function_decl 0x7f45962d2d00 iput>) [0 iput S1 A8])
         (const_int 16 [0x10])) "fs/super.c":281:5 812 {*call}
      (nil)
     (expr_list (use (reg:SI 3 bx))
@@ -4711,7 +4711,7 @@ Dataflow summary:
                 (const_int 20 [0x14])) [9 dev+0 S4 A32])) "fs/super.c":283:5 54 {*pushsi2}
      (expr_list:REG_ARGS_SIZE (const_int 16 [0x10])
         (nil)))
-(call_insn 143 142 144 19 (call (mem:QI (symbol_ref:SI ("put_super") [flags 0x3]  <function_decl 0x77d7fb145700 put_super>) [0 put_super S1 A8])
+(call_insn 143 142 144 19 (call (mem:QI (symbol_ref:SI ("put_super") [flags 0x3]  <function_decl 0x7f4596345700 put_super>) [0 put_super S1 A8])
         (const_int 16 [0x10])) "fs/super.c":283:5 812 {*call}
      (nil)
     (nil))
@@ -4737,7 +4737,7 @@ Dataflow summary:
      (expr_list:REG_ARGS_SIZE (const_int 16 [0x10])
         (nil)))
 (call_insn 148 146 149 19 (set (reg:SI 0 ax)
-        (call (mem:QI (symbol_ref:SI ("sync_dev") [flags 0x41]  <function_decl 0x77d7fb0d2f00 sync_dev>) [0 sync_dev S1 A8])
+        (call (mem:QI (symbol_ref:SI ("sync_dev") [flags 0x41]  <function_decl 0x7f45962d2f00 sync_dev>) [0 sync_dev S1 A8])
             (const_int 16 [0x10]))) "fs/super.c":284:5 823 {*call_value}
      (nil)
     (expr_list (use (reg:SI 3 bx))

@@ -72,7 +72,7 @@ Reordered sequence:
 (insn 21 20 22 4 (set (reg/f:SI 90)
         (mem/u/c:SI (plus:SI (reg:SI 82)
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("errno") [flags 0x40]  <var_decl 0x7ce09d9cbb40 errno>)
+                            (symbol_ref:SI ("errno") [flags 0x40]  <var_decl 0x7a93bc936b40 errno>)
                         ] UNSPEC_GOT))) [3  S4 A8])) "lib/close.c":9:1 75 {*movsi_internal}
      (nil))
 (insn 22 21 23 4 (set (mem/c:SI (reg/f:SI 90) [2 errno+0 S4 A32])

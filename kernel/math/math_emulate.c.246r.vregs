@@ -48,7 +48,7 @@
 (insn 6 5 7 2 (set (reg/f:SI 88)
         (mem/u/c:SI (plus:SI (reg:SI 82)
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("last_task_used_math") [flags 0x40]  <var_decl 0x7752a0f2e240 last_task_used_math>)
+                            (symbol_ref:SI ("last_task_used_math") [flags 0x40]  <var_decl 0x7fe9a072e240 last_task_used_math>)
                         ] UNSPEC_GOT))) [4  S4 A8])) "kernel/math/math_emulate.c":12:6 75 {*movsi_internal}
      (nil))
 (insn 7 6 8 2 (set (reg/f:SI 83 [ last_task_used_math.0_1 ])
@@ -69,7 +69,7 @@
 (insn 11 10 12 4 (set (reg/f:SI 89)
         (mem/u/c:SI (plus:SI (reg:SI 82)
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("last_task_used_math") [flags 0x40]  <var_decl 0x7752a0f2e240 last_task_used_math>)
+                            (symbol_ref:SI ("last_task_used_math") [flags 0x40]  <var_decl 0x7fe9a072e240 last_task_used_math>)
                         ] UNSPEC_GOT))) [4  S4 A8])) "kernel/math/math_emulate.c":13:31 75 {*movsi_internal}
      (nil))
 (insn 12 11 13 4 (set (reg/f:SI 84 [ last_task_used_math.1_2 ])
@@ -82,7 +82,7 @@
 (insn 14 13 15 4 (set (reg/f:SI 90)
         (mem/u/c:SI (plus:SI (reg:SI 82)
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("last_task_used_math") [flags 0x40]  <var_decl 0x7752a0f2e240 last_task_used_math>)
+                            (symbol_ref:SI ("last_task_used_math") [flags 0x40]  <var_decl 0x7fe9a072e240 last_task_used_math>)
                         ] UNSPEC_GOT))) [4  S4 A8])) "kernel/math/math_emulate.c":13:31 75 {*movsi_internal}
      (nil))
 (insn 15 14 16 4 (set (reg/f:SI 86 [ last_task_used_math.2_4 ])
@@ -202,9 +202,9 @@
 (insn 28 27 29 4 (set (reg/f:SI 110)
         (plus:SI (reg:SI 82)
             (const:SI (unspec:SI [
-                        (symbol_ref/f:SI ("*.LC0") [flags 0x2]  <var_decl 0x7752a0f2ecf0 *.LC0>)
+                        (symbol_ref/f:SI ("*.LC0") [flags 0x2]  <var_decl 0x7fe9a072ecf0 *.LC0>)
                     ] UNSPEC_GOTOFF)))) "kernel/math/math_emulate.c":26:3 205 {*leasi}
-     (expr_list:REG_EQUAL (symbol_ref/f:SI ("*.LC0") [flags 0x2]  <var_decl 0x7752a0f2ecf0 *.LC0>)
+     (expr_list:REG_EQUAL (symbol_ref/f:SI ("*.LC0") [flags 0x2]  <var_decl 0x7fe9a072ecf0 *.LC0>)
         (nil)))
 (insn 29 28 30 4 (set (mem/f:SI (pre_dec:SI (reg/f:SI 7 sp)) [2  S4 A32])
         (reg/f:SI 110)) "kernel/math/math_emulate.c":26:3 54 {*pushsi2}
@@ -214,7 +214,7 @@
         (reg:SI 82)) "kernel/math/math_emulate.c":26:3 75 {*movsi_internal}
      (nil))
 (call_insn 31 30 32 4 (set (reg:SI 0 ax)
-        (call (mem:QI (symbol_ref:SI ("printk") [flags 0x41]  <function_decl 0x7752a0f38900 printk>) [0 printk S1 A8])
+        (call (mem:QI (symbol_ref:SI ("printk") [flags 0x41]  <function_decl 0x7fe9a0738900 printk>) [0 printk S1 A8])
             (const_int 16 [0x10]))) "kernel/math/math_emulate.c":26:3 823 {*call_value}
      (nil)
     (expr_list (use (reg:SI 3 bx))
@@ -238,9 +238,9 @@
 (insn 34 33 35 4 (set (reg/f:SI 111)
         (plus:SI (reg:SI 82)
             (const:SI (unspec:SI [
-                        (symbol_ref/f:SI ("*.LC1") [flags 0x2]  <var_decl 0x7752a0f2ed80 *.LC1>)
+                        (symbol_ref/f:SI ("*.LC1") [flags 0x2]  <var_decl 0x7fe9a072ed80 *.LC1>)
                     ] UNSPEC_GOTOFF)))) "kernel/math/math_emulate.c":27:3 205 {*leasi}
-     (expr_list:REG_EQUAL (symbol_ref/f:SI ("*.LC1") [flags 0x2]  <var_decl 0x7752a0f2ed80 *.LC1>)
+     (expr_list:REG_EQUAL (symbol_ref/f:SI ("*.LC1") [flags 0x2]  <var_decl 0x7fe9a072ed80 *.LC1>)
         (nil)))
 (insn 35 34 36 4 (set (mem/f:SI (pre_dec:SI (reg/f:SI 7 sp)) [2  S4 A32])
         (reg/f:SI 111)) "kernel/math/math_emulate.c":27:3 54 {*pushsi2}
@@ -249,7 +249,7 @@
 (insn 36 35 37 4 (set (reg:SI 3 bx)
         (reg:SI 82)) "kernel/math/math_emulate.c":27:3 75 {*movsi_internal}
      (nil))
-(call_insn 37 36 38 4 (call (mem:QI (symbol_ref:SI ("panic") [flags 0x41]  <function_decl 0x7752a0f38700 panic>) [0 panic S1 A8])
+(call_insn 37 36 38 4 (call (mem:QI (symbol_ref:SI ("panic") [flags 0x41]  <function_decl 0x7fe9a0738700 panic>) [0 panic S1 A8])
         (const_int 16 [0x10])) "kernel/math/math_emulate.c":27:3 812 {*call}
      (nil)
     (expr_list (use (reg:SI 3 bx))
@@ -295,7 +295,7 @@
      (expr_list:REG_ARGS_SIZE (const_int 16 [0x10])
         (nil)))
 (call_insn 47 46 48 5 (set (reg:QI 0 ax)
-        (call (mem:QI (symbol_ref:SI ("get_fs_byte") [flags 0x3]  <function_decl 0x7752a0f38c00 get_fs_byte>) [0 get_fs_byte S1 A8])
+        (call (mem:QI (symbol_ref:SI ("get_fs_byte") [flags 0x3]  <function_decl 0x7fe9a0738c00 get_fs_byte>) [0 get_fs_byte S1 A8])
             (const_int 16 [0x10]))) "kernel/math/math_emulate.c":29:10 823 {*call_value}
      (nil)
     (nil))
@@ -345,7 +345,7 @@
      (expr_list:REG_ARGS_SIZE (const_int 16 [0x10])
         (nil)))
 (call_insn 57 56 58 5 (set (reg:QI 0 ax)
-        (call (mem:QI (symbol_ref:SI ("get_fs_byte") [flags 0x3]  <function_decl 0x7752a0f38c00 get_fs_byte>) [0 get_fs_byte S1 A8])
+        (call (mem:QI (symbol_ref:SI ("get_fs_byte") [flags 0x3]  <function_decl 0x7fe9a0738c00 get_fs_byte>) [0 get_fs_byte S1 A8])
             (const_int 16 [0x10]))) "kernel/math/math_emulate.c":30:11 823 {*call_value}
      (nil)
     (nil))
@@ -414,9 +414,9 @@
 (insn 71 70 72 5 (set (reg/f:SI 114)
         (plus:SI (reg:SI 82)
             (const:SI (unspec:SI [
-                        (symbol_ref/f:SI ("*.LC2") [flags 0x2]  <var_decl 0x7752a0f2ee10 *.LC2>)
+                        (symbol_ref/f:SI ("*.LC2") [flags 0x2]  <var_decl 0x7fe9a072ee10 *.LC2>)
                     ] UNSPEC_GOTOFF)))) "kernel/math/math_emulate.c":31:2 205 {*leasi}
-     (expr_list:REG_EQUAL (symbol_ref/f:SI ("*.LC2") [flags 0x2]  <var_decl 0x7752a0f2ee10 *.LC2>)
+     (expr_list:REG_EQUAL (symbol_ref/f:SI ("*.LC2") [flags 0x2]  <var_decl 0x7fe9a072ee10 *.LC2>)
         (nil)))
 (insn 72 71 73 5 (set (mem/f:SI (pre_dec:SI (reg/f:SI 7 sp)) [2  S4 A32])
         (reg/f:SI 114)) "kernel/math/math_emulate.c":31:2 54 {*pushsi2}
@@ -426,7 +426,7 @@
         (reg:SI 82)) "kernel/math/math_emulate.c":31:2 75 {*movsi_internal}
      (nil))
 (call_insn 74 73 75 5 (set (reg:SI 0 ax)
-        (call (mem:QI (symbol_ref:SI ("printk") [flags 0x41]  <function_decl 0x7752a0f38900 printk>) [0 printk S1 A8])
+        (call (mem:QI (symbol_ref:SI ("printk") [flags 0x41]  <function_decl 0x7fe9a0738900 printk>) [0 printk S1 A8])
             (const_int 32 [0x20]))) "kernel/math/math_emulate.c":31:2 823 {*call_value}
      (nil)
     (expr_list (use (reg:SI 3 bx))
@@ -442,7 +442,7 @@
 (insn 76 75 77 5 (set (reg/f:SI 115)
         (mem/u/c:SI (plus:SI (reg:SI 82)
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("current") [flags 0x40]  <var_decl 0x7752a0f2e120 current>)
+                            (symbol_ref:SI ("current") [flags 0x40]  <var_decl 0x7fe9a072e120 current>)
                         ] UNSPEC_GOT))) [4  S4 A8])) "kernel/math/math_emulate.c":32:18 75 {*movsi_internal}
      (nil))
 (insn 77 76 78 5 (set (reg/f:SI 96 [ current.11_16 ])
@@ -455,7 +455,7 @@
 (insn 79 78 80 5 (set (reg/f:SI 116)
         (mem/u/c:SI (plus:SI (reg:SI 82)
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("current") [flags 0x40]  <var_decl 0x7752a0f2e120 current>)
+                            (symbol_ref:SI ("current") [flags 0x40]  <var_decl 0x7fe9a072e120 current>)
                         ] UNSPEC_GOT))) [4  S4 A8])) "kernel/math/math_emulate.c":32:18 75 {*movsi_internal}
      (nil))
 (insn 80 79 81 5 (set (reg/f:SI 98 [ current.12_18 ])

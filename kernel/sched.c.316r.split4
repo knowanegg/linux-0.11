@@ -53,10 +53,10 @@ Dataflow summary:
 (insn 5 2 6 2 (set (reg/f:SI 1 dx [123])
         (plus:SI (reg:SI 0 ax [82])
             (const:SI (plus:SI (unspec:SI [
-                            (symbol_ref:SI ("task") [flags 0x2]  <var_decl 0x7a946af2e1b0 task>)
+                            (symbol_ref:SI ("task") [flags 0x2]  <var_decl 0x7a1cf052e1b0 task>)
                         ] UNSPEC_GOTOFF)
                     (const_int 252 [0xfc]))))) "kernel/sched.c":67:9 205 {*leasi}
-     (expr_list:REG_EQUAL (const:SI (plus:SI (symbol_ref:SI ("task") [flags 0x2]  <var_decl 0x7a946af2e1b0 task>)
+     (expr_list:REG_EQUAL (const:SI (plus:SI (symbol_ref:SI ("task") [flags 0x2]  <var_decl 0x7a1cf052e1b0 task>)
                 (const_int 252 [0xfc])))
         (nil)))
 (insn 6 5 166 2 (set (mem/f/c:SI (plus:SI (reg/f:SI 7 sp)
@@ -126,7 +126,7 @@ Dataflow summary:
 (insn 24 23 25 5 (set (reg:SI 1 dx [orig:88 jiffies.0_6 ] [88])
         (mem/v/c:SI (plus:SI (reg:SI 0 ax [82])
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("jiffies") [flags 0x2]  <var_decl 0x7a946af2e360 jiffies>)
+                            (symbol_ref:SI ("jiffies") [flags 0x2]  <var_decl 0x7a1cf052e360 jiffies>)
                         ] UNSPEC_GOTOFF))) [2 jiffies+0 S4 A32])) "kernel/sched.c":69:35 75 {*movsi_internal}
      (nil))
 (insn 25 24 26 5 (set (reg:CCGC 17 flags)
@@ -286,9 +286,9 @@ Dataflow summary:
 (insn 67 65 68 11 (set (reg:SI 1 dx [134])
         (plus:SI (reg:SI 0 ax [82])
             (const:SI (unspec:SI [
-                        (symbol_ref:SI ("task") [flags 0x2]  <var_decl 0x7a946af2e1b0 task>)
+                        (symbol_ref:SI ("task") [flags 0x2]  <var_decl 0x7a1cf052e1b0 task>)
                     ] UNSPEC_GOTOFF)))) "kernel/sched.c":67:25 205 {*leasi}
-     (expr_list:REG_EQUAL (symbol_ref:SI ("task") [flags 0x2]  <var_decl 0x7a946af2e1b0 task>)
+     (expr_list:REG_EQUAL (symbol_ref:SI ("task") [flags 0x2]  <var_decl 0x7a1cf052e1b0 task>)
         (nil)))
 (insn 68 67 69 11 (set (reg:CC 17 flags)
         (compare:CC (mem/f/c:SI (plus:SI (reg/f:SI 7 sp)
@@ -319,10 +319,10 @@ Dataflow summary:
 (insn 74 73 75 12 (set (reg/f:SI 1 dx [135])
         (plus:SI (reg:SI 0 ax [82])
             (const:SI (plus:SI (unspec:SI [
-                            (symbol_ref:SI ("task") [flags 0x2]  <var_decl 0x7a946af2e1b0 task>)
+                            (symbol_ref:SI ("task") [flags 0x2]  <var_decl 0x7a1cf052e1b0 task>)
                         ] UNSPEC_GOTOFF)
                     (const_int 256 [0x100]))))) "kernel/sched.c":83:6 205 {*leasi}
-     (expr_list:REG_EQUAL (const:SI (plus:SI (symbol_ref:SI ("task") [flags 0x2]  <var_decl 0x7a946af2e1b0 task>)
+     (expr_list:REG_EQUAL (const:SI (plus:SI (symbol_ref:SI ("task") [flags 0x2]  <var_decl 0x7a1cf052e1b0 task>)
                 (const_int 256 [0x100])))
         (nil)))
 (insn 75 74 168 12 (set (mem/f/c:SI (plus:SI (reg/f:SI 7 sp)
@@ -480,10 +480,10 @@ Dataflow summary:
 (insn 121 120 122 20 (set (reg/f:SI 1 dx [142])
         (plus:SI (reg:SI 0 ax [82])
             (const:SI (plus:SI (unspec:SI [
-                            (symbol_ref:SI ("task") [flags 0x2]  <var_decl 0x7a946af2e1b0 task>)
+                            (symbol_ref:SI ("task") [flags 0x2]  <var_decl 0x7a1cf052e1b0 task>)
                         ] UNSPEC_GOTOFF)
                     (const_int 252 [0xfc]))))) "kernel/sched.c":94:11 205 {*leasi}
-     (expr_list:REG_EQUAL (const:SI (plus:SI (symbol_ref:SI ("task") [flags 0x2]  <var_decl 0x7a946af2e1b0 task>)
+     (expr_list:REG_EQUAL (const:SI (plus:SI (symbol_ref:SI ("task") [flags 0x2]  <var_decl 0x7a1cf052e1b0 task>)
                 (const_int 252 [0xfc])))
         (nil)))
 (insn 122 121 173 20 (set (mem/f/c:SI (plus:SI (reg/f:SI 7 sp)
@@ -582,9 +582,9 @@ Dataflow summary:
 (insn 148 146 149 24 (set (reg:SI 1 dx [147])
         (plus:SI (reg:SI 0 ax [82])
             (const:SI (unspec:SI [
-                        (symbol_ref:SI ("task") [flags 0x2]  <var_decl 0x7a946af2e1b0 task>)
+                        (symbol_ref:SI ("task") [flags 0x2]  <var_decl 0x7a1cf052e1b0 task>)
                     ] UNSPEC_GOTOFF)))) "kernel/sched.c":94:27 205 {*leasi}
-     (expr_list:REG_EQUAL (symbol_ref:SI ("task") [flags 0x2]  <var_decl 0x7a946af2e1b0 task>)
+     (expr_list:REG_EQUAL (symbol_ref:SI ("task") [flags 0x2]  <var_decl 0x7a1cf052e1b0 task>)
         (nil)))
 (insn 149 148 150 24 (set (reg:CC 17 flags)
         (compare:CC (mem/f/c:SI (plus:SI (reg/f:SI 7 sp)
@@ -632,7 +632,7 @@ Dataflow summary:
                         (const_int 4 [0x4]))
                     (reg:SI 0 ax [82]))
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("task") [flags 0x2]  <var_decl 0x7a946af2e1b0 task>)
+                            (symbol_ref:SI ("task") [flags 0x2]  <var_decl 0x7a1cf052e1b0 task>)
                         ] UNSPEC_GOTOFF))) [13 task[next_42]+0 S4 A32])) "kernel/sched.c":99:3 75 {*movsi_internal}
      (nil))
 (insn 186 161 187 26 (set (reg:SI 1 dx [orig:120 _38 ] [120])
@@ -754,15 +754,15 @@ Dataflow summary:
 (insn 12 11 13 3 (set (reg/f:SI 1 dx [orig:83 current.2_1 ] [83])
         (mem/f/c:SI (plus:SI (reg:SI 3 bx [82])
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("current") [flags 0x2]  <var_decl 0x7a946af2e120 current>)
+                            (symbol_ref:SI ("current") [flags 0x2]  <var_decl 0x7a1cf052e120 current>)
                         ] UNSPEC_GOTOFF))) [13 current+0 S4 A32])) "kernel/sched.c":109:14 75 {*movsi_internal}
      (nil))
 (insn 13 12 14 3 (set (reg:SI 0 ax [90])
         (plus:SI (reg:SI 3 bx [82])
             (const:SI (unspec:SI [
-                        (symbol_ref:SI ("init_task") [flags 0x2]  <var_decl 0x7a946af2e990 init_task>)
+                        (symbol_ref:SI ("init_task") [flags 0x2]  <var_decl 0x7a1cf052e990 init_task>)
                     ] UNSPEC_GOTOFF)))) "kernel/sched.c":109:5 205 {*leasi}
-     (expr_list:REG_EQUAL (symbol_ref:SI ("init_task") [flags 0x2]  <var_decl 0x7a946af2e990 init_task>)
+     (expr_list:REG_EQUAL (symbol_ref:SI ("init_task") [flags 0x2]  <var_decl 0x7a1cf052e990 init_task>)
         (nil)))
 (insn 14 13 15 3 (set (reg:CCZ 17 flags)
         (compare:CCZ (reg/f:SI 1 dx [orig:83 current.2_1 ] [83])
@@ -787,15 +787,15 @@ Dataflow summary:
 (insn 18 17 19 4 (set (reg/f:SI 0 ax [91])
         (plus:SI (reg:SI 3 bx [82])
             (const:SI (unspec:SI [
-                        (symbol_ref/f:SI ("*.LC0") [flags 0x2]  <var_decl 0x7a946afda5a0 *.LC0>)
+                        (symbol_ref/f:SI ("*.LC0") [flags 0x2]  <var_decl 0x7a1cf05da5a0 *.LC0>)
                     ] UNSPEC_GOTOFF)))) "kernel/sched.c":110:3 205 {*leasi}
-     (expr_list:REG_EQUAL (symbol_ref/f:SI ("*.LC0") [flags 0x2]  <var_decl 0x7a946afda5a0 *.LC0>)
+     (expr_list:REG_EQUAL (symbol_ref/f:SI ("*.LC0") [flags 0x2]  <var_decl 0x7a1cf05da5a0 *.LC0>)
         (nil)))
 (insn 19 18 21 4 (set (mem/f:SI (pre_dec:SI (reg/f:SI 7 sp)) [22  S4 A32])
         (reg/f:SI 0 ax [91])) "kernel/sched.c":110:3 54 {*pushsi2}
      (expr_list:REG_ARGS_SIZE (const_int 16 [0x10])
         (nil)))
-(call_insn 21 19 22 4 (call (mem:QI (symbol_ref:SI ("panic") [flags 0x41]  <function_decl 0x7a946af38700 panic>) [0 panic S1 A8])
+(call_insn 21 19 22 4 (call (mem:QI (symbol_ref:SI ("panic") [flags 0x41]  <function_decl 0x7a1cf0538700 panic>) [0 panic S1 A8])
         (const_int 16 [0x10])) "kernel/sched.c":110:3 812 {*call}
      (nil)
     (expr_list (use (reg:SI 3 bx))
@@ -824,7 +824,7 @@ Dataflow summary:
 (insn 28 27 29 5 (set (reg/f:SI 1 dx [orig:84 current.3_2 ] [84])
         (mem/f/c:SI (plus:SI (reg:SI 3 bx [82])
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("current") [flags 0x2]  <var_decl 0x7a946af2e120 current>)
+                            (symbol_ref:SI ("current") [flags 0x2]  <var_decl 0x7a1cf052e120 current>)
                         ] UNSPEC_GOTOFF))) [13 current+0 S4 A32])) "kernel/sched.c":112:5 75 {*movsi_internal}
      (nil))
 (insn 29 28 30 5 (set (reg/f:SI 0 ax [94])
@@ -839,13 +839,13 @@ Dataflow summary:
 (insn 33 32 34 6 (set (reg/f:SI 0 ax [orig:85 current.4_3 ] [85])
         (mem/f/c:SI (plus:SI (reg:SI 3 bx [82])
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("current") [flags 0x2]  <var_decl 0x7a946af2e120 current>)
+                            (symbol_ref:SI ("current") [flags 0x2]  <var_decl 0x7a1cf052e120 current>)
                         ] UNSPEC_GOTOFF))) [13 current+0 S4 A32])) "kernel/sched.c":113:16 75 {*movsi_internal}
      (nil))
 (insn 34 33 35 6 (set (mem:SI (reg/f:SI 0 ax [orig:85 current.4_3 ] [85]) [2 current.4_3->state+0 S4 A32])
         (const_int 2 [0x2])) "kernel/sched.c":113:24 75 {*movsi_internal}
      (nil))
-(call_insn 35 34 36 6 (call (mem:QI (symbol_ref:SI ("schedule") [flags 0x3]  <function_decl 0x7a946af15c00 schedule>) [0 schedule S1 A8])
+(call_insn 35 34 36 6 (call (mem:QI (symbol_ref:SI ("schedule") [flags 0x3]  <function_decl 0x7a1cf0515c00 schedule>) [0 schedule S1 A8])
         (const_int 0 [0])) "kernel/sched.c":114:2 812 {*call}
      (nil)
     (nil))
@@ -878,7 +878,7 @@ Dataflow summary:
 (insn 43 42 44 7 (set (reg/f:SI 0 ax [orig:88 current.5_6 ] [88])
         (mem/f/c:SI (plus:SI (reg:SI 3 bx [82])
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("current") [flags 0x2]  <var_decl 0x7a946af2e120 current>)
+                            (symbol_ref:SI ("current") [flags 0x2]  <var_decl 0x7a1cf052e120 current>)
                         ] UNSPEC_GOTOFF))) [13 current+0 S4 A32])) "kernel/sched.c":115:22 75 {*movsi_internal}
      (nil))
 (insn 44 43 45 7 (set (reg:CCZ 17 flags)
@@ -1123,10 +1123,10 @@ Dataflow summary:
 (insn 6 171 132 2 (set (reg:SI 0 ax [orig:83 _1 ] [83])
         (plus:SI (reg:SI 0 ax [82])
             (const:SI (plus:SI (unspec:SI [
-                            (symbol_ref:SI ("init_task") [flags 0x2]  <var_decl 0x7a946af2e990 init_task>)
+                            (symbol_ref:SI ("init_task") [flags 0x2]  <var_decl 0x7a1cf052e990 init_task>)
                         ] UNSPEC_GOTOFF)
                     (const_int 744 [0x2e8]))))) "kernel/sched.c":148:5 205 {*leasi}
-     (expr_list:REG_EQUAL (const:SI (plus:SI (symbol_ref:SI ("init_task") [flags 0x2]  <var_decl 0x7a946af2e990 init_task>)
+     (expr_list:REG_EQUAL (const:SI (plus:SI (symbol_ref:SI ("init_task") [flags 0x2]  <var_decl 0x7a1cf052e990 init_task>)
                 (const_int 744 [0x2e8])))
         (nil)))
 (insn 132 6 136 2 (set (reg:SI 5 di [orig:83 _1 ] [83])
@@ -1139,13 +1139,13 @@ Dataflow summary:
 (insn 7 170 8 2 (set (reg:SI 0 ax [106])
         (mem/u/c:SI (plus:SI (reg:SI 0 ax [82])
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("gdt") [flags 0x40]  <var_decl 0x7a946c724c60 gdt>)
+                            (symbol_ref:SI ("gdt") [flags 0x40]  <var_decl 0x7a1cf1e98c60 gdt>)
                         ] UNSPEC_GOT))) [24  S4 A8])) "kernel/sched.c":148:5 75 {*movsi_internal}
      (nil))
 (insn 8 7 140 2 (set (reg/f:SI 0 ax [orig:84 _2 ] [84])
         (plus:SI (reg:SI 0 ax [106])
             (const_int 32 [0x20]))) "kernel/sched.c":148:5 205 {*leasi}
-     (expr_list:REG_EQUAL (const:SI (plus:SI (symbol_ref:SI ("gdt") [flags 0x40]  <var_decl 0x7a946c724c60 gdt>)
+     (expr_list:REG_EQUAL (const:SI (plus:SI (symbol_ref:SI ("gdt") [flags 0x40]  <var_decl 0x7a1cf1e98c60 gdt>)
                 (const_int 32 [0x20])))
         (nil)))
 (insn 140 8 169 2 (set (reg/f:SI 6 bp [orig:84 _2 ] [84])
@@ -1157,13 +1157,13 @@ Dataflow summary:
 (insn 9 169 10 2 (set (reg:SI 0 ax [107])
         (mem/u/c:SI (plus:SI (reg:SI 0 ax [82])
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("gdt") [flags 0x40]  <var_decl 0x7a946c724c60 gdt>)
+                            (symbol_ref:SI ("gdt") [flags 0x40]  <var_decl 0x7a1cf1e98c60 gdt>)
                         ] UNSPEC_GOT))) [24  S4 A8])) "kernel/sched.c":148:5 75 {*movsi_internal}
      (nil))
 (insn 10 9 144 2 (set (reg/f:SI 0 ax [orig:85 _3 ] [85])
         (plus:SI (reg:SI 0 ax [107])
             (const_int 34 [0x22]))) "kernel/sched.c":148:5 205 {*leasi}
-     (expr_list:REG_EQUAL (const:SI (plus:SI (symbol_ref:SI ("gdt") [flags 0x40]  <var_decl 0x7a946c724c60 gdt>)
+     (expr_list:REG_EQUAL (const:SI (plus:SI (symbol_ref:SI ("gdt") [flags 0x40]  <var_decl 0x7a1cf1e98c60 gdt>)
                 (const_int 34 [0x22])))
         (nil)))
 (insn 144 10 168 2 (set (mem/c:SI (plus:SI (reg/f:SI 7 sp)
@@ -1176,13 +1176,13 @@ Dataflow summary:
 (insn 11 168 12 2 (set (reg:SI 0 ax [108])
         (mem/u/c:SI (plus:SI (reg:SI 0 ax [82])
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("gdt") [flags 0x40]  <var_decl 0x7a946c724c60 gdt>)
+                            (symbol_ref:SI ("gdt") [flags 0x40]  <var_decl 0x7a1cf1e98c60 gdt>)
                         ] UNSPEC_GOT))) [24  S4 A8])) "kernel/sched.c":148:5 75 {*movsi_internal}
      (nil))
 (insn 12 11 148 2 (set (reg/f:SI 0 ax [orig:86 _4 ] [86])
         (plus:SI (reg:SI 0 ax [108])
             (const_int 36 [0x24]))) "kernel/sched.c":148:5 205 {*leasi}
-     (expr_list:REG_EQUAL (const:SI (plus:SI (symbol_ref:SI ("gdt") [flags 0x40]  <var_decl 0x7a946c724c60 gdt>)
+     (expr_list:REG_EQUAL (const:SI (plus:SI (symbol_ref:SI ("gdt") [flags 0x40]  <var_decl 0x7a1cf1e98c60 gdt>)
                 (const_int 36 [0x24])))
         (nil)))
 (insn 148 12 167 2 (set (mem/c:SI (plus:SI (reg/f:SI 7 sp)
@@ -1195,13 +1195,13 @@ Dataflow summary:
 (insn 13 167 14 2 (set (reg:SI 0 ax [109])
         (mem/u/c:SI (plus:SI (reg:SI 0 ax [82])
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("gdt") [flags 0x40]  <var_decl 0x7a946c724c60 gdt>)
+                            (symbol_ref:SI ("gdt") [flags 0x40]  <var_decl 0x7a1cf1e98c60 gdt>)
                         ] UNSPEC_GOT))) [24  S4 A8])) "kernel/sched.c":148:5 75 {*movsi_internal}
      (nil))
 (insn 14 13 126 2 (set (reg/f:SI 3 bx [orig:87 _5 ] [87])
         (plus:SI (reg:SI 0 ax [109])
             (const_int 37 [0x25]))) "kernel/sched.c":148:5 205 {*leasi}
-     (expr_list:REG_EQUAL (const:SI (plus:SI (symbol_ref:SI ("gdt") [flags 0x40]  <var_decl 0x7a946c724c60 gdt>)
+     (expr_list:REG_EQUAL (const:SI (plus:SI (symbol_ref:SI ("gdt") [flags 0x40]  <var_decl 0x7a1cf1e98c60 gdt>)
                 (const_int 37 [0x25])))
         (nil)))
 (note 126 14 166 2 NOTE_INSN_DELETED)
@@ -1211,13 +1211,13 @@ Dataflow summary:
 (insn 15 166 16 2 (set (reg:SI 0 ax [110])
         (mem/u/c:SI (plus:SI (reg:SI 0 ax [82])
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("gdt") [flags 0x40]  <var_decl 0x7a946c724c60 gdt>)
+                            (symbol_ref:SI ("gdt") [flags 0x40]  <var_decl 0x7a1cf1e98c60 gdt>)
                         ] UNSPEC_GOT))) [24  S4 A8])) "kernel/sched.c":148:5 75 {*movsi_internal}
      (nil))
 (insn 16 15 125 2 (set (reg/f:SI 1 dx [orig:88 _6 ] [88])
         (plus:SI (reg:SI 0 ax [110])
             (const_int 38 [0x26]))) "kernel/sched.c":148:5 205 {*leasi}
-     (expr_list:REG_EQUAL (const:SI (plus:SI (symbol_ref:SI ("gdt") [flags 0x40]  <var_decl 0x7a946c724c60 gdt>)
+     (expr_list:REG_EQUAL (const:SI (plus:SI (symbol_ref:SI ("gdt") [flags 0x40]  <var_decl 0x7a1cf1e98c60 gdt>)
                 (const_int 38 [0x26])))
         (nil)))
 (note 125 16 165 2 NOTE_INSN_DELETED)
@@ -1227,13 +1227,13 @@ Dataflow summary:
 (insn 17 165 18 2 (set (reg:SI 0 ax [111])
         (mem/u/c:SI (plus:SI (reg:SI 0 ax [82])
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("gdt") [flags 0x40]  <var_decl 0x7a946c724c60 gdt>)
+                            (symbol_ref:SI ("gdt") [flags 0x40]  <var_decl 0x7a1cf1e98c60 gdt>)
                         ] UNSPEC_GOT))) [24  S4 A8])) "kernel/sched.c":148:5 75 {*movsi_internal}
      (nil))
 (insn 18 17 135 2 (set (reg/f:SI 4 si [orig:89 _7 ] [89])
         (plus:SI (reg:SI 0 ax [111])
             (const_int 39 [0x27]))) "kernel/sched.c":148:5 205 {*leasi}
-     (expr_list:REG_EQUAL (const:SI (plus:SI (symbol_ref:SI ("gdt") [flags 0x40]  <var_decl 0x7a946c724c60 gdt>)
+     (expr_list:REG_EQUAL (const:SI (plus:SI (symbol_ref:SI ("gdt") [flags 0x40]  <var_decl 0x7a1cf1e98c60 gdt>)
                 (const_int 39 [0x27])))
         (nil)))
 (note 135 18 114 2 NOTE_INSN_DELETED)
@@ -1293,10 +1293,10 @@ Dataflow summary:
 (insn 20 164 129 2 (set (reg:SI 0 ax [orig:90 _8 ] [90])
         (plus:SI (reg:SI 0 ax [82])
             (const:SI (plus:SI (unspec:SI [
-                            (symbol_ref:SI ("init_task") [flags 0x2]  <var_decl 0x7a946af2e990 init_task>)
+                            (symbol_ref:SI ("init_task") [flags 0x2]  <var_decl 0x7a1cf052e990 init_task>)
                         ] UNSPEC_GOTOFF)
                     (const_int 720 [0x2d0]))))) "kernel/sched.c":149:5 205 {*leasi}
-     (expr_list:REG_EQUAL (const:SI (plus:SI (symbol_ref:SI ("init_task") [flags 0x2]  <var_decl 0x7a946af2e990 init_task>)
+     (expr_list:REG_EQUAL (const:SI (plus:SI (symbol_ref:SI ("init_task") [flags 0x2]  <var_decl 0x7a1cf052e990 init_task>)
                 (const_int 720 [0x2d0])))
         (nil)))
 (insn 129 20 134 2 (set (reg:SI 5 di [orig:90 _8 ] [90])
@@ -1309,13 +1309,13 @@ Dataflow summary:
 (insn 21 163 22 2 (set (reg:SI 0 ax [112])
         (mem/u/c:SI (plus:SI (reg:SI 0 ax [82])
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("gdt") [flags 0x40]  <var_decl 0x7a946c724c60 gdt>)
+                            (symbol_ref:SI ("gdt") [flags 0x40]  <var_decl 0x7a1cf1e98c60 gdt>)
                         ] UNSPEC_GOT))) [24  S4 A8])) "kernel/sched.c":149:5 75 {*movsi_internal}
      (nil))
 (insn 22 21 138 2 (set (reg/f:SI 0 ax [orig:91 _9 ] [91])
         (plus:SI (reg:SI 0 ax [112])
             (const_int 40 [0x28]))) "kernel/sched.c":149:5 205 {*leasi}
-     (expr_list:REG_EQUAL (const:SI (plus:SI (symbol_ref:SI ("gdt") [flags 0x40]  <var_decl 0x7a946c724c60 gdt>)
+     (expr_list:REG_EQUAL (const:SI (plus:SI (symbol_ref:SI ("gdt") [flags 0x40]  <var_decl 0x7a1cf1e98c60 gdt>)
                 (const_int 40 [0x28])))
         (nil)))
 (insn 138 22 162 2 (set (reg/f:SI 6 bp [orig:91 _9 ] [91])
@@ -1327,13 +1327,13 @@ Dataflow summary:
 (insn 23 162 24 2 (set (reg:SI 0 ax [113])
         (mem/u/c:SI (plus:SI (reg:SI 0 ax [82])
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("gdt") [flags 0x40]  <var_decl 0x7a946c724c60 gdt>)
+                            (symbol_ref:SI ("gdt") [flags 0x40]  <var_decl 0x7a1cf1e98c60 gdt>)
                         ] UNSPEC_GOT))) [24  S4 A8])) "kernel/sched.c":149:5 75 {*movsi_internal}
      (nil))
 (insn 24 23 142 2 (set (reg/f:SI 0 ax [orig:92 _10 ] [92])
         (plus:SI (reg:SI 0 ax [113])
             (const_int 42 [0x2a]))) "kernel/sched.c":149:5 205 {*leasi}
-     (expr_list:REG_EQUAL (const:SI (plus:SI (symbol_ref:SI ("gdt") [flags 0x40]  <var_decl 0x7a946c724c60 gdt>)
+     (expr_list:REG_EQUAL (const:SI (plus:SI (symbol_ref:SI ("gdt") [flags 0x40]  <var_decl 0x7a1cf1e98c60 gdt>)
                 (const_int 42 [0x2a])))
         (nil)))
 (insn 142 24 161 2 (set (mem/c:SI (plus:SI (reg/f:SI 7 sp)
@@ -1346,13 +1346,13 @@ Dataflow summary:
 (insn 25 161 26 2 (set (reg:SI 0 ax [114])
         (mem/u/c:SI (plus:SI (reg:SI 0 ax [82])
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("gdt") [flags 0x40]  <var_decl 0x7a946c724c60 gdt>)
+                            (symbol_ref:SI ("gdt") [flags 0x40]  <var_decl 0x7a1cf1e98c60 gdt>)
                         ] UNSPEC_GOT))) [24  S4 A8])) "kernel/sched.c":149:5 75 {*movsi_internal}
      (nil))
 (insn 26 25 146 2 (set (reg/f:SI 0 ax [orig:93 _11 ] [93])
         (plus:SI (reg:SI 0 ax [114])
             (const_int 44 [0x2c]))) "kernel/sched.c":149:5 205 {*leasi}
-     (expr_list:REG_EQUAL (const:SI (plus:SI (symbol_ref:SI ("gdt") [flags 0x40]  <var_decl 0x7a946c724c60 gdt>)
+     (expr_list:REG_EQUAL (const:SI (plus:SI (symbol_ref:SI ("gdt") [flags 0x40]  <var_decl 0x7a1cf1e98c60 gdt>)
                 (const_int 44 [0x2c])))
         (nil)))
 (insn 146 26 160 2 (set (mem/c:SI (plus:SI (reg/f:SI 7 sp)
@@ -1365,13 +1365,13 @@ Dataflow summary:
 (insn 27 160 28 2 (set (reg:SI 0 ax [115])
         (mem/u/c:SI (plus:SI (reg:SI 0 ax [82])
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("gdt") [flags 0x40]  <var_decl 0x7a946c724c60 gdt>)
+                            (symbol_ref:SI ("gdt") [flags 0x40]  <var_decl 0x7a1cf1e98c60 gdt>)
                         ] UNSPEC_GOT))) [24  S4 A8])) "kernel/sched.c":149:5 75 {*movsi_internal}
      (nil))
 (insn 28 27 124 2 (set (reg/f:SI 3 bx [orig:94 _12 ] [94])
         (plus:SI (reg:SI 0 ax [115])
             (const_int 45 [0x2d]))) "kernel/sched.c":149:5 205 {*leasi}
-     (expr_list:REG_EQUAL (const:SI (plus:SI (symbol_ref:SI ("gdt") [flags 0x40]  <var_decl 0x7a946c724c60 gdt>)
+     (expr_list:REG_EQUAL (const:SI (plus:SI (symbol_ref:SI ("gdt") [flags 0x40]  <var_decl 0x7a1cf1e98c60 gdt>)
                 (const_int 45 [0x2d])))
         (nil)))
 (note 124 28 159 2 NOTE_INSN_DELETED)
@@ -1381,13 +1381,13 @@ Dataflow summary:
 (insn 29 159 30 2 (set (reg:SI 0 ax [116])
         (mem/u/c:SI (plus:SI (reg:SI 0 ax [82])
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("gdt") [flags 0x40]  <var_decl 0x7a946c724c60 gdt>)
+                            (symbol_ref:SI ("gdt") [flags 0x40]  <var_decl 0x7a1cf1e98c60 gdt>)
                         ] UNSPEC_GOT))) [24  S4 A8])) "kernel/sched.c":149:5 75 {*movsi_internal}
      (nil))
 (insn 30 29 123 2 (set (reg/f:SI 1 dx [orig:95 _13 ] [95])
         (plus:SI (reg:SI 0 ax [116])
             (const_int 46 [0x2e]))) "kernel/sched.c":149:5 205 {*leasi}
-     (expr_list:REG_EQUAL (const:SI (plus:SI (symbol_ref:SI ("gdt") [flags 0x40]  <var_decl 0x7a946c724c60 gdt>)
+     (expr_list:REG_EQUAL (const:SI (plus:SI (symbol_ref:SI ("gdt") [flags 0x40]  <var_decl 0x7a1cf1e98c60 gdt>)
                 (const_int 46 [0x2e])))
         (nil)))
 (note 123 30 158 2 NOTE_INSN_DELETED)
@@ -1397,13 +1397,13 @@ Dataflow summary:
 (insn 31 158 32 2 (set (reg:SI 0 ax [117])
         (mem/u/c:SI (plus:SI (reg:SI 0 ax [82])
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("gdt") [flags 0x40]  <var_decl 0x7a946c724c60 gdt>)
+                            (symbol_ref:SI ("gdt") [flags 0x40]  <var_decl 0x7a1cf1e98c60 gdt>)
                         ] UNSPEC_GOT))) [24  S4 A8])) "kernel/sched.c":149:5 75 {*movsi_internal}
      (nil))
 (insn 32 31 133 2 (set (reg/f:SI 4 si [orig:96 _14 ] [96])
         (plus:SI (reg:SI 0 ax [117])
             (const_int 47 [0x2f]))) "kernel/sched.c":149:5 205 {*leasi}
-     (expr_list:REG_EQUAL (const:SI (plus:SI (symbol_ref:SI ("gdt") [flags 0x40]  <var_decl 0x7a946c724c60 gdt>)
+     (expr_list:REG_EQUAL (const:SI (plus:SI (symbol_ref:SI ("gdt") [flags 0x40]  <var_decl 0x7a1cf1e98c60 gdt>)
                 (const_int 47 [0x2f])))
         (nil)))
 (note 133 32 119 2 NOTE_INSN_DELETED)
@@ -1463,13 +1463,13 @@ Dataflow summary:
 (insn 34 157 35 2 (set (reg:SI 0 ax [119])
         (mem/u/c:SI (plus:SI (reg:SI 0 ax [82])
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("gdt") [flags 0x40]  <var_decl 0x7a946c724c60 gdt>)
+                            (symbol_ref:SI ("gdt") [flags 0x40]  <var_decl 0x7a1cf1e98c60 gdt>)
                         ] UNSPEC_GOT))) [24  S4 A8])) "kernel/sched.c":150:7 75 {*movsi_internal}
      (nil))
 (insn 35 34 36 2 (set (reg/f:SI 0 ax [118])
         (plus:SI (reg:SI 0 ax [119])
             (const_int 48 [0x30]))) "kernel/sched.c":150:7 205 {*leasi}
-     (expr_list:REG_EQUAL (const:SI (plus:SI (symbol_ref:SI ("gdt") [flags 0x40]  <var_decl 0x7a946c724c60 gdt>)
+     (expr_list:REG_EQUAL (const:SI (plus:SI (symbol_ref:SI ("gdt") [flags 0x40]  <var_decl 0x7a1cf1e98c60 gdt>)
                 (const_int 48 [0x30])))
         (nil)))
 (insn 36 35 37 2 (set (mem/f/c:SI (plus:SI (reg/f:SI 7 sp)
@@ -1498,7 +1498,7 @@ Dataflow summary:
                         (const_int 4 [0x4]))
                     (reg:SI 2 cx [82]))
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("task") [flags 0x2]  <var_decl 0x7a946af2e1b0 task>)
+                            (symbol_ref:SI ("task") [flags 0x2]  <var_decl 0x7a1cf052e1b0 task>)
                         ] UNSPEC_GOTOFF))) [13 task[i_23]+0 S4 A32])
         (const_int 0 [0])) "kernel/sched.c":154:17 75 {*movsi_internal}
      (nil))
@@ -1693,13 +1693,13 @@ Dataflow summary:
 (insn 80 155 81 5 (set (reg:SI 0 ax [135])
         (mem/u/c:SI (plus:SI (reg:SI 0 ax [82])
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("idt") [flags 0x40]  <var_decl 0x7a946c724bd0 idt>)
+                            (symbol_ref:SI ("idt") [flags 0x40]  <var_decl 0x7a1cf1e98bd0 idt>)
                         ] UNSPEC_GOT))) [24  S4 A8])) "kernel/sched.c":177:5 75 {*movsi_internal}
      (nil))
 (insn 81 80 154 5 (set (reg/f:SI 3 bx [orig:99 _17 ] [99])
         (plus:SI (reg:SI 0 ax [135])
             (const_int 256 [0x100]))) "kernel/sched.c":177:5 205 {*leasi}
-     (expr_list:REG_EQUAL (const:SI (plus:SI (symbol_ref:SI ("idt") [flags 0x40]  <var_decl 0x7a946c724bd0 idt>)
+     (expr_list:REG_EQUAL (const:SI (plus:SI (symbol_ref:SI ("idt") [flags 0x40]  <var_decl 0x7a1cf1e98bd0 idt>)
                 (const_int 256 [0x100])))
         (nil)))
 (insn 154 81 82 5 (set (reg:SI 0 ax [82])
@@ -1708,13 +1708,13 @@ Dataflow summary:
 (insn 82 154 83 5 (set (reg:SI 0 ax [136])
         (mem/u/c:SI (plus:SI (reg:SI 0 ax [82])
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("idt") [flags 0x40]  <var_decl 0x7a946c724bd0 idt>)
+                            (symbol_ref:SI ("idt") [flags 0x40]  <var_decl 0x7a1cf1e98bd0 idt>)
                         ] UNSPEC_GOT))) [24  S4 A8])) "kernel/sched.c":177:5 75 {*movsi_internal}
      (nil))
 (insn 83 82 153 5 (set (reg/f:SI 4 si [orig:100 _18 ] [100])
         (plus:SI (reg:SI 0 ax [136])
             (const_int 260 [0x104]))) "kernel/sched.c":177:5 205 {*leasi}
-     (expr_list:REG_EQUAL (const:SI (plus:SI (symbol_ref:SI ("idt") [flags 0x40]  <var_decl 0x7a946c724bd0 idt>)
+     (expr_list:REG_EQUAL (const:SI (plus:SI (symbol_ref:SI ("idt") [flags 0x40]  <var_decl 0x7a1cf1e98bd0 idt>)
                 (const_int 260 [0x104])))
         (nil)))
 (insn 153 83 84 5 (set (reg:SI 0 ax [82])
@@ -1723,12 +1723,12 @@ Dataflow summary:
 (insn 84 153 85 5 (set (reg:SI 0 ax [138])
         (mem/u/c:SI (plus:SI (reg:SI 0 ax [82])
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("timer_interrupt") [flags 0x41]  <function_decl 0x7a946af44c00 timer_interrupt>)
+                            (symbol_ref:SI ("timer_interrupt") [flags 0x41]  <function_decl 0x7a1cf0544c00 timer_interrupt>)
                         ] UNSPEC_GOT))) [24  S4 A8])) "kernel/sched.c":177:5 75 {*movsi_internal}
      (nil))
 (insn 85 84 86 5 (set (reg/f:SI 1 dx [137])
         (reg:SI 0 ax [138])) "kernel/sched.c":177:5 75 {*movsi_internal}
-     (expr_list:REG_EQUAL (symbol_ref:SI ("timer_interrupt") [flags 0x41]  <function_decl 0x7a946af44c00 timer_interrupt>)
+     (expr_list:REG_EQUAL (symbol_ref:SI ("timer_interrupt") [flags 0x41]  <function_decl 0x7a1cf0544c00 timer_interrupt>)
         (nil)))
 (insn 86 85 87 5 (set (reg:SI 0 ax [139])
         (const_int 524288 [0x80000])) "kernel/sched.c":177:5 75 {*movsi_internal}
@@ -1816,13 +1816,13 @@ Dataflow summary:
 (insn 96 152 97 5 (set (reg:SI 0 ax [143])
         (mem/u/c:SI (plus:SI (reg:SI 0 ax [82])
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("idt") [flags 0x40]  <var_decl 0x7a946c724bd0 idt>)
+                            (symbol_ref:SI ("idt") [flags 0x40]  <var_decl 0x7a1cf1e98bd0 idt>)
                         ] UNSPEC_GOT))) [24  S4 A8])) "kernel/sched.c":179:5 75 {*movsi_internal}
      (nil))
 (insn 97 96 151 5 (set (reg/f:SI 3 bx [orig:103 _21 ] [103])
         (plus:SI (reg:SI 0 ax [143])
             (const_int 1024 [0x400]))) "kernel/sched.c":179:5 205 {*leasi}
-     (expr_list:REG_EQUAL (const:SI (plus:SI (symbol_ref:SI ("idt") [flags 0x40]  <var_decl 0x7a946c724bd0 idt>)
+     (expr_list:REG_EQUAL (const:SI (plus:SI (symbol_ref:SI ("idt") [flags 0x40]  <var_decl 0x7a1cf1e98bd0 idt>)
                 (const_int 1024 [0x400])))
         (nil)))
 (insn 151 97 98 5 (set (reg:SI 0 ax [82])
@@ -1831,13 +1831,13 @@ Dataflow summary:
 (insn 98 151 99 5 (set (reg:SI 0 ax [144])
         (mem/u/c:SI (plus:SI (reg:SI 0 ax [82])
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("idt") [flags 0x40]  <var_decl 0x7a946c724bd0 idt>)
+                            (symbol_ref:SI ("idt") [flags 0x40]  <var_decl 0x7a1cf1e98bd0 idt>)
                         ] UNSPEC_GOT))) [24  S4 A8])) "kernel/sched.c":179:5 75 {*movsi_internal}
      (nil))
 (insn 99 98 150 5 (set (reg/f:SI 4 si [orig:104 _22 ] [104])
         (plus:SI (reg:SI 0 ax [144])
             (const_int 1028 [0x404]))) "kernel/sched.c":179:5 205 {*leasi}
-     (expr_list:REG_EQUAL (const:SI (plus:SI (symbol_ref:SI ("idt") [flags 0x40]  <var_decl 0x7a946c724bd0 idt>)
+     (expr_list:REG_EQUAL (const:SI (plus:SI (symbol_ref:SI ("idt") [flags 0x40]  <var_decl 0x7a1cf1e98bd0 idt>)
                 (const_int 1028 [0x404])))
         (nil)))
 (insn 150 99 100 5 (set (reg:SI 0 ax [82])
@@ -1846,12 +1846,12 @@ Dataflow summary:
 (insn 100 150 101 5 (set (reg:SI 0 ax [146])
         (mem/u/c:SI (plus:SI (reg:SI 0 ax [82])
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("system_call") [flags 0x41]  <function_decl 0x7a946af44d00 system_call>)
+                            (symbol_ref:SI ("system_call") [flags 0x41]  <function_decl 0x7a1cf0544d00 system_call>)
                         ] UNSPEC_GOT))) [24  S4 A8])) "kernel/sched.c":179:5 75 {*movsi_internal}
      (nil))
 (insn 101 100 102 5 (set (reg/f:SI 1 dx [145])
         (reg:SI 0 ax [146])) "kernel/sched.c":179:5 75 {*movsi_internal}
-     (expr_list:REG_EQUAL (symbol_ref:SI ("system_call") [flags 0x41]  <function_decl 0x7a946af44d00 system_call>)
+     (expr_list:REG_EQUAL (symbol_ref:SI ("system_call") [flags 0x41]  <function_decl 0x7a1cf0544d00 system_call>)
         (nil)))
 (insn 102 101 103 5 (set (reg:SI 0 ax [147])
         (const_int 524288 [0x80000])) "kernel/sched.c":179:5 75 {*movsi_internal}
@@ -2020,9 +2020,9 @@ Dataflow summary:
 (insn 24 23 25 5 (set (reg/f:SI 0 ax [102])
         (plus:SI (reg:SI 3 bx [82])
             (const:SI (unspec:SI [
-                        (symbol_ref:SI ("timer_list") [flags 0x2]  <var_decl 0x7a946af2ed80 timer_list>)
+                        (symbol_ref:SI ("timer_list") [flags 0x2]  <var_decl 0x7a1cf052ed80 timer_list>)
                     ] UNSPEC_GOTOFF)))) "kernel/sched.c":200:10 205 {*leasi}
-     (expr_list:REG_EQUAL (symbol_ref:SI ("timer_list") [flags 0x2]  <var_decl 0x7a946af2ed80 timer_list>)
+     (expr_list:REG_EQUAL (symbol_ref:SI ("timer_list") [flags 0x2]  <var_decl 0x7a1cf052ed80 timer_list>)
         (nil)))
 (insn 25 24 132 5 (set (mem/f/c:SI (plus:SI (reg/f:SI 7 sp)
                 (const_int 12 [0xc])) [14 p+0 S4 A32])
@@ -2069,10 +2069,10 @@ Dataflow summary:
 (insn 41 40 43 8 (set (reg/f:SI 0 ax [orig:84 _2 ] [84])
         (plus:SI (reg:SI 3 bx [82])
             (const:SI (plus:SI (unspec:SI [
-                            (symbol_ref:SI ("timer_list") [flags 0x2]  <var_decl 0x7a946af2ed80 timer_list>)
+                            (symbol_ref:SI ("timer_list") [flags 0x2]  <var_decl 0x7a1cf052ed80 timer_list>)
                         ] UNSPEC_GOTOFF)
                     (const_int 768 [0x300]))))) "kernel/sched.c":200:39 205 {*leasi}
-     (expr_list:REG_EQUAL (const:SI (plus:SI (symbol_ref:SI ("timer_list") [flags 0x2]  <var_decl 0x7a946af2ed80 timer_list>)
+     (expr_list:REG_EQUAL (const:SI (plus:SI (symbol_ref:SI ("timer_list") [flags 0x2]  <var_decl 0x7a1cf052ed80 timer_list>)
                 (const_int 768 [0x300])))
         (nil)))
 (insn 43 41 44 8 (set (reg:CC 17 flags)
@@ -2102,10 +2102,10 @@ Dataflow summary:
 (insn 47 46 48 11 (set (reg/f:SI 0 ax [orig:85 _3 ] [85])
         (plus:SI (reg:SI 3 bx [82])
             (const:SI (plus:SI (unspec:SI [
-                            (symbol_ref:SI ("timer_list") [flags 0x2]  <var_decl 0x7a946af2ed80 timer_list>)
+                            (symbol_ref:SI ("timer_list") [flags 0x2]  <var_decl 0x7a1cf052ed80 timer_list>)
                         ] UNSPEC_GOTOFF)
                     (const_int 768 [0x300]))))) "kernel/sched.c":203:23 205 {*leasi}
-     (expr_list:REG_EQUAL (const:SI (plus:SI (symbol_ref:SI ("timer_list") [flags 0x2]  <var_decl 0x7a946af2ed80 timer_list>)
+     (expr_list:REG_EQUAL (const:SI (plus:SI (symbol_ref:SI ("timer_list") [flags 0x2]  <var_decl 0x7a1cf052ed80 timer_list>)
                 (const_int 768 [0x300])))
         (nil)))
 (insn 48 47 49 11 (set (reg:CC 17 flags)
@@ -2132,15 +2132,15 @@ Dataflow summary:
 (insn 52 51 53 12 (set (reg/f:SI 0 ax [104])
         (plus:SI (reg:SI 3 bx [82])
             (const:SI (unspec:SI [
-                        (symbol_ref/f:SI ("*.LC1") [flags 0x2]  <var_decl 0x7a946afda870 *.LC1>)
+                        (symbol_ref/f:SI ("*.LC1") [flags 0x2]  <var_decl 0x7a1cf05da870 *.LC1>)
                     ] UNSPEC_GOTOFF)))) "kernel/sched.c":204:4 205 {*leasi}
-     (expr_list:REG_EQUAL (symbol_ref/f:SI ("*.LC1") [flags 0x2]  <var_decl 0x7a946afda870 *.LC1>)
+     (expr_list:REG_EQUAL (symbol_ref/f:SI ("*.LC1") [flags 0x2]  <var_decl 0x7a1cf05da870 *.LC1>)
         (nil)))
 (insn 53 52 55 12 (set (mem/f:SI (pre_dec:SI (reg/f:SI 7 sp)) [22  S4 A32])
         (reg/f:SI 0 ax [104])) "kernel/sched.c":204:4 54 {*pushsi2}
      (expr_list:REG_ARGS_SIZE (const_int 16 [0x10])
         (nil)))
-(call_insn 55 53 56 12 (call (mem:QI (symbol_ref:SI ("panic") [flags 0x41]  <function_decl 0x7a946af38700 panic>) [0 panic S1 A8])
+(call_insn 55 53 56 12 (call (mem:QI (symbol_ref:SI ("panic") [flags 0x41]  <function_decl 0x7a1cf0538700 panic>) [0 panic S1 A8])
         (const_int 16 [0x10])) "kernel/sched.c":204:4 812 {*call}
      (nil)
     (expr_list (use (reg:SI 3 bx))
@@ -2181,7 +2181,7 @@ Dataflow summary:
 (insn 65 64 66 13 (set (reg/f:SI 1 dx [orig:86 next_timer.6_4 ] [86])
         (mem/f/c:SI (plus:SI (reg:SI 3 bx [82])
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("next_timer") [flags 0x2]  <var_decl 0x7a946af67000 next_timer>)
+                            (symbol_ref:SI ("next_timer") [flags 0x2]  <var_decl 0x7a1cf0567000 next_timer>)
                         ] UNSPEC_GOTOFF))) [14 next_timer+0 S4 A32])) "kernel/sched.c":207:11 75 {*movsi_internal}
      (nil))
 (insn 66 65 67 13 (set (reg/f:SI 0 ax [109])
@@ -2198,7 +2198,7 @@ Dataflow summary:
      (nil))
 (insn 69 68 134 13 (set (mem/f/c:SI (plus:SI (reg:SI 3 bx [82])
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("next_timer") [flags 0x2]  <var_decl 0x7a946af67000 next_timer>)
+                            (symbol_ref:SI ("next_timer") [flags 0x2]  <var_decl 0x7a1cf0567000 next_timer>)
                         ] UNSPEC_GOTOFF))) [14 next_timer+0 S4 A32])
         (reg/f:SI 0 ax [110])) "kernel/sched.c":208:14 75 {*movsi_internal}
      (nil))
@@ -2500,15 +2500,15 @@ Dataflow summary:
 (insn 12 11 13 3 (set (reg/f:SI 1 dx [orig:83 current.7_1 ] [83])
         (mem/f/c:SI (plus:SI (reg:SI 3 bx [82])
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("current") [flags 0x2]  <var_decl 0x7a946af2e120 current>)
+                            (symbol_ref:SI ("current") [flags 0x2]  <var_decl 0x7a1cf052e120 current>)
                         ] UNSPEC_GOTOFF))) [13 current+0 S4 A32])) "kernel/sched.c":231:17 75 {*movsi_internal}
      (nil))
 (insn 13 12 14 3 (set (reg:SI 0 ax [86])
         (plus:SI (reg:SI 3 bx [82])
             (const:SI (unspec:SI [
-                        (symbol_ref:SI ("init_task") [flags 0x2]  <var_decl 0x7a946af2e990 init_task>)
+                        (symbol_ref:SI ("init_task") [flags 0x2]  <var_decl 0x7a1cf052e990 init_task>)
                     ] UNSPEC_GOTOFF)))) "kernel/sched.c":231:8 205 {*leasi}
-     (expr_list:REG_EQUAL (symbol_ref:SI ("init_task") [flags 0x2]  <var_decl 0x7a946af2e990 init_task>)
+     (expr_list:REG_EQUAL (symbol_ref:SI ("init_task") [flags 0x2]  <var_decl 0x7a1cf052e990 init_task>)
         (nil)))
 (insn 14 13 15 3 (set (reg:CCZ 17 flags)
         (compare:CCZ (reg/f:SI 1 dx [orig:83 current.7_1 ] [83])
@@ -2533,15 +2533,15 @@ Dataflow summary:
 (insn 18 17 19 4 (set (reg/f:SI 0 ax [87])
         (plus:SI (reg:SI 3 bx [82])
             (const:SI (unspec:SI [
-                        (symbol_ref/f:SI ("*.LC0") [flags 0x2]  <var_decl 0x7a946afda5a0 *.LC0>)
+                        (symbol_ref/f:SI ("*.LC0") [flags 0x2]  <var_decl 0x7a1cf05da5a0 *.LC0>)
                     ] UNSPEC_GOTOFF)))) "kernel/sched.c":232:9 205 {*leasi}
-     (expr_list:REG_EQUAL (symbol_ref/f:SI ("*.LC0") [flags 0x2]  <var_decl 0x7a946afda5a0 *.LC0>)
+     (expr_list:REG_EQUAL (symbol_ref/f:SI ("*.LC0") [flags 0x2]  <var_decl 0x7a1cf05da5a0 *.LC0>)
         (nil)))
 (insn 19 18 21 4 (set (mem/f:SI (pre_dec:SI (reg/f:SI 7 sp)) [22  S4 A32])
         (reg/f:SI 0 ax [87])) "kernel/sched.c":232:9 54 {*pushsi2}
      (expr_list:REG_ARGS_SIZE (const_int 16 [0x10])
         (nil)))
-(call_insn 21 19 22 4 (call (mem:QI (symbol_ref:SI ("panic") [flags 0x41]  <function_decl 0x7a946af38700 panic>) [0 panic S1 A8])
+(call_insn 21 19 22 4 (call (mem:QI (symbol_ref:SI ("panic") [flags 0x41]  <function_decl 0x7a1cf0538700 panic>) [0 panic S1 A8])
         (const_int 16 [0x10])) "kernel/sched.c":232:9 812 {*call}
      (nil)
     (expr_list (use (reg:SI 3 bx))
@@ -2570,7 +2570,7 @@ Dataflow summary:
 (insn 28 27 29 5 (set (reg/f:SI 1 dx [orig:84 current.8_2 ] [84])
         (mem/f/c:SI (plus:SI (reg:SI 3 bx [82])
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("current") [flags 0x2]  <var_decl 0x7a946af2e120 current>)
+                            (symbol_ref:SI ("current") [flags 0x2]  <var_decl 0x7a1cf052e120 current>)
                         ] UNSPEC_GOTOFF))) [13 current+0 S4 A32])) "kernel/sched.c":234:8 75 {*movsi_internal}
      (nil))
 (insn 29 28 30 5 (set (reg/f:SI 0 ax [90])
@@ -2583,13 +2583,13 @@ Dataflow summary:
 (insn 31 30 32 5 (set (reg/f:SI 0 ax [orig:85 current.9_3 ] [85])
         (mem/f/c:SI (plus:SI (reg:SI 3 bx [82])
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("current") [flags 0x2]  <var_decl 0x7a946af2e120 current>)
+                            (symbol_ref:SI ("current") [flags 0x2]  <var_decl 0x7a1cf052e120 current>)
                         ] UNSPEC_GOTOFF))) [13 current+0 S4 A32])) "kernel/sched.c":235:12 75 {*movsi_internal}
      (nil))
 (insn 32 31 33 5 (set (mem:SI (reg/f:SI 0 ax [orig:85 current.9_3 ] [85]) [2 current.9_3->state+0 S4 A32])
         (const_int 2 [0x2])) "kernel/sched.c":235:20 75 {*movsi_internal}
      (nil))
-(call_insn 33 32 34 5 (call (mem:QI (symbol_ref:SI ("schedule") [flags 0x3]  <function_decl 0x7a946af15c00 schedule>) [0 schedule S1 A8])
+(call_insn 33 32 34 5 (call (mem:QI (symbol_ref:SI ("schedule") [flags 0x3]  <function_decl 0x7a1cf0515c00 schedule>) [0 schedule S1 A8])
         (const_int 0 [0])) "kernel/sched.c":236:5 812 {*call}
      (nil)
     (nil))
@@ -2740,15 +2740,15 @@ Dataflow summary:
 (insn 15 14 16 3 (set (reg/f:SI 0 ax [97])
         (plus:SI (reg:SI 3 bx [82])
             (const:SI (unspec:SI [
-                        (symbol_ref/f:SI ("*.LC2") [flags 0x2]  <var_decl 0x7a946afdaab0 *.LC2>)
+                        (symbol_ref/f:SI ("*.LC2") [flags 0x2]  <var_decl 0x7a1cf05daab0 *.LC2>)
                     ] UNSPEC_GOTOFF)))) "kernel/sched.c":258:3 205 {*leasi}
-     (expr_list:REG_EQUAL (symbol_ref/f:SI ("*.LC2") [flags 0x2]  <var_decl 0x7a946afdaab0 *.LC2>)
+     (expr_list:REG_EQUAL (symbol_ref/f:SI ("*.LC2") [flags 0x2]  <var_decl 0x7a1cf05daab0 *.LC2>)
         (nil)))
 (insn 16 15 18 3 (set (mem/f:SI (pre_dec:SI (reg/f:SI 7 sp)) [22  S4 A32])
         (reg/f:SI 0 ax [97])) "kernel/sched.c":258:3 54 {*pushsi2}
      (expr_list:REG_ARGS_SIZE (const_int 16 [0x10])
         (nil)))
-(call_insn 18 16 19 3 (call (mem:QI (symbol_ref:SI ("panic") [flags 0x41]  <function_decl 0x7a946af38700 panic>) [0 panic S1 A8])
+(call_insn 18 16 19 3 (call (mem:QI (symbol_ref:SI ("panic") [flags 0x41]  <function_decl 0x7a1cf0538700 panic>) [0 panic S1 A8])
         (const_int 16 [0x10])) "kernel/sched.c":258:3 812 {*call}
      (nil)
     (expr_list (use (reg:SI 3 bx))
@@ -2771,7 +2771,7 @@ Dataflow summary:
                         (const_int 4 [0x4]))
                     (reg:SI 3 bx [82]))
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("moff_timer") [flags 0x2]  <var_decl 0x7a946af672d0 moff_timer>)
+                            (symbol_ref:SI ("moff_timer") [flags 0x2]  <var_decl 0x7a1cf05672d0 moff_timer>)
                         ] UNSPEC_GOTOFF))) [5 moff_timer[nr_15(D)]+0 S4 A32])
         (const_int 10000 [0x2710])) "kernel/sched.c":259:17 75 {*movsi_internal}
      (nil))
@@ -2785,7 +2785,7 @@ Dataflow summary:
 (insn 25 24 26 4 (set (reg:QI 0 ax [orig:84 current_DOR.10_2 ] [84])
         (mem/c:QI (plus:SI (reg:SI 3 bx [82])
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("current_DOR") [flags 0x2]  <var_decl 0x7a946af67360 current_DOR>)
+                            (symbol_ref:SI ("current_DOR") [flags 0x2]  <var_decl 0x7a1cf0567360 current_DOR>)
                         ] UNSPEC_GOTOFF))) [0 current_DOR+0 S1 A8])) "kernel/sched.c":261:7 77 {*movqi_internal}
      (nil))
 (insn 26 25 27 4 (parallel [
@@ -2800,7 +2800,7 @@ Dataflow summary:
 (insn 27 26 28 4 (set (reg/f:SI 0 ax [99])
         (mem/u/c:SI (plus:SI (reg:SI 3 bx [82])
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("selected") [flags 0x40]  <var_decl 0x7a946af673f0 selected>)
+                            (symbol_ref:SI ("selected") [flags 0x40]  <var_decl 0x7a1cf05673f0 selected>)
                         ] UNSPEC_GOT))) [24  S4 A8])) "kernel/sched.c":262:6 75 {*movsi_internal}
      (nil))
 (insn 28 27 29 4 (set (reg:QI 0 ax [orig:85 selected.11_3 ] [85])
@@ -2845,7 +2845,7 @@ Dataflow summary:
 (insn 38 37 39 6 (set (reg:QI 0 ax [orig:87 current_DOR.12_5 ] [87])
         (mem/c:QI (plus:SI (reg:SI 3 bx [82])
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("current_DOR") [flags 0x2]  <var_decl 0x7a946af67360 current_DOR>)
+                            (symbol_ref:SI ("current_DOR") [flags 0x2]  <var_decl 0x7a1cf0567360 current_DOR>)
                         ] UNSPEC_GOTOFF))) [0 current_DOR+0 S1 A8])) "kernel/sched.c":266:11 77 {*movqi_internal}
      (nil))
 (insn 39 38 40 6 (set (reg:CCZ 17 flags)
@@ -2884,7 +2884,7 @@ Dataflow summary:
 (insn 45 44 46 7 (set (reg:QI 0 ax [orig:88 current_DOR.13_6 ] [88])
         (mem/c:QI (plus:SI (reg:SI 3 bx [82])
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("current_DOR") [flags 0x2]  <var_decl 0x7a946af67360 current_DOR>)
+                            (symbol_ref:SI ("current_DOR") [flags 0x2]  <var_decl 0x7a1cf0567360 current_DOR>)
                         ] UNSPEC_GOTOFF))) [0 current_DOR+0 S1 A8])) "kernel/sched.c":268:28 77 {*movqi_internal}
      (nil))
 (insn 46 45 47 7 (parallel [
@@ -2925,7 +2925,7 @@ Dataflow summary:
                         (const_int 4 [0x4]))
                     (reg:SI 3 bx [82]))
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("mon_timer") [flags 0x2]  <var_decl 0x7a946af67240 mon_timer>)
+                            (symbol_ref:SI ("mon_timer") [flags 0x2]  <var_decl 0x7a1cf0567240 mon_timer>)
                         ] UNSPEC_GOTOFF))) [5 mon_timer[nr_15(D)]+0 S4 A32])
         (const_int 50 [0x32])) "kernel/sched.c":269:18 75 {*movsi_internal}
      (nil))
@@ -2945,7 +2945,7 @@ Dataflow summary:
                         (const_int 4 [0x4]))
                     (reg:SI 3 bx [82]))
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("mon_timer") [flags 0x2]  <var_decl 0x7a946af67240 mon_timer>)
+                            (symbol_ref:SI ("mon_timer") [flags 0x2]  <var_decl 0x7a1cf0567240 mon_timer>)
                         ] UNSPEC_GOTOFF))) [5 mon_timer[nr_15(D)]+0 S4 A32])) "kernel/sched.c":270:21 75 {*movsi_internal}
      (nil))
 (insn 62 59 63 9 (set (reg:CCGC 17 flags)
@@ -2968,7 +2968,7 @@ Dataflow summary:
                         (const_int 4 [0x4]))
                     (reg:SI 3 bx [82]))
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("mon_timer") [flags 0x2]  <var_decl 0x7a946af67240 mon_timer>)
+                            (symbol_ref:SI ("mon_timer") [flags 0x2]  <var_decl 0x7a1cf0567240 mon_timer>)
                         ] UNSPEC_GOTOFF))) [5 mon_timer[nr_15(D)]+0 S4 A32])
         (const_int 2 [0x2])) "kernel/sched.c":271:18 75 {*movsi_internal}
      (nil))
@@ -2980,7 +2980,7 @@ Dataflow summary:
      (nil))
 (insn 70 69 71 11 (set (mem/c:QI (plus:SI (reg:SI 3 bx [82])
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("current_DOR") [flags 0x2]  <var_decl 0x7a946af67360 current_DOR>)
+                            (symbol_ref:SI ("current_DOR") [flags 0x2]  <var_decl 0x7a1cf0567360 current_DOR>)
                         ] UNSPEC_GOTOFF))) [0 current_DOR+0 S1 A8])
         (reg:QI 0 ax [106])) "kernel/sched.c":272:15 77 {*movqi_internal}
      (nil))
@@ -3002,7 +3002,7 @@ Dataflow summary:
                         (const_int 4 [0x4]))
                     (reg:SI 3 bx [82]))
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("mon_timer") [flags 0x2]  <var_decl 0x7a946af67240 mon_timer>)
+                            (symbol_ref:SI ("mon_timer") [flags 0x2]  <var_decl 0x7a1cf0567240 mon_timer>)
                         ] UNSPEC_GOTOFF))) [5 mon_timer[nr_15(D)]+0 S4 A32])) "kernel/sched.c":275:18 75 {*movsi_internal}
      (nil))
 (insn 83 75 95 12 (use (reg/i:SI 0 ax)) "kernel/sched.c":276:1 -1
@@ -3104,9 +3104,9 @@ Dataflow summary:
 (insn 11 45 12 3 (set (reg:SI 0 ax [87])
         (plus:SI (reg:SI 3 bx [82])
             (const:SI (unspec:SI [
-                        (symbol_ref:SI ("wait_motor") [flags 0x2]  <var_decl 0x7a946af671b0 wait_motor>)
+                        (symbol_ref:SI ("wait_motor") [flags 0x2]  <var_decl 0x7a1cf05671b0 wait_motor>)
                     ] UNSPEC_GOTOFF)))) "kernel/sched.c":282:3 205 {*leasi}
-     (expr_list:REG_EQUAL (symbol_ref:SI ("wait_motor") [flags 0x2]  <var_decl 0x7a946af671b0 wait_motor>)
+     (expr_list:REG_EQUAL (symbol_ref:SI ("wait_motor") [flags 0x2]  <var_decl 0x7a1cf05671b0 wait_motor>)
         (nil)))
 (insn 12 11 13 3 (parallel [
             (set (reg/f:SI 0 ax [orig:84 _2 ] [84])
@@ -3127,7 +3127,7 @@ Dataflow summary:
         (reg/f:SI 0 ax [orig:84 _2 ] [84])) "kernel/sched.c":282:3 54 {*pushsi2}
      (expr_list:REG_ARGS_SIZE (const_int 16 [0x10])
         (nil)))
-(call_insn 15 14 16 3 (call (mem:QI (symbol_ref:SI ("sleep_on") [flags 0x3]  <function_decl 0x7a946af15b00 sleep_on>) [0 sleep_on S1 A8])
+(call_insn 15 14 16 3 (call (mem:QI (symbol_ref:SI ("sleep_on") [flags 0x3]  <function_decl 0x7a1cf0515b00 sleep_on>) [0 sleep_on S1 A8])
         (const_int 16 [0x10])) "kernel/sched.c":282:3 812 {*call}
      (nil)
     (nil))
@@ -3155,7 +3155,7 @@ Dataflow summary:
      (expr_list:REG_ARGS_SIZE (const_int 16 [0x10])
         (nil)))
 (call_insn 21 20 22 4 (set (reg:SI 0 ax)
-        (call (mem:QI (symbol_ref:SI ("ticks_to_floppy_on") [flags 0x3]  <function_decl 0x7a946af44700 ticks_to_floppy_on>) [0 ticks_to_floppy_on S1 A8])
+        (call (mem:QI (symbol_ref:SI ("ticks_to_floppy_on") [flags 0x3]  <function_decl 0x7a1cf0544700 ticks_to_floppy_on>) [0 ticks_to_floppy_on S1 A8])
             (const_int 16 [0x10]))) "kernel/sched.c":281:9 823 {*call_value}
      (nil)
     (nil))
@@ -3250,7 +3250,7 @@ Dataflow summary:
                         (const_int 4 [0x4]))
                     (reg:SI 0 ax [82]))
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("moff_timer") [flags 0x2]  <var_decl 0x7a946af672d0 moff_timer>)
+                            (symbol_ref:SI ("moff_timer") [flags 0x2]  <var_decl 0x7a1cf05672d0 moff_timer>)
                         ] UNSPEC_GOTOFF))) [5 moff_timer[nr_2(D)]+0 S4 A32])
         (const_int 300 [0x12c])) "kernel/sched.c":288:17 75 {*movsi_internal}
      (nil))
@@ -3295,13 +3295,13 @@ Dataflow summary:
 (insn 5 2 6 2 (set (reg/f:SI 2 cx [orig:83 last_task_used_math.14_1 ] [83])
         (mem/f/c:SI (plus:SI (reg:SI 0 ax [82])
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("last_task_used_math") [flags 0x2]  <var_decl 0x7a946af2e240 last_task_used_math>)
+                            (symbol_ref:SI ("last_task_used_math") [flags 0x2]  <var_decl 0x7a1cf052e240 last_task_used_math>)
                         ] UNSPEC_GOTOFF))) [13 last_task_used_math+0 S4 A32])) "kernel/sched.c":297:26 75 {*movsi_internal}
      (nil))
 (insn 6 5 7 2 (set (reg/f:SI 1 dx [orig:84 current.15_2 ] [84])
         (mem/f/c:SI (plus:SI (reg:SI 0 ax [82])
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("current") [flags 0x2]  <var_decl 0x7a946af2e120 current>)
+                            (symbol_ref:SI ("current") [flags 0x2]  <var_decl 0x7a1cf052e120 current>)
                         ] UNSPEC_GOTOFF))) [13 current+0 S4 A32])) "kernel/sched.c":297:26 75 {*movsi_internal}
      (nil))
 (insn 7 6 8 2 (set (reg:CCZ 17 flags)
@@ -3325,7 +3325,7 @@ Dataflow summary:
 (insn 15 14 16 3 (set (reg/f:SI 1 dx [orig:85 last_task_used_math.16_3 ] [85])
         (mem/f/c:SI (plus:SI (reg:SI 0 ax [82])
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("last_task_used_math") [flags 0x2]  <var_decl 0x7a946af2e240 last_task_used_math>)
+                            (symbol_ref:SI ("last_task_used_math") [flags 0x2]  <var_decl 0x7a1cf052e240 last_task_used_math>)
                         ] UNSPEC_GOTOFF))) [13 last_task_used_math+0 S4 A32])) "kernel/sched.c":300:6 75 {*movsi_internal}
      (nil))
 (insn 16 15 17 3 (set (reg:CCZ 17 flags)
@@ -3343,7 +3343,7 @@ Dataflow summary:
 (insn 19 18 20 4 (set (reg/f:SI 1 dx [orig:86 last_task_used_math.17_4 ] [86])
         (mem/f/c:SI (plus:SI (reg:SI 0 ax [82])
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("last_task_used_math") [flags 0x2]  <var_decl 0x7a946af2e240 last_task_used_math>)
+                            (symbol_ref:SI ("last_task_used_math") [flags 0x2]  <var_decl 0x7a1cf052e240 last_task_used_math>)
                         ] UNSPEC_GOTOFF))) [13 last_task_used_math+0 S4 A32])) "kernel/sched.c":301:50 75 {*movsi_internal}
      (nil))
 (insn 20 19 21 4 (parallel [
@@ -3363,19 +3363,19 @@ Dataflow summary:
 (insn 23 22 24 5 (set (reg/f:SI 1 dx [orig:87 current.18_5 ] [87])
         (mem/f/c:SI (plus:SI (reg:SI 0 ax [82])
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("current") [flags 0x2]  <var_decl 0x7a946af2e120 current>)
+                            (symbol_ref:SI ("current") [flags 0x2]  <var_decl 0x7a1cf052e120 current>)
                         ] UNSPEC_GOTOFF))) [13 current+0 S4 A32])) "kernel/sched.c":303:22 75 {*movsi_internal}
      (nil))
 (insn 24 23 25 5 (set (mem/f/c:SI (plus:SI (reg:SI 0 ax [82])
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("last_task_used_math") [flags 0x2]  <var_decl 0x7a946af2e240 last_task_used_math>)
+                            (symbol_ref:SI ("last_task_used_math") [flags 0x2]  <var_decl 0x7a1cf052e240 last_task_used_math>)
                         ] UNSPEC_GOTOFF))) [13 last_task_used_math+0 S4 A32])
         (reg/f:SI 1 dx [orig:87 current.18_5 ] [87])) "kernel/sched.c":303:22 75 {*movsi_internal}
      (nil))
 (insn 25 24 26 5 (set (reg/f:SI 1 dx [orig:88 current.19_6 ] [88])
         (mem/f/c:SI (plus:SI (reg:SI 0 ax [82])
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("current") [flags 0x2]  <var_decl 0x7a946af2e120 current>)
+                            (symbol_ref:SI ("current") [flags 0x2]  <var_decl 0x7a1cf052e120 current>)
                         ] UNSPEC_GOTOFF))) [13 current+0 S4 A32])) "kernel/sched.c":304:13 75 {*movsi_internal}
      (nil))
 (insn 26 25 27 5 (set (reg:HI 1 dx [orig:89 _7 ] [89])
@@ -3397,7 +3397,7 @@ Dataflow summary:
 (insn 30 29 31 6 (set (reg/f:SI 0 ax [orig:90 current.20_8 ] [90])
         (mem/f/c:SI (plus:SI (reg:SI 0 ax [82])
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("current") [flags 0x2]  <var_decl 0x7a946af2e120 current>)
+                            (symbol_ref:SI ("current") [flags 0x2]  <var_decl 0x7a1cf052e120 current>)
                         ] UNSPEC_GOTOFF))) [13 current+0 S4 A32])) "kernel/sched.c":305:38 75 {*movsi_internal}
      (nil))
 (insn 31 30 43 6 (parallel [
@@ -3428,7 +3428,7 @@ Dataflow summary:
 (insn 37 36 38 7 (set (reg/f:SI 0 ax [orig:91 current.21_9 ] [91])
         (mem/f/c:SI (plus:SI (reg:SI 0 ax [82])
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("current") [flags 0x2]  <var_decl 0x7a946af2e120 current>)
+                            (symbol_ref:SI ("current") [flags 0x2]  <var_decl 0x7a1cf052e120 current>)
                         ] UNSPEC_GOTOFF))) [13 current+0 S4 A32])) "kernel/sched.c":308:10 75 {*movsi_internal}
      (nil))
 (insn 38 37 45 7 (set (mem:HI (plus:SI (reg/f:SI 0 ax [orig:91 current.21_9 ] [91])
@@ -3531,7 +3531,7 @@ Dataflow summary:
 (insn 10 9 11 3 (set (reg:QI 0 ax [orig:83 current_DOR.22_1 ] [83])
         (mem/c:QI (plus:SI (reg:SI 3 bx [82])
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("current_DOR") [flags 0x2]  <var_decl 0x7a946af67360 current_DOR>)
+                            (symbol_ref:SI ("current_DOR") [flags 0x2]  <var_decl 0x7a1cf0567360 current_DOR>)
                         ] UNSPEC_GOTOFF))) [0 current_DOR+0 S1 A8])) "kernel/sched.c":318:7 77 {*movqi_internal}
      (nil))
 (insn 11 10 12 3 (parallel [
@@ -3563,7 +3563,7 @@ Dataflow summary:
                         (const_int 4 [0x4]))
                     (reg:SI 3 bx [82]))
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("mon_timer") [flags 0x2]  <var_decl 0x7a946af67240 mon_timer>)
+                            (symbol_ref:SI ("mon_timer") [flags 0x2]  <var_decl 0x7a1cf0567240 mon_timer>)
                         ] UNSPEC_GOTOFF))) [5 mon_timer[i_20]+0 S4 A32])) "kernel/sched.c":320:16 75 {*movsi_internal}
      (nil))
 (insn 21 20 22 4 (set (reg:CCZ 17 flags)
@@ -3587,7 +3587,7 @@ Dataflow summary:
                         (const_int 4 [0x4]))
                     (reg:SI 3 bx [82]))
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("mon_timer") [flags 0x2]  <var_decl 0x7a946af67240 mon_timer>)
+                            (symbol_ref:SI ("mon_timer") [flags 0x2]  <var_decl 0x7a1cf0567240 mon_timer>)
                         ] UNSPEC_GOTOFF))) [5 mon_timer[i_20]+0 S4 A32])) "kernel/sched.c":321:20 75 {*movsi_internal}
      (nil))
 (insn 114 25 27 5 (set (reg:SI 1 dx [orig:87 _5 ] [87])
@@ -3602,7 +3602,7 @@ Dataflow summary:
                         (const_int 4 [0x4]))
                     (reg:SI 3 bx [82]))
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("mon_timer") [flags 0x2]  <var_decl 0x7a946af67240 mon_timer>)
+                            (symbol_ref:SI ("mon_timer") [flags 0x2]  <var_decl 0x7a1cf0567240 mon_timer>)
                         ] UNSPEC_GOTOFF))) [5 mon_timer[i_20]+0 S4 A32])
         (reg:SI 1 dx [orig:87 _5 ] [87])) "kernel/sched.c":321:7 75 {*movsi_internal}
      (nil))
@@ -3615,7 +3615,7 @@ Dataflow summary:
                         (const_int 4 [0x4]))
                     (reg:SI 3 bx [82]))
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("mon_timer") [flags 0x2]  <var_decl 0x7a946af67240 mon_timer>)
+                            (symbol_ref:SI ("mon_timer") [flags 0x2]  <var_decl 0x7a1cf0567240 mon_timer>)
                         ] UNSPEC_GOTOFF))) [5 mon_timer[i_20]+0 S4 A32])) "kernel/sched.c":321:20 75 {*movsi_internal}
      (nil))
 (insn 31 30 32 5 (set (reg:CCZ 17 flags)
@@ -3641,9 +3641,9 @@ Dataflow summary:
 (insn 36 113 37 6 (set (reg:SI 0 ax [106])
         (plus:SI (reg:SI 3 bx [82])
             (const:SI (unspec:SI [
-                        (symbol_ref:SI ("wait_motor") [flags 0x2]  <var_decl 0x7a946af671b0 wait_motor>)
+                        (symbol_ref:SI ("wait_motor") [flags 0x2]  <var_decl 0x7a1cf05671b0 wait_motor>)
                     ] UNSPEC_GOTOFF)))) "kernel/sched.c":322:5 205 {*leasi}
-     (expr_list:REG_EQUAL (symbol_ref:SI ("wait_motor") [flags 0x2]  <var_decl 0x7a946af671b0 wait_motor>)
+     (expr_list:REG_EQUAL (symbol_ref:SI ("wait_motor") [flags 0x2]  <var_decl 0x7a1cf05671b0 wait_motor>)
         (nil)))
 (insn 37 36 38 6 (parallel [
             (set (reg/f:SI 0 ax [orig:91 _9 ] [91])
@@ -3656,7 +3656,7 @@ Dataflow summary:
         (reg/f:SI 0 ax [orig:91 _9 ] [91])) "kernel/sched.c":322:5 54 {*pushsi2}
      (expr_list:REG_ARGS_SIZE (const_int 4 [0x4])
         (nil)))
-(call_insn 39 38 40 6 (call (mem:QI (symbol_ref:SI ("wake_up") [flags 0x3]  <function_decl 0x7a946af15f00 wake_up>) [0 wake_up S1 A8])
+(call_insn 39 38 40 6 (call (mem:QI (symbol_ref:SI ("wake_up") [flags 0x3]  <function_decl 0x7a1cf0515f00 wake_up>) [0 wake_up S1 A8])
         (const_int 4 [0x4])) "kernel/sched.c":322:5 812 {*call}
      (nil)
     (nil))
@@ -3684,7 +3684,7 @@ Dataflow summary:
                         (const_int 4 [0x4]))
                     (reg:SI 3 bx [82]))
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("moff_timer") [flags 0x2]  <var_decl 0x7a946af672d0 moff_timer>)
+                            (symbol_ref:SI ("moff_timer") [flags 0x2]  <var_decl 0x7a1cf05672d0 moff_timer>)
                         ] UNSPEC_GOTOFF))) [5 moff_timer[i_20]+0 S4 A32])) "kernel/sched.c":323:25 75 {*movsi_internal}
      (nil))
 (insn 47 46 48 7 (set (reg:CCZ 17 flags)
@@ -3712,7 +3712,7 @@ Dataflow summary:
 (insn 52 101 112 8 (set (reg:QI 0 ax [orig:95 current_DOR.25_13 ] [95])
         (mem/c:QI (plus:SI (reg:SI 3 bx [82])
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("current_DOR") [flags 0x2]  <var_decl 0x7a946af67360 current_DOR>)
+                            (symbol_ref:SI ("current_DOR") [flags 0x2]  <var_decl 0x7a1cf0567360 current_DOR>)
                         ] UNSPEC_GOTOFF))) [0 current_DOR+0 S1 A8])) "kernel/sched.c":324:16 77 {*movqi_internal}
      (nil))
 (insn 112 52 56 8 (parallel [
@@ -3724,14 +3724,14 @@ Dataflow summary:
      (nil))
 (insn 56 112 57 8 (set (mem/c:QI (plus:SI (reg:SI 3 bx [82])
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("current_DOR") [flags 0x2]  <var_decl 0x7a946af67360 current_DOR>)
+                            (symbol_ref:SI ("current_DOR") [flags 0x2]  <var_decl 0x7a1cf0567360 current_DOR>)
                         ] UNSPEC_GOTOFF))) [0 current_DOR+0 S1 A8])
         (reg:QI 0 ax [orig:98 _16 ] [98])) "kernel/sched.c":324:16 77 {*movqi_internal}
      (nil))
 (insn 57 56 58 8 (set (reg:QI 0 ax [orig:99 current_DOR.27_17 ] [99])
         (mem/c:QI (plus:SI (reg:SI 3 bx [82])
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("current_DOR") [flags 0x2]  <var_decl 0x7a946af67360 current_DOR>)
+                            (symbol_ref:SI ("current_DOR") [flags 0x2]  <var_decl 0x7a1cf0567360 current_DOR>)
                         ] UNSPEC_GOTOFF))) [0 current_DOR+0 S1 A8])) "kernel/sched.c":325:4 77 {*movqi_internal}
      (nil))
 (insn 58 57 59 8 (set (reg:SI 1 dx [108])
@@ -3766,7 +3766,7 @@ Dataflow summary:
                         (const_int 4 [0x4]))
                     (reg:SI 3 bx [82]))
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("moff_timer") [flags 0x2]  <var_decl 0x7a946af672d0 moff_timer>)
+                            (symbol_ref:SI ("moff_timer") [flags 0x2]  <var_decl 0x7a1cf05672d0 moff_timer>)
                         ] UNSPEC_GOTOFF))) [5 moff_timer[i_20]+0 S4 A32])) "kernel/sched.c":327:14 75 {*movsi_internal}
      (nil))
 (insn 110 65 67 9 (set (reg:SI 1 dx [orig:101 _19 ] [101])
@@ -3781,7 +3781,7 @@ Dataflow summary:
                         (const_int 4 [0x4]))
                     (reg:SI 3 bx [82]))
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("moff_timer") [flags 0x2]  <var_decl 0x7a946af672d0 moff_timer>)
+                            (symbol_ref:SI ("moff_timer") [flags 0x2]  <var_decl 0x7a1cf05672d0 moff_timer>)
                         ] UNSPEC_GOTOFF))) [5 moff_timer[i_20]+0 S4 A32])
         (reg:SI 1 dx [orig:101 _19 ] [101])) "kernel/sched.c":327:17 75 {*movsi_internal}
      (nil))
@@ -3908,7 +3908,7 @@ Dataflow summary:
 (insn 5 2 6 2 (set (reg/f:SI 0 ax [112])
         (mem/u/c:SI (plus:SI (reg:SI 3 bx [82])
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("beepcount") [flags 0x40]  <var_decl 0x7a946af676c0 beepcount>)
+                            (symbol_ref:SI ("beepcount") [flags 0x40]  <var_decl 0x7a1cf05676c0 beepcount>)
                         ] UNSPEC_GOT))) [24  S4 A8])) "kernel/sched.c":336:9 75 {*movsi_internal}
      (nil))
 (insn 6 5 7 2 (set (reg:SI 0 ax [orig:83 beepcount.28_1 ] [83])
@@ -3929,7 +3929,7 @@ Dataflow summary:
 (insn 10 9 11 3 (set (reg/f:SI 0 ax [113])
         (mem/u/c:SI (plus:SI (reg:SI 3 bx [82])
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("beepcount") [flags 0x40]  <var_decl 0x7a946af676c0 beepcount>)
+                            (symbol_ref:SI ("beepcount") [flags 0x40]  <var_decl 0x7a1cf05676c0 beepcount>)
                         ] UNSPEC_GOT))) [24  S4 A8])) "kernel/sched.c":337:14 75 {*movsi_internal}
      (nil))
 (insn 11 10 138 3 (set (reg:SI 0 ax [orig:84 beepcount.29_2 ] [84])
@@ -3942,7 +3942,7 @@ Dataflow summary:
 (insn 13 138 14 3 (set (reg/f:SI 0 ax [114])
         (mem/u/c:SI (plus:SI (reg:SI 3 bx [82])
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("beepcount") [flags 0x40]  <var_decl 0x7a946af676c0 beepcount>)
+                            (symbol_ref:SI ("beepcount") [flags 0x40]  <var_decl 0x7a1cf05676c0 beepcount>)
                         ] UNSPEC_GOT))) [24  S4 A8])) "kernel/sched.c":337:12 75 {*movsi_internal}
      (nil))
 (insn 14 13 15 3 (set (mem/c:SI (reg/f:SI 0 ax [114]) [5 beepcount+0 S4 A32])
@@ -3951,7 +3951,7 @@ Dataflow summary:
 (insn 15 14 16 3 (set (reg/f:SI 0 ax [115])
         (mem/u/c:SI (plus:SI (reg:SI 3 bx [82])
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("beepcount") [flags 0x40]  <var_decl 0x7a946af676c0 beepcount>)
+                            (symbol_ref:SI ("beepcount") [flags 0x40]  <var_decl 0x7a1cf05676c0 beepcount>)
                         ] UNSPEC_GOT))) [24  S4 A8])) "kernel/sched.c":337:14 75 {*movsi_internal}
      (nil))
 (insn 16 15 17 3 (set (reg:SI 0 ax [orig:86 beepcount.30_4 ] [86])
@@ -3969,7 +3969,7 @@ Dataflow summary:
      (nil)
  -> 22)
 (note 19 18 21 4 [bb 4] NOTE_INSN_BASIC_BLOCK)
-(call_insn 21 19 22 4 (call (mem:QI (symbol_ref:SI ("sysbeepstop") [flags 0x41]  <function_decl 0x7a946af74000 sysbeepstop>) [0 sysbeepstop S1 A8])
+(call_insn 21 19 22 4 (call (mem:QI (symbol_ref:SI ("sysbeepstop") [flags 0x41]  <function_decl 0x7a1cf0574000 sysbeepstop>) [0 sysbeepstop S1 A8])
         (const_int 0 [0])) "kernel/sched.c":338:13 812 {*call}
      (nil)
     (expr_list (use (reg:SI 3 bx))
@@ -3992,7 +3992,7 @@ Dataflow summary:
 (insn 27 26 28 6 (set (reg/f:SI 0 ax [orig:87 current.31_5 ] [87])
         (mem/f/c:SI (plus:SI (reg:SI 3 bx [82])
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("current") [flags 0x2]  <var_decl 0x7a946af2e120 current>)
+                            (symbol_ref:SI ("current") [flags 0x2]  <var_decl 0x7a1cf052e120 current>)
                         ] UNSPEC_GOTOFF))) [13 current+0 S4 A32])) "kernel/sched.c":341:16 75 {*movsi_internal}
      (nil))
 (insn 28 27 29 6 (set (reg:SI 1 dx [orig:88 _6 ] [88])
@@ -4020,7 +4020,7 @@ Dataflow summary:
 (insn 35 34 36 7 (set (reg/f:SI 0 ax [orig:90 current.32_8 ] [90])
         (mem/f/c:SI (plus:SI (reg:SI 3 bx [82])
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("current") [flags 0x2]  <var_decl 0x7a946af2e120 current>)
+                            (symbol_ref:SI ("current") [flags 0x2]  <var_decl 0x7a1cf052e120 current>)
                         ] UNSPEC_GOTOFF))) [13 current+0 S4 A32])) "kernel/sched.c":343:16 75 {*movsi_internal}
      (nil))
 (insn 36 35 37 7 (set (reg:SI 1 dx [orig:91 _9 ] [91])
@@ -4043,7 +4043,7 @@ Dataflow summary:
 (insn 41 40 42 8 (set (reg/f:SI 0 ax [orig:93 next_timer.33_11 ] [93])
         (mem/f/c:SI (plus:SI (reg:SI 3 bx [82])
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("next_timer") [flags 0x2]  <var_decl 0x7a946af67000 next_timer>)
+                            (symbol_ref:SI ("next_timer") [flags 0x2]  <var_decl 0x7a1cf0567000 next_timer>)
                         ] UNSPEC_GOTOFF))) [14 next_timer+0 S4 A32])) "kernel/sched.c":345:9 75 {*movsi_internal}
      (nil))
 (insn 42 41 43 8 (set (reg:CCZ 17 flags)
@@ -4061,7 +4061,7 @@ Dataflow summary:
 (insn 45 44 46 9 (set (reg/f:SI 0 ax [orig:94 next_timer.34_12 ] [94])
         (mem/f/c:SI (plus:SI (reg:SI 3 bx [82])
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("next_timer") [flags 0x2]  <var_decl 0x7a946af67000 next_timer>)
+                            (symbol_ref:SI ("next_timer") [flags 0x2]  <var_decl 0x7a1cf0567000 next_timer>)
                         ] UNSPEC_GOTOFF))) [14 next_timer+0 S4 A32])) "kernel/sched.c":346:19 75 {*movsi_internal}
      (nil))
 (insn 46 45 47 9 (set (reg:SI 1 dx [orig:95 _13 ] [95])
@@ -4087,7 +4087,7 @@ Dataflow summary:
 (insn 52 51 53 10 (set (reg/f:SI 0 ax [orig:97 next_timer.35_15 ] [97])
         (mem/f/c:SI (plus:SI (reg:SI 3 bx [82])
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("next_timer") [flags 0x2]  <var_decl 0x7a946af67000 next_timer>)
+                            (symbol_ref:SI ("next_timer") [flags 0x2]  <var_decl 0x7a1cf0567000 next_timer>)
                         ] UNSPEC_GOTOFF))) [14 next_timer+0 S4 A32])) "kernel/sched.c":350:28 75 {*movsi_internal}
      (nil))
 (insn 53 52 54 10 (set (reg/f:SI 0 ax [116])
@@ -4101,7 +4101,7 @@ Dataflow summary:
 (insn 55 54 56 10 (set (reg/f:SI 0 ax [orig:98 next_timer.36_16 ] [98])
         (mem/f/c:SI (plus:SI (reg:SI 3 bx [82])
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("next_timer") [flags 0x2]  <var_decl 0x7a946af67000 next_timer>)
+                            (symbol_ref:SI ("next_timer") [flags 0x2]  <var_decl 0x7a1cf0567000 next_timer>)
                         ] UNSPEC_GOTOFF))) [14 next_timer+0 S4 A32])) "kernel/sched.c":351:23 75 {*movsi_internal}
      (nil))
 (insn 56 55 57 10 (set (mem/f:SI (plus:SI (reg/f:SI 0 ax [orig:98 next_timer.36_16 ] [98])
@@ -4111,7 +4111,7 @@ Dataflow summary:
 (insn 57 56 58 10 (set (reg/f:SI 0 ax [orig:99 next_timer.37_17 ] [99])
         (mem/f/c:SI (plus:SI (reg:SI 3 bx [82])
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("next_timer") [flags 0x2]  <var_decl 0x7a946af67000 next_timer>)
+                            (symbol_ref:SI ("next_timer") [flags 0x2]  <var_decl 0x7a1cf0567000 next_timer>)
                         ] UNSPEC_GOTOFF))) [14 next_timer+0 S4 A32])) "kernel/sched.c":352:36 75 {*movsi_internal}
      (nil))
 (insn 58 57 59 10 (set (reg/f:SI 0 ax [orig:100 _18 ] [100])
@@ -4120,7 +4120,7 @@ Dataflow summary:
      (nil))
 (insn 59 58 60 10 (set (mem/f/c:SI (plus:SI (reg:SI 3 bx [82])
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("next_timer") [flags 0x2]  <var_decl 0x7a946af67000 next_timer>)
+                            (symbol_ref:SI ("next_timer") [flags 0x2]  <var_decl 0x7a1cf0567000 next_timer>)
                         ] UNSPEC_GOTOFF))) [14 next_timer+0 S4 A32])
         (reg/f:SI 0 ax [orig:100 _18 ] [100])) "kernel/sched.c":352:24 75 {*movsi_internal}
      (nil))
@@ -4137,7 +4137,7 @@ Dataflow summary:
 (insn 64 63 65 11 (set (reg/f:SI 0 ax [orig:101 next_timer.38_19 ] [101])
         (mem/f/c:SI (plus:SI (reg:SI 3 bx [82])
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("next_timer") [flags 0x2]  <var_decl 0x7a946af67000 next_timer>)
+                            (symbol_ref:SI ("next_timer") [flags 0x2]  <var_decl 0x7a1cf0567000 next_timer>)
                         ] UNSPEC_GOTOFF))) [14 next_timer+0 S4 A32])) "kernel/sched.c":347:16 75 {*movsi_internal}
      (nil))
 (insn 65 64 66 11 (set (reg:CCZ 17 flags)
@@ -4155,7 +4155,7 @@ Dataflow summary:
 (insn 68 67 69 12 (set (reg/f:SI 0 ax [orig:102 next_timer.39_20 ] [102])
         (mem/f/c:SI (plus:SI (reg:SI 3 bx [82])
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("next_timer") [flags 0x2]  <var_decl 0x7a946af67000 next_timer>)
+                            (symbol_ref:SI ("next_timer") [flags 0x2]  <var_decl 0x7a1cf0567000 next_timer>)
                         ] UNSPEC_GOTOFF))) [14 next_timer+0 S4 A32])) "kernel/sched.c":347:40 75 {*movsi_internal}
      (nil))
 (insn 69 68 73 12 (set (reg:SI 0 ax [orig:103 _21 ] [103])
@@ -4177,7 +4177,7 @@ Dataflow summary:
 (insn 77 76 78 13 (set (reg:QI 0 ax [orig:104 current_DOR.40_22 ] [104])
         (mem/c:QI (plus:SI (reg:SI 3 bx [82])
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("current_DOR") [flags 0x2]  <var_decl 0x7a946af67360 current_DOR>)
+                            (symbol_ref:SI ("current_DOR") [flags 0x2]  <var_decl 0x7a1cf0567360 current_DOR>)
                         ] UNSPEC_GOTOFF))) [0 current_DOR+0 S1 A8])) "kernel/sched.c":356:21 77 {*movqi_internal}
      (nil))
 (insn 78 77 79 13 (set (reg:SI 0 ax [orig:105 _23 ] [105])
@@ -4202,7 +4202,7 @@ Dataflow summary:
      (nil)
  -> 84)
 (note 82 81 83 14 [bb 14] NOTE_INSN_BASIC_BLOCK)
-(call_insn 83 82 84 14 (call (mem:QI (symbol_ref:SI ("do_floppy_timer") [flags 0x3]  <function_decl 0x7a946af5e900 do_floppy_timer>) [0 do_floppy_timer S1 A8])
+(call_insn 83 82 84 14 (call (mem:QI (symbol_ref:SI ("do_floppy_timer") [flags 0x3]  <function_decl 0x7a1cf055e900 do_floppy_timer>) [0 do_floppy_timer S1 A8])
         (const_int 0 [0])) "kernel/sched.c":357:9 812 {*call}
      (nil)
     (nil))
@@ -4211,7 +4211,7 @@ Dataflow summary:
 (insn 86 85 87 15 (set (reg/f:SI 0 ax [orig:107 current.41_25 ] [107])
         (mem/f/c:SI (plus:SI (reg:SI 3 bx [82])
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("current") [flags 0x2]  <var_decl 0x7a946af2e120 current>)
+                            (symbol_ref:SI ("current") [flags 0x2]  <var_decl 0x7a1cf052e120 current>)
                         ] UNSPEC_GOTOFF))) [13 current+0 S4 A32])) "kernel/sched.c":358:19 75 {*movsi_internal}
      (nil))
 (insn 87 86 88 15 (set (reg:SI 1 dx [orig:108 _26 ] [108])
@@ -4248,7 +4248,7 @@ Dataflow summary:
 (insn 100 99 101 16 (set (reg/f:SI 0 ax [orig:111 current.42_29 ] [111])
         (mem/f/c:SI (plus:SI (reg:SI 3 bx [82])
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("current") [flags 0x2]  <var_decl 0x7a946af2e120 current>)
+                            (symbol_ref:SI ("current") [flags 0x2]  <var_decl 0x7a1cf052e120 current>)
                         ] UNSPEC_GOTOFF))) [13 current+0 S4 A32])) "kernel/sched.c":360:12 75 {*movsi_internal}
      (nil))
 (insn 101 100 102 16 (set (mem:SI (plus:SI (reg/f:SI 0 ax [orig:111 current.42_29 ] [111])
@@ -4268,7 +4268,7 @@ Dataflow summary:
      (nil)
  -> 126)
 (note 108 103 109 17 [bb 17] NOTE_INSN_BASIC_BLOCK)
-(call_insn 109 108 118 17 (call (mem:QI (symbol_ref:SI ("schedule") [flags 0x3]  <function_decl 0x7a946af15c00 schedule>) [0 schedule S1 A8])
+(call_insn 109 108 118 17 (call (mem:QI (symbol_ref:SI ("schedule") [flags 0x3]  <function_decl 0x7a1cf0515c00 schedule>) [0 schedule S1 A8])
         (const_int 0 [0])) "kernel/sched.c":363:5 812 {*call}
      (nil)
     (nil))
@@ -4399,16 +4399,16 @@ Dataflow summary:
 (insn 13 12 14 2 (set (reg/f:SI 0 ax [91])
         (plus:SI (reg:SI 3 bx [82])
             (const:SI (unspec:SI [
-                        (symbol_ref/f:SI ("*.LC3") [flags 0x2]  <var_decl 0x7a946afdad80 *.LC3>)
+                        (symbol_ref/f:SI ("*.LC3") [flags 0x2]  <var_decl 0x7a1cf05dad80 *.LC3>)
                     ] UNSPEC_GOTOFF)))) "kernel/sched.c":370:5 205 {*leasi}
-     (expr_list:REG_EQUAL (symbol_ref/f:SI ("*.LC3") [flags 0x2]  <var_decl 0x7a946afdad80 *.LC3>)
+     (expr_list:REG_EQUAL (symbol_ref/f:SI ("*.LC3") [flags 0x2]  <var_decl 0x7a1cf05dad80 *.LC3>)
         (nil)))
 (insn 14 13 16 2 (set (mem/f:SI (pre_dec:SI (reg/f:SI 7 sp)) [22  S4 A32])
         (reg/f:SI 0 ax [91])) "kernel/sched.c":370:5 54 {*pushsi2}
      (expr_list:REG_ARGS_SIZE (const_int 16 [0x10])
         (nil)))
 (call_insn 16 14 17 2 (set (reg:SI 0 ax)
-        (call (mem:QI (symbol_ref:SI ("printk") [flags 0x41]  <function_decl 0x7a946af38e00 printk>) [0 printk S1 A8])
+        (call (mem:QI (symbol_ref:SI ("printk") [flags 0x41]  <function_decl 0x7a1cf0538e00 printk>) [0 printk S1 A8])
             (const_int 16 [0x10]))) "kernel/sched.c":370:5 823 {*call_value}
      (nil)
     (expr_list (use (reg:SI 3 bx))
@@ -4519,16 +4519,16 @@ Dataflow summary:
 (insn 42 41 43 6 (set (reg/f:SI 0 ax [94])
         (plus:SI (reg:SI 3 bx [82])
             (const:SI (unspec:SI [
-                        (symbol_ref/f:SI ("*.LC4") [flags 0x2]  <var_decl 0x7a946afdae10 *.LC4>)
+                        (symbol_ref/f:SI ("*.LC4") [flags 0x2]  <var_decl 0x7a1cf05dae10 *.LC4>)
                     ] UNSPEC_GOTOFF)))) "kernel/sched.c":374:5 205 {*leasi}
-     (expr_list:REG_EQUAL (symbol_ref/f:SI ("*.LC4") [flags 0x2]  <var_decl 0x7a946afdae10 *.LC4>)
+     (expr_list:REG_EQUAL (symbol_ref/f:SI ("*.LC4") [flags 0x2]  <var_decl 0x7a1cf05dae10 *.LC4>)
         (nil)))
 (insn 43 42 45 6 (set (mem/f:SI (pre_dec:SI (reg/f:SI 7 sp)) [22  S4 A32])
         (reg/f:SI 0 ax [94])) "kernel/sched.c":374:5 54 {*pushsi2}
      (expr_list:REG_ARGS_SIZE (const_int 16 [0x10])
         (nil)))
 (call_insn 45 43 46 6 (set (reg:SI 0 ax)
-        (call (mem:QI (symbol_ref:SI ("printk") [flags 0x41]  <function_decl 0x7a946af38e00 printk>) [0 printk S1 A8])
+        (call (mem:QI (symbol_ref:SI ("printk") [flags 0x41]  <function_decl 0x7a1cf0538e00 printk>) [0 printk S1 A8])
             (const_int 16 [0x10]))) "kernel/sched.c":374:5 823 {*call_value}
      (nil)
     (expr_list (use (reg:SI 3 bx))
@@ -4631,7 +4631,7 @@ Dataflow summary:
                         (const_int 4 [0x4]))
                     (reg:SI 3 bx [82]))
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("task") [flags 0x2]  <var_decl 0x7a946af2e1b0 task>)
+                            (symbol_ref:SI ("task") [flags 0x2]  <var_decl 0x7a1cf052e1b0 task>)
                         ] UNSPEC_GOTOFF))) [13 task[i_3]+0 S4 A32])) "kernel/sched.c":382:17 75 {*movsi_internal}
      (nil))
 (insn 11 10 12 3 (set (reg:CCZ 17 flags)
@@ -4655,7 +4655,7 @@ Dataflow summary:
                         (const_int 4 [0x4]))
                     (reg:SI 3 bx [82]))
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("task") [flags 0x2]  <var_decl 0x7a946af2e1b0 task>)
+                            (symbol_ref:SI ("task") [flags 0x2]  <var_decl 0x7a1cf052e1b0 task>)
                         ] UNSPEC_GOTOFF))) [13 task[i_3]+0 S4 A32])) "kernel/sched.c":383:13 75 {*movsi_internal}
      (nil))
 (insn 16 15 17 4 (parallel [
@@ -4675,7 +4675,7 @@ Dataflow summary:
                 (const_int 24 [0x18])) [5 i+0 S4 A32])) "kernel/sched.c":383:13 54 {*pushsi2}
      (expr_list:REG_ARGS_SIZE (const_int 16 [0x10])
         (nil)))
-(call_insn 19 18 20 4 (call (mem:QI (symbol_ref:SI ("show_task") [flags 0x3]  <function_decl 0x7a946af74200 show_task>) [0 show_task S1 A8])
+(call_insn 19 18 20 4 (call (mem:QI (symbol_ref:SI ("show_task") [flags 0x3]  <function_decl 0x7a1cf0574200 show_task>) [0 show_task S1 A8])
         (const_int 16 [0x10])) "kernel/sched.c":383:13 812 {*call}
      (nil)
     (nil))
@@ -4774,7 +4774,7 @@ Dataflow summary:
 (insn 5 2 6 2 (set (reg/f:SI 0 ax [orig:83 current.44_1 ] [83])
         (mem/f/c:SI (plus:SI (reg:SI 0 ax [82])
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("current") [flags 0x2]  <var_decl 0x7a946af2e120 current>)
+                            (symbol_ref:SI ("current") [flags 0x2]  <var_decl 0x7a1cf052e120 current>)
                         ] UNSPEC_GOTOFF))) [13 current+0 S4 A32])) "kernel/sched.c":388:19 75 {*movsi_internal}
      (nil))
 (insn 6 5 14 2 (set (reg:SI 0 ax [orig:84 _3 ] [84])
@@ -4822,7 +4822,7 @@ Dataflow summary:
 (insn 5 2 6 2 (set (reg/f:SI 0 ax [orig:83 current.45_1 ] [83])
         (mem/f/c:SI (plus:SI (reg:SI 0 ax [82])
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("current") [flags 0x2]  <var_decl 0x7a946af2e120 current>)
+                            (symbol_ref:SI ("current") [flags 0x2]  <var_decl 0x7a1cf052e120 current>)
                         ] UNSPEC_GOTOFF))) [13 current+0 S4 A32])) "kernel/sched.c":393:19 75 {*movsi_internal}
      (nil))
 (insn 6 5 7 2 (set (reg:HI 0 ax [orig:84 _2 ] [84])
@@ -4887,7 +4887,7 @@ Dataflow summary:
 (insn 5 2 6 2 (set (reg/f:SI 0 ax [orig:83 current.46_1 ] [83])
         (mem/f/c:SI (plus:SI (reg:SI 2 cx [82])
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("current") [flags 0x2]  <var_decl 0x7a946af2e120 current>)
+                            (symbol_ref:SI ("current") [flags 0x2]  <var_decl 0x7a1cf052e120 current>)
                         ] UNSPEC_GOTOFF))) [13 current+0 S4 A32])) "kernel/sched.c":398:22 75 {*movsi_internal}
      (nil))
 (insn 6 5 7 2 (set (reg:SI 0 ax [92])
@@ -4914,7 +4914,7 @@ Dataflow summary:
 (insn 11 10 12 3 (set (reg:SI 1 dx [orig:84 jiffies.47_2 ] [84])
         (mem/v/c:SI (plus:SI (reg:SI 2 cx [82])
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("jiffies") [flags 0x2]  <var_decl 0x7a946af2e360 jiffies>)
+                            (symbol_ref:SI ("jiffies") [flags 0x2]  <var_decl 0x7a1cf052e360 jiffies>)
                         ] UNSPEC_GOTOFF))) [2 jiffies+0 S4 A32])) "kernel/sched.c":401:20 75 {*movsi_internal}
      (nil))
 (insn 12 11 13 3 (set (reg:SI 0 ax [93])
@@ -5009,7 +5009,7 @@ Dataflow summary:
 (insn 29 28 30 5 (set (reg:SI 0 ax [orig:87 jiffies.49_5 ] [87])
         (mem/v/c:SI (plus:SI (reg:SI 2 cx [82])
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("jiffies") [flags 0x2]  <var_decl 0x7a946af2e360 jiffies>)
+                            (symbol_ref:SI ("jiffies") [flags 0x2]  <var_decl 0x7a1cf052e360 jiffies>)
                         ] UNSPEC_GOTOFF))) [2 jiffies+0 S4 A32])) "kernel/sched.c":402:47 75 {*movsi_internal}
      (nil))
 (insn 30 29 50 5 (parallel [
@@ -5034,7 +5034,7 @@ Dataflow summary:
 (insn 38 37 39 7 (set (reg/f:SI 0 ax [orig:88 current.50_6 ] [88])
         (mem/f/c:SI (plus:SI (reg:SI 2 cx [82])
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("current") [flags 0x2]  <var_decl 0x7a946af2e120 current>)
+                            (symbol_ref:SI ("current") [flags 0x2]  <var_decl 0x7a1cf052e120 current>)
                         ] UNSPEC_GOTOFF))) [13 current+0 S4 A32])) "kernel/sched.c":402:12 75 {*movsi_internal}
      (nil))
 (insn 39 38 40 7 (set (mem:SI (plus:SI (reg/f:SI 0 ax [orig:88 current.50_6 ] [88])
@@ -5104,13 +5104,13 @@ Dataflow summary:
 (insn 5 2 6 2 (set (reg/f:SI 0 ax [orig:83 current.51_1 ] [83])
         (mem/f/c:SI (plus:SI (reg:SI 0 ax [82])
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("current") [flags 0x2]  <var_decl 0x7a946af2e120 current>)
+                            (symbol_ref:SI ("current") [flags 0x2]  <var_decl 0x7a1cf052e120 current>)
                         ] UNSPEC_GOTOFF))) [13 current+0 S4 A32])) "kernel/sched.c":408:12 75 {*movsi_internal}
      (nil))
 (insn 6 5 7 2 (set (mem:SI (reg/f:SI 0 ax [orig:83 current.51_1 ] [83]) [2 current.51_1->state+0 S4 A32])
         (const_int 1 [0x1])) "kernel/sched.c":408:20 75 {*movsi_internal}
      (nil))
-(call_insn 7 6 8 2 (call (mem:QI (symbol_ref:SI ("schedule") [flags 0x3]  <function_decl 0x7a946af15c00 schedule>) [0 schedule S1 A8])
+(call_insn 7 6 8 2 (call (mem:QI (symbol_ref:SI ("schedule") [flags 0x3]  <function_decl 0x7a1cf0515c00 schedule>) [0 schedule S1 A8])
         (const_int 0 [0])) "kernel/sched.c":409:5 812 {*call}
      (nil)
     (nil))
@@ -5158,7 +5158,7 @@ Dataflow summary:
 (insn 5 2 6 2 (set (reg/f:SI 1 dx [orig:83 current.52_1 ] [83])
         (mem/f/c:SI (plus:SI (reg:SI 0 ax [82])
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("current") [flags 0x2]  <var_decl 0x7a946af2e120 current>)
+                            (symbol_ref:SI ("current") [flags 0x2]  <var_decl 0x7a1cf052e120 current>)
                         ] UNSPEC_GOTOFF))) [13 current+0 S4 A32])) "kernel/sched.c":415:16 75 {*movsi_internal}
      (nil))
 (insn 6 5 7 2 (set (reg:SI 1 dx [orig:84 _2 ] [84])
@@ -5188,7 +5188,7 @@ Dataflow summary:
 (insn 13 12 14 3 (set (reg/f:SI 1 dx [orig:86 current.53_4 ] [86])
         (mem/f/c:SI (plus:SI (reg:SI 0 ax [82])
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("current") [flags 0x2]  <var_decl 0x7a946af2e120 current>)
+                            (symbol_ref:SI ("current") [flags 0x2]  <var_decl 0x7a1cf052e120 current>)
                         ] UNSPEC_GOTOFF))) [13 current+0 S4 A32])) "kernel/sched.c":416:27 75 {*movsi_internal}
      (nil))
 (insn 14 13 15 3 (set (reg:SI 1 dx [orig:87 _5 ] [87])
@@ -5198,7 +5198,7 @@ Dataflow summary:
 (insn 15 14 16 3 (set (reg/f:SI 0 ax [orig:88 current.54_6 ] [88])
         (mem/f/c:SI (plus:SI (reg:SI 0 ax [82])
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("current") [flags 0x2]  <var_decl 0x7a946af2e120 current>)
+                            (symbol_ref:SI ("current") [flags 0x2]  <var_decl 0x7a1cf052e120 current>)
                         ] UNSPEC_GOTOFF))) [13 current+0 S4 A32])) "kernel/sched.c":416:27 75 {*movsi_internal}
      (nil))
 (insn 16 15 17 3 (parallel [
@@ -5259,7 +5259,7 @@ Dataflow summary:
 (insn 5 2 6 2 (set (reg/f:SI 0 ax [orig:83 current.55_1 ] [83])
         (mem/f/c:SI (plus:SI (reg:SI 0 ax [82])
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("current") [flags 0x2]  <var_decl 0x7a946af2e120 current>)
+                            (symbol_ref:SI ("current") [flags 0x2]  <var_decl 0x7a1cf052e120 current>)
                         ] UNSPEC_GOTOFF))) [13 current+0 S4 A32])) "kernel/sched.c":422:19 75 {*movsi_internal}
      (nil))
 (insn 6 5 7 2 (set (reg:HI 0 ax [orig:84 _2 ] [84])
@@ -5310,7 +5310,7 @@ Dataflow summary:
 (insn 5 2 6 2 (set (reg/f:SI 0 ax [orig:83 current.56_1 ] [83])
         (mem/f/c:SI (plus:SI (reg:SI 0 ax [82])
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("current") [flags 0x2]  <var_decl 0x7a946af2e120 current>)
+                            (symbol_ref:SI ("current") [flags 0x2]  <var_decl 0x7a1cf052e120 current>)
                         ] UNSPEC_GOTOFF))) [13 current+0 S4 A32])) "kernel/sched.c":427:19 75 {*movsi_internal}
      (nil))
 (insn 6 5 7 2 (set (reg:HI 0 ax [orig:84 _2 ] [84])
@@ -5361,7 +5361,7 @@ Dataflow summary:
 (insn 5 2 6 2 (set (reg/f:SI 0 ax [orig:83 current.57_1 ] [83])
         (mem/f/c:SI (plus:SI (reg:SI 0 ax [82])
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("current") [flags 0x2]  <var_decl 0x7a946af2e120 current>)
+                            (symbol_ref:SI ("current") [flags 0x2]  <var_decl 0x7a1cf052e120 current>)
                         ] UNSPEC_GOTOFF))) [13 current+0 S4 A32])) "kernel/sched.c":432:19 75 {*movsi_internal}
      (nil))
 (insn 6 5 7 2 (set (reg:HI 0 ax [orig:84 _2 ] [84])
@@ -5412,7 +5412,7 @@ Dataflow summary:
 (insn 5 2 6 2 (set (reg/f:SI 0 ax [orig:83 current.58_1 ] [83])
         (mem/f/c:SI (plus:SI (reg:SI 0 ax [82])
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("current") [flags 0x2]  <var_decl 0x7a946af2e120 current>)
+                            (symbol_ref:SI ("current") [flags 0x2]  <var_decl 0x7a1cf052e120 current>)
                         ] UNSPEC_GOTOFF))) [13 current+0 S4 A32])) "kernel/sched.c":437:19 75 {*movsi_internal}
      (nil))
 (insn 6 5 14 2 (set (reg:SI 0 ax [orig:84 _3 ] [84])

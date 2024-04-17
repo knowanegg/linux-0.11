@@ -37,7 +37,7 @@ Edge 7->19 redirected to 22
 (insn 7 6 8 2 (set (reg:SI 83 [ rd_length.0_1 ])
         (mem/c:SI (plus:SI (reg:SI 82)
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("rd_length") [flags 0x2]  <var_decl 0x75807cd41f30 rd_length>)
+                            (symbol_ref:SI ("rd_length") [flags 0x2]  <var_decl 0x70b0b9d5ef30 rd_length>)
                         ] UNSPEC_GOTOFF))) [2 rd_length+0 S4 A32])) "drivers/blk_drv/ramdisk.c":28:9 75 {*movsi_internal}
      (nil))
 (insn 8 7 9 2 (set (reg:CCZ 17 flags)
@@ -55,7 +55,7 @@ Edge 7->19 redirected to 22
 (insn 15 14 16 3 (set (reg/f:SI 84 [ rd_start.1_2 ])
         (mem/f/c:SI (plus:SI (reg:SI 82)
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("rd_start") [flags 0x2]  <var_decl 0x75807cd41ea0 rd_start>)
+                            (symbol_ref:SI ("rd_start") [flags 0x2]  <var_decl 0x70b0b9d5eea0 rd_start>)
                         ] UNSPEC_GOTOFF))) [1 rd_start+0 S4 A32])) "drivers/blk_drv/ramdisk.c":30:5 75 {*movsi_internal}
      (nil))
 (insn 16 15 17 3 (set (reg:SI 85 [ rd_start.2_3 ])
@@ -64,7 +64,7 @@ Edge 7->19 redirected to 22
 (insn 17 16 18 3 (set (reg:SI 86 [ rd_length.3_4 ])
         (mem/c:SI (plus:SI (reg:SI 82)
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("rd_length") [flags 0x2]  <var_decl 0x75807cd41f30 rd_length>)
+                            (symbol_ref:SI ("rd_length") [flags 0x2]  <var_decl 0x70b0b9d5ef30 rd_length>)
                         ] UNSPEC_GOTOFF))) [2 rd_length+0 S4 A32])) "drivers/blk_drv/ramdisk.c":30:5 75 {*movsi_internal}
      (nil))
 (insn 18 17 19 3 (parallel [
@@ -86,9 +86,9 @@ Edge 7->19 redirected to 22
 (insn 21 20 22 3 (set (reg/f:SI 111)
         (plus:SI (reg:SI 82)
             (const:SI (unspec:SI [
-                        (symbol_ref/f:SI ("*.LC0") [flags 0x2]  <var_decl 0x75807b51c900 *.LC0>)
+                        (symbol_ref/f:SI ("*.LC0") [flags 0x2]  <var_decl 0x70b0b851c900 *.LC0>)
                     ] UNSPEC_GOTOFF)))) "drivers/blk_drv/ramdisk.c":30:5 205 {*leasi}
-     (expr_list:REG_EQUAL (symbol_ref/f:SI ("*.LC0") [flags 0x2]  <var_decl 0x75807b51c900 *.LC0>)
+     (expr_list:REG_EQUAL (symbol_ref/f:SI ("*.LC0") [flags 0x2]  <var_decl 0x70b0b851c900 *.LC0>)
         (nil)))
 (insn 22 21 23 3 (set (mem/f:SI (pre_dec:SI (reg/f:SI 7 sp)) [1  S4 A32])
         (reg/f:SI 111)) "drivers/blk_drv/ramdisk.c":30:5 54 {*pushsi2}
@@ -98,7 +98,7 @@ Edge 7->19 redirected to 22
         (reg:SI 82)) "drivers/blk_drv/ramdisk.c":30:5 75 {*movsi_internal}
      (nil))
 (call_insn 24 23 25 3 (set (reg:SI 0 ax)
-        (call (mem:QI (symbol_ref:SI ("printk") [flags 0x41]  <function_decl 0x75807b510900 printk>) [0 printk S1 A8])
+        (call (mem:QI (symbol_ref:SI ("printk") [flags 0x41]  <function_decl 0x70b0b8510900 printk>) [0 printk S1 A8])
             (const_int 16 [0x10]))) "drivers/blk_drv/ramdisk.c":30:5 823 {*call_value}
      (nil)
     (expr_list (use (reg:SI 3 bx))
@@ -114,7 +114,7 @@ Edge 7->19 redirected to 22
 (insn 26 25 27 3 (set (reg/f:SI 112)
         (mem/u/c:SI (plus:SI (reg:SI 82)
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("ROOT_DEV") [flags 0x40]  <var_decl 0x75807cd41b40 ROOT_DEV>)
+                            (symbol_ref:SI ("ROOT_DEV") [flags 0x40]  <var_decl 0x70b0b9d5eb40 ROOT_DEV>)
                         ] UNSPEC_GOT))) [9  S4 A8])) "drivers/blk_drv/ramdisk.c":32:9 75 {*movsi_internal}
      (nil))
 (insn 27 26 28 3 (set (reg:SI 87 [ ROOT_DEV.4_5 ])
@@ -173,7 +173,7 @@ Edge 7->19 redirected to 22
 (insn 41 40 42 4 (set (reg/f:SI 115)
         (mem/u/c:SI (plus:SI (reg:SI 82)
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("ROOT_DEV") [flags 0x40]  <var_decl 0x75807cd41b40 ROOT_DEV>)
+                            (symbol_ref:SI ("ROOT_DEV") [flags 0x40]  <var_decl 0x70b0b9d5eb40 ROOT_DEV>)
                         ] UNSPEC_GOT))) [9  S4 A8])) "drivers/blk_drv/ramdisk.c":34:10 75 {*movsi_internal}
      (nil))
 (insn 42 41 43 4 (set (reg:SI 92 [ ROOT_DEV.6_10 ])
@@ -212,7 +212,7 @@ Edge 7->19 redirected to 22
         (reg:SI 82)) "drivers/blk_drv/ramdisk.c":34:10 75 {*movsi_internal}
      (nil))
 (call_insn 50 49 51 4 (set (reg:SI 0 ax)
-        (call (mem:QI (symbol_ref:SI ("breada") [flags 0x41]  <function_decl 0x75807b50e600 breada>) [0 breada S1 A8])
+        (call (mem:QI (symbol_ref:SI ("breada") [flags 0x41]  <function_decl 0x70b0b850e600 breada>) [0 breada S1 A8])
             (const_int 32 [0x20]))) "drivers/blk_drv/ramdisk.c":34:10 823 {*call_value}
      (nil)
     (expr_list (use (reg:SI 3 bx))
@@ -256,9 +256,9 @@ Edge 7->19 redirected to 22
 (insn 58 57 59 5 (set (reg/f:SI 117)
         (plus:SI (reg:SI 82)
             (const:SI (unspec:SI [
-                        (symbol_ref/f:SI ("*.LC1") [flags 0x2]  <var_decl 0x75807b51c990 *.LC1>)
+                        (symbol_ref/f:SI ("*.LC1") [flags 0x2]  <var_decl 0x70b0b851c990 *.LC1>)
                     ] UNSPEC_GOTOFF)))) "drivers/blk_drv/ramdisk.c":36:9 205 {*leasi}
-     (expr_list:REG_EQUAL (symbol_ref/f:SI ("*.LC1") [flags 0x2]  <var_decl 0x75807b51c990 *.LC1>)
+     (expr_list:REG_EQUAL (symbol_ref/f:SI ("*.LC1") [flags 0x2]  <var_decl 0x70b0b851c990 *.LC1>)
         (nil)))
 (insn 59 58 60 5 (set (mem/f:SI (pre_dec:SI (reg/f:SI 7 sp)) [1  S4 A32])
         (reg/f:SI 117)) "drivers/blk_drv/ramdisk.c":36:9 54 {*pushsi2}
@@ -268,7 +268,7 @@ Edge 7->19 redirected to 22
         (reg:SI 82)) "drivers/blk_drv/ramdisk.c":36:9 75 {*movsi_internal}
      (nil))
 (call_insn 61 60 62 5 (set (reg:SI 0 ax)
-        (call (mem:QI (symbol_ref:SI ("printk") [flags 0x41]  <function_decl 0x75807b510900 printk>) [0 printk S1 A8])
+        (call (mem:QI (symbol_ref:SI ("printk") [flags 0x41]  <function_decl 0x70b0b8510900 printk>) [0 printk S1 A8])
             (const_int 16 [0x10]))) "drivers/blk_drv/ramdisk.c":36:9 823 {*call_value}
      (nil)
     (expr_list (use (reg:SI 3 bx))
@@ -356,7 +356,7 @@ Edge 7->19 redirected to 22
 (insn 82 81 83 6 (set (reg:SI 3 bx)
         (reg:SI 82)) "drivers/blk_drv/ramdisk.c":40:5 75 {*movsi_internal}
      (nil))
-(call_insn 83 82 84 6 (call (mem:QI (symbol_ref:SI ("brelse") [flags 0x41]  <function_decl 0x75807b50e200 brelse>) [0 brelse S1 A8])
+(call_insn 83 82 84 6 (call (mem:QI (symbol_ref:SI ("brelse") [flags 0x41]  <function_decl 0x70b0b850e200 brelse>) [0 brelse S1 A8])
         (const_int 16 [0x10])) "drivers/blk_drv/ramdisk.c":40:5 812 {*call}
      (nil)
     (expr_list (use (reg:SI 3 bx))
@@ -430,7 +430,7 @@ Edge 7->19 redirected to 22
 (insn 103 102 104 8 (set (reg:SI 101 [ rd_length.8_19 ])
         (mem/c:SI (plus:SI (reg:SI 82)
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("rd_length") [flags 0x2]  <var_decl 0x75807cd41f30 rd_length>)
+                            (symbol_ref:SI ("rd_length") [flags 0x2]  <var_decl 0x70b0b9d5ef30 rd_length>)
                         ] UNSPEC_GOTOFF))) [2 rd_length+0 S4 A32])) "drivers/blk_drv/ramdisk.c":46:30 75 {*movsi_internal}
      (nil))
 (insn 104 103 105 8 (parallel [
@@ -456,7 +456,7 @@ Edge 7->19 redirected to 22
 (insn 108 107 109 9 (set (reg:SI 103 [ rd_length.9_21 ])
         (mem/c:SI (plus:SI (reg:SI 82)
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("rd_length") [flags 0x2]  <var_decl 0x75807cd41f30 rd_length>)
+                            (symbol_ref:SI ("rd_length") [flags 0x2]  <var_decl 0x70b0b9d5ef30 rd_length>)
                         ] UNSPEC_GOTOFF))) [2 rd_length+0 S4 A32])) "drivers/blk_drv/ramdisk.c":47:9 75 {*movsi_internal}
      (nil))
 (insn 109 108 110 9 (parallel [
@@ -486,9 +486,9 @@ Edge 7->19 redirected to 22
 (insn 113 112 114 9 (set (reg/f:SI 125)
         (plus:SI (reg:SI 82)
             (const:SI (unspec:SI [
-                        (symbol_ref/f:SI ("*.LC2") [flags 0x2]  <var_decl 0x75807b51ca20 *.LC2>)
+                        (symbol_ref/f:SI ("*.LC2") [flags 0x2]  <var_decl 0x70b0b851ca20 *.LC2>)
                     ] UNSPEC_GOTOFF)))) "drivers/blk_drv/ramdisk.c":47:9 205 {*leasi}
-     (expr_list:REG_EQUAL (symbol_ref/f:SI ("*.LC2") [flags 0x2]  <var_decl 0x75807b51ca20 *.LC2>)
+     (expr_list:REG_EQUAL (symbol_ref/f:SI ("*.LC2") [flags 0x2]  <var_decl 0x70b0b851ca20 *.LC2>)
         (nil)))
 (insn 114 113 115 9 (set (mem/f:SI (pre_dec:SI (reg/f:SI 7 sp)) [1  S4 A32])
         (reg/f:SI 125)) "drivers/blk_drv/ramdisk.c":47:9 54 {*pushsi2}
@@ -498,7 +498,7 @@ Edge 7->19 redirected to 22
         (reg:SI 82)) "drivers/blk_drv/ramdisk.c":47:9 75 {*movsi_internal}
      (nil))
 (call_insn 116 115 117 9 (set (reg:SI 0 ax)
-        (call (mem:QI (symbol_ref:SI ("printk") [flags 0x41]  <function_decl 0x75807b510900 printk>) [0 printk S1 A8])
+        (call (mem:QI (symbol_ref:SI ("printk") [flags 0x41]  <function_decl 0x70b0b8510900 printk>) [0 printk S1 A8])
             (const_int 16 [0x10]))) "drivers/blk_drv/ramdisk.c":47:9 823 {*call_value}
      (nil)
     (expr_list (use (reg:SI 3 bx))
@@ -547,9 +547,9 @@ Edge 7->19 redirected to 22
 (insn 126 125 127 10 (set (reg/f:SI 127)
         (plus:SI (reg:SI 82)
             (const:SI (unspec:SI [
-                        (symbol_ref/f:SI ("*.LC3") [flags 0x2]  <var_decl 0x75807b51cab0 *.LC3>)
+                        (symbol_ref/f:SI ("*.LC3") [flags 0x2]  <var_decl 0x70b0b851cab0 *.LC3>)
                     ] UNSPEC_GOTOFF)))) "drivers/blk_drv/ramdisk.c":51:5 205 {*leasi}
-     (expr_list:REG_EQUAL (symbol_ref/f:SI ("*.LC3") [flags 0x2]  <var_decl 0x75807b51cab0 *.LC3>)
+     (expr_list:REG_EQUAL (symbol_ref/f:SI ("*.LC3") [flags 0x2]  <var_decl 0x70b0b851cab0 *.LC3>)
         (nil)))
 (insn 127 126 128 10 (set (mem/f:SI (pre_dec:SI (reg/f:SI 7 sp)) [1  S4 A32])
         (reg/f:SI 127)) "drivers/blk_drv/ramdisk.c":51:5 54 {*pushsi2}
@@ -559,7 +559,7 @@ Edge 7->19 redirected to 22
         (reg:SI 82)) "drivers/blk_drv/ramdisk.c":51:5 75 {*movsi_internal}
      (nil))
 (call_insn 129 128 130 10 (set (reg:SI 0 ax)
-        (call (mem:QI (symbol_ref:SI ("printk") [flags 0x41]  <function_decl 0x75807b510900 printk>) [0 printk S1 A8])
+        (call (mem:QI (symbol_ref:SI ("printk") [flags 0x41]  <function_decl 0x70b0b8510900 printk>) [0 printk S1 A8])
             (const_int 16 [0x10]))) "drivers/blk_drv/ramdisk.c":51:5 823 {*call_value}
      (nil)
     (expr_list (use (reg:SI 3 bx))
@@ -575,7 +575,7 @@ Edge 7->19 redirected to 22
 (insn 131 130 132 10 (set (reg/f:SI 128)
         (mem/f/c:SI (plus:SI (reg:SI 82)
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("rd_start") [flags 0x2]  <var_decl 0x75807cd41ea0 rd_start>)
+                            (symbol_ref:SI ("rd_start") [flags 0x2]  <var_decl 0x70b0b9d5eea0 rd_start>)
                         ] UNSPEC_GOTOFF))) [1 rd_start+0 S4 A32])) "drivers/blk_drv/ramdisk.c":53:8 75 {*movsi_internal}
      (nil))
 (insn 132 131 239 10 (set (mem/f/c:SI (plus:SI (reg/f:SI 19 frame)
@@ -633,7 +633,7 @@ Edge 7->19 redirected to 22
 (insn 145 144 146 12 (set (reg/f:SI 131)
         (mem/u/c:SI (plus:SI (reg:SI 82)
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("ROOT_DEV") [flags 0x40]  <var_decl 0x75807cd41b40 ROOT_DEV>)
+                            (symbol_ref:SI ("ROOT_DEV") [flags 0x40]  <var_decl 0x70b0b9d5eb40 ROOT_DEV>)
                         ] UNSPEC_GOT))) [9  S4 A8])) "drivers/blk_drv/ramdisk.c":56:18 75 {*movsi_internal}
      (nil))
 (insn 146 145 147 12 (set (reg:SI 108 [ ROOT_DEV.10_26 ])
@@ -672,7 +672,7 @@ Edge 7->19 redirected to 22
         (reg:SI 82)) "drivers/blk_drv/ramdisk.c":56:18 75 {*movsi_internal}
      (nil))
 (call_insn 154 153 155 12 (set (reg:SI 0 ax)
-        (call (mem:QI (symbol_ref:SI ("breada") [flags 0x41]  <function_decl 0x75807b50e600 breada>) [0 breada S1 A8])
+        (call (mem:QI (symbol_ref:SI ("breada") [flags 0x41]  <function_decl 0x70b0b850e600 breada>) [0 breada S1 A8])
             (const_int 32 [0x20]))) "drivers/blk_drv/ramdisk.c":56:18 823 {*call_value}
      (nil)
     (expr_list (use (reg:SI 3 bx))
@@ -702,7 +702,7 @@ Edge 7->19 redirected to 22
 (insn 162 161 163 13 (set (reg/f:SI 133)
         (mem/u/c:SI (plus:SI (reg:SI 82)
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("ROOT_DEV") [flags 0x40]  <var_decl 0x75807cd41b40 ROOT_DEV>)
+                            (symbol_ref:SI ("ROOT_DEV") [flags 0x40]  <var_decl 0x70b0b9d5eb40 ROOT_DEV>)
                         ] UNSPEC_GOT))) [9  S4 A8])) "drivers/blk_drv/ramdisk.c":58:18 75 {*movsi_internal}
      (nil))
 (insn 163 162 164 13 (set (reg:SI 109 [ ROOT_DEV.11_27 ])
@@ -729,7 +729,7 @@ Edge 7->19 redirected to 22
         (reg:SI 82)) "drivers/blk_drv/ramdisk.c":58:18 75 {*movsi_internal}
      (nil))
 (call_insn 168 167 169 13 (set (reg:SI 0 ax)
-        (call (mem:QI (symbol_ref:SI ("bread") [flags 0x41]  <function_decl 0x75807b50e100 bread>) [0 bread S1 A8])
+        (call (mem:QI (symbol_ref:SI ("bread") [flags 0x41]  <function_decl 0x70b0b850e100 bread>) [0 bread S1 A8])
             (const_int 16 [0x10]))) "drivers/blk_drv/ramdisk.c":58:18 823 {*call_value}
      (nil)
     (expr_list (use (reg:SI 3 bx))
@@ -780,9 +780,9 @@ Edge 7->19 redirected to 22
 (insn 179 178 180 15 (set (reg/f:SI 135)
         (plus:SI (reg:SI 82)
             (const:SI (unspec:SI [
-                        (symbol_ref/f:SI ("*.LC4") [flags 0x2]  <var_decl 0x75807b51cb40 *.LC4>)
+                        (symbol_ref/f:SI ("*.LC4") [flags 0x2]  <var_decl 0x70b0b851cb40 *.LC4>)
                     ] UNSPEC_GOTOFF)))) "drivers/blk_drv/ramdisk.c":60:13 205 {*leasi}
-     (expr_list:REG_EQUAL (symbol_ref/f:SI ("*.LC4") [flags 0x2]  <var_decl 0x75807b51cb40 *.LC4>)
+     (expr_list:REG_EQUAL (symbol_ref/f:SI ("*.LC4") [flags 0x2]  <var_decl 0x70b0b851cb40 *.LC4>)
         (nil)))
 (insn 180 179 181 15 (set (mem/f:SI (pre_dec:SI (reg/f:SI 7 sp)) [1  S4 A32])
         (reg/f:SI 135)) "drivers/blk_drv/ramdisk.c":60:13 54 {*pushsi2}
@@ -792,7 +792,7 @@ Edge 7->19 redirected to 22
         (reg:SI 82)) "drivers/blk_drv/ramdisk.c":60:13 75 {*movsi_internal}
      (nil))
 (call_insn 182 181 183 15 (set (reg:SI 0 ax)
-        (call (mem:QI (symbol_ref:SI ("printk") [flags 0x41]  <function_decl 0x75807b510900 printk>) [0 printk S1 A8])
+        (call (mem:QI (symbol_ref:SI ("printk") [flags 0x41]  <function_decl 0x70b0b8510900 printk>) [0 printk S1 A8])
             (const_int 16 [0x10]))) "drivers/blk_drv/ramdisk.c":60:13 823 {*call_value}
      (nil)
     (expr_list (use (reg:SI 3 bx))
@@ -844,7 +844,7 @@ Edge 7->19 redirected to 22
         (reg:SI 82)) "drivers/blk_drv/ramdisk.c":63:16 75 {*movsi_internal}
      (nil))
 (call_insn 195 194 196 16 (set (reg:SI 0 ax)
-        (call (mem:QI (symbol_ref:SI ("memcpy") [flags 0x41]  <function_decl 0x75807b51a500 memcpy>) [0 memcpy S1 A8])
+        (call (mem:QI (symbol_ref:SI ("memcpy") [flags 0x41]  <function_decl 0x70b0b851a500 memcpy>) [0 memcpy S1 A8])
             (const_int 16 [0x10]))) "drivers/blk_drv/ramdisk.c":63:16 823 {*call_value}
      (nil)
     (expr_list (use (reg:SI 3 bx))
@@ -873,7 +873,7 @@ Edge 7->19 redirected to 22
 (insn 199 198 200 16 (set (reg:SI 3 bx)
         (reg:SI 82)) "drivers/blk_drv/ramdisk.c":64:9 75 {*movsi_internal}
      (nil))
-(call_insn 200 199 201 16 (call (mem:QI (symbol_ref:SI ("brelse") [flags 0x41]  <function_decl 0x75807b50e200 brelse>) [0 brelse S1 A8])
+(call_insn 200 199 201 16 (call (mem:QI (symbol_ref:SI ("brelse") [flags 0x41]  <function_decl 0x70b0b850e200 brelse>) [0 brelse S1 A8])
         (const_int 16 [0x10])) "drivers/blk_drv/ramdisk.c":64:9 812 {*call}
      (nil)
     (expr_list (use (reg:SI 3 bx))
@@ -902,9 +902,9 @@ Edge 7->19 redirected to 22
 (insn 204 203 205 16 (set (reg/f:SI 137)
         (plus:SI (reg:SI 82)
             (const:SI (unspec:SI [
-                        (symbol_ref/f:SI ("*.LC5") [flags 0x2]  <var_decl 0x75807b51cbd0 *.LC5>)
+                        (symbol_ref/f:SI ("*.LC5") [flags 0x2]  <var_decl 0x70b0b851cbd0 *.LC5>)
                     ] UNSPEC_GOTOFF)))) "drivers/blk_drv/ramdisk.c":65:9 205 {*leasi}
-     (expr_list:REG_EQUAL (symbol_ref/f:SI ("*.LC5") [flags 0x2]  <var_decl 0x75807b51cbd0 *.LC5>)
+     (expr_list:REG_EQUAL (symbol_ref/f:SI ("*.LC5") [flags 0x2]  <var_decl 0x70b0b851cbd0 *.LC5>)
         (nil)))
 (insn 205 204 206 16 (set (mem/f:SI (pre_dec:SI (reg/f:SI 7 sp)) [1  S4 A32])
         (reg/f:SI 137)) "drivers/blk_drv/ramdisk.c":65:9 54 {*pushsi2}
@@ -914,7 +914,7 @@ Edge 7->19 redirected to 22
         (reg:SI 82)) "drivers/blk_drv/ramdisk.c":65:9 75 {*movsi_internal}
      (nil))
 (call_insn 207 206 208 16 (set (reg:SI 0 ax)
-        (call (mem:QI (symbol_ref:SI ("printk") [flags 0x41]  <function_decl 0x75807b510900 printk>) [0 printk S1 A8])
+        (call (mem:QI (symbol_ref:SI ("printk") [flags 0x41]  <function_decl 0x70b0b8510900 printk>) [0 printk S1 A8])
             (const_int 16 [0x10]))) "drivers/blk_drv/ramdisk.c":65:9 823 {*call_value}
      (nil)
     (expr_list (use (reg:SI 3 bx))
@@ -989,9 +989,9 @@ Edge 7->19 redirected to 22
 (insn 220 219 221 18 (set (reg/f:SI 138)
         (plus:SI (reg:SI 82)
             (const:SI (unspec:SI [
-                        (symbol_ref/f:SI ("*.LC6") [flags 0x2]  <var_decl 0x75807b51cc60 *.LC6>)
+                        (symbol_ref/f:SI ("*.LC6") [flags 0x2]  <var_decl 0x70b0b851cc60 *.LC6>)
                     ] UNSPEC_GOTOFF)))) "drivers/blk_drv/ramdisk.c":71:5 205 {*leasi}
-     (expr_list:REG_EQUAL (symbol_ref/f:SI ("*.LC6") [flags 0x2]  <var_decl 0x75807b51cc60 *.LC6>)
+     (expr_list:REG_EQUAL (symbol_ref/f:SI ("*.LC6") [flags 0x2]  <var_decl 0x70b0b851cc60 *.LC6>)
         (nil)))
 (insn 221 220 222 18 (set (mem/f:SI (pre_dec:SI (reg/f:SI 7 sp)) [1  S4 A32])
         (reg/f:SI 138)) "drivers/blk_drv/ramdisk.c":71:5 54 {*pushsi2}
@@ -1001,7 +1001,7 @@ Edge 7->19 redirected to 22
         (reg:SI 82)) "drivers/blk_drv/ramdisk.c":71:5 75 {*movsi_internal}
      (nil))
 (call_insn 223 222 224 18 (set (reg:SI 0 ax)
-        (call (mem:QI (symbol_ref:SI ("printk") [flags 0x41]  <function_decl 0x75807b510900 printk>) [0 printk S1 A8])
+        (call (mem:QI (symbol_ref:SI ("printk") [flags 0x41]  <function_decl 0x70b0b8510900 printk>) [0 printk S1 A8])
             (const_int 16 [0x10]))) "drivers/blk_drv/ramdisk.c":71:5 823 {*call_value}
      (nil)
     (expr_list (use (reg:SI 3 bx))
@@ -1017,7 +1017,7 @@ Edge 7->19 redirected to 22
 (insn 225 224 226 18 (set (reg/f:SI 139)
         (mem/u/c:SI (plus:SI (reg:SI 82)
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("ROOT_DEV") [flags 0x40]  <var_decl 0x75807cd41b40 ROOT_DEV>)
+                            (symbol_ref:SI ("ROOT_DEV") [flags 0x40]  <var_decl 0x70b0b9d5eb40 ROOT_DEV>)
                         ] UNSPEC_GOT))) [9  S4 A8])) "drivers/blk_drv/ramdisk.c":72:14 75 {*movsi_internal}
      (nil))
 (insn 226 225 245 18 (set (mem/c:SI (reg/f:SI 139) [2 ROOT_DEV+0 S4 A32])

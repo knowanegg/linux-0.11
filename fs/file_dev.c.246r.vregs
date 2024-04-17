@@ -174,7 +174,7 @@
         (reg:SI 82)) "fs/file_dev.c":26:19 75 {*movsi_internal}
      (nil))
 (call_insn 34 33 35 6 (set (reg:SI 0 ax)
-        (call (mem:QI (symbol_ref:SI ("bmap") [flags 0x41]  <function_decl 0x75275b90ed00 bmap>) [0 bmap S1 A8])
+        (call (mem:QI (symbol_ref:SI ("bmap") [flags 0x41]  <function_decl 0x726d6e70ed00 bmap>) [0 bmap S1 A8])
             (const_int 16 [0x10]))) "fs/file_dev.c":26:19 823 {*call_value}
      (nil)
     (expr_list (use (reg:SI 3 bx))
@@ -238,7 +238,7 @@
         (reg:SI 82)) "fs/file_dev.c":27:24 75 {*movsi_internal}
      (nil))
 (call_insn 48 47 49 7 (set (reg:SI 0 ax)
-        (call (mem:QI (symbol_ref:SI ("bread") [flags 0x41]  <function_decl 0x75275b90e100 bread>) [0 bread S1 A8])
+        (call (mem:QI (symbol_ref:SI ("bread") [flags 0x41]  <function_decl 0x726d6e70e100 bread>) [0 bread S1 A8])
             (const_int 16 [0x10]))) "fs/file_dev.c":27:24 823 {*call_value}
      (nil)
     (expr_list (use (reg:SI 3 bx))
@@ -494,7 +494,7 @@
         (reg:SI 96 [ _14 ])) "fs/file_dev.c":39:17 54 {*pushsi2}
      (expr_list:REG_ARGS_SIZE (const_int 16 [0x10])
         (nil)))
-(call_insn 107 106 108 12 (call (mem:QI (symbol_ref:SI ("put_fs_byte") [flags 0x3]  <function_decl 0x75275b938f00 put_fs_byte>) [0 put_fs_byte S1 A8])
+(call_insn 107 106 108 12 (call (mem:QI (symbol_ref:SI ("put_fs_byte") [flags 0x3]  <function_decl 0x726d6e738f00 put_fs_byte>) [0 put_fs_byte S1 A8])
         (const_int 16 [0x10])) "fs/file_dev.c":39:17 812 {*call}
      (nil)
     (nil))
@@ -551,7 +551,7 @@
 (insn 122 121 123 14 (set (reg:SI 3 bx)
         (reg:SI 82)) "fs/file_dev.c":40:13 75 {*movsi_internal}
      (nil))
-(call_insn 123 122 124 14 (call (mem:QI (symbol_ref:SI ("brelse") [flags 0x41]  <function_decl 0x75275b90e200 brelse>) [0 brelse S1 A8])
+(call_insn 123 122 124 14 (call (mem:QI (symbol_ref:SI ("brelse") [flags 0x41]  <function_decl 0x726d6e70e200 brelse>) [0 brelse S1 A8])
         (const_int 16 [0x10])) "fs/file_dev.c":40:13 812 {*call}
      (nil)
     (expr_list (use (reg:SI 3 bx))
@@ -609,7 +609,7 @@
         (const_int 0 [0])) "fs/file_dev.c":43:17 54 {*pushsi2}
      (expr_list:REG_ARGS_SIZE (const_int 16 [0x10])
         (nil)))
-(call_insn 138 137 139 16 (call (mem:QI (symbol_ref:SI ("put_fs_byte") [flags 0x3]  <function_decl 0x75275b938f00 put_fs_byte>) [0 put_fs_byte S1 A8])
+(call_insn 138 137 139 16 (call (mem:QI (symbol_ref:SI ("put_fs_byte") [flags 0x3]  <function_decl 0x726d6e738f00 put_fs_byte>) [0 put_fs_byte S1 A8])
         (const_int 16 [0x10])) "fs/file_dev.c":43:17 812 {*call}
      (nil)
     (nil))
@@ -668,7 +668,7 @@
 (insn 157 156 158 19 (set (reg/f:SI 135)
         (mem/u/c:SI (plus:SI (reg:SI 82)
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("jiffies") [flags 0x40]  <var_decl 0x75275b92f360 jiffies>)
+                            (symbol_ref:SI ("jiffies") [flags 0x40]  <var_decl 0x726d6e72f360 jiffies>)
                         ] UNSPEC_GOT))) [12  S4 A8])) "fs/file_dev.c":46:22 75 {*movsi_internal}
      (nil))
 (insn 158 157 159 19 (set (reg:SI 100 [ jiffies.6_18 ])
@@ -712,7 +712,7 @@
 (insn 164 163 165 19 (set (reg/f:SI 140)
         (mem/u/c:SI (plus:SI (reg:SI 82)
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("startup_time") [flags 0x40]  <var_decl 0x75275b92f3f0 startup_time>)
+                            (symbol_ref:SI ("startup_time") [flags 0x40]  <var_decl 0x726d6e72f3f0 startup_time>)
                         ] UNSPEC_GOT))) [12  S4 A8])) "fs/file_dev.c":46:22 75 {*movsi_internal}
      (nil))
 (insn 165 164 166 19 (set (reg:SI 102 [ startup_time.7_20 ])
@@ -923,7 +923,7 @@
         (reg:SI 82)) "fs/file_dev.c":67:23 75 {*movsi_internal}
      (nil))
 (call_insn 41 40 42 7 (set (reg:SI 0 ax)
-        (call (mem:QI (symbol_ref:SI ("create_block") [flags 0x41]  <function_decl 0x75275b90ee00 create_block>) [0 create_block S1 A8])
+        (call (mem:QI (symbol_ref:SI ("create_block") [flags 0x41]  <function_decl 0x726d6e70ee00 create_block>) [0 create_block S1 A8])
             (const_int 16 [0x10]))) "fs/file_dev.c":67:23 823 {*call_value}
      (nil)
     (expr_list (use (reg:SI 3 bx))
@@ -994,7 +994,7 @@
         (reg:SI 82)) "fs/file_dev.c":69:20 75 {*movsi_internal}
      (nil))
 (call_insn 59 58 60 9 (set (reg:SI 0 ax)
-        (call (mem:QI (symbol_ref:SI ("bread") [flags 0x41]  <function_decl 0x75275b90e100 bread>) [0 bread S1 A8])
+        (call (mem:QI (symbol_ref:SI ("bread") [flags 0x41]  <function_decl 0x726d6e70e100 bread>) [0 bread S1 A8])
             (const_int 16 [0x10]))) "fs/file_dev.c":69:20 823 {*call_value}
      (nil)
     (expr_list (use (reg:SI 3 bx))
@@ -1277,7 +1277,7 @@
      (expr_list:REG_ARGS_SIZE (const_int 16 [0x10])
         (nil)))
 (call_insn 130 129 131 16 (set (reg:QI 0 ax)
-        (call (mem:QI (symbol_ref:SI ("get_fs_byte") [flags 0x3]  <function_decl 0x75275b938d00 get_fs_byte>) [0 get_fs_byte S1 A8])
+        (call (mem:QI (symbol_ref:SI ("get_fs_byte") [flags 0x3]  <function_decl 0x726d6e738d00 get_fs_byte>) [0 get_fs_byte S1 A8])
             (const_int 16 [0x10]))) "fs/file_dev.c":84:22 823 {*call_value}
      (nil)
     (nil))
@@ -1358,7 +1358,7 @@
 (insn 151 150 152 18 (set (reg:SI 3 bx)
         (reg:SI 82)) "fs/file_dev.c":85:9 75 {*movsi_internal}
      (nil))
-(call_insn 152 151 153 18 (call (mem:QI (symbol_ref:SI ("brelse") [flags 0x41]  <function_decl 0x75275b90e200 brelse>) [0 brelse S1 A8])
+(call_insn 152 151 153 18 (call (mem:QI (symbol_ref:SI ("brelse") [flags 0x41]  <function_decl 0x726d6e70e200 brelse>) [0 brelse S1 A8])
         (const_int 16 [0x10])) "fs/file_dev.c":85:9 812 {*call}
      (nil)
     (expr_list (use (reg:SI 3 bx))
@@ -1394,7 +1394,7 @@
 (insn 162 161 163 20 (set (reg/f:SI 155)
         (mem/u/c:SI (plus:SI (reg:SI 82)
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("jiffies") [flags 0x40]  <var_decl 0x75275b92f360 jiffies>)
+                            (symbol_ref:SI ("jiffies") [flags 0x40]  <var_decl 0x726d6e72f360 jiffies>)
                         ] UNSPEC_GOT))) [12  S4 A8])) "fs/file_dev.c":87:22 75 {*movsi_internal}
      (nil))
 (insn 163 162 164 20 (set (reg:SI 101 [ jiffies.15_19 ])
@@ -1438,7 +1438,7 @@
 (insn 169 168 170 20 (set (reg/f:SI 160)
         (mem/u/c:SI (plus:SI (reg:SI 82)
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("startup_time") [flags 0x40]  <var_decl 0x75275b92f3f0 startup_time>)
+                            (symbol_ref:SI ("startup_time") [flags 0x40]  <var_decl 0x726d6e72f3f0 startup_time>)
                         ] UNSPEC_GOT))) [12  S4 A8])) "fs/file_dev.c":87:22 75 {*movsi_internal}
      (nil))
 (insn 170 169 171 20 (set (reg:SI 103 [ startup_time.16_21 ])
@@ -1506,7 +1506,7 @@
 (insn 185 184 186 21 (set (reg/f:SI 165)
         (mem/u/c:SI (plus:SI (reg:SI 82)
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("jiffies") [flags 0x40]  <var_decl 0x75275b92f360 jiffies>)
+                            (symbol_ref:SI ("jiffies") [flags 0x40]  <var_decl 0x726d6e72f360 jiffies>)
                         ] UNSPEC_GOT))) [12  S4 A8])) "fs/file_dev.c":90:26 75 {*movsi_internal}
      (nil))
 (insn 186 185 187 21 (set (reg:SI 109 [ jiffies.17_27 ])
@@ -1550,7 +1550,7 @@
 (insn 192 191 193 21 (set (reg/f:SI 170)
         (mem/u/c:SI (plus:SI (reg:SI 82)
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("startup_time") [flags 0x40]  <var_decl 0x75275b92f3f0 startup_time>)
+                            (symbol_ref:SI ("startup_time") [flags 0x40]  <var_decl 0x726d6e72f3f0 startup_time>)
                         ] UNSPEC_GOT))) [12  S4 A8])) "fs/file_dev.c":90:26 75 {*movsi_internal}
      (nil))
 (insn 193 192 194 21 (set (reg:SI 111 [ startup_time.18_29 ])

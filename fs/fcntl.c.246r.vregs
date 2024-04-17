@@ -19,7 +19,7 @@
 (insn 10 9 11 4 (set (reg/f:SI 102)
         (mem/u/c:SI (plus:SI (reg:SI 82)
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("current") [flags 0x40]  <var_decl 0x7bd51e52e120 current>)
+                            (symbol_ref:SI ("current") [flags 0x40]  <var_decl 0x78a37732e120 current>)
                         ] UNSPEC_GOT))) [15  S4 A8])) "fs/fcntl.c":17:34 75 {*movsi_internal}
      (nil))
 (insn 11 10 12 4 (set (reg/f:SI 83 [ current.0_1 ])
@@ -98,7 +98,7 @@
 (insn 37 36 38 9 (set (reg/f:SI 105)
         (mem/u/c:SI (plus:SI (reg:SI 82)
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("current") [flags 0x40]  <var_decl 0x7bd51e52e120 current>)
+                            (symbol_ref:SI ("current") [flags 0x40]  <var_decl 0x78a37732e120 current>)
                         ] UNSPEC_GOT))) [15  S4 A8])) "fs/fcntl.c":22:20 75 {*movsi_internal}
      (nil))
 (insn 38 37 39 9 (set (reg/f:SI 85 [ current.1_3 ])
@@ -186,7 +186,7 @@
 (insn 71 70 72 15 (set (reg/f:SI 108)
         (mem/u/c:SI (plus:SI (reg:SI 82)
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("current") [flags 0x40]  <var_decl 0x7bd51e52e120 current>)
+                            (symbol_ref:SI ("current") [flags 0x40]  <var_decl 0x78a37732e120 current>)
                         ] UNSPEC_GOT))) [15  S4 A8])) "fs/fcntl.c":28:28 75 {*movsi_internal}
      (nil))
 (insn 72 71 73 15 (set (reg/f:SI 87 [ current.2_5 ])
@@ -219,7 +219,7 @@
 (insn 79 78 80 15 (set (reg/f:SI 111)
         (mem/u/c:SI (plus:SI (reg:SI 82)
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("current") [flags 0x40]  <var_decl 0x7bd51e52e120 current>)
+                            (symbol_ref:SI ("current") [flags 0x40]  <var_decl 0x78a37732e120 current>)
                         ] UNSPEC_GOT))) [15  S4 A8])) "fs/fcntl.c":28:28 75 {*movsi_internal}
      (nil))
 (insn 80 79 81 15 (set (reg/f:SI 92 [ current.3_10 ])
@@ -239,7 +239,7 @@
 (insn 83 82 84 15 (set (reg/f:SI 112)
         (mem/u/c:SI (plus:SI (reg:SI 82)
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("current") [flags 0x40]  <var_decl 0x7bd51e52e120 current>)
+                            (symbol_ref:SI ("current") [flags 0x40]  <var_decl 0x78a37732e120 current>)
                         ] UNSPEC_GOT))) [15  S4 A8])) "fs/fcntl.c":29:34 75 {*movsi_internal}
      (nil))
 (insn 84 83 85 15 (set (reg/f:SI 94 [ current.4_12 ])
@@ -248,7 +248,7 @@
 (insn 85 84 86 15 (set (reg/f:SI 113)
         (mem/u/c:SI (plus:SI (reg:SI 82)
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("current") [flags 0x40]  <var_decl 0x7bd51e52e120 current>)
+                            (symbol_ref:SI ("current") [flags 0x40]  <var_decl 0x78a37732e120 current>)
                         ] UNSPEC_GOT))) [15  S4 A8])) "fs/fcntl.c":29:13 75 {*movsi_internal}
      (nil))
 (insn 86 85 87 15 (set (reg/f:SI 95 [ current.5_13 ])
@@ -353,7 +353,7 @@
      (expr_list:REG_ARGS_SIZE (const_int 8 [0x8])
         (nil)))
 (call_insn 7 6 8 2 (set (reg:SI 0 ax)
-        (call (mem:QI (symbol_ref:SI ("dupfd") [flags 0x3]  <function_decl 0x7bd51e538900 dupfd>) [0 dupfd S1 A8])
+        (call (mem:QI (symbol_ref:SI ("dupfd") [flags 0x3]  <function_decl 0x78a377338900 dupfd>) [0 dupfd S1 A8])
             (const_int 8 [0x8]))) "fs/fcntl.c":35:12 823 {*call_value}
      (nil)
     (nil))
@@ -397,7 +397,7 @@
 (insn 10 9 11 4 (set (reg/f:SI 111)
         (mem/u/c:SI (plus:SI (reg:SI 82)
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("current") [flags 0x40]  <var_decl 0x7bd51e52e120 current>)
+                            (symbol_ref:SI ("current") [flags 0x40]  <var_decl 0x78a37732e120 current>)
                         ] UNSPEC_GOT))) [15  S4 A8])) "fs/fcntl.c":42:42 75 {*movsi_internal}
      (nil))
 (insn 11 10 12 4 (set (reg/f:SI 83 [ current.6_1 ])
@@ -520,7 +520,7 @@
      (expr_list:REG_ARGS_SIZE (const_int 8 [0x8])
         (nil)))
 (call_insn 41 40 42 8 (set (reg:SI 0 ax)
-        (call (mem:QI (symbol_ref:SI ("dupfd") [flags 0x3]  <function_decl 0x7bd51e538900 dupfd>) [0 dupfd S1 A8])
+        (call (mem:QI (symbol_ref:SI ("dupfd") [flags 0x3]  <function_decl 0x78a377338900 dupfd>) [0 dupfd S1 A8])
             (const_int 8 [0x8]))) "fs/fcntl.c":46:16 823 {*call_value}
      (nil)
     (nil))
@@ -545,7 +545,7 @@
 (insn 48 47 49 9 (set (reg/f:SI 119)
         (mem/u/c:SI (plus:SI (reg:SI 82)
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("current") [flags 0x40]  <var_decl 0x7bd51e52e120 current>)
+                            (symbol_ref:SI ("current") [flags 0x40]  <var_decl 0x78a37732e120 current>)
                         ] UNSPEC_GOT))) [15  S4 A8])) "fs/fcntl.c":48:24 75 {*movsi_internal}
      (nil))
 (insn 49 48 50 9 (set (reg/f:SI 84 [ current.7_2 ])
@@ -611,7 +611,7 @@
 (insn 64 63 65 11 (set (reg/f:SI 122)
         (mem/u/c:SI (plus:SI (reg:SI 82)
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("current") [flags 0x40]  <var_decl 0x7bd51e52e120 current>)
+                            (symbol_ref:SI ("current") [flags 0x40]  <var_decl 0x78a37732e120 current>)
                         ] UNSPEC_GOT))) [15  S4 A8])) "fs/fcntl.c":51:36 75 {*movsi_internal}
      (nil))
 (insn 65 64 66 11 (set (reg/f:SI 89 [ current.8_7 ])
@@ -640,7 +640,7 @@
 (insn 71 70 72 11 (set (reg/f:SI 125)
         (mem/u/c:SI (plus:SI (reg:SI 82)
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("current") [flags 0x40]  <var_decl 0x7bd51e52e120 current>)
+                            (symbol_ref:SI ("current") [flags 0x40]  <var_decl 0x78a37732e120 current>)
                         ] UNSPEC_GOT))) [15  S4 A8])) "fs/fcntl.c":51:36 75 {*movsi_internal}
      (nil))
 (insn 72 71 73 11 (set (reg/f:SI 93 [ current.9_11 ])
@@ -667,7 +667,7 @@
 (insn 79 78 80 12 (set (reg/f:SI 126)
         (mem/u/c:SI (plus:SI (reg:SI 82)
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("current") [flags 0x40]  <var_decl 0x7bd51e52e120 current>)
+                            (symbol_ref:SI ("current") [flags 0x40]  <var_decl 0x78a37732e120 current>)
                         ] UNSPEC_GOT))) [15  S4 A8])) "fs/fcntl.c":53:36 75 {*movsi_internal}
      (nil))
 (insn 80 79 81 12 (set (reg/f:SI 95 [ current.10_13 ])
@@ -699,7 +699,7 @@
 (insn 87 86 88 12 (set (reg/f:SI 129)
         (mem/u/c:SI (plus:SI (reg:SI 82)
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("current") [flags 0x40]  <var_decl 0x7bd51e52e120 current>)
+                            (symbol_ref:SI ("current") [flags 0x40]  <var_decl 0x78a37732e120 current>)
                         ] UNSPEC_GOT))) [15  S4 A8])) "fs/fcntl.c":53:36 75 {*movsi_internal}
      (nil))
 (insn 88 87 89 12 (set (reg/f:SI 100 [ current.11_18 ])
@@ -865,7 +865,7 @@
         (reg:SI 82)) "fs/fcntl.c":72:5 75 {*movsi_internal}
      (nil))
 (call_insn 9 8 10 2 (set (reg:SI 0 ax)
-        (call (mem:QI (symbol_ref:SI ("sys_close") [flags 0x41]  <function_decl 0x7bd51e538800 sys_close>) [0 sys_close S1 A8])
+        (call (mem:QI (symbol_ref:SI ("sys_close") [flags 0x41]  <function_decl 0x78a377338800 sys_close>) [0 sys_close S1 A8])
             (const_int 16 [0x10]))) "fs/fcntl.c":72:5 823 {*call_value}
      (nil)
     (expr_list (use (reg:SI 3 bx))
@@ -896,7 +896,7 @@
      (expr_list:REG_ARGS_SIZE (const_int 16 [0x10])
         (nil)))
 (call_insn 14 13 15 2 (set (reg:SI 0 ax)
-        (call (mem:QI (symbol_ref:SI ("dupfd") [flags 0x3]  <function_decl 0x7bd51e538900 dupfd>) [0 dupfd S1 A8])
+        (call (mem:QI (symbol_ref:SI ("dupfd") [flags 0x3]  <function_decl 0x78a377338900 dupfd>) [0 dupfd S1 A8])
             (const_int 16 [0x10]))) "fs/fcntl.c":73:12 823 {*call_value}
      (nil)
     (nil))

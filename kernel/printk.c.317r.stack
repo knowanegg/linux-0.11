@@ -76,9 +76,9 @@ Dataflow summary:
 (insn 11 10 12 2 (set (reg/f:SI 1 dx [87])
         (plus:SI (reg:SI 0 ax [82])
             (const:SI (unspec:SI [
-                        (symbol_ref:SI ("buf") [flags 0x2]  <var_decl 0x7726f96dab40 buf>)
+                        (symbol_ref:SI ("buf") [flags 0x2]  <var_decl 0x7fad098bbb40 buf>)
                     ] UNSPEC_GOTOFF)))) "kernel/printk.c":26:9 205 {*leasi}
-     (expr_list:REG_EQUAL (symbol_ref:SI ("buf") [flags 0x2]  <var_decl 0x7726f96dab40 buf>)
+     (expr_list:REG_EQUAL (symbol_ref:SI ("buf") [flags 0x2]  <var_decl 0x7fad098bbb40 buf>)
         (nil)))
 (insn 12 11 13 2 (set (mem/f:SI (pre_dec:SI (reg/f:SI 7 sp)) [1  S4 A32])
         (reg/f:SI 1 dx [87])) "kernel/printk.c":26:9 54 {*pushsi2}
@@ -88,7 +88,7 @@ Dataflow summary:
         (reg:SI 0 ax [82])) "kernel/printk.c":26:9 75 {*movsi_internal}
      (nil))
 (call_insn 14 13 15 2 (set (reg:SI 0 ax)
-        (call (mem:QI (symbol_ref:SI ("vsprintf") [flags 0x41]  <function_decl 0x7726f7cd2b00 vsprintf>) [0 vsprintf S1 A8])
+        (call (mem:QI (symbol_ref:SI ("vsprintf") [flags 0x41]  <function_decl 0x7fad07ed2b00 vsprintf>) [0 vsprintf S1 A8])
             (const_int 16 [0x10]))) "kernel/printk.c":26:9 823 {*call_value}
      (nil)
     (expr_list (use (reg:SI 3 bx))

@@ -45,7 +45,7 @@
         (reg:SI 82)) "fs/truncate.c":18:15 75 {*movsi_internal}
      (nil))
 (call_insn 16 15 17 5 (set (reg:SI 0 ax)
-        (call (mem:QI (symbol_ref:SI ("bread") [flags 0x41]  <function_decl 0x742679f15200 bread>) [0 bread S1 A8])
+        (call (mem:QI (symbol_ref:SI ("bread") [flags 0x41]  <function_decl 0x721b09115200 bread>) [0 bread S1 A8])
             (const_int 16 [0x10]))) "fs/truncate.c":18:15 823 {*call_value}
      (nil)
     (expr_list (use (reg:SI 3 bx))
@@ -148,7 +148,7 @@
 (insn 41 40 42 8 (set (reg:SI 3 bx)
         (reg:SI 82)) "fs/truncate.c":22:15 75 {*movsi_internal}
      (nil))
-(call_insn 42 41 43 8 (call (mem:QI (symbol_ref:SI ("free_block") [flags 0x41]  <function_decl 0x742679f15400 free_block>) [0 free_block S1 A8])
+(call_insn 42 41 43 8 (call (mem:QI (symbol_ref:SI ("free_block") [flags 0x41]  <function_decl 0x721b09115400 free_block>) [0 free_block S1 A8])
         (const_int 16 [0x10])) "fs/truncate.c":22:15 812 {*call}
      (nil)
     (expr_list (use (reg:SI 3 bx))
@@ -212,7 +212,7 @@
 (insn 58 57 59 11 (set (reg:SI 3 bx)
         (reg:SI 82)) "fs/truncate.c":23:9 75 {*movsi_internal}
      (nil))
-(call_insn 59 58 60 11 (call (mem:QI (symbol_ref:SI ("brelse") [flags 0x41]  <function_decl 0x742679f15300 brelse>) [0 brelse S1 A8])
+(call_insn 59 58 60 11 (call (mem:QI (symbol_ref:SI ("brelse") [flags 0x41]  <function_decl 0x721b09115300 brelse>) [0 brelse S1 A8])
         (const_int 16 [0x10])) "fs/truncate.c":23:9 812 {*call}
      (nil)
     (expr_list (use (reg:SI 3 bx))
@@ -247,7 +247,7 @@
 (insn 66 65 67 12 (set (reg:SI 3 bx)
         (reg:SI 82)) "fs/truncate.c":25:5 75 {*movsi_internal}
      (nil))
-(call_insn 67 66 68 12 (call (mem:QI (symbol_ref:SI ("free_block") [flags 0x41]  <function_decl 0x742679f15400 free_block>) [0 free_block S1 A8])
+(call_insn 67 66 68 12 (call (mem:QI (symbol_ref:SI ("free_block") [flags 0x41]  <function_decl 0x721b09115400 free_block>) [0 free_block S1 A8])
         (const_int 16 [0x10])) "fs/truncate.c":25:5 812 {*call}
      (nil)
     (expr_list (use (reg:SI 3 bx))
@@ -309,7 +309,7 @@
         (reg:SI 82)) "fs/truncate.c":36:15 75 {*movsi_internal}
      (nil))
 (call_insn 16 15 17 5 (set (reg:SI 0 ax)
-        (call (mem:QI (symbol_ref:SI ("bread") [flags 0x41]  <function_decl 0x742679f15200 bread>) [0 bread S1 A8])
+        (call (mem:QI (symbol_ref:SI ("bread") [flags 0x41]  <function_decl 0x721b09115200 bread>) [0 bread S1 A8])
             (const_int 16 [0x10]))) "fs/truncate.c":36:15 823 {*call_value}
      (nil)
     (expr_list (use (reg:SI 3 bx))
@@ -409,7 +409,7 @@
         (mem/c:SI (reg/f:SI 16 argp) [6 dev+0 S4 A32])) "fs/truncate.c":40:17 54 {*pushsi2}
      (expr_list:REG_ARGS_SIZE (const_int 16 [0x10])
         (nil)))
-(call_insn 41 40 42 8 (call (mem:QI (symbol_ref:SI ("free_ind") [flags 0x3]  <function_decl 0x742679f3a900 free_ind>) [0 free_ind S1 A8])
+(call_insn 41 40 42 8 (call (mem:QI (symbol_ref:SI ("free_ind") [flags 0x3]  <function_decl 0x721b0913a900 free_ind>) [0 free_ind S1 A8])
         (const_int 16 [0x10])) "fs/truncate.c":40:17 812 {*call}
      (nil)
     (nil))
@@ -472,7 +472,7 @@
 (insn 57 56 58 11 (set (reg:SI 3 bx)
         (reg:SI 82)) "fs/truncate.c":41:9 75 {*movsi_internal}
      (nil))
-(call_insn 58 57 59 11 (call (mem:QI (symbol_ref:SI ("brelse") [flags 0x41]  <function_decl 0x742679f15300 brelse>) [0 brelse S1 A8])
+(call_insn 58 57 59 11 (call (mem:QI (symbol_ref:SI ("brelse") [flags 0x41]  <function_decl 0x721b09115300 brelse>) [0 brelse S1 A8])
         (const_int 16 [0x10])) "fs/truncate.c":41:9 812 {*call}
      (nil)
     (expr_list (use (reg:SI 3 bx))
@@ -507,7 +507,7 @@
 (insn 65 64 66 12 (set (reg:SI 3 bx)
         (reg:SI 82)) "fs/truncate.c":43:5 75 {*movsi_internal}
      (nil))
-(call_insn 66 65 67 12 (call (mem:QI (symbol_ref:SI ("free_block") [flags 0x41]  <function_decl 0x742679f15400 free_block>) [0 free_block S1 A8])
+(call_insn 66 65 67 12 (call (mem:QI (symbol_ref:SI ("free_block") [flags 0x41]  <function_decl 0x721b09115400 free_block>) [0 free_block S1 A8])
         (const_int 16 [0x10])) "fs/truncate.c":43:5 812 {*call}
      (nil)
     (expr_list (use (reg:SI 3 bx))
@@ -672,7 +672,7 @@
 (insn 43 42 44 8 (set (reg:SI 3 bx)
         (reg:SI 82)) "fs/truncate.c":54:13 75 {*movsi_internal}
      (nil))
-(call_insn 44 43 45 8 (call (mem:QI (symbol_ref:SI ("free_block") [flags 0x41]  <function_decl 0x742679f15400 free_block>) [0 free_block S1 A8])
+(call_insn 44 43 45 8 (call (mem:QI (symbol_ref:SI ("free_block") [flags 0x41]  <function_decl 0x721b09115400 free_block>) [0 free_block S1 A8])
         (const_int 16 [0x10])) "fs/truncate.c":54:13 812 {*call}
      (nil)
     (expr_list (use (reg:SI 3 bx))
@@ -760,7 +760,7 @@
         (reg:SI 97 [ _15 ])) "fs/truncate.c":57:5 54 {*pushsi2}
      (expr_list:REG_ARGS_SIZE (const_int 16 [0x10])
         (nil)))
-(call_insn 69 68 70 11 (call (mem:QI (symbol_ref:SI ("free_ind") [flags 0x3]  <function_decl 0x742679f3a900 free_ind>) [0 free_ind S1 A8])
+(call_insn 69 68 70 11 (call (mem:QI (symbol_ref:SI ("free_ind") [flags 0x3]  <function_decl 0x721b0913a900 free_ind>) [0 free_ind S1 A8])
         (const_int 16 [0x10])) "fs/truncate.c":57:5 812 {*call}
      (nil)
     (nil))
@@ -808,7 +808,7 @@
         (reg:SI 101 [ _19 ])) "fs/truncate.c":58:5 54 {*pushsi2}
      (expr_list:REG_ARGS_SIZE (const_int 16 [0x10])
         (nil)))
-(call_insn 80 79 81 11 (call (mem:QI (symbol_ref:SI ("free_dind") [flags 0x3]  <function_decl 0x742679f3ab00 free_dind>) [0 free_dind S1 A8])
+(call_insn 80 79 81 11 (call (mem:QI (symbol_ref:SI ("free_dind") [flags 0x3]  <function_decl 0x721b0913ab00 free_dind>) [0 free_dind S1 A8])
         (const_int 16 [0x10])) "fs/truncate.c":58:5 812 {*call}
      (nil)
     (nil))
@@ -858,7 +858,7 @@
 (insn 92 91 93 11 (set (reg/f:SI 127)
         (mem/u/c:SI (plus:SI (reg:SI 82)
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("jiffies") [flags 0x40]  <var_decl 0x742679f34360 jiffies>)
+                            (symbol_ref:SI ("jiffies") [flags 0x40]  <var_decl 0x721b09134360 jiffies>)
                         ] UNSPEC_GOT))) [11  S4 A8])) "fs/truncate.c":62:39 75 {*movsi_internal}
      (nil))
 (insn 93 92 94 11 (set (reg:SI 103 [ jiffies.0_21 ])
@@ -902,7 +902,7 @@
 (insn 99 98 100 11 (set (reg/f:SI 132)
         (mem/u/c:SI (plus:SI (reg:SI 82)
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("startup_time") [flags 0x40]  <var_decl 0x742679f343f0 startup_time>)
+                            (symbol_ref:SI ("startup_time") [flags 0x40]  <var_decl 0x721b091343f0 startup_time>)
                         ] UNSPEC_GOT))) [11  S4 A8])) "fs/truncate.c":62:39 75 {*movsi_internal}
      (nil))
 (insn 100 99 101 11 (set (reg:SI 105 [ startup_time.1_23 ])

@@ -254,7 +254,7 @@ try_optimize_cfg iteration 1
 (insn 16 15 17 4 (set (reg:SI 3 bx)
         (reg:SI 82)) "fs/pipe.c":17:13 75 {*movsi_internal}
      (nil))
-(call_insn 17 16 18 4 (call (mem:QI (symbol_ref:SI ("wake_up") [flags 0x41]  <function_decl 0x709e81338400 wake_up>) [0 wake_up S1 A8])
+(call_insn 17 16 18 4 (call (mem:QI (symbol_ref:SI ("wake_up") [flags 0x41]  <function_decl 0x74b392f38400 wake_up>) [0 wake_up S1 A8])
         (const_int 16 [0x10])) "fs/pipe.c":17:13 812 {*call}
      (nil)
     (expr_list (use (reg:SI 3 bx))
@@ -321,7 +321,7 @@ try_optimize_cfg iteration 1
 (insn 33 32 34 6 (set (reg:SI 3 bx)
         (reg:SI 82)) "fs/pipe.c":20:13 75 {*movsi_internal}
      (nil))
-(call_insn 34 33 35 6 (call (mem:QI (symbol_ref:SI ("sleep_on") [flags 0x41]  <function_decl 0x709e81338000 sleep_on>) [0 sleep_on S1 A8])
+(call_insn 34 33 35 6 (call (mem:QI (symbol_ref:SI ("sleep_on") [flags 0x41]  <function_decl 0x74b392f38000 sleep_on>) [0 sleep_on S1 A8])
         (const_int 16 [0x10])) "fs/pipe.c":20:13 812 {*call}
      (nil)
     (expr_list (use (reg:SI 3 bx))
@@ -632,7 +632,7 @@ try_optimize_cfg iteration 1
         (reg:SI 105 [ _23 ])) "fs/pipe.c":33:13 54 {*pushsi2}
      (expr_list:REG_ARGS_SIZE (const_int 16 [0x10])
         (nil)))
-(call_insn 111 110 112 13 (call (mem:QI (symbol_ref:SI ("put_fs_byte") [flags 0x3]  <function_decl 0x709e81338f00 put_fs_byte>) [0 put_fs_byte S1 A8])
+(call_insn 111 110 112 13 (call (mem:QI (symbol_ref:SI ("put_fs_byte") [flags 0x3]  <function_decl 0x74b392f38f00 put_fs_byte>) [0 put_fs_byte S1 A8])
         (const_int 16 [0x10])) "fs/pipe.c":33:13 812 {*call}
      (nil)
     (nil))
@@ -717,7 +717,7 @@ try_optimize_cfg iteration 1
 (insn 135 134 136 16 (set (reg:SI 3 bx)
         (reg:SI 82)) "fs/pipe.c":35:5 75 {*movsi_internal}
      (nil))
-(call_insn 136 135 137 16 (call (mem:QI (symbol_ref:SI ("wake_up") [flags 0x41]  <function_decl 0x709e81338400 wake_up>) [0 wake_up S1 A8])
+(call_insn 136 135 137 16 (call (mem:QI (symbol_ref:SI ("wake_up") [flags 0x41]  <function_decl 0x74b392f38400 wake_up>) [0 wake_up S1 A8])
         (const_int 16 [0x10])) "fs/pipe.c":35:5 812 {*call}
      (nil)
     (expr_list (use (reg:SI 3 bx))
@@ -791,7 +791,7 @@ try_optimize_cfg iteration 1
 (insn 16 15 17 4 (set (reg:SI 3 bx)
         (reg:SI 82)) "fs/pipe.c":17:13 75 {*movsi_internal}
      (nil))
-(call_insn 17 16 18 4 (call (mem:QI (symbol_ref:SI ("wake_up") [flags 0x41]  <function_decl 0x709e81338400 wake_up>) [0 wake_up S1 A8])
+(call_insn 17 16 18 4 (call (mem:QI (symbol_ref:SI ("wake_up") [flags 0x41]  <function_decl 0x74b392f38400 wake_up>) [0 wake_up S1 A8])
         (const_int 16 [0x10])) "fs/pipe.c":17:13 812 {*call}
      (nil)
     (expr_list (use (reg:SI 3 bx))
@@ -857,7 +857,7 @@ try_optimize_cfg iteration 1
 (insn 33 32 34 6 (set (reg:SI 3 bx)
         (reg:SI 82)) "fs/pipe.c":20:13 75 {*movsi_internal}
      (nil))
-(call_insn 34 33 35 6 (call (mem:QI (symbol_ref:SI ("sleep_on") [flags 0x41]  <function_decl 0x709e81338000 sleep_on>) [0 sleep_on S1 A8])
+(call_insn 34 33 35 6 (call (mem:QI (symbol_ref:SI ("sleep_on") [flags 0x41]  <function_decl 0x74b392f38000 sleep_on>) [0 sleep_on S1 A8])
         (const_int 16 [0x10])) "fs/pipe.c":20:13 812 {*call}
      (nil)
     (expr_list (use (reg:SI 3 bx))
@@ -1162,7 +1162,7 @@ try_optimize_cfg iteration 1
         (reg:SI 105 [ _23 ])) "fs/pipe.c":33:13 54 {*pushsi2}
      (expr_list:REG_ARGS_SIZE (const_int 16 [0x10])
         (nil)))
-(call_insn 111 110 112 13 (call (mem:QI (symbol_ref:SI ("put_fs_byte") [flags 0x3]  <function_decl 0x709e81338f00 put_fs_byte>) [0 put_fs_byte S1 A8])
+(call_insn 111 110 112 13 (call (mem:QI (symbol_ref:SI ("put_fs_byte") [flags 0x3]  <function_decl 0x74b392f38f00 put_fs_byte>) [0 put_fs_byte S1 A8])
         (const_int 16 [0x10])) "fs/pipe.c":33:13 812 {*call}
      (nil)
     (nil))
@@ -1244,7 +1244,7 @@ try_optimize_cfg iteration 1
 (insn 135 134 136 16 (set (reg:SI 3 bx)
         (reg:SI 82)) "fs/pipe.c":35:5 75 {*movsi_internal}
      (nil))
-(call_insn 136 135 137 16 (call (mem:QI (symbol_ref:SI ("wake_up") [flags 0x41]  <function_decl 0x709e81338400 wake_up>) [0 wake_up S1 A8])
+(call_insn 136 135 137 16 (call (mem:QI (symbol_ref:SI ("wake_up") [flags 0x41]  <function_decl 0x74b392f38400 wake_up>) [0 wake_up S1 A8])
         (const_int 16 [0x10])) "fs/pipe.c":35:5 812 {*call}
      (nil)
     (expr_list (use (reg:SI 3 bx))
@@ -1316,7 +1316,7 @@ try_optimize_cfg iteration 1
 (insn 16 15 17 4 (set (reg:SI 3 bx)
         (reg:SI 82)) "fs/pipe.c":45:13 75 {*movsi_internal}
      (nil))
-(call_insn 17 16 18 4 (call (mem:QI (symbol_ref:SI ("wake_up") [flags 0x41]  <function_decl 0x709e81338400 wake_up>) [0 wake_up S1 A8])
+(call_insn 17 16 18 4 (call (mem:QI (symbol_ref:SI ("wake_up") [flags 0x41]  <function_decl 0x74b392f38400 wake_up>) [0 wake_up S1 A8])
         (const_int 16 [0x10])) "fs/pipe.c":45:13 812 {*call}
      (nil)
     (expr_list (use (reg:SI 3 bx))
@@ -1352,7 +1352,7 @@ try_optimize_cfg iteration 1
 (insn 24 23 25 5 (set (reg/f:SI 117)
         (mem/u/c:SI (plus:SI (reg:SI 82)
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("current") [flags 0x40]  <var_decl 0x709e8132f120 current>)
+                            (symbol_ref:SI ("current") [flags 0x40]  <var_decl 0x74b392f2f120 current>)
                         ] UNSPEC_GOT))) [19  S4 A8])) "fs/pipe.c":47:33 75 {*movsi_internal}
      (nil))
 (insn 25 24 26 5 (set (reg/f:SI 85 [ current.4_3 ])
@@ -1365,7 +1365,7 @@ try_optimize_cfg iteration 1
 (insn 27 26 28 5 (set (reg/f:SI 118)
         (mem/u/c:SI (plus:SI (reg:SI 82)
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("current") [flags 0x40]  <var_decl 0x709e8132f120 current>)
+                            (symbol_ref:SI ("current") [flags 0x40]  <var_decl 0x74b392f2f120 current>)
                         ] UNSPEC_GOT))) [19  S4 A8])) "fs/pipe.c":47:33 75 {*movsi_internal}
      (nil))
 (insn 28 27 29 5 (set (reg/f:SI 87 [ current.5_5 ])
@@ -1436,7 +1436,7 @@ try_optimize_cfg iteration 1
 (insn 50 49 51 8 (set (reg:SI 3 bx)
         (reg:SI 82)) "fs/pipe.c":50:13 75 {*movsi_internal}
      (nil))
-(call_insn 51 50 52 8 (call (mem:QI (symbol_ref:SI ("sleep_on") [flags 0x41]  <function_decl 0x709e81338000 sleep_on>) [0 sleep_on S1 A8])
+(call_insn 51 50 52 8 (call (mem:QI (symbol_ref:SI ("sleep_on") [flags 0x41]  <function_decl 0x74b392f38000 sleep_on>) [0 sleep_on S1 A8])
         (const_int 16 [0x10])) "fs/pipe.c":50:13 812 {*call}
      (nil)
     (expr_list (use (reg:SI 3 bx))
@@ -1706,7 +1706,7 @@ try_optimize_cfg iteration 1
      (expr_list:REG_ARGS_SIZE (const_int 16 [0x10])
         (nil)))
 (call_insn 118 117 119 15 (set (reg:QI 0 ax)
-        (call (mem:QI (symbol_ref:SI ("get_fs_byte") [flags 0x3]  <function_decl 0x709e81338d00 get_fs_byte>) [0 get_fs_byte S1 A8])
+        (call (mem:QI (symbol_ref:SI ("get_fs_byte") [flags 0x3]  <function_decl 0x74b392f38d00 get_fs_byte>) [0 get_fs_byte S1 A8])
             (const_int 16 [0x10]))) "fs/pipe.c":63:47 823 {*call_value}
      (nil)
     (nil))
@@ -1835,7 +1835,7 @@ try_optimize_cfg iteration 1
 (insn 153 152 154 18 (set (reg:SI 3 bx)
         (reg:SI 82)) "fs/pipe.c":65:5 75 {*movsi_internal}
      (nil))
-(call_insn 154 153 155 18 (call (mem:QI (symbol_ref:SI ("wake_up") [flags 0x41]  <function_decl 0x709e81338400 wake_up>) [0 wake_up S1 A8])
+(call_insn 154 153 155 18 (call (mem:QI (symbol_ref:SI ("wake_up") [flags 0x41]  <function_decl 0x74b392f38400 wake_up>) [0 wake_up S1 A8])
         (const_int 16 [0x10])) "fs/pipe.c":65:5 812 {*call}
      (nil)
     (expr_list (use (reg:SI 3 bx))
@@ -1909,7 +1909,7 @@ try_optimize_cfg iteration 1
 (insn 16 15 17 4 (set (reg:SI 3 bx)
         (reg:SI 82)) "fs/pipe.c":45:13 75 {*movsi_internal}
      (nil))
-(call_insn 17 16 18 4 (call (mem:QI (symbol_ref:SI ("wake_up") [flags 0x41]  <function_decl 0x709e81338400 wake_up>) [0 wake_up S1 A8])
+(call_insn 17 16 18 4 (call (mem:QI (symbol_ref:SI ("wake_up") [flags 0x41]  <function_decl 0x74b392f38400 wake_up>) [0 wake_up S1 A8])
         (const_int 16 [0x10])) "fs/pipe.c":45:13 812 {*call}
      (nil)
     (expr_list (use (reg:SI 3 bx))
@@ -1944,7 +1944,7 @@ try_optimize_cfg iteration 1
 (insn 24 23 25 5 (set (reg/f:SI 117)
         (mem/u/c:SI (plus:SI (reg:SI 82)
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("current") [flags 0x40]  <var_decl 0x709e8132f120 current>)
+                            (symbol_ref:SI ("current") [flags 0x40]  <var_decl 0x74b392f2f120 current>)
                         ] UNSPEC_GOT))) [19  S4 A8])) "fs/pipe.c":47:33 75 {*movsi_internal}
      (nil))
 (insn 25 24 26 5 (set (reg/f:SI 85 [ current.4_3 ])
@@ -1957,7 +1957,7 @@ try_optimize_cfg iteration 1
 (insn 27 26 28 5 (set (reg/f:SI 118)
         (mem/u/c:SI (plus:SI (reg:SI 82)
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("current") [flags 0x40]  <var_decl 0x709e8132f120 current>)
+                            (symbol_ref:SI ("current") [flags 0x40]  <var_decl 0x74b392f2f120 current>)
                         ] UNSPEC_GOT))) [19  S4 A8])) "fs/pipe.c":47:33 75 {*movsi_internal}
      (nil))
 (insn 28 27 29 5 (set (reg/f:SI 87 [ current.5_5 ])
@@ -2027,7 +2027,7 @@ try_optimize_cfg iteration 1
 (insn 50 49 51 8 (set (reg:SI 3 bx)
         (reg:SI 82)) "fs/pipe.c":50:13 75 {*movsi_internal}
      (nil))
-(call_insn 51 50 52 8 (call (mem:QI (symbol_ref:SI ("sleep_on") [flags 0x41]  <function_decl 0x709e81338000 sleep_on>) [0 sleep_on S1 A8])
+(call_insn 51 50 52 8 (call (mem:QI (symbol_ref:SI ("sleep_on") [flags 0x41]  <function_decl 0x74b392f38000 sleep_on>) [0 sleep_on S1 A8])
         (const_int 16 [0x10])) "fs/pipe.c":50:13 812 {*call}
      (nil)
     (expr_list (use (reg:SI 3 bx))
@@ -2291,7 +2291,7 @@ try_optimize_cfg iteration 1
      (expr_list:REG_ARGS_SIZE (const_int 16 [0x10])
         (nil)))
 (call_insn 118 117 119 15 (set (reg:QI 0 ax)
-        (call (mem:QI (symbol_ref:SI ("get_fs_byte") [flags 0x3]  <function_decl 0x709e81338d00 get_fs_byte>) [0 get_fs_byte S1 A8])
+        (call (mem:QI (symbol_ref:SI ("get_fs_byte") [flags 0x3]  <function_decl 0x74b392f38d00 get_fs_byte>) [0 get_fs_byte S1 A8])
             (const_int 16 [0x10]))) "fs/pipe.c":63:47 823 {*call_value}
      (nil)
     (nil))
@@ -2417,7 +2417,7 @@ try_optimize_cfg iteration 1
 (insn 153 152 154 18 (set (reg:SI 3 bx)
         (reg:SI 82)) "fs/pipe.c":65:5 75 {*movsi_internal}
      (nil))
-(call_insn 154 153 155 18 (call (mem:QI (symbol_ref:SI ("wake_up") [flags 0x41]  <function_decl 0x709e81338400 wake_up>) [0 wake_up S1 A8])
+(call_insn 154 153 155 18 (call (mem:QI (symbol_ref:SI ("wake_up") [flags 0x41]  <function_decl 0x74b392f38400 wake_up>) [0 wake_up S1 A8])
         (const_int 16 [0x10])) "fs/pipe.c":65:5 812 {*call}
      (nil)
     (expr_list (use (reg:SI 3 bx))
@@ -2466,7 +2466,7 @@ try_optimize_cfg iteration 1
 (insn 10 9 11 3 (set (reg/f:SI 125)
         (mem/u/c:SI (plus:SI (reg:SI 82)
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("file_table") [flags 0x40]  <var_decl 0x709e82ca1d80 file_table>)
+                            (symbol_ref:SI ("file_table") [flags 0x40]  <var_decl 0x74b3948c2d80 file_table>)
                         ] UNSPEC_GOT))) [19  S4 A8])) "fs/pipe.c":78:27 75 {*movsi_internal}
      (nil))
 (insn 11 10 12 3 (set (reg:SI 126)
@@ -2539,12 +2539,12 @@ try_optimize_cfg iteration 1
 (insn 24 23 25 4 (set (reg:SI 132)
         (mem/u/c:SI (plus:SI (reg:SI 82)
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("file_table") [flags 0x40]  <var_decl 0x709e82ca1d80 file_table>)
+                            (symbol_ref:SI ("file_table") [flags 0x40]  <var_decl 0x74b3948c2d80 file_table>)
                         ] UNSPEC_GOT))) [19  S4 A8])) "fs/pipe.c":79:25 75 {*movsi_internal}
      (nil))
 (insn 25 24 26 4 (set (reg:SI 131)
         (reg:SI 132)) "fs/pipe.c":79:25 75 {*movsi_internal}
-     (expr_list:REG_EQUAL (symbol_ref:SI ("file_table") [flags 0x40]  <var_decl 0x709e82ca1d80 file_table>)
+     (expr_list:REG_EQUAL (symbol_ref:SI ("file_table") [flags 0x40]  <var_decl 0x74b3948c2d80 file_table>)
         (nil)))
 (insn 26 25 27 4 (parallel [
             (set (reg/f:SI 87 [ _5 ])
@@ -2683,7 +2683,7 @@ try_optimize_cfg iteration 1
 (insn 71 70 72 13 (set (reg/f:SI 133)
         (mem/u/c:SI (plus:SI (reg:SI 82)
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("current") [flags 0x40]  <var_decl 0x709e8132f120 current>)
+                            (symbol_ref:SI ("current") [flags 0x40]  <var_decl 0x74b392f2f120 current>)
                         ] UNSPEC_GOT))) [19  S4 A8])) "fs/pipe.c":86:21 75 {*movsi_internal}
      (nil))
 (insn 72 71 73 13 (set (reg/f:SI 92 [ current.13_11 ])
@@ -2724,7 +2724,7 @@ try_optimize_cfg iteration 1
 (insn 79 78 80 14 (set (reg/f:SI 136)
         (mem/u/c:SI (plus:SI (reg:SI 82)
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("current") [flags 0x40]  <var_decl 0x709e8132f120 current>)
+                            (symbol_ref:SI ("current") [flags 0x40]  <var_decl 0x74b392f2f120 current>)
                         ] UNSPEC_GOT))) [19  S4 A8])) "fs/pipe.c":87:20 75 {*movsi_internal}
      (nil))
 (insn 80 79 81 14 (set (reg/f:SI 94 [ current.14_13 ])
@@ -2846,7 +2846,7 @@ try_optimize_cfg iteration 1
 (insn 111 110 112 19 (set (reg/f:SI 142)
         (mem/u/c:SI (plus:SI (reg:SI 82)
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("current") [flags 0x40]  <var_decl 0x709e8132f120 current>)
+                            (symbol_ref:SI ("current") [flags 0x40]  <var_decl 0x74b392f2f120 current>)
                         ] UNSPEC_GOT))) [19  S4 A8])) "fs/pipe.c":91:16 75 {*movsi_internal}
      (nil))
 (insn 112 111 113 19 (set (reg/f:SI 97 [ current.15_16 ])
@@ -2915,7 +2915,7 @@ try_optimize_cfg iteration 1
         (reg:SI 82)) "fs/pipe.c":96:19 75 {*movsi_internal}
      (nil))
 (call_insn 134 133 135 22 (set (reg:SI 0 ax)
-        (call (mem:QI (symbol_ref:SI ("get_pipe_inode") [flags 0x41]  <function_decl 0x709e81316b00 get_pipe_inode>) [0 get_pipe_inode S1 A8])
+        (call (mem:QI (symbol_ref:SI ("get_pipe_inode") [flags 0x41]  <function_decl 0x74b392f16b00 get_pipe_inode>) [0 get_pipe_inode S1 A8])
             (const_int 0 [0]))) "fs/pipe.c":96:19 823 {*call_value}
      (nil)
     (expr_list (use (reg:SI 3 bx))
@@ -2944,7 +2944,7 @@ try_optimize_cfg iteration 1
 (insn 140 139 141 23 (set (reg/f:SI 145)
         (mem/u/c:SI (plus:SI (reg:SI 82)
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("current") [flags 0x40]  <var_decl 0x709e8132f120 current>)
+                            (symbol_ref:SI ("current") [flags 0x40]  <var_decl 0x74b392f2f120 current>)
                         ] UNSPEC_GOT))) [19  S4 A8])) "fs/pipe.c":98:20 75 {*movsi_internal}
      (nil))
 (insn 141 140 142 23 (set (reg/f:SI 102 [ current.16_21 ])
@@ -2969,7 +2969,7 @@ try_optimize_cfg iteration 1
 (insn 145 144 146 23 (set (reg/f:SI 147)
         (mem/u/c:SI (plus:SI (reg:SI 82)
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("current") [flags 0x40]  <var_decl 0x709e8132f120 current>)
+                            (symbol_ref:SI ("current") [flags 0x40]  <var_decl 0x74b392f2f120 current>)
                         ] UNSPEC_GOT))) [19  S4 A8])) "fs/pipe.c":97:16 75 {*movsi_internal}
      (nil))
 (insn 146 145 147 23 (set (reg/f:SI 104 [ current.17_23 ])
@@ -3110,7 +3110,7 @@ try_optimize_cfg iteration 1
         (reg:SI 119 [ _38 ])) "fs/pipe.c":106:5 54 {*pushsi2}
      (expr_list:REG_ARGS_SIZE (const_int 16 [0x10])
         (nil)))
-(call_insn 182 181 183 24 (call (mem:QI (symbol_ref:SI ("put_fs_long") [flags 0x3]  <function_decl 0x709e8133a100 put_fs_long>) [0 put_fs_long S1 A8])
+(call_insn 182 181 183 24 (call (mem:QI (symbol_ref:SI ("put_fs_long") [flags 0x3]  <function_decl 0x74b392f3a100 put_fs_long>) [0 put_fs_long S1 A8])
         (const_int 16 [0x10])) "fs/pipe.c":106:5 812 {*call}
      (nil)
     (nil))
@@ -3157,7 +3157,7 @@ try_optimize_cfg iteration 1
         (reg:SI 122 [ _41 ])) "fs/pipe.c":107:5 54 {*pushsi2}
      (expr_list:REG_ARGS_SIZE (const_int 16 [0x10])
         (nil)))
-(call_insn 191 190 192 24 (call (mem:QI (symbol_ref:SI ("put_fs_long") [flags 0x3]  <function_decl 0x709e8133a100 put_fs_long>) [0 put_fs_long S1 A8])
+(call_insn 191 190 192 24 (call (mem:QI (symbol_ref:SI ("put_fs_long") [flags 0x3]  <function_decl 0x74b392f3a100 put_fs_long>) [0 put_fs_long S1 A8])
         (const_int 16 [0x10])) "fs/pipe.c":107:5 812 {*call}
      (nil)
     (nil))
@@ -3206,7 +3206,7 @@ try_optimize_cfg iteration 1
 (insn 10 9 11 3 (set (reg/f:SI 125)
         (mem/u/c:SI (plus:SI (reg:SI 82)
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("file_table") [flags 0x40]  <var_decl 0x709e82ca1d80 file_table>)
+                            (symbol_ref:SI ("file_table") [flags 0x40]  <var_decl 0x74b3948c2d80 file_table>)
                         ] UNSPEC_GOT))) [19  S4 A8])) "fs/pipe.c":78:27 75 {*movsi_internal}
      (nil))
 (insn 11 10 12 3 (set (reg:SI 126)
@@ -3278,12 +3278,12 @@ try_optimize_cfg iteration 1
 (insn 24 23 25 4 (set (reg:SI 132)
         (mem/u/c:SI (plus:SI (reg:SI 82)
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("file_table") [flags 0x40]  <var_decl 0x709e82ca1d80 file_table>)
+                            (symbol_ref:SI ("file_table") [flags 0x40]  <var_decl 0x74b3948c2d80 file_table>)
                         ] UNSPEC_GOT))) [19  S4 A8])) "fs/pipe.c":79:25 75 {*movsi_internal}
      (nil))
 (insn 25 24 26 4 (set (reg:SI 131)
         (reg:SI 132)) "fs/pipe.c":79:25 75 {*movsi_internal}
-     (expr_list:REG_EQUAL (symbol_ref:SI ("file_table") [flags 0x40]  <var_decl 0x709e82ca1d80 file_table>)
+     (expr_list:REG_EQUAL (symbol_ref:SI ("file_table") [flags 0x40]  <var_decl 0x74b3948c2d80 file_table>)
         (nil)))
 (insn 26 25 27 4 (parallel [
             (set (reg/f:SI 87 [ _5 ])
@@ -3415,7 +3415,7 @@ try_optimize_cfg iteration 1
 (insn 71 70 72 13 (set (reg/f:SI 133)
         (mem/u/c:SI (plus:SI (reg:SI 82)
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("current") [flags 0x40]  <var_decl 0x709e8132f120 current>)
+                            (symbol_ref:SI ("current") [flags 0x40]  <var_decl 0x74b392f2f120 current>)
                         ] UNSPEC_GOT))) [19  S4 A8])) "fs/pipe.c":86:21 75 {*movsi_internal}
      (nil))
 (insn 72 71 73 13 (set (reg/f:SI 92 [ current.13_11 ])
@@ -3455,7 +3455,7 @@ try_optimize_cfg iteration 1
 (insn 79 78 80 14 (set (reg/f:SI 136)
         (mem/u/c:SI (plus:SI (reg:SI 82)
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("current") [flags 0x40]  <var_decl 0x709e8132f120 current>)
+                            (symbol_ref:SI ("current") [flags 0x40]  <var_decl 0x74b392f2f120 current>)
                         ] UNSPEC_GOT))) [19  S4 A8])) "fs/pipe.c":87:20 75 {*movsi_internal}
      (nil))
 (insn 80 79 81 14 (set (reg/f:SI 94 [ current.14_13 ])
@@ -3572,7 +3572,7 @@ try_optimize_cfg iteration 1
 (insn 111 110 112 19 (set (reg/f:SI 142)
         (mem/u/c:SI (plus:SI (reg:SI 82)
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("current") [flags 0x40]  <var_decl 0x709e8132f120 current>)
+                            (symbol_ref:SI ("current") [flags 0x40]  <var_decl 0x74b392f2f120 current>)
                         ] UNSPEC_GOT))) [19  S4 A8])) "fs/pipe.c":91:16 75 {*movsi_internal}
      (nil))
 (insn 112 111 113 19 (set (reg/f:SI 97 [ current.15_16 ])
@@ -3639,7 +3639,7 @@ try_optimize_cfg iteration 1
         (reg:SI 82)) "fs/pipe.c":96:19 75 {*movsi_internal}
      (nil))
 (call_insn 134 133 135 22 (set (reg:SI 0 ax)
-        (call (mem:QI (symbol_ref:SI ("get_pipe_inode") [flags 0x41]  <function_decl 0x709e81316b00 get_pipe_inode>) [0 get_pipe_inode S1 A8])
+        (call (mem:QI (symbol_ref:SI ("get_pipe_inode") [flags 0x41]  <function_decl 0x74b392f16b00 get_pipe_inode>) [0 get_pipe_inode S1 A8])
             (const_int 0 [0]))) "fs/pipe.c":96:19 823 {*call_value}
      (nil)
     (expr_list (use (reg:SI 3 bx))
@@ -3667,7 +3667,7 @@ try_optimize_cfg iteration 1
 (insn 140 139 141 23 (set (reg/f:SI 145)
         (mem/u/c:SI (plus:SI (reg:SI 82)
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("current") [flags 0x40]  <var_decl 0x709e8132f120 current>)
+                            (symbol_ref:SI ("current") [flags 0x40]  <var_decl 0x74b392f2f120 current>)
                         ] UNSPEC_GOT))) [19  S4 A8])) "fs/pipe.c":98:20 75 {*movsi_internal}
      (nil))
 (insn 141 140 142 23 (set (reg/f:SI 102 [ current.16_21 ])
@@ -3692,7 +3692,7 @@ try_optimize_cfg iteration 1
 (insn 145 144 146 23 (set (reg/f:SI 147)
         (mem/u/c:SI (plus:SI (reg:SI 82)
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("current") [flags 0x40]  <var_decl 0x709e8132f120 current>)
+                            (symbol_ref:SI ("current") [flags 0x40]  <var_decl 0x74b392f2f120 current>)
                         ] UNSPEC_GOT))) [19  S4 A8])) "fs/pipe.c":97:16 75 {*movsi_internal}
      (nil))
 (insn 146 145 147 23 (set (reg/f:SI 104 [ current.17_23 ])
@@ -3833,7 +3833,7 @@ try_optimize_cfg iteration 1
         (reg:SI 119 [ _38 ])) "fs/pipe.c":106:5 54 {*pushsi2}
      (expr_list:REG_ARGS_SIZE (const_int 16 [0x10])
         (nil)))
-(call_insn 182 181 183 24 (call (mem:QI (symbol_ref:SI ("put_fs_long") [flags 0x3]  <function_decl 0x709e8133a100 put_fs_long>) [0 put_fs_long S1 A8])
+(call_insn 182 181 183 24 (call (mem:QI (symbol_ref:SI ("put_fs_long") [flags 0x3]  <function_decl 0x74b392f3a100 put_fs_long>) [0 put_fs_long S1 A8])
         (const_int 16 [0x10])) "fs/pipe.c":106:5 812 {*call}
      (nil)
     (nil))
@@ -3880,7 +3880,7 @@ try_optimize_cfg iteration 1
         (reg:SI 122 [ _41 ])) "fs/pipe.c":107:5 54 {*pushsi2}
      (expr_list:REG_ARGS_SIZE (const_int 16 [0x10])
         (nil)))
-(call_insn 191 190 192 24 (call (mem:QI (symbol_ref:SI ("put_fs_long") [flags 0x3]  <function_decl 0x709e8133a100 put_fs_long>) [0 put_fs_long S1 A8])
+(call_insn 191 190 192 24 (call (mem:QI (symbol_ref:SI ("put_fs_long") [flags 0x3]  <function_decl 0x74b392f3a100 put_fs_long>) [0 put_fs_long S1 A8])
         (const_int 16 [0x10])) "fs/pipe.c":107:5 812 {*call}
      (nil)
     (nil))
