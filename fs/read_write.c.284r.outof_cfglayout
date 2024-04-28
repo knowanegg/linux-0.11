@@ -56,7 +56,7 @@ Reordered sequence:
 (insn 15 14 16 4 (set (reg/f:SI 118)
         (mem/u/c:SI (plus:SI (reg:SI 82)
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("current") [flags 0x40]  <var_decl 0x7f8c22b2e120 current>)
+                            (symbol_ref:SI ("current") [flags 0x40]  <var_decl 0x7b72ec12e120 current>)
                         ] UNSPEC_GOT))) [9  S4 A8])) "fs/read_write.c":25:55 75 {*movsi_internal}
      (nil))
 (insn 16 15 17 4 (set (reg/f:SI 83 [ current.0_1 ])
@@ -151,7 +151,7 @@ Reordered sequence:
 (insn 41 40 42 8 (set (reg:SI 3 bx)
         (reg:SI 82)) "fs/read_write.c":29:5 75 {*movsi_internal}
      (nil))
-(call_insn 42 41 43 8 (call (mem:QI (symbol_ref:SI ("verify_area") [flags 0x41]  <function_decl 0x7f8c22b38500 verify_area>) [0 verify_area S1 A8])
+(call_insn 42 41 43 8 (call (mem:QI (symbol_ref:SI ("verify_area") [flags 0x41]  <function_decl 0x7b72ec138500 verify_area>) [0 verify_area S1 A8])
         (const_int 16 [0x10])) "fs/read_write.c":29:5 812 {*call}
      (nil)
     (expr_list (use (reg:SI 3 bx))
@@ -252,7 +252,7 @@ Reordered sequence:
         (reg:SI 82)) "fs/read_write.c":32:37 75 {*movsi_internal}
      (nil))
 (call_insn 64 63 65 10 (set (reg:SI 0 ax)
-        (call (mem:QI (symbol_ref:SI ("read_pipe") [flags 0x41]  <function_decl 0x7f8c22b38d00 read_pipe>) [0 read_pipe S1 A8])
+        (call (mem:QI (symbol_ref:SI ("read_pipe") [flags 0x41]  <function_decl 0x7b72ec138d00 read_pipe>) [0 read_pipe S1 A8])
             (const_int 16 [0x10]))) "fs/read_write.c":32:37 823 {*call_value}
      (nil)
     (expr_list (use (reg:SI 3 bx))
@@ -373,7 +373,7 @@ Reordered sequence:
         (reg:SI 82)) "fs/read_write.c":34:16 75 {*movsi_internal}
      (nil))
 (call_insn 97 96 98 13 (set (reg:SI 0 ax)
-        (call (mem:QI (symbol_ref:SI ("rw_char") [flags 0x41]  <function_decl 0x7f8c22b38e00 rw_char>) [0 rw_char S1 A8])
+        (call (mem:QI (symbol_ref:SI ("rw_char") [flags 0x41]  <function_decl 0x7b72ec138e00 rw_char>) [0 rw_char S1 A8])
             (const_int 32 [0x20]))) "fs/read_write.c":34:16 823 {*call_value}
      (nil)
     (expr_list (use (reg:SI 3 bx))
@@ -472,7 +472,7 @@ Reordered sequence:
         (reg:SI 82)) "fs/read_write.c":36:16 75 {*movsi_internal}
      (nil))
 (call_insn 121 120 122 15 (set (reg:SI 0 ax)
-        (call (mem:QI (symbol_ref:SI ("block_read") [flags 0x41]  <function_decl 0x7f8c22b38a00 block_read>) [0 block_read S1 A8])
+        (call (mem:QI (symbol_ref:SI ("block_read") [flags 0x41]  <function_decl 0x7b72ec138a00 block_read>) [0 block_read S1 A8])
             (const_int 16 [0x10]))) "fs/read_write.c":36:16 823 {*call_value}
      (nil)
     (expr_list (use (reg:SI 3 bx))
@@ -678,7 +678,7 @@ Reordered sequence:
         (reg:SI 82)) "fs/read_write.c":43:16 75 {*movsi_internal}
      (nil))
 (call_insn 177 176 178 22 (set (reg:SI 0 ax)
-        (call (mem:QI (symbol_ref:SI ("file_read") [flags 0x41]  <function_decl 0x7f8c22b38f00 file_read>) [0 file_read S1 A8])
+        (call (mem:QI (symbol_ref:SI ("file_read") [flags 0x41]  <function_decl 0x7b72ec138f00 file_read>) [0 file_read S1 A8])
             (const_int 16 [0x10]))) "fs/read_write.c":43:16 823 {*call_value}
      (nil)
     (expr_list (use (reg:SI 3 bx))
@@ -726,9 +726,9 @@ Reordered sequence:
 (insn 189 188 190 23 (set (reg/f:SI 140)
         (plus:SI (reg:SI 82)
             (const:SI (unspec:SI [
-                        (symbol_ref/f:SI ("*.LC0") [flags 0x2]  <var_decl 0x7f8c22b2e2d0 *.LC0>)
+                        (symbol_ref/f:SI ("*.LC0") [flags 0x2]  <var_decl 0x7b72ec12e2d0 *.LC0>)
                     ] UNSPEC_GOTOFF)))) "fs/read_write.c":45:5 205 {*leasi}
-     (expr_list:REG_EQUAL (symbol_ref/f:SI ("*.LC0") [flags 0x2]  <var_decl 0x7f8c22b2e2d0 *.LC0>)
+     (expr_list:REG_EQUAL (symbol_ref/f:SI ("*.LC0") [flags 0x2]  <var_decl 0x7b72ec12e2d0 *.LC0>)
         (nil)))
 (insn 190 189 191 23 (set (mem/f:SI (pre_dec:SI (reg/f:SI 7 sp)) [7  S4 A32])
         (reg/f:SI 140)) "fs/read_write.c":45:5 54 {*pushsi2}
@@ -738,7 +738,7 @@ Reordered sequence:
         (reg:SI 82)) "fs/read_write.c":45:5 75 {*movsi_internal}
      (nil))
 (call_insn 192 191 193 23 (set (reg:SI 0 ax)
-        (call (mem:QI (symbol_ref:SI ("printk") [flags 0x41]  <function_decl 0x7f8c22b38900 printk>) [0 printk S1 A8])
+        (call (mem:QI (symbol_ref:SI ("printk") [flags 0x41]  <function_decl 0x7b72ec138900 printk>) [0 printk S1 A8])
             (const_int 16 [0x10]))) "fs/read_write.c":45:5 823 {*call_value}
      (nil)
     (expr_list (use (reg:SI 3 bx))
@@ -811,7 +811,7 @@ Reordered sequence:
 (insn 10 9 11 3 (set (reg/f:SI 103)
         (mem/u/c:SI (plus:SI (reg:SI 82)
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("current") [flags 0x40]  <var_decl 0x7f8c22b2e120 current>)
+                            (symbol_ref:SI ("current") [flags 0x40]  <var_decl 0x7b72ec12e120 current>)
                         ] UNSPEC_GOT))) [9  S4 A8])) "fs/read_write.c":54:42 75 {*movsi_internal}
      (nil))
 (insn 11 10 12 3 (set (reg/f:SI 83 [ current.2_1 ])
@@ -1310,7 +1310,7 @@ Reordered sequence:
 (insn 15 14 16 4 (set (reg/f:SI 107)
         (mem/u/c:SI (plus:SI (reg:SI 82)
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("current") [flags 0x40]  <var_decl 0x7f8c22b2e120 current>)
+                            (symbol_ref:SI ("current") [flags 0x40]  <var_decl 0x7b72ec12e120 current>)
                         ] UNSPEC_GOT))) [9  S4 A8])) "fs/read_write.c":86:55 75 {*movsi_internal}
      (nil))
 (insn 16 15 17 4 (set (reg/f:SI 83 [ current.4_1 ])
@@ -1472,7 +1472,7 @@ Reordered sequence:
         (reg:SI 82)) "fs/read_write.c":92:37 75 {*movsi_internal}
      (nil))
 (call_insn 58 57 59 10 (set (reg:SI 0 ax)
-        (call (mem:QI (symbol_ref:SI ("write_pipe") [flags 0x41]  <function_decl 0x7f8c22b10100 write_pipe>) [0 write_pipe S1 A8])
+        (call (mem:QI (symbol_ref:SI ("write_pipe") [flags 0x41]  <function_decl 0x7b72ec110100 write_pipe>) [0 write_pipe S1 A8])
             (const_int 16 [0x10]))) "fs/read_write.c":92:37 823 {*call_value}
      (nil)
     (expr_list (use (reg:SI 3 bx))
@@ -1593,7 +1593,7 @@ Reordered sequence:
         (reg:SI 82)) "fs/read_write.c":94:16 75 {*movsi_internal}
      (nil))
 (call_insn 91 90 92 13 (set (reg:SI 0 ax)
-        (call (mem:QI (symbol_ref:SI ("rw_char") [flags 0x41]  <function_decl 0x7f8c22b38e00 rw_char>) [0 rw_char S1 A8])
+        (call (mem:QI (symbol_ref:SI ("rw_char") [flags 0x41]  <function_decl 0x7b72ec138e00 rw_char>) [0 rw_char S1 A8])
             (const_int 32 [0x20]))) "fs/read_write.c":94:16 823 {*call_value}
      (nil)
     (expr_list (use (reg:SI 3 bx))
@@ -1692,7 +1692,7 @@ Reordered sequence:
         (reg:SI 82)) "fs/read_write.c":96:16 75 {*movsi_internal}
      (nil))
 (call_insn 115 114 116 15 (set (reg:SI 0 ax)
-        (call (mem:QI (symbol_ref:SI ("block_write") [flags 0x41]  <function_decl 0x7f8c22b10000 block_write>) [0 block_write S1 A8])
+        (call (mem:QI (symbol_ref:SI ("block_write") [flags 0x41]  <function_decl 0x7b72ec110000 block_write>) [0 block_write S1 A8])
             (const_int 16 [0x10]))) "fs/read_write.c":96:16 823 {*call_value}
      (nil)
     (expr_list (use (reg:SI 3 bx))
@@ -1768,7 +1768,7 @@ Reordered sequence:
         (reg:SI 82)) "fs/read_write.c":98:16 75 {*movsi_internal}
      (nil))
 (call_insn 134 133 135 17 (set (reg:SI 0 ax)
-        (call (mem:QI (symbol_ref:SI ("file_write") [flags 0x41]  <function_decl 0x7f8c22b0ef00 file_write>) [0 file_write S1 A8])
+        (call (mem:QI (symbol_ref:SI ("file_write") [flags 0x41]  <function_decl 0x7b72ec10ef00 file_write>) [0 file_write S1 A8])
             (const_int 16 [0x10]))) "fs/read_write.c":98:16 823 {*call_value}
      (nil)
     (expr_list (use (reg:SI 3 bx))
@@ -1816,9 +1816,9 @@ Reordered sequence:
 (insn 146 145 147 18 (set (reg/f:SI 123)
         (plus:SI (reg:SI 82)
             (const:SI (unspec:SI [
-                        (symbol_ref/f:SI ("*.LC1") [flags 0x2]  <var_decl 0x7f8c22b7f090 *.LC1>)
+                        (symbol_ref/f:SI ("*.LC1") [flags 0x2]  <var_decl 0x7b72ec17f090 *.LC1>)
                     ] UNSPEC_GOTOFF)))) "fs/read_write.c":99:5 205 {*leasi}
-     (expr_list:REG_EQUAL (symbol_ref/f:SI ("*.LC1") [flags 0x2]  <var_decl 0x7f8c22b7f090 *.LC1>)
+     (expr_list:REG_EQUAL (symbol_ref/f:SI ("*.LC1") [flags 0x2]  <var_decl 0x7b72ec17f090 *.LC1>)
         (nil)))
 (insn 147 146 148 18 (set (mem/f:SI (pre_dec:SI (reg/f:SI 7 sp)) [7  S4 A32])
         (reg/f:SI 123)) "fs/read_write.c":99:5 54 {*pushsi2}
@@ -1828,7 +1828,7 @@ Reordered sequence:
         (reg:SI 82)) "fs/read_write.c":99:5 75 {*movsi_internal}
      (nil))
 (call_insn 149 148 150 18 (set (reg:SI 0 ax)
-        (call (mem:QI (symbol_ref:SI ("printk") [flags 0x41]  <function_decl 0x7f8c22b38900 printk>) [0 printk S1 A8])
+        (call (mem:QI (symbol_ref:SI ("printk") [flags 0x41]  <function_decl 0x7b72ec138900 printk>) [0 printk S1 A8])
             (const_int 16 [0x10]))) "fs/read_write.c":99:5 823 {*call_value}
      (nil)
     (expr_list (use (reg:SI 3 bx))

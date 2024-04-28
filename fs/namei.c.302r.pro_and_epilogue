@@ -210,7 +210,7 @@ Dataflow summary:
 (insn 24 23 25 5 (set (reg/f:SI 1 dx [103])
         (mem/u/c:SI (plus:SI (reg:SI 0 ax [82])
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("current") [flags 0x40]  <var_decl 0x74bc2f92e120 current>)
+                            (symbol_ref:SI ("current") [flags 0x40]  <var_decl 0x7f2fcf32e120 current>)
                         ] UNSPEC_GOT))) [12  S4 A8])) "fs/namei.c":39:21 75 {*movsi_internal}
      (nil))
 (insn 25 24 26 5 (set (reg/f:SI 1 dx [orig:86 current.0_4 ] [86])
@@ -259,7 +259,7 @@ Dataflow summary:
 (insn 37 36 38 7 (set (reg/f:SI 1 dx [105])
         (mem/u/c:SI (plus:SI (reg:SI 0 ax [82])
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("current") [flags 0x40]  <var_decl 0x74bc2f92e120 current>)
+                            (symbol_ref:SI ("current") [flags 0x40]  <var_decl 0x7f2fcf32e120 current>)
                         ] UNSPEC_GOT))) [12  S4 A8])) "fs/namei.c":41:21 75 {*movsi_internal}
      (nil))
 (insn 38 37 39 7 (set (reg/f:SI 1 dx [orig:89 current.1_7 ] [89])
@@ -342,7 +342,7 @@ Dataflow summary:
 (insn 55 54 56 10 (set (reg/f:SI 0 ax [108])
         (mem/u/c:SI (plus:SI (reg:SI 0 ax [82])
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("current") [flags 0x40]  <var_decl 0x74bc2f92e120 current>)
+                            (symbol_ref:SI ("current") [flags 0x40]  <var_decl 0x7f2fcf32e120 current>)
                         ] UNSPEC_GOT))) [12  S4 A8])) "fs/namei.c":43:43 75 {*movsi_internal}
      (nil))
 (insn 56 55 57 10 (set (reg/f:SI 0 ax [orig:95 current.2_13 ] [95])
@@ -833,7 +833,7 @@ Dataflow summary:
      (expr_list:REG_ARGS_SIZE (const_int 4 [0x4])
         (nil)))
 (call_insn 32 31 33 7 (set (reg:QI 0 ax)
-        (call (mem:QI (symbol_ref:SI ("get_fs_byte") [flags 0x3]  <function_decl 0x74bc2f938c00 get_fs_byte>) [0 get_fs_byte S1 A8])
+        (call (mem:QI (symbol_ref:SI ("get_fs_byte") [flags 0x3]  <function_decl 0x7f2fcf338c00 get_fs_byte>) [0 get_fs_byte S1 A8])
             (const_int 4 [0x4]))) "fs/namei.c":104:25 823 {*call_value}
      (nil)
     (nil))
@@ -876,7 +876,7 @@ Dataflow summary:
      (expr_list:REG_ARGS_SIZE (const_int 4 [0x4])
         (nil)))
 (call_insn 41 40 42 8 (set (reg:QI 0 ax)
-        (call (mem:QI (symbol_ref:SI ("get_fs_byte") [flags 0x3]  <function_decl 0x74bc2f938c00 get_fs_byte>) [0 get_fs_byte S1 A8])
+        (call (mem:QI (symbol_ref:SI ("get_fs_byte") [flags 0x3]  <function_decl 0x7f2fcf338c00 get_fs_byte>) [0 get_fs_byte S1 A8])
             (const_int 4 [0x4]))) "fs/namei.c":105:10 823 {*call_value}
      (nil)
     (nil))
@@ -910,7 +910,7 @@ Dataflow summary:
 (insn 49 48 50 9 (set (reg/f:SI 0 ax [126])
         (mem/u/c:SI (plus:SI (reg:SI 3 bx [82])
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("current") [flags 0x40]  <var_decl 0x74bc2f92e120 current>)
+                            (symbol_ref:SI ("current") [flags 0x40]  <var_decl 0x7f2fcf32e120 current>)
                         ] UNSPEC_GOT))) [12  S4 A8])) "fs/namei.c":107:30 75 {*movsi_internal}
      (nil))
 (insn 50 49 51 9 (set (reg/f:SI 0 ax [orig:90 current.4_8 ] [90])
@@ -993,7 +993,7 @@ Dataflow summary:
      (expr_list:REG_ARGS_SIZE (const_int 16 [0x10])
         (nil)))
 (call_insn 73 71 74 12 (set (reg:SI 0 ax)
-        (call (mem:QI (symbol_ref:SI ("get_super") [flags 0x41]  <function_decl 0x74bc2f90e000 get_super>) [0 get_super S1 A8])
+        (call (mem:QI (symbol_ref:SI ("get_super") [flags 0x41]  <function_decl 0x7f2fcf30e000 get_super>) [0 get_super S1 A8])
             (const_int 16 [0x10]))) "fs/namei.c":111:18 823 {*call_value}
      (nil)
     (expr_list (use (reg:SI 3 bx))
@@ -1049,7 +1049,7 @@ Dataflow summary:
         (reg/f:SI 0 ax [orig:98 _16 ] [98])) "fs/namei.c":113:17 54 {*pushsi2}
      (expr_list:REG_ARGS_SIZE (const_int 16 [0x10])
         (nil)))
-(call_insn 87 85 88 13 (call (mem:QI (symbol_ref:SI ("iput") [flags 0x41]  <function_decl 0x74bc2f8d2d00 iput>) [0 iput S1 A8])
+(call_insn 87 85 88 13 (call (mem:QI (symbol_ref:SI ("iput") [flags 0x41]  <function_decl 0x7f2fcf2d2d00 iput>) [0 iput S1 A8])
         (const_int 16 [0x10])) "fs/namei.c":113:17 812 {*call}
      (nil)
     (expr_list (use (reg:SI 3 bx))
@@ -1174,7 +1174,7 @@ Dataflow summary:
      (expr_list:REG_ARGS_SIZE (const_int 16 [0x10])
         (nil)))
 (call_insn 121 119 122 16 (set (reg:SI 0 ax)
-        (call (mem:QI (symbol_ref:SI ("bread") [flags 0x41]  <function_decl 0x74bc2f90e100 bread>) [0 bread S1 A8])
+        (call (mem:QI (symbol_ref:SI ("bread") [flags 0x41]  <function_decl 0x7f2fcf30e100 bread>) [0 bread S1 A8])
             (const_int 16 [0x10]))) "fs/namei.c":121:16 823 {*call_value}
      (nil)
     (expr_list (use (reg:SI 3 bx))
@@ -1276,7 +1276,7 @@ Dataflow summary:
                 (const_int 36 [0x24])) [9 bh+0 S4 A32])) "fs/namei.c":127:13 54 {*pushsi2}
      (expr_list:REG_ARGS_SIZE (const_int 16 [0x10])
         (nil)))
-(call_insn 149 147 150 20 (call (mem:QI (symbol_ref:SI ("brelse") [flags 0x41]  <function_decl 0x74bc2f90e200 brelse>) [0 brelse S1 A8])
+(call_insn 149 147 150 20 (call (mem:QI (symbol_ref:SI ("brelse") [flags 0x41]  <function_decl 0x7f2fcf30e200 brelse>) [0 brelse S1 A8])
         (const_int 16 [0x10])) "fs/namei.c":127:13 812 {*call}
      (nil)
     (expr_list (use (reg:SI 3 bx))
@@ -1333,7 +1333,7 @@ Dataflow summary:
      (expr_list:REG_ARGS_SIZE (const_int 16 [0x10])
         (nil)))
 (call_insn 161 159 162 20 (set (reg:SI 0 ax)
-        (call (mem:QI (symbol_ref:SI ("bmap") [flags 0x41]  <function_decl 0x74bc2f90ed00 bmap>) [0 bmap S1 A8])
+        (call (mem:QI (symbol_ref:SI ("bmap") [flags 0x41]  <function_decl 0x7f2fcf30ed00 bmap>) [0 bmap S1 A8])
             (const_int 16 [0x10]))) "fs/namei.c":129:27 823 {*call_value}
      (nil)
     (expr_list (use (reg:SI 3 bx))
@@ -1395,7 +1395,7 @@ Dataflow summary:
      (expr_list:REG_ARGS_SIZE (const_int 16 [0x10])
         (nil)))
 (call_insn 176 174 177 21 (set (reg:SI 0 ax)
-        (call (mem:QI (symbol_ref:SI ("bread") [flags 0x41]  <function_decl 0x74bc2f90e100 bread>) [0 bread S1 A8])
+        (call (mem:QI (symbol_ref:SI ("bread") [flags 0x41]  <function_decl 0x7f2fcf30e100 bread>) [0 bread S1 A8])
             (const_int 16 [0x10]))) "fs/namei.c":130:24 823 {*call_value}
      (nil)
     (expr_list (use (reg:SI 3 bx))
@@ -1485,7 +1485,7 @@ Dataflow summary:
      (expr_list:REG_ARGS_SIZE (const_int 16 [0x10])
         (nil)))
 (call_insn 200 199 201 24 (set (reg:SI 0 ax)
-        (call (mem:QI (symbol_ref:SI ("match") [flags 0x3]  <function_decl 0x74bc2f949500 match>) [0 match S1 A8])
+        (call (mem:QI (symbol_ref:SI ("match") [flags 0x3]  <function_decl 0x7f2fcf349500 match>) [0 match S1 A8])
             (const_int 16 [0x10]))) "fs/namei.c":136:13 823 {*call_value}
      (nil)
     (nil))
@@ -1581,7 +1581,7 @@ Dataflow summary:
                 (const_int 36 [0x24])) [9 bh+0 S4 A32])) "fs/namei.c":143:5 54 {*pushsi2}
      (expr_list:REG_ARGS_SIZE (const_int 16 [0x10])
         (nil)))
-(call_insn 226 224 227 28 (call (mem:QI (symbol_ref:SI ("brelse") [flags 0x41]  <function_decl 0x74bc2f90e200 brelse>) [0 brelse S1 A8])
+(call_insn 226 224 227 28 (call (mem:QI (symbol_ref:SI ("brelse") [flags 0x41]  <function_decl 0x7f2fcf30e200 brelse>) [0 brelse S1 A8])
         (const_int 16 [0x10])) "fs/namei.c":143:5 812 {*call}
      (nil)
     (expr_list (use (reg:SI 3 bx))
@@ -1716,7 +1716,7 @@ Dataflow summary:
 (insn 5 2 6 2 (set (reg/f:SI 0 ax [120])
         (mem/u/c:SI (plus:SI (reg:SI 3 bx [82])
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("current") [flags 0x40]  <var_decl 0x74bc2f92e120 current>)
+                            (symbol_ref:SI ("current") [flags 0x40]  <var_decl 0x7f2fcf32e120 current>)
                         ] UNSPEC_GOT))) [12  S4 A8])) "fs/namei.c":162:17 75 {*movsi_internal}
      (nil))
 (insn 6 5 7 2 (set (reg/f:SI 0 ax [orig:83 current.7_1 ] [83])
@@ -1741,7 +1741,7 @@ Dataflow summary:
 (insn 11 10 12 3 (set (reg/f:SI 0 ax [121])
         (mem/u/c:SI (plus:SI (reg:SI 3 bx [82])
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("current") [flags 0x40]  <var_decl 0x74bc2f92e120 current>)
+                            (symbol_ref:SI ("current") [flags 0x40]  <var_decl 0x7f2fcf32e120 current>)
                         ] UNSPEC_GOT))) [12  S4 A8])) "fs/namei.c":162:35 75 {*movsi_internal}
      (nil))
 (insn 12 11 13 3 (set (reg/f:SI 0 ax [orig:85 current.8_3 ] [85])
@@ -1779,15 +1779,15 @@ Dataflow summary:
 (insn 20 19 21 4 (set (reg/f:SI 0 ax [122])
         (plus:SI (reg:SI 3 bx [82])
             (const:SI (unspec:SI [
-                        (symbol_ref/f:SI ("*.LC0") [flags 0x2]  <var_decl 0x74bc2f61a2d0 *.LC0>)
+                        (symbol_ref/f:SI ("*.LC0") [flags 0x2]  <var_decl 0x7f2fcf01a2d0 *.LC0>)
                     ] UNSPEC_GOTOFF)))) "fs/namei.c":163:9 205 {*leasi}
-     (expr_list:REG_EQUAL (symbol_ref/f:SI ("*.LC0") [flags 0x2]  <var_decl 0x74bc2f61a2d0 *.LC0>)
+     (expr_list:REG_EQUAL (symbol_ref/f:SI ("*.LC0") [flags 0x2]  <var_decl 0x7f2fcf01a2d0 *.LC0>)
         (nil)))
 (insn 21 20 23 4 (set (mem/f:SI (pre_dec:SI (reg/f:SI 7 sp)) [8  S4 A32])
         (reg/f:SI 0 ax [122])) "fs/namei.c":163:9 54 {*pushsi2}
      (expr_list:REG_ARGS_SIZE (const_int 16 [0x10])
         (nil)))
-(call_insn 23 21 24 4 (call (mem:QI (symbol_ref:SI ("panic") [flags 0x41]  <function_decl 0x74bc2f938700 panic>) [0 panic S1 A8])
+(call_insn 23 21 24 4 (call (mem:QI (symbol_ref:SI ("panic") [flags 0x41]  <function_decl 0x7f2fcf338700 panic>) [0 panic S1 A8])
         (const_int 16 [0x10])) "fs/namei.c":163:9 812 {*call}
      (nil)
     (expr_list (use (reg:SI 3 bx))
@@ -1805,7 +1805,7 @@ Dataflow summary:
 (insn 27 26 28 5 (set (reg/f:SI 0 ax [123])
         (mem/u/c:SI (plus:SI (reg:SI 3 bx [82])
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("current") [flags 0x40]  <var_decl 0x74bc2f92e120 current>)
+                            (symbol_ref:SI ("current") [flags 0x40]  <var_decl 0x7f2fcf32e120 current>)
                         ] UNSPEC_GOT))) [12  S4 A8])) "fs/namei.c":164:17 75 {*movsi_internal}
      (nil))
 (insn 28 27 29 5 (set (reg/f:SI 0 ax [orig:88 current.9_6 ] [88])
@@ -1830,7 +1830,7 @@ Dataflow summary:
 (insn 33 32 34 6 (set (reg/f:SI 0 ax [124])
         (mem/u/c:SI (plus:SI (reg:SI 3 bx [82])
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("current") [flags 0x40]  <var_decl 0x74bc2f92e120 current>)
+                            (symbol_ref:SI ("current") [flags 0x40]  <var_decl 0x7f2fcf32e120 current>)
                         ] UNSPEC_GOT))) [12  S4 A8])) "fs/namei.c":164:34 75 {*movsi_internal}
      (nil))
 (insn 34 33 35 6 (set (reg/f:SI 0 ax [orig:90 current.10_8 ] [90])
@@ -1868,15 +1868,15 @@ Dataflow summary:
 (insn 42 41 43 7 (set (reg/f:SI 0 ax [125])
         (plus:SI (reg:SI 3 bx [82])
             (const:SI (unspec:SI [
-                        (symbol_ref/f:SI ("*.LC1") [flags 0x2]  <var_decl 0x74bc2f61a360 *.LC1>)
+                        (symbol_ref/f:SI ("*.LC1") [flags 0x2]  <var_decl 0x7f2fcf01a360 *.LC1>)
                     ] UNSPEC_GOTOFF)))) "fs/namei.c":165:9 205 {*leasi}
-     (expr_list:REG_EQUAL (symbol_ref/f:SI ("*.LC1") [flags 0x2]  <var_decl 0x74bc2f61a360 *.LC1>)
+     (expr_list:REG_EQUAL (symbol_ref/f:SI ("*.LC1") [flags 0x2]  <var_decl 0x7f2fcf01a360 *.LC1>)
         (nil)))
 (insn 43 42 45 7 (set (mem/f:SI (pre_dec:SI (reg/f:SI 7 sp)) [8  S4 A32])
         (reg/f:SI 0 ax [125])) "fs/namei.c":165:9 54 {*pushsi2}
      (expr_list:REG_ARGS_SIZE (const_int 16 [0x10])
         (nil)))
-(call_insn 45 43 46 7 (call (mem:QI (symbol_ref:SI ("panic") [flags 0x41]  <function_decl 0x74bc2f938700 panic>) [0 panic S1 A8])
+(call_insn 45 43 46 7 (call (mem:QI (symbol_ref:SI ("panic") [flags 0x41]  <function_decl 0x7f2fcf338700 panic>) [0 panic S1 A8])
         (const_int 16 [0x10])) "fs/namei.c":165:9 812 {*call}
      (nil)
     (expr_list (use (reg:SI 3 bx))
@@ -1905,7 +1905,7 @@ Dataflow summary:
      (expr_list:REG_ARGS_SIZE (const_int 16 [0x10])
         (nil)))
 (call_insn 51 50 52 8 (set (reg:QI 0 ax)
-        (call (mem:QI (symbol_ref:SI ("get_fs_byte") [flags 0x3]  <function_decl 0x74bc2f938c00 get_fs_byte>) [0 get_fs_byte S1 A8])
+        (call (mem:QI (symbol_ref:SI ("get_fs_byte") [flags 0x3]  <function_decl 0x7f2fcf338c00 get_fs_byte>) [0 get_fs_byte S1 A8])
             (const_int 16 [0x10]))) "fs/namei.c":166:14 823 {*call_value}
      (nil)
     (nil))
@@ -1937,7 +1937,7 @@ Dataflow summary:
 (insn 58 57 59 9 (set (reg/f:SI 0 ax [126])
         (mem/u/c:SI (plus:SI (reg:SI 3 bx [82])
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("current") [flags 0x40]  <var_decl 0x74bc2f92e120 current>)
+                            (symbol_ref:SI ("current") [flags 0x40]  <var_decl 0x7f2fcf32e120 current>)
                         ] UNSPEC_GOT))) [12  S4 A8])) "fs/namei.c":167:24 75 {*movsi_internal}
      (nil))
 (insn 59 58 60 9 (set (reg/f:SI 0 ax [orig:94 current.11_12 ] [94])
@@ -1983,7 +1983,7 @@ Dataflow summary:
 (insn 70 69 71 11 (set (reg/f:SI 0 ax [127])
         (mem/u/c:SI (plus:SI (reg:SI 3 bx [82])
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("current") [flags 0x40]  <var_decl 0x74bc2f92e120 current>)
+                            (symbol_ref:SI ("current") [flags 0x40]  <var_decl 0x7f2fcf32e120 current>)
                         ] UNSPEC_GOT))) [12  S4 A8])) "fs/namei.c":170:24 75 {*movsi_internal}
      (nil))
 (insn 71 70 72 11 (set (reg/f:SI 0 ax [orig:96 current.12_14 ] [96])
@@ -2093,7 +2093,7 @@ Dataflow summary:
      (expr_list:REG_ARGS_SIZE (const_int 16 [0x10])
         (nil)))
 (call_insn 101 100 102 15 (set (reg:SI 0 ax)
-        (call (mem:QI (symbol_ref:SI ("permission") [flags 0x3]  <function_decl 0x74bc2f949300 permission>) [0 permission S1 A8])
+        (call (mem:QI (symbol_ref:SI ("permission") [flags 0x3]  <function_decl 0x7f2fcf349300 permission>) [0 permission S1 A8])
             (const_int 16 [0x10]))) "fs/namei.c":176:41 823 {*call_value}
      (nil)
     (nil))
@@ -2134,7 +2134,7 @@ Dataflow summary:
         (reg/f:SI 0 ax [orig:107 inode.16_26 ] [107])) "fs/namei.c":177:13 54 {*pushsi2}
      (expr_list:REG_ARGS_SIZE (const_int 16 [0x10])
         (nil)))
-(call_insn 112 110 113 16 (call (mem:QI (symbol_ref:SI ("iput") [flags 0x41]  <function_decl 0x74bc2f8d2d00 iput>) [0 iput S1 A8])
+(call_insn 112 110 113 16 (call (mem:QI (symbol_ref:SI ("iput") [flags 0x41]  <function_decl 0x7f2fcf2d2d00 iput>) [0 iput S1 A8])
         (const_int 16 [0x10])) "fs/namei.c":177:13 812 {*call}
      (nil)
     (expr_list (use (reg:SI 3 bx))
@@ -2207,7 +2207,7 @@ Dataflow summary:
      (expr_list:REG_ARGS_SIZE (const_int 16 [0x10])
         (nil)))
 (call_insn 131 130 132 19 (set (reg:QI 0 ax)
-        (call (mem:QI (symbol_ref:SI ("get_fs_byte") [flags 0x3]  <function_decl 0x74bc2f938c00 get_fs_byte>) [0 get_fs_byte S1 A8])
+        (call (mem:QI (symbol_ref:SI ("get_fs_byte") [flags 0x3]  <function_decl 0x7f2fcf338c00 get_fs_byte>) [0 get_fs_byte S1 A8])
             (const_int 16 [0x10]))) "fs/namei.c":180:32 823 {*call_value}
      (nil)
     (nil))
@@ -2303,7 +2303,7 @@ Dataflow summary:
      (expr_list:REG_ARGS_SIZE (const_int 16 [0x10])
         (nil)))
 (call_insn 157 156 158 23 (set (reg:SI 0 ax)
-        (call (mem:QI (symbol_ref:SI ("find_entry") [flags 0x3]  <function_decl 0x74bc2f949700 find_entry>) [0 find_entry S1 A8])
+        (call (mem:QI (symbol_ref:SI ("find_entry") [flags 0x3]  <function_decl 0x7f2fcf349700 find_entry>) [0 find_entry S1 A8])
             (const_int 16 [0x10]))) "fs/namei.c":185:20 823 {*call_value}
      (nil)
     (nil))
@@ -2348,7 +2348,7 @@ Dataflow summary:
         (reg/f:SI 0 ax [orig:110 inode.18_29 ] [110])) "fs/namei.c":186:13 54 {*pushsi2}
      (expr_list:REG_ARGS_SIZE (const_int 16 [0x10])
         (nil)))
-(call_insn 168 166 169 24 (call (mem:QI (symbol_ref:SI ("iput") [flags 0x41]  <function_decl 0x74bc2f8d2d00 iput>) [0 iput S1 A8])
+(call_insn 168 166 169 24 (call (mem:QI (symbol_ref:SI ("iput") [flags 0x41]  <function_decl 0x7f2fcf2d2d00 iput>) [0 iput S1 A8])
         (const_int 16 [0x10])) "fs/namei.c":186:13 812 {*call}
      (nil)
     (expr_list (use (reg:SI 3 bx))
@@ -2412,7 +2412,7 @@ Dataflow summary:
                 (const_int 28 [0x1c])) [9 bh+0 S4 A32])) "fs/namei.c":191:9 54 {*pushsi2}
      (expr_list:REG_ARGS_SIZE (const_int 16 [0x10])
         (nil)))
-(call_insn 186 184 187 25 (call (mem:QI (symbol_ref:SI ("brelse") [flags 0x41]  <function_decl 0x74bc2f90e200 brelse>) [0 brelse S1 A8])
+(call_insn 186 184 187 25 (call (mem:QI (symbol_ref:SI ("brelse") [flags 0x41]  <function_decl 0x7f2fcf30e200 brelse>) [0 brelse S1 A8])
         (const_int 16 [0x10])) "fs/namei.c":191:9 812 {*call}
      (nil)
     (expr_list (use (reg:SI 3 bx))
@@ -2441,7 +2441,7 @@ Dataflow summary:
         (reg/f:SI 0 ax [orig:115 inode.21_34 ] [115])) "fs/namei.c":192:9 54 {*pushsi2}
      (expr_list:REG_ARGS_SIZE (const_int 16 [0x10])
         (nil)))
-(call_insn 192 190 193 25 (call (mem:QI (symbol_ref:SI ("iput") [flags 0x41]  <function_decl 0x74bc2f8d2d00 iput>) [0 iput S1 A8])
+(call_insn 192 190 193 25 (call (mem:QI (symbol_ref:SI ("iput") [flags 0x41]  <function_decl 0x7f2fcf2d2d00 iput>) [0 iput S1 A8])
         (const_int 16 [0x10])) "fs/namei.c":192:9 812 {*call}
      (nil)
     (expr_list (use (reg:SI 3 bx))
@@ -2473,7 +2473,7 @@ Dataflow summary:
      (expr_list:REG_ARGS_SIZE (const_int 16 [0x10])
         (nil)))
 (call_insn 198 196 199 25 (set (reg:SI 0 ax)
-        (call (mem:QI (symbol_ref:SI ("iget") [flags 0x41]  <function_decl 0x74bc2f90e900 iget>) [0 iget S1 A8])
+        (call (mem:QI (symbol_ref:SI ("iget") [flags 0x41]  <function_decl 0x7f2fcf30e900 iget>) [0 iget S1 A8])
             (const_int 16 [0x10]))) "fs/namei.c":193:23 823 {*call_value}
      (nil)
     (expr_list (use (reg:SI 3 bx))
@@ -2611,7 +2611,7 @@ Dataflow summary:
      (expr_list:REG_ARGS_SIZE (const_int 16 [0x10])
         (nil)))
 (call_insn 7 6 8 2 (set (reg:SI 0 ax)
-        (call (mem:QI (symbol_ref:SI ("get_dir") [flags 0x3]  <function_decl 0x74bc2f949900 get_dir>) [0 get_dir S1 A8])
+        (call (mem:QI (symbol_ref:SI ("get_dir") [flags 0x3]  <function_decl 0x7f2fcf349900 get_dir>) [0 get_dir S1 A8])
             (const_int 16 [0x10]))) "fs/namei.c":211:17 823 {*call_value}
      (nil)
     (nil))
@@ -2716,7 +2716,7 @@ Dataflow summary:
      (expr_list:REG_ARGS_SIZE (const_int 16 [0x10])
         (nil)))
 (call_insn 36 35 37 7 (set (reg:QI 0 ax)
-        (call (mem:QI (symbol_ref:SI ("get_fs_byte") [flags 0x3]  <function_decl 0x74bc2f938c00 get_fs_byte>) [0 get_fs_byte S1 A8])
+        (call (mem:QI (symbol_ref:SI ("get_fs_byte") [flags 0x3]  <function_decl 0x7f2fcf338c00 get_fs_byte>) [0 get_fs_byte S1 A8])
             (const_int 16 [0x10]))) "fs/namei.c":214:17 823 {*call_value}
      (nil)
     (nil))
@@ -2993,7 +2993,7 @@ Dataflow summary:
      (expr_list:REG_ARGS_SIZE (const_int 16 [0x10])
         (nil)))
 (call_insn 42 40 43 8 (set (reg:SI 0 ax)
-        (call (mem:QI (symbol_ref:SI ("bread") [flags 0x41]  <function_decl 0x74bc2f90e100 bread>) [0 bread S1 A8])
+        (call (mem:QI (symbol_ref:SI ("bread") [flags 0x41]  <function_decl 0x7f2fcf30e100 bread>) [0 bread S1 A8])
             (const_int 16 [0x10]))) "fs/namei.c":251:16 823 {*call_value}
      (nil)
     (expr_list (use (reg:SI 3 bx))
@@ -3090,7 +3090,7 @@ Dataflow summary:
                 (const_int 20 [0x14])) [9 bh+0 S4 A32])) "fs/namei.c":257:13 54 {*pushsi2}
      (expr_list:REG_ARGS_SIZE (const_int 16 [0x10])
         (nil)))
-(call_insn 68 66 69 12 (call (mem:QI (symbol_ref:SI ("brelse") [flags 0x41]  <function_decl 0x74bc2f90e200 brelse>) [0 brelse S1 A8])
+(call_insn 68 66 69 12 (call (mem:QI (symbol_ref:SI ("brelse") [flags 0x41]  <function_decl 0x7f2fcf30e200 brelse>) [0 brelse S1 A8])
         (const_int 16 [0x10])) "fs/namei.c":257:13 812 {*call}
      (nil)
     (expr_list (use (reg:SI 3 bx))
@@ -3138,7 +3138,7 @@ Dataflow summary:
      (expr_list:REG_ARGS_SIZE (const_int 16 [0x10])
         (nil)))
 (call_insn 78 76 79 12 (set (reg:SI 0 ax)
-        (call (mem:QI (symbol_ref:SI ("create_block") [flags 0x41]  <function_decl 0x74bc2f90ee00 create_block>) [0 create_block S1 A8])
+        (call (mem:QI (symbol_ref:SI ("create_block") [flags 0x41]  <function_decl 0x7f2fcf30ee00 create_block>) [0 create_block S1 A8])
             (const_int 16 [0x10]))) "fs/namei.c":259:21 823 {*call_value}
      (nil)
     (expr_list (use (reg:SI 3 bx))
@@ -3205,7 +3205,7 @@ Dataflow summary:
      (expr_list:REG_ARGS_SIZE (const_int 16 [0x10])
         (nil)))
 (call_insn 97 95 98 14 (set (reg:SI 0 ax)
-        (call (mem:QI (symbol_ref:SI ("bread") [flags 0x41]  <function_decl 0x74bc2f90e100 bread>) [0 bread S1 A8])
+        (call (mem:QI (symbol_ref:SI ("bread") [flags 0x41]  <function_decl 0x7f2fcf30e100 bread>) [0 bread S1 A8])
             (const_int 16 [0x10]))) "fs/namei.c":262:24 823 {*call_value}
      (nil)
     (expr_list (use (reg:SI 3 bx))
@@ -3354,7 +3354,7 @@ Dataflow summary:
 (insn 133 132 134 18 (set (reg/f:SI 0 ax [136])
         (mem/u/c:SI (plus:SI (reg:SI 3 bx [82])
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("jiffies") [flags 0x40]  <var_decl 0x74bc2f92e360 jiffies>)
+                            (symbol_ref:SI ("jiffies") [flags 0x40]  <var_decl 0x7f2fcf32e360 jiffies>)
                         ] UNSPEC_GOT))) [12  S4 A8])) "fs/namei.c":272:28 75 {*movsi_internal}
      (nil))
 (insn 134 133 135 18 (set (reg:SI 2 cx [orig:101 jiffies.27_19 ] [101])
@@ -3405,7 +3405,7 @@ Dataflow summary:
 (insn 140 258 141 18 (set (reg/f:SI 0 ax [141])
         (mem/u/c:SI (plus:SI (reg:SI 3 bx [82])
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("startup_time") [flags 0x40]  <var_decl 0x74bc2f92e3f0 startup_time>)
+                            (symbol_ref:SI ("startup_time") [flags 0x40]  <var_decl 0x7f2fcf32e3f0 startup_time>)
                         ] UNSPEC_GOT))) [12  S4 A8])) "fs/namei.c":272:28 75 {*movsi_internal}
      (nil))
 (insn 141 140 142 18 (set (reg:SI 0 ax [orig:103 startup_time.28_21 ] [103])
@@ -3453,7 +3453,7 @@ Dataflow summary:
 (insn 153 152 154 20 (set (reg/f:SI 0 ax [144])
         (mem/u/c:SI (plus:SI (reg:SI 3 bx [82])
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("jiffies") [flags 0x40]  <var_decl 0x74bc2f92e360 jiffies>)
+                            (symbol_ref:SI ("jiffies") [flags 0x40]  <var_decl 0x7f2fcf32e360 jiffies>)
                         ] UNSPEC_GOT))) [12  S4 A8])) "fs/namei.c":275:28 75 {*movsi_internal}
      (nil))
 (insn 154 153 155 20 (set (reg:SI 2 cx [orig:107 jiffies.29_25 ] [107])
@@ -3504,7 +3504,7 @@ Dataflow summary:
 (insn 160 263 161 20 (set (reg/f:SI 0 ax [149])
         (mem/u/c:SI (plus:SI (reg:SI 3 bx [82])
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("startup_time") [flags 0x40]  <var_decl 0x74bc2f92e3f0 startup_time>)
+                            (symbol_ref:SI ("startup_time") [flags 0x40]  <var_decl 0x7f2fcf32e3f0 startup_time>)
                         ] UNSPEC_GOT))) [12  S4 A8])) "fs/namei.c":275:28 75 {*movsi_internal}
      (nil))
 (insn 161 160 162 20 (set (reg:SI 0 ax [orig:109 startup_time.30_27 ] [109])
@@ -3587,7 +3587,7 @@ Dataflow summary:
      (expr_list:REG_ARGS_SIZE (const_int 16 [0x10])
         (nil)))
 (call_insn 179 178 180 22 (set (reg:QI 0 ax)
-        (call (mem:QI (symbol_ref:SI ("get_fs_byte") [flags 0x3]  <function_decl 0x74bc2f938c00 get_fs_byte>) [0 get_fs_byte S1 A8])
+        (call (mem:QI (symbol_ref:SI ("get_fs_byte") [flags 0x3]  <function_decl 0x7f2fcf338c00 get_fs_byte>) [0 get_fs_byte S1 A8])
             (const_int 16 [0x10]))) "fs/namei.c":277:47 823 {*call_value}
      (nil)
     (nil))
@@ -3902,7 +3902,7 @@ Dataflow summary:
 (insn 18 17 19 5 (set (reg/f:SI 0 ax [143])
         (mem/u/c:SI (plus:SI (reg:SI 3 bx [82])
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("current") [flags 0x40]  <var_decl 0x74bc2f92e120 current>)
+                            (symbol_ref:SI ("current") [flags 0x40]  <var_decl 0x7f2fcf32e120 current>)
                         ] UNSPEC_GOT))) [12  S4 A8])) "fs/namei.c":305:28 75 {*movsi_internal}
      (nil))
 (insn 19 18 20 5 (set (reg/f:SI 0 ax [orig:85 current.33_3 ] [85])
@@ -3979,7 +3979,7 @@ Dataflow summary:
      (expr_list:REG_ARGS_SIZE (const_int 16 [0x10])
         (nil)))
 (call_insn 32 31 33 5 (set (reg:SI 0 ax)
-        (call (mem:QI (symbol_ref:SI ("dir_namei") [flags 0x3]  <function_decl 0x74bc2f949b00 dir_namei>) [0 dir_namei S1 A8])
+        (call (mem:QI (symbol_ref:SI ("dir_namei") [flags 0x3]  <function_decl 0x7f2fcf349b00 dir_namei>) [0 dir_namei S1 A8])
             (const_int 16 [0x10]))) "fs/namei.c":307:17 823 {*call_value}
      (nil)
     (nil))
@@ -4100,7 +4100,7 @@ Dataflow summary:
         (reg/f:SI 0 ax [orig:95 dir.37_13 ] [95])) "fs/namei.c":314:9 54 {*pushsi2}
      (expr_list:REG_ARGS_SIZE (const_int 16 [0x10])
         (nil)))
-(call_insn 66 64 67 10 (call (mem:QI (symbol_ref:SI ("iput") [flags 0x41]  <function_decl 0x74bc2f8d2d00 iput>) [0 iput S1 A8])
+(call_insn 66 64 67 10 (call (mem:QI (symbol_ref:SI ("iput") [flags 0x41]  <function_decl 0x7f2fcf2d2d00 iput>) [0 iput S1 A8])
         (const_int 16 [0x10])) "fs/namei.c":314:9 812 {*call}
      (nil)
     (expr_list (use (reg:SI 3 bx))
@@ -4158,7 +4158,7 @@ Dataflow summary:
      (expr_list:REG_ARGS_SIZE (const_int 16 [0x10])
         (nil)))
 (call_insn 81 80 82 11 (set (reg:SI 0 ax)
-        (call (mem:QI (symbol_ref:SI ("find_entry") [flags 0x3]  <function_decl 0x74bc2f949700 find_entry>) [0 find_entry S1 A8])
+        (call (mem:QI (symbol_ref:SI ("find_entry") [flags 0x3]  <function_decl 0x7f2fcf349700 find_entry>) [0 find_entry S1 A8])
             (const_int 16 [0x10]))) "fs/namei.c":317:10 823 {*call_value}
      (nil)
     (nil))
@@ -4229,7 +4229,7 @@ Dataflow summary:
         (reg/f:SI 0 ax [orig:99 dir.40_17 ] [99])) "fs/namei.c":320:13 54 {*pushsi2}
      (expr_list:REG_ARGS_SIZE (const_int 16 [0x10])
         (nil)))
-(call_insn 97 95 98 13 (call (mem:QI (symbol_ref:SI ("iput") [flags 0x41]  <function_decl 0x74bc2f8d2d00 iput>) [0 iput S1 A8])
+(call_insn 97 95 98 13 (call (mem:QI (symbol_ref:SI ("iput") [flags 0x41]  <function_decl 0x7f2fcf2d2d00 iput>) [0 iput S1 A8])
         (const_int 16 [0x10])) "fs/namei.c":320:13 812 {*call}
      (nil)
     (expr_list (use (reg:SI 3 bx))
@@ -4273,7 +4273,7 @@ Dataflow summary:
      (expr_list:REG_ARGS_SIZE (const_int 16 [0x10])
         (nil)))
 (call_insn 108 107 109 14 (set (reg:SI 0 ax)
-        (call (mem:QI (symbol_ref:SI ("permission") [flags 0x3]  <function_decl 0x74bc2f949300 permission>) [0 permission S1 A8])
+        (call (mem:QI (symbol_ref:SI ("permission") [flags 0x3]  <function_decl 0x7f2fcf349300 permission>) [0 permission S1 A8])
             (const_int 16 [0x10]))) "fs/namei.c":323:14 823 {*call_value}
      (nil)
     (nil))
@@ -4313,7 +4313,7 @@ Dataflow summary:
         (reg/f:SI 0 ax [orig:102 dir.42_20 ] [102])) "fs/namei.c":324:13 54 {*pushsi2}
      (expr_list:REG_ARGS_SIZE (const_int 16 [0x10])
         (nil)))
-(call_insn 118 116 119 15 (call (mem:QI (symbol_ref:SI ("iput") [flags 0x41]  <function_decl 0x74bc2f8d2d00 iput>) [0 iput S1 A8])
+(call_insn 118 116 119 15 (call (mem:QI (symbol_ref:SI ("iput") [flags 0x41]  <function_decl 0x7f2fcf2d2d00 iput>) [0 iput S1 A8])
         (const_int 16 [0x10])) "fs/namei.c":324:13 812 {*call}
      (nil)
     (expr_list (use (reg:SI 3 bx))
@@ -4360,7 +4360,7 @@ Dataflow summary:
      (expr_list:REG_ARGS_SIZE (const_int 16 [0x10])
         (nil)))
 (call_insn 131 129 132 16 (set (reg:SI 0 ax)
-        (call (mem:QI (symbol_ref:SI ("new_inode") [flags 0x41]  <function_decl 0x74bc2f910200 new_inode>) [0 new_inode S1 A8])
+        (call (mem:QI (symbol_ref:SI ("new_inode") [flags 0x41]  <function_decl 0x7f2fcf310200 new_inode>) [0 new_inode S1 A8])
             (const_int 16 [0x10]))) "fs/namei.c":327:17 823 {*call_value}
      (nil)
     (expr_list (use (reg:SI 3 bx))
@@ -4406,7 +4406,7 @@ Dataflow summary:
         (reg/f:SI 0 ax [orig:106 dir.44_24 ] [106])) "fs/namei.c":329:13 54 {*pushsi2}
      (expr_list:REG_ARGS_SIZE (const_int 16 [0x10])
         (nil)))
-(call_insn 142 140 143 17 (call (mem:QI (symbol_ref:SI ("iput") [flags 0x41]  <function_decl 0x74bc2f8d2d00 iput>) [0 iput S1 A8])
+(call_insn 142 140 143 17 (call (mem:QI (symbol_ref:SI ("iput") [flags 0x41]  <function_decl 0x7f2fcf2d2d00 iput>) [0 iput S1 A8])
         (const_int 16 [0x10])) "fs/namei.c":329:13 812 {*call}
      (nil)
     (expr_list (use (reg:SI 3 bx))
@@ -4432,7 +4432,7 @@ Dataflow summary:
 (insn 149 148 150 18 (set (reg/f:SI 0 ax [153])
         (mem/u/c:SI (plus:SI (reg:SI 3 bx [82])
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("current") [flags 0x40]  <var_decl 0x74bc2f92e120 current>)
+                            (symbol_ref:SI ("current") [flags 0x40]  <var_decl 0x7f2fcf32e120 current>)
                         ] UNSPEC_GOT))) [12  S4 A8])) "fs/namei.c":332:31 75 {*movsi_internal}
      (nil))
 (insn 150 149 151 18 (set (reg/f:SI 0 ax [orig:107 current.45_25 ] [107])
@@ -4504,7 +4504,7 @@ Dataflow summary:
      (expr_list:REG_ARGS_SIZE (const_int 16 [0x10])
         (nil)))
 (call_insn 168 167 169 18 (set (reg:SI 0 ax)
-        (call (mem:QI (symbol_ref:SI ("add_entry") [flags 0x3]  <function_decl 0x74bc2f949d00 add_entry>) [0 add_entry S1 A8])
+        (call (mem:QI (symbol_ref:SI ("add_entry") [flags 0x3]  <function_decl 0x7f2fcf349d00 add_entry>) [0 add_entry S1 A8])
             (const_int 16 [0x10]))) "fs/namei.c":335:14 823 {*call_value}
      (nil)
     (nil))
@@ -4569,7 +4569,7 @@ Dataflow summary:
                 (const_int 28 [0x1c])) [2 inode+0 S4 A32])) "fs/namei.c":338:13 54 {*pushsi2}
      (expr_list:REG_ARGS_SIZE (const_int 16 [0x10])
         (nil)))
-(call_insn 183 181 184 19 (call (mem:QI (symbol_ref:SI ("iput") [flags 0x41]  <function_decl 0x74bc2f8d2d00 iput>) [0 iput S1 A8])
+(call_insn 183 181 184 19 (call (mem:QI (symbol_ref:SI ("iput") [flags 0x41]  <function_decl 0x7f2fcf2d2d00 iput>) [0 iput S1 A8])
         (const_int 16 [0x10])) "fs/namei.c":338:13 812 {*call}
      (nil)
     (expr_list (use (reg:SI 3 bx))
@@ -4598,7 +4598,7 @@ Dataflow summary:
         (reg/f:SI 0 ax [orig:115 dir.49_34 ] [115])) "fs/namei.c":339:13 54 {*pushsi2}
      (expr_list:REG_ARGS_SIZE (const_int 16 [0x10])
         (nil)))
-(call_insn 189 187 190 19 (call (mem:QI (symbol_ref:SI ("iput") [flags 0x41]  <function_decl 0x74bc2f8d2d00 iput>) [0 iput S1 A8])
+(call_insn 189 187 190 19 (call (mem:QI (symbol_ref:SI ("iput") [flags 0x41]  <function_decl 0x7f2fcf2d2d00 iput>) [0 iput S1 A8])
         (const_int 16 [0x10])) "fs/namei.c":339:13 812 {*call}
      (nil)
     (expr_list (use (reg:SI 3 bx))
@@ -4656,7 +4656,7 @@ Dataflow summary:
                 (const_int 40 [0x28])) [9 bh+0 S4 A32])) "fs/namei.c":344:9 54 {*pushsi2}
      (expr_list:REG_ARGS_SIZE (const_int 16 [0x10])
         (nil)))
-(call_insn 205 203 206 20 (call (mem:QI (symbol_ref:SI ("brelse") [flags 0x41]  <function_decl 0x74bc2f90e200 brelse>) [0 brelse S1 A8])
+(call_insn 205 203 206 20 (call (mem:QI (symbol_ref:SI ("brelse") [flags 0x41]  <function_decl 0x7f2fcf30e200 brelse>) [0 brelse S1 A8])
         (const_int 16 [0x10])) "fs/namei.c":344:9 812 {*call}
      (nil)
     (expr_list (use (reg:SI 3 bx))
@@ -4685,7 +4685,7 @@ Dataflow summary:
         (reg/f:SI 0 ax [orig:118 dir.51_37 ] [118])) "fs/namei.c":345:9 54 {*pushsi2}
      (expr_list:REG_ARGS_SIZE (const_int 16 [0x10])
         (nil)))
-(call_insn 211 209 212 20 (call (mem:QI (symbol_ref:SI ("iput") [flags 0x41]  <function_decl 0x74bc2f8d2d00 iput>) [0 iput S1 A8])
+(call_insn 211 209 212 20 (call (mem:QI (symbol_ref:SI ("iput") [flags 0x41]  <function_decl 0x7f2fcf2d2d00 iput>) [0 iput S1 A8])
         (const_int 16 [0x10])) "fs/namei.c":345:9 812 {*call}
      (nil)
     (expr_list (use (reg:SI 3 bx))
@@ -4760,7 +4760,7 @@ Dataflow summary:
                 (const_int 40 [0x28])) [9 bh+0 S4 A32])) "fs/namei.c":351:5 54 {*pushsi2}
      (expr_list:REG_ARGS_SIZE (const_int 16 [0x10])
         (nil)))
-(call_insn 232 230 233 21 (call (mem:QI (symbol_ref:SI ("brelse") [flags 0x41]  <function_decl 0x74bc2f90e200 brelse>) [0 brelse S1 A8])
+(call_insn 232 230 233 21 (call (mem:QI (symbol_ref:SI ("brelse") [flags 0x41]  <function_decl 0x7f2fcf30e200 brelse>) [0 brelse S1 A8])
         (const_int 16 [0x10])) "fs/namei.c":351:5 812 {*call}
      (nil)
     (expr_list (use (reg:SI 3 bx))
@@ -4789,7 +4789,7 @@ Dataflow summary:
         (reg/f:SI 0 ax [orig:123 dir.54_42 ] [123])) "fs/namei.c":352:5 54 {*pushsi2}
      (expr_list:REG_ARGS_SIZE (const_int 16 [0x10])
         (nil)))
-(call_insn 238 236 239 21 (call (mem:QI (symbol_ref:SI ("iput") [flags 0x41]  <function_decl 0x74bc2f8d2d00 iput>) [0 iput S1 A8])
+(call_insn 238 236 239 21 (call (mem:QI (symbol_ref:SI ("iput") [flags 0x41]  <function_decl 0x7f2fcf2d2d00 iput>) [0 iput S1 A8])
         (const_int 16 [0x10])) "fs/namei.c":352:5 812 {*call}
      (nil)
     (expr_list (use (reg:SI 3 bx))
@@ -4857,7 +4857,7 @@ Dataflow summary:
      (expr_list:REG_ARGS_SIZE (const_int 16 [0x10])
         (nil)))
 (call_insn 254 252 255 23 (set (reg:SI 0 ax)
-        (call (mem:QI (symbol_ref:SI ("iget") [flags 0x41]  <function_decl 0x74bc2f90e900 iget>) [0 iget S1 A8])
+        (call (mem:QI (symbol_ref:SI ("iget") [flags 0x41]  <function_decl 0x7f2fcf30e900 iget>) [0 iget S1 A8])
             (const_int 16 [0x10]))) "fs/namei.c":355:19 823 {*call_value}
      (nil)
     (expr_list (use (reg:SI 3 bx))
@@ -4971,7 +4971,7 @@ Dataflow summary:
         (mem/u:QI (plus:SI (plus:SI (reg:SI 3 bx [82])
                     (reg:SI 0 ax [orig:129 _48 ] [129]))
                 (const:SI (unspec:SI [
-                            (symbol_ref/f:SI ("*.LC2") [flags 0x2]  <var_decl 0x74bc2f989090 *.LC2>)
+                            (symbol_ref/f:SI ("*.LC2") [flags 0x2]  <var_decl 0x7f2fcf389090 *.LC2>)
                         ] UNSPEC_GOTOFF))) [0 "\x04\x02\x06\xff"[_48]+0 S1 A8])) "fs/namei.c":358:29 77 {*movqi_internal}
      (nil))
 (insn 282 281 283 27 (set (reg:SI 0 ax [orig:131 _50 ] [131])
@@ -4995,7 +4995,7 @@ Dataflow summary:
      (expr_list:REG_ARGS_SIZE (const_int 16 [0x10])
         (nil)))
 (call_insn 286 285 287 27 (set (reg:SI 0 ax)
-        (call (mem:QI (symbol_ref:SI ("permission") [flags 0x3]  <function_decl 0x74bc2f949300 permission>) [0 permission S1 A8])
+        (call (mem:QI (symbol_ref:SI ("permission") [flags 0x3]  <function_decl 0x7f2fcf349300 permission>) [0 permission S1 A8])
             (const_int 16 [0x10]))) "fs/namei.c":358:11 823 {*call_value}
      (nil)
     (nil))
@@ -5033,7 +5033,7 @@ Dataflow summary:
                 (const_int 28 [0x1c])) [2 inode+0 S4 A32])) "fs/namei.c":359:9 54 {*pushsi2}
      (expr_list:REG_ARGS_SIZE (const_int 16 [0x10])
         (nil)))
-(call_insn 296 294 297 28 (call (mem:QI (symbol_ref:SI ("iput") [flags 0x41]  <function_decl 0x74bc2f8d2d00 iput>) [0 iput S1 A8])
+(call_insn 296 294 297 28 (call (mem:QI (symbol_ref:SI ("iput") [flags 0x41]  <function_decl 0x7f2fcf2d2d00 iput>) [0 iput S1 A8])
         (const_int 16 [0x10])) "fs/namei.c":359:9 812 {*call}
      (nil)
     (expr_list (use (reg:SI 3 bx))
@@ -5059,7 +5059,7 @@ Dataflow summary:
 (insn 303 302 304 29 (set (reg/f:SI 0 ax [173])
         (mem/u/c:SI (plus:SI (reg:SI 3 bx [82])
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("jiffies") [flags 0x40]  <var_decl 0x74bc2f92e360 jiffies>)
+                            (symbol_ref:SI ("jiffies") [flags 0x40]  <var_decl 0x7f2fcf32e360 jiffies>)
                         ] UNSPEC_GOT))) [12  S4 A8])) "fs/namei.c":362:22 75 {*movsi_internal}
      (nil))
 (insn 304 303 305 29 (set (reg:SI 2 cx [orig:133 jiffies.55_52 ] [133])
@@ -5110,7 +5110,7 @@ Dataflow summary:
 (insn 310 371 311 29 (set (reg/f:SI 0 ax [178])
         (mem/u/c:SI (plus:SI (reg:SI 3 bx [82])
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("startup_time") [flags 0x40]  <var_decl 0x74bc2f92e3f0 startup_time>)
+                            (symbol_ref:SI ("startup_time") [flags 0x40]  <var_decl 0x7f2fcf32e3f0 startup_time>)
                         ] UNSPEC_GOT))) [12  S4 A8])) "fs/namei.c":362:22 75 {*movsi_internal}
      (nil))
 (insn 311 310 312 29 (set (reg:SI 0 ax [orig:135 startup_time.56_54 ] [135])
@@ -5173,7 +5173,7 @@ Dataflow summary:
                 (const_int 28 [0x1c])) [2 inode+0 S4 A32])) "fs/namei.c":364:9 54 {*pushsi2}
      (expr_list:REG_ARGS_SIZE (const_int 16 [0x10])
         (nil)))
-(call_insn 324 322 325 30 (call (mem:QI (symbol_ref:SI ("truncate") [flags 0x41]  <function_decl 0x74bc2f8d2700 truncate>) [0 truncate S1 A8])
+(call_insn 324 322 325 30 (call (mem:QI (symbol_ref:SI ("truncate") [flags 0x41]  <function_decl 0x7f2fcf2d2700 truncate>) [0 truncate S1 A8])
         (const_int 16 [0x10])) "fs/namei.c":364:9 812 {*call}
      (nil)
     (expr_list (use (reg:SI 3 bx))
@@ -5342,7 +5342,7 @@ Dataflow summary:
      (expr_list:REG_ARGS_SIZE (const_int 16 [0x10])
         (nil)))
 (call_insn 11 10 12 2 (set (reg:SI 0 ax)
-        (call (mem:QI (symbol_ref:SI ("dir_namei") [flags 0x3]  <function_decl 0x74bc2f949b00 dir_namei>) [0 dir_namei S1 A8])
+        (call (mem:QI (symbol_ref:SI ("dir_namei") [flags 0x3]  <function_decl 0x7f2fcf349b00 dir_namei>) [0 dir_namei S1 A8])
             (const_int 16 [0x10]))) "fs/namei.c":384:17 823 {*call_value}
      (nil)
     (nil))
@@ -5450,7 +5450,7 @@ Dataflow summary:
      (expr_list:REG_ARGS_SIZE (const_int 16 [0x10])
         (nil)))
 (call_insn 41 40 42 6 (set (reg:SI 0 ax)
-        (call (mem:QI (symbol_ref:SI ("find_entry") [flags 0x3]  <function_decl 0x74bc2f949700 find_entry>) [0 find_entry S1 A8])
+        (call (mem:QI (symbol_ref:SI ("find_entry") [flags 0x3]  <function_decl 0x7f2fcf349700 find_entry>) [0 find_entry S1 A8])
             (const_int 16 [0x10]))) "fs/namei.c":388:10 823 {*call_value}
      (nil)
     (nil))
@@ -5495,7 +5495,7 @@ Dataflow summary:
         (reg/f:SI 0 ax [orig:88 dir.61_6 ] [88])) "fs/namei.c":390:9 54 {*pushsi2}
      (expr_list:REG_ARGS_SIZE (const_int 16 [0x10])
         (nil)))
-(call_insn 52 50 53 7 (call (mem:QI (symbol_ref:SI ("iput") [flags 0x41]  <function_decl 0x74bc2f8d2d00 iput>) [0 iput S1 A8])
+(call_insn 52 50 53 7 (call (mem:QI (symbol_ref:SI ("iput") [flags 0x41]  <function_decl 0x7f2fcf2d2d00 iput>) [0 iput S1 A8])
         (const_int 16 [0x10])) "fs/namei.c":390:9 812 {*call}
      (nil)
     (expr_list (use (reg:SI 3 bx))
@@ -5560,7 +5560,7 @@ Dataflow summary:
                 (const_int 40 [0x28])) [9 bh+0 S4 A32])) "fs/namei.c":395:5 54 {*pushsi2}
      (expr_list:REG_ARGS_SIZE (const_int 16 [0x10])
         (nil)))
-(call_insn 70 68 71 8 (call (mem:QI (symbol_ref:SI ("brelse") [flags 0x41]  <function_decl 0x74bc2f90e200 brelse>) [0 brelse S1 A8])
+(call_insn 70 68 71 8 (call (mem:QI (symbol_ref:SI ("brelse") [flags 0x41]  <function_decl 0x7f2fcf30e200 brelse>) [0 brelse S1 A8])
         (const_int 16 [0x10])) "fs/namei.c":395:5 812 {*call}
      (nil)
     (expr_list (use (reg:SI 3 bx))
@@ -5589,7 +5589,7 @@ Dataflow summary:
         (reg/f:SI 0 ax [orig:93 dir.64_11 ] [93])) "fs/namei.c":396:5 54 {*pushsi2}
      (expr_list:REG_ARGS_SIZE (const_int 16 [0x10])
         (nil)))
-(call_insn 76 74 77 8 (call (mem:QI (symbol_ref:SI ("iput") [flags 0x41]  <function_decl 0x74bc2f8d2d00 iput>) [0 iput S1 A8])
+(call_insn 76 74 77 8 (call (mem:QI (symbol_ref:SI ("iput") [flags 0x41]  <function_decl 0x7f2fcf2d2d00 iput>) [0 iput S1 A8])
         (const_int 16 [0x10])) "fs/namei.c":396:5 812 {*call}
      (nil)
     (expr_list (use (reg:SI 3 bx))
@@ -5621,7 +5621,7 @@ Dataflow summary:
      (expr_list:REG_ARGS_SIZE (const_int 16 [0x10])
         (nil)))
 (call_insn 82 80 83 8 (set (reg:SI 0 ax)
-        (call (mem:QI (symbol_ref:SI ("iget") [flags 0x41]  <function_decl 0x74bc2f90e900 iget>) [0 iget S1 A8])
+        (call (mem:QI (symbol_ref:SI ("iget") [flags 0x41]  <function_decl 0x7f2fcf30e900 iget>) [0 iget S1 A8])
             (const_int 16 [0x10]))) "fs/namei.c":397:11 823 {*call_value}
      (nil)
     (expr_list (use (reg:SI 3 bx))
@@ -5657,7 +5657,7 @@ Dataflow summary:
 (insn 90 89 91 9 (set (reg/f:SI 0 ax [112])
         (mem/u/c:SI (plus:SI (reg:SI 3 bx [82])
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("jiffies") [flags 0x40]  <var_decl 0x74bc2f92e360 jiffies>)
+                            (symbol_ref:SI ("jiffies") [flags 0x40]  <var_decl 0x7f2fcf32e360 jiffies>)
                         ] UNSPEC_GOT))) [12  S4 A8])) "fs/namei.c":399:24 75 {*movsi_internal}
      (nil))
 (insn 91 90 92 9 (set (reg:SI 2 cx [orig:96 jiffies.66_14 ] [96])
@@ -5708,7 +5708,7 @@ Dataflow summary:
 (insn 97 131 98 9 (set (reg/f:SI 0 ax [117])
         (mem/u/c:SI (plus:SI (reg:SI 3 bx [82])
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("startup_time") [flags 0x40]  <var_decl 0x74bc2f92e3f0 startup_time>)
+                            (symbol_ref:SI ("startup_time") [flags 0x40]  <var_decl 0x7f2fcf32e3f0 startup_time>)
                         ] UNSPEC_GOT))) [12  S4 A8])) "fs/namei.c":399:24 75 {*movsi_internal}
      (nil))
 (insn 98 97 99 9 (set (reg:SI 0 ax [orig:98 startup_time.67_16 ] [98])
@@ -5874,7 +5874,7 @@ Dataflow summary:
      (expr_list:REG_ARGS_SIZE (const_int 16 [0x10])
         (nil)))
 (call_insn 7 6 8 2 (set (reg:SI 0 ax)
-        (call (mem:QI (symbol_ref:SI ("namei") [flags 0x3]  <function_decl 0x74bc2f910500 namei>) [0 namei S1 A8])
+        (call (mem:QI (symbol_ref:SI ("namei") [flags 0x3]  <function_decl 0x7f2fcf310500 namei>) [0 namei S1 A8])
             (const_int 16 [0x10]))) "fs/namei.c":413:16 823 {*call_value}
      (nil)
     (nil))
@@ -5955,7 +5955,7 @@ Dataflow summary:
                 (const_int 40 [0x28])) [2 oldinode+0 S4 A32])) "fs/namei.c":417:9 54 {*pushsi2}
      (expr_list:REG_ARGS_SIZE (const_int 16 [0x10])
         (nil)))
-(call_insn 29 27 30 5 (call (mem:QI (symbol_ref:SI ("iput") [flags 0x41]  <function_decl 0x74bc2f8d2d00 iput>) [0 iput S1 A8])
+(call_insn 29 27 30 5 (call (mem:QI (symbol_ref:SI ("iput") [flags 0x41]  <function_decl 0x7f2fcf2d2d00 iput>) [0 iput S1 A8])
         (const_int 16 [0x10])) "fs/namei.c":417:9 812 {*call}
      (nil)
     (expr_list (use (reg:SI 3 bx))
@@ -6014,7 +6014,7 @@ Dataflow summary:
      (expr_list:REG_ARGS_SIZE (const_int 16 [0x10])
         (nil)))
 (call_insn 42 41 43 6 (set (reg:SI 0 ax)
-        (call (mem:QI (symbol_ref:SI ("dir_namei") [flags 0x3]  <function_decl 0x74bc2f949b00 dir_namei>) [0 dir_namei S1 A8])
+        (call (mem:QI (symbol_ref:SI ("dir_namei") [flags 0x3]  <function_decl 0x7f2fcf349b00 dir_namei>) [0 dir_namei S1 A8])
             (const_int 16 [0x10]))) "fs/namei.c":420:11 823 {*call_value}
      (nil)
     (nil))
@@ -6059,7 +6059,7 @@ Dataflow summary:
                 (const_int 40 [0x28])) [2 oldinode+0 S4 A32])) "fs/namei.c":422:9 54 {*pushsi2}
      (expr_list:REG_ARGS_SIZE (const_int 16 [0x10])
         (nil)))
-(call_insn 53 51 54 7 (call (mem:QI (symbol_ref:SI ("iput") [flags 0x41]  <function_decl 0x74bc2f8d2d00 iput>) [0 iput S1 A8])
+(call_insn 53 51 54 7 (call (mem:QI (symbol_ref:SI ("iput") [flags 0x41]  <function_decl 0x7f2fcf2d2d00 iput>) [0 iput S1 A8])
         (const_int 16 [0x10])) "fs/namei.c":422:9 812 {*call}
      (nil)
     (expr_list (use (reg:SI 3 bx))
@@ -6111,7 +6111,7 @@ Dataflow summary:
                 (const_int 40 [0x28])) [2 oldinode+0 S4 A32])) "fs/namei.c":426:9 54 {*pushsi2}
      (expr_list:REG_ARGS_SIZE (const_int 16 [0x10])
         (nil)))
-(call_insn 67 65 68 9 (call (mem:QI (symbol_ref:SI ("iput") [flags 0x41]  <function_decl 0x74bc2f8d2d00 iput>) [0 iput S1 A8])
+(call_insn 67 65 68 9 (call (mem:QI (symbol_ref:SI ("iput") [flags 0x41]  <function_decl 0x7f2fcf2d2d00 iput>) [0 iput S1 A8])
         (const_int 16 [0x10])) "fs/namei.c":426:9 812 {*call}
      (nil)
     (expr_list (use (reg:SI 3 bx))
@@ -6140,7 +6140,7 @@ Dataflow summary:
         (reg/f:SI 0 ax [orig:89 dir.72_7 ] [89])) "fs/namei.c":427:9 54 {*pushsi2}
      (expr_list:REG_ARGS_SIZE (const_int 16 [0x10])
         (nil)))
-(call_insn 73 71 74 9 (call (mem:QI (symbol_ref:SI ("iput") [flags 0x41]  <function_decl 0x74bc2f8d2d00 iput>) [0 iput S1 A8])
+(call_insn 73 71 74 9 (call (mem:QI (symbol_ref:SI ("iput") [flags 0x41]  <function_decl 0x7f2fcf2d2d00 iput>) [0 iput S1 A8])
         (const_int 16 [0x10])) "fs/namei.c":427:9 812 {*call}
      (nil)
     (expr_list (use (reg:SI 3 bx))
@@ -6207,7 +6207,7 @@ Dataflow summary:
         (reg/f:SI 0 ax [orig:93 dir.74_11 ] [93])) "fs/namei.c":431:9 54 {*pushsi2}
      (expr_list:REG_ARGS_SIZE (const_int 16 [0x10])
         (nil)))
-(call_insn 91 89 92 11 (call (mem:QI (symbol_ref:SI ("iput") [flags 0x41]  <function_decl 0x74bc2f8d2d00 iput>) [0 iput S1 A8])
+(call_insn 91 89 92 11 (call (mem:QI (symbol_ref:SI ("iput") [flags 0x41]  <function_decl 0x7f2fcf2d2d00 iput>) [0 iput S1 A8])
         (const_int 16 [0x10])) "fs/namei.c":431:9 812 {*call}
      (nil)
     (expr_list (use (reg:SI 3 bx))
@@ -6233,7 +6233,7 @@ Dataflow summary:
                 (const_int 40 [0x28])) [2 oldinode+0 S4 A32])) "fs/namei.c":432:9 54 {*pushsi2}
      (expr_list:REG_ARGS_SIZE (const_int 16 [0x10])
         (nil)))
-(call_insn 96 94 97 11 (call (mem:QI (symbol_ref:SI ("iput") [flags 0x41]  <function_decl 0x74bc2f8d2d00 iput>) [0 iput S1 A8])
+(call_insn 96 94 97 11 (call (mem:QI (symbol_ref:SI ("iput") [flags 0x41]  <function_decl 0x7f2fcf2d2d00 iput>) [0 iput S1 A8])
         (const_int 16 [0x10])) "fs/namei.c":432:9 812 {*call}
      (nil)
     (expr_list (use (reg:SI 3 bx))
@@ -6277,7 +6277,7 @@ Dataflow summary:
      (expr_list:REG_ARGS_SIZE (const_int 16 [0x10])
         (nil)))
 (call_insn 107 106 108 12 (set (reg:SI 0 ax)
-        (call (mem:QI (symbol_ref:SI ("permission") [flags 0x3]  <function_decl 0x74bc2f949300 permission>) [0 permission S1 A8])
+        (call (mem:QI (symbol_ref:SI ("permission") [flags 0x3]  <function_decl 0x7f2fcf349300 permission>) [0 permission S1 A8])
             (const_int 16 [0x10]))) "fs/namei.c":435:10 823 {*call_value}
      (nil)
     (nil))
@@ -6317,7 +6317,7 @@ Dataflow summary:
         (reg/f:SI 0 ax [orig:96 dir.76_14 ] [96])) "fs/namei.c":436:9 54 {*pushsi2}
      (expr_list:REG_ARGS_SIZE (const_int 16 [0x10])
         (nil)))
-(call_insn 117 115 118 13 (call (mem:QI (symbol_ref:SI ("iput") [flags 0x41]  <function_decl 0x74bc2f8d2d00 iput>) [0 iput S1 A8])
+(call_insn 117 115 118 13 (call (mem:QI (symbol_ref:SI ("iput") [flags 0x41]  <function_decl 0x7f2fcf2d2d00 iput>) [0 iput S1 A8])
         (const_int 16 [0x10])) "fs/namei.c":436:9 812 {*call}
      (nil)
     (expr_list (use (reg:SI 3 bx))
@@ -6343,7 +6343,7 @@ Dataflow summary:
                 (const_int 40 [0x28])) [2 oldinode+0 S4 A32])) "fs/namei.c":437:9 54 {*pushsi2}
      (expr_list:REG_ARGS_SIZE (const_int 16 [0x10])
         (nil)))
-(call_insn 122 120 123 13 (call (mem:QI (symbol_ref:SI ("iput") [flags 0x41]  <function_decl 0x74bc2f8d2d00 iput>) [0 iput S1 A8])
+(call_insn 122 120 123 13 (call (mem:QI (symbol_ref:SI ("iput") [flags 0x41]  <function_decl 0x7f2fcf2d2d00 iput>) [0 iput S1 A8])
         (const_int 16 [0x10])) "fs/namei.c":437:9 812 {*call}
      (nil)
     (expr_list (use (reg:SI 3 bx))
@@ -6405,7 +6405,7 @@ Dataflow summary:
      (expr_list:REG_ARGS_SIZE (const_int 16 [0x10])
         (nil)))
 (call_insn 137 136 138 14 (set (reg:SI 0 ax)
-        (call (mem:QI (symbol_ref:SI ("find_entry") [flags 0x3]  <function_decl 0x74bc2f949700 find_entry>) [0 find_entry S1 A8])
+        (call (mem:QI (symbol_ref:SI ("find_entry") [flags 0x3]  <function_decl 0x7f2fcf349700 find_entry>) [0 find_entry S1 A8])
             (const_int 16 [0x10]))) "fs/namei.c":440:10 823 {*call_value}
      (nil)
     (nil))
@@ -6447,7 +6447,7 @@ Dataflow summary:
                 (const_int 36 [0x24])) [9 bh+0 S4 A32])) "fs/namei.c":442:9 54 {*pushsi2}
      (expr_list:REG_ARGS_SIZE (const_int 16 [0x10])
         (nil)))
-(call_insn 147 145 148 15 (call (mem:QI (symbol_ref:SI ("brelse") [flags 0x41]  <function_decl 0x74bc2f90e200 brelse>) [0 brelse S1 A8])
+(call_insn 147 145 148 15 (call (mem:QI (symbol_ref:SI ("brelse") [flags 0x41]  <function_decl 0x7f2fcf30e200 brelse>) [0 brelse S1 A8])
         (const_int 16 [0x10])) "fs/namei.c":442:9 812 {*call}
      (nil)
     (expr_list (use (reg:SI 3 bx))
@@ -6476,7 +6476,7 @@ Dataflow summary:
         (reg/f:SI 0 ax [orig:99 dir.79_17 ] [99])) "fs/namei.c":443:9 54 {*pushsi2}
      (expr_list:REG_ARGS_SIZE (const_int 16 [0x10])
         (nil)))
-(call_insn 153 151 154 15 (call (mem:QI (symbol_ref:SI ("iput") [flags 0x41]  <function_decl 0x74bc2f8d2d00 iput>) [0 iput S1 A8])
+(call_insn 153 151 154 15 (call (mem:QI (symbol_ref:SI ("iput") [flags 0x41]  <function_decl 0x7f2fcf2d2d00 iput>) [0 iput S1 A8])
         (const_int 16 [0x10])) "fs/namei.c":443:9 812 {*call}
      (nil)
     (expr_list (use (reg:SI 3 bx))
@@ -6502,7 +6502,7 @@ Dataflow summary:
                 (const_int 40 [0x28])) [2 oldinode+0 S4 A32])) "fs/namei.c":444:9 54 {*pushsi2}
      (expr_list:REG_ARGS_SIZE (const_int 16 [0x10])
         (nil)))
-(call_insn 158 156 159 15 (call (mem:QI (symbol_ref:SI ("iput") [flags 0x41]  <function_decl 0x74bc2f8d2d00 iput>) [0 iput S1 A8])
+(call_insn 158 156 159 15 (call (mem:QI (symbol_ref:SI ("iput") [flags 0x41]  <function_decl 0x7f2fcf2d2d00 iput>) [0 iput S1 A8])
         (const_int 16 [0x10])) "fs/namei.c":444:9 812 {*call}
      (nil)
     (expr_list (use (reg:SI 3 bx))
@@ -6561,7 +6561,7 @@ Dataflow summary:
      (expr_list:REG_ARGS_SIZE (const_int 16 [0x10])
         (nil)))
 (call_insn 173 172 174 16 (set (reg:SI 0 ax)
-        (call (mem:QI (symbol_ref:SI ("add_entry") [flags 0x3]  <function_decl 0x74bc2f949d00 add_entry>) [0 add_entry S1 A8])
+        (call (mem:QI (symbol_ref:SI ("add_entry") [flags 0x3]  <function_decl 0x7f2fcf349d00 add_entry>) [0 add_entry S1 A8])
             (const_int 16 [0x10]))) "fs/namei.c":447:10 823 {*call_value}
      (nil)
     (nil))
@@ -6606,7 +6606,7 @@ Dataflow summary:
         (reg/f:SI 0 ax [orig:103 dir.83_21 ] [103])) "fs/namei.c":449:9 54 {*pushsi2}
      (expr_list:REG_ARGS_SIZE (const_int 16 [0x10])
         (nil)))
-(call_insn 184 182 185 17 (call (mem:QI (symbol_ref:SI ("iput") [flags 0x41]  <function_decl 0x74bc2f8d2d00 iput>) [0 iput S1 A8])
+(call_insn 184 182 185 17 (call (mem:QI (symbol_ref:SI ("iput") [flags 0x41]  <function_decl 0x7f2fcf2d2d00 iput>) [0 iput S1 A8])
         (const_int 16 [0x10])) "fs/namei.c":449:9 812 {*call}
      (nil)
     (expr_list (use (reg:SI 3 bx))
@@ -6632,7 +6632,7 @@ Dataflow summary:
                 (const_int 40 [0x28])) [2 oldinode+0 S4 A32])) "fs/namei.c":450:9 54 {*pushsi2}
      (expr_list:REG_ARGS_SIZE (const_int 16 [0x10])
         (nil)))
-(call_insn 189 187 190 17 (call (mem:QI (symbol_ref:SI ("iput") [flags 0x41]  <function_decl 0x74bc2f8d2d00 iput>) [0 iput S1 A8])
+(call_insn 189 187 190 17 (call (mem:QI (symbol_ref:SI ("iput") [flags 0x41]  <function_decl 0x7f2fcf2d2d00 iput>) [0 iput S1 A8])
         (const_int 16 [0x10])) "fs/namei.c":450:9 812 {*call}
      (nil)
     (expr_list (use (reg:SI 3 bx))
@@ -6691,7 +6691,7 @@ Dataflow summary:
                 (const_int 36 [0x24])) [9 bh+0 S4 A32])) "fs/namei.c":455:5 54 {*pushsi2}
      (expr_list:REG_ARGS_SIZE (const_int 16 [0x10])
         (nil)))
-(call_insn 205 203 206 18 (call (mem:QI (symbol_ref:SI ("brelse") [flags 0x41]  <function_decl 0x74bc2f90e200 brelse>) [0 brelse S1 A8])
+(call_insn 205 203 206 18 (call (mem:QI (symbol_ref:SI ("brelse") [flags 0x41]  <function_decl 0x7f2fcf30e200 brelse>) [0 brelse S1 A8])
         (const_int 16 [0x10])) "fs/namei.c":455:5 812 {*call}
      (nil)
     (expr_list (use (reg:SI 3 bx))
@@ -6720,7 +6720,7 @@ Dataflow summary:
         (reg/f:SI 0 ax [orig:106 dir.85_24 ] [106])) "fs/namei.c":456:5 54 {*pushsi2}
      (expr_list:REG_ARGS_SIZE (const_int 16 [0x10])
         (nil)))
-(call_insn 211 209 212 18 (call (mem:QI (symbol_ref:SI ("iput") [flags 0x41]  <function_decl 0x74bc2f8d2d00 iput>) [0 iput S1 A8])
+(call_insn 211 209 212 18 (call (mem:QI (symbol_ref:SI ("iput") [flags 0x41]  <function_decl 0x7f2fcf2d2d00 iput>) [0 iput S1 A8])
         (const_int 16 [0x10])) "fs/namei.c":456:5 812 {*call}
      (nil)
     (expr_list (use (reg:SI 3 bx))
@@ -6759,7 +6759,7 @@ Dataflow summary:
 (insn 218 217 219 18 (set (reg/f:SI 0 ax [130])
         (mem/u/c:SI (plus:SI (reg:SI 3 bx [82])
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("jiffies") [flags 0x40]  <var_decl 0x74bc2f92e360 jiffies>)
+                            (symbol_ref:SI ("jiffies") [flags 0x40]  <var_decl 0x7f2fcf32e360 jiffies>)
                         ] UNSPEC_GOT))) [12  S4 A8])) "fs/namei.c":458:25 75 {*movsi_internal}
      (nil))
 (insn 219 218 220 18 (set (reg:SI 2 cx [orig:109 jiffies.86_28 ] [109])
@@ -6810,7 +6810,7 @@ Dataflow summary:
 (insn 225 272 226 18 (set (reg/f:SI 0 ax [135])
         (mem/u/c:SI (plus:SI (reg:SI 3 bx [82])
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("startup_time") [flags 0x40]  <var_decl 0x74bc2f92e3f0 startup_time>)
+                            (symbol_ref:SI ("startup_time") [flags 0x40]  <var_decl 0x7f2fcf32e3f0 startup_time>)
                         ] UNSPEC_GOT))) [12  S4 A8])) "fs/namei.c":458:25 75 {*movsi_internal}
      (nil))
 (insn 226 225 227 18 (set (reg:SI 0 ax [orig:111 startup_time.87_30 ] [111])
@@ -6855,7 +6855,7 @@ Dataflow summary:
                 (const_int 40 [0x28])) [2 oldinode+0 S4 A32])) "fs/namei.c":460:5 54 {*pushsi2}
      (expr_list:REG_ARGS_SIZE (const_int 16 [0x10])
         (nil)))
-(call_insn 236 234 237 18 (call (mem:QI (symbol_ref:SI ("iput") [flags 0x41]  <function_decl 0x74bc2f8d2d00 iput>) [0 iput S1 A8])
+(call_insn 236 234 237 18 (call (mem:QI (symbol_ref:SI ("iput") [flags 0x41]  <function_decl 0x7f2fcf2d2d00 iput>) [0 iput S1 A8])
         (const_int 16 [0x10])) "fs/namei.c":460:5 812 {*call}
      (nil)
     (expr_list (use (reg:SI 3 bx))
@@ -6992,7 +6992,7 @@ Dataflow summary:
 (insn 5 2 6 2 (set (reg/f:SI 0 ax [118])
         (mem/u/c:SI (plus:SI (reg:SI 3 bx [82])
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("current") [flags 0x40]  <var_decl 0x74bc2f92e120 current>)
+                            (symbol_ref:SI ("current") [flags 0x40]  <var_decl 0x7f2fcf32e120 current>)
                         ] UNSPEC_GOT))) [12  S4 A8])) "fs/namei.c":472:10 75 {*movsi_internal}
      (nil))
 (insn 6 5 7 2 (set (reg/f:SI 0 ax [orig:83 current.88_1 ] [83])
@@ -7060,7 +7060,7 @@ Dataflow summary:
      (expr_list:REG_ARGS_SIZE (const_int 16 [0x10])
         (nil)))
 (call_insn 22 21 23 4 (set (reg:SI 0 ax)
-        (call (mem:QI (symbol_ref:SI ("dir_namei") [flags 0x3]  <function_decl 0x74bc2f949b00 dir_namei>) [0 dir_namei S1 A8])
+        (call (mem:QI (symbol_ref:SI ("dir_namei") [flags 0x3]  <function_decl 0x7f2fcf349b00 dir_namei>) [0 dir_namei S1 A8])
             (const_int 16 [0x10]))) "fs/namei.c":474:17 823 {*call_value}
      (nil)
     (nil))
@@ -7134,7 +7134,7 @@ Dataflow summary:
         (reg/f:SI 0 ax [orig:88 dir.91_6 ] [88])) "fs/namei.c":477:9 54 {*pushsi2}
      (expr_list:REG_ARGS_SIZE (const_int 16 [0x10])
         (nil)))
-(call_insn 43 41 44 7 (call (mem:QI (symbol_ref:SI ("iput") [flags 0x41]  <function_decl 0x74bc2f8d2d00 iput>) [0 iput S1 A8])
+(call_insn 43 41 44 7 (call (mem:QI (symbol_ref:SI ("iput") [flags 0x41]  <function_decl 0x7f2fcf2d2d00 iput>) [0 iput S1 A8])
         (const_int 16 [0x10])) "fs/namei.c":477:9 812 {*call}
      (nil)
     (expr_list (use (reg:SI 3 bx))
@@ -7178,7 +7178,7 @@ Dataflow summary:
      (expr_list:REG_ARGS_SIZE (const_int 16 [0x10])
         (nil)))
 (call_insn 54 53 55 8 (set (reg:SI 0 ax)
-        (call (mem:QI (symbol_ref:SI ("permission") [flags 0x3]  <function_decl 0x74bc2f949300 permission>) [0 permission S1 A8])
+        (call (mem:QI (symbol_ref:SI ("permission") [flags 0x3]  <function_decl 0x7f2fcf349300 permission>) [0 permission S1 A8])
             (const_int 16 [0x10]))) "fs/namei.c":480:10 823 {*call_value}
      (nil)
     (nil))
@@ -7218,7 +7218,7 @@ Dataflow summary:
         (reg/f:SI 0 ax [orig:91 dir.93_9 ] [91])) "fs/namei.c":481:9 54 {*pushsi2}
      (expr_list:REG_ARGS_SIZE (const_int 16 [0x10])
         (nil)))
-(call_insn 64 62 65 9 (call (mem:QI (symbol_ref:SI ("iput") [flags 0x41]  <function_decl 0x74bc2f8d2d00 iput>) [0 iput S1 A8])
+(call_insn 64 62 65 9 (call (mem:QI (symbol_ref:SI ("iput") [flags 0x41]  <function_decl 0x7f2fcf2d2d00 iput>) [0 iput S1 A8])
         (const_int 16 [0x10])) "fs/namei.c":481:9 812 {*call}
      (nil)
     (expr_list (use (reg:SI 3 bx))
@@ -7280,7 +7280,7 @@ Dataflow summary:
      (expr_list:REG_ARGS_SIZE (const_int 16 [0x10])
         (nil)))
 (call_insn 79 78 80 10 (set (reg:SI 0 ax)
-        (call (mem:QI (symbol_ref:SI ("find_entry") [flags 0x3]  <function_decl 0x74bc2f949700 find_entry>) [0 find_entry S1 A8])
+        (call (mem:QI (symbol_ref:SI ("find_entry") [flags 0x3]  <function_decl 0x7f2fcf349700 find_entry>) [0 find_entry S1 A8])
             (const_int 16 [0x10]))) "fs/namei.c":484:10 823 {*call_value}
      (nil)
     (nil))
@@ -7322,7 +7322,7 @@ Dataflow summary:
                 (const_int 40 [0x28])) [9 bh+0 S4 A32])) "fs/namei.c":486:9 54 {*pushsi2}
      (expr_list:REG_ARGS_SIZE (const_int 16 [0x10])
         (nil)))
-(call_insn 89 87 90 11 (call (mem:QI (symbol_ref:SI ("brelse") [flags 0x41]  <function_decl 0x74bc2f90e200 brelse>) [0 brelse S1 A8])
+(call_insn 89 87 90 11 (call (mem:QI (symbol_ref:SI ("brelse") [flags 0x41]  <function_decl 0x7f2fcf30e200 brelse>) [0 brelse S1 A8])
         (const_int 16 [0x10])) "fs/namei.c":486:9 812 {*call}
      (nil)
     (expr_list (use (reg:SI 3 bx))
@@ -7351,7 +7351,7 @@ Dataflow summary:
         (reg/f:SI 0 ax [orig:94 dir.96_12 ] [94])) "fs/namei.c":487:9 54 {*pushsi2}
      (expr_list:REG_ARGS_SIZE (const_int 16 [0x10])
         (nil)))
-(call_insn 95 93 96 11 (call (mem:QI (symbol_ref:SI ("iput") [flags 0x41]  <function_decl 0x74bc2f8d2d00 iput>) [0 iput S1 A8])
+(call_insn 95 93 96 11 (call (mem:QI (symbol_ref:SI ("iput") [flags 0x41]  <function_decl 0x7f2fcf2d2d00 iput>) [0 iput S1 A8])
         (const_int 16 [0x10])) "fs/namei.c":487:9 812 {*call}
      (nil)
     (expr_list (use (reg:SI 3 bx))
@@ -7398,7 +7398,7 @@ Dataflow summary:
      (expr_list:REG_ARGS_SIZE (const_int 16 [0x10])
         (nil)))
 (call_insn 108 106 109 12 (set (reg:SI 0 ax)
-        (call (mem:QI (symbol_ref:SI ("new_inode") [flags 0x41]  <function_decl 0x74bc2f910200 new_inode>) [0 new_inode S1 A8])
+        (call (mem:QI (symbol_ref:SI ("new_inode") [flags 0x41]  <function_decl 0x7f2fcf310200 new_inode>) [0 new_inode S1 A8])
             (const_int 16 [0x10]))) "fs/namei.c":490:13 823 {*call_value}
      (nil)
     (expr_list (use (reg:SI 3 bx))
@@ -7444,7 +7444,7 @@ Dataflow summary:
         (reg/f:SI 0 ax [orig:98 dir.98_16 ] [98])) "fs/namei.c":492:9 54 {*pushsi2}
      (expr_list:REG_ARGS_SIZE (const_int 16 [0x10])
         (nil)))
-(call_insn 119 117 120 13 (call (mem:QI (symbol_ref:SI ("iput") [flags 0x41]  <function_decl 0x74bc2f8d2d00 iput>) [0 iput S1 A8])
+(call_insn 119 117 120 13 (call (mem:QI (symbol_ref:SI ("iput") [flags 0x41]  <function_decl 0x7f2fcf2d2d00 iput>) [0 iput S1 A8])
         (const_int 16 [0x10])) "fs/namei.c":492:9 812 {*call}
      (nil)
     (expr_list (use (reg:SI 3 bx))
@@ -7554,7 +7554,7 @@ Dataflow summary:
 (insn 147 146 148 17 (set (reg/f:SI 0 ax [131])
         (mem/u/c:SI (plus:SI (reg:SI 3 bx [82])
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("jiffies") [flags 0x40]  <var_decl 0x74bc2f92e360 jiffies>)
+                            (symbol_ref:SI ("jiffies") [flags 0x40]  <var_decl 0x7f2fcf32e360 jiffies>)
                         ] UNSPEC_GOT))) [12  S4 A8])) "fs/namei.c":498:39 75 {*movsi_internal}
      (nil))
 (insn 148 147 149 17 (set (reg:SI 2 cx [orig:103 jiffies.99_21 ] [103])
@@ -7605,7 +7605,7 @@ Dataflow summary:
 (insn 154 253 155 17 (set (reg/f:SI 0 ax [136])
         (mem/u/c:SI (plus:SI (reg:SI 3 bx [82])
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("startup_time") [flags 0x40]  <var_decl 0x74bc2f92e3f0 startup_time>)
+                            (symbol_ref:SI ("startup_time") [flags 0x40]  <var_decl 0x7f2fcf32e3f0 startup_time>)
                         ] UNSPEC_GOT))) [12  S4 A8])) "fs/namei.c":498:39 75 {*movsi_internal}
      (nil))
 (insn 155 154 156 17 (set (reg:SI 0 ax [orig:105 startup_time.100_23 ] [105])
@@ -7689,7 +7689,7 @@ Dataflow summary:
      (expr_list:REG_ARGS_SIZE (const_int 16 [0x10])
         (nil)))
 (call_insn 174 173 175 17 (set (reg:SI 0 ax)
-        (call (mem:QI (symbol_ref:SI ("add_entry") [flags 0x3]  <function_decl 0x74bc2f949d00 add_entry>) [0 add_entry S1 A8])
+        (call (mem:QI (symbol_ref:SI ("add_entry") [flags 0x3]  <function_decl 0x7f2fcf349d00 add_entry>) [0 add_entry S1 A8])
             (const_int 16 [0x10]))) "fs/namei.c":500:10 823 {*call_value}
      (nil)
     (nil))
@@ -7734,7 +7734,7 @@ Dataflow summary:
         (reg/f:SI 0 ax [orig:112 dir.104_30 ] [112])) "fs/namei.c":502:9 54 {*pushsi2}
      (expr_list:REG_ARGS_SIZE (const_int 16 [0x10])
         (nil)))
-(call_insn 185 183 186 18 (call (mem:QI (symbol_ref:SI ("iput") [flags 0x41]  <function_decl 0x74bc2f8d2d00 iput>) [0 iput S1 A8])
+(call_insn 185 183 186 18 (call (mem:QI (symbol_ref:SI ("iput") [flags 0x41]  <function_decl 0x7f2fcf2d2d00 iput>) [0 iput S1 A8])
         (const_int 16 [0x10])) "fs/namei.c":502:9 812 {*call}
      (nil)
     (expr_list (use (reg:SI 3 bx))
@@ -7768,7 +7768,7 @@ Dataflow summary:
                 (const_int 36 [0x24])) [2 inode+0 S4 A32])) "fs/namei.c":504:9 54 {*pushsi2}
      (expr_list:REG_ARGS_SIZE (const_int 16 [0x10])
         (nil)))
-(call_insn 192 190 193 18 (call (mem:QI (symbol_ref:SI ("iput") [flags 0x41]  <function_decl 0x74bc2f8d2d00 iput>) [0 iput S1 A8])
+(call_insn 192 190 193 18 (call (mem:QI (symbol_ref:SI ("iput") [flags 0x41]  <function_decl 0x7f2fcf2d2d00 iput>) [0 iput S1 A8])
         (const_int 16 [0x10])) "fs/namei.c":504:9 812 {*call}
      (nil)
     (expr_list (use (reg:SI 3 bx))
@@ -7830,7 +7830,7 @@ Dataflow summary:
         (reg/f:SI 0 ax [orig:115 dir.106_33 ] [115])) "fs/namei.c":509:5 54 {*pushsi2}
      (expr_list:REG_ARGS_SIZE (const_int 16 [0x10])
         (nil)))
-(call_insn 209 207 210 19 (call (mem:QI (symbol_ref:SI ("iput") [flags 0x41]  <function_decl 0x74bc2f8d2d00 iput>) [0 iput S1 A8])
+(call_insn 209 207 210 19 (call (mem:QI (symbol_ref:SI ("iput") [flags 0x41]  <function_decl 0x7f2fcf2d2d00 iput>) [0 iput S1 A8])
         (const_int 16 [0x10])) "fs/namei.c":509:5 812 {*call}
      (nil)
     (expr_list (use (reg:SI 3 bx))
@@ -7856,7 +7856,7 @@ Dataflow summary:
                 (const_int 36 [0x24])) [2 inode+0 S4 A32])) "fs/namei.c":510:5 54 {*pushsi2}
      (expr_list:REG_ARGS_SIZE (const_int 16 [0x10])
         (nil)))
-(call_insn 214 212 215 19 (call (mem:QI (symbol_ref:SI ("iput") [flags 0x41]  <function_decl 0x74bc2f8d2d00 iput>) [0 iput S1 A8])
+(call_insn 214 212 215 19 (call (mem:QI (symbol_ref:SI ("iput") [flags 0x41]  <function_decl 0x7f2fcf2d2d00 iput>) [0 iput S1 A8])
         (const_int 16 [0x10])) "fs/namei.c":510:5 812 {*call}
      (nil)
     (expr_list (use (reg:SI 3 bx))
@@ -7882,7 +7882,7 @@ Dataflow summary:
                 (const_int 40 [0x28])) [9 bh+0 S4 A32])) "fs/namei.c":511:5 54 {*pushsi2}
      (expr_list:REG_ARGS_SIZE (const_int 16 [0x10])
         (nil)))
-(call_insn 219 217 220 19 (call (mem:QI (symbol_ref:SI ("brelse") [flags 0x41]  <function_decl 0x74bc2f90e200 brelse>) [0 brelse S1 A8])
+(call_insn 219 217 220 19 (call (mem:QI (symbol_ref:SI ("brelse") [flags 0x41]  <function_decl 0x7f2fcf30e200 brelse>) [0 brelse S1 A8])
         (const_int 16 [0x10])) "fs/namei.c":511:5 812 {*call}
      (nil)
     (expr_list (use (reg:SI 3 bx))
@@ -8051,7 +8051,7 @@ Dataflow summary:
      (expr_list:REG_ARGS_SIZE (const_int 16 [0x10])
         (nil)))
 (call_insn 11 10 12 2 (set (reg:SI 0 ax)
-        (call (mem:QI (symbol_ref:SI ("dir_namei") [flags 0x3]  <function_decl 0x74bc2f949b00 dir_namei>) [0 dir_namei S1 A8])
+        (call (mem:QI (symbol_ref:SI ("dir_namei") [flags 0x3]  <function_decl 0x7f2fcf349b00 dir_namei>) [0 dir_namei S1 A8])
             (const_int 16 [0x10]))) "fs/namei.c":523:17 823 {*call_value}
      (nil)
     (nil))
@@ -8125,7 +8125,7 @@ Dataflow summary:
         (reg/f:SI 0 ax [orig:86 dir.109_4 ] [86])) "fs/namei.c":526:9 54 {*pushsi2}
      (expr_list:REG_ARGS_SIZE (const_int 16 [0x10])
         (nil)))
-(call_insn 32 30 33 5 (call (mem:QI (symbol_ref:SI ("iput") [flags 0x41]  <function_decl 0x74bc2f8d2d00 iput>) [0 iput S1 A8])
+(call_insn 32 30 33 5 (call (mem:QI (symbol_ref:SI ("iput") [flags 0x41]  <function_decl 0x7f2fcf2d2d00 iput>) [0 iput S1 A8])
         (const_int 16 [0x10])) "fs/namei.c":526:9 812 {*call}
      (nil)
     (expr_list (use (reg:SI 3 bx))
@@ -8169,7 +8169,7 @@ Dataflow summary:
      (expr_list:REG_ARGS_SIZE (const_int 16 [0x10])
         (nil)))
 (call_insn 43 42 44 6 (set (reg:SI 0 ax)
-        (call (mem:QI (symbol_ref:SI ("permission") [flags 0x3]  <function_decl 0x74bc2f949300 permission>) [0 permission S1 A8])
+        (call (mem:QI (symbol_ref:SI ("permission") [flags 0x3]  <function_decl 0x7f2fcf349300 permission>) [0 permission S1 A8])
             (const_int 16 [0x10]))) "fs/namei.c":529:10 823 {*call_value}
      (nil)
     (nil))
@@ -8209,7 +8209,7 @@ Dataflow summary:
         (reg/f:SI 0 ax [orig:89 dir.111_7 ] [89])) "fs/namei.c":530:9 54 {*pushsi2}
      (expr_list:REG_ARGS_SIZE (const_int 16 [0x10])
         (nil)))
-(call_insn 53 51 54 7 (call (mem:QI (symbol_ref:SI ("iput") [flags 0x41]  <function_decl 0x74bc2f8d2d00 iput>) [0 iput S1 A8])
+(call_insn 53 51 54 7 (call (mem:QI (symbol_ref:SI ("iput") [flags 0x41]  <function_decl 0x7f2fcf2d2d00 iput>) [0 iput S1 A8])
         (const_int 16 [0x10])) "fs/namei.c":530:9 812 {*call}
      (nil)
     (expr_list (use (reg:SI 3 bx))
@@ -8271,7 +8271,7 @@ Dataflow summary:
      (expr_list:REG_ARGS_SIZE (const_int 16 [0x10])
         (nil)))
 (call_insn 68 67 69 8 (set (reg:SI 0 ax)
-        (call (mem:QI (symbol_ref:SI ("find_entry") [flags 0x3]  <function_decl 0x74bc2f949700 find_entry>) [0 find_entry S1 A8])
+        (call (mem:QI (symbol_ref:SI ("find_entry") [flags 0x3]  <function_decl 0x7f2fcf349700 find_entry>) [0 find_entry S1 A8])
             (const_int 16 [0x10]))) "fs/namei.c":533:10 823 {*call_value}
      (nil)
     (nil))
@@ -8316,7 +8316,7 @@ Dataflow summary:
         (reg/f:SI 0 ax [orig:92 dir.114_10 ] [92])) "fs/namei.c":535:9 54 {*pushsi2}
      (expr_list:REG_ARGS_SIZE (const_int 16 [0x10])
         (nil)))
-(call_insn 79 77 80 9 (call (mem:QI (symbol_ref:SI ("iput") [flags 0x41]  <function_decl 0x74bc2f8d2d00 iput>) [0 iput S1 A8])
+(call_insn 79 77 80 9 (call (mem:QI (symbol_ref:SI ("iput") [flags 0x41]  <function_decl 0x7f2fcf2d2d00 iput>) [0 iput S1 A8])
         (const_int 16 [0x10])) "fs/namei.c":535:9 812 {*call}
      (nil)
     (expr_list (use (reg:SI 3 bx))
@@ -8377,7 +8377,7 @@ Dataflow summary:
      (expr_list:REG_ARGS_SIZE (const_int 16 [0x10])
         (nil)))
 (call_insn 96 94 97 10 (set (reg:SI 0 ax)
-        (call (mem:QI (symbol_ref:SI ("iget") [flags 0x41]  <function_decl 0x74bc2f90e900 iget>) [0 iget S1 A8])
+        (call (mem:QI (symbol_ref:SI ("iget") [flags 0x41]  <function_decl 0x7f2fcf30e900 iget>) [0 iget S1 A8])
             (const_int 16 [0x10]))) "fs/namei.c":538:19 823 {*call_value}
      (nil)
     (expr_list (use (reg:SI 3 bx))
@@ -8423,7 +8423,7 @@ Dataflow summary:
         (reg/f:SI 0 ax [orig:99 dir.117_17 ] [99])) "fs/namei.c":539:9 54 {*pushsi2}
      (expr_list:REG_ARGS_SIZE (const_int 16 [0x10])
         (nil)))
-(call_insn 107 105 108 11 (call (mem:QI (symbol_ref:SI ("iput") [flags 0x41]  <function_decl 0x74bc2f8d2d00 iput>) [0 iput S1 A8])
+(call_insn 107 105 108 11 (call (mem:QI (symbol_ref:SI ("iput") [flags 0x41]  <function_decl 0x7f2fcf2d2d00 iput>) [0 iput S1 A8])
         (const_int 16 [0x10])) "fs/namei.c":539:9 812 {*call}
      (nil)
     (expr_list (use (reg:SI 3 bx))
@@ -8449,7 +8449,7 @@ Dataflow summary:
                 (const_int 40 [0x28])) [9 bh+0 S4 A32])) "fs/namei.c":540:9 54 {*pushsi2}
      (expr_list:REG_ARGS_SIZE (const_int 16 [0x10])
         (nil)))
-(call_insn 112 110 113 11 (call (mem:QI (symbol_ref:SI ("brelse") [flags 0x41]  <function_decl 0x74bc2f90e200 brelse>) [0 brelse S1 A8])
+(call_insn 112 110 113 11 (call (mem:QI (symbol_ref:SI ("brelse") [flags 0x41]  <function_decl 0x7f2fcf30e200 brelse>) [0 brelse S1 A8])
         (const_int 16 [0x10])) "fs/namei.c":540:9 812 {*call}
      (nil)
     (expr_list (use (reg:SI 3 bx))
@@ -8504,7 +8504,7 @@ Dataflow summary:
 (insn 126 125 127 13 (set (reg/f:SI 0 ax [142])
         (mem/u/c:SI (plus:SI (reg:SI 3 bx [82])
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("current") [flags 0x40]  <var_decl 0x74bc2f92e120 current>)
+                            (symbol_ref:SI ("current") [flags 0x40]  <var_decl 0x7f2fcf32e120 current>)
                         ] UNSPEC_GOT))) [12  S4 A8])) "fs/namei.c":543:37 75 {*movsi_internal}
      (nil))
 (insn 127 126 128 13 (set (reg/f:SI 0 ax [orig:104 current.119_22 ] [104])
@@ -8529,7 +8529,7 @@ Dataflow summary:
 (insn 132 131 133 14 (set (reg/f:SI 0 ax [143])
         (mem/u/c:SI (plus:SI (reg:SI 3 bx [82])
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("current") [flags 0x40]  <var_decl 0x74bc2f92e120 current>)
+                            (symbol_ref:SI ("current") [flags 0x40]  <var_decl 0x7f2fcf32e120 current>)
                         ] UNSPEC_GOT))) [12  S4 A8])) "fs/namei.c":544:17 75 {*movsi_internal}
      (nil))
 (insn 133 132 134 14 (set (reg/f:SI 0 ax [orig:106 current.120_24 ] [106])
@@ -8562,7 +8562,7 @@ Dataflow summary:
 (insn 140 139 141 15 (set (reg/f:SI 0 ax [145])
         (mem/u/c:SI (plus:SI (reg:SI 3 bx [82])
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("current") [flags 0x40]  <var_decl 0x74bc2f92e120 current>)
+                            (symbol_ref:SI ("current") [flags 0x40]  <var_decl 0x7f2fcf32e120 current>)
                         ] UNSPEC_GOT))) [12  S4 A8])) "fs/namei.c":545:17 75 {*movsi_internal}
      (nil))
 (insn 141 140 142 15 (set (reg/f:SI 0 ax [orig:109 current.121_27 ] [109])
@@ -8608,7 +8608,7 @@ Dataflow summary:
         (reg/f:SI 0 ax [orig:113 dir.123_31 ] [113])) "fs/namei.c":546:9 54 {*pushsi2}
      (expr_list:REG_ARGS_SIZE (const_int 16 [0x10])
         (nil)))
-(call_insn 152 150 153 16 (call (mem:QI (symbol_ref:SI ("iput") [flags 0x41]  <function_decl 0x74bc2f8d2d00 iput>) [0 iput S1 A8])
+(call_insn 152 150 153 16 (call (mem:QI (symbol_ref:SI ("iput") [flags 0x41]  <function_decl 0x7f2fcf2d2d00 iput>) [0 iput S1 A8])
         (const_int 16 [0x10])) "fs/namei.c":546:9 812 {*call}
      (nil)
     (expr_list (use (reg:SI 3 bx))
@@ -8634,7 +8634,7 @@ Dataflow summary:
                 (const_int 36 [0x24])) [2 inode+0 S4 A32])) "fs/namei.c":547:9 54 {*pushsi2}
      (expr_list:REG_ARGS_SIZE (const_int 16 [0x10])
         (nil)))
-(call_insn 157 155 158 16 (call (mem:QI (symbol_ref:SI ("iput") [flags 0x41]  <function_decl 0x74bc2f8d2d00 iput>) [0 iput S1 A8])
+(call_insn 157 155 158 16 (call (mem:QI (symbol_ref:SI ("iput") [flags 0x41]  <function_decl 0x7f2fcf2d2d00 iput>) [0 iput S1 A8])
         (const_int 16 [0x10])) "fs/namei.c":547:9 812 {*call}
      (nil)
     (expr_list (use (reg:SI 3 bx))
@@ -8660,7 +8660,7 @@ Dataflow summary:
                 (const_int 40 [0x28])) [9 bh+0 S4 A32])) "fs/namei.c":548:9 54 {*pushsi2}
      (expr_list:REG_ARGS_SIZE (const_int 16 [0x10])
         (nil)))
-(call_insn 162 160 163 16 (call (mem:QI (symbol_ref:SI ("brelse") [flags 0x41]  <function_decl 0x74bc2f90e200 brelse>) [0 brelse S1 A8])
+(call_insn 162 160 163 16 (call (mem:QI (symbol_ref:SI ("brelse") [flags 0x41]  <function_decl 0x7f2fcf30e200 brelse>) [0 brelse S1 A8])
         (const_int 16 [0x10])) "fs/namei.c":548:9 812 {*call}
      (nil)
     (expr_list (use (reg:SI 3 bx))
@@ -8725,7 +8725,7 @@ Dataflow summary:
                 (const_int 36 [0x24])) [2 inode+0 S4 A32])) "fs/namei.c":552:9 54 {*pushsi2}
      (expr_list:REG_ARGS_SIZE (const_int 16 [0x10])
         (nil)))
-(call_insn 179 177 180 18 (call (mem:QI (symbol_ref:SI ("iput") [flags 0x41]  <function_decl 0x74bc2f8d2d00 iput>) [0 iput S1 A8])
+(call_insn 179 177 180 18 (call (mem:QI (symbol_ref:SI ("iput") [flags 0x41]  <function_decl 0x7f2fcf2d2d00 iput>) [0 iput S1 A8])
         (const_int 16 [0x10])) "fs/namei.c":552:9 812 {*call}
      (nil)
     (expr_list (use (reg:SI 3 bx))
@@ -8754,7 +8754,7 @@ Dataflow summary:
         (reg/f:SI 0 ax [orig:117 dir.124_35 ] [117])) "fs/namei.c":553:9 54 {*pushsi2}
      (expr_list:REG_ARGS_SIZE (const_int 16 [0x10])
         (nil)))
-(call_insn 185 183 186 18 (call (mem:QI (symbol_ref:SI ("iput") [flags 0x41]  <function_decl 0x74bc2f8d2d00 iput>) [0 iput S1 A8])
+(call_insn 185 183 186 18 (call (mem:QI (symbol_ref:SI ("iput") [flags 0x41]  <function_decl 0x7f2fcf2d2d00 iput>) [0 iput S1 A8])
         (const_int 16 [0x10])) "fs/namei.c":553:9 812 {*call}
      (nil)
     (expr_list (use (reg:SI 3 bx))
@@ -8780,7 +8780,7 @@ Dataflow summary:
                 (const_int 40 [0x28])) [9 bh+0 S4 A32])) "fs/namei.c":554:9 54 {*pushsi2}
      (expr_list:REG_ARGS_SIZE (const_int 16 [0x10])
         (nil)))
-(call_insn 190 188 191 18 (call (mem:QI (symbol_ref:SI ("brelse") [flags 0x41]  <function_decl 0x74bc2f90e200 brelse>) [0 brelse S1 A8])
+(call_insn 190 188 191 18 (call (mem:QI (symbol_ref:SI ("brelse") [flags 0x41]  <function_decl 0x7f2fcf30e200 brelse>) [0 brelse S1 A8])
         (const_int 16 [0x10])) "fs/namei.c":554:9 812 {*call}
      (nil)
     (expr_list (use (reg:SI 3 bx))
@@ -8871,16 +8871,16 @@ Dataflow summary:
 (insn 214 213 215 20 (set (reg/f:SI 0 ax [151])
         (plus:SI (reg:SI 3 bx [82])
             (const:SI (unspec:SI [
-                        (symbol_ref/f:SI ("*.LC3") [flags 0x2]  <var_decl 0x74bc2f61a6c0 *.LC3>)
+                        (symbol_ref/f:SI ("*.LC3") [flags 0x2]  <var_decl 0x7f2fcf01a6c0 *.LC3>)
                     ] UNSPEC_GOTOFF)))) "fs/namei.c":558:9 205 {*leasi}
-     (expr_list:REG_EQUAL (symbol_ref/f:SI ("*.LC3") [flags 0x2]  <var_decl 0x74bc2f61a6c0 *.LC3>)
+     (expr_list:REG_EQUAL (symbol_ref/f:SI ("*.LC3") [flags 0x2]  <var_decl 0x7f2fcf01a6c0 *.LC3>)
         (nil)))
 (insn 215 214 217 20 (set (mem/f:SI (pre_dec:SI (reg/f:SI 7 sp)) [8  S4 A32])
         (reg/f:SI 0 ax [151])) "fs/namei.c":558:9 54 {*pushsi2}
      (expr_list:REG_ARGS_SIZE (const_int 16 [0x10])
         (nil)))
 (call_insn 217 215 218 20 (set (reg:SI 0 ax)
-        (call (mem:QI (symbol_ref:SI ("printk") [flags 0x41]  <function_decl 0x74bc2f938900 printk>) [0 printk S1 A8])
+        (call (mem:QI (symbol_ref:SI ("printk") [flags 0x41]  <function_decl 0x7f2fcf338900 printk>) [0 printk S1 A8])
             (const_int 16 [0x10]))) "fs/namei.c":558:9 823 {*call_value}
      (nil)
     (expr_list (use (reg:SI 3 bx))
@@ -8931,7 +8931,7 @@ Dataflow summary:
                 (const_int 40 [0x28])) [9 bh+0 S4 A32])) "fs/namei.c":564:5 54 {*pushsi2}
      (expr_list:REG_ARGS_SIZE (const_int 16 [0x10])
         (nil)))
-(call_insn 230 228 231 21 (call (mem:QI (symbol_ref:SI ("brelse") [flags 0x41]  <function_decl 0x74bc2f90e200 brelse>) [0 brelse S1 A8])
+(call_insn 230 228 231 21 (call (mem:QI (symbol_ref:SI ("brelse") [flags 0x41]  <function_decl 0x7f2fcf30e200 brelse>) [0 brelse S1 A8])
         (const_int 16 [0x10])) "fs/namei.c":564:5 812 {*call}
      (nil)
     (expr_list (use (reg:SI 3 bx))
@@ -8978,7 +8978,7 @@ Dataflow summary:
 (insn 239 238 240 21 (set (reg/f:SI 0 ax [157])
         (mem/u/c:SI (plus:SI (reg:SI 3 bx [82])
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("jiffies") [flags 0x40]  <var_decl 0x74bc2f92e360 jiffies>)
+                            (symbol_ref:SI ("jiffies") [flags 0x40]  <var_decl 0x7f2fcf32e360 jiffies>)
                         ] UNSPEC_GOT))) [12  S4 A8])) "fs/namei.c":567:22 75 {*movsi_internal}
      (nil))
 (insn 240 239 241 21 (set (reg:SI 2 cx [orig:128 jiffies.126_47 ] [128])
@@ -9029,7 +9029,7 @@ Dataflow summary:
 (insn 246 295 247 21 (set (reg/f:SI 0 ax [162])
         (mem/u/c:SI (plus:SI (reg:SI 3 bx [82])
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("startup_time") [flags 0x40]  <var_decl 0x74bc2f92e3f0 startup_time>)
+                            (symbol_ref:SI ("startup_time") [flags 0x40]  <var_decl 0x7f2fcf32e3f0 startup_time>)
                         ] UNSPEC_GOT))) [12  S4 A8])) "fs/namei.c":567:22 75 {*movsi_internal}
      (nil))
 (insn 247 246 248 21 (set (reg:SI 0 ax [orig:130 startup_time.127_49 ] [130])
@@ -9066,7 +9066,7 @@ Dataflow summary:
                 (const_int 36 [0x24])) [2 inode+0 S4 A32])) "fs/namei.c":568:5 54 {*pushsi2}
      (expr_list:REG_ARGS_SIZE (const_int 16 [0x10])
         (nil)))
-(call_insn 255 253 256 21 (call (mem:QI (symbol_ref:SI ("iput") [flags 0x41]  <function_decl 0x74bc2f8d2d00 iput>) [0 iput S1 A8])
+(call_insn 255 253 256 21 (call (mem:QI (symbol_ref:SI ("iput") [flags 0x41]  <function_decl 0x7f2fcf2d2d00 iput>) [0 iput S1 A8])
         (const_int 16 [0x10])) "fs/namei.c":568:5 812 {*call}
      (nil)
     (expr_list (use (reg:SI 3 bx))
@@ -9095,7 +9095,7 @@ Dataflow summary:
         (reg/f:SI 0 ax [orig:133 dir.128_52 ] [133])) "fs/namei.c":569:5 54 {*pushsi2}
      (expr_list:REG_ARGS_SIZE (const_int 16 [0x10])
         (nil)))
-(call_insn 261 259 262 21 (call (mem:QI (symbol_ref:SI ("iput") [flags 0x41]  <function_decl 0x74bc2f8d2d00 iput>) [0 iput S1 A8])
+(call_insn 261 259 262 21 (call (mem:QI (symbol_ref:SI ("iput") [flags 0x41]  <function_decl 0x7f2fcf2d2d00 iput>) [0 iput S1 A8])
         (const_int 16 [0x10])) "fs/namei.c":569:5 812 {*call}
      (nil)
     (expr_list (use (reg:SI 3 bx))
@@ -9236,7 +9236,7 @@ Dataflow summary:
 (insn 5 2 6 2 (set (reg/f:SI 0 ax [162])
         (mem/u/c:SI (plus:SI (reg:SI 3 bx [82])
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("current") [flags 0x40]  <var_decl 0x74bc2f92e120 current>)
+                            (symbol_ref:SI ("current") [flags 0x40]  <var_decl 0x7f2fcf32e120 current>)
                         ] UNSPEC_GOT))) [12  S4 A8])) "fs/namei.c":581:10 75 {*movsi_internal}
      (nil))
 (insn 6 5 7 2 (set (reg/f:SI 0 ax [orig:83 current.129_1 ] [83])
@@ -9304,7 +9304,7 @@ Dataflow summary:
      (expr_list:REG_ARGS_SIZE (const_int 16 [0x10])
         (nil)))
 (call_insn 22 21 23 4 (set (reg:SI 0 ax)
-        (call (mem:QI (symbol_ref:SI ("dir_namei") [flags 0x3]  <function_decl 0x74bc2f949b00 dir_namei>) [0 dir_namei S1 A8])
+        (call (mem:QI (symbol_ref:SI ("dir_namei") [flags 0x3]  <function_decl 0x7f2fcf349b00 dir_namei>) [0 dir_namei S1 A8])
             (const_int 16 [0x10]))) "fs/namei.c":583:17 823 {*call_value}
      (nil)
     (nil))
@@ -9378,7 +9378,7 @@ Dataflow summary:
         (reg/f:SI 0 ax [orig:88 dir.132_6 ] [88])) "fs/namei.c":586:9 54 {*pushsi2}
      (expr_list:REG_ARGS_SIZE (const_int 16 [0x10])
         (nil)))
-(call_insn 43 41 44 7 (call (mem:QI (symbol_ref:SI ("iput") [flags 0x41]  <function_decl 0x74bc2f8d2d00 iput>) [0 iput S1 A8])
+(call_insn 43 41 44 7 (call (mem:QI (symbol_ref:SI ("iput") [flags 0x41]  <function_decl 0x7f2fcf2d2d00 iput>) [0 iput S1 A8])
         (const_int 16 [0x10])) "fs/namei.c":586:9 812 {*call}
      (nil)
     (expr_list (use (reg:SI 3 bx))
@@ -9422,7 +9422,7 @@ Dataflow summary:
      (expr_list:REG_ARGS_SIZE (const_int 16 [0x10])
         (nil)))
 (call_insn 54 53 55 8 (set (reg:SI 0 ax)
-        (call (mem:QI (symbol_ref:SI ("permission") [flags 0x3]  <function_decl 0x74bc2f949300 permission>) [0 permission S1 A8])
+        (call (mem:QI (symbol_ref:SI ("permission") [flags 0x3]  <function_decl 0x7f2fcf349300 permission>) [0 permission S1 A8])
             (const_int 16 [0x10]))) "fs/namei.c":589:10 823 {*call_value}
      (nil)
     (nil))
@@ -9462,7 +9462,7 @@ Dataflow summary:
         (reg/f:SI 0 ax [orig:91 dir.134_9 ] [91])) "fs/namei.c":590:9 54 {*pushsi2}
      (expr_list:REG_ARGS_SIZE (const_int 16 [0x10])
         (nil)))
-(call_insn 64 62 65 9 (call (mem:QI (symbol_ref:SI ("iput") [flags 0x41]  <function_decl 0x74bc2f8d2d00 iput>) [0 iput S1 A8])
+(call_insn 64 62 65 9 (call (mem:QI (symbol_ref:SI ("iput") [flags 0x41]  <function_decl 0x7f2fcf2d2d00 iput>) [0 iput S1 A8])
         (const_int 16 [0x10])) "fs/namei.c":590:9 812 {*call}
      (nil)
     (expr_list (use (reg:SI 3 bx))
@@ -9524,7 +9524,7 @@ Dataflow summary:
      (expr_list:REG_ARGS_SIZE (const_int 16 [0x10])
         (nil)))
 (call_insn 79 78 80 10 (set (reg:SI 0 ax)
-        (call (mem:QI (symbol_ref:SI ("find_entry") [flags 0x3]  <function_decl 0x74bc2f949700 find_entry>) [0 find_entry S1 A8])
+        (call (mem:QI (symbol_ref:SI ("find_entry") [flags 0x3]  <function_decl 0x7f2fcf349700 find_entry>) [0 find_entry S1 A8])
             (const_int 16 [0x10]))) "fs/namei.c":593:10 823 {*call_value}
      (nil)
     (nil))
@@ -9566,7 +9566,7 @@ Dataflow summary:
                 (const_int 40 [0x28])) [9 bh+0 S4 A32])) "fs/namei.c":595:9 54 {*pushsi2}
      (expr_list:REG_ARGS_SIZE (const_int 16 [0x10])
         (nil)))
-(call_insn 89 87 90 11 (call (mem:QI (symbol_ref:SI ("brelse") [flags 0x41]  <function_decl 0x74bc2f90e200 brelse>) [0 brelse S1 A8])
+(call_insn 89 87 90 11 (call (mem:QI (symbol_ref:SI ("brelse") [flags 0x41]  <function_decl 0x7f2fcf30e200 brelse>) [0 brelse S1 A8])
         (const_int 16 [0x10])) "fs/namei.c":595:9 812 {*call}
      (nil)
     (expr_list (use (reg:SI 3 bx))
@@ -9595,7 +9595,7 @@ Dataflow summary:
         (reg/f:SI 0 ax [orig:94 dir.137_12 ] [94])) "fs/namei.c":596:9 54 {*pushsi2}
      (expr_list:REG_ARGS_SIZE (const_int 16 [0x10])
         (nil)))
-(call_insn 95 93 96 11 (call (mem:QI (symbol_ref:SI ("iput") [flags 0x41]  <function_decl 0x74bc2f8d2d00 iput>) [0 iput S1 A8])
+(call_insn 95 93 96 11 (call (mem:QI (symbol_ref:SI ("iput") [flags 0x41]  <function_decl 0x7f2fcf2d2d00 iput>) [0 iput S1 A8])
         (const_int 16 [0x10])) "fs/namei.c":596:9 812 {*call}
      (nil)
     (expr_list (use (reg:SI 3 bx))
@@ -9642,7 +9642,7 @@ Dataflow summary:
      (expr_list:REG_ARGS_SIZE (const_int 16 [0x10])
         (nil)))
 (call_insn 108 106 109 12 (set (reg:SI 0 ax)
-        (call (mem:QI (symbol_ref:SI ("new_inode") [flags 0x41]  <function_decl 0x74bc2f910200 new_inode>) [0 new_inode S1 A8])
+        (call (mem:QI (symbol_ref:SI ("new_inode") [flags 0x41]  <function_decl 0x7f2fcf310200 new_inode>) [0 new_inode S1 A8])
             (const_int 16 [0x10]))) "fs/namei.c":599:13 823 {*call_value}
      (nil)
     (expr_list (use (reg:SI 3 bx))
@@ -9688,7 +9688,7 @@ Dataflow summary:
         (reg/f:SI 0 ax [orig:98 dir.139_16 ] [98])) "fs/namei.c":601:9 54 {*pushsi2}
      (expr_list:REG_ARGS_SIZE (const_int 16 [0x10])
         (nil)))
-(call_insn 119 117 120 13 (call (mem:QI (symbol_ref:SI ("iput") [flags 0x41]  <function_decl 0x74bc2f8d2d00 iput>) [0 iput S1 A8])
+(call_insn 119 117 120 13 (call (mem:QI (symbol_ref:SI ("iput") [flags 0x41]  <function_decl 0x7f2fcf2d2d00 iput>) [0 iput S1 A8])
         (const_int 16 [0x10])) "fs/namei.c":601:9 812 {*call}
      (nil)
     (expr_list (use (reg:SI 3 bx))
@@ -9730,7 +9730,7 @@ Dataflow summary:
 (insn 130 129 131 14 (set (reg/f:SI 0 ax [171])
         (mem/u/c:SI (plus:SI (reg:SI 3 bx [82])
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("jiffies") [flags 0x40]  <var_decl 0x74bc2f92e360 jiffies>)
+                            (symbol_ref:SI ("jiffies") [flags 0x40]  <var_decl 0x7f2fcf32e360 jiffies>)
                         ] UNSPEC_GOT))) [12  S4 A8])) "fs/namei.c":606:39 75 {*movsi_internal}
      (nil))
 (insn 131 130 132 14 (set (reg:SI 2 cx [orig:99 jiffies.140_17 ] [99])
@@ -9781,7 +9781,7 @@ Dataflow summary:
 (insn 137 402 138 14 (set (reg/f:SI 0 ax [176])
         (mem/u/c:SI (plus:SI (reg:SI 3 bx [82])
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("startup_time") [flags 0x40]  <var_decl 0x74bc2f92e3f0 startup_time>)
+                            (symbol_ref:SI ("startup_time") [flags 0x40]  <var_decl 0x7f2fcf32e3f0 startup_time>)
                         ] UNSPEC_GOT))) [12  S4 A8])) "fs/namei.c":606:39 75 {*movsi_internal}
      (nil))
 (insn 138 137 139 14 (set (reg:SI 0 ax [orig:101 startup_time.141_19 ] [101])
@@ -9845,7 +9845,7 @@ Dataflow summary:
      (expr_list:REG_ARGS_SIZE (const_int 16 [0x10])
         (nil)))
 (call_insn 153 151 154 14 (set (reg:SI 0 ax)
-        (call (mem:QI (symbol_ref:SI ("new_block") [flags 0x41]  <function_decl 0x74bc2f90ec00 new_block>) [0 new_block S1 A8])
+        (call (mem:QI (symbol_ref:SI ("new_block") [flags 0x41]  <function_decl 0x7f2fcf30ec00 new_block>) [0 new_block S1 A8])
             (const_int 16 [0x10]))) "fs/namei.c":607:30 823 {*call_value}
      (nil)
     (expr_list (use (reg:SI 3 bx))
@@ -9905,7 +9905,7 @@ Dataflow summary:
         (reg/f:SI 0 ax [orig:110 dir.142_28 ] [110])) "fs/namei.c":608:9 54 {*pushsi2}
      (expr_list:REG_ARGS_SIZE (const_int 16 [0x10])
         (nil)))
-(call_insn 168 166 169 15 (call (mem:QI (symbol_ref:SI ("iput") [flags 0x41]  <function_decl 0x74bc2f8d2d00 iput>) [0 iput S1 A8])
+(call_insn 168 166 169 15 (call (mem:QI (symbol_ref:SI ("iput") [flags 0x41]  <function_decl 0x7f2fcf2d2d00 iput>) [0 iput S1 A8])
         (const_int 16 [0x10])) "fs/namei.c":608:9 812 {*call}
      (nil)
     (expr_list (use (reg:SI 3 bx))
@@ -9954,7 +9954,7 @@ Dataflow summary:
                 (const_int 36 [0x24])) [2 inode+0 S4 A32])) "fs/namei.c":610:9 54 {*pushsi2}
      (expr_list:REG_ARGS_SIZE (const_int 16 [0x10])
         (nil)))
-(call_insn 178 176 179 15 (call (mem:QI (symbol_ref:SI ("iput") [flags 0x41]  <function_decl 0x74bc2f8d2d00 iput>) [0 iput S1 A8])
+(call_insn 178 176 179 15 (call (mem:QI (symbol_ref:SI ("iput") [flags 0x41]  <function_decl 0x7f2fcf2d2d00 iput>) [0 iput S1 A8])
         (const_int 16 [0x10])) "fs/namei.c":610:9 812 {*call}
      (nil)
     (expr_list (use (reg:SI 3 bx))
@@ -10024,7 +10024,7 @@ Dataflow summary:
      (expr_list:REG_ARGS_SIZE (const_int 16 [0x10])
         (nil)))
 (call_insn 197 195 198 16 (set (reg:SI 0 ax)
-        (call (mem:QI (symbol_ref:SI ("bread") [flags 0x41]  <function_decl 0x74bc2f90e100 bread>) [0 bread S1 A8])
+        (call (mem:QI (symbol_ref:SI ("bread") [flags 0x41]  <function_decl 0x7f2fcf30e100 bread>) [0 bread S1 A8])
             (const_int 16 [0x10]))) "fs/namei.c":614:23 823 {*call_value}
      (nil)
     (expr_list (use (reg:SI 3 bx))
@@ -10070,7 +10070,7 @@ Dataflow summary:
         (reg/f:SI 0 ax [orig:117 dir.143_36 ] [117])) "fs/namei.c":615:9 54 {*pushsi2}
      (expr_list:REG_ARGS_SIZE (const_int 16 [0x10])
         (nil)))
-(call_insn 208 206 209 17 (call (mem:QI (symbol_ref:SI ("iput") [flags 0x41]  <function_decl 0x74bc2f8d2d00 iput>) [0 iput S1 A8])
+(call_insn 208 206 209 17 (call (mem:QI (symbol_ref:SI ("iput") [flags 0x41]  <function_decl 0x7f2fcf2d2d00 iput>) [0 iput S1 A8])
         (const_int 16 [0x10])) "fs/namei.c":615:9 812 {*call}
      (nil)
     (expr_list (use (reg:SI 3 bx))
@@ -10121,7 +10121,7 @@ Dataflow summary:
         (reg:SI 0 ax [orig:121 _40 ] [121])) "fs/namei.c":616:9 54 {*pushsi2}
      (expr_list:REG_ARGS_SIZE (const_int 16 [0x10])
         (nil)))
-(call_insn 220 218 221 17 (call (mem:QI (symbol_ref:SI ("free_block") [flags 0x41]  <function_decl 0x74bc2f90e300 free_block>) [0 free_block S1 A8])
+(call_insn 220 218 221 17 (call (mem:QI (symbol_ref:SI ("free_block") [flags 0x41]  <function_decl 0x7f2fcf30e300 free_block>) [0 free_block S1 A8])
         (const_int 16 [0x10])) "fs/namei.c":616:9 812 {*call}
      (nil)
     (expr_list (use (reg:SI 3 bx))
@@ -10170,7 +10170,7 @@ Dataflow summary:
                 (const_int 36 [0x24])) [2 inode+0 S4 A32])) "fs/namei.c":618:9 54 {*pushsi2}
      (expr_list:REG_ARGS_SIZE (const_int 16 [0x10])
         (nil)))
-(call_insn 230 228 231 17 (call (mem:QI (symbol_ref:SI ("iput") [flags 0x41]  <function_decl 0x74bc2f8d2d00 iput>) [0 iput S1 A8])
+(call_insn 230 228 231 17 (call (mem:QI (symbol_ref:SI ("iput") [flags 0x41]  <function_decl 0x7f2fcf2d2d00 iput>) [0 iput S1 A8])
         (const_int 16 [0x10])) "fs/namei.c":618:9 812 {*call}
      (nil)
     (expr_list (use (reg:SI 3 bx))
@@ -10241,9 +10241,9 @@ Dataflow summary:
 (insn 247 246 248 18 (set (reg/f:SI 0 ax [195])
         (plus:SI (reg:SI 3 bx [82])
             (const:SI (unspec:SI [
-                        (symbol_ref/f:SI ("*.LC4") [flags 0x2]  <var_decl 0x74bc2f61a870 *.LC4>)
+                        (symbol_ref/f:SI ("*.LC4") [flags 0x2]  <var_decl 0x7f2fcf01a870 *.LC4>)
                     ] UNSPEC_GOTOFF)))) "fs/namei.c":623:5 205 {*leasi}
-     (expr_list:REG_EQUAL (symbol_ref/f:SI ("*.LC4") [flags 0x2]  <var_decl 0x74bc2f61a870 *.LC4>)
+     (expr_list:REG_EQUAL (symbol_ref/f:SI ("*.LC4") [flags 0x2]  <var_decl 0x7f2fcf01a870 *.LC4>)
         (nil)))
 (insn 248 247 249 18 (set (mem/f:SI (pre_dec:SI (reg/f:SI 7 sp)) [8  S4 A32])
         (reg/f:SI 0 ax [195])) "fs/namei.c":623:5 54 {*pushsi2}
@@ -10254,7 +10254,7 @@ Dataflow summary:
      (expr_list:REG_ARGS_SIZE (const_int 16 [0x10])
         (nil)))
 (call_insn 251 249 252 18 (set (reg:SI 0 ax)
-        (call (mem:QI (symbol_ref:SI ("strcpy") [flags 0x41]  <function_decl 0x74bc2f93a900 strcpy>) [0 strcpy S1 A8])
+        (call (mem:QI (symbol_ref:SI ("strcpy") [flags 0x41]  <function_decl 0x7f2fcf33a900 strcpy>) [0 strcpy S1 A8])
             (const_int 16 [0x10]))) "fs/namei.c":623:5 823 {*call_value}
      (nil)
     (expr_list (use (reg:SI 3 bx))
@@ -10319,9 +10319,9 @@ Dataflow summary:
 (insn 263 262 264 18 (set (reg/f:SI 0 ax [196])
         (plus:SI (reg:SI 3 bx [82])
             (const:SI (unspec:SI [
-                        (symbol_ref/f:SI ("*.LC5") [flags 0x2]  <var_decl 0x74bc2f61a900 *.LC5>)
+                        (symbol_ref/f:SI ("*.LC5") [flags 0x2]  <var_decl 0x7f2fcf01a900 *.LC5>)
                     ] UNSPEC_GOTOFF)))) "fs/namei.c":626:5 205 {*leasi}
-     (expr_list:REG_EQUAL (symbol_ref/f:SI ("*.LC5") [flags 0x2]  <var_decl 0x74bc2f61a900 *.LC5>)
+     (expr_list:REG_EQUAL (symbol_ref/f:SI ("*.LC5") [flags 0x2]  <var_decl 0x7f2fcf01a900 *.LC5>)
         (nil)))
 (insn 264 263 265 18 (set (mem/f:SI (pre_dec:SI (reg/f:SI 7 sp)) [8  S4 A32])
         (reg/f:SI 0 ax [196])) "fs/namei.c":626:5 54 {*pushsi2}
@@ -10332,7 +10332,7 @@ Dataflow summary:
      (expr_list:REG_ARGS_SIZE (const_int 16 [0x10])
         (nil)))
 (call_insn 267 265 268 18 (set (reg:SI 0 ax)
-        (call (mem:QI (symbol_ref:SI ("strcpy") [flags 0x41]  <function_decl 0x74bc2f93a900 strcpy>) [0 strcpy S1 A8])
+        (call (mem:QI (symbol_ref:SI ("strcpy") [flags 0x41]  <function_decl 0x7f2fcf33a900 strcpy>) [0 strcpy S1 A8])
             (const_int 16 [0x10]))) "fs/namei.c":626:5 823 {*call_value}
      (nil)
     (expr_list (use (reg:SI 3 bx))
@@ -10374,7 +10374,7 @@ Dataflow summary:
                 (const_int 32 [0x20])) [9 dir_block+0 S4 A32])) "fs/namei.c":629:5 54 {*pushsi2}
      (expr_list:REG_ARGS_SIZE (const_int 16 [0x10])
         (nil)))
-(call_insn 276 274 277 18 (call (mem:QI (symbol_ref:SI ("brelse") [flags 0x41]  <function_decl 0x74bc2f90e200 brelse>) [0 brelse S1 A8])
+(call_insn 276 274 277 18 (call (mem:QI (symbol_ref:SI ("brelse") [flags 0x41]  <function_decl 0x7f2fcf30e200 brelse>) [0 brelse S1 A8])
         (const_int 16 [0x10])) "fs/namei.c":629:5 812 {*call}
      (nil)
     (expr_list (use (reg:SI 3 bx))
@@ -10404,7 +10404,7 @@ Dataflow summary:
 (insn 281 404 282 18 (set (reg/f:SI 0 ax [200])
         (mem/u/c:SI (plus:SI (reg:SI 3 bx [82])
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("current") [flags 0x40]  <var_decl 0x74bc2f92e120 current>)
+                            (symbol_ref:SI ("current") [flags 0x40]  <var_decl 0x7f2fcf32e120 current>)
                         ] UNSPEC_GOT))) [12  S4 A8])) "fs/namei.c":630:58 75 {*movsi_internal}
      (nil))
 (insn 282 281 283 18 (set (reg/f:SI 0 ax [orig:138 current.150_58 ] [138])
@@ -10485,7 +10485,7 @@ Dataflow summary:
      (expr_list:REG_ARGS_SIZE (const_int 16 [0x10])
         (nil)))
 (call_insn 301 300 302 18 (set (reg:SI 0 ax)
-        (call (mem:QI (symbol_ref:SI ("add_entry") [flags 0x3]  <function_decl 0x74bc2f949d00 add_entry>) [0 add_entry S1 A8])
+        (call (mem:QI (symbol_ref:SI ("add_entry") [flags 0x3]  <function_decl 0x7f2fcf349d00 add_entry>) [0 add_entry S1 A8])
             (const_int 16 [0x10]))) "fs/namei.c":632:10 823 {*call_value}
      (nil)
     (nil))
@@ -10530,7 +10530,7 @@ Dataflow summary:
         (reg/f:SI 0 ax [orig:148 dir.154_68 ] [148])) "fs/namei.c":634:9 54 {*pushsi2}
      (expr_list:REG_ARGS_SIZE (const_int 16 [0x10])
         (nil)))
-(call_insn 312 310 313 19 (call (mem:QI (symbol_ref:SI ("iput") [flags 0x41]  <function_decl 0x74bc2f8d2d00 iput>) [0 iput S1 A8])
+(call_insn 312 310 313 19 (call (mem:QI (symbol_ref:SI ("iput") [flags 0x41]  <function_decl 0x7f2fcf2d2d00 iput>) [0 iput S1 A8])
         (const_int 16 [0x10])) "fs/namei.c":634:9 812 {*call}
      (nil)
     (expr_list (use (reg:SI 3 bx))
@@ -10581,7 +10581,7 @@ Dataflow summary:
         (reg:SI 0 ax [orig:152 _72 ] [152])) "fs/namei.c":635:9 54 {*pushsi2}
      (expr_list:REG_ARGS_SIZE (const_int 16 [0x10])
         (nil)))
-(call_insn 324 322 325 19 (call (mem:QI (symbol_ref:SI ("free_block") [flags 0x41]  <function_decl 0x74bc2f90e300 free_block>) [0 free_block S1 A8])
+(call_insn 324 322 325 19 (call (mem:QI (symbol_ref:SI ("free_block") [flags 0x41]  <function_decl 0x7f2fcf30e300 free_block>) [0 free_block S1 A8])
         (const_int 16 [0x10])) "fs/namei.c":635:9 812 {*call}
      (nil)
     (expr_list (use (reg:SI 3 bx))
@@ -10615,7 +10615,7 @@ Dataflow summary:
                 (const_int 36 [0x24])) [2 inode+0 S4 A32])) "fs/namei.c":637:9 54 {*pushsi2}
      (expr_list:REG_ARGS_SIZE (const_int 16 [0x10])
         (nil)))
-(call_insn 331 329 332 19 (call (mem:QI (symbol_ref:SI ("iput") [flags 0x41]  <function_decl 0x74bc2f8d2d00 iput>) [0 iput S1 A8])
+(call_insn 331 329 332 19 (call (mem:QI (symbol_ref:SI ("iput") [flags 0x41]  <function_decl 0x7f2fcf2d2d00 iput>) [0 iput S1 A8])
         (const_int 16 [0x10])) "fs/namei.c":637:9 812 {*call}
      (nil)
     (expr_list (use (reg:SI 3 bx))
@@ -10704,7 +10704,7 @@ Dataflow summary:
         (reg/f:SI 0 ax [orig:159 dir.158_80 ] [159])) "fs/namei.c":644:5 54 {*pushsi2}
      (expr_list:REG_ARGS_SIZE (const_int 16 [0x10])
         (nil)))
-(call_insn 354 352 355 20 (call (mem:QI (symbol_ref:SI ("iput") [flags 0x41]  <function_decl 0x74bc2f8d2d00 iput>) [0 iput S1 A8])
+(call_insn 354 352 355 20 (call (mem:QI (symbol_ref:SI ("iput") [flags 0x41]  <function_decl 0x7f2fcf2d2d00 iput>) [0 iput S1 A8])
         (const_int 16 [0x10])) "fs/namei.c":644:5 812 {*call}
      (nil)
     (expr_list (use (reg:SI 3 bx))
@@ -10730,7 +10730,7 @@ Dataflow summary:
                 (const_int 36 [0x24])) [2 inode+0 S4 A32])) "fs/namei.c":645:5 54 {*pushsi2}
      (expr_list:REG_ARGS_SIZE (const_int 16 [0x10])
         (nil)))
-(call_insn 359 357 360 20 (call (mem:QI (symbol_ref:SI ("iput") [flags 0x41]  <function_decl 0x74bc2f8d2d00 iput>) [0 iput S1 A8])
+(call_insn 359 357 360 20 (call (mem:QI (symbol_ref:SI ("iput") [flags 0x41]  <function_decl 0x7f2fcf2d2d00 iput>) [0 iput S1 A8])
         (const_int 16 [0x10])) "fs/namei.c":645:5 812 {*call}
      (nil)
     (expr_list (use (reg:SI 3 bx))
@@ -10756,7 +10756,7 @@ Dataflow summary:
                 (const_int 40 [0x28])) [9 bh+0 S4 A32])) "fs/namei.c":646:5 54 {*pushsi2}
      (expr_list:REG_ARGS_SIZE (const_int 16 [0x10])
         (nil)))
-(call_insn 364 362 365 20 (call (mem:QI (symbol_ref:SI ("brelse") [flags 0x41]  <function_decl 0x74bc2f90e200 brelse>) [0 brelse S1 A8])
+(call_insn 364 362 365 20 (call (mem:QI (symbol_ref:SI ("brelse") [flags 0x41]  <function_decl 0x7f2fcf30e200 brelse>) [0 brelse S1 A8])
         (const_int 16 [0x10])) "fs/namei.c":646:5 812 {*call}
      (nil)
     (expr_list (use (reg:SI 3 bx))
@@ -10973,7 +10973,7 @@ Dataflow summary:
      (expr_list:REG_ARGS_SIZE (const_int 16 [0x10])
         (nil)))
 (call_insn 29 27 30 4 (set (reg:SI 0 ax)
-        (call (mem:QI (symbol_ref:SI ("bread") [flags 0x41]  <function_decl 0x74bc2f90e100 bread>) [0 bread S1 A8])
+        (call (mem:QI (symbol_ref:SI ("bread") [flags 0x41]  <function_decl 0x7f2fcf30e100 bread>) [0 bread S1 A8])
             (const_int 16 [0x10]))) "fs/namei.c":662:16 823 {*call_value}
      (nil)
     (expr_list (use (reg:SI 3 bx))
@@ -11030,16 +11030,16 @@ Dataflow summary:
 (insn 42 41 43 5 (set (reg/f:SI 0 ax [121])
         (plus:SI (reg:SI 3 bx [82])
             (const:SI (unspec:SI [
-                        (symbol_ref/f:SI ("*.LC6") [flags 0x2]  <var_decl 0x74bc2f61aab0 *.LC6>)
+                        (symbol_ref/f:SI ("*.LC6") [flags 0x2]  <var_decl 0x7f2fcf01aab0 *.LC6>)
                     ] UNSPEC_GOTOFF)))) "fs/namei.c":663:9 205 {*leasi}
-     (expr_list:REG_EQUAL (symbol_ref/f:SI ("*.LC6") [flags 0x2]  <var_decl 0x74bc2f61aab0 *.LC6>)
+     (expr_list:REG_EQUAL (symbol_ref/f:SI ("*.LC6") [flags 0x2]  <var_decl 0x7f2fcf01aab0 *.LC6>)
         (nil)))
 (insn 43 42 45 5 (set (mem/f:SI (pre_dec:SI (reg/f:SI 7 sp)) [8  S4 A32])
         (reg/f:SI 0 ax [121])) "fs/namei.c":663:9 54 {*pushsi2}
      (expr_list:REG_ARGS_SIZE (const_int 16 [0x10])
         (nil)))
 (call_insn 45 43 46 5 (set (reg:SI 0 ax)
-        (call (mem:QI (symbol_ref:SI ("printk") [flags 0x41]  <function_decl 0x74bc2f938900 printk>) [0 printk S1 A8])
+        (call (mem:QI (symbol_ref:SI ("printk") [flags 0x41]  <function_decl 0x7f2fcf338900 printk>) [0 printk S1 A8])
             (const_int 16 [0x10]))) "fs/namei.c":663:9 823 {*call_value}
      (nil)
     (expr_list (use (reg:SI 3 bx))
@@ -11158,16 +11158,16 @@ Dataflow summary:
 (insn 72 71 73 8 (set (reg/f:SI 0 ax [128])
         (plus:SI (reg:SI 3 bx [82])
             (const:SI (unspec:SI [
-                        (symbol_ref/f:SI ("*.LC4") [flags 0x2]  <var_decl 0x74bc2f61a870 *.LC4>)
+                        (symbol_ref/f:SI ("*.LC4") [flags 0x2]  <var_decl 0x7f2fcf01a870 *.LC4>)
                     ] UNSPEC_GOTOFF)))) "fs/namei.c":668:9 205 {*leasi}
-     (expr_list:REG_EQUAL (symbol_ref/f:SI ("*.LC4") [flags 0x2]  <var_decl 0x74bc2f61a870 *.LC4>)
+     (expr_list:REG_EQUAL (symbol_ref/f:SI ("*.LC4") [flags 0x2]  <var_decl 0x7f2fcf01a870 *.LC4>)
         (nil)))
 (insn 73 72 75 8 (set (mem/f:SI (pre_dec:SI (reg/f:SI 7 sp)) [8  S4 A32])
         (reg/f:SI 0 ax [128])) "fs/namei.c":668:9 54 {*pushsi2}
      (expr_list:REG_ARGS_SIZE (const_int 16 [0x10])
         (nil)))
 (call_insn 75 73 76 8 (set (reg:SI 0 ax)
-        (call (mem:QI (symbol_ref:SI ("strcmp") [flags 0x41]  <function_decl 0x74bc2f93af00 strcmp>) [0 strcmp S1 A8])
+        (call (mem:QI (symbol_ref:SI ("strcmp") [flags 0x41]  <function_decl 0x7f2fcf33af00 strcmp>) [0 strcmp S1 A8])
             (const_int 16 [0x10]))) "fs/namei.c":668:9 823 {*call_value}
      (nil)
     (expr_list (use (reg:SI 3 bx))
@@ -11228,16 +11228,16 @@ Dataflow summary:
 (insn 86 85 87 9 (set (reg/f:SI 0 ax [130])
         (plus:SI (reg:SI 3 bx [82])
             (const:SI (unspec:SI [
-                        (symbol_ref/f:SI ("*.LC5") [flags 0x2]  <var_decl 0x74bc2f61a900 *.LC5>)
+                        (symbol_ref/f:SI ("*.LC5") [flags 0x2]  <var_decl 0x7f2fcf01a900 *.LC5>)
                     ] UNSPEC_GOTOFF)))) "fs/namei.c":668:36 205 {*leasi}
-     (expr_list:REG_EQUAL (symbol_ref/f:SI ("*.LC5") [flags 0x2]  <var_decl 0x74bc2f61a900 *.LC5>)
+     (expr_list:REG_EQUAL (symbol_ref/f:SI ("*.LC5") [flags 0x2]  <var_decl 0x7f2fcf01a900 *.LC5>)
         (nil)))
 (insn 87 86 89 9 (set (mem/f:SI (pre_dec:SI (reg/f:SI 7 sp)) [8  S4 A32])
         (reg/f:SI 0 ax [130])) "fs/namei.c":668:36 54 {*pushsi2}
      (expr_list:REG_ARGS_SIZE (const_int 16 [0x10])
         (nil)))
 (call_insn 89 87 90 9 (set (reg:SI 0 ax)
-        (call (mem:QI (symbol_ref:SI ("strcmp") [flags 0x41]  <function_decl 0x74bc2f93af00 strcmp>) [0 strcmp S1 A8])
+        (call (mem:QI (symbol_ref:SI ("strcmp") [flags 0x41]  <function_decl 0x7f2fcf33af00 strcmp>) [0 strcmp S1 A8])
             (const_int 16 [0x10]))) "fs/namei.c":668:36 823 {*call_value}
      (nil)
     (expr_list (use (reg:SI 3 bx))
@@ -11289,16 +11289,16 @@ Dataflow summary:
 (insn 101 100 102 10 (set (reg/f:SI 0 ax [132])
         (plus:SI (reg:SI 3 bx [82])
             (const:SI (unspec:SI [
-                        (symbol_ref/f:SI ("*.LC7") [flags 0x2]  <var_decl 0x74bc2f61ab40 *.LC7>)
+                        (symbol_ref/f:SI ("*.LC7") [flags 0x2]  <var_decl 0x7f2fcf01ab40 *.LC7>)
                     ] UNSPEC_GOTOFF)))) "fs/namei.c":669:9 205 {*leasi}
-     (expr_list:REG_EQUAL (symbol_ref/f:SI ("*.LC7") [flags 0x2]  <var_decl 0x74bc2f61ab40 *.LC7>)
+     (expr_list:REG_EQUAL (symbol_ref/f:SI ("*.LC7") [flags 0x2]  <var_decl 0x7f2fcf01ab40 *.LC7>)
         (nil)))
 (insn 102 101 104 10 (set (mem/f:SI (pre_dec:SI (reg/f:SI 7 sp)) [8  S4 A32])
         (reg/f:SI 0 ax [132])) "fs/namei.c":669:9 54 {*pushsi2}
      (expr_list:REG_ARGS_SIZE (const_int 16 [0x10])
         (nil)))
 (call_insn 104 102 105 10 (set (reg:SI 0 ax)
-        (call (mem:QI (symbol_ref:SI ("printk") [flags 0x41]  <function_decl 0x74bc2f938900 printk>) [0 printk S1 A8])
+        (call (mem:QI (symbol_ref:SI ("printk") [flags 0x41]  <function_decl 0x7f2fcf338900 printk>) [0 printk S1 A8])
             (const_int 16 [0x10]))) "fs/namei.c":669:9 823 {*call_value}
      (nil)
     (expr_list (use (reg:SI 3 bx))
@@ -11381,7 +11381,7 @@ Dataflow summary:
                 (const_int 36 [0x24])) [9 bh+0 S4 A32])) "fs/namei.c":676:13 54 {*pushsi2}
      (expr_list:REG_ARGS_SIZE (const_int 16 [0x10])
         (nil)))
-(call_insn 125 123 126 13 (call (mem:QI (symbol_ref:SI ("brelse") [flags 0x41]  <function_decl 0x74bc2f90e200 brelse>) [0 brelse S1 A8])
+(call_insn 125 123 126 13 (call (mem:QI (symbol_ref:SI ("brelse") [flags 0x41]  <function_decl 0x7f2fcf30e200 brelse>) [0 brelse S1 A8])
         (const_int 16 [0x10])) "fs/namei.c":676:13 812 {*call}
      (nil)
     (expr_list (use (reg:SI 3 bx))
@@ -11425,7 +11425,7 @@ Dataflow summary:
      (expr_list:REG_ARGS_SIZE (const_int 16 [0x10])
         (nil)))
 (call_insn 134 132 135 13 (set (reg:SI 0 ax)
-        (call (mem:QI (symbol_ref:SI ("bmap") [flags 0x41]  <function_decl 0x74bc2f90ed00 bmap>) [0 bmap S1 A8])
+        (call (mem:QI (symbol_ref:SI ("bmap") [flags 0x41]  <function_decl 0x7f2fcf30ed00 bmap>) [0 bmap S1 A8])
             (const_int 16 [0x10]))) "fs/namei.c":677:21 823 {*call_value}
      (nil)
     (expr_list (use (reg:SI 3 bx))
@@ -11506,7 +11506,7 @@ Dataflow summary:
      (expr_list:REG_ARGS_SIZE (const_int 16 [0x10])
         (nil)))
 (call_insn 155 153 156 15 (set (reg:SI 0 ax)
-        (call (mem:QI (symbol_ref:SI ("bread") [flags 0x41]  <function_decl 0x74bc2f90e100 bread>) [0 bread S1 A8])
+        (call (mem:QI (symbol_ref:SI ("bread") [flags 0x41]  <function_decl 0x7f2fcf30e100 bread>) [0 bread S1 A8])
             (const_int 16 [0x10]))) "fs/namei.c":682:24 823 {*call_value}
      (nil)
     (expr_list (use (reg:SI 3 bx))
@@ -11591,7 +11591,7 @@ Dataflow summary:
                 (const_int 36 [0x24])) [9 bh+0 S4 A32])) "fs/namei.c":687:13 54 {*pushsi2}
      (expr_list:REG_ARGS_SIZE (const_int 16 [0x10])
         (nil)))
-(call_insn 180 178 181 19 (call (mem:QI (symbol_ref:SI ("brelse") [flags 0x41]  <function_decl 0x74bc2f90e200 brelse>) [0 brelse S1 A8])
+(call_insn 180 178 181 19 (call (mem:QI (symbol_ref:SI ("brelse") [flags 0x41]  <function_decl 0x7f2fcf30e200 brelse>) [0 brelse S1 A8])
         (const_int 16 [0x10])) "fs/namei.c":687:13 812 {*call}
      (nil)
     (expr_list (use (reg:SI 3 bx))
@@ -11664,7 +11664,7 @@ Dataflow summary:
                 (const_int 36 [0x24])) [9 bh+0 S4 A32])) "fs/namei.c":693:5 54 {*pushsi2}
      (expr_list:REG_ARGS_SIZE (const_int 16 [0x10])
         (nil)))
-(call_insn 199 197 200 22 (call (mem:QI (symbol_ref:SI ("brelse") [flags 0x41]  <function_decl 0x74bc2f90e200 brelse>) [0 brelse S1 A8])
+(call_insn 199 197 200 22 (call (mem:QI (symbol_ref:SI ("brelse") [flags 0x41]  <function_decl 0x7f2fcf30e200 brelse>) [0 brelse S1 A8])
         (const_int 16 [0x10])) "fs/namei.c":693:5 812 {*call}
      (nil)
     (expr_list (use (reg:SI 3 bx))
@@ -11803,7 +11803,7 @@ Dataflow summary:
 (insn 5 2 6 2 (set (reg/f:SI 0 ax [144])
         (mem/u/c:SI (plus:SI (reg:SI 3 bx [82])
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("current") [flags 0x40]  <var_decl 0x74bc2f92e120 current>)
+                            (symbol_ref:SI ("current") [flags 0x40]  <var_decl 0x7f2fcf32e120 current>)
                         ] UNSPEC_GOT))) [12  S4 A8])) "fs/namei.c":705:10 75 {*movsi_internal}
      (nil))
 (insn 6 5 7 2 (set (reg/f:SI 0 ax [orig:83 current.161_1 ] [83])
@@ -11871,7 +11871,7 @@ Dataflow summary:
      (expr_list:REG_ARGS_SIZE (const_int 16 [0x10])
         (nil)))
 (call_insn 22 21 23 4 (set (reg:SI 0 ax)
-        (call (mem:QI (symbol_ref:SI ("dir_namei") [flags 0x3]  <function_decl 0x74bc2f949b00 dir_namei>) [0 dir_namei S1 A8])
+        (call (mem:QI (symbol_ref:SI ("dir_namei") [flags 0x3]  <function_decl 0x7f2fcf349b00 dir_namei>) [0 dir_namei S1 A8])
             (const_int 16 [0x10]))) "fs/namei.c":707:17 823 {*call_value}
      (nil)
     (nil))
@@ -11945,7 +11945,7 @@ Dataflow summary:
         (reg/f:SI 0 ax [orig:88 dir.164_6 ] [88])) "fs/namei.c":710:9 54 {*pushsi2}
      (expr_list:REG_ARGS_SIZE (const_int 16 [0x10])
         (nil)))
-(call_insn 43 41 44 7 (call (mem:QI (symbol_ref:SI ("iput") [flags 0x41]  <function_decl 0x74bc2f8d2d00 iput>) [0 iput S1 A8])
+(call_insn 43 41 44 7 (call (mem:QI (symbol_ref:SI ("iput") [flags 0x41]  <function_decl 0x7f2fcf2d2d00 iput>) [0 iput S1 A8])
         (const_int 16 [0x10])) "fs/namei.c":710:9 812 {*call}
      (nil)
     (expr_list (use (reg:SI 3 bx))
@@ -11989,7 +11989,7 @@ Dataflow summary:
      (expr_list:REG_ARGS_SIZE (const_int 16 [0x10])
         (nil)))
 (call_insn 54 53 55 8 (set (reg:SI 0 ax)
-        (call (mem:QI (symbol_ref:SI ("permission") [flags 0x3]  <function_decl 0x74bc2f949300 permission>) [0 permission S1 A8])
+        (call (mem:QI (symbol_ref:SI ("permission") [flags 0x3]  <function_decl 0x7f2fcf349300 permission>) [0 permission S1 A8])
             (const_int 16 [0x10]))) "fs/namei.c":713:10 823 {*call_value}
      (nil)
     (nil))
@@ -12029,7 +12029,7 @@ Dataflow summary:
         (reg/f:SI 0 ax [orig:91 dir.166_9 ] [91])) "fs/namei.c":714:9 54 {*pushsi2}
      (expr_list:REG_ARGS_SIZE (const_int 16 [0x10])
         (nil)))
-(call_insn 64 62 65 9 (call (mem:QI (symbol_ref:SI ("iput") [flags 0x41]  <function_decl 0x74bc2f8d2d00 iput>) [0 iput S1 A8])
+(call_insn 64 62 65 9 (call (mem:QI (symbol_ref:SI ("iput") [flags 0x41]  <function_decl 0x7f2fcf2d2d00 iput>) [0 iput S1 A8])
         (const_int 16 [0x10])) "fs/namei.c":714:9 812 {*call}
      (nil)
     (expr_list (use (reg:SI 3 bx))
@@ -12091,7 +12091,7 @@ Dataflow summary:
      (expr_list:REG_ARGS_SIZE (const_int 16 [0x10])
         (nil)))
 (call_insn 79 78 80 10 (set (reg:SI 0 ax)
-        (call (mem:QI (symbol_ref:SI ("find_entry") [flags 0x3]  <function_decl 0x74bc2f949700 find_entry>) [0 find_entry S1 A8])
+        (call (mem:QI (symbol_ref:SI ("find_entry") [flags 0x3]  <function_decl 0x7f2fcf349700 find_entry>) [0 find_entry S1 A8])
             (const_int 16 [0x10]))) "fs/namei.c":717:10 823 {*call_value}
      (nil)
     (nil))
@@ -12136,7 +12136,7 @@ Dataflow summary:
         (reg/f:SI 0 ax [orig:94 dir.169_12 ] [94])) "fs/namei.c":719:9 54 {*pushsi2}
      (expr_list:REG_ARGS_SIZE (const_int 16 [0x10])
         (nil)))
-(call_insn 90 88 91 11 (call (mem:QI (symbol_ref:SI ("iput") [flags 0x41]  <function_decl 0x74bc2f8d2d00 iput>) [0 iput S1 A8])
+(call_insn 90 88 91 11 (call (mem:QI (symbol_ref:SI ("iput") [flags 0x41]  <function_decl 0x7f2fcf2d2d00 iput>) [0 iput S1 A8])
         (const_int 16 [0x10])) "fs/namei.c":719:9 812 {*call}
      (nil)
     (expr_list (use (reg:SI 3 bx))
@@ -12197,7 +12197,7 @@ Dataflow summary:
      (expr_list:REG_ARGS_SIZE (const_int 16 [0x10])
         (nil)))
 (call_insn 107 105 108 12 (set (reg:SI 0 ax)
-        (call (mem:QI (symbol_ref:SI ("iget") [flags 0x41]  <function_decl 0x74bc2f90e900 iget>) [0 iget S1 A8])
+        (call (mem:QI (symbol_ref:SI ("iget") [flags 0x41]  <function_decl 0x7f2fcf30e900 iget>) [0 iget S1 A8])
             (const_int 16 [0x10]))) "fs/namei.c":722:19 823 {*call_value}
      (nil)
     (expr_list (use (reg:SI 3 bx))
@@ -12243,7 +12243,7 @@ Dataflow summary:
         (reg/f:SI 0 ax [orig:101 dir.172_19 ] [101])) "fs/namei.c":723:9 54 {*pushsi2}
      (expr_list:REG_ARGS_SIZE (const_int 16 [0x10])
         (nil)))
-(call_insn 118 116 119 13 (call (mem:QI (symbol_ref:SI ("iput") [flags 0x41]  <function_decl 0x74bc2f8d2d00 iput>) [0 iput S1 A8])
+(call_insn 118 116 119 13 (call (mem:QI (symbol_ref:SI ("iput") [flags 0x41]  <function_decl 0x7f2fcf2d2d00 iput>) [0 iput S1 A8])
         (const_int 16 [0x10])) "fs/namei.c":723:9 812 {*call}
      (nil)
     (expr_list (use (reg:SI 3 bx))
@@ -12269,7 +12269,7 @@ Dataflow summary:
                 (const_int 40 [0x28])) [9 bh+0 S4 A32])) "fs/namei.c":724:9 54 {*pushsi2}
      (expr_list:REG_ARGS_SIZE (const_int 16 [0x10])
         (nil)))
-(call_insn 123 121 124 13 (call (mem:QI (symbol_ref:SI ("brelse") [flags 0x41]  <function_decl 0x74bc2f90e200 brelse>) [0 brelse S1 A8])
+(call_insn 123 121 124 13 (call (mem:QI (symbol_ref:SI ("brelse") [flags 0x41]  <function_decl 0x7f2fcf30e200 brelse>) [0 brelse S1 A8])
         (const_int 16 [0x10])) "fs/namei.c":724:9 812 {*call}
      (nil)
     (expr_list (use (reg:SI 3 bx))
@@ -12324,7 +12324,7 @@ Dataflow summary:
 (insn 137 136 138 15 (set (reg/f:SI 0 ax [151])
         (mem/u/c:SI (plus:SI (reg:SI 3 bx [82])
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("current") [flags 0x40]  <var_decl 0x74bc2f92e120 current>)
+                            (symbol_ref:SI ("current") [flags 0x40]  <var_decl 0x7f2fcf32e120 current>)
                         ] UNSPEC_GOT))) [12  S4 A8])) "fs/namei.c":727:43 75 {*movsi_internal}
      (nil))
 (insn 138 137 139 15 (set (reg/f:SI 0 ax [orig:106 current.174_24 ] [106])
@@ -12357,7 +12357,7 @@ Dataflow summary:
 (insn 145 144 146 16 (set (reg/f:SI 0 ax [153])
         (mem/u/c:SI (plus:SI (reg:SI 3 bx [82])
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("current") [flags 0x40]  <var_decl 0x74bc2f92e120 current>)
+                            (symbol_ref:SI ("current") [flags 0x40]  <var_decl 0x7f2fcf32e120 current>)
                         ] UNSPEC_GOT))) [12  S4 A8])) "fs/namei.c":728:33 75 {*movsi_internal}
      (nil))
 (insn 146 145 147 16 (set (reg/f:SI 0 ax [orig:109 current.175_27 ] [109])
@@ -12395,7 +12395,7 @@ Dataflow summary:
         (reg/f:SI 0 ax [orig:111 dir.176_29 ] [111])) "fs/namei.c":729:9 54 {*pushsi2}
      (expr_list:REG_ARGS_SIZE (const_int 16 [0x10])
         (nil)))
-(call_insn 155 153 156 17 (call (mem:QI (symbol_ref:SI ("iput") [flags 0x41]  <function_decl 0x74bc2f8d2d00 iput>) [0 iput S1 A8])
+(call_insn 155 153 156 17 (call (mem:QI (symbol_ref:SI ("iput") [flags 0x41]  <function_decl 0x7f2fcf2d2d00 iput>) [0 iput S1 A8])
         (const_int 16 [0x10])) "fs/namei.c":729:9 812 {*call}
      (nil)
     (expr_list (use (reg:SI 3 bx))
@@ -12421,7 +12421,7 @@ Dataflow summary:
                 (const_int 36 [0x24])) [2 inode+0 S4 A32])) "fs/namei.c":730:9 54 {*pushsi2}
      (expr_list:REG_ARGS_SIZE (const_int 16 [0x10])
         (nil)))
-(call_insn 160 158 161 17 (call (mem:QI (symbol_ref:SI ("iput") [flags 0x41]  <function_decl 0x74bc2f8d2d00 iput>) [0 iput S1 A8])
+(call_insn 160 158 161 17 (call (mem:QI (symbol_ref:SI ("iput") [flags 0x41]  <function_decl 0x7f2fcf2d2d00 iput>) [0 iput S1 A8])
         (const_int 16 [0x10])) "fs/namei.c":730:9 812 {*call}
      (nil)
     (expr_list (use (reg:SI 3 bx))
@@ -12447,7 +12447,7 @@ Dataflow summary:
                 (const_int 40 [0x28])) [9 bh+0 S4 A32])) "fs/namei.c":731:9 54 {*pushsi2}
      (expr_list:REG_ARGS_SIZE (const_int 16 [0x10])
         (nil)))
-(call_insn 165 163 166 17 (call (mem:QI (symbol_ref:SI ("brelse") [flags 0x41]  <function_decl 0x74bc2f90e200 brelse>) [0 brelse S1 A8])
+(call_insn 165 163 166 17 (call (mem:QI (symbol_ref:SI ("brelse") [flags 0x41]  <function_decl 0x7f2fcf30e200 brelse>) [0 brelse S1 A8])
         (const_int 16 [0x10])) "fs/namei.c":731:9 812 {*call}
      (nil)
     (expr_list (use (reg:SI 3 bx))
@@ -12535,7 +12535,7 @@ Dataflow summary:
         (reg/f:SI 0 ax [orig:116 dir.178_34 ] [116])) "fs/namei.c":735:9 54 {*pushsi2}
      (expr_list:REG_ARGS_SIZE (const_int 16 [0x10])
         (nil)))
-(call_insn 191 189 192 20 (call (mem:QI (symbol_ref:SI ("iput") [flags 0x41]  <function_decl 0x74bc2f8d2d00 iput>) [0 iput S1 A8])
+(call_insn 191 189 192 20 (call (mem:QI (symbol_ref:SI ("iput") [flags 0x41]  <function_decl 0x7f2fcf2d2d00 iput>) [0 iput S1 A8])
         (const_int 16 [0x10])) "fs/namei.c":735:9 812 {*call}
      (nil)
     (expr_list (use (reg:SI 3 bx))
@@ -12561,7 +12561,7 @@ Dataflow summary:
                 (const_int 36 [0x24])) [2 inode+0 S4 A32])) "fs/namei.c":736:9 54 {*pushsi2}
      (expr_list:REG_ARGS_SIZE (const_int 16 [0x10])
         (nil)))
-(call_insn 196 194 197 20 (call (mem:QI (symbol_ref:SI ("iput") [flags 0x41]  <function_decl 0x74bc2f8d2d00 iput>) [0 iput S1 A8])
+(call_insn 196 194 197 20 (call (mem:QI (symbol_ref:SI ("iput") [flags 0x41]  <function_decl 0x7f2fcf2d2d00 iput>) [0 iput S1 A8])
         (const_int 16 [0x10])) "fs/namei.c":736:9 812 {*call}
      (nil)
     (expr_list (use (reg:SI 3 bx))
@@ -12587,7 +12587,7 @@ Dataflow summary:
                 (const_int 40 [0x28])) [9 bh+0 S4 A32])) "fs/namei.c":737:9 54 {*pushsi2}
      (expr_list:REG_ARGS_SIZE (const_int 16 [0x10])
         (nil)))
-(call_insn 201 199 202 20 (call (mem:QI (symbol_ref:SI ("brelse") [flags 0x41]  <function_decl 0x74bc2f90e200 brelse>) [0 brelse S1 A8])
+(call_insn 201 199 202 20 (call (mem:QI (symbol_ref:SI ("brelse") [flags 0x41]  <function_decl 0x7f2fcf30e200 brelse>) [0 brelse S1 A8])
         (const_int 16 [0x10])) "fs/namei.c":737:9 812 {*call}
      (nil)
     (expr_list (use (reg:SI 3 bx))
@@ -12640,7 +12640,7 @@ Dataflow summary:
                 (const_int 36 [0x24])) [2 inode+0 S4 A32])) "fs/namei.c":741:9 54 {*pushsi2}
      (expr_list:REG_ARGS_SIZE (const_int 16 [0x10])
         (nil)))
-(call_insn 215 213 216 22 (call (mem:QI (symbol_ref:SI ("iput") [flags 0x41]  <function_decl 0x74bc2f8d2d00 iput>) [0 iput S1 A8])
+(call_insn 215 213 216 22 (call (mem:QI (symbol_ref:SI ("iput") [flags 0x41]  <function_decl 0x7f2fcf2d2d00 iput>) [0 iput S1 A8])
         (const_int 16 [0x10])) "fs/namei.c":741:9 812 {*call}
      (nil)
     (expr_list (use (reg:SI 3 bx))
@@ -12669,7 +12669,7 @@ Dataflow summary:
         (reg/f:SI 0 ax [orig:118 dir.180_36 ] [118])) "fs/namei.c":742:9 54 {*pushsi2}
      (expr_list:REG_ARGS_SIZE (const_int 16 [0x10])
         (nil)))
-(call_insn 221 219 222 22 (call (mem:QI (symbol_ref:SI ("iput") [flags 0x41]  <function_decl 0x74bc2f8d2d00 iput>) [0 iput S1 A8])
+(call_insn 221 219 222 22 (call (mem:QI (symbol_ref:SI ("iput") [flags 0x41]  <function_decl 0x7f2fcf2d2d00 iput>) [0 iput S1 A8])
         (const_int 16 [0x10])) "fs/namei.c":742:9 812 {*call}
      (nil)
     (expr_list (use (reg:SI 3 bx))
@@ -12695,7 +12695,7 @@ Dataflow summary:
                 (const_int 40 [0x28])) [9 bh+0 S4 A32])) "fs/namei.c":743:9 54 {*pushsi2}
      (expr_list:REG_ARGS_SIZE (const_int 16 [0x10])
         (nil)))
-(call_insn 226 224 227 22 (call (mem:QI (symbol_ref:SI ("brelse") [flags 0x41]  <function_decl 0x74bc2f90e200 brelse>) [0 brelse S1 A8])
+(call_insn 226 224 227 22 (call (mem:QI (symbol_ref:SI ("brelse") [flags 0x41]  <function_decl 0x7f2fcf30e200 brelse>) [0 brelse S1 A8])
         (const_int 16 [0x10])) "fs/namei.c":743:9 812 {*call}
      (nil)
     (expr_list (use (reg:SI 3 bx))
@@ -12760,7 +12760,7 @@ Dataflow summary:
                 (const_int 36 [0x24])) [2 inode+0 S4 A32])) "fs/namei.c":747:9 54 {*pushsi2}
      (expr_list:REG_ARGS_SIZE (const_int 16 [0x10])
         (nil)))
-(call_insn 243 241 244 24 (call (mem:QI (symbol_ref:SI ("iput") [flags 0x41]  <function_decl 0x74bc2f8d2d00 iput>) [0 iput S1 A8])
+(call_insn 243 241 244 24 (call (mem:QI (symbol_ref:SI ("iput") [flags 0x41]  <function_decl 0x7f2fcf2d2d00 iput>) [0 iput S1 A8])
         (const_int 16 [0x10])) "fs/namei.c":747:9 812 {*call}
      (nil)
     (expr_list (use (reg:SI 3 bx))
@@ -12789,7 +12789,7 @@ Dataflow summary:
         (reg/f:SI 0 ax [orig:122 dir.181_40 ] [122])) "fs/namei.c":748:9 54 {*pushsi2}
      (expr_list:REG_ARGS_SIZE (const_int 16 [0x10])
         (nil)))
-(call_insn 249 247 250 24 (call (mem:QI (symbol_ref:SI ("iput") [flags 0x41]  <function_decl 0x74bc2f8d2d00 iput>) [0 iput S1 A8])
+(call_insn 249 247 250 24 (call (mem:QI (symbol_ref:SI ("iput") [flags 0x41]  <function_decl 0x7f2fcf2d2d00 iput>) [0 iput S1 A8])
         (const_int 16 [0x10])) "fs/namei.c":748:9 812 {*call}
      (nil)
     (expr_list (use (reg:SI 3 bx))
@@ -12815,7 +12815,7 @@ Dataflow summary:
                 (const_int 40 [0x28])) [9 bh+0 S4 A32])) "fs/namei.c":749:9 54 {*pushsi2}
      (expr_list:REG_ARGS_SIZE (const_int 16 [0x10])
         (nil)))
-(call_insn 254 252 255 24 (call (mem:QI (symbol_ref:SI ("brelse") [flags 0x41]  <function_decl 0x74bc2f90e200 brelse>) [0 brelse S1 A8])
+(call_insn 254 252 255 24 (call (mem:QI (symbol_ref:SI ("brelse") [flags 0x41]  <function_decl 0x7f2fcf30e200 brelse>) [0 brelse S1 A8])
         (const_int 16 [0x10])) "fs/namei.c":749:9 812 {*call}
      (nil)
     (expr_list (use (reg:SI 3 bx))
@@ -12852,7 +12852,7 @@ Dataflow summary:
      (expr_list:REG_ARGS_SIZE (const_int 16 [0x10])
         (nil)))
 (call_insn 263 262 264 25 (set (reg:SI 0 ax)
-        (call (mem:QI (symbol_ref:SI ("empty_dir") [flags 0x3]  <function_decl 0x74bc2f95ea00 empty_dir>) [0 empty_dir S1 A8])
+        (call (mem:QI (symbol_ref:SI ("empty_dir") [flags 0x3]  <function_decl 0x7f2fcf35ea00 empty_dir>) [0 empty_dir S1 A8])
             (const_int 16 [0x10]))) "fs/namei.c":752:10 823 {*call_value}
      (nil)
     (nil))
@@ -12889,7 +12889,7 @@ Dataflow summary:
                 (const_int 36 [0x24])) [2 inode+0 S4 A32])) "fs/namei.c":753:9 54 {*pushsi2}
      (expr_list:REG_ARGS_SIZE (const_int 16 [0x10])
         (nil)))
-(call_insn 272 270 273 26 (call (mem:QI (symbol_ref:SI ("iput") [flags 0x41]  <function_decl 0x74bc2f8d2d00 iput>) [0 iput S1 A8])
+(call_insn 272 270 273 26 (call (mem:QI (symbol_ref:SI ("iput") [flags 0x41]  <function_decl 0x7f2fcf2d2d00 iput>) [0 iput S1 A8])
         (const_int 16 [0x10])) "fs/namei.c":753:9 812 {*call}
      (nil)
     (expr_list (use (reg:SI 3 bx))
@@ -12918,7 +12918,7 @@ Dataflow summary:
         (reg/f:SI 0 ax [orig:124 dir.182_42 ] [124])) "fs/namei.c":754:9 54 {*pushsi2}
      (expr_list:REG_ARGS_SIZE (const_int 16 [0x10])
         (nil)))
-(call_insn 278 276 279 26 (call (mem:QI (symbol_ref:SI ("iput") [flags 0x41]  <function_decl 0x74bc2f8d2d00 iput>) [0 iput S1 A8])
+(call_insn 278 276 279 26 (call (mem:QI (symbol_ref:SI ("iput") [flags 0x41]  <function_decl 0x7f2fcf2d2d00 iput>) [0 iput S1 A8])
         (const_int 16 [0x10])) "fs/namei.c":754:9 812 {*call}
      (nil)
     (expr_list (use (reg:SI 3 bx))
@@ -12944,7 +12944,7 @@ Dataflow summary:
                 (const_int 40 [0x28])) [9 bh+0 S4 A32])) "fs/namei.c":755:9 54 {*pushsi2}
      (expr_list:REG_ARGS_SIZE (const_int 16 [0x10])
         (nil)))
-(call_insn 283 281 284 26 (call (mem:QI (symbol_ref:SI ("brelse") [flags 0x41]  <function_decl 0x74bc2f90e200 brelse>) [0 brelse S1 A8])
+(call_insn 283 281 284 26 (call (mem:QI (symbol_ref:SI ("brelse") [flags 0x41]  <function_decl 0x7f2fcf30e200 brelse>) [0 brelse S1 A8])
         (const_int 16 [0x10])) "fs/namei.c":755:9 812 {*call}
      (nil)
     (expr_list (use (reg:SI 3 bx))
@@ -13013,16 +13013,16 @@ Dataflow summary:
 (insn 300 299 301 28 (set (reg/f:SI 0 ax [159])
         (plus:SI (reg:SI 3 bx [82])
             (const:SI (unspec:SI [
-                        (symbol_ref/f:SI ("*.LC8") [flags 0x2]  <var_decl 0x74bc2f61ac60 *.LC8>)
+                        (symbol_ref/f:SI ("*.LC8") [flags 0x2]  <var_decl 0x7f2fcf01ac60 *.LC8>)
                     ] UNSPEC_GOTOFF)))) "fs/namei.c":759:9 205 {*leasi}
-     (expr_list:REG_EQUAL (symbol_ref/f:SI ("*.LC8") [flags 0x2]  <var_decl 0x74bc2f61ac60 *.LC8>)
+     (expr_list:REG_EQUAL (symbol_ref/f:SI ("*.LC8") [flags 0x2]  <var_decl 0x7f2fcf01ac60 *.LC8>)
         (nil)))
 (insn 301 300 303 28 (set (mem/f:SI (pre_dec:SI (reg/f:SI 7 sp)) [8  S4 A32])
         (reg/f:SI 0 ax [159])) "fs/namei.c":759:9 54 {*pushsi2}
      (expr_list:REG_ARGS_SIZE (const_int 16 [0x10])
         (nil)))
 (call_insn 303 301 304 28 (set (reg:SI 0 ax)
-        (call (mem:QI (symbol_ref:SI ("printk") [flags 0x41]  <function_decl 0x74bc2f938900 printk>) [0 printk S1 A8])
+        (call (mem:QI (symbol_ref:SI ("printk") [flags 0x41]  <function_decl 0x7f2fcf338900 printk>) [0 printk S1 A8])
             (const_int 16 [0x10]))) "fs/namei.c":759:9 823 {*call_value}
      (nil)
     (expr_list (use (reg:SI 3 bx))
@@ -13065,7 +13065,7 @@ Dataflow summary:
                 (const_int 40 [0x28])) [9 bh+0 S4 A32])) "fs/namei.c":762:5 54 {*pushsi2}
      (expr_list:REG_ARGS_SIZE (const_int 16 [0x10])
         (nil)))
-(call_insn 314 312 315 29 (call (mem:QI (symbol_ref:SI ("brelse") [flags 0x41]  <function_decl 0x74bc2f90e200 brelse>) [0 brelse S1 A8])
+(call_insn 314 312 315 29 (call (mem:QI (symbol_ref:SI ("brelse") [flags 0x41]  <function_decl 0x7f2fcf30e200 brelse>) [0 brelse S1 A8])
         (const_int 16 [0x10])) "fs/namei.c":762:5 812 {*call}
      (nil)
     (expr_list (use (reg:SI 3 bx))
@@ -13116,7 +13116,7 @@ Dataflow summary:
 (insn 324 323 325 29 (set (reg/f:SI 0 ax [163])
         (mem/u/c:SI (plus:SI (reg:SI 3 bx [82])
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("jiffies") [flags 0x40]  <var_decl 0x74bc2f92e360 jiffies>)
+                            (symbol_ref:SI ("jiffies") [flags 0x40]  <var_decl 0x7f2fcf32e360 jiffies>)
                         ] UNSPEC_GOT))) [12  S4 A8])) "fs/namei.c":766:35 75 {*movsi_internal}
      (nil))
 (insn 325 324 326 29 (set (reg:SI 2 cx [orig:132 jiffies.185_51 ] [132])
@@ -13167,7 +13167,7 @@ Dataflow summary:
 (insn 331 393 332 29 (set (reg/f:SI 0 ax [168])
         (mem/u/c:SI (plus:SI (reg:SI 3 bx [82])
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("startup_time") [flags 0x40]  <var_decl 0x74bc2f92e3f0 startup_time>)
+                            (symbol_ref:SI ("startup_time") [flags 0x40]  <var_decl 0x7f2fcf32e3f0 startup_time>)
                         ] UNSPEC_GOT))) [12  S4 A8])) "fs/namei.c":766:35 75 {*movsi_internal}
      (nil))
 (insn 332 331 333 29 (set (reg:SI 0 ax [orig:134 startup_time.186_53 ] [134])
@@ -13224,7 +13224,7 @@ Dataflow summary:
         (reg/f:SI 0 ax [orig:141 dir.190_60 ] [141])) "fs/namei.c":768:5 54 {*pushsi2}
      (expr_list:REG_ARGS_SIZE (const_int 16 [0x10])
         (nil)))
-(call_insn 346 344 347 29 (call (mem:QI (symbol_ref:SI ("iput") [flags 0x41]  <function_decl 0x74bc2f8d2d00 iput>) [0 iput S1 A8])
+(call_insn 346 344 347 29 (call (mem:QI (symbol_ref:SI ("iput") [flags 0x41]  <function_decl 0x7f2fcf2d2d00 iput>) [0 iput S1 A8])
         (const_int 16 [0x10])) "fs/namei.c":768:5 812 {*call}
      (nil)
     (expr_list (use (reg:SI 3 bx))
@@ -13250,7 +13250,7 @@ Dataflow summary:
                 (const_int 36 [0x24])) [2 inode+0 S4 A32])) "fs/namei.c":769:5 54 {*pushsi2}
      (expr_list:REG_ARGS_SIZE (const_int 16 [0x10])
         (nil)))
-(call_insn 351 349 352 29 (call (mem:QI (symbol_ref:SI ("iput") [flags 0x41]  <function_decl 0x74bc2f8d2d00 iput>) [0 iput S1 A8])
+(call_insn 351 349 352 29 (call (mem:QI (symbol_ref:SI ("iput") [flags 0x41]  <function_decl 0x7f2fcf2d2d00 iput>) [0 iput S1 A8])
         (const_int 16 [0x10])) "fs/namei.c":769:5 812 {*call}
      (nil)
     (expr_list (use (reg:SI 3 bx))

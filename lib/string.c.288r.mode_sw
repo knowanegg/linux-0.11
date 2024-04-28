@@ -1126,7 +1126,7 @@ Dataflow summary:
 (insn 5 2 8 2 (set (reg/f:SI 83 [ ___strtok.0_1 ])
         (mem/f/c:SI (plus:SI (reg:SI 82)
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("___strtok") [flags 0x2]  <var_decl 0x7a51a8b6ab40 ___strtok>)
+                            (symbol_ref:SI ("___strtok") [flags 0x2]  <var_decl 0x742a84098b40 ___strtok>)
                         ] UNSPEC_GOTOFF))) [1 ___strtok+0 S4 A32])) "lib/string.c":291:9 75 {*movsi_internal}
      (nil))
 (insn 8 5 9 2 (set (reg/f:SI 89)
@@ -1265,7 +1265,7 @@ Dataflow summary:
      (nil))
 (insn 7 6 10 2 (set (mem/f/c:SI (plus:SI (reg:SI 82)
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("___strtok") [flags 0x2]  <var_decl 0x7a51a8b6ab40 ___strtok>)
+                            (symbol_ref:SI ("___strtok") [flags 0x2]  <var_decl 0x742a84098b40 ___strtok>)
                         ] UNSPEC_GOTOFF))) [1 ___strtok+0 S4 A32])
         (reg:SI 88)) "lib/string.c":291:9 75 {*movsi_internal}
      (nil))

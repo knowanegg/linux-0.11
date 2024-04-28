@@ -73,7 +73,7 @@ Dataflow summary:
 (insn 10 9 11 3 (set (reg/f:SI 1 dx [102])
         (mem/u/c:SI (plus:SI (reg:SI 0 ax [82])
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("current") [flags 0x40]  <var_decl 0x74050752f120 current>)
+                            (symbol_ref:SI ("current") [flags 0x40]  <var_decl 0x7a023812f120 current>)
                         ] UNSPEC_GOT))) [6  S4 A8])) "fs/ioctl.c":36:42 75 {*movsi_internal}
      (nil))
 (insn 11 10 12 3 (set (reg/f:SI 1 dx [orig:83 current.0_1 ] [83])
@@ -273,7 +273,7 @@ Dataflow summary:
                         (const_int 4 [0x4]))
                     (reg:SI 0 ax [82]))
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("ioctl_table") [flags 0x2]  <var_decl 0x74050752f510 ioctl_table>)
+                            (symbol_ref:SI ("ioctl_table") [flags 0x2]  <var_decl 0x7a023812f510 ioctl_table>)
                         ] UNSPEC_GOTOFF))) [1 ioctl_table[_11]+0 S4 A32])) "fs/ioctl.c":44:21 75 {*movsi_internal}
      (nil))
 (insn 65 64 66 10 (set (reg:CCZ 17 flags)
@@ -314,7 +314,7 @@ Dataflow summary:
                         (const_int 4 [0x4]))
                     (reg:SI 0 ax [82]))
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("ioctl_table") [flags 0x2]  <var_decl 0x74050752f510 ioctl_table>)
+                            (symbol_ref:SI ("ioctl_table") [flags 0x2]  <var_decl 0x7a023812f510 ioctl_table>)
                         ] UNSPEC_GOTOFF))) [1 ioctl_table[_14]+0 S4 A32])) "fs/ioctl.c":46:23 75 {*movsi_internal}
      (nil))
 (insn 76 75 77 12 (set (reg:SI 2 cx [orig:98 arg.4_16 ] [98])

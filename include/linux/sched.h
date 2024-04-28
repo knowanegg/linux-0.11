@@ -71,34 +71,35 @@ struct tss_struct {
 };
 
 struct task_struct {
-	/* these are hardcoded - don't touch */
+	/* 基本进程状态和调度信息 */
 	long state;		/* -1 unrunable, 0 runable, >0 stopped */
 	long counter;   // 时间片计数
 	long priority;  // 优先级，这里还没上CFS那种算法
 	long signal;    // 这个字段是一个指向 signal_struct 类型的指针。
-	struct sigaction sigaction[32];
-	long blocked;        /* bitmap of masked signals */
-	/* various fields */
-	int exit_code;
-	unsigned long start_code, end_code, end_data, brk, start_stack;
-	long pid, father, pgrp, session, leader;
-	unsigned short uid, euid, suid;
-	unsigned short gid, egid, sgid;
-	long alarm;
-	long utime, stime, cutime, cstime, start_time;
-	unsigned short used_math;
-	/* file system info */
-	int tty;   /* -1 if no tty, so it must be signed */
-	unsigned short umask;
-	struct m_inode *pwd;
-	struct m_inode *root;
-	struct m_inode *executable;
-	unsigned long close_on_exec;
-	struct file *filp[NR_OPEN];
+	struct sigaction sigaction[32]; // 针对32种不同信号的处理动作数组。
+	long blocked;        // 掩码，标识哪些信号被阻塞。
+	/* 进程生命周期和状态信息 */
+	int exit_code;  // 进程退出时的状态码。
+	unsigned long start_code, end_code, end_data, brk, start_stack; // 段的起始和结束地址。
+	long pid, father, pgrp, session, leader; // pgrp：进程组ID。session会话id。leader 会话领导者ID。
+	// 用户和组ID信息
+	unsigned short uid, euid, suid; // 用户ID、有效用户ID和保存的用户ID。
+	unsigned short gid, egid, sgid; // 组ID、有效组ID和保存的组ID。
+	long alarm;  // 闹钟信号的剩余时间。
+	long utime, stime, cutime, cstime, start_time; // 用户CPU时间、系统CPU时间、累计的子进程用户CPU时间和系统CPU时间。
+	unsigned short used_math;  // 进程开始的时间。
+	/* 文件系统和I/O信息 */
+	int tty;   /* -1 if no tty, so it must be signed */ //关联的终端设备（-1表示无终端）。
+	unsigned short umask; // 文件模式创建掩码。
+	struct m_inode *pwd; // 当前工作目录的inode。
+	struct m_inode *root; // 根目录的inode。
+	struct m_inode *executable; // 可执行文件的inode。
+	unsigned long close_on_exec; // 执行时关闭文件描述符的位掩码。
+	struct file *filp[NR_OPEN]; // 打开文件描述符数组。
 	/* ldt for this task 0 - zero 1 - cs 2 - ds&ss */
-	struct desc_struct ldt[3];
+	struct desc_struct ldt[3]; // 本地描述符表，包含三个段描述符，通常用于定义代码段（CS）和数据段/堆栈段（DS/SS）。
 	/* tss for this task */
-	struct tss_struct tss;
+	struct tss_struct tss; // 任务状态段，用于任务切换和硬件任务管理。
 };
 
 /*

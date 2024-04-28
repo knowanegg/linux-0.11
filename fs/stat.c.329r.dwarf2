@@ -202,7 +202,7 @@ Dataflow summary:
 (insn 8 99 9 2 (set (reg:SI 3 bx)
         (reg:SI 0 ax [82])) "fs/stat.c":21:5 75 {*movsi_internal}
      (nil))
-(call_insn 9 8 10 2 (call (mem:QI (symbol_ref:SI ("verify_area") [flags 0x41]  <function_decl 0x772c18938500 verify_area>) [0 verify_area S1 A8])
+(call_insn 9 8 10 2 (call (mem:QI (symbol_ref:SI ("verify_area") [flags 0x41]  <function_decl 0x78974d738500 verify_area>) [0 verify_area S1 A8])
         (const_int 16 [0x10])) "fs/stat.c":21:5 812 {*call}
      (nil)
     (expr_list (use (reg:SI 3 bx))
@@ -424,7 +424,7 @@ Dataflow summary:
 (note 106 62 63 3
 	.cfi_def_cfa_offset 80
 	 NOTE_INSN_CFI)
-(call_insn 63 106 64 3 (call (mem:QI (symbol_ref:SI ("put_fs_byte") [flags 0x3]  <function_decl 0x772c18938a00 put_fs_byte>) [0 put_fs_byte S1 A8])
+(call_insn 63 106 64 3 (call (mem:QI (symbol_ref:SI ("put_fs_byte") [flags 0x3]  <function_decl 0x78974d738a00 put_fs_byte>) [0 put_fs_byte S1 A8])
         (const_int 16 [0x10])) "fs/stat.c":34:9 812 {*call}
      (nil)
     (nil))
@@ -595,7 +595,7 @@ Dataflow summary:
 	.cfi_def_cfa_offset 48
 	 NOTE_INSN_CFI)
 (call_insn 8 56 9 2 (set (reg:SI 0 ax)
-        (call (mem:QI (symbol_ref:SI ("namei") [flags 0x41]  <function_decl 0x772c18915500 namei>) [0 namei S1 A8])
+        (call (mem:QI (symbol_ref:SI ("namei") [flags 0x41]  <function_decl 0x78974d715500 namei>) [0 namei S1 A8])
             (const_int 16 [0x10]))) "fs/stat.c":41:19 823 {*call_value}
      (nil)
     (expr_list (use (reg:SI 3 bx))
@@ -665,7 +665,7 @@ Dataflow summary:
 (note 63 22 23 4
 	.cfi_def_cfa_offset 48
 	 NOTE_INSN_CFI)
-(call_insn 23 63 24 4 (call (mem:QI (symbol_ref:SI ("cp_stat") [flags 0x3]  <function_decl 0x772c1893a700 cp_stat>) [0 cp_stat S1 A8])
+(call_insn 23 63 24 4 (call (mem:QI (symbol_ref:SI ("cp_stat") [flags 0x3]  <function_decl 0x78974d73a700 cp_stat>) [0 cp_stat S1 A8])
         (const_int 16 [0x10])) "fs/stat.c":43:5 812 {*call}
      (nil)
     (nil))
@@ -699,7 +699,7 @@ Dataflow summary:
 (note 66 26 28 4
 	.cfi_def_cfa_offset 48
 	 NOTE_INSN_CFI)
-(call_insn 28 66 29 4 (call (mem:QI (symbol_ref:SI ("iput") [flags 0x41]  <function_decl 0x772c188d2d00 iput>) [0 iput S1 A8])
+(call_insn 28 66 29 4 (call (mem:QI (symbol_ref:SI ("iput") [flags 0x41]  <function_decl 0x78974d6d2d00 iput>) [0 iput S1 A8])
         (const_int 16 [0x10])) "fs/stat.c":44:5 812 {*call}
      (nil)
     (expr_list (use (reg:SI 3 bx))
@@ -840,7 +840,7 @@ Dataflow summary:
 (insn 10 9 11 3 (set (reg/f:SI 0 ax [86])
         (mem/u/c:SI (plus:SI (reg:SI 0 ax [82])
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("current") [flags 0x40]  <var_decl 0x772c1892e120 current>)
+                            (symbol_ref:SI ("current") [flags 0x40]  <var_decl 0x78974d72e120 current>)
                         ] UNSPEC_GOT))) [11  S4 A8])) "fs/stat.c":53:39 75 {*movsi_internal}
      (nil))
 (insn 11 10 12 3 (set (reg/f:SI 0 ax [orig:83 current.3_1 ] [83])
@@ -944,7 +944,7 @@ Dataflow summary:
 (note 59 33 34 6
 	.cfi_def_cfa_offset 48
 	 NOTE_INSN_CFI)
-(call_insn 34 59 35 6 (call (mem:QI (symbol_ref:SI ("cp_stat") [flags 0x3]  <function_decl 0x772c1893a700 cp_stat>) [0 cp_stat S1 A8])
+(call_insn 34 59 35 6 (call (mem:QI (symbol_ref:SI ("cp_stat") [flags 0x3]  <function_decl 0x78974d73a700 cp_stat>) [0 cp_stat S1 A8])
         (const_int 16 [0x10])) "fs/stat.c":55:5 812 {*call}
      (nil)
     (nil))

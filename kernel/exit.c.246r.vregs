@@ -5,38 +5,38 @@
 (note 3 1 2 2 [bb 2] NOTE_INSN_BASIC_BLOCK)
 (note 2 3 5 2 NOTE_INSN_FUNCTION_BEG)
 (insn 5 2 6 2 (set (reg/f:SI 88)
-        (mem/f/c:SI (reg/f:SI 16 argp) [18 addr+0 S4 A32])) "include/linux/sched.h":180:28 75 {*movsi_internal}
+        (mem/f/c:SI (reg/f:SI 16 argp) [18 addr+0 S4 A32])) "include/linux/sched.h":181:28 75 {*movsi_internal}
      (nil))
 (insn 6 5 7 2 (parallel [
             (set (reg/f:SI 83 [ _1 ])
                 (plus:SI (reg/f:SI 88)
                     (const_int 2 [0x2])))
             (clobber (reg:CC 17 flags))
-        ]) "include/linux/sched.h":180:28 209 {*addsi_1}
+        ]) "include/linux/sched.h":181:28 209 {*addsi_1}
      (expr_list:REG_EQUAL (plus:SI (mem/f/c:SI (reg/f:SI 16 argp) [18 addr+0 S4 A32])
             (const_int 2 [0x2]))
         (nil)))
 (insn 7 6 8 2 (set (reg/f:SI 89)
-        (mem/f/c:SI (reg/f:SI 16 argp) [18 addr+0 S4 A32])) "include/linux/sched.h":180:48 75 {*movsi_internal}
+        (mem/f/c:SI (reg/f:SI 16 argp) [18 addr+0 S4 A32])) "include/linux/sched.h":181:48 75 {*movsi_internal}
      (nil))
 (insn 8 7 9 2 (parallel [
             (set (reg/f:SI 84 [ _2 ])
                 (plus:SI (reg/f:SI 89)
                     (const_int 4 [0x4])))
             (clobber (reg:CC 17 flags))
-        ]) "include/linux/sched.h":180:48 209 {*addsi_1}
+        ]) "include/linux/sched.h":181:48 209 {*addsi_1}
      (expr_list:REG_EQUAL (plus:SI (mem/f/c:SI (reg/f:SI 16 argp) [18 addr+0 S4 A32])
             (const_int 4 [0x4]))
         (nil)))
 (insn 9 8 10 2 (set (reg/f:SI 90)
-        (mem/f/c:SI (reg/f:SI 16 argp) [18 addr+0 S4 A32])) "include/linux/sched.h":180:68 75 {*movsi_internal}
+        (mem/f/c:SI (reg/f:SI 16 argp) [18 addr+0 S4 A32])) "include/linux/sched.h":181:68 75 {*movsi_internal}
      (nil))
 (insn 10 9 12 2 (parallel [
             (set (reg/f:SI 85 [ _3 ])
                 (plus:SI (reg/f:SI 90)
                     (const_int 7 [0x7])))
             (clobber (reg:CC 17 flags))
-        ]) "include/linux/sched.h":180:68 209 {*addsi_1}
+        ]) "include/linux/sched.h":181:68 209 {*addsi_1}
      (expr_list:REG_EQUAL (plus:SI (mem/f/c:SI (reg/f:SI 16 argp) [18 addr+0 S4 A32])
             (const_int 7 [0x7]))
         (nil)))
@@ -51,29 +51,29 @@
                         (mem:QI (reg/f:SI 85 [ _3 ]) [0 *_3+0 S1 A8])
                     ]
                      [
-                        (asm_input:QI ("m") include/linux/sched.h:176)
-                        (asm_input:QI ("m") include/linux/sched.h:176)
-                        (asm_input:QI ("m") include/linux/sched.h:176)
+                        (asm_input:QI ("m") include/linux/sched.h:177)
+                        (asm_input:QI ("m") include/linux/sched.h:177)
+                        (asm_input:QI ("m") include/linux/sched.h:177)
                     ]
-                     [] include/linux/sched.h:176))
+                     [] include/linux/sched.h:177))
             (clobber (reg:CC 17 flags))
-        ]) "include/linux/sched.h":176:5 -1
+        ]) "include/linux/sched.h":177:5 -1
      (nil))
 (insn 11 12 13 2 (set (mem/c:SI (plus:SI (reg/f:SI 19 frame)
                 (const_int -4 [0xfffffffffffffffc])) [2 __base+0 S4 A32])
-        (reg:SI 91 [ __base ])) "include/linux/sched.h":176:5 75 {*movsi_internal}
+        (reg:SI 91 [ __base ])) "include/linux/sched.h":177:5 75 {*movsi_internal}
      (nil))
 (insn 13 11 16 2 (set (reg:SI 86 [ _7 ])
         (mem/c:SI (plus:SI (reg/f:SI 19 frame)
-                (const_int -4 [0xfffffffffffffffc])) [2 __base+0 S4 A32])) "include/linux/sched.h":181:12 75 {*movsi_internal}
+                (const_int -4 [0xfffffffffffffffc])) [2 __base+0 S4 A32])) "include/linux/sched.h":182:12 75 {*movsi_internal}
      (nil))
 (insn 16 13 20 2 (set (reg:SI 87 [ <retval> ])
-        (reg:SI 86 [ _7 ])) "include/linux/sched.h":181:12 75 {*movsi_internal}
+        (reg:SI 86 [ _7 ])) "include/linux/sched.h":182:12 75 {*movsi_internal}
      (nil))
 (insn 20 16 21 2 (set (reg/i:SI 0 ax)
-        (reg:SI 87 [ <retval> ])) "include/linux/sched.h":182:1 75 {*movsi_internal}
+        (reg:SI 87 [ <retval> ])) "include/linux/sched.h":183:1 75 {*movsi_internal}
      (nil))
-(insn 21 20 0 2 (use (reg/i:SI 0 ax)) "include/linux/sched.h":182:1 -1
+(insn 21 20 0 2 (use (reg/i:SI 0 ax)) "include/linux/sched.h":183:1 -1
      (nil))
 
 ;; Function put_fs_long (put_fs_long, funcdef_no=3, decl_uid=1395, cgraph_uid=4, symbol_order=3)
@@ -140,7 +140,7 @@
 (insn 16 15 17 6 (set (reg/f:SI 85)
         (mem/u/c:SI (plus:SI (reg:SI 82)
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("task") [flags 0x40]  <var_decl 0x76c2f072e1b0 task>)
+                            (symbol_ref:SI ("task") [flags 0x40]  <var_decl 0x7d3b7892e1b0 task>)
                         ] UNSPEC_GOT))) [20  S4 A8])) "kernel/exit.c":28:17 75 {*movsi_internal}
      (nil))
 (insn 17 16 18 6 (set (reg:SI 86)
@@ -167,7 +167,7 @@
 (insn 22 21 23 7 (set (reg/f:SI 87)
         (mem/u/c:SI (plus:SI (reg:SI 82)
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("task") [flags 0x40]  <var_decl 0x76c2f072e1b0 task>)
+                            (symbol_ref:SI ("task") [flags 0x40]  <var_decl 0x7d3b7892e1b0 task>)
                         ] UNSPEC_GOT))) [20  S4 A8])) "kernel/exit.c":29:21 75 {*movsi_internal}
      (nil))
 (insn 23 22 24 7 (set (reg:SI 88)
@@ -197,7 +197,7 @@
 (insn 28 27 29 7 (set (reg:SI 3 bx)
         (reg:SI 82)) "kernel/exit.c":30:13 75 {*movsi_internal}
      (nil))
-(call_insn 29 28 30 7 (call (mem:QI (symbol_ref:SI ("free_page") [flags 0x41]  <function_decl 0x76c2f074d300 free_page>) [0 free_page S1 A8])
+(call_insn 29 28 30 7 (call (mem:QI (symbol_ref:SI ("free_page") [flags 0x41]  <function_decl 0x7d3b7894d300 free_page>) [0 free_page S1 A8])
         (const_int 16 [0x10])) "kernel/exit.c":30:13 812 {*call}
      (nil)
     (expr_list (use (reg:SI 3 bx))
@@ -213,7 +213,7 @@
 (insn 31 30 32 7 (set (reg:SI 3 bx)
         (reg:SI 82)) "kernel/exit.c":31:13 75 {*movsi_internal}
      (nil))
-(call_insn 32 31 33 7 (call (mem:QI (symbol_ref:SI ("schedule") [flags 0x41]  <function_decl 0x76c2f0715c00 schedule>) [0 schedule S1 A8])
+(call_insn 32 31 33 7 (call (mem:QI (symbol_ref:SI ("schedule") [flags 0x41]  <function_decl 0x7d3b78915c00 schedule>) [0 schedule S1 A8])
         (const_int 0 [0])) "kernel/exit.c":31:13 812 {*call}
      (nil)
     (expr_list (use (reg:SI 3 bx))
@@ -260,9 +260,9 @@
 (insn 47 46 48 10 (set (reg/f:SI 89)
         (plus:SI (reg:SI 82)
             (const:SI (unspec:SI [
-                        (symbol_ref/f:SI ("*.LC0") [flags 0x2]  <var_decl 0x76c2f07916c0 *.LC0>)
+                        (symbol_ref/f:SI ("*.LC0") [flags 0x2]  <var_decl 0x7d3b789916c0 *.LC0>)
                     ] UNSPEC_GOTOFF)))) "kernel/exit.c":34:5 205 {*leasi}
-     (expr_list:REG_EQUAL (symbol_ref/f:SI ("*.LC0") [flags 0x2]  <var_decl 0x76c2f07916c0 *.LC0>)
+     (expr_list:REG_EQUAL (symbol_ref/f:SI ("*.LC0") [flags 0x2]  <var_decl 0x7d3b789916c0 *.LC0>)
         (nil)))
 (insn 48 47 49 10 (set (mem/f:SI (pre_dec:SI (reg/f:SI 7 sp)) [18  S4 A32])
         (reg/f:SI 89)) "kernel/exit.c":34:5 54 {*pushsi2}
@@ -271,7 +271,7 @@
 (insn 49 48 50 10 (set (reg:SI 3 bx)
         (reg:SI 82)) "kernel/exit.c":34:5 75 {*movsi_internal}
      (nil))
-(call_insn 50 49 51 10 (call (mem:QI (symbol_ref:SI ("panic") [flags 0x41]  <function_decl 0x76c2f0738700 panic>) [0 panic S1 A8])
+(call_insn 50 49 51 10 (call (mem:QI (symbol_ref:SI ("panic") [flags 0x41]  <function_decl 0x7d3b78938700 panic>) [0 panic S1 A8])
         (const_int 16 [0x10])) "kernel/exit.c":34:5 812 {*call}
      (nil)
     (expr_list (use (reg:SI 3 bx))
@@ -356,7 +356,7 @@
 (insn 27 26 28 8 (set (reg/f:SI 94)
         (mem/u/c:SI (plus:SI (reg:SI 82)
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("current") [flags 0x40]  <var_decl 0x76c2f072e120 current>)
+                            (symbol_ref:SI ("current") [flags 0x40]  <var_decl 0x7d3b7892e120 current>)
                         ] UNSPEC_GOT))) [20  S4 A8])) "kernel/exit.c":41:25 75 {*movsi_internal}
      (nil))
 (insn 28 27 29 8 (set (reg/f:SI 83 [ current.23_1 ])
@@ -389,7 +389,7 @@
 (insn 35 34 36 9 (set (reg/f:SI 96)
         (mem/u/c:SI (plus:SI (reg:SI 82)
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("current") [flags 0x40]  <var_decl 0x76c2f072e120 current>)
+                            (symbol_ref:SI ("current") [flags 0x40]  <var_decl 0x7d3b7892e120 current>)
                         ] UNSPEC_GOT))) [20  S4 A8])) "kernel/exit.c":41:47 75 {*movsi_internal}
      (nil))
 (insn 36 35 37 9 (set (reg/f:SI 86 [ current.24_4 ])
@@ -489,13 +489,13 @@
 (insn 5 2 6 2 (set (reg:SI 93)
         (mem/u/c:SI (plus:SI (reg:SI 82)
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("task") [flags 0x40]  <var_decl 0x76c2f072e1b0 task>)
+                            (symbol_ref:SI ("task") [flags 0x40]  <var_decl 0x7d3b7892e1b0 task>)
                         ] UNSPEC_GOT))) [20  S4 A8])) "kernel/exit.c":50:26 75 {*movsi_internal}
      (nil))
 (insn 6 5 7 2 (set (reg/f:SI 92)
         (plus:SI (reg:SI 93)
             (const_int 256 [0x100]))) "kernel/exit.c":50:26 205 {*leasi}
-     (expr_list:REG_EQUAL (const:SI (plus:SI (symbol_ref:SI ("task") [flags 0x40]  <var_decl 0x76c2f072e1b0 task>)
+     (expr_list:REG_EQUAL (const:SI (plus:SI (symbol_ref:SI ("task") [flags 0x40]  <var_decl 0x7d3b7892e1b0 task>)
                 (const_int 256 [0x100])))
         (nil)))
 (insn 7 6 8 2 (set (mem/f/c:SI (plus:SI (reg/f:SI 19 frame)
@@ -542,7 +542,7 @@
 (insn 19 18 20 5 (set (reg/f:SI 96)
         (mem/u/c:SI (plus:SI (reg:SI 82)
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("current") [flags 0x40]  <var_decl 0x76c2f072e120 current>)
+                            (symbol_ref:SI ("current") [flags 0x40]  <var_decl 0x7d3b7892e120 current>)
                         ] UNSPEC_GOT))) [20  S4 A8])) "kernel/exit.c":53:43 75 {*movsi_internal}
      (nil))
 (insn 20 19 21 5 (set (reg/f:SI 86 [ current.1_4 ])
@@ -607,12 +607,12 @@
 (insn 36 34 37 7 (set (reg:SI 100)
         (mem/u/c:SI (plus:SI (reg:SI 82)
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("task") [flags 0x40]  <var_decl 0x76c2f072e1b0 task>)
+                            (symbol_ref:SI ("task") [flags 0x40]  <var_decl 0x7d3b7892e1b0 task>)
                         ] UNSPEC_GOT))) [20  S4 A8])) "kernel/exit.c":52:16 75 {*movsi_internal}
      (nil))
 (insn 37 36 38 7 (set (reg:SI 99)
         (reg:SI 100)) "kernel/exit.c":52:16 75 {*movsi_internal}
-     (expr_list:REG_EQUAL (symbol_ref:SI ("task") [flags 0x40]  <var_decl 0x76c2f072e1b0 task>)
+     (expr_list:REG_EQUAL (symbol_ref:SI ("task") [flags 0x40]  <var_decl 0x7d3b7892e1b0 task>)
         (nil)))
 (insn 38 37 39 7 (set (reg:CC 17 flags)
         (compare:CC (mem/f/c:SI (plus:SI (reg/f:SI 19 frame)
@@ -659,7 +659,7 @@
 (insn 12 11 13 5 (set (reg/f:SI 91)
         (mem/u/c:SI (plus:SI (reg:SI 82)
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("task") [flags 0x40]  <var_decl 0x76c2f072e1b0 task>)
+                            (symbol_ref:SI ("task") [flags 0x40]  <var_decl 0x7d3b7892e1b0 task>)
                         ] UNSPEC_GOT))) [20  S4 A8])) "kernel/exit.c":64:22 75 {*movsi_internal}
      (nil))
 (insn 13 12 14 5 (set (reg:SI 92)
@@ -693,7 +693,7 @@
 (insn 22 21 23 7 (set (reg/f:SI 93)
         (mem/u/c:SI (plus:SI (reg:SI 82)
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("task") [flags 0x40]  <var_decl 0x76c2f072e1b0 task>)
+                            (symbol_ref:SI ("task") [flags 0x40]  <var_decl 0x7d3b7892e1b0 task>)
                         ] UNSPEC_GOT))) [20  S4 A8])) "kernel/exit.c":66:21 75 {*movsi_internal}
      (nil))
 (insn 23 22 24 7 (set (reg:SI 94)
@@ -731,7 +731,7 @@
 (insn 33 32 34 9 (set (reg/f:SI 95)
         (mem/u/c:SI (plus:SI (reg:SI 82)
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("task") [flags 0x40]  <var_decl 0x76c2f072e1b0 task>)
+                            (symbol_ref:SI ("task") [flags 0x40]  <var_decl 0x7d3b7892e1b0 task>)
                         ] UNSPEC_GOT))) [20  S4 A8])) "kernel/exit.c":68:17 75 {*movsi_internal}
      (nil))
 (insn 34 33 35 9 (set (reg:SI 96)
@@ -750,7 +750,7 @@
 (insn 37 36 38 9 (set (reg/f:SI 97)
         (mem/u/c:SI (plus:SI (reg:SI 82)
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("task") [flags 0x40]  <var_decl 0x76c2f072e1b0 task>)
+                            (symbol_ref:SI ("task") [flags 0x40]  <var_decl 0x7d3b7892e1b0 task>)
                         ] UNSPEC_GOT))) [20  S4 A8])) "kernel/exit.c":68:17 75 {*movsi_internal}
      (nil))
 (insn 38 37 39 9 (set (reg:SI 98)
@@ -816,9 +816,9 @@
 (insn 57 56 58 12 (set (reg/f:SI 99)
         (plus:SI (reg:SI 82)
             (const:SI (unspec:SI [
-                        (symbol_ref/f:SI ("*.LC1") [flags 0x2]  <var_decl 0x76c2f07917e0 *.LC1>)
+                        (symbol_ref/f:SI ("*.LC1") [flags 0x2]  <var_decl 0x7d3b789917e0 *.LC1>)
                     ] UNSPEC_GOTOFF)))) "kernel/exit.c":73:5 205 {*leasi}
-     (expr_list:REG_EQUAL (symbol_ref/f:SI ("*.LC1") [flags 0x2]  <var_decl 0x76c2f07917e0 *.LC1>)
+     (expr_list:REG_EQUAL (symbol_ref/f:SI ("*.LC1") [flags 0x2]  <var_decl 0x7d3b789917e0 *.LC1>)
         (nil)))
 (insn 58 57 59 12 (set (mem/f:SI (pre_dec:SI (reg/f:SI 7 sp)) [18  S4 A32])
         (reg/f:SI 99)) "kernel/exit.c":73:5 54 {*pushsi2}
@@ -828,7 +828,7 @@
         (reg:SI 82)) "kernel/exit.c":73:5 75 {*movsi_internal}
      (nil))
 (call_insn 60 59 61 12 (set (reg:SI 0 ax)
-        (call (mem:QI (symbol_ref:SI ("printk") [flags 0x41]  <function_decl 0x76c2f074d000 printk>) [0 printk S1 A8])
+        (call (mem:QI (symbol_ref:SI ("printk") [flags 0x41]  <function_decl 0x7d3b7894d000 printk>) [0 printk S1 A8])
             (const_int 16 [0x10]))) "kernel/exit.c":73:5 823 {*call_value}
      (nil)
     (expr_list (use (reg:SI 3 bx))
@@ -844,7 +844,7 @@
 (insn 62 61 63 12 (set (reg/f:SI 100)
         (mem/u/c:SI (plus:SI (reg:SI 82)
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("current") [flags 0x40]  <var_decl 0x76c2f072e120 current>)
+                            (symbol_ref:SI ("current") [flags 0x40]  <var_decl 0x7d3b7892e120 current>)
                         ] UNSPEC_GOT))) [20  S4 A8])) "kernel/exit.c":74:5 75 {*movsi_internal}
      (nil))
 (insn 63 62 64 12 (set (reg/f:SI 90 [ current.2_8 ])
@@ -862,7 +862,7 @@
         (reg/f:SI 90 [ current.2_8 ])) "kernel/exit.c":74:5 54 {*pushsi2}
      (expr_list:REG_ARGS_SIZE (const_int 16 [0x10])
         (nil)))
-(call_insn 66 65 67 12 (call (mem:QI (symbol_ref:SI ("release") [flags 0x3]  <function_decl 0x76c2f0752500 release>) [0 release S1 A8])
+(call_insn 66 65 67 12 (call (mem:QI (symbol_ref:SI ("release") [flags 0x3]  <function_decl 0x7d3b78952500 release>) [0 release S1 A8])
         (const_int 16 [0x10])) "kernel/exit.c":74:5 812 {*call}
      (nil)
     (nil))
@@ -909,7 +909,7 @@
 (insn 9 8 10 2 (set (reg/f:SI 130)
         (mem/u/c:SI (plus:SI (reg:SI 82)
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("current") [flags 0x40]  <var_decl 0x76c2f072e120 current>)
+                            (symbol_ref:SI ("current") [flags 0x40]  <var_decl 0x7d3b7892e120 current>)
                         ] UNSPEC_GOT))) [20  S4 A8])) "kernel/exit.c":81:22 75 {*movsi_internal}
      (nil))
 (insn 10 9 11 2 (set (reg/f:SI 83 [ current.3_1 ])
@@ -927,7 +927,7 @@
      (expr_list:REG_ARGS_SIZE (const_int 4 [0x4])
         (nil)))
 (call_insn 13 12 14 2 (set (reg:SI 0 ax)
-        (call (mem:QI (symbol_ref:SI ("_get_base") [flags 0x3]  <function_decl 0x76c2f0715900 _get_base>) [0 _get_base S1 A8])
+        (call (mem:QI (symbol_ref:SI ("_get_base") [flags 0x3]  <function_decl 0x7d3b78915900 _get_base>) [0 _get_base S1 A8])
             (const_int 4 [0x4]))) "kernel/exit.c":81:5 823 {*call_value}
      (nil)
     (nil))
@@ -962,7 +962,7 @@
         (reg:SI 82)) "kernel/exit.c":81:5 75 {*movsi_internal}
      (nil))
 (call_insn 20 19 21 2 (set (reg:SI 0 ax)
-        (call (mem:QI (symbol_ref:SI ("free_page_tables") [flags 0x41]  <function_decl 0x76c2f0738400 free_page_tables>) [0 free_page_tables S1 A8])
+        (call (mem:QI (symbol_ref:SI ("free_page_tables") [flags 0x41]  <function_decl 0x7d3b78938400 free_page_tables>) [0 free_page_tables S1 A8])
             (const_int 16 [0x10]))) "kernel/exit.c":81:5 823 {*call_value}
      (nil)
     (expr_list (use (reg:SI 3 bx))
@@ -1002,7 +1002,7 @@
 (insn 26 25 27 2 (set (reg/f:SI 133)
         (mem/u/c:SI (plus:SI (reg:SI 82)
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("current") [flags 0x40]  <var_decl 0x76c2f072e120 current>)
+                            (symbol_ref:SI ("current") [flags 0x40]  <var_decl 0x7d3b7892e120 current>)
                         ] UNSPEC_GOT))) [20  S4 A8])) "kernel/exit.c":82:22 75 {*movsi_internal}
      (nil))
 (insn 27 26 28 2 (set (reg/f:SI 86 [ current.4_4 ])
@@ -1028,7 +1028,7 @@
      (expr_list:REG_ARGS_SIZE (const_int 16 [0x10])
         (nil)))
 (call_insn 31 30 32 2 (set (reg:SI 0 ax)
-        (call (mem:QI (symbol_ref:SI ("_get_base") [flags 0x3]  <function_decl 0x76c2f0715900 _get_base>) [0 _get_base S1 A8])
+        (call (mem:QI (symbol_ref:SI ("_get_base") [flags 0x3]  <function_decl 0x7d3b78915900 _get_base>) [0 _get_base S1 A8])
             (const_int 16 [0x10]))) "kernel/exit.c":82:5 823 {*call_value}
      (nil)
     (nil))
@@ -1063,7 +1063,7 @@
         (reg:SI 82)) "kernel/exit.c":82:5 75 {*movsi_internal}
      (nil))
 (call_insn 38 37 39 2 (set (reg:SI 0 ax)
-        (call (mem:QI (symbol_ref:SI ("free_page_tables") [flags 0x41]  <function_decl 0x76c2f0738400 free_page_tables>) [0 free_page_tables S1 A8])
+        (call (mem:QI (symbol_ref:SI ("free_page_tables") [flags 0x41]  <function_decl 0x7d3b78938400 free_page_tables>) [0 free_page_tables S1 A8])
             (const_int 16 [0x10]))) "kernel/exit.c":82:5 823 {*call_value}
      (nil)
     (expr_list (use (reg:SI 3 bx))
@@ -1090,7 +1090,7 @@
 (insn 44 43 45 4 (set (reg/f:SI 134)
         (mem/u/c:SI (plus:SI (reg:SI 82)
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("task") [flags 0x40]  <var_decl 0x76c2f072e1b0 task>)
+                            (symbol_ref:SI ("task") [flags 0x40]  <var_decl 0x7d3b7892e1b0 task>)
                         ] UNSPEC_GOT))) [20  S4 A8])) "kernel/exit.c":84:17 75 {*movsi_internal}
      (nil))
 (insn 45 44 46 4 (set (reg:SI 135)
@@ -1117,7 +1117,7 @@
 (insn 50 49 51 5 (set (reg/f:SI 136)
         (mem/u/c:SI (plus:SI (reg:SI 82)
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("task") [flags 0x40]  <var_decl 0x76c2f072e1b0 task>)
+                            (symbol_ref:SI ("task") [flags 0x40]  <var_decl 0x7d3b7892e1b0 task>)
                         ] UNSPEC_GOT))) [20  S4 A8])) "kernel/exit.c":84:28 75 {*movsi_internal}
      (nil))
 (insn 51 50 52 5 (set (reg:SI 137)
@@ -1136,7 +1136,7 @@
 (insn 54 53 55 5 (set (reg/f:SI 138)
         (mem/u/c:SI (plus:SI (reg:SI 82)
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("current") [flags 0x40]  <var_decl 0x76c2f072e120 current>)
+                            (symbol_ref:SI ("current") [flags 0x40]  <var_decl 0x7d3b7892e120 current>)
                         ] UNSPEC_GOT))) [20  S4 A8])) "kernel/exit.c":84:50 75 {*movsi_internal}
      (nil))
 (insn 55 54 56 5 (set (reg/f:SI 92 [ current.5_10 ])
@@ -1161,7 +1161,7 @@
 (insn 60 59 61 6 (set (reg/f:SI 139)
         (mem/u/c:SI (plus:SI (reg:SI 82)
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("task") [flags 0x40]  <var_decl 0x76c2f072e1b0 task>)
+                            (symbol_ref:SI ("task") [flags 0x40]  <var_decl 0x7d3b7892e1b0 task>)
                         ] UNSPEC_GOT))) [20  S4 A8])) "kernel/exit.c":85:17 75 {*movsi_internal}
      (nil))
 (insn 61 60 62 6 (set (reg:SI 140)
@@ -1180,7 +1180,7 @@
 (insn 64 63 65 6 (set (reg/f:SI 141)
         (mem/u/c:SI (plus:SI (reg:SI 82)
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("task") [flags 0x40]  <var_decl 0x76c2f072e1b0 task>)
+                            (symbol_ref:SI ("task") [flags 0x40]  <var_decl 0x7d3b7892e1b0 task>)
                         ] UNSPEC_GOT))) [20  S4 A8])) "kernel/exit.c":86:21 75 {*movsi_internal}
      (nil))
 (insn 65 64 66 6 (set (reg:SI 142)
@@ -1210,7 +1210,7 @@
 (insn 71 70 72 7 (set (reg/f:SI 143)
         (mem/u/c:SI (plus:SI (reg:SI 82)
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("task") [flags 0x40]  <var_decl 0x76c2f072e1b0 task>)
+                            (symbol_ref:SI ("task") [flags 0x40]  <var_decl 0x7d3b7892e1b0 task>)
                         ] UNSPEC_GOT))) [20  S4 A8])) "kernel/exit.c":88:24 75 {*movsi_internal}
      (nil))
 (insn 72 71 73 7 (set (reg/f:SI 97 [ _15 ])
@@ -1238,7 +1238,7 @@
      (expr_list:REG_ARGS_SIZE (const_int 16 [0x10])
         (nil)))
 (call_insn 77 76 78 7 (set (reg:SI 0 ax)
-        (call (mem:QI (symbol_ref:SI ("send_sig") [flags 0x3]  <function_decl 0x76c2f0752700 send_sig>) [0 send_sig S1 A8])
+        (call (mem:QI (symbol_ref:SI ("send_sig") [flags 0x3]  <function_decl 0x7d3b78952700 send_sig>) [0 send_sig S1 A8])
             (const_int 16 [0x10]))) "kernel/exit.c":88:24 823 {*call_value}
      (nil)
     (nil))
@@ -1290,7 +1290,7 @@
 (insn 94 93 95 11 (set (reg/f:SI 144)
         (mem/u/c:SI (plus:SI (reg:SI 82)
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("current") [flags 0x40]  <var_decl 0x76c2f072e120 current>)
+                            (symbol_ref:SI ("current") [flags 0x40]  <var_decl 0x7d3b7892e120 current>)
                         ] UNSPEC_GOT))) [20  S4 A8])) "kernel/exit.c":91:20 75 {*movsi_internal}
      (nil))
 (insn 95 94 96 11 (set (reg/f:SI 98 [ current.6_16 ])
@@ -1347,7 +1347,7 @@
         (reg:SI 82)) "kernel/exit.c":92:13 75 {*movsi_internal}
      (nil))
 (call_insn 106 105 107 12 (set (reg:SI 0 ax)
-        (call (mem:QI (symbol_ref:SI ("sys_close") [flags 0x41]  <function_decl 0x76c2f0752400 sys_close>) [0 sys_close S1 A8])
+        (call (mem:QI (symbol_ref:SI ("sys_close") [flags 0x41]  <function_decl 0x7d3b78952400 sys_close>) [0 sys_close S1 A8])
             (const_int 16 [0x10]))) "kernel/exit.c":92:13 823 {*call_value}
      (nil)
     (expr_list (use (reg:SI 3 bx))
@@ -1389,7 +1389,7 @@
 (insn 119 118 120 15 (set (reg/f:SI 147)
         (mem/u/c:SI (plus:SI (reg:SI 82)
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("current") [flags 0x40]  <var_decl 0x76c2f072e120 current>)
+                            (symbol_ref:SI ("current") [flags 0x40]  <var_decl 0x7d3b7892e120 current>)
                         ] UNSPEC_GOT))) [20  S4 A8])) "kernel/exit.c":93:17 75 {*movsi_internal}
      (nil))
 (insn 120 119 121 15 (set (reg/f:SI 101 [ current.8_19 ])
@@ -1414,7 +1414,7 @@
 (insn 124 123 125 15 (set (reg:SI 3 bx)
         (reg:SI 82)) "kernel/exit.c":93:5 75 {*movsi_internal}
      (nil))
-(call_insn 125 124 126 15 (call (mem:QI (symbol_ref:SI ("iput") [flags 0x41]  <function_decl 0x76c2f06d2d00 iput>) [0 iput S1 A8])
+(call_insn 125 124 126 15 (call (mem:QI (symbol_ref:SI ("iput") [flags 0x41]  <function_decl 0x7d3b788d2d00 iput>) [0 iput S1 A8])
         (const_int 16 [0x10])) "kernel/exit.c":93:5 812 {*call}
      (nil)
     (expr_list (use (reg:SI 3 bx))
@@ -1430,7 +1430,7 @@
 (insn 127 126 128 15 (set (reg/f:SI 148)
         (mem/u/c:SI (plus:SI (reg:SI 82)
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("current") [flags 0x40]  <var_decl 0x76c2f072e120 current>)
+                            (symbol_ref:SI ("current") [flags 0x40]  <var_decl 0x7d3b7892e120 current>)
                         ] UNSPEC_GOT))) [20  S4 A8])) "kernel/exit.c":94:12 75 {*movsi_internal}
      (nil))
 (insn 128 127 129 15 (set (reg/f:SI 103 [ current.9_21 ])
@@ -1443,7 +1443,7 @@
 (insn 130 129 131 15 (set (reg/f:SI 149)
         (mem/u/c:SI (plus:SI (reg:SI 82)
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("current") [flags 0x40]  <var_decl 0x76c2f072e120 current>)
+                            (symbol_ref:SI ("current") [flags 0x40]  <var_decl 0x7d3b7892e120 current>)
                         ] UNSPEC_GOT))) [20  S4 A8])) "kernel/exit.c":95:17 75 {*movsi_internal}
      (nil))
 (insn 131 130 132 15 (set (reg/f:SI 104 [ current.10_22 ])
@@ -1468,7 +1468,7 @@
 (insn 135 134 136 15 (set (reg:SI 3 bx)
         (reg:SI 82)) "kernel/exit.c":95:5 75 {*movsi_internal}
      (nil))
-(call_insn 136 135 137 15 (call (mem:QI (symbol_ref:SI ("iput") [flags 0x41]  <function_decl 0x76c2f06d2d00 iput>) [0 iput S1 A8])
+(call_insn 136 135 137 15 (call (mem:QI (symbol_ref:SI ("iput") [flags 0x41]  <function_decl 0x7d3b788d2d00 iput>) [0 iput S1 A8])
         (const_int 16 [0x10])) "kernel/exit.c":95:5 812 {*call}
      (nil)
     (expr_list (use (reg:SI 3 bx))
@@ -1484,7 +1484,7 @@
 (insn 138 137 139 15 (set (reg/f:SI 150)
         (mem/u/c:SI (plus:SI (reg:SI 82)
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("current") [flags 0x40]  <var_decl 0x76c2f072e120 current>)
+                            (symbol_ref:SI ("current") [flags 0x40]  <var_decl 0x7d3b7892e120 current>)
                         ] UNSPEC_GOT))) [20  S4 A8])) "kernel/exit.c":96:12 75 {*movsi_internal}
      (nil))
 (insn 139 138 140 15 (set (reg/f:SI 106 [ current.11_24 ])
@@ -1497,7 +1497,7 @@
 (insn 141 140 142 15 (set (reg/f:SI 151)
         (mem/u/c:SI (plus:SI (reg:SI 82)
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("current") [flags 0x40]  <var_decl 0x76c2f072e120 current>)
+                            (symbol_ref:SI ("current") [flags 0x40]  <var_decl 0x7d3b7892e120 current>)
                         ] UNSPEC_GOT))) [20  S4 A8])) "kernel/exit.c":97:17 75 {*movsi_internal}
      (nil))
 (insn 142 141 143 15 (set (reg/f:SI 107 [ current.12_25 ])
@@ -1522,7 +1522,7 @@
 (insn 146 145 147 15 (set (reg:SI 3 bx)
         (reg:SI 82)) "kernel/exit.c":97:5 75 {*movsi_internal}
      (nil))
-(call_insn 147 146 148 15 (call (mem:QI (symbol_ref:SI ("iput") [flags 0x41]  <function_decl 0x76c2f06d2d00 iput>) [0 iput S1 A8])
+(call_insn 147 146 148 15 (call (mem:QI (symbol_ref:SI ("iput") [flags 0x41]  <function_decl 0x7d3b788d2d00 iput>) [0 iput S1 A8])
         (const_int 16 [0x10])) "kernel/exit.c":97:5 812 {*call}
      (nil)
     (expr_list (use (reg:SI 3 bx))
@@ -1538,7 +1538,7 @@
 (insn 149 148 150 15 (set (reg/f:SI 152)
         (mem/u/c:SI (plus:SI (reg:SI 82)
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("current") [flags 0x40]  <var_decl 0x76c2f072e120 current>)
+                            (symbol_ref:SI ("current") [flags 0x40]  <var_decl 0x7d3b7892e120 current>)
                         ] UNSPEC_GOT))) [20  S4 A8])) "kernel/exit.c":98:12 75 {*movsi_internal}
      (nil))
 (insn 150 149 151 15 (set (reg/f:SI 109 [ current.13_27 ])
@@ -1551,7 +1551,7 @@
 (insn 152 151 153 15 (set (reg/f:SI 153)
         (mem/u/c:SI (plus:SI (reg:SI 82)
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("current") [flags 0x40]  <var_decl 0x76c2f072e120 current>)
+                            (symbol_ref:SI ("current") [flags 0x40]  <var_decl 0x7d3b7892e120 current>)
                         ] UNSPEC_GOT))) [20  S4 A8])) "kernel/exit.c":99:16 75 {*movsi_internal}
      (nil))
 (insn 153 152 154 15 (set (reg/f:SI 110 [ current.14_28 ])
@@ -1576,7 +1576,7 @@
 (insn 158 157 159 16 (set (reg/f:SI 154)
         (mem/u/c:SI (plus:SI (reg:SI 82)
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("current") [flags 0x40]  <var_decl 0x76c2f072e120 current>)
+                            (symbol_ref:SI ("current") [flags 0x40]  <var_decl 0x7d3b7892e120 current>)
                         ] UNSPEC_GOT))) [20  S4 A8])) "kernel/exit.c":99:35 75 {*movsi_internal}
      (nil))
 (insn 159 158 160 16 (set (reg/f:SI 112 [ current.15_30 ])
@@ -1601,7 +1601,7 @@
 (insn 166 165 167 17 (set (reg/f:SI 155)
         (mem/u/c:SI (plus:SI (reg:SI 82)
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("current") [flags 0x40]  <var_decl 0x76c2f072e120 current>)
+                            (symbol_ref:SI ("current") [flags 0x40]  <var_decl 0x7d3b7892e120 current>)
                         ] UNSPEC_GOT))) [20  S4 A8])) "kernel/exit.c":100:26 75 {*movsi_internal}
      (nil))
 (insn 167 166 168 17 (set (reg/f:SI 114 [ current.16_32 ])
@@ -1614,7 +1614,7 @@
 (insn 169 168 170 17 (set (reg/f:SI 156)
         (mem/u/c:SI (plus:SI (reg:SI 82)
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("tty_table") [flags 0x40]  <var_decl 0x76c2f072e480 tty_table>)
+                            (symbol_ref:SI ("tty_table") [flags 0x40]  <var_decl 0x7d3b7892e480 tty_table>)
                         ] UNSPEC_GOT))) [20  S4 A8])) "kernel/exit.c":100:38 75 {*movsi_internal}
      (nil))
 (insn 170 169 171 17 (parallel [
@@ -1646,7 +1646,7 @@
 (insn 176 175 177 18 (set (reg/f:SI 160)
         (mem/u/c:SI (plus:SI (reg:SI 82)
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("last_task_used_math") [flags 0x40]  <var_decl 0x76c2f072e240 last_task_used_math>)
+                            (symbol_ref:SI ("last_task_used_math") [flags 0x40]  <var_decl 0x7d3b7892e240 last_task_used_math>)
                         ] UNSPEC_GOT))) [20  S4 A8])) "kernel/exit.c":101:29 75 {*movsi_internal}
      (nil))
 (insn 177 176 178 18 (set (reg/f:SI 116 [ last_task_used_math.17_34 ])
@@ -1655,7 +1655,7 @@
 (insn 178 177 179 18 (set (reg/f:SI 161)
         (mem/u/c:SI (plus:SI (reg:SI 82)
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("current") [flags 0x40]  <var_decl 0x76c2f072e120 current>)
+                            (symbol_ref:SI ("current") [flags 0x40]  <var_decl 0x7d3b7892e120 current>)
                         ] UNSPEC_GOT))) [20  S4 A8])) "kernel/exit.c":101:29 75 {*movsi_internal}
      (nil))
 (insn 179 178 180 18 (set (reg/f:SI 117 [ current.18_35 ])
@@ -1676,7 +1676,7 @@
 (insn 183 182 184 19 (set (reg/f:SI 162)
         (mem/u/c:SI (plus:SI (reg:SI 82)
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("last_task_used_math") [flags 0x40]  <var_decl 0x76c2f072e240 last_task_used_math>)
+                            (symbol_ref:SI ("last_task_used_math") [flags 0x40]  <var_decl 0x7d3b7892e240 last_task_used_math>)
                         ] UNSPEC_GOT))) [20  S4 A8])) "kernel/exit.c":102:29 75 {*movsi_internal}
      (nil))
 (insn 184 183 185 19 (set (mem/f/c:SI (reg/f:SI 162) [13 last_task_used_math+0 S4 A32])
@@ -1687,7 +1687,7 @@
 (insn 187 186 188 20 (set (reg/f:SI 163)
         (mem/u/c:SI (plus:SI (reg:SI 82)
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("current") [flags 0x40]  <var_decl 0x76c2f072e120 current>)
+                            (symbol_ref:SI ("current") [flags 0x40]  <var_decl 0x7d3b7892e120 current>)
                         ] UNSPEC_GOT))) [20  S4 A8])) "kernel/exit.c":103:16 75 {*movsi_internal}
      (nil))
 (insn 188 187 189 20 (set (reg/f:SI 118 [ current.19_36 ])
@@ -1709,7 +1709,7 @@
      (nil)
  -> 194)
 (note 192 191 193 21 [bb 21] NOTE_INSN_BASIC_BLOCK)
-(call_insn 193 192 194 21 (call (mem:QI (symbol_ref:SI ("kill_session") [flags 0x3]  <function_decl 0x76c2f0752900 kill_session>) [0 kill_session S1 A8])
+(call_insn 193 192 194 21 (call (mem:QI (symbol_ref:SI ("kill_session") [flags 0x3]  <function_decl 0x7d3b78952900 kill_session>) [0 kill_session S1 A8])
         (const_int 0 [0])) "kernel/exit.c":104:9 812 {*call}
      (nil)
     (nil))
@@ -1718,7 +1718,7 @@
 (insn 196 195 197 22 (set (reg/f:SI 164)
         (mem/u/c:SI (plus:SI (reg:SI 82)
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("current") [flags 0x40]  <var_decl 0x76c2f072e120 current>)
+                            (symbol_ref:SI ("current") [flags 0x40]  <var_decl 0x7d3b7892e120 current>)
                         ] UNSPEC_GOT))) [20  S4 A8])) "kernel/exit.c":105:12 75 {*movsi_internal}
      (nil))
 (insn 197 196 198 22 (set (reg/f:SI 120 [ current.20_38 ])
@@ -1730,7 +1730,7 @@
 (insn 199 198 200 22 (set (reg/f:SI 165)
         (mem/u/c:SI (plus:SI (reg:SI 82)
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("current") [flags 0x40]  <var_decl 0x76c2f072e120 current>)
+                            (symbol_ref:SI ("current") [flags 0x40]  <var_decl 0x7d3b7892e120 current>)
                         ] UNSPEC_GOT))) [20  S4 A8])) "kernel/exit.c":106:12 75 {*movsi_internal}
      (nil))
 (insn 200 199 201 22 (set (reg/f:SI 121 [ current.21_39 ])
@@ -1746,7 +1746,7 @@
 (insn 203 202 204 22 (set (reg/f:SI 167)
         (mem/u/c:SI (plus:SI (reg:SI 82)
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("current") [flags 0x40]  <var_decl 0x76c2f072e120 current>)
+                            (symbol_ref:SI ("current") [flags 0x40]  <var_decl 0x7d3b7892e120 current>)
                         ] UNSPEC_GOT))) [20  S4 A8])) "kernel/exit.c":107:24 75 {*movsi_internal}
      (nil))
 (insn 204 203 205 22 (set (reg/f:SI 122 [ current.22_40 ])
@@ -1768,7 +1768,7 @@
         (reg:SI 123 [ _41 ])) "kernel/exit.c":107:5 54 {*pushsi2}
      (expr_list:REG_ARGS_SIZE (const_int 16 [0x10])
         (nil)))
-(call_insn 208 207 209 22 (call (mem:QI (symbol_ref:SI ("tell_father") [flags 0x3]  <function_decl 0x76c2f0752b00 tell_father>) [0 tell_father S1 A8])
+(call_insn 208 207 209 22 (call (mem:QI (symbol_ref:SI ("tell_father") [flags 0x3]  <function_decl 0x7d3b78952b00 tell_father>) [0 tell_father S1 A8])
         (const_int 16 [0x10])) "kernel/exit.c":107:5 812 {*call}
      (nil)
     (nil))
@@ -1783,7 +1783,7 @@
 (insn 210 209 211 22 (set (reg:SI 3 bx)
         (reg:SI 82)) "kernel/exit.c":108:5 75 {*movsi_internal}
      (nil))
-(call_insn 211 210 212 22 (call (mem:QI (symbol_ref:SI ("schedule") [flags 0x41]  <function_decl 0x76c2f0715c00 schedule>) [0 schedule S1 A8])
+(call_insn 211 210 212 22 (call (mem:QI (symbol_ref:SI ("schedule") [flags 0x41]  <function_decl 0x7d3b78915c00 schedule>) [0 schedule S1 A8])
         (const_int 0 [0])) "kernel/exit.c":108:5 812 {*call}
      (nil)
     (expr_list (use (reg:SI 3 bx))
@@ -1833,7 +1833,7 @@
      (expr_list:REG_ARGS_SIZE (const_int 16 [0x10])
         (nil)))
 (call_insn 10 9 11 2 (set (reg:SI 0 ax)
-        (call (mem:QI (symbol_ref:SI ("do_exit") [flags 0x3]  <function_decl 0x76c2f0752d00 do_exit>) [0 do_exit S1 A8])
+        (call (mem:QI (symbol_ref:SI ("do_exit") [flags 0x3]  <function_decl 0x7d3b78952d00 do_exit>) [0 do_exit S1 A8])
             (const_int 16 [0x10]))) "kernel/exit.c":114:12 823 {*call_value}
      (nil)
     (nil))
@@ -1882,7 +1882,7 @@
 (insn 8 7 9 2 (set (reg:SI 3 bx)
         (reg:SI 82)) "kernel/exit.c":122:5 75 {*movsi_internal}
      (nil))
-(call_insn 9 8 10 2 (call (mem:QI (symbol_ref:SI ("verify_area") [flags 0x41]  <function_decl 0x76c2f0738500 verify_area>) [0 verify_area S1 A8])
+(call_insn 9 8 10 2 (call (mem:QI (symbol_ref:SI ("verify_area") [flags 0x41]  <function_decl 0x7d3b78938500 verify_area>) [0 verify_area S1 A8])
         (const_int 16 [0x10])) "kernel/exit.c":122:5 812 {*call}
      (nil)
     (expr_list (use (reg:SI 3 bx))
@@ -1904,13 +1904,13 @@
 (insn 14 13 15 4 (set (reg:SI 129)
         (mem/u/c:SI (plus:SI (reg:SI 82)
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("task") [flags 0x40]  <var_decl 0x76c2f072e1b0 task>)
+                            (symbol_ref:SI ("task") [flags 0x40]  <var_decl 0x7d3b7892e1b0 task>)
                         ] UNSPEC_GOT))) [20  S4 A8])) "kernel/exit.c":125:12 75 {*movsi_internal}
      (nil))
 (insn 15 14 16 4 (set (reg/f:SI 128)
         (plus:SI (reg:SI 129)
             (const_int 252 [0xfc]))) "kernel/exit.c":125:12 205 {*leasi}
-     (expr_list:REG_EQUAL (const:SI (plus:SI (symbol_ref:SI ("task") [flags 0x40]  <var_decl 0x76c2f072e1b0 task>)
+     (expr_list:REG_EQUAL (const:SI (plus:SI (symbol_ref:SI ("task") [flags 0x40]  <var_decl 0x7d3b7892e1b0 task>)
                 (const_int 252 [0xfc])))
         (nil)))
 (insn 16 15 17 4 (set (mem/f/c:SI (plus:SI (reg/f:SI 19 frame)
@@ -1953,7 +1953,7 @@
 (insn 27 26 28 6 (set (reg/f:SI 132)
         (mem/u/c:SI (plus:SI (reg:SI 82)
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("current") [flags 0x40]  <var_decl 0x76c2f072e120 current>)
+                            (symbol_ref:SI ("current") [flags 0x40]  <var_decl 0x7d3b7892e120 current>)
                         ] UNSPEC_GOT))) [20  S4 A8])) "kernel/exit.c":126:23 75 {*movsi_internal}
      (nil))
 (insn 28 27 29 6 (set (reg/f:SI 85 [ current.25_3 ])
@@ -1992,7 +1992,7 @@
 (insn 40 39 41 8 (set (reg/f:SI 134)
         (mem/u/c:SI (plus:SI (reg:SI 82)
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("current") [flags 0x40]  <var_decl 0x76c2f072e120 current>)
+                            (symbol_ref:SI ("current") [flags 0x40]  <var_decl 0x7d3b7892e120 current>)
                         ] UNSPEC_GOT))) [20  S4 A8])) "kernel/exit.c":128:36 75 {*movsi_internal}
      (nil))
 (insn 41 40 42 8 (set (reg/f:SI 88 [ current.26_6 ])
@@ -2089,7 +2089,7 @@
 (insn 71 70 72 14 (set (reg/f:SI 137)
         (mem/u/c:SI (plus:SI (reg:SI 82)
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("current") [flags 0x40]  <var_decl 0x76c2f072e120 current>)
+                            (symbol_ref:SI ("current") [flags 0x40]  <var_decl 0x7d3b7892e120 current>)
                         ] UNSPEC_GOT))) [20  S4 A8])) "kernel/exit.c":134:38 75 {*movsi_internal}
      (nil))
 (insn 72 71 73 14 (set (reg/f:SI 94 [ current.27_12 ])
@@ -2254,7 +2254,7 @@
         (const_int 127 [0x7f])) "kernel/exit.c":144:13 54 {*pushsi2}
      (expr_list:REG_ARGS_SIZE (const_int 16 [0x10])
         (nil)))
-(call_insn 117 116 118 23 (call (mem:QI (symbol_ref:SI ("put_fs_long") [flags 0x3]  <function_decl 0x76c2f074dc00 put_fs_long>) [0 put_fs_long S1 A8])
+(call_insn 117 116 118 23 (call (mem:QI (symbol_ref:SI ("put_fs_long") [flags 0x3]  <function_decl 0x7d3b7894dc00 put_fs_long>) [0 put_fs_long S1 A8])
         (const_int 16 [0x10])) "kernel/exit.c":144:13 812 {*call}
      (nil)
     (nil))
@@ -2287,7 +2287,7 @@
 (insn 126 125 127 24 (set (reg/f:SI 143)
         (mem/u/c:SI (plus:SI (reg:SI 82)
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("current") [flags 0x40]  <var_decl 0x76c2f072e120 current>)
+                            (symbol_ref:SI ("current") [flags 0x40]  <var_decl 0x7d3b7892e120 current>)
                         ] UNSPEC_GOT))) [20  S4 A8])) "kernel/exit.c":147:29 75 {*movsi_internal}
      (nil))
 (insn 127 126 128 24 (set (reg/f:SI 103 [ current.28_21 ])
@@ -2311,7 +2311,7 @@
 (insn 132 131 133 24 (set (reg/f:SI 145)
         (mem/u/c:SI (plus:SI (reg:SI 82)
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("current") [flags 0x40]  <var_decl 0x76c2f072e120 current>)
+                            (symbol_ref:SI ("current") [flags 0x40]  <var_decl 0x7d3b7892e120 current>)
                         ] UNSPEC_GOT))) [20  S4 A8])) "kernel/exit.c":147:29 75 {*movsi_internal}
      (nil))
 (insn 133 132 134 24 (set (reg/f:SI 107 [ current.29_25 ])
@@ -2331,7 +2331,7 @@
 (insn 136 135 137 24 (set (reg/f:SI 146)
         (mem/u/c:SI (plus:SI (reg:SI 82)
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("current") [flags 0x40]  <var_decl 0x76c2f072e120 current>)
+                            (symbol_ref:SI ("current") [flags 0x40]  <var_decl 0x7d3b7892e120 current>)
                         ] UNSPEC_GOT))) [20  S4 A8])) "kernel/exit.c":148:29 75 {*movsi_internal}
      (nil))
 (insn 137 136 138 24 (set (reg/f:SI 109 [ current.30_27 ])
@@ -2355,7 +2355,7 @@
 (insn 142 141 143 24 (set (reg/f:SI 148)
         (mem/u/c:SI (plus:SI (reg:SI 82)
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("current") [flags 0x40]  <var_decl 0x76c2f072e120 current>)
+                            (symbol_ref:SI ("current") [flags 0x40]  <var_decl 0x7d3b7892e120 current>)
                         ] UNSPEC_GOT))) [20  S4 A8])) "kernel/exit.c":148:29 75 {*movsi_internal}
      (nil))
 (insn 143 142 144 24 (set (reg/f:SI 113 [ current.31_31 ])
@@ -2421,7 +2421,7 @@
         (reg/f:SI 117 [ _35 ])) "kernel/exit.c":151:13 54 {*pushsi2}
      (expr_list:REG_ARGS_SIZE (const_int 16 [0x10])
         (nil)))
-(call_insn 158 157 159 24 (call (mem:QI (symbol_ref:SI ("release") [flags 0x3]  <function_decl 0x76c2f0752500 release>) [0 release S1 A8])
+(call_insn 158 157 159 24 (call (mem:QI (symbol_ref:SI ("release") [flags 0x3]  <function_decl 0x7d3b78952500 release>) [0 release S1 A8])
         (const_int 16 [0x10])) "kernel/exit.c":151:13 812 {*call}
      (nil)
     (nil))
@@ -2454,7 +2454,7 @@
         (reg:SI 118 [ code.32_36 ])) "kernel/exit.c":152:13 54 {*pushsi2}
      (expr_list:REG_ARGS_SIZE (const_int 16 [0x10])
         (nil)))
-(call_insn 164 163 165 24 (call (mem:QI (symbol_ref:SI ("put_fs_long") [flags 0x3]  <function_decl 0x76c2f074dc00 put_fs_long>) [0 put_fs_long S1 A8])
+(call_insn 164 163 165 24 (call (mem:QI (symbol_ref:SI ("put_fs_long") [flags 0x3]  <function_decl 0x7d3b7894dc00 put_fs_long>) [0 put_fs_long S1 A8])
         (const_int 16 [0x10])) "kernel/exit.c":152:13 812 {*call}
      (nil)
     (nil))
@@ -2497,12 +2497,12 @@
 (insn 178 176 179 27 (set (reg:SI 155)
         (mem/u/c:SI (plus:SI (reg:SI 82)
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("task") [flags 0x40]  <var_decl 0x76c2f072e1b0 task>)
+                            (symbol_ref:SI ("task") [flags 0x40]  <var_decl 0x7d3b7892e1b0 task>)
                         ] UNSPEC_GOT))) [20  S4 A8])) "kernel/exit.c":125:28 75 {*movsi_internal}
      (nil))
 (insn 179 178 180 27 (set (reg:SI 154)
         (reg:SI 155)) "kernel/exit.c":125:28 75 {*movsi_internal}
-     (expr_list:REG_EQUAL (symbol_ref:SI ("task") [flags 0x40]  <var_decl 0x76c2f072e1b0 task>)
+     (expr_list:REG_EQUAL (symbol_ref:SI ("task") [flags 0x40]  <var_decl 0x7d3b7892e1b0 task>)
         (nil)))
 (insn 180 179 181 27 (set (reg:CC 17 flags)
         (compare:CC (mem/f/c:SI (plus:SI (reg/f:SI 19 frame)
@@ -2569,7 +2569,7 @@
 (insn 196 195 197 31 (set (reg/f:SI 157)
         (mem/u/c:SI (plus:SI (reg:SI 82)
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("current") [flags 0x40]  <var_decl 0x76c2f072e120 current>)
+                            (symbol_ref:SI ("current") [flags 0x40]  <var_decl 0x7d3b7892e120 current>)
                         ] UNSPEC_GOT))) [20  S4 A8])) "kernel/exit.c":162:16 75 {*movsi_internal}
      (nil))
 (insn 197 196 198 31 (set (reg/f:SI 120 [ current.33_38 ])
@@ -2581,7 +2581,7 @@
 (insn 199 198 200 31 (set (reg:SI 3 bx)
         (reg:SI 82)) "kernel/exit.c":163:9 75 {*movsi_internal}
      (nil))
-(call_insn 200 199 201 31 (call (mem:QI (symbol_ref:SI ("schedule") [flags 0x41]  <function_decl 0x76c2f0715c00 schedule>) [0 schedule S1 A8])
+(call_insn 200 199 201 31 (call (mem:QI (symbol_ref:SI ("schedule") [flags 0x41]  <function_decl 0x7d3b78915c00 schedule>) [0 schedule S1 A8])
         (const_int 0 [0])) "kernel/exit.c":163:9 812 {*call}
      (nil)
     (expr_list (use (reg:SI 3 bx))
@@ -2589,7 +2589,7 @@
 (insn 201 200 202 31 (set (reg/f:SI 158)
         (mem/u/c:SI (plus:SI (reg:SI 82)
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("current") [flags 0x40]  <var_decl 0x76c2f072e120 current>)
+                            (symbol_ref:SI ("current") [flags 0x40]  <var_decl 0x7d3b7892e120 current>)
                         ] UNSPEC_GOT))) [20  S4 A8])) "kernel/exit.c":164:31 75 {*movsi_internal}
      (nil))
 (insn 202 201 203 31 (set (reg/f:SI 121 [ current.34_39 ])
@@ -2602,7 +2602,7 @@
 (insn 204 203 205 31 (set (reg/f:SI 159)
         (mem/u/c:SI (plus:SI (reg:SI 82)
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("current") [flags 0x40]  <var_decl 0x76c2f072e120 current>)
+                            (symbol_ref:SI ("current") [flags 0x40]  <var_decl 0x7d3b7892e120 current>)
                         ] UNSPEC_GOT))) [20  S4 A8])) "kernel/exit.c":164:31 75 {*movsi_internal}
      (nil))
 (insn 205 204 206 31 (set (reg/f:SI 123 [ current.35_41 ])
@@ -2674,13 +2674,13 @@
 (insn 5 2 6 2 (set (reg:SI 102)
         (mem/u/c:SI (plus:SI (reg:SI 82)
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("task") [flags 0x40]  <var_decl 0x76c2f072e1b0 task>)
+                            (symbol_ref:SI ("task") [flags 0x40]  <var_decl 0x7d3b7892e1b0 task>)
                         ] UNSPEC_GOT))) [20  S4 A8])) "kernel/exit.c":178:26 75 {*movsi_internal}
      (nil))
 (insn 6 5 7 2 (set (reg/f:SI 101)
         (plus:SI (reg:SI 102)
             (const_int 256 [0x100]))) "kernel/exit.c":178:26 205 {*leasi}
-     (expr_list:REG_EQUAL (const:SI (plus:SI (symbol_ref:SI ("task") [flags 0x40]  <var_decl 0x76c2f072e1b0 task>)
+     (expr_list:REG_EQUAL (const:SI (plus:SI (symbol_ref:SI ("task") [flags 0x40]  <var_decl 0x7d3b7892e1b0 task>)
                 (const_int 256 [0x100])))
         (nil)))
 (insn 7 6 8 2 (set (mem/f/c:SI (plus:SI (reg/f:SI 19 frame)
@@ -2743,7 +2743,7 @@
 (insn 23 22 24 6 (set (reg/f:SI 105)
         (mem/u/c:SI (plus:SI (reg:SI 82)
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("current") [flags 0x40]  <var_decl 0x76c2f072e120 current>)
+                            (symbol_ref:SI ("current") [flags 0x40]  <var_decl 0x7d3b7892e120 current>)
                         ] UNSPEC_GOT))) [20  S4 A8])) "kernel/exit.c":182:40 75 {*movsi_internal}
      (nil))
 (insn 24 23 25 6 (set (reg/f:SI 86 [ current.36_4 ])
@@ -2786,7 +2786,7 @@
      (expr_list:REG_ARGS_SIZE (const_int 12 [0xc])
         (nil)))
 (call_insn 34 33 35 7 (set (reg:SI 0 ax)
-        (call (mem:QI (symbol_ref:SI ("send_sig") [flags 0x3]  <function_decl 0x76c2f0752700 send_sig>) [0 send_sig S1 A8])
+        (call (mem:QI (symbol_ref:SI ("send_sig") [flags 0x3]  <function_decl 0x7d3b78952700 send_sig>) [0 send_sig S1 A8])
             (const_int 12 [0xc]))) "kernel/exit.c":183:24 823 {*call_value}
      (nil)
     (nil))
@@ -2840,12 +2840,12 @@
 (insn 47 45 48 9 (set (reg:SI 110)
         (mem/u/c:SI (plus:SI (reg:SI 82)
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("task") [flags 0x40]  <var_decl 0x76c2f072e1b0 task>)
+                            (symbol_ref:SI ("task") [flags 0x40]  <var_decl 0x7d3b7892e1b0 task>)
                         ] UNSPEC_GOT))) [20  S4 A8])) "kernel/exit.c":181:26 75 {*movsi_internal}
      (nil))
 (insn 48 47 49 9 (set (reg:SI 109)
         (reg:SI 110)) "kernel/exit.c":181:26 75 {*movsi_internal}
-     (expr_list:REG_EQUAL (symbol_ref:SI ("task") [flags 0x40]  <var_decl 0x76c2f072e1b0 task>)
+     (expr_list:REG_EQUAL (symbol_ref:SI ("task") [flags 0x40]  <var_decl 0x7d3b7892e1b0 task>)
         (nil)))
 (insn 49 48 50 9 (set (reg:CC 17 flags)
         (compare:CC (mem/f/c:SI (plus:SI (reg/f:SI 19 frame)
@@ -2949,7 +2949,7 @@
      (expr_list:REG_ARGS_SIZE (const_int 12 [0xc])
         (nil)))
 (call_insn 80 79 81 15 (set (reg:SI 0 ax)
-        (call (mem:QI (symbol_ref:SI ("send_sig") [flags 0x3]  <function_decl 0x76c2f0752700 send_sig>) [0 send_sig S1 A8])
+        (call (mem:QI (symbol_ref:SI ("send_sig") [flags 0x3]  <function_decl 0x7d3b78952700 send_sig>) [0 send_sig S1 A8])
             (const_int 12 [0xc]))) "kernel/exit.c":187:24 823 {*call_value}
      (nil)
     (nil))
@@ -3003,12 +3003,12 @@
 (insn 93 91 94 17 (set (reg:SI 117)
         (mem/u/c:SI (plus:SI (reg:SI 82)
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("task") [flags 0x40]  <var_decl 0x76c2f072e1b0 task>)
+                            (symbol_ref:SI ("task") [flags 0x40]  <var_decl 0x7d3b7892e1b0 task>)
                         ] UNSPEC_GOT))) [20  S4 A8])) "kernel/exit.c":185:36 75 {*movsi_internal}
      (nil))
 (insn 94 93 95 17 (set (reg:SI 116)
         (reg:SI 117)) "kernel/exit.c":185:36 75 {*movsi_internal}
-     (expr_list:REG_EQUAL (symbol_ref:SI ("task") [flags 0x40]  <var_decl 0x76c2f072e1b0 task>)
+     (expr_list:REG_EQUAL (symbol_ref:SI ("task") [flags 0x40]  <var_decl 0x7d3b7892e1b0 task>)
         (nil)))
 (insn 95 94 96 17 (set (reg:CC 17 flags)
         (compare:CC (mem/f/c:SI (plus:SI (reg/f:SI 19 frame)
@@ -3070,7 +3070,7 @@
      (expr_list:REG_ARGS_SIZE (const_int 12 [0xc])
         (nil)))
 (call_insn 113 112 114 21 (set (reg:SI 0 ax)
-        (call (mem:QI (symbol_ref:SI ("send_sig") [flags 0x3]  <function_decl 0x76c2f0752700 send_sig>) [0 send_sig S1 A8])
+        (call (mem:QI (symbol_ref:SI ("send_sig") [flags 0x3]  <function_decl 0x7d3b78952700 send_sig>) [0 send_sig S1 A8])
             (const_int 12 [0xc]))) "kernel/exit.c":190:20 823 {*call_value}
      (nil)
     (nil))
@@ -3124,12 +3124,12 @@
 (insn 126 124 127 23 (set (reg:SI 122)
         (mem/u/c:SI (plus:SI (reg:SI 82)
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("task") [flags 0x40]  <var_decl 0x76c2f072e1b0 task>)
+                            (symbol_ref:SI ("task") [flags 0x40]  <var_decl 0x7d3b7892e1b0 task>)
                         ] UNSPEC_GOT))) [20  S4 A8])) "kernel/exit.c":189:38 75 {*movsi_internal}
      (nil))
 (insn 127 126 128 23 (set (reg:SI 121)
         (reg:SI 122)) "kernel/exit.c":189:38 75 {*movsi_internal}
-     (expr_list:REG_EQUAL (symbol_ref:SI ("task") [flags 0x40]  <var_decl 0x76c2f072e1b0 task>)
+     (expr_list:REG_EQUAL (symbol_ref:SI ("task") [flags 0x40]  <var_decl 0x7d3b7892e1b0 task>)
         (nil)))
 (insn 128 127 129 23 (set (reg:CC 17 flags)
         (compare:CC (mem/f/c:SI (plus:SI (reg/f:SI 19 frame)
@@ -3231,7 +3231,7 @@
      (expr_list:REG_ARGS_SIZE (const_int 12 [0xc])
         (nil)))
 (call_insn 156 155 157 28 (set (reg:SI 0 ax)
-        (call (mem:QI (symbol_ref:SI ("send_sig") [flags 0x3]  <function_decl 0x76c2f0752700 send_sig>) [0 send_sig S1 A8])
+        (call (mem:QI (symbol_ref:SI ("send_sig") [flags 0x3]  <function_decl 0x7d3b78952700 send_sig>) [0 send_sig S1 A8])
             (const_int 12 [0xc]))) "kernel/exit.c":194:24 823 {*call_value}
      (nil)
     (nil))
@@ -3285,12 +3285,12 @@
 (insn 169 167 170 30 (set (reg:SI 130)
         (mem/u/c:SI (plus:SI (reg:SI 82)
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("task") [flags 0x40]  <var_decl 0x76c2f072e1b0 task>)
+                            (symbol_ref:SI ("task") [flags 0x40]  <var_decl 0x7d3b7892e1b0 task>)
                         ] UNSPEC_GOT))) [20  S4 A8])) "kernel/exit.c":192:23 75 {*movsi_internal}
      (nil))
 (insn 170 169 171 30 (set (reg:SI 129)
         (reg:SI 130)) "kernel/exit.c":192:23 75 {*movsi_internal}
-     (expr_list:REG_EQUAL (symbol_ref:SI ("task") [flags 0x40]  <var_decl 0x76c2f072e1b0 task>)
+     (expr_list:REG_EQUAL (symbol_ref:SI ("task") [flags 0x40]  <var_decl 0x7d3b7892e1b0 task>)
         (nil)))
 (insn 171 170 172 30 (set (reg:CC 17 flags)
         (compare:CC (mem/f/c:SI (plus:SI (reg/f:SI 19 frame)

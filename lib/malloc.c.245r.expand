@@ -39,7 +39,7 @@ try_optimize_cfg iteration 2
         (reg:SI 82)) "lib/malloc.c":104:41 -1
      (nil))
 (call_insn 6 5 7 2 (set (reg:SI 0 ax)
-        (call (mem:QI (symbol_ref:SI ("get_free_page") [flags 0x41]  <function_decl 0x7c386e4d2b00 get_free_page>) [0 get_free_page S1 A8])
+        (call (mem:QI (symbol_ref:SI ("get_free_page") [flags 0x41]  <function_decl 0x7cafe52d2b00 get_free_page>) [0 get_free_page S1 A8])
             (const_int 0 [0]))) "lib/malloc.c":104:41 -1
      (nil)
     (expr_list (use (reg:SI 3 bx))
@@ -83,9 +83,9 @@ try_optimize_cfg iteration 2
 (insn 15 14 16 4 (set (reg/f:SI 87)
         (plus:SI (reg:SI 82)
             (const:SI (unspec:SI [
-                        (symbol_ref/f:SI ("*.LC0") [flags 0x2]  <var_decl 0x7c386e4fbcf0 *.LC0>)
+                        (symbol_ref/f:SI ("*.LC0") [flags 0x2]  <var_decl 0x7cafe52fbcf0 *.LC0>)
                     ] UNSPEC_GOTOFF)))) "lib/malloc.c":106:3 -1
-     (expr_list:REG_EQUAL (symbol_ref/f:SI ("*.LC0") [flags 0x2]  <var_decl 0x7c386e4fbcf0 *.LC0>)
+     (expr_list:REG_EQUAL (symbol_ref/f:SI ("*.LC0") [flags 0x2]  <var_decl 0x7cafe52fbcf0 *.LC0>)
         (nil)))
 (insn 16 15 17 4 (set (mem/f:SI (pre_dec:SI (reg/f:SI 7 sp)) [7  S4 A32])
         (reg/f:SI 87)) "lib/malloc.c":106:3 -1
@@ -94,7 +94,7 @@ try_optimize_cfg iteration 2
 (insn 17 16 18 4 (set (reg:SI 3 bx)
         (reg:SI 82)) "lib/malloc.c":106:3 -1
      (nil))
-(call_insn 18 17 19 4 (call (mem:QI (symbol_ref:SI ("panic") [flags 0x41]  <function_decl 0x7c386e4d2900 panic>) [0 panic S1 A8])
+(call_insn 18 17 19 4 (call (mem:QI (symbol_ref:SI ("panic") [flags 0x41]  <function_decl 0x7cafe52d2900 panic>) [0 panic S1 A8])
         (const_int 16 [0x10])) "lib/malloc.c":106:3 -1
      (nil)
     (expr_list (use (reg:SI 3 bx))
@@ -178,7 +178,7 @@ try_optimize_cfg iteration 2
 (insn 40 39 41 8 (set (reg/f:SI 85 [ free_bucket_desc.1_3 ])
         (mem/f/c:SI (plus:SI (reg:SI 82)
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("free_bucket_desc") [flags 0x2]  <var_decl 0x7c386fe6ef30 free_bucket_desc>)
+                            (symbol_ref:SI ("free_bucket_desc") [flags 0x2]  <var_decl 0x7cafe67c4f30 free_bucket_desc>)
                         ] UNSPEC_GOTOFF))) [1 free_bucket_desc+0 S4 A32])) "lib/malloc.c":115:14 -1
      (nil))
 (insn 41 40 42 8 (set (reg/f:SI 90)
@@ -195,7 +195,7 @@ try_optimize_cfg iteration 2
      (nil))
 (insn 44 43 0 8 (set (mem/f/c:SI (plus:SI (reg:SI 82)
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("free_bucket_desc") [flags 0x2]  <var_decl 0x7c386fe6ef30 free_bucket_desc>)
+                            (symbol_ref:SI ("free_bucket_desc") [flags 0x2]  <var_decl 0x7cafe67c4f30 free_bucket_desc>)
                         ] UNSPEC_GOTOFF))) [1 free_bucket_desc+0 S4 A32])
         (reg/f:SI 91)) "lib/malloc.c":116:19 -1
      (nil))
@@ -281,9 +281,9 @@ Forwarding edge 11->12 to 15 failed.
 (insn 5 2 6 2 (set (reg/f:SI 106)
         (plus:SI (reg:SI 82)
             (const:SI (unspec:SI [
-                        (symbol_ref:SI ("bucket_dir") [flags 0x2]  <var_decl 0x7c386fe6ed80 bucket_dir>)
+                        (symbol_ref:SI ("bucket_dir") [flags 0x2]  <var_decl 0x7cafe67c4d80 bucket_dir>)
                     ] UNSPEC_GOTOFF)))) "lib/malloc.c":129:12 -1
-     (expr_list:REG_EQUAL (symbol_ref:SI ("bucket_dir") [flags 0x2]  <var_decl 0x7c386fe6ed80 bucket_dir>)
+     (expr_list:REG_EQUAL (symbol_ref:SI ("bucket_dir") [flags 0x2]  <var_decl 0x7cafe67c4d80 bucket_dir>)
         (nil)))
 (insn 6 5 7 2 (set (mem/f/c:SI (plus:SI (reg/f:SI 77 virtual-stack-vars)
                 (const_int -4 [0xfffffffffffffffc])) [8 bdir+0 S4 A32])
@@ -390,9 +390,9 @@ Forwarding edge 11->12 to 15 failed.
 (insn 37 36 38 9 (set (reg/f:SI 110)
         (plus:SI (reg:SI 82)
             (const:SI (unspec:SI [
-                        (symbol_ref/f:SI ("*.LC1") [flags 0x2]  <var_decl 0x7c386e4fbf30 *.LC1>)
+                        (symbol_ref/f:SI ("*.LC1") [flags 0x2]  <var_decl 0x7cafe52fbf30 *.LC1>)
                     ] UNSPEC_GOTOFF)))) "lib/malloc.c":133:3 -1
-     (expr_list:REG_EQUAL (symbol_ref/f:SI ("*.LC1") [flags 0x2]  <var_decl 0x7c386e4fbf30 *.LC1>)
+     (expr_list:REG_EQUAL (symbol_ref/f:SI ("*.LC1") [flags 0x2]  <var_decl 0x7cafe52fbf30 *.LC1>)
         (nil)))
 (insn 38 37 39 9 (set (mem/f:SI (pre_dec:SI (reg/f:SI 7 sp)) [7  S4 A32])
         (reg/f:SI 110)) "lib/malloc.c":133:3 -1
@@ -402,7 +402,7 @@ Forwarding edge 11->12 to 15 failed.
         (reg:SI 82)) "lib/malloc.c":133:3 -1
      (nil))
 (call_insn 40 39 41 9 (set (reg:SI 0 ax)
-        (call (mem:QI (symbol_ref:SI ("printk") [flags 0x41]  <function_decl 0x7c386e4d2700 printk>) [0 printk S1 A8])
+        (call (mem:QI (symbol_ref:SI ("printk") [flags 0x41]  <function_decl 0x7cafe52d2700 printk>) [0 printk S1 A8])
             (const_int 16 [0x10]))) "lib/malloc.c":133:3 -1
      (nil)
     (expr_list (use (reg:SI 3 bx))
@@ -426,9 +426,9 @@ Forwarding edge 11->12 to 15 failed.
 (insn 43 42 44 9 (set (reg/f:SI 111)
         (plus:SI (reg:SI 82)
             (const:SI (unspec:SI [
-                        (symbol_ref/f:SI ("*.LC2") [flags 0x2]  <var_decl 0x7c386e4fbd80 *.LC2>)
+                        (symbol_ref/f:SI ("*.LC2") [flags 0x2]  <var_decl 0x7cafe52fbd80 *.LC2>)
                     ] UNSPEC_GOTOFF)))) "lib/malloc.c":135:3 -1
-     (expr_list:REG_EQUAL (symbol_ref/f:SI ("*.LC2") [flags 0x2]  <var_decl 0x7c386e4fbd80 *.LC2>)
+     (expr_list:REG_EQUAL (symbol_ref/f:SI ("*.LC2") [flags 0x2]  <var_decl 0x7cafe52fbd80 *.LC2>)
         (nil)))
 (insn 44 43 45 9 (set (mem/f:SI (pre_dec:SI (reg/f:SI 7 sp)) [7  S4 A32])
         (reg/f:SI 111)) "lib/malloc.c":135:3 -1
@@ -437,7 +437,7 @@ Forwarding edge 11->12 to 15 failed.
 (insn 45 44 46 9 (set (reg:SI 3 bx)
         (reg:SI 82)) "lib/malloc.c":135:3 -1
      (nil))
-(call_insn 46 45 47 9 (call (mem:QI (symbol_ref:SI ("panic") [flags 0x41]  <function_decl 0x7c386e4d2900 panic>) [0 panic S1 A8])
+(call_insn 46 45 47 9 (call (mem:QI (symbol_ref:SI ("panic") [flags 0x41]  <function_decl 0x7cafe52d2900 panic>) [0 panic S1 A8])
         (const_int 16 [0x10])) "lib/malloc.c":135:3 -1
      (nil)
     (expr_list (use (reg:SI 3 bx))
@@ -549,7 +549,7 @@ Forwarding edge 11->12 to 15 failed.
 (insn 79 78 80 16 (set (reg/f:SI 88 [ free_bucket_desc.0_6 ])
         (mem/f/c:SI (plus:SI (reg:SI 82)
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("free_bucket_desc") [flags 0x2]  <var_decl 0x7c386fe6ef30 free_bucket_desc>)
+                            (symbol_ref:SI ("free_bucket_desc") [flags 0x2]  <var_decl 0x7cafe67c4f30 free_bucket_desc>)
                         ] UNSPEC_GOTOFF))) [1 free_bucket_desc+0 S4 A32])) "lib/malloc.c":152:7 -1
      (nil))
 (insn 80 79 81 16 (set (reg:CCZ 17 flags)
@@ -564,7 +564,7 @@ Forwarding edge 11->12 to 15 failed.
      (nil)
  -> 84)
 (note 82 81 83 17 [bb 17] NOTE_INSN_BASIC_BLOCK)
-(call_insn 83 82 84 17 (call (mem:QI (symbol_ref:SI ("init_bucket_desc") [flags 0x3]  <function_decl 0x7c386e4f9000 init_bucket_desc>) [0 init_bucket_desc S1 A8])
+(call_insn 83 82 84 17 (call (mem:QI (symbol_ref:SI ("init_bucket_desc") [flags 0x3]  <function_decl 0x7cafe52f9000 init_bucket_desc>) [0 init_bucket_desc S1 A8])
         (const_int 0 [0])) "lib/malloc.c":153:4 -1
      (nil)
     (nil))
@@ -573,7 +573,7 @@ Forwarding edge 11->12 to 15 failed.
 (insn 86 85 87 18 (set (reg/f:SI 117)
         (mem/f/c:SI (plus:SI (reg:SI 82)
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("free_bucket_desc") [flags 0x2]  <var_decl 0x7c386fe6ef30 free_bucket_desc>)
+                            (symbol_ref:SI ("free_bucket_desc") [flags 0x2]  <var_decl 0x7cafe67c4f30 free_bucket_desc>)
                         ] UNSPEC_GOTOFF))) [1 free_bucket_desc+0 S4 A32])) "lib/malloc.c":154:9 -1
      (nil))
 (insn 87 86 88 18 (set (mem/f/c:SI (plus:SI (reg/f:SI 77 virtual-stack-vars)
@@ -590,7 +590,7 @@ Forwarding edge 11->12 to 15 failed.
      (nil))
 (insn 90 89 91 18 (set (mem/f/c:SI (plus:SI (reg:SI 82)
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("free_bucket_desc") [flags 0x2]  <var_decl 0x7c386fe6ef30 free_bucket_desc>)
+                            (symbol_ref:SI ("free_bucket_desc") [flags 0x2]  <var_decl 0x7cafe67c4f30 free_bucket_desc>)
                         ] UNSPEC_GOTOFF))) [1 free_bucket_desc+0 S4 A32])
         (reg/f:SI 89 [ _7 ])) "lib/malloc.c":155:20 -1
      (nil))
@@ -624,7 +624,7 @@ Forwarding edge 11->12 to 15 failed.
         (reg:SI 82)) "lib/malloc.c":158:57 -1
      (nil))
 (call_insn 99 98 100 18 (set (reg:SI 0 ax)
-        (call (mem:QI (symbol_ref:SI ("get_free_page") [flags 0x41]  <function_decl 0x7c386e4d2b00 get_free_page>) [0 get_free_page S1 A8])
+        (call (mem:QI (symbol_ref:SI ("get_free_page") [flags 0x41]  <function_decl 0x7cafe52d2b00 get_free_page>) [0 get_free_page S1 A8])
             (const_int 0 [0]))) "lib/malloc.c":158:57 -1
      (nil)
     (expr_list (use (reg:SI 3 bx))
@@ -687,9 +687,9 @@ Forwarding edge 11->12 to 15 failed.
 (insn 113 112 114 19 (set (reg/f:SI 126)
         (plus:SI (reg:SI 82)
             (const:SI (unspec:SI [
-                        (symbol_ref/f:SI ("*.LC3") [flags 0x2]  <var_decl 0x7c386e52c000 *.LC3>)
+                        (symbol_ref/f:SI ("*.LC3") [flags 0x2]  <var_decl 0x7cafe532c000 *.LC3>)
                     ] UNSPEC_GOTOFF)))) "lib/malloc.c":160:4 -1
-     (expr_list:REG_EQUAL (symbol_ref/f:SI ("*.LC3") [flags 0x2]  <var_decl 0x7c386e52c000 *.LC3>)
+     (expr_list:REG_EQUAL (symbol_ref/f:SI ("*.LC3") [flags 0x2]  <var_decl 0x7cafe532c000 *.LC3>)
         (nil)))
 (insn 114 113 115 19 (set (mem/f:SI (pre_dec:SI (reg/f:SI 7 sp)) [7  S4 A32])
         (reg/f:SI 126)) "lib/malloc.c":160:4 -1
@@ -698,7 +698,7 @@ Forwarding edge 11->12 to 15 failed.
 (insn 115 114 116 19 (set (reg:SI 3 bx)
         (reg:SI 82)) "lib/malloc.c":160:4 -1
      (nil))
-(call_insn 116 115 117 19 (call (mem:QI (symbol_ref:SI ("panic") [flags 0x41]  <function_decl 0x7c386e4d2900 panic>) [0 panic S1 A8])
+(call_insn 116 115 117 19 (call (mem:QI (symbol_ref:SI ("panic") [flags 0x41]  <function_decl 0x7cafe52d2900 panic>) [0 panic S1 A8])
         (const_int 16 [0x10])) "lib/malloc.c":160:4 -1
      (nil)
     (expr_list (use (reg:SI 3 bx))
@@ -1045,9 +1045,9 @@ Forwarding edge 20->21 to 24 failed.
 (insn 11 10 12 2 (set (reg/f:SI 102)
         (plus:SI (reg:SI 82)
             (const:SI (unspec:SI [
-                        (symbol_ref:SI ("bucket_dir") [flags 0x2]  <var_decl 0x7c386fe6ed80 bucket_dir>)
+                        (symbol_ref:SI ("bucket_dir") [flags 0x2]  <var_decl 0x7cafe67c4d80 bucket_dir>)
                     ] UNSPEC_GOTOFF)))) "lib/malloc.c":193:12 -1
-     (expr_list:REG_EQUAL (symbol_ref:SI ("bucket_dir") [flags 0x2]  <var_decl 0x7c386fe6ed80 bucket_dir>)
+     (expr_list:REG_EQUAL (symbol_ref:SI ("bucket_dir") [flags 0x2]  <var_decl 0x7cafe67c4d80 bucket_dir>)
         (nil)))
 (insn 12 11 13 2 (set (mem/f/c:SI (plus:SI (reg/f:SI 77 virtual-stack-vars)
                 (const_int -4 [0xfffffffffffffffc])) [8 bdir+0 S4 A32])
@@ -1214,9 +1214,9 @@ Forwarding edge 20->21 to 24 failed.
 (insn 63 62 64 13 (set (reg/f:SI 111)
         (plus:SI (reg:SI 82)
             (const:SI (unspec:SI [
-                        (symbol_ref/f:SI ("*.LC4") [flags 0x2]  <var_decl 0x7c386e52c1b0 *.LC4>)
+                        (symbol_ref/f:SI ("*.LC4") [flags 0x2]  <var_decl 0x7cafe532c1b0 *.LC4>)
                     ] UNSPEC_GOTOFF)))) "lib/malloc.c":204:2 -1
-     (expr_list:REG_EQUAL (symbol_ref/f:SI ("*.LC4") [flags 0x2]  <var_decl 0x7c386e52c1b0 *.LC4>)
+     (expr_list:REG_EQUAL (symbol_ref/f:SI ("*.LC4") [flags 0x2]  <var_decl 0x7cafe532c1b0 *.LC4>)
         (nil)))
 (insn 64 63 65 13 (set (mem/f:SI (pre_dec:SI (reg/f:SI 7 sp)) [7  S4 A32])
         (reg/f:SI 111)) "lib/malloc.c":204:2 -1
@@ -1225,7 +1225,7 @@ Forwarding edge 20->21 to 24 failed.
 (insn 65 64 66 13 (set (reg:SI 3 bx)
         (reg:SI 82)) "lib/malloc.c":204:2 -1
      (nil))
-(call_insn 66 65 67 13 (call (mem:QI (symbol_ref:SI ("panic") [flags 0x41]  <function_decl 0x7c386e4d2900 panic>) [0 panic S1 A8])
+(call_insn 66 65 67 13 (call (mem:QI (symbol_ref:SI ("panic") [flags 0x41]  <function_decl 0x7cafe52d2900 panic>) [0 panic S1 A8])
         (const_int 16 [0x10])) "lib/malloc.c":204:2 -1
      (nil)
     (expr_list (use (reg:SI 3 bx))
@@ -1528,9 +1528,9 @@ Forwarding edge 20->21 to 24 failed.
 (insn 148 147 149 27 (set (reg/f:SI 129)
         (plus:SI (reg:SI 82)
             (const:SI (unspec:SI [
-                        (symbol_ref/f:SI ("*.LC5") [flags 0x2]  <var_decl 0x7c386e52c240 *.LC5>)
+                        (symbol_ref/f:SI ("*.LC5") [flags 0x2]  <var_decl 0x7cafe532c240 *.LC5>)
                     ] UNSPEC_GOTOFF)))) "lib/malloc.c":224:5 -1
-     (expr_list:REG_EQUAL (symbol_ref/f:SI ("*.LC5") [flags 0x2]  <var_decl 0x7c386e52c240 *.LC5>)
+     (expr_list:REG_EQUAL (symbol_ref/f:SI ("*.LC5") [flags 0x2]  <var_decl 0x7cafe532c240 *.LC5>)
         (nil)))
 (insn 149 148 150 27 (set (mem/f:SI (pre_dec:SI (reg/f:SI 7 sp)) [7  S4 A32])
         (reg/f:SI 129)) "lib/malloc.c":224:5 -1
@@ -1539,7 +1539,7 @@ Forwarding edge 20->21 to 24 failed.
 (insn 150 149 151 27 (set (reg:SI 3 bx)
         (reg:SI 82)) "lib/malloc.c":224:5 -1
      (nil))
-(call_insn 151 150 152 27 (call (mem:QI (symbol_ref:SI ("panic") [flags 0x41]  <function_decl 0x7c386e4d2900 panic>) [0 panic S1 A8])
+(call_insn 151 150 152 27 (call (mem:QI (symbol_ref:SI ("panic") [flags 0x41]  <function_decl 0x7cafe52d2900 panic>) [0 panic S1 A8])
         (const_int 16 [0x10])) "lib/malloc.c":224:5 -1
      (nil)
     (expr_list (use (reg:SI 3 bx))
@@ -1597,7 +1597,7 @@ Forwarding edge 20->21 to 24 failed.
 (insn 166 165 167 29 (set (reg:SI 3 bx)
         (reg:SI 82)) "lib/malloc.c":227:3 -1
      (nil))
-(call_insn 167 166 168 29 (call (mem:QI (symbol_ref:SI ("free_page") [flags 0x41]  <function_decl 0x7c386e4d2a00 free_page>) [0 free_page S1 A8])
+(call_insn 167 166 168 29 (call (mem:QI (symbol_ref:SI ("free_page") [flags 0x41]  <function_decl 0x7cafe52d2a00 free_page>) [0 free_page S1 A8])
         (const_int 16 [0x10])) "lib/malloc.c":227:3 -1
      (nil)
     (expr_list (use (reg:SI 3 bx))
@@ -1613,7 +1613,7 @@ Forwarding edge 20->21 to 24 failed.
 (insn 169 168 170 29 (set (reg/f:SI 100 [ free_bucket_desc.3_19 ])
         (mem/f/c:SI (plus:SI (reg:SI 82)
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("free_bucket_desc") [flags 0x2]  <var_decl 0x7c386fe6ef30 free_bucket_desc>)
+                            (symbol_ref:SI ("free_bucket_desc") [flags 0x2]  <var_decl 0x7cafe67c4f30 free_bucket_desc>)
                         ] UNSPEC_GOTOFF))) [1 free_bucket_desc+0 S4 A32])) "lib/malloc.c":228:15 -1
      (nil))
 (insn 170 169 171 29 (set (reg/f:SI 133)
@@ -1630,7 +1630,7 @@ Forwarding edge 20->21 to 24 failed.
      (nil))
 (insn 173 172 174 29 (set (mem/f/c:SI (plus:SI (reg:SI 82)
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("free_bucket_desc") [flags 0x2]  <var_decl 0x7c386fe6ef30 free_bucket_desc>)
+                            (symbol_ref:SI ("free_bucket_desc") [flags 0x2]  <var_decl 0x7cafe67c4f30 free_bucket_desc>)
                         ] UNSPEC_GOTOFF))) [1 free_bucket_desc+0 S4 A32])
         (reg/f:SI 134)) "lib/malloc.c":229:20 -1
      (nil))

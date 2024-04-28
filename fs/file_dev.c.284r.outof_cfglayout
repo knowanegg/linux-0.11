@@ -202,7 +202,7 @@ Reordered sequence:
         (reg:SI 82)) "fs/file_dev.c":26:19 75 {*movsi_internal}
      (nil))
 (call_insn 34 33 35 5 (set (reg:SI 0 ax)
-        (call (mem:QI (symbol_ref:SI ("bmap") [flags 0x41]  <function_decl 0x726d6e70ed00 bmap>) [0 bmap S1 A8])
+        (call (mem:QI (symbol_ref:SI ("bmap") [flags 0x41]  <function_decl 0x7cb6deb0ed00 bmap>) [0 bmap S1 A8])
             (const_int 16 [0x10]))) "fs/file_dev.c":26:19 823 {*call_value}
      (nil)
     (expr_list (use (reg:SI 3 bx))
@@ -266,7 +266,7 @@ Reordered sequence:
         (reg:SI 82)) "fs/file_dev.c":27:24 75 {*movsi_internal}
      (nil))
 (call_insn 48 47 49 6 (set (reg:SI 0 ax)
-        (call (mem:QI (symbol_ref:SI ("bread") [flags 0x41]  <function_decl 0x726d6e70e100 bread>) [0 bread S1 A8])
+        (call (mem:QI (symbol_ref:SI ("bread") [flags 0x41]  <function_decl 0x7cb6deb0e100 bread>) [0 bread S1 A8])
             (const_int 16 [0x10]))) "fs/file_dev.c":27:24 823 {*call_value}
      (nil)
     (expr_list (use (reg:SI 3 bx))
@@ -522,7 +522,7 @@ Reordered sequence:
         (reg:SI 96 [ _14 ])) "fs/file_dev.c":39:17 54 {*pushsi2}
      (expr_list:REG_ARGS_SIZE (const_int 16 [0x10])
         (nil)))
-(call_insn 107 106 108 11 (call (mem:QI (symbol_ref:SI ("put_fs_byte") [flags 0x3]  <function_decl 0x726d6e738f00 put_fs_byte>) [0 put_fs_byte S1 A8])
+(call_insn 107 106 108 11 (call (mem:QI (symbol_ref:SI ("put_fs_byte") [flags 0x3]  <function_decl 0x7cb6deb38f00 put_fs_byte>) [0 put_fs_byte S1 A8])
         (const_int 16 [0x10])) "fs/file_dev.c":39:17 812 {*call}
      (nil)
     (nil))
@@ -579,7 +579,7 @@ Reordered sequence:
 (insn 122 121 123 13 (set (reg:SI 3 bx)
         (reg:SI 82)) "fs/file_dev.c":40:13 75 {*movsi_internal}
      (nil))
-(call_insn 123 122 124 13 (call (mem:QI (symbol_ref:SI ("brelse") [flags 0x41]  <function_decl 0x726d6e70e200 brelse>) [0 brelse S1 A8])
+(call_insn 123 122 124 13 (call (mem:QI (symbol_ref:SI ("brelse") [flags 0x41]  <function_decl 0x7cb6deb0e200 brelse>) [0 brelse S1 A8])
         (const_int 16 [0x10])) "fs/file_dev.c":40:13 812 {*call}
      (nil)
     (expr_list (use (reg:SI 3 bx))
@@ -637,7 +637,7 @@ Reordered sequence:
         (const_int 0 [0])) "fs/file_dev.c":43:17 54 {*pushsi2}
      (expr_list:REG_ARGS_SIZE (const_int 16 [0x10])
         (nil)))
-(call_insn 138 137 139 15 (call (mem:QI (symbol_ref:SI ("put_fs_byte") [flags 0x3]  <function_decl 0x726d6e738f00 put_fs_byte>) [0 put_fs_byte S1 A8])
+(call_insn 138 137 139 15 (call (mem:QI (symbol_ref:SI ("put_fs_byte") [flags 0x3]  <function_decl 0x7cb6deb38f00 put_fs_byte>) [0 put_fs_byte S1 A8])
         (const_int 16 [0x10])) "fs/file_dev.c":43:17 812 {*call}
      (nil)
     (nil))
@@ -696,7 +696,7 @@ Reordered sequence:
 (insn 157 156 158 18 (set (reg/f:SI 135)
         (mem/u/c:SI (plus:SI (reg:SI 82)
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("jiffies") [flags 0x40]  <var_decl 0x726d6e72f360 jiffies>)
+                            (symbol_ref:SI ("jiffies") [flags 0x40]  <var_decl 0x7cb6deb2f360 jiffies>)
                         ] UNSPEC_GOT))) [12  S4 A8])) "fs/file_dev.c":46:22 75 {*movsi_internal}
      (nil))
 (insn 158 157 159 18 (set (reg:SI 100 [ jiffies.6_18 ])
@@ -740,7 +740,7 @@ Reordered sequence:
 (insn 164 163 165 18 (set (reg/f:SI 140)
         (mem/u/c:SI (plus:SI (reg:SI 82)
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("startup_time") [flags 0x40]  <var_decl 0x726d6e72f3f0 startup_time>)
+                            (symbol_ref:SI ("startup_time") [flags 0x40]  <var_decl 0x7cb6deb2f3f0 startup_time>)
                         ] UNSPEC_GOT))) [12  S4 A8])) "fs/file_dev.c":46:22 75 {*movsi_internal}
      (nil))
 (insn 165 164 166 18 (set (reg:SI 102 [ startup_time.7_20 ])
@@ -975,7 +975,7 @@ Edge 7->17 redirected to 25
         (reg:SI 82)) "fs/file_dev.c":67:23 75 {*movsi_internal}
      (nil))
 (call_insn 41 40 42 6 (set (reg:SI 0 ax)
-        (call (mem:QI (symbol_ref:SI ("create_block") [flags 0x41]  <function_decl 0x726d6e70ee00 create_block>) [0 create_block S1 A8])
+        (call (mem:QI (symbol_ref:SI ("create_block") [flags 0x41]  <function_decl 0x7cb6deb0ee00 create_block>) [0 create_block S1 A8])
             (const_int 16 [0x10]))) "fs/file_dev.c":67:23 823 {*call_value}
      (nil)
     (expr_list (use (reg:SI 3 bx))
@@ -1039,7 +1039,7 @@ Edge 7->17 redirected to 25
         (reg:SI 82)) "fs/file_dev.c":69:20 75 {*movsi_internal}
      (nil))
 (call_insn 59 58 60 7 (set (reg:SI 0 ax)
-        (call (mem:QI (symbol_ref:SI ("bread") [flags 0x41]  <function_decl 0x726d6e70e100 bread>) [0 bread S1 A8])
+        (call (mem:QI (symbol_ref:SI ("bread") [flags 0x41]  <function_decl 0x7cb6deb0e100 bread>) [0 bread S1 A8])
             (const_int 16 [0x10]))) "fs/file_dev.c":69:20 823 {*call_value}
      (nil)
     (expr_list (use (reg:SI 3 bx))
@@ -1315,7 +1315,7 @@ Edge 7->17 redirected to 25
      (expr_list:REG_ARGS_SIZE (const_int 16 [0x10])
         (nil)))
 (call_insn 130 129 131 13 (set (reg:QI 0 ax)
-        (call (mem:QI (symbol_ref:SI ("get_fs_byte") [flags 0x3]  <function_decl 0x726d6e738d00 get_fs_byte>) [0 get_fs_byte S1 A8])
+        (call (mem:QI (symbol_ref:SI ("get_fs_byte") [flags 0x3]  <function_decl 0x7cb6deb38d00 get_fs_byte>) [0 get_fs_byte S1 A8])
             (const_int 16 [0x10]))) "fs/file_dev.c":84:22 823 {*call_value}
      (nil)
     (nil))
@@ -1396,7 +1396,7 @@ Edge 7->17 redirected to 25
 (insn 151 150 152 15 (set (reg:SI 3 bx)
         (reg:SI 82)) "fs/file_dev.c":85:9 75 {*movsi_internal}
      (nil))
-(call_insn 152 151 153 15 (call (mem:QI (symbol_ref:SI ("brelse") [flags 0x41]  <function_decl 0x726d6e70e200 brelse>) [0 brelse S1 A8])
+(call_insn 152 151 153 15 (call (mem:QI (symbol_ref:SI ("brelse") [flags 0x41]  <function_decl 0x7cb6deb0e200 brelse>) [0 brelse S1 A8])
         (const_int 16 [0x10])) "fs/file_dev.c":85:9 812 {*call}
      (nil)
     (expr_list (use (reg:SI 3 bx))
@@ -1451,7 +1451,7 @@ Edge 7->17 redirected to 25
 (insn 162 161 163 17 (set (reg/f:SI 155)
         (mem/u/c:SI (plus:SI (reg:SI 82)
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("jiffies") [flags 0x40]  <var_decl 0x726d6e72f360 jiffies>)
+                            (symbol_ref:SI ("jiffies") [flags 0x40]  <var_decl 0x7cb6deb2f360 jiffies>)
                         ] UNSPEC_GOT))) [12  S4 A8])) "fs/file_dev.c":87:22 75 {*movsi_internal}
      (nil))
 (insn 163 162 164 17 (set (reg:SI 101 [ jiffies.15_19 ])
@@ -1495,7 +1495,7 @@ Edge 7->17 redirected to 25
 (insn 169 168 170 17 (set (reg/f:SI 160)
         (mem/u/c:SI (plus:SI (reg:SI 82)
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("startup_time") [flags 0x40]  <var_decl 0x726d6e72f3f0 startup_time>)
+                            (symbol_ref:SI ("startup_time") [flags 0x40]  <var_decl 0x7cb6deb2f3f0 startup_time>)
                         ] UNSPEC_GOT))) [12  S4 A8])) "fs/file_dev.c":87:22 75 {*movsi_internal}
      (nil))
 (insn 170 169 171 17 (set (reg:SI 103 [ startup_time.16_21 ])
@@ -1563,7 +1563,7 @@ Edge 7->17 redirected to 25
 (insn 185 184 186 18 (set (reg/f:SI 165)
         (mem/u/c:SI (plus:SI (reg:SI 82)
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("jiffies") [flags 0x40]  <var_decl 0x726d6e72f360 jiffies>)
+                            (symbol_ref:SI ("jiffies") [flags 0x40]  <var_decl 0x7cb6deb2f360 jiffies>)
                         ] UNSPEC_GOT))) [12  S4 A8])) "fs/file_dev.c":90:26 75 {*movsi_internal}
      (nil))
 (insn 186 185 187 18 (set (reg:SI 109 [ jiffies.17_27 ])
@@ -1607,7 +1607,7 @@ Edge 7->17 redirected to 25
 (insn 192 191 193 18 (set (reg/f:SI 170)
         (mem/u/c:SI (plus:SI (reg:SI 82)
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("startup_time") [flags 0x40]  <var_decl 0x726d6e72f3f0 startup_time>)
+                            (symbol_ref:SI ("startup_time") [flags 0x40]  <var_decl 0x7cb6deb2f3f0 startup_time>)
                         ] UNSPEC_GOT))) [12  S4 A8])) "fs/file_dev.c":90:26 75 {*movsi_internal}
      (nil))
 (insn 193 192 194 18 (set (reg:SI 111 [ startup_time.18_29 ])

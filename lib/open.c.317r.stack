@@ -154,7 +154,7 @@ Dataflow summary:
 (insn 28 27 29 4 (set (reg/f:SI 0 ax [96])
         (mem/u/c:SI (plus:SI (reg:SI 4 si [82])
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("errno") [flags 0x40]  <var_decl 0x7ac044290b40 errno>)
+                            (symbol_ref:SI ("errno") [flags 0x40]  <var_decl 0x73158741cb40 errno>)
                         ] UNSPEC_GOT))) [3  S4 A8])) "lib/open.c":23:11 75 {*movsi_internal}
      (nil))
 (insn 29 28 30 4 (set (mem/c:SI (reg/f:SI 0 ax [96]) [2 errno+0 S4 A32])

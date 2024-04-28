@@ -360,7 +360,7 @@ Dataflow summary:
 (note 50 12 14 3
 	.cfi_def_cfa_offset 32
 	 NOTE_INSN_CFI)
-(call_insn 14 50 15 3 (call (mem:QI (symbol_ref:SI ("sleep_on") [flags 0x41]  <function_decl 0x7251b2b15b00 sleep_on>) [0 sleep_on S1 A8])
+(call_insn 14 50 15 3 (call (mem:QI (symbol_ref:SI ("sleep_on") [flags 0x41]  <function_decl 0x761b63915b00 sleep_on>) [0 sleep_on S1 A8])
         (const_int 16 [0x10])) "drivers/blk_drv/ll_rw_blk.c":47:9 812 {*call}
      (nil)
     (expr_list (use (reg:SI 3 bx))
@@ -550,9 +550,9 @@ Dataflow summary:
 (insn 11 44 12 3 (set (reg/f:SI 0 ax [86])
         (plus:SI (reg:SI 3 bx [82])
             (const:SI (unspec:SI [
-                        (symbol_ref/f:SI ("*.LC0") [flags 0x2]  <var_decl 0x7251b2b57a20 *.LC0>)
+                        (symbol_ref/f:SI ("*.LC0") [flags 0x2]  <var_decl 0x761b63957a20 *.LC0>)
                     ] UNSPEC_GOTOFF)))) "drivers/blk_drv/ll_rw_blk.c":55:3 205 {*leasi}
-     (expr_list:REG_EQUAL (symbol_ref/f:SI ("*.LC0") [flags 0x2]  <var_decl 0x7251b2b57a20 *.LC0>)
+     (expr_list:REG_EQUAL (symbol_ref/f:SI ("*.LC0") [flags 0x2]  <var_decl 0x761b63957a20 *.LC0>)
         (nil)))
 (insn 12 11 45 3 (set (mem/f:SI (pre_dec:SI (reg/f:SI 7 sp)) [4  S4 A32])
         (reg/f:SI 0 ax [86])) "drivers/blk_drv/ll_rw_blk.c":55:3 54 {*pushsi2}
@@ -562,7 +562,7 @@ Dataflow summary:
 	.cfi_def_cfa_offset 32
 	 NOTE_INSN_CFI)
 (call_insn 14 45 15 3 (set (reg:SI 0 ax)
-        (call (mem:QI (symbol_ref:SI ("printk") [flags 0x41]  <function_decl 0x7251b2b38900 printk>) [0 printk S1 A8])
+        (call (mem:QI (symbol_ref:SI ("printk") [flags 0x41]  <function_decl 0x761b63938900 printk>) [0 printk S1 A8])
             (const_int 16 [0x10]))) "drivers/blk_drv/ll_rw_blk.c":55:3 823 {*call_value}
      (nil)
     (expr_list (use (reg:SI 3 bx))
@@ -619,7 +619,7 @@ Dataflow summary:
 (note 48 23 25 4
 	.cfi_def_cfa_offset 32
 	 NOTE_INSN_CFI)
-(call_insn 25 48 26 4 (call (mem:QI (symbol_ref:SI ("wake_up") [flags 0x41]  <function_decl 0x7251b2b15f00 wake_up>) [0 wake_up S1 A8])
+(call_insn 25 48 26 4 (call (mem:QI (symbol_ref:SI ("wake_up") [flags 0x41]  <function_decl 0x761b63915f00 wake_up>) [0 wake_up S1 A8])
         (const_int 16 [0x10])) "drivers/blk_drv/ll_rw_blk.c":58:2 812 {*call}
      (nil)
     (expr_list (use (reg:SI 3 bx))
@@ -901,7 +901,7 @@ Dataflow summary:
 	.cfi_def_cfa_offset 48
 	 NOTE_INSN_CFI)
 (call_insn 41 120 42 6 (set (reg:SI 0 ax)
-        (call (mem:QI (symbol_ref:SI ("IN_ORDER") [flags 0x3]  <function_decl 0x7251b2b38c00 IN_ORDER>) [0 IN_ORDER S1 A8])
+        (call (mem:QI (symbol_ref:SI ("IN_ORDER") [flags 0x3]  <function_decl 0x761b63938c00 IN_ORDER>) [0 IN_ORDER S1 A8])
             (const_int 16 [0x10]))) "drivers/blk_drv/ll_rw_blk.c":82:14 823 {*call_value}
      (nil)
     (nil))
@@ -963,7 +963,7 @@ Dataflow summary:
 	.cfi_def_cfa_offset 48
 	 NOTE_INSN_CFI)
 (call_insn 52 124 53 7 (set (reg:SI 0 ax)
-        (call (mem:QI (symbol_ref:SI ("IN_ORDER") [flags 0x3]  <function_decl 0x7251b2b38c00 IN_ORDER>) [0 IN_ORDER S1 A8])
+        (call (mem:QI (symbol_ref:SI ("IN_ORDER") [flags 0x3]  <function_decl 0x761b63938c00 IN_ORDER>) [0 IN_ORDER S1 A8])
             (const_int 16 [0x10]))) "drivers/blk_drv/ll_rw_blk.c":83:14 823 {*call_value}
      (nil)
     (nil))
@@ -1026,7 +1026,7 @@ Dataflow summary:
 	.cfi_def_cfa_offset 48
 	 NOTE_INSN_CFI)
 (call_insn 64 128 65 8 (set (reg:SI 0 ax)
-        (call (mem:QI (symbol_ref:SI ("IN_ORDER") [flags 0x3]  <function_decl 0x7251b2b38c00 IN_ORDER>) [0 IN_ORDER S1 A8])
+        (call (mem:QI (symbol_ref:SI ("IN_ORDER") [flags 0x3]  <function_decl 0x761b63938c00 IN_ORDER>) [0 IN_ORDER S1 A8])
             (const_int 16 [0x10]))) "drivers/blk_drv/ll_rw_blk.c":84:14 823 {*call_value}
      (nil)
     (nil))
@@ -1460,9 +1460,9 @@ Dataflow summary:
 (insn 51 236 52 13 (set (reg/f:SI 0 ax [97])
         (plus:SI (reg:SI 3 bx [82])
             (const:SI (unspec:SI [
-                        (symbol_ref/f:SI ("*.LC1") [flags 0x2]  <var_decl 0x7251b2b57c60 *.LC1>)
+                        (symbol_ref/f:SI ("*.LC1") [flags 0x2]  <var_decl 0x761b63957c60 *.LC1>)
                     ] UNSPEC_GOTOFF)))) "drivers/blk_drv/ll_rw_blk.c":108:9 205 {*leasi}
-     (expr_list:REG_EQUAL (symbol_ref/f:SI ("*.LC1") [flags 0x2]  <var_decl 0x7251b2b57c60 *.LC1>)
+     (expr_list:REG_EQUAL (symbol_ref/f:SI ("*.LC1") [flags 0x2]  <var_decl 0x761b63957c60 *.LC1>)
         (nil)))
 (insn 52 51 237 13 (set (mem/f:SI (pre_dec:SI (reg/f:SI 7 sp)) [4  S4 A32])
         (reg/f:SI 0 ax [97])) "drivers/blk_drv/ll_rw_blk.c":108:9 54 {*pushsi2}
@@ -1471,7 +1471,7 @@ Dataflow summary:
 (note 237 52 54 13
 	.cfi_def_cfa_offset 48
 	 NOTE_INSN_CFI)
-(call_insn 54 237 55 13 (call (mem:QI (symbol_ref:SI ("panic") [flags 0x41]  <function_decl 0x7251b2b38700 panic>) [0 panic S1 A8])
+(call_insn 54 237 55 13 (call (mem:QI (symbol_ref:SI ("panic") [flags 0x41]  <function_decl 0x761b63938700 panic>) [0 panic S1 A8])
         (const_int 16 [0x10])) "drivers/blk_drv/ll_rw_blk.c":108:9 812 {*call}
      (nil)
     (expr_list (use (reg:SI 3 bx))
@@ -1508,7 +1508,7 @@ Dataflow summary:
 (note 240 59 60 14
 	.cfi_def_cfa_offset 48
 	 NOTE_INSN_CFI)
-(call_insn 60 240 61 14 (call (mem:QI (symbol_ref:SI ("lock_buffer") [flags 0x3]  <function_decl 0x7251b2b3e200 lock_buffer>) [0 lock_buffer S1 A8])
+(call_insn 60 240 61 14 (call (mem:QI (symbol_ref:SI ("lock_buffer") [flags 0x3]  <function_decl 0x761b6393e200 lock_buffer>) [0 lock_buffer S1 A8])
         (const_int 16 [0x10])) "drivers/blk_drv/ll_rw_blk.c":110:5 812 {*call}
      (nil)
     (nil))
@@ -1610,7 +1610,7 @@ Dataflow summary:
 (note 243 81 82 18
 	.cfi_def_cfa_offset 48
 	 NOTE_INSN_CFI)
-(call_insn 82 243 83 18 (call (mem:QI (symbol_ref:SI ("unlock_buffer") [flags 0x3]  <function_decl 0x7251b2b3e400 unlock_buffer>) [0 unlock_buffer S1 A8])
+(call_insn 82 243 83 18 (call (mem:QI (symbol_ref:SI ("unlock_buffer") [flags 0x3]  <function_decl 0x761b6393e400 unlock_buffer>) [0 unlock_buffer S1 A8])
         (const_int 16 [0x10])) "drivers/blk_drv/ll_rw_blk.c":113:9 812 {*call}
      (nil)
     (nil))
@@ -1653,10 +1653,10 @@ Dataflow summary:
 (insn 92 91 93 21 (set (reg/f:SI 0 ax [100])
         (plus:SI (reg:SI 3 bx [82])
             (const:SI (plus:SI (unspec:SI [
-                            (symbol_ref:SI ("request_queue") [flags 0x2]  <var_decl 0x7251b2b2e870 request_queue>)
+                            (symbol_ref:SI ("request_queue") [flags 0x2]  <var_decl 0x761b6392e870 request_queue>)
                         ] UNSPEC_GOTOFF)
                     (const_int 1152 [0x480]))))) "drivers/blk_drv/ll_rw_blk.c":123:13 205 {*leasi}
-     (expr_list:REG_EQUAL (const:SI (plus:SI (symbol_ref:SI ("request_queue") [flags 0x2]  <var_decl 0x7251b2b2e870 request_queue>)
+     (expr_list:REG_EQUAL (const:SI (plus:SI (symbol_ref:SI ("request_queue") [flags 0x2]  <var_decl 0x761b6392e870 request_queue>)
                 (const_int 1152 [0x480])))
         (nil)))
 (insn 93 92 196 21 (set (mem/f/c:SI (plus:SI (reg/f:SI 7 sp)
@@ -1673,10 +1673,10 @@ Dataflow summary:
 (insn 98 97 99 22 (set (reg/f:SI 0 ax [101])
         (plus:SI (reg:SI 3 bx [82])
             (const:SI (plus:SI (unspec:SI [
-                            (symbol_ref:SI ("request_queue") [flags 0x2]  <var_decl 0x7251b2b2e870 request_queue>)
+                            (symbol_ref:SI ("request_queue") [flags 0x2]  <var_decl 0x761b6392e870 request_queue>)
                         ] UNSPEC_GOTOFF)
                     (const_int 756 [0x2f4]))))) "drivers/blk_drv/ll_rw_blk.c":125:13 205 {*leasi}
-     (expr_list:REG_EQUAL (const:SI (plus:SI (symbol_ref:SI ("request_queue") [flags 0x2]  <var_decl 0x7251b2b2e870 request_queue>)
+     (expr_list:REG_EQUAL (const:SI (plus:SI (symbol_ref:SI ("request_queue") [flags 0x2]  <var_decl 0x761b6392e870 request_queue>)
                 (const_int 756 [0x2f4])))
         (nil)))
 (insn 99 98 198 22 (set (mem/f/c:SI (plus:SI (reg/f:SI 7 sp)
@@ -1722,9 +1722,9 @@ Dataflow summary:
 (insn 118 116 119 24 (set (reg:SI 0 ax [103])
         (plus:SI (reg:SI 3 bx [82])
             (const:SI (unspec:SI [
-                        (symbol_ref:SI ("request_queue") [flags 0x2]  <var_decl 0x7251b2b2e870 request_queue>)
+                        (symbol_ref:SI ("request_queue") [flags 0x2]  <var_decl 0x761b6392e870 request_queue>)
                     ] UNSPEC_GOTOFF)))) "drivers/blk_drv/ll_rw_blk.c":128:18 205 {*leasi}
-     (expr_list:REG_EQUAL (symbol_ref:SI ("request_queue") [flags 0x2]  <var_decl 0x7251b2b2e870 request_queue>)
+     (expr_list:REG_EQUAL (symbol_ref:SI ("request_queue") [flags 0x2]  <var_decl 0x761b6392e870 request_queue>)
         (nil)))
 (insn 119 118 120 24 (set (reg:CC 17 flags)
         (compare:CC (mem/f/c:SI (plus:SI (reg/f:SI 7 sp)
@@ -1753,9 +1753,9 @@ Dataflow summary:
 (insn 123 122 124 27 (set (reg:SI 0 ax [104])
         (plus:SI (reg:SI 3 bx [82])
             (const:SI (unspec:SI [
-                        (symbol_ref:SI ("request_queue") [flags 0x2]  <var_decl 0x7251b2b2e870 request_queue>)
+                        (symbol_ref:SI ("request_queue") [flags 0x2]  <var_decl 0x761b6392e870 request_queue>)
                     ] UNSPEC_GOTOFF)))) "drivers/blk_drv/ll_rw_blk.c":134:8 205 {*leasi}
-     (expr_list:REG_EQUAL (symbol_ref:SI ("request_queue") [flags 0x2]  <var_decl 0x7251b2b2e870 request_queue>)
+     (expr_list:REG_EQUAL (symbol_ref:SI ("request_queue") [flags 0x2]  <var_decl 0x761b6392e870 request_queue>)
         (nil)))
 (insn 124 123 125 27 (set (reg:CC 17 flags)
         (compare:CC (mem/f/c:SI (plus:SI (reg/f:SI 7 sp)
@@ -1802,7 +1802,7 @@ Dataflow summary:
 (note 246 131 132 29
 	.cfi_def_cfa_offset 48
 	 NOTE_INSN_CFI)
-(call_insn 132 246 133 29 (call (mem:QI (symbol_ref:SI ("unlock_buffer") [flags 0x3]  <function_decl 0x7251b2b3e400 unlock_buffer>) [0 unlock_buffer S1 A8])
+(call_insn 132 246 133 29 (call (mem:QI (symbol_ref:SI ("unlock_buffer") [flags 0x3]  <function_decl 0x761b6393e400 unlock_buffer>) [0 unlock_buffer S1 A8])
         (const_int 16 [0x10])) "drivers/blk_drv/ll_rw_blk.c":136:13 812 {*call}
      (nil)
     (nil))
@@ -1838,9 +1838,9 @@ Dataflow summary:
 (insn 139 248 140 30 (set (reg/f:SI 0 ax [105])
         (plus:SI (reg:SI 3 bx [82])
             (const:SI (unspec:SI [
-                        (symbol_ref:SI ("wait_for_request") [flags 0x2]  <var_decl 0x7251b2b2e510 wait_for_request>)
+                        (symbol_ref:SI ("wait_for_request") [flags 0x2]  <var_decl 0x761b6392e510 wait_for_request>)
                     ] UNSPEC_GOTOFF)))) "drivers/blk_drv/ll_rw_blk.c":140:9 205 {*leasi}
-     (expr_list:REG_EQUAL (symbol_ref:SI ("wait_for_request") [flags 0x2]  <var_decl 0x7251b2b2e510 wait_for_request>)
+     (expr_list:REG_EQUAL (symbol_ref:SI ("wait_for_request") [flags 0x2]  <var_decl 0x761b6392e510 wait_for_request>)
         (nil)))
 (insn 140 139 249 30 (set (mem/f:SI (pre_dec:SI (reg/f:SI 7 sp)) [12  S4 A32])
         (reg/f:SI 0 ax [105])) "drivers/blk_drv/ll_rw_blk.c":140:9 54 {*pushsi2}
@@ -1849,7 +1849,7 @@ Dataflow summary:
 (note 249 140 142 30
 	.cfi_def_cfa_offset 48
 	 NOTE_INSN_CFI)
-(call_insn 142 249 143 30 (call (mem:QI (symbol_ref:SI ("sleep_on") [flags 0x41]  <function_decl 0x7251b2b15b00 sleep_on>) [0 sleep_on S1 A8])
+(call_insn 142 249 143 30 (call (mem:QI (symbol_ref:SI ("sleep_on") [flags 0x41]  <function_decl 0x761b63915b00 sleep_on>) [0 sleep_on S1 A8])
         (const_int 16 [0x10])) "drivers/blk_drv/ll_rw_blk.c":140:9 812 {*call}
      (nil)
     (expr_list (use (reg:SI 3 bx))
@@ -1992,9 +1992,9 @@ Dataflow summary:
 (insn 179 229 180 31 (set (reg:SI 0 ax [120])
         (plus:SI (reg:SI 3 bx [82])
             (const:SI (unspec:SI [
-                        (symbol_ref:SI ("blk_dev") [flags 0x2]  <var_decl 0x7251b2b2e480 blk_dev>)
+                        (symbol_ref:SI ("blk_dev") [flags 0x2]  <var_decl 0x761b6392e480 blk_dev>)
                     ] UNSPEC_GOTOFF)))) "drivers/blk_drv/ll_rw_blk.c":153:5 205 {*leasi}
-     (expr_list:REG_EQUAL (symbol_ref:SI ("blk_dev") [flags 0x2]  <var_decl 0x7251b2b2e480 blk_dev>)
+     (expr_list:REG_EQUAL (symbol_ref:SI ("blk_dev") [flags 0x2]  <var_decl 0x761b6392e480 blk_dev>)
         (nil)))
 (insn 180 179 181 31 (parallel [
             (set (reg/f:SI 0 ax [orig:94 _12 ] [94])
@@ -2029,7 +2029,7 @@ Dataflow summary:
 (note 253 183 184 31
 	.cfi_def_cfa_offset 48
 	 NOTE_INSN_CFI)
-(call_insn 184 253 185 31 (call (mem:QI (symbol_ref:SI ("add_request") [flags 0x3]  <function_decl 0x7251b2b3e600 add_request>) [0 add_request S1 A8])
+(call_insn 184 253 185 31 (call (mem:QI (symbol_ref:SI ("add_request") [flags 0x3]  <function_decl 0x761b6393e600 add_request>) [0 add_request S1 A8])
         (const_int 16 [0x10])) "drivers/blk_drv/ll_rw_blk.c":153:5 812 {*call}
      (nil)
     (nil))
@@ -2209,7 +2209,7 @@ Dataflow summary:
                         (const_int 8 [0x8]))
                     (reg:SI 0 ax [82]))
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("blk_dev") [flags 0x2]  <var_decl 0x7251b2b2e480 blk_dev>)
+                            (symbol_ref:SI ("blk_dev") [flags 0x2]  <var_decl 0x761b6392e480 blk_dev>)
                         ] UNSPEC_GOTOFF))) [9 blk_dev[major_8].request_fn+0 S4 A64])) "drivers/blk_drv/ll_rw_blk.c":161:24 75 {*movsi_internal}
      (nil))
 (insn 17 16 18 3 (set (reg:CCZ 17 flags)
@@ -2239,9 +2239,9 @@ Dataflow summary:
 (insn 22 65 23 4 (set (reg/f:SI 1 dx [90])
         (plus:SI (reg:SI 0 ax [82])
             (const:SI (unspec:SI [
-                        (symbol_ref/f:SI ("*.LC2") [flags 0x2]  <var_decl 0x7251b2b57d80 *.LC2>)
+                        (symbol_ref/f:SI ("*.LC2") [flags 0x2]  <var_decl 0x761b63957d80 *.LC2>)
                     ] UNSPEC_GOTOFF)))) "drivers/blk_drv/ll_rw_blk.c":162:9 205 {*leasi}
-     (expr_list:REG_EQUAL (symbol_ref/f:SI ("*.LC2") [flags 0x2]  <var_decl 0x7251b2b57d80 *.LC2>)
+     (expr_list:REG_EQUAL (symbol_ref/f:SI ("*.LC2") [flags 0x2]  <var_decl 0x761b63957d80 *.LC2>)
         (nil)))
 (insn 23 22 66 4 (set (mem/f:SI (pre_dec:SI (reg/f:SI 7 sp)) [4  S4 A32])
         (reg/f:SI 1 dx [90])) "drivers/blk_drv/ll_rw_blk.c":162:9 54 {*pushsi2}
@@ -2254,7 +2254,7 @@ Dataflow summary:
         (reg:SI 0 ax [82])) "drivers/blk_drv/ll_rw_blk.c":162:9 75 {*movsi_internal}
      (nil))
 (call_insn 25 24 26 4 (set (reg:SI 0 ax)
-        (call (mem:QI (symbol_ref:SI ("printk") [flags 0x41]  <function_decl 0x7251b2b38900 printk>) [0 printk S1 A8])
+        (call (mem:QI (symbol_ref:SI ("printk") [flags 0x41]  <function_decl 0x761b63938900 printk>) [0 printk S1 A8])
             (const_int 16 [0x10]))) "drivers/blk_drv/ll_rw_blk.c":162:9 823 {*call_value}
      (nil)
     (expr_list (use (reg:SI 3 bx))
@@ -2315,7 +2315,7 @@ Dataflow summary:
 (note 60 35 36 5
 	.cfi_def_cfa_offset 48
 	 NOTE_INSN_CFI)
-(call_insn 36 60 37 5 (call (mem:QI (symbol_ref:SI ("make_request") [flags 0x3]  <function_decl 0x7251b2b3e800 make_request>) [0 make_request S1 A8])
+(call_insn 36 60 37 5 (call (mem:QI (symbol_ref:SI ("make_request") [flags 0x3]  <function_decl 0x761b6393e800 make_request>) [0 make_request S1 A8])
         (const_int 16 [0x10])) "drivers/blk_drv/ll_rw_blk.c":166:5 812 {*call}
      (nil)
     (nil))
@@ -2455,7 +2455,7 @@ Dataflow summary:
 (insn 10 9 11 3 (set (reg:SI 3 bx [84])
         (plus:SI (reg:SI 1 dx [82])
             (const:SI (unspec:SI [
-                        (symbol_ref:SI ("request_queue") [flags 0x2]  <var_decl 0x7251b2b2e870 request_queue>)
+                        (symbol_ref:SI ("request_queue") [flags 0x2]  <var_decl 0x761b6392e870 request_queue>)
                     ] UNSPEC_GOTOFF)))) "drivers/blk_drv/ll_rw_blk.c":177:30 205 {*leasi}
      (nil))
 (insn 11 10 12 3 (set (reg:SI 0 ax [86])
@@ -2501,7 +2501,7 @@ Dataflow summary:
 (insn 20 19 21 3 (set (reg:SI 3 bx [90])
         (plus:SI (reg:SI 1 dx [82])
             (const:SI (unspec:SI [
-                        (symbol_ref:SI ("request_queue") [flags 0x2]  <var_decl 0x7251b2b2e870 request_queue>)
+                        (symbol_ref:SI ("request_queue") [flags 0x2]  <var_decl 0x761b6392e870 request_queue>)
                     ] UNSPEC_GOTOFF)))) "drivers/blk_drv/ll_rw_blk.c":178:31 205 {*leasi}
      (nil))
 (insn 21 20 22 3 (set (reg:SI 0 ax [91])

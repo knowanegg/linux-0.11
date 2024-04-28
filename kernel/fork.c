@@ -111,13 +111,13 @@ int copy_process(int nr, long ebp, long edi, long esi, long gs, long none, // �
     p->state = TASK_UNINTERRUPTIBLE; // 不可中断的睡眠状态，不可被信号打断
     p->pid = last_pid;          // 在这里直接用上一个函数计算的last_pid init来说上一个函数是find_empty_process
     p->father = current->pid;   // init的father应该是自己吧
-    p->counter = p->priority;   // 
-    p->signal = 0;              //  看到这里，GPT-4 oracle批量建表里面有struct注释
-    p->alarm = 0;               //
-    p->leader = 0;
-    p->utime = p->stime = 0;    //
-    p->cutime = p->cstime = 0;  // 
-    p->start_time = jiffies;    // 
+    p->counter = p->priority;   // priority进程的静态优先级。
+    p->signal = 0;              // 指向signal_struct结构的指针，管理信号处理。
+    p->alarm = 0;               // 闹钟信号的剩余时间0
+    p->leader = 0;              // 会话领导者ID 0 
+    p->utime = p->stime = 0;    // 用户CPU时间、系统CPU时间=0
+    p->cutime = p->cstime = 0;  // 累计的子进程用户CPU时间和系统CPU时间=0
+    p->start_time = jiffies;    //  jiffies,用于记录自系统启动以来经过的时钟中断的次数。在system_calls.s的timer_interrupt中
     p->tss.back_link = 0;
     p->tss.esp0 = PAGE_SIZE + (long) p;
     p->tss.ss0 = 0x10;

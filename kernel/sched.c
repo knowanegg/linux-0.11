@@ -121,11 +121,40 @@ repeat: current->state = TASK_UNINTERRUPTIBLE;
 		tmp->state = 0;
 }
 
+// 唤醒进程
 void wake_up(struct task_struct **p)
 {
+	// 这里为什么传进来是**p，却要p和*p都不为空？ 
+	//  p->*p->**p
+	// 这是一个防御性编程的常见做法，确保传入的指针 p 有效，且 p 指向的指针也非空。这样可以防止解引用空指针，导致内核崩溃。
+	// debug观察
+		// pwndbg> p p  #这一个p是进程指针
+		// $15 = (struct task_struct **) 0x27d68
+		// pwndbg> p *p
+		// $16 = (struct task_struct *) 0xfdf000
+		// pwndbg> p **p
+		// $17 = {
+		//   state = 2,
+		//   counter = 15,
+		//   priority = 15,
+		//   signal = 0,
+		//   sigaction = {{
+	    //   .....
+	// 其实到了**p才是真的数据位置
+	// 直接看汇编
+	//                         [esp+0x4] 0x00027d68
+	//                         ........
+	//    0x0000f644 <+17>:    mov    eax,DWORD PTR [esp+0x4] // 找压栈中的值0x27d68所指向de的内存地址，是
+	//    						pwndbg>  x/20x (void *) 0x00027d68 // 用gdb找过去，要加void*
+	//							0x27d68:        0x00fdf000    // 值是0x00fdf000
+    //	  0x0000f648 <+21>:    mov    eax,DWORD PTR [eax]     // 再去找0x00fdf000处内存位置
+	// 
+
 	if (p && *p) {
-		(**p).state = 0;
-		*p = NULL;
+		(**p).state = 0; // 将任务的状态设置为0=runnable, 就绪
+		*p = NULL;  // 传进来的时候基本都是 &p ，也就是指针本身的内存位置，*p就是指针指向的地址。设置为空是将这个指针置空
+		            // 也就是传进来的这个指针不再有效了。这样做好吗？
+					// 看到这里
 	}
 }
 
@@ -181,11 +210,12 @@ void sched_init(void)
 
 #define TIME_REQUESTS 64
 
+// 计时器列表，看起来是单向的，只指向next
 static struct timer_list {
 	long jiffies;
 	void (*fn) (void);
 	struct timer_list *next;
-} timer_list[TIME_REQUESTS], *next_timer = NULL;
+} timer_list[TIME_REQUESTS], *next_timer = NULL; //next_timer是指向系统下一个要处理的计时器
 
 void add_timer(long jiffies, void (*fn) (void))
 {
@@ -247,6 +277,9 @@ static struct task_struct *wait_motor[4] = { NULL, NULL, NULL, NULL };
 static int mon_timer[4] = { 0, 0, 0, 0 };
 static int moff_timer[4] = { 0, 0, 0, 0 };
 
+ // 当前数字输出寄存器 DOR（Digital Output Register）
+ // 该变量含有软驱操作中的重要标志，包括选择软驱、控制电机启动、启动复位软盘控制器以
+ // 及允许/禁止 DMA 和中断请求。
 unsigned char current_DOR = 0x0C;
 
 int ticks_to_floppy_on(unsigned int nr)
@@ -309,6 +342,7 @@ void math_state_restore(void)
 	}
 }
 
+// 针对系统中具有的 4 个软驱，逐一检查使用中的软驱。如果不是 DOR 指定的马达，则跳过
 void do_floppy_timer(void)
 {
 	int i;
@@ -328,31 +362,42 @@ void do_floppy_timer(void)
 	}
 }
 
+ // 定时器中断 C 函数处理程序，在 sys_call.s 中的_timer_interrupt（189 行）中被调用。
+ // 参数 cpl 是当前特权级 0 或 3，它是时钟中断发生时正被执行的代码选择符中的特权级。
+ // cpl=0 时表示中断发生时正在执行内核代码；cpl=3 时表示中断发生时正在执行用户代码。
+ // 对于一个任务，若其执行时间片用完，则进行任务切换。同时函数执行一个计时更新工作。
 void do_timer(long cpl)
 {
-    extern int beepcount;
-    extern void sysbeepstop(void);
+    extern int beepcount; // 在 drivers/chr_drv/console.c中赋值为0
+    extern void sysbeepstop(void); //也在console.c中，实现很简单就是outb(inb_p(0x61) & 0xFC, 0x61);
 
+	// 如过没beep完就循环beep
     if (beepcount)
         if (!--beepcount)
             sysbeepstop();
 
+	// 如果cpl>0，那么权限级别比较低，用户级别，就utime++
     if (cpl)
         current->utime++;
+	// 否则就stime++
     else
         current->stime++;
+	// 这里的utime和stime包含在进程信息里，标志着进程的用时
 
+	// 看看系统有没有下一个要处理的计时器
     if (next_timer) {
-        next_timer->jiffies--;
-        while (next_timer && next_timer->jiffies <= 0) {
-            void (*fn)(void);
+        next_timer->jiffies--; // 如果有的话, next_timer的jiffies--，当计时器的jiffies值减至零时，表示计时器已经到期。
+        while (next_timer && next_timer->jiffies <= 0) { // 减到0的情况
+            void (*fn)(void); // fn是函数指针
 
-            fn = next_timer->fn;
-            next_timer->fn = NULL;
-            next_timer = next_timer->next;
-            (fn)();
+            fn = next_timer->fn; // 先保存计时器的处理函数fn
+            next_timer->fn = NULL; // 将计时器的fn函数设为NULL
+            next_timer = next_timer->next; // 找下下一个计时器
+            (fn)(); // 执行上面保存的处理函数
         }
     }
+
+	// 看看是不是软驱
     if (current_DOR & 0xf0)
         do_floppy_timer();
     if ((--current->counter) > 0)

@@ -256,12 +256,12 @@ Dataflow summary:
      (expr_list:REG_CFA_FLUSH_QUEUE (nil)
         (nil)))
 (note 2 13 6 2 NOTE_INSN_FUNCTION_BEG)
-(call_insn 6 2 8 2 (call (mem:QI (symbol_ref:SI ("rs_init") [flags 0x41]  <function_decl 0x78fb27b38c00 rs_init>) [0 rs_init S1 A8])
+(call_insn 6 2 8 2 (call (mem:QI (symbol_ref:SI ("rs_init") [flags 0x41]  <function_decl 0x706835938c00 rs_init>) [0 rs_init S1 A8])
         (const_int 0 [0])) "drivers/chr_drv/tty_io.c":114:5 812 {*call}
      (nil)
     (expr_list (use (reg:SI 3 bx))
         (nil)))
-(call_insn 8 6 12 2 (call (mem:QI (symbol_ref:SI ("con_init") [flags 0x41]  <function_decl 0x78fb27b38b00 con_init>) [0 con_init S1 A8])
+(call_insn 8 6 12 2 (call (mem:QI (symbol_ref:SI ("con_init") [flags 0x41]  <function_decl 0x706835938b00 con_init>) [0 con_init S1 A8])
         (const_int 0 [0])) "drivers/chr_drv/tty_io.c":116:5 812 {*call}
      (nil)
     (expr_list (use (reg:SI 3 bx))
@@ -422,7 +422,7 @@ Dataflow summary:
 (insn 20 19 21 4 (set (reg/f:SI 1 dx [93])
         (mem/u/c:SI (plus:SI (reg:SI 0 ax [82])
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("task") [flags 0x40]  <var_decl 0x78fb27b2e1b0 task>)
+                            (symbol_ref:SI ("task") [flags 0x40]  <var_decl 0x70683592e1b0 task>)
                         ] UNSPEC_GOT))) [21  S4 A8])) "drivers/chr_drv/tty_io.c":127:11 75 {*movsi_internal}
      (nil))
 (insn 21 20 22 4 (set (reg:SI 2 cx [94])
@@ -449,7 +449,7 @@ Dataflow summary:
 (insn 26 25 27 5 (set (reg/f:SI 1 dx [95])
         (mem/u/c:SI (plus:SI (reg:SI 0 ax [82])
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("task") [flags 0x40]  <var_decl 0x78fb27b2e1b0 task>)
+                            (symbol_ref:SI ("task") [flags 0x40]  <var_decl 0x70683592e1b0 task>)
                         ] UNSPEC_GOT))) [21  S4 A8])) "drivers/chr_drv/tty_io.c":127:22 75 {*movsi_internal}
      (nil))
 (insn 27 26 28 5 (set (reg:SI 2 cx [96])
@@ -488,7 +488,7 @@ Dataflow summary:
 (insn 35 34 36 6 (set (reg/f:SI 1 dx [98])
         (mem/u/c:SI (plus:SI (reg:SI 0 ax [82])
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("task") [flags 0x40]  <var_decl 0x78fb27b2e1b0 task>)
+                            (symbol_ref:SI ("task") [flags 0x40]  <var_decl 0x70683592e1b0 task>)
                         ] UNSPEC_GOT))) [21  S4 A8])) "drivers/chr_drv/tty_io.c":128:8 75 {*movsi_internal}
      (nil))
 (insn 36 35 37 6 (set (reg:SI 2 cx [99])
@@ -507,7 +507,7 @@ Dataflow summary:
 (insn 39 38 40 6 (set (reg/f:SI 1 dx [100])
         (mem/u/c:SI (plus:SI (reg:SI 0 ax [82])
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("task") [flags 0x40]  <var_decl 0x78fb27b2e1b0 task>)
+                            (symbol_ref:SI ("task") [flags 0x40]  <var_decl 0x70683592e1b0 task>)
                         ] UNSPEC_GOT))) [21  S4 A8])) "drivers/chr_drv/tty_io.c":128:8 75 {*movsi_internal}
      (nil))
 (insn 40 39 41 6 (set (reg:SI 3 bx [101])
@@ -784,7 +784,7 @@ Dataflow summary:
 (note 80 26 28 4
 	.cfi_def_cfa_offset 32
 	 NOTE_INSN_CFI)
-(call_insn 28 80 29 4 (call (mem:QI (symbol_ref:SI ("interruptible_sleep_on") [flags 0x41]  <function_decl 0x78fb27b15e00 interruptible_sleep_on>) [0 interruptible_sleep_on S1 A8])
+(call_insn 28 80 29 4 (call (mem:QI (symbol_ref:SI ("interruptible_sleep_on") [flags 0x41]  <function_decl 0x706835915e00 interruptible_sleep_on>) [0 interruptible_sleep_on S1 A8])
         (const_int 16 [0x10])) "drivers/chr_drv/tty_io.c":138:3 812 {*call}
      (nil)
     (expr_list (use (reg:SI 3 bx))
@@ -805,7 +805,7 @@ Dataflow summary:
 (insn 32 31 33 5 (set (reg/f:SI 0 ax [99])
         (mem/u/c:SI (plus:SI (reg:SI 3 bx [82])
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("current") [flags 0x40]  <var_decl 0x78fb27b2e120 current>)
+                            (symbol_ref:SI ("current") [flags 0x40]  <var_decl 0x70683592e120 current>)
                         ] UNSPEC_GOT))) [21  S4 A8])) "drivers/chr_drv/tty_io.c":137:17 75 {*movsi_internal}
      (nil))
 (insn 33 32 34 5 (set (reg/f:SI 0 ax [orig:89 current.0_7 ] [89])
@@ -1053,7 +1053,7 @@ Dataflow summary:
 (note 54 12 14 3
 	.cfi_def_cfa_offset 32
 	 NOTE_INSN_CFI)
-(call_insn 14 54 15 3 (call (mem:QI (symbol_ref:SI ("interruptible_sleep_on") [flags 0x41]  <function_decl 0x78fb27b15e00 interruptible_sleep_on>) [0 interruptible_sleep_on S1 A8])
+(call_insn 14 54 15 3 (call (mem:QI (symbol_ref:SI ("interruptible_sleep_on") [flags 0x41]  <function_decl 0x706835915e00 interruptible_sleep_on>) [0 interruptible_sleep_on S1 A8])
         (const_int 16 [0x10])) "drivers/chr_drv/tty_io.c":146:9 812 {*call}
      (nil)
     (expr_list (use (reg:SI 3 bx))
@@ -1074,7 +1074,7 @@ Dataflow summary:
 (insn 18 17 19 4 (set (reg/f:SI 0 ax [89])
         (mem/u/c:SI (plus:SI (reg:SI 3 bx [82])
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("current") [flags 0x40]  <var_decl 0x78fb27b2e120 current>)
+                            (symbol_ref:SI ("current") [flags 0x40]  <var_decl 0x70683592e120 current>)
                         ] UNSPEC_GOT))) [21  S4 A8])) "drivers/chr_drv/tty_io.c":145:20 75 {*movsi_internal}
      (nil))
 (insn 19 18 20 4 (set (reg/f:SI 0 ax [orig:84 current.1_2 ] [84])
@@ -1597,7 +1597,7 @@ Dataflow summary:
 (insn 64 63 65 12 (set (reg/f:SI 0 ax [239])
         (mem/u/c:SI (plus:SI (reg:SI 3 bx [82])
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("_ctmp") [flags 0x40]  <var_decl 0x78fb27b2ea20 _ctmp>)
+                            (symbol_ref:SI ("_ctmp") [flags 0x40]  <var_decl 0x70683592ea20 _ctmp>)
                         ] UNSPEC_GOT))) [21  S4 A8])) "drivers/chr_drv/tty_io.c":165:8 75 {*movsi_internal}
      (nil))
 (insn 65 64 66 12 (set (mem/c:QI (reg/f:SI 0 ax [239]) [0 _ctmp+0 S1 A8])
@@ -1606,7 +1606,7 @@ Dataflow summary:
 (insn 66 65 67 12 (set (reg/f:SI 0 ax [240])
         (mem/u/c:SI (plus:SI (reg:SI 3 bx [82])
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("_ctmp") [flags 0x40]  <var_decl 0x78fb27b2ea20 _ctmp>)
+                            (symbol_ref:SI ("_ctmp") [flags 0x40]  <var_decl 0x70683592ea20 _ctmp>)
                         ] UNSPEC_GOT))) [21  S4 A8])) "drivers/chr_drv/tty_io.c":165:8 75 {*movsi_internal}
      (nil))
 (insn 67 66 68 12 (set (reg:QI 0 ax [orig:96 _ctmp.4_14 ] [96])
@@ -1622,7 +1622,7 @@ Dataflow summary:
 (insn 70 587 72 12 (set (reg:SI 0 ax [242])
         (mem/u/c:SI (plus:SI (reg:SI 3 bx [82])
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("_ctype") [flags 0x40]  <var_decl 0x78fb27b2e990 _ctype>)
+                            (symbol_ref:SI ("_ctype") [flags 0x40]  <var_decl 0x70683592e990 _ctype>)
                         ] UNSPEC_GOT))) [21  S4 A8])) "drivers/chr_drv/tty_io.c":165:8 75 {*movsi_internal}
      (nil))
 (insn 72 70 73 12 (parallel [
@@ -1660,7 +1660,7 @@ Dataflow summary:
 (insn 79 78 80 13 (set (reg/f:SI 0 ax [243])
         (mem/u/c:SI (plus:SI (reg:SI 3 bx [82])
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("_ctmp") [flags 0x40]  <var_decl 0x78fb27b2ea20 _ctmp>)
+                            (symbol_ref:SI ("_ctmp") [flags 0x40]  <var_decl 0x70683592ea20 _ctmp>)
                         ] UNSPEC_GOT))) [21  S4 A8])) "drivers/chr_drv/tty_io.c":165:8 75 {*movsi_internal}
      (nil))
 (insn 80 79 586 13 (set (reg:QI 0 ax [orig:103 _ctmp.5_21 ] [103])
@@ -1683,7 +1683,7 @@ Dataflow summary:
 (insn 87 86 88 14 (set (reg/f:SI 0 ax [244])
         (mem/u/c:SI (plus:SI (reg:SI 3 bx [82])
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("_ctmp") [flags 0x40]  <var_decl 0x78fb27b2ea20 _ctmp>)
+                            (symbol_ref:SI ("_ctmp") [flags 0x40]  <var_decl 0x70683592ea20 _ctmp>)
                         ] UNSPEC_GOT))) [21  S4 A8])) "drivers/chr_drv/tty_io.c":165:6 75 {*movsi_internal}
      (nil))
 (insn 88 87 90 14 (set (reg:QI 0 ax [orig:105 _ctmp.6_23 ] [105])
@@ -2622,7 +2622,7 @@ Dataflow summary:
 (note 599 326 327 44
 	.cfi_def_cfa_offset 48
 	 NOTE_INSN_CFI)
-(call_insn 327 599 328 44 (call (mem:QI (symbol_ref:SI ("tty_intr") [flags 0x3]  <function_decl 0x78fb27b5a400 tty_intr>) [0 tty_intr S1 A8])
+(call_insn 327 599 328 44 (call (mem:QI (symbol_ref:SI ("tty_intr") [flags 0x3]  <function_decl 0x70683595a400 tty_intr>) [0 tty_intr S1 A8])
         (const_int 16 [0x10])) "drivers/chr_drv/tty_io.c":208:5 812 {*call}
      (nil)
     (nil))
@@ -2697,7 +2697,7 @@ Dataflow summary:
 (note 603 342 343 46
 	.cfi_def_cfa_offset 48
 	 NOTE_INSN_CFI)
-(call_insn 343 603 344 46 (call (mem:QI (symbol_ref:SI ("tty_intr") [flags 0x3]  <function_decl 0x78fb27b5a400 tty_intr>) [0 tty_intr S1 A8])
+(call_insn 343 603 344 46 (call (mem:QI (symbol_ref:SI ("tty_intr") [flags 0x3]  <function_decl 0x70683595a400 tty_intr>) [0 tty_intr S1 A8])
         (const_int 16 [0x10])) "drivers/chr_drv/tty_io.c":212:5 812 {*call}
      (nil)
     (nil))
@@ -3355,7 +3355,7 @@ Dataflow summary:
 (note 609 506 508 61
 	.cfi_def_cfa_offset 48
 	 NOTE_INSN_CFI)
-(call_insn 508 609 509 61 (call (mem:QI (symbol_ref:SI ("wake_up") [flags 0x41]  <function_decl 0x78fb27b15f00 wake_up>) [0 wake_up S1 A8])
+(call_insn 508 609 509 61 (call (mem:QI (symbol_ref:SI ("wake_up") [flags 0x41]  <function_decl 0x706835915f00 wake_up>) [0 wake_up S1 A8])
         (const_int 16 [0x10])) "drivers/chr_drv/tty_io.c":233:2 812 {*call}
      (nil)
     (expr_list (use (reg:SI 3 bx))
@@ -3609,9 +3609,9 @@ Dataflow summary:
 (insn 25 24 26 5 (set (reg:SI 0 ax [131])
         (plus:SI (reg:SI 3 bx [82])
             (const:SI (unspec:SI [
-                        (symbol_ref:SI ("tty_table") [flags 0x2]  <var_decl 0x78fb27b2e480 tty_table>)
+                        (symbol_ref:SI ("tty_table") [flags 0x2]  <var_decl 0x70683592e480 tty_table>)
                     ] UNSPEC_GOTOFF)))) "drivers/chr_drv/tty_io.c":244:9 205 {*leasi}
-     (expr_list:REG_EQUAL (symbol_ref:SI ("tty_table") [flags 0x2]  <var_decl 0x78fb27b2e480 tty_table>)
+     (expr_list:REG_EQUAL (symbol_ref:SI ("tty_table") [flags 0x2]  <var_decl 0x70683592e480 tty_table>)
         (nil)))
 (insn 26 25 27 5 (parallel [
             (set (reg:SI 0 ax [132])
@@ -3663,7 +3663,7 @@ Dataflow summary:
 (note 267 34 35 6
 	.cfi_def_cfa_offset 48
 	 NOTE_INSN_CFI)
-(call_insn 35 267 36 6 (call (mem:QI (symbol_ref:SI ("sleep_if_full") [flags 0x3]  <function_decl 0x78fb27b5a600 sleep_if_full>) [0 sleep_if_full S1 A8])
+(call_insn 35 267 36 6 (call (mem:QI (symbol_ref:SI ("sleep_if_full") [flags 0x3]  <function_decl 0x70683595a600 sleep_if_full>) [0 sleep_if_full S1 A8])
         (const_int 16 [0x10])) "drivers/chr_drv/tty_io.c":247:9 812 {*call}
      (nil)
     (nil))
@@ -3681,7 +3681,7 @@ Dataflow summary:
 (insn 37 268 38 6 (set (reg/f:SI 0 ax [134])
         (mem/u/c:SI (plus:SI (reg:SI 3 bx [82])
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("current") [flags 0x40]  <var_decl 0x78fb27b2e120 current>)
+                            (symbol_ref:SI ("current") [flags 0x40]  <var_decl 0x70683592e120 current>)
                         ] UNSPEC_GOT))) [21  S4 A8])) "drivers/chr_drv/tty_io.c":248:20 75 {*movsi_internal}
      (nil))
 (insn 38 37 39 6 (set (reg/f:SI 0 ax [orig:85 current.8_3 ] [85])
@@ -3730,7 +3730,7 @@ Dataflow summary:
 	.cfi_def_cfa_offset 48
 	 NOTE_INSN_CFI)
 (call_insn 52 270 53 8 (set (reg:QI 0 ax)
-        (call (mem:QI (symbol_ref:SI ("get_fs_byte") [flags 0x3]  <function_decl 0x78fb27b38f00 get_fs_byte>) [0 get_fs_byte S1 A8])
+        (call (mem:QI (symbol_ref:SI ("get_fs_byte") [flags 0x3]  <function_decl 0x706835938f00 get_fs_byte>) [0 get_fs_byte S1 A8])
             (const_int 16 [0x10]))) "drivers/chr_drv/tty_io.c":251:17 823 {*call_value}
      (nil)
     (nil))
@@ -3889,7 +3889,7 @@ Dataflow summary:
 (insn 91 90 92 16 (set (reg:SI 0 ax [orig:94 cr_flag.9_12 ] [94])
         (mem/c:SI (plus:SI (reg:SI 3 bx [82])
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("cr_flag.0") [flags 0x2]  <var_decl 0x78fb27b5ccf0 cr_flag>)
+                            (symbol_ref:SI ("cr_flag.0") [flags 0x2]  <var_decl 0x70683595ccf0 cr_flag>)
                         ] UNSPEC_GOTOFF))) [6 cr_flag+0 S4 A32])) "drivers/chr_drv/tty_io.c":257:34 75 {*movsi_internal}
      (nil))
 (insn 92 91 93 16 (set (reg:CCZ 17 flags)
@@ -3933,7 +3933,7 @@ Dataflow summary:
 (note 100 99 101 18 [bb 18] NOTE_INSN_BASIC_BLOCK)
 (insn 101 100 102 18 (set (mem/c:SI (plus:SI (reg:SI 3 bx [82])
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("cr_flag.0") [flags 0x2]  <var_decl 0x78fb27b5ccf0 cr_flag>)
+                            (symbol_ref:SI ("cr_flag.0") [flags 0x2]  <var_decl 0x70683595ccf0 cr_flag>)
                         ] UNSPEC_GOTOFF))) [6 cr_flag+0 S4 A32])
         (const_int 1 [0x1])) "drivers/chr_drv/tty_io.c":258:29 75 {*movsi_internal}
      (nil))
@@ -4028,7 +4028,7 @@ Dataflow summary:
 (insn 125 124 126 20 (set (reg/f:SI 0 ax [145])
         (mem/u/c:SI (plus:SI (reg:SI 3 bx [82])
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("_ctmp") [flags 0x40]  <var_decl 0x78fb27b2ea20 _ctmp>)
+                            (symbol_ref:SI ("_ctmp") [flags 0x40]  <var_decl 0x70683592ea20 _ctmp>)
                         ] UNSPEC_GOT))) [21  S4 A8])) "drivers/chr_drv/tty_io.c":263:25 75 {*movsi_internal}
      (nil))
 (insn 126 125 127 20 (set (mem/c:QI (reg/f:SI 0 ax [145]) [0 _ctmp+0 S1 A8])
@@ -4037,7 +4037,7 @@ Dataflow summary:
 (insn 127 126 128 20 (set (reg/f:SI 0 ax [146])
         (mem/u/c:SI (plus:SI (reg:SI 3 bx [82])
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("_ctmp") [flags 0x40]  <var_decl 0x78fb27b2ea20 _ctmp>)
+                            (symbol_ref:SI ("_ctmp") [flags 0x40]  <var_decl 0x70683592ea20 _ctmp>)
                         ] UNSPEC_GOT))) [21  S4 A8])) "drivers/chr_drv/tty_io.c":263:25 75 {*movsi_internal}
      (nil))
 (insn 128 127 129 20 (set (reg:QI 0 ax [orig:104 _ctmp.12_22 ] [104])
@@ -4053,7 +4053,7 @@ Dataflow summary:
 (insn 131 259 133 20 (set (reg:SI 0 ax [148])
         (mem/u/c:SI (plus:SI (reg:SI 3 bx [82])
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("_ctype") [flags 0x40]  <var_decl 0x78fb27b2e990 _ctype>)
+                            (symbol_ref:SI ("_ctype") [flags 0x40]  <var_decl 0x70683592e990 _ctype>)
                         ] UNSPEC_GOT))) [21  S4 A8])) "drivers/chr_drv/tty_io.c":263:25 75 {*movsi_internal}
      (nil))
 (insn 133 131 134 20 (parallel [
@@ -4091,7 +4091,7 @@ Dataflow summary:
 (insn 140 139 141 21 (set (reg/f:SI 0 ax [149])
         (mem/u/c:SI (plus:SI (reg:SI 3 bx [82])
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("_ctmp") [flags 0x40]  <var_decl 0x78fb27b2ea20 _ctmp>)
+                            (symbol_ref:SI ("_ctmp") [flags 0x40]  <var_decl 0x70683592ea20 _ctmp>)
                         ] UNSPEC_GOT))) [21  S4 A8])) "drivers/chr_drv/tty_io.c":263:25 75 {*movsi_internal}
      (nil))
 (insn 141 140 258 21 (set (reg:QI 0 ax [orig:111 _ctmp.13_29 ] [111])
@@ -4114,7 +4114,7 @@ Dataflow summary:
 (insn 148 147 149 22 (set (reg/f:SI 0 ax [150])
         (mem/u/c:SI (plus:SI (reg:SI 3 bx [82])
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("_ctmp") [flags 0x40]  <var_decl 0x78fb27b2ea20 _ctmp>)
+                            (symbol_ref:SI ("_ctmp") [flags 0x40]  <var_decl 0x70683592ea20 _ctmp>)
                         ] UNSPEC_GOT))) [21  S4 A8])) "drivers/chr_drv/tty_io.c":263:23 75 {*movsi_internal}
      (nil))
 (insn 149 148 151 22 (set (reg:QI 0 ax [orig:113 _ctmp.14_31 ] [113])
@@ -4148,7 +4148,7 @@ Dataflow summary:
      (nil))
 (insn 158 157 159 24 (set (mem/c:SI (plus:SI (reg:SI 3 bx [82])
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("cr_flag.0") [flags 0x2]  <var_decl 0x78fb27b5ccf0 cr_flag>)
+                            (symbol_ref:SI ("cr_flag.0") [flags 0x2]  <var_decl 0x70683595ccf0 cr_flag>)
                         ] UNSPEC_GOTOFF))) [6 cr_flag+0 S4 A32])
         (const_int 0 [0])) "drivers/chr_drv/tty_io.c":267:21 75 {*movsi_internal}
      (nil))
@@ -4329,7 +4329,7 @@ Dataflow summary:
      (nil)
  -> 204)
 (note 201 200 203 28 [bb 28] NOTE_INSN_BASIC_BLOCK)
-(call_insn 203 201 204 28 (call (mem:QI (symbol_ref:SI ("schedule") [flags 0x41]  <function_decl 0x78fb27b15c00 schedule>) [0 schedule S1 A8])
+(call_insn 203 201 204 28 (call (mem:QI (symbol_ref:SI ("schedule") [flags 0x41]  <function_decl 0x706835915c00 schedule>) [0 schedule S1 A8])
         (const_int 0 [0])) "drivers/chr_drv/tty_io.c":272:13 812 {*call}
      (nil)
     (expr_list (use (reg:SI 3 bx))
@@ -4481,9 +4481,9 @@ Dataflow summary:
 (insn 7 6 8 2 (set (reg:SI 0 ax [86])
         (plus:SI (reg:SI 0 ax [82])
             (const:SI (unspec:SI [
-                        (symbol_ref:SI ("tty_table") [flags 0x2]  <var_decl 0x78fb27b2e480 tty_table>)
+                        (symbol_ref:SI ("tty_table") [flags 0x2]  <var_decl 0x70683592e480 tty_table>)
                     ] UNSPEC_GOTOFF)))) "drivers/chr_drv/tty_io.c":293:2 205 {*leasi}
-     (expr_list:REG_EQUAL (symbol_ref:SI ("tty_table") [flags 0x2]  <var_decl 0x78fb27b2e480 tty_table>)
+     (expr_list:REG_EQUAL (symbol_ref:SI ("tty_table") [flags 0x2]  <var_decl 0x70683592e480 tty_table>)
         (nil)))
 (insn 8 7 9 2 (parallel [
             (set (reg/f:SI 0 ax [orig:85 _3 ] [85])
@@ -4510,7 +4510,7 @@ Dataflow summary:
 (note 27 10 11 2
 	.cfi_def_cfa_offset 32
 	 NOTE_INSN_CFI)
-(call_insn 11 27 12 2 (call (mem:QI (symbol_ref:SI ("copy_to_cooked") [flags 0x3]  <function_decl 0x78fb27b38e00 copy_to_cooked>) [0 copy_to_cooked S1 A8])
+(call_insn 11 27 12 2 (call (mem:QI (symbol_ref:SI ("copy_to_cooked") [flags 0x3]  <function_decl 0x706835938e00 copy_to_cooked>) [0 copy_to_cooked S1 A8])
         (const_int 16 [0x10])) "drivers/chr_drv/tty_io.c":293:2 812 {*call}
      (nil)
     (nil))
@@ -4663,10 +4663,10 @@ Dataflow summary:
 (insn 6 23 7 2 (set (reg/f:SI 0 ax [83])
         (plus:SI (reg:SI 0 ax [82])
             (const:SI (plus:SI (unspec:SI [
-                            (symbol_ref:SI ("tty_table") [flags 0x2]  <var_decl 0x78fb27b2e480 tty_table>)
+                            (symbol_ref:SI ("tty_table") [flags 0x2]  <var_decl 0x70683592e480 tty_table>)
                         ] UNSPEC_GOTOFF)
                     (const_int 2128 [0x850]))))) "drivers/chr_drv/tty_io.c":302:5 205 {*leasi}
-     (expr_list:REG_EQUAL (const:SI (plus:SI (symbol_ref:SI ("tty_table") [flags 0x2]  <var_decl 0x78fb27b2e480 tty_table>)
+     (expr_list:REG_EQUAL (const:SI (plus:SI (symbol_ref:SI ("tty_table") [flags 0x2]  <var_decl 0x70683592e480 tty_table>)
                 (const_int 2128 [0x850])))
         (nil)))
 (insn 7 6 24 2 (set (mem/f:SI (pre_dec:SI (reg/f:SI 7 sp)) [19  S4 A32])
@@ -4676,7 +4676,7 @@ Dataflow summary:
 (note 24 7 8 2
 	.cfi_def_cfa_offset 32
 	 NOTE_INSN_CFI)
-(call_insn 8 24 9 2 (call (mem:QI (symbol_ref:SI ("sleep_if_empty") [flags 0x3]  <function_decl 0x78fb27b5aa00 sleep_if_empty>) [0 sleep_if_empty S1 A8])
+(call_insn 8 24 9 2 (call (mem:QI (symbol_ref:SI ("sleep_if_empty") [flags 0x3]  <function_decl 0x70683595aa00 sleep_if_empty>) [0 sleep_if_empty S1 A8])
         (const_int 16 [0x10])) "drivers/chr_drv/tty_io.c":302:5 812 {*call}
      (nil)
     (nil))
@@ -4980,9 +4980,9 @@ Dataflow summary:
 (insn 26 25 27 5 (set (reg:SI 0 ax [152])
         (plus:SI (reg:SI 3 bx [82])
             (const:SI (unspec:SI [
-                        (symbol_ref:SI ("tty_table") [flags 0x2]  <var_decl 0x78fb27b2e480 tty_table>)
+                        (symbol_ref:SI ("tty_table") [flags 0x2]  <var_decl 0x70683592e480 tty_table>)
                     ] UNSPEC_GOTOFF)))) "drivers/chr_drv/tty_io.c":314:9 205 {*leasi}
-     (expr_list:REG_EQUAL (symbol_ref:SI ("tty_table") [flags 0x2]  <var_decl 0x78fb27b2e480 tty_table>)
+     (expr_list:REG_EQUAL (symbol_ref:SI ("tty_table") [flags 0x2]  <var_decl 0x70683592e480 tty_table>)
         (nil)))
 (insn 27 26 28 5 (parallel [
             (set (reg:SI 0 ax [153])
@@ -4998,7 +4998,7 @@ Dataflow summary:
 (insn 29 28 30 5 (set (reg/f:SI 0 ax [154])
         (mem/u/c:SI (plus:SI (reg:SI 3 bx [82])
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("current") [flags 0x40]  <var_decl 0x78fb27b2e120 current>)
+                            (symbol_ref:SI ("current") [flags 0x40]  <var_decl 0x70683592e120 current>)
                         ] UNSPEC_GOT))) [21  S4 A8])) "drivers/chr_drv/tty_io.c":315:23 75 {*movsi_internal}
      (nil))
 (insn 30 29 31 5 (set (reg/f:SI 0 ax [orig:83 current.16_1 ] [83])
@@ -5114,7 +5114,7 @@ Dataflow summary:
 (insn 56 55 57 8 (set (reg/f:SI 0 ax [161])
         (mem/u/c:SI (plus:SI (reg:SI 3 bx [82])
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("jiffies") [flags 0x40]  <var_decl 0x78fb27b2e360 jiffies>)
+                            (symbol_ref:SI ("jiffies") [flags 0x40]  <var_decl 0x70683592e360 jiffies>)
                         ] UNSPEC_GOT))) [21  S4 A8])) "drivers/chr_drv/tty_io.c":320:40 75 {*movsi_internal}
      (nil))
 (insn 57 56 58 8 (set (reg:SI 1 dx [orig:87 jiffies.18_5 ] [87])
@@ -5183,7 +5183,7 @@ Dataflow summary:
 (insn 76 75 77 12 (set (reg/f:SI 0 ax [163])
         (mem/u/c:SI (plus:SI (reg:SI 3 bx [82])
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("jiffies") [flags 0x40]  <var_decl 0x78fb27b2e360 jiffies>)
+                            (symbol_ref:SI ("jiffies") [flags 0x40]  <var_decl 0x70683592e360 jiffies>)
                         ] UNSPEC_GOT))) [21  S4 A8])) "drivers/chr_drv/tty_io.c":321:35 75 {*movsi_internal}
      (nil))
 (insn 77 76 78 12 (set (reg:SI 2 cx [orig:89 jiffies.19_7 ] [89])
@@ -5192,7 +5192,7 @@ Dataflow summary:
 (insn 78 77 79 12 (set (reg/f:SI 0 ax [164])
         (mem/u/c:SI (plus:SI (reg:SI 3 bx [82])
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("current") [flags 0x40]  <var_decl 0x78fb27b2e120 current>)
+                            (symbol_ref:SI ("current") [flags 0x40]  <var_decl 0x70683592e120 current>)
                         ] UNSPEC_GOT))) [21  S4 A8])) "drivers/chr_drv/tty_io.c":321:20 75 {*movsi_internal}
      (nil))
 (insn 79 78 80 12 (set (reg/f:SI 0 ax [orig:90 current.20_8 ] [90])
@@ -5266,7 +5266,7 @@ Dataflow summary:
 (insn 99 98 100 16 (set (reg/f:SI 0 ax [168])
         (mem/u/c:SI (plus:SI (reg:SI 3 bx [82])
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("current") [flags 0x40]  <var_decl 0x78fb27b2e120 current>)
+                            (symbol_ref:SI ("current") [flags 0x40]  <var_decl 0x70683592e120 current>)
                         ] UNSPEC_GOT))) [21  S4 A8])) "drivers/chr_drv/tty_io.c":326:29 75 {*movsi_internal}
      (nil))
 (insn 100 99 101 16 (set (reg/f:SI 0 ax [orig:92 current.21_10 ] [92])
@@ -5298,7 +5298,7 @@ Dataflow summary:
 (insn 106 105 107 17 (set (reg/f:SI 0 ax [169])
         (mem/u/c:SI (plus:SI (reg:SI 3 bx [82])
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("current") [flags 0x40]  <var_decl 0x78fb27b2e120 current>)
+                            (symbol_ref:SI ("current") [flags 0x40]  <var_decl 0x70683592e120 current>)
                         ] UNSPEC_GOT))) [21  S4 A8])) "drivers/chr_drv/tty_io.c":327:29 75 {*movsi_internal}
      (nil))
 (insn 107 106 108 17 (set (reg/f:SI 0 ax [orig:95 current.22_13 ] [95])
@@ -5311,7 +5311,7 @@ Dataflow summary:
 (insn 109 108 110 17 (set (reg/f:SI 0 ax [170])
         (mem/u/c:SI (plus:SI (reg:SI 3 bx [82])
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("current") [flags 0x40]  <var_decl 0x78fb27b2e120 current>)
+                            (symbol_ref:SI ("current") [flags 0x40]  <var_decl 0x70683592e120 current>)
                         ] UNSPEC_GOT))) [21  S4 A8])) "drivers/chr_drv/tty_io.c":327:29 75 {*movsi_internal}
      (nil))
 (insn 110 109 413 17 (set (reg/f:SI 0 ax [orig:97 current.23_15 ] [97])
@@ -5342,7 +5342,7 @@ Dataflow summary:
 (insn 117 116 118 18 (set (reg/f:SI 0 ax [171])
         (mem/u/c:SI (plus:SI (reg:SI 3 bx [82])
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("current") [flags 0x40]  <var_decl 0x78fb27b2e120 current>)
+                            (symbol_ref:SI ("current") [flags 0x40]  <var_decl 0x70683592e120 current>)
                         ] UNSPEC_GOT))) [21  S4 A8])) "drivers/chr_drv/tty_io.c":330:20 75 {*movsi_internal}
      (nil))
 (insn 118 117 119 18 (set (reg/f:SI 0 ax [orig:99 current.24_17 ] [99])
@@ -5524,7 +5524,7 @@ Dataflow summary:
 (note 425 161 162 23
 	.cfi_def_cfa_offset 64
 	 NOTE_INSN_CFI)
-(call_insn 162 425 163 23 (call (mem:QI (symbol_ref:SI ("sleep_if_empty") [flags 0x3]  <function_decl 0x78fb27b5aa00 sleep_if_empty>) [0 sleep_if_empty S1 A8])
+(call_insn 162 425 163 23 (call (mem:QI (symbol_ref:SI ("sleep_if_empty") [flags 0x3]  <function_decl 0x70683595aa00 sleep_if_empty>) [0 sleep_if_empty S1 A8])
         (const_int 16 [0x10])) "drivers/chr_drv/tty_io.c":334:13 812 {*call}
      (nil)
     (nil))
@@ -5781,7 +5781,7 @@ Dataflow summary:
 (note 422 225 226 30
 	.cfi_def_cfa_offset 64
 	 NOTE_INSN_CFI)
-(call_insn 226 422 227 30 (call (mem:QI (symbol_ref:SI ("put_fs_byte") [flags 0x3]  <function_decl 0x78fb27b4d100 put_fs_byte>) [0 put_fs_byte S1 A8])
+(call_insn 226 422 227 30 (call (mem:QI (symbol_ref:SI ("put_fs_byte") [flags 0x3]  <function_decl 0x70683594d100 put_fs_byte>) [0 put_fs_byte S1 A8])
         (const_int 16 [0x10])) "drivers/chr_drv/tty_io.c":344:17 812 {*call}
      (nil)
     (nil))
@@ -5926,7 +5926,7 @@ Dataflow summary:
 (insn 262 261 263 38 (set (reg/f:SI 0 ax [195])
         (mem/u/c:SI (plus:SI (reg:SI 3 bx [82])
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("jiffies") [flags 0x40]  <var_decl 0x78fb27b2e360 jiffies>)
+                            (symbol_ref:SI ("jiffies") [flags 0x40]  <var_decl 0x70683592e360 jiffies>)
                         ] UNSPEC_GOT))) [21  S4 A8])) "drivers/chr_drv/tty_io.c":350:44 75 {*movsi_internal}
      (nil))
 (insn 263 262 264 38 (set (reg:SI 1 dx [orig:132 jiffies.27_50 ] [132])
@@ -5995,7 +5995,7 @@ Dataflow summary:
 (insn 282 281 283 42 (set (reg/f:SI 0 ax [197])
         (mem/u/c:SI (plus:SI (reg:SI 3 bx [82])
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("jiffies") [flags 0x40]  <var_decl 0x78fb27b2e360 jiffies>)
+                            (symbol_ref:SI ("jiffies") [flags 0x40]  <var_decl 0x70683592e360 jiffies>)
                         ] UNSPEC_GOT))) [21  S4 A8])) "drivers/chr_drv/tty_io.c":351:39 75 {*movsi_internal}
      (nil))
 (insn 283 282 284 42 (set (reg:SI 2 cx [orig:134 jiffies.28_52 ] [134])
@@ -6004,7 +6004,7 @@ Dataflow summary:
 (insn 284 283 285 42 (set (reg/f:SI 0 ax [198])
         (mem/u/c:SI (plus:SI (reg:SI 3 bx [82])
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("current") [flags 0x40]  <var_decl 0x78fb27b2e120 current>)
+                            (symbol_ref:SI ("current") [flags 0x40]  <var_decl 0x70683592e120 current>)
                         ] UNSPEC_GOT))) [21  S4 A8])) "drivers/chr_drv/tty_io.c":351:24 75 {*movsi_internal}
      (nil))
 (insn 285 284 286 42 (set (reg/f:SI 0 ax [orig:135 current.29_53 ] [135])
@@ -6038,7 +6038,7 @@ Dataflow summary:
 (insn 293 292 294 43 (set (reg/f:SI 0 ax [200])
         (mem/u/c:SI (plus:SI (reg:SI 3 bx [82])
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("current") [flags 0x40]  <var_decl 0x78fb27b2e120 current>)
+                            (symbol_ref:SI ("current") [flags 0x40]  <var_decl 0x70683592e120 current>)
                         ] UNSPEC_GOT))) [21  S4 A8])) "drivers/chr_drv/tty_io.c":353:24 75 {*movsi_internal}
      (nil))
 (insn 294 293 295 43 (set (reg/f:SI 0 ax [orig:137 current.30_55 ] [137])
@@ -6171,7 +6171,7 @@ Dataflow summary:
 (insn 329 328 330 52 (set (reg/f:SI 0 ax [205])
         (mem/u/c:SI (plus:SI (reg:SI 3 bx [82])
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("current") [flags 0x40]  <var_decl 0x78fb27b2e120 current>)
+                            (symbol_ref:SI ("current") [flags 0x40]  <var_decl 0x70683592e120 current>)
                         ] UNSPEC_GOT))) [21  S4 A8])) "drivers/chr_drv/tty_io.c":361:12 75 {*movsi_internal}
      (nil))
 (insn 330 329 331 52 (set (reg/f:SI 0 ax [orig:141 current.31_59 ] [141])
@@ -6188,7 +6188,7 @@ Dataflow summary:
 (insn 333 332 334 52 (set (reg/f:SI 0 ax [207])
         (mem/u/c:SI (plus:SI (reg:SI 3 bx [82])
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("current") [flags 0x40]  <var_decl 0x78fb27b2e120 current>)
+                            (symbol_ref:SI ("current") [flags 0x40]  <var_decl 0x70683592e120 current>)
                         ] UNSPEC_GOT))) [21  S4 A8])) "drivers/chr_drv/tty_io.c":362:16 75 {*movsi_internal}
      (nil))
 (insn 334 333 335 52 (set (reg/f:SI 0 ax [orig:142 current.32_60 ] [142])

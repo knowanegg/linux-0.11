@@ -176,7 +176,7 @@ device_not_available:
 timer_interrupt:
 	push %ds              # save ds, es and put kernel data space
 	push %es              # into them. %fs is used by _system_call
-	push %fs
+	push %fs			  # 保存 ds、es 并让其指向内核数据段。fs 将用于 system_call。
 	pushl %edx            # we save %eax, %ecx, %edx as gcc doesn't
 	pushl %ecx            # save those across function calls. %ebx
 	pushl %ebx            # is saved as we use that in ret_sys_call
@@ -184,15 +184,18 @@ timer_interrupt:
 	movl $0x10, %eax
 	mov %ax, %ds
 	mov %ax, %es          # 设置ds和es为0x10选择子
-	movl $0x17, %eax      
-	mov %ax, %fs		  # 
-	incl jiffies
+	movl $0x17, %eax      # 索引为0x5（因为要移位3位，即0x17 >> 3得到3）。
+	mov %ax, %fs		  # RPL为3，表示这是一个用于用户模式的段。TI为1，表示从LDT中取
+						  # 但是这不是内核吗？有LDT吗？有！不要忘了内核main在fork前执行了move_to_user_mode
+						  # 这里就是取LDT表中第三项，在move_to_user_mode中看设置，是局部数据段（程序的数据段）
+	incl jiffies		  # 时钟中断计数器+1
 	movb $0x20, %al       # EOI to interrupt controller #1
-	outb %al, $0x20
-	movl CS(%esp), %eax
-	andl $3, %eax
-	pushl %eax
-	call do_timer
+	outb %al, $0x20      
+	movl CS(%esp), %eax   # CS(%esp)表示从堆栈中取出CS寄存器的值？！还有这种操作？cs寄存器什么时候进去的？又因为什么可以直接用CS(%esp)取到？
+						  # 还记得call吗？call之前是不是要压栈返回地址？这个返回地址就是CS:IP组成的啊，当然是固定能找到的
+	andl $3, %eax         # 从堆栈中取出执行系统调用代码的选择符（CS 段寄存器值）中的当前特权级别(0 或 3)并压入
+	pushl %eax            # 堆栈，作为 do_timer 的参数。do_timer()函数执行任务切换、计时等工作，在 kernel/sched.c
+	call do_timer         
 	addl $4, %esp
 	jmp ret_from_sys_call
 	ret

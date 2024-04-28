@@ -64,7 +64,7 @@
         (reg:SI 82)) "fs/bitmap.c":56:9 75 {*movsi_internal}
      (nil))
 (call_insn 22 21 23 5 (set (reg:SI 0 ax)
-        (call (mem:QI (symbol_ref:SI ("memset") [flags 0x41]  <function_decl 0x7a4f6d73b200 memset>) [0 memset S1 A8])
+        (call (mem:QI (symbol_ref:SI ("memset") [flags 0x41]  <function_decl 0x7b9e2653b200 memset>) [0 memset S1 A8])
             (const_int 16 [0x10]))) "fs/bitmap.c":56:9 823 {*call_value}
      (nil)
     (expr_list (use (reg:SI 3 bx))
@@ -125,9 +125,9 @@
 (insn 40 39 41 7 (set (reg/f:SI 105)
         (plus:SI (reg:SI 82)
             (const:SI (unspec:SI [
-                        (symbol_ref/f:SI ("*.LC0") [flags 0x2]  <var_decl 0x7a4f6d75d630 *.LC0>)
+                        (symbol_ref/f:SI ("*.LC0") [flags 0x2]  <var_decl 0x7b9e2655d630 *.LC0>)
                     ] UNSPEC_GOTOFF)))) "fs/bitmap.c":60:9 205 {*leasi}
-     (expr_list:REG_EQUAL (symbol_ref/f:SI ("*.LC0") [flags 0x2]  <var_decl 0x7a4f6d75d630 *.LC0>)
+     (expr_list:REG_EQUAL (symbol_ref/f:SI ("*.LC0") [flags 0x2]  <var_decl 0x7b9e2655d630 *.LC0>)
         (nil)))
 (insn 41 40 42 7 (set (mem/f:SI (pre_dec:SI (reg/f:SI 7 sp)) [2  S4 A32])
         (reg/f:SI 105)) "fs/bitmap.c":60:9 54 {*pushsi2}
@@ -137,7 +137,7 @@
         (reg:SI 82)) "fs/bitmap.c":60:9 75 {*movsi_internal}
      (nil))
 (call_insn 43 42 44 7 (set (reg:SI 0 ax)
-        (call (mem:QI (symbol_ref:SI ("printk") [flags 0x41]  <function_decl 0x7a4f6d710900 printk>) [0 printk S1 A8])
+        (call (mem:QI (symbol_ref:SI ("printk") [flags 0x41]  <function_decl 0x7b9e26510900 printk>) [0 printk S1 A8])
             (const_int 16 [0x10]))) "fs/bitmap.c":60:9 823 {*call_value}
      (nil)
     (expr_list (use (reg:SI 3 bx))
@@ -161,9 +161,9 @@
 (insn 46 45 47 7 (set (reg/f:SI 106)
         (plus:SI (reg:SI 82)
             (const:SI (unspec:SI [
-                        (symbol_ref/f:SI ("*.LC1") [flags 0x2]  <var_decl 0x7a4f6d75d6c0 *.LC1>)
+                        (symbol_ref/f:SI ("*.LC1") [flags 0x2]  <var_decl 0x7b9e2655d6c0 *.LC1>)
                     ] UNSPEC_GOTOFF)))) "fs/bitmap.c":61:9 205 {*leasi}
-     (expr_list:REG_EQUAL (symbol_ref/f:SI ("*.LC1") [flags 0x2]  <var_decl 0x7a4f6d75d6c0 *.LC1>)
+     (expr_list:REG_EQUAL (symbol_ref/f:SI ("*.LC1") [flags 0x2]  <var_decl 0x7b9e2655d6c0 *.LC1>)
         (nil)))
 (insn 47 46 48 7 (set (mem/f:SI (pre_dec:SI (reg/f:SI 7 sp)) [2  S4 A32])
         (reg/f:SI 106)) "fs/bitmap.c":61:9 54 {*pushsi2}
@@ -172,7 +172,7 @@
 (insn 48 47 49 7 (set (reg:SI 3 bx)
         (reg:SI 82)) "fs/bitmap.c":61:9 75 {*movsi_internal}
      (nil))
-(call_insn 49 48 50 7 (call (mem:QI (symbol_ref:SI ("panic") [flags 0x41]  <function_decl 0x7a4f6d710b00 panic>) [0 panic S1 A8])
+(call_insn 49 48 50 7 (call (mem:QI (symbol_ref:SI ("panic") [flags 0x41]  <function_decl 0x7b9e26510b00 panic>) [0 panic S1 A8])
         (const_int 16 [0x10])) "fs/bitmap.c":61:9 812 {*call}
      (nil)
     (expr_list (use (reg:SI 3 bx))
@@ -219,9 +219,9 @@
 (insn 59 58 60 9 (set (reg/f:SI 108)
         (plus:SI (reg:SI 82)
             (const:SI (unspec:SI [
-                        (symbol_ref/f:SI ("*.LC2") [flags 0x2]  <var_decl 0x7a4f6d75d750 *.LC2>)
+                        (symbol_ref/f:SI ("*.LC2") [flags 0x2]  <var_decl 0x7b9e2655d750 *.LC2>)
                     ] UNSPEC_GOTOFF)))) "fs/bitmap.c":64:9 205 {*leasi}
-     (expr_list:REG_EQUAL (symbol_ref/f:SI ("*.LC2") [flags 0x2]  <var_decl 0x7a4f6d75d750 *.LC2>)
+     (expr_list:REG_EQUAL (symbol_ref/f:SI ("*.LC2") [flags 0x2]  <var_decl 0x7b9e2655d750 *.LC2>)
         (nil)))
 (insn 60 59 61 9 (set (mem/f:SI (pre_dec:SI (reg/f:SI 7 sp)) [2  S4 A32])
         (reg/f:SI 108)) "fs/bitmap.c":64:9 54 {*pushsi2}
@@ -230,7 +230,7 @@
 (insn 61 60 62 9 (set (reg:SI 3 bx)
         (reg:SI 82)) "fs/bitmap.c":64:9 75 {*movsi_internal}
      (nil))
-(call_insn 62 61 63 9 (call (mem:QI (symbol_ref:SI ("panic") [flags 0x41]  <function_decl 0x7a4f6d710b00 panic>) [0 panic S1 A8])
+(call_insn 62 61 63 9 (call (mem:QI (symbol_ref:SI ("panic") [flags 0x41]  <function_decl 0x7b9e26510b00 panic>) [0 panic S1 A8])
         (const_int 16 [0x10])) "fs/bitmap.c":64:9 812 {*call}
      (nil)
     (expr_list (use (reg:SI 3 bx))
@@ -272,7 +272,7 @@
         (reg:SI 82)) "fs/bitmap.c":65:16 75 {*movsi_internal}
      (nil))
 (call_insn 72 71 73 10 (set (reg:SI 0 ax)
-        (call (mem:QI (symbol_ref:SI ("get_super") [flags 0x41]  <function_decl 0x7a4f6d70e000 get_super>) [0 get_super S1 A8])
+        (call (mem:QI (symbol_ref:SI ("get_super") [flags 0x41]  <function_decl 0x7b9e2650e000 get_super>) [0 get_super S1 A8])
             (const_int 16 [0x10]))) "fs/bitmap.c":65:16 823 {*call_value}
      (nil)
     (expr_list (use (reg:SI 3 bx))
@@ -317,9 +317,9 @@
 (insn 80 79 81 11 (set (reg/f:SI 111)
         (plus:SI (reg:SI 82)
             (const:SI (unspec:SI [
-                        (symbol_ref/f:SI ("*.LC3") [flags 0x2]  <var_decl 0x7a4f6d75d7e0 *.LC3>)
+                        (symbol_ref/f:SI ("*.LC3") [flags 0x2]  <var_decl 0x7b9e2655d7e0 *.LC3>)
                     ] UNSPEC_GOTOFF)))) "fs/bitmap.c":66:9 205 {*leasi}
-     (expr_list:REG_EQUAL (symbol_ref/f:SI ("*.LC3") [flags 0x2]  <var_decl 0x7a4f6d75d7e0 *.LC3>)
+     (expr_list:REG_EQUAL (symbol_ref/f:SI ("*.LC3") [flags 0x2]  <var_decl 0x7b9e2655d7e0 *.LC3>)
         (nil)))
 (insn 81 80 82 11 (set (mem/f:SI (pre_dec:SI (reg/f:SI 7 sp)) [2  S4 A32])
         (reg/f:SI 111)) "fs/bitmap.c":66:9 54 {*pushsi2}
@@ -328,7 +328,7 @@
 (insn 82 81 83 11 (set (reg:SI 3 bx)
         (reg:SI 82)) "fs/bitmap.c":66:9 75 {*movsi_internal}
      (nil))
-(call_insn 83 82 84 11 (call (mem:QI (symbol_ref:SI ("panic") [flags 0x41]  <function_decl 0x7a4f6d710b00 panic>) [0 panic S1 A8])
+(call_insn 83 82 84 11 (call (mem:QI (symbol_ref:SI ("panic") [flags 0x41]  <function_decl 0x7b9e26510b00 panic>) [0 panic S1 A8])
         (const_int 16 [0x10])) "fs/bitmap.c":66:9 812 {*call}
      (nil)
     (expr_list (use (reg:SI 3 bx))
@@ -403,9 +403,9 @@
 (insn 101 100 102 14 (set (reg/f:SI 115)
         (plus:SI (reg:SI 82)
             (const:SI (unspec:SI [
-                        (symbol_ref/f:SI ("*.LC4") [flags 0x2]  <var_decl 0x7a4f6d75d870 *.LC4>)
+                        (symbol_ref/f:SI ("*.LC4") [flags 0x2]  <var_decl 0x7b9e2655d870 *.LC4>)
                     ] UNSPEC_GOTOFF)))) "fs/bitmap.c":68:9 205 {*leasi}
-     (expr_list:REG_EQUAL (symbol_ref/f:SI ("*.LC4") [flags 0x2]  <var_decl 0x7a4f6d75d870 *.LC4>)
+     (expr_list:REG_EQUAL (symbol_ref/f:SI ("*.LC4") [flags 0x2]  <var_decl 0x7b9e2655d870 *.LC4>)
         (nil)))
 (insn 102 101 103 14 (set (mem/f:SI (pre_dec:SI (reg/f:SI 7 sp)) [2  S4 A32])
         (reg/f:SI 115)) "fs/bitmap.c":68:9 54 {*pushsi2}
@@ -414,7 +414,7 @@
 (insn 103 102 104 14 (set (reg:SI 3 bx)
         (reg:SI 82)) "fs/bitmap.c":68:9 75 {*movsi_internal}
      (nil))
-(call_insn 104 103 105 14 (call (mem:QI (symbol_ref:SI ("panic") [flags 0x41]  <function_decl 0x7a4f6d710b00 panic>) [0 panic S1 A8])
+(call_insn 104 103 105 14 (call (mem:QI (symbol_ref:SI ("panic") [flags 0x41]  <function_decl 0x7b9e26510b00 panic>) [0 panic S1 A8])
         (const_int 16 [0x10])) "fs/bitmap.c":68:9 812 {*call}
      (nil)
     (expr_list (use (reg:SI 3 bx))
@@ -493,9 +493,9 @@
 (insn 120 119 121 16 (set (reg/f:SI 120)
         (plus:SI (reg:SI 82)
             (const:SI (unspec:SI [
-                        (symbol_ref/f:SI ("*.LC5") [flags 0x2]  <var_decl 0x7a4f6d75d900 *.LC5>)
+                        (symbol_ref/f:SI ("*.LC5") [flags 0x2]  <var_decl 0x7b9e2655d900 *.LC5>)
                     ] UNSPEC_GOTOFF)))) "fs/bitmap.c":70:9 205 {*leasi}
-     (expr_list:REG_EQUAL (symbol_ref/f:SI ("*.LC5") [flags 0x2]  <var_decl 0x7a4f6d75d900 *.LC5>)
+     (expr_list:REG_EQUAL (symbol_ref/f:SI ("*.LC5") [flags 0x2]  <var_decl 0x7b9e2655d900 *.LC5>)
         (nil)))
 (insn 121 120 122 16 (set (mem/f:SI (pre_dec:SI (reg/f:SI 7 sp)) [2  S4 A32])
         (reg/f:SI 120)) "fs/bitmap.c":70:9 54 {*pushsi2}
@@ -504,7 +504,7 @@
 (insn 122 121 123 16 (set (reg:SI 3 bx)
         (reg:SI 82)) "fs/bitmap.c":70:9 75 {*movsi_internal}
      (nil))
-(call_insn 123 122 124 16 (call (mem:QI (symbol_ref:SI ("panic") [flags 0x41]  <function_decl 0x7a4f6d710b00 panic>) [0 panic S1 A8])
+(call_insn 123 122 124 16 (call (mem:QI (symbol_ref:SI ("panic") [flags 0x41]  <function_decl 0x7b9e26510b00 panic>) [0 panic S1 A8])
         (const_int 16 [0x10])) "fs/bitmap.c":70:9 812 {*call}
      (nil)
     (expr_list (use (reg:SI 3 bx))
@@ -594,9 +594,9 @@
 (insn 141 140 142 18 (set (reg/f:SI 125)
         (plus:SI (reg:SI 82)
             (const:SI (unspec:SI [
-                        (symbol_ref/f:SI ("*.LC6") [flags 0x2]  <var_decl 0x7a4f6d75da20 *.LC6>)
+                        (symbol_ref/f:SI ("*.LC6") [flags 0x2]  <var_decl 0x7b9e2655da20 *.LC6>)
                     ] UNSPEC_GOTOFF)))) "fs/bitmap.c":72:9 205 {*leasi}
-     (expr_list:REG_EQUAL (symbol_ref/f:SI ("*.LC6") [flags 0x2]  <var_decl 0x7a4f6d75da20 *.LC6>)
+     (expr_list:REG_EQUAL (symbol_ref/f:SI ("*.LC6") [flags 0x2]  <var_decl 0x7b9e2655da20 *.LC6>)
         (nil)))
 (insn 142 141 143 18 (set (mem/f:SI (pre_dec:SI (reg/f:SI 7 sp)) [2  S4 A32])
         (reg/f:SI 125)) "fs/bitmap.c":72:9 54 {*pushsi2}
@@ -606,7 +606,7 @@
         (reg:SI 82)) "fs/bitmap.c":72:9 75 {*movsi_internal}
      (nil))
 (call_insn 144 143 145 18 (set (reg:SI 0 ax)
-        (call (mem:QI (symbol_ref:SI ("printk") [flags 0x41]  <function_decl 0x7a4f6d710900 printk>) [0 printk S1 A8])
+        (call (mem:QI (symbol_ref:SI ("printk") [flags 0x41]  <function_decl 0x7b9e26510900 printk>) [0 printk S1 A8])
             (const_int 16 [0x10]))) "fs/bitmap.c":72:9 823 {*call_value}
      (nil)
     (expr_list (use (reg:SI 3 bx))
@@ -654,7 +654,7 @@
         (reg:SI 82)) "fs/bitmap.c":74:5 75 {*movsi_internal}
      (nil))
 (call_insn 155 154 156 19 (set (reg:SI 0 ax)
-        (call (mem:QI (symbol_ref:SI ("memset") [flags 0x41]  <function_decl 0x7a4f6d73b200 memset>) [0 memset S1 A8])
+        (call (mem:QI (symbol_ref:SI ("memset") [flags 0x41]  <function_decl 0x7b9e2653b200 memset>) [0 memset S1 A8])
             (const_int 16 [0x10]))) "fs/bitmap.c":74:5 823 {*call_value}
      (nil)
     (expr_list (use (reg:SI 3 bx))
@@ -736,7 +736,7 @@ try_optimize_cfg iteration 1
         (reg:SI 82)) "fs/bitmap.c":56:9 75 {*movsi_internal}
      (nil))
 (call_insn 22 21 23 4 (set (reg:SI 0 ax)
-        (call (mem:QI (symbol_ref:SI ("memset") [flags 0x41]  <function_decl 0x7a4f6d73b200 memset>) [0 memset S1 A8])
+        (call (mem:QI (symbol_ref:SI ("memset") [flags 0x41]  <function_decl 0x7b9e2653b200 memset>) [0 memset S1 A8])
             (const_int 16 [0x10]))) "fs/bitmap.c":56:9 823 {*call_value}
      (nil)
     (expr_list (use (reg:SI 3 bx))
@@ -796,9 +796,9 @@ try_optimize_cfg iteration 1
 (insn 40 39 41 6 (set (reg/f:SI 105)
         (plus:SI (reg:SI 82)
             (const:SI (unspec:SI [
-                        (symbol_ref/f:SI ("*.LC0") [flags 0x2]  <var_decl 0x7a4f6d75d630 *.LC0>)
+                        (symbol_ref/f:SI ("*.LC0") [flags 0x2]  <var_decl 0x7b9e2655d630 *.LC0>)
                     ] UNSPEC_GOTOFF)))) "fs/bitmap.c":60:9 205 {*leasi}
-     (expr_list:REG_EQUAL (symbol_ref/f:SI ("*.LC0") [flags 0x2]  <var_decl 0x7a4f6d75d630 *.LC0>)
+     (expr_list:REG_EQUAL (symbol_ref/f:SI ("*.LC0") [flags 0x2]  <var_decl 0x7b9e2655d630 *.LC0>)
         (nil)))
 (insn 41 40 42 6 (set (mem/f:SI (pre_dec:SI (reg/f:SI 7 sp)) [2  S4 A32])
         (reg/f:SI 105)) "fs/bitmap.c":60:9 54 {*pushsi2}
@@ -808,7 +808,7 @@ try_optimize_cfg iteration 1
         (reg:SI 82)) "fs/bitmap.c":60:9 75 {*movsi_internal}
      (nil))
 (call_insn 43 42 44 6 (set (reg:SI 0 ax)
-        (call (mem:QI (symbol_ref:SI ("printk") [flags 0x41]  <function_decl 0x7a4f6d710900 printk>) [0 printk S1 A8])
+        (call (mem:QI (symbol_ref:SI ("printk") [flags 0x41]  <function_decl 0x7b9e26510900 printk>) [0 printk S1 A8])
             (const_int 16 [0x10]))) "fs/bitmap.c":60:9 823 {*call_value}
      (nil)
     (expr_list (use (reg:SI 3 bx))
@@ -832,9 +832,9 @@ try_optimize_cfg iteration 1
 (insn 46 45 47 6 (set (reg/f:SI 106)
         (plus:SI (reg:SI 82)
             (const:SI (unspec:SI [
-                        (symbol_ref/f:SI ("*.LC1") [flags 0x2]  <var_decl 0x7a4f6d75d6c0 *.LC1>)
+                        (symbol_ref/f:SI ("*.LC1") [flags 0x2]  <var_decl 0x7b9e2655d6c0 *.LC1>)
                     ] UNSPEC_GOTOFF)))) "fs/bitmap.c":61:9 205 {*leasi}
-     (expr_list:REG_EQUAL (symbol_ref/f:SI ("*.LC1") [flags 0x2]  <var_decl 0x7a4f6d75d6c0 *.LC1>)
+     (expr_list:REG_EQUAL (symbol_ref/f:SI ("*.LC1") [flags 0x2]  <var_decl 0x7b9e2655d6c0 *.LC1>)
         (nil)))
 (insn 47 46 48 6 (set (mem/f:SI (pre_dec:SI (reg/f:SI 7 sp)) [2  S4 A32])
         (reg/f:SI 106)) "fs/bitmap.c":61:9 54 {*pushsi2}
@@ -843,7 +843,7 @@ try_optimize_cfg iteration 1
 (insn 48 47 49 6 (set (reg:SI 3 bx)
         (reg:SI 82)) "fs/bitmap.c":61:9 75 {*movsi_internal}
      (nil))
-(call_insn 49 48 50 6 (call (mem:QI (symbol_ref:SI ("panic") [flags 0x41]  <function_decl 0x7a4f6d710b00 panic>) [0 panic S1 A8])
+(call_insn 49 48 50 6 (call (mem:QI (symbol_ref:SI ("panic") [flags 0x41]  <function_decl 0x7b9e26510b00 panic>) [0 panic S1 A8])
         (const_int 16 [0x10])) "fs/bitmap.c":61:9 812 {*call}
      (nil)
     (expr_list (use (reg:SI 3 bx))
@@ -888,9 +888,9 @@ try_optimize_cfg iteration 1
 (insn 59 58 60 8 (set (reg/f:SI 108)
         (plus:SI (reg:SI 82)
             (const:SI (unspec:SI [
-                        (symbol_ref/f:SI ("*.LC2") [flags 0x2]  <var_decl 0x7a4f6d75d750 *.LC2>)
+                        (symbol_ref/f:SI ("*.LC2") [flags 0x2]  <var_decl 0x7b9e2655d750 *.LC2>)
                     ] UNSPEC_GOTOFF)))) "fs/bitmap.c":64:9 205 {*leasi}
-     (expr_list:REG_EQUAL (symbol_ref/f:SI ("*.LC2") [flags 0x2]  <var_decl 0x7a4f6d75d750 *.LC2>)
+     (expr_list:REG_EQUAL (symbol_ref/f:SI ("*.LC2") [flags 0x2]  <var_decl 0x7b9e2655d750 *.LC2>)
         (nil)))
 (insn 60 59 61 8 (set (mem/f:SI (pre_dec:SI (reg/f:SI 7 sp)) [2  S4 A32])
         (reg/f:SI 108)) "fs/bitmap.c":64:9 54 {*pushsi2}
@@ -899,7 +899,7 @@ try_optimize_cfg iteration 1
 (insn 61 60 62 8 (set (reg:SI 3 bx)
         (reg:SI 82)) "fs/bitmap.c":64:9 75 {*movsi_internal}
      (nil))
-(call_insn 62 61 63 8 (call (mem:QI (symbol_ref:SI ("panic") [flags 0x41]  <function_decl 0x7a4f6d710b00 panic>) [0 panic S1 A8])
+(call_insn 62 61 63 8 (call (mem:QI (symbol_ref:SI ("panic") [flags 0x41]  <function_decl 0x7b9e26510b00 panic>) [0 panic S1 A8])
         (const_int 16 [0x10])) "fs/bitmap.c":64:9 812 {*call}
      (nil)
     (expr_list (use (reg:SI 3 bx))
@@ -940,7 +940,7 @@ try_optimize_cfg iteration 1
         (reg:SI 82)) "fs/bitmap.c":65:16 75 {*movsi_internal}
      (nil))
 (call_insn 72 71 73 9 (set (reg:SI 0 ax)
-        (call (mem:QI (symbol_ref:SI ("get_super") [flags 0x41]  <function_decl 0x7a4f6d70e000 get_super>) [0 get_super S1 A8])
+        (call (mem:QI (symbol_ref:SI ("get_super") [flags 0x41]  <function_decl 0x7b9e2650e000 get_super>) [0 get_super S1 A8])
             (const_int 16 [0x10]))) "fs/bitmap.c":65:16 823 {*call_value}
      (nil)
     (expr_list (use (reg:SI 3 bx))
@@ -984,9 +984,9 @@ try_optimize_cfg iteration 1
 (insn 80 79 81 10 (set (reg/f:SI 111)
         (plus:SI (reg:SI 82)
             (const:SI (unspec:SI [
-                        (symbol_ref/f:SI ("*.LC3") [flags 0x2]  <var_decl 0x7a4f6d75d7e0 *.LC3>)
+                        (symbol_ref/f:SI ("*.LC3") [flags 0x2]  <var_decl 0x7b9e2655d7e0 *.LC3>)
                     ] UNSPEC_GOTOFF)))) "fs/bitmap.c":66:9 205 {*leasi}
-     (expr_list:REG_EQUAL (symbol_ref/f:SI ("*.LC3") [flags 0x2]  <var_decl 0x7a4f6d75d7e0 *.LC3>)
+     (expr_list:REG_EQUAL (symbol_ref/f:SI ("*.LC3") [flags 0x2]  <var_decl 0x7b9e2655d7e0 *.LC3>)
         (nil)))
 (insn 81 80 82 10 (set (mem/f:SI (pre_dec:SI (reg/f:SI 7 sp)) [2  S4 A32])
         (reg/f:SI 111)) "fs/bitmap.c":66:9 54 {*pushsi2}
@@ -995,7 +995,7 @@ try_optimize_cfg iteration 1
 (insn 82 81 83 10 (set (reg:SI 3 bx)
         (reg:SI 82)) "fs/bitmap.c":66:9 75 {*movsi_internal}
      (nil))
-(call_insn 83 82 84 10 (call (mem:QI (symbol_ref:SI ("panic") [flags 0x41]  <function_decl 0x7a4f6d710b00 panic>) [0 panic S1 A8])
+(call_insn 83 82 84 10 (call (mem:QI (symbol_ref:SI ("panic") [flags 0x41]  <function_decl 0x7b9e26510b00 panic>) [0 panic S1 A8])
         (const_int 16 [0x10])) "fs/bitmap.c":66:9 812 {*call}
      (nil)
     (expr_list (use (reg:SI 3 bx))
@@ -1067,9 +1067,9 @@ try_optimize_cfg iteration 1
 (insn 101 100 102 13 (set (reg/f:SI 115)
         (plus:SI (reg:SI 82)
             (const:SI (unspec:SI [
-                        (symbol_ref/f:SI ("*.LC4") [flags 0x2]  <var_decl 0x7a4f6d75d870 *.LC4>)
+                        (symbol_ref/f:SI ("*.LC4") [flags 0x2]  <var_decl 0x7b9e2655d870 *.LC4>)
                     ] UNSPEC_GOTOFF)))) "fs/bitmap.c":68:9 205 {*leasi}
-     (expr_list:REG_EQUAL (symbol_ref/f:SI ("*.LC4") [flags 0x2]  <var_decl 0x7a4f6d75d870 *.LC4>)
+     (expr_list:REG_EQUAL (symbol_ref/f:SI ("*.LC4") [flags 0x2]  <var_decl 0x7b9e2655d870 *.LC4>)
         (nil)))
 (insn 102 101 103 13 (set (mem/f:SI (pre_dec:SI (reg/f:SI 7 sp)) [2  S4 A32])
         (reg/f:SI 115)) "fs/bitmap.c":68:9 54 {*pushsi2}
@@ -1078,7 +1078,7 @@ try_optimize_cfg iteration 1
 (insn 103 102 104 13 (set (reg:SI 3 bx)
         (reg:SI 82)) "fs/bitmap.c":68:9 75 {*movsi_internal}
      (nil))
-(call_insn 104 103 105 13 (call (mem:QI (symbol_ref:SI ("panic") [flags 0x41]  <function_decl 0x7a4f6d710b00 panic>) [0 panic S1 A8])
+(call_insn 104 103 105 13 (call (mem:QI (symbol_ref:SI ("panic") [flags 0x41]  <function_decl 0x7b9e26510b00 panic>) [0 panic S1 A8])
         (const_int 16 [0x10])) "fs/bitmap.c":68:9 812 {*call}
      (nil)
     (expr_list (use (reg:SI 3 bx))
@@ -1155,9 +1155,9 @@ try_optimize_cfg iteration 1
 (insn 120 119 121 15 (set (reg/f:SI 120)
         (plus:SI (reg:SI 82)
             (const:SI (unspec:SI [
-                        (symbol_ref/f:SI ("*.LC5") [flags 0x2]  <var_decl 0x7a4f6d75d900 *.LC5>)
+                        (symbol_ref/f:SI ("*.LC5") [flags 0x2]  <var_decl 0x7b9e2655d900 *.LC5>)
                     ] UNSPEC_GOTOFF)))) "fs/bitmap.c":70:9 205 {*leasi}
-     (expr_list:REG_EQUAL (symbol_ref/f:SI ("*.LC5") [flags 0x2]  <var_decl 0x7a4f6d75d900 *.LC5>)
+     (expr_list:REG_EQUAL (symbol_ref/f:SI ("*.LC5") [flags 0x2]  <var_decl 0x7b9e2655d900 *.LC5>)
         (nil)))
 (insn 121 120 122 15 (set (mem/f:SI (pre_dec:SI (reg/f:SI 7 sp)) [2  S4 A32])
         (reg/f:SI 120)) "fs/bitmap.c":70:9 54 {*pushsi2}
@@ -1166,7 +1166,7 @@ try_optimize_cfg iteration 1
 (insn 122 121 123 15 (set (reg:SI 3 bx)
         (reg:SI 82)) "fs/bitmap.c":70:9 75 {*movsi_internal}
      (nil))
-(call_insn 123 122 124 15 (call (mem:QI (symbol_ref:SI ("panic") [flags 0x41]  <function_decl 0x7a4f6d710b00 panic>) [0 panic S1 A8])
+(call_insn 123 122 124 15 (call (mem:QI (symbol_ref:SI ("panic") [flags 0x41]  <function_decl 0x7b9e26510b00 panic>) [0 panic S1 A8])
         (const_int 16 [0x10])) "fs/bitmap.c":70:9 812 {*call}
      (nil)
     (expr_list (use (reg:SI 3 bx))
@@ -1254,9 +1254,9 @@ try_optimize_cfg iteration 1
 (insn 141 140 142 17 (set (reg/f:SI 125)
         (plus:SI (reg:SI 82)
             (const:SI (unspec:SI [
-                        (symbol_ref/f:SI ("*.LC6") [flags 0x2]  <var_decl 0x7a4f6d75da20 *.LC6>)
+                        (symbol_ref/f:SI ("*.LC6") [flags 0x2]  <var_decl 0x7b9e2655da20 *.LC6>)
                     ] UNSPEC_GOTOFF)))) "fs/bitmap.c":72:9 205 {*leasi}
-     (expr_list:REG_EQUAL (symbol_ref/f:SI ("*.LC6") [flags 0x2]  <var_decl 0x7a4f6d75da20 *.LC6>)
+     (expr_list:REG_EQUAL (symbol_ref/f:SI ("*.LC6") [flags 0x2]  <var_decl 0x7b9e2655da20 *.LC6>)
         (nil)))
 (insn 142 141 143 17 (set (mem/f:SI (pre_dec:SI (reg/f:SI 7 sp)) [2  S4 A32])
         (reg/f:SI 125)) "fs/bitmap.c":72:9 54 {*pushsi2}
@@ -1266,7 +1266,7 @@ try_optimize_cfg iteration 1
         (reg:SI 82)) "fs/bitmap.c":72:9 75 {*movsi_internal}
      (nil))
 (call_insn 144 143 145 17 (set (reg:SI 0 ax)
-        (call (mem:QI (symbol_ref:SI ("printk") [flags 0x41]  <function_decl 0x7a4f6d710900 printk>) [0 printk S1 A8])
+        (call (mem:QI (symbol_ref:SI ("printk") [flags 0x41]  <function_decl 0x7b9e26510900 printk>) [0 printk S1 A8])
             (const_int 16 [0x10]))) "fs/bitmap.c":72:9 823 {*call_value}
      (nil)
     (expr_list (use (reg:SI 3 bx))
@@ -1313,7 +1313,7 @@ try_optimize_cfg iteration 1
         (reg:SI 82)) "fs/bitmap.c":74:5 75 {*movsi_internal}
      (nil))
 (call_insn 155 154 156 18 (set (reg:SI 0 ax)
-        (call (mem:QI (symbol_ref:SI ("memset") [flags 0x41]  <function_decl 0x7a4f6d73b200 memset>) [0 memset S1 A8])
+        (call (mem:QI (symbol_ref:SI ("memset") [flags 0x41]  <function_decl 0x7b9e2653b200 memset>) [0 memset S1 A8])
             (const_int 16 [0x10]))) "fs/bitmap.c":74:5 823 {*call_value}
      (nil)
     (expr_list (use (reg:SI 3 bx))
@@ -1352,7 +1352,7 @@ try_optimize_cfg iteration 1
         (reg:SI 82)) "fs/bitmap.c":82:16 75 {*movsi_internal}
      (nil))
 (call_insn 8 7 9 2 (set (reg:SI 0 ax)
-        (call (mem:QI (symbol_ref:SI ("get_super") [flags 0x41]  <function_decl 0x7a4f6d70e000 get_super>) [0 get_super S1 A8])
+        (call (mem:QI (symbol_ref:SI ("get_super") [flags 0x41]  <function_decl 0x7b9e2650e000 get_super>) [0 get_super S1 A8])
             (const_int 16 [0x10]))) "fs/bitmap.c":82:16 823 {*call_value}
      (nil)
     (expr_list (use (reg:SI 3 bx))
@@ -1397,9 +1397,9 @@ try_optimize_cfg iteration 1
 (insn 16 15 17 3 (set (reg/f:SI 106)
         (plus:SI (reg:SI 82)
             (const:SI (unspec:SI [
-                        (symbol_ref/f:SI ("*.LC7") [flags 0x2]  <var_decl 0x7a4f6d75dbd0 *.LC7>)
+                        (symbol_ref/f:SI ("*.LC7") [flags 0x2]  <var_decl 0x7b9e2655dbd0 *.LC7>)
                     ] UNSPEC_GOTOFF)))) "fs/bitmap.c":83:9 205 {*leasi}
-     (expr_list:REG_EQUAL (symbol_ref/f:SI ("*.LC7") [flags 0x2]  <var_decl 0x7a4f6d75dbd0 *.LC7>)
+     (expr_list:REG_EQUAL (symbol_ref/f:SI ("*.LC7") [flags 0x2]  <var_decl 0x7b9e2655dbd0 *.LC7>)
         (nil)))
 (insn 17 16 18 3 (set (mem/f:SI (pre_dec:SI (reg/f:SI 7 sp)) [2  S4 A32])
         (reg/f:SI 106)) "fs/bitmap.c":83:9 54 {*pushsi2}
@@ -1408,7 +1408,7 @@ try_optimize_cfg iteration 1
 (insn 18 17 19 3 (set (reg:SI 3 bx)
         (reg:SI 82)) "fs/bitmap.c":83:9 75 {*movsi_internal}
      (nil))
-(call_insn 19 18 20 3 (call (mem:QI (symbol_ref:SI ("panic") [flags 0x41]  <function_decl 0x7a4f6d710b00 panic>) [0 panic S1 A8])
+(call_insn 19 18 20 3 (call (mem:QI (symbol_ref:SI ("panic") [flags 0x41]  <function_decl 0x7b9e26510b00 panic>) [0 panic S1 A8])
         (const_int 16 [0x10])) "fs/bitmap.c":83:9 812 {*call}
      (nil)
     (expr_list (use (reg:SI 3 bx))
@@ -1486,9 +1486,9 @@ try_optimize_cfg iteration 1
 (insn 37 36 38 6 (set (reg/f:SI 109)
         (plus:SI (reg:SI 82)
             (const:SI (unspec:SI [
-                        (symbol_ref/f:SI ("*.LC8") [flags 0x2]  <var_decl 0x7a4f6d75dc60 *.LC8>)
+                        (symbol_ref/f:SI ("*.LC8") [flags 0x2]  <var_decl 0x7b9e2655dc60 *.LC8>)
                     ] UNSPEC_GOTOFF)))) "fs/bitmap.c":85:9 205 {*leasi}
-     (expr_list:REG_EQUAL (symbol_ref/f:SI ("*.LC8") [flags 0x2]  <var_decl 0x7a4f6d75dc60 *.LC8>)
+     (expr_list:REG_EQUAL (symbol_ref/f:SI ("*.LC8") [flags 0x2]  <var_decl 0x7b9e2655dc60 *.LC8>)
         (nil)))
 (insn 38 37 39 6 (set (mem/f:SI (pre_dec:SI (reg/f:SI 7 sp)) [2  S4 A32])
         (reg/f:SI 109)) "fs/bitmap.c":85:9 54 {*pushsi2}
@@ -1497,7 +1497,7 @@ try_optimize_cfg iteration 1
 (insn 39 38 40 6 (set (reg:SI 3 bx)
         (reg:SI 82)) "fs/bitmap.c":85:9 75 {*movsi_internal}
      (nil))
-(call_insn 40 39 41 6 (call (mem:QI (symbol_ref:SI ("panic") [flags 0x41]  <function_decl 0x7a4f6d710b00 panic>) [0 panic S1 A8])
+(call_insn 40 39 41 6 (call (mem:QI (symbol_ref:SI ("panic") [flags 0x41]  <function_decl 0x7b9e26510b00 panic>) [0 panic S1 A8])
         (const_int 16 [0x10])) "fs/bitmap.c":85:9 812 {*call}
      (nil)
     (expr_list (use (reg:SI 3 bx))
@@ -1534,7 +1534,7 @@ try_optimize_cfg iteration 1
         (reg:SI 82)) "fs/bitmap.c":86:10 75 {*movsi_internal}
      (nil))
 (call_insn 48 47 49 7 (set (reg:SI 0 ax)
-        (call (mem:QI (symbol_ref:SI ("get_hash_table") [flags 0x41]  <function_decl 0x7a4f6d70e400 get_hash_table>) [0 get_hash_table S1 A8])
+        (call (mem:QI (symbol_ref:SI ("get_hash_table") [flags 0x41]  <function_decl 0x7b9e2650e400 get_hash_table>) [0 get_hash_table S1 A8])
             (const_int 16 [0x10]))) "fs/bitmap.c":86:10 823 {*call_value}
      (nil)
     (expr_list (use (reg:SI 3 bx))
@@ -1616,9 +1616,9 @@ try_optimize_cfg iteration 1
 (insn 66 65 67 9 (set (reg/f:SI 113)
         (plus:SI (reg:SI 82)
             (const:SI (unspec:SI [
-                        (symbol_ref/f:SI ("*.LC9") [flags 0x2]  <var_decl 0x7a4f6d75dcf0 *.LC9>)
+                        (symbol_ref/f:SI ("*.LC9") [flags 0x2]  <var_decl 0x7b9e2655dcf0 *.LC9>)
                     ] UNSPEC_GOTOFF)))) "fs/bitmap.c":89:13 205 {*leasi}
-     (expr_list:REG_EQUAL (symbol_ref/f:SI ("*.LC9") [flags 0x2]  <var_decl 0x7a4f6d75dcf0 *.LC9>)
+     (expr_list:REG_EQUAL (symbol_ref/f:SI ("*.LC9") [flags 0x2]  <var_decl 0x7b9e2655dcf0 *.LC9>)
         (nil)))
 (insn 67 66 68 9 (set (mem/f:SI (pre_dec:SI (reg/f:SI 7 sp)) [2  S4 A32])
         (reg/f:SI 113)) "fs/bitmap.c":89:13 54 {*pushsi2}
@@ -1628,7 +1628,7 @@ try_optimize_cfg iteration 1
         (reg:SI 82)) "fs/bitmap.c":89:13 75 {*movsi_internal}
      (nil))
 (call_insn 69 68 70 9 (set (reg:SI 0 ax)
-        (call (mem:QI (symbol_ref:SI ("printk") [flags 0x41]  <function_decl 0x7a4f6d710900 printk>) [0 printk S1 A8])
+        (call (mem:QI (symbol_ref:SI ("printk") [flags 0x41]  <function_decl 0x7b9e26510900 printk>) [0 printk S1 A8])
             (const_int 16 [0x10]))) "fs/bitmap.c":89:13 823 {*call_value}
      (nil)
     (expr_list (use (reg:SI 3 bx))
@@ -1676,7 +1676,7 @@ try_optimize_cfg iteration 1
 (insn 81 80 82 10 (set (reg:SI 3 bx)
         (reg:SI 82)) "fs/bitmap.c":95:9 75 {*movsi_internal}
      (nil))
-(call_insn 82 81 83 10 (call (mem:QI (symbol_ref:SI ("brelse") [flags 0x41]  <function_decl 0x7a4f6d70e200 brelse>) [0 brelse S1 A8])
+(call_insn 82 81 83 10 (call (mem:QI (symbol_ref:SI ("brelse") [flags 0x41]  <function_decl 0x7b9e2650e200 brelse>) [0 brelse S1 A8])
         (const_int 16 [0x10])) "fs/bitmap.c":95:9 812 {*call}
      (nil)
     (expr_list (use (reg:SI 3 bx))
@@ -1879,9 +1879,9 @@ try_optimize_cfg iteration 1
 (insn 122 121 123 12 (set (reg/f:SI 128)
         (plus:SI (reg:SI 82)
             (const:SI (unspec:SI [
-                        (symbol_ref/f:SI ("*.LC10") [flags 0x2]  <var_decl 0x7a4f6d75de10 *.LC10>)
+                        (symbol_ref/f:SI ("*.LC10") [flags 0x2]  <var_decl 0x7b9e2655de10 *.LC10>)
                     ] UNSPEC_GOTOFF)))) "fs/bitmap.c":99:9 205 {*leasi}
-     (expr_list:REG_EQUAL (symbol_ref/f:SI ("*.LC10") [flags 0x2]  <var_decl 0x7a4f6d75de10 *.LC10>)
+     (expr_list:REG_EQUAL (symbol_ref/f:SI ("*.LC10") [flags 0x2]  <var_decl 0x7b9e2655de10 *.LC10>)
         (nil)))
 (insn 123 122 124 12 (set (mem/f:SI (pre_dec:SI (reg/f:SI 7 sp)) [2  S4 A32])
         (reg/f:SI 128)) "fs/bitmap.c":99:9 54 {*pushsi2}
@@ -1891,7 +1891,7 @@ try_optimize_cfg iteration 1
         (reg:SI 82)) "fs/bitmap.c":99:9 75 {*movsi_internal}
      (nil))
 (call_insn 125 124 126 12 (set (reg:SI 0 ax)
-        (call (mem:QI (symbol_ref:SI ("printk") [flags 0x41]  <function_decl 0x7a4f6d710900 printk>) [0 printk S1 A8])
+        (call (mem:QI (symbol_ref:SI ("printk") [flags 0x41]  <function_decl 0x7b9e26510900 printk>) [0 printk S1 A8])
             (const_int 16 [0x10]))) "fs/bitmap.c":99:9 823 {*call_value}
      (nil)
     (expr_list (use (reg:SI 3 bx))
@@ -1915,9 +1915,9 @@ try_optimize_cfg iteration 1
 (insn 128 127 129 12 (set (reg/f:SI 129)
         (plus:SI (reg:SI 82)
             (const:SI (unspec:SI [
-                        (symbol_ref/f:SI ("*.LC11") [flags 0x2]  <var_decl 0x7a4f6d75dea0 *.LC11>)
+                        (symbol_ref/f:SI ("*.LC11") [flags 0x2]  <var_decl 0x7b9e2655dea0 *.LC11>)
                     ] UNSPEC_GOTOFF)))) "fs/bitmap.c":100:9 205 {*leasi}
-     (expr_list:REG_EQUAL (symbol_ref/f:SI ("*.LC11") [flags 0x2]  <var_decl 0x7a4f6d75dea0 *.LC11>)
+     (expr_list:REG_EQUAL (symbol_ref/f:SI ("*.LC11") [flags 0x2]  <var_decl 0x7b9e2655dea0 *.LC11>)
         (nil)))
 (insn 129 128 130 12 (set (mem/f:SI (pre_dec:SI (reg/f:SI 7 sp)) [2  S4 A32])
         (reg/f:SI 129)) "fs/bitmap.c":100:9 54 {*pushsi2}
@@ -1926,7 +1926,7 @@ try_optimize_cfg iteration 1
 (insn 130 129 131 12 (set (reg:SI 3 bx)
         (reg:SI 82)) "fs/bitmap.c":100:9 75 {*movsi_internal}
      (nil))
-(call_insn 131 130 132 12 (call (mem:QI (symbol_ref:SI ("panic") [flags 0x41]  <function_decl 0x7a4f6d710b00 panic>) [0 panic S1 A8])
+(call_insn 131 130 132 12 (call (mem:QI (symbol_ref:SI ("panic") [flags 0x41]  <function_decl 0x7b9e26510b00 panic>) [0 panic S1 A8])
         (const_int 16 [0x10])) "fs/bitmap.c":100:9 812 {*call}
      (nil)
     (expr_list (use (reg:SI 3 bx))
@@ -2027,7 +2027,7 @@ try_optimize_cfg iteration 1
         (reg:SI 82)) "fs/bitmap.c":82:16 75 {*movsi_internal}
      (nil))
 (call_insn 8 7 9 2 (set (reg:SI 0 ax)
-        (call (mem:QI (symbol_ref:SI ("get_super") [flags 0x41]  <function_decl 0x7a4f6d70e000 get_super>) [0 get_super S1 A8])
+        (call (mem:QI (symbol_ref:SI ("get_super") [flags 0x41]  <function_decl 0x7b9e2650e000 get_super>) [0 get_super S1 A8])
             (const_int 16 [0x10]))) "fs/bitmap.c":82:16 823 {*call_value}
      (nil)
     (expr_list (use (reg:SI 3 bx))
@@ -2071,9 +2071,9 @@ try_optimize_cfg iteration 1
 (insn 16 15 17 3 (set (reg/f:SI 106)
         (plus:SI (reg:SI 82)
             (const:SI (unspec:SI [
-                        (symbol_ref/f:SI ("*.LC7") [flags 0x2]  <var_decl 0x7a4f6d75dbd0 *.LC7>)
+                        (symbol_ref/f:SI ("*.LC7") [flags 0x2]  <var_decl 0x7b9e2655dbd0 *.LC7>)
                     ] UNSPEC_GOTOFF)))) "fs/bitmap.c":83:9 205 {*leasi}
-     (expr_list:REG_EQUAL (symbol_ref/f:SI ("*.LC7") [flags 0x2]  <var_decl 0x7a4f6d75dbd0 *.LC7>)
+     (expr_list:REG_EQUAL (symbol_ref/f:SI ("*.LC7") [flags 0x2]  <var_decl 0x7b9e2655dbd0 *.LC7>)
         (nil)))
 (insn 17 16 18 3 (set (mem/f:SI (pre_dec:SI (reg/f:SI 7 sp)) [2  S4 A32])
         (reg/f:SI 106)) "fs/bitmap.c":83:9 54 {*pushsi2}
@@ -2082,7 +2082,7 @@ try_optimize_cfg iteration 1
 (insn 18 17 19 3 (set (reg:SI 3 bx)
         (reg:SI 82)) "fs/bitmap.c":83:9 75 {*movsi_internal}
      (nil))
-(call_insn 19 18 20 3 (call (mem:QI (symbol_ref:SI ("panic") [flags 0x41]  <function_decl 0x7a4f6d710b00 panic>) [0 panic S1 A8])
+(call_insn 19 18 20 3 (call (mem:QI (symbol_ref:SI ("panic") [flags 0x41]  <function_decl 0x7b9e26510b00 panic>) [0 panic S1 A8])
         (const_int 16 [0x10])) "fs/bitmap.c":83:9 812 {*call}
      (nil)
     (expr_list (use (reg:SI 3 bx))
@@ -2157,9 +2157,9 @@ try_optimize_cfg iteration 1
 (insn 37 36 38 6 (set (reg/f:SI 109)
         (plus:SI (reg:SI 82)
             (const:SI (unspec:SI [
-                        (symbol_ref/f:SI ("*.LC8") [flags 0x2]  <var_decl 0x7a4f6d75dc60 *.LC8>)
+                        (symbol_ref/f:SI ("*.LC8") [flags 0x2]  <var_decl 0x7b9e2655dc60 *.LC8>)
                     ] UNSPEC_GOTOFF)))) "fs/bitmap.c":85:9 205 {*leasi}
-     (expr_list:REG_EQUAL (symbol_ref/f:SI ("*.LC8") [flags 0x2]  <var_decl 0x7a4f6d75dc60 *.LC8>)
+     (expr_list:REG_EQUAL (symbol_ref/f:SI ("*.LC8") [flags 0x2]  <var_decl 0x7b9e2655dc60 *.LC8>)
         (nil)))
 (insn 38 37 39 6 (set (mem/f:SI (pre_dec:SI (reg/f:SI 7 sp)) [2  S4 A32])
         (reg/f:SI 109)) "fs/bitmap.c":85:9 54 {*pushsi2}
@@ -2168,7 +2168,7 @@ try_optimize_cfg iteration 1
 (insn 39 38 40 6 (set (reg:SI 3 bx)
         (reg:SI 82)) "fs/bitmap.c":85:9 75 {*movsi_internal}
      (nil))
-(call_insn 40 39 41 6 (call (mem:QI (symbol_ref:SI ("panic") [flags 0x41]  <function_decl 0x7a4f6d710b00 panic>) [0 panic S1 A8])
+(call_insn 40 39 41 6 (call (mem:QI (symbol_ref:SI ("panic") [flags 0x41]  <function_decl 0x7b9e26510b00 panic>) [0 panic S1 A8])
         (const_int 16 [0x10])) "fs/bitmap.c":85:9 812 {*call}
      (nil)
     (expr_list (use (reg:SI 3 bx))
@@ -2204,7 +2204,7 @@ try_optimize_cfg iteration 1
         (reg:SI 82)) "fs/bitmap.c":86:10 75 {*movsi_internal}
      (nil))
 (call_insn 48 47 49 7 (set (reg:SI 0 ax)
-        (call (mem:QI (symbol_ref:SI ("get_hash_table") [flags 0x41]  <function_decl 0x7a4f6d70e400 get_hash_table>) [0 get_hash_table S1 A8])
+        (call (mem:QI (symbol_ref:SI ("get_hash_table") [flags 0x41]  <function_decl 0x7b9e2650e400 get_hash_table>) [0 get_hash_table S1 A8])
             (const_int 16 [0x10]))) "fs/bitmap.c":86:10 823 {*call_value}
      (nil)
     (expr_list (use (reg:SI 3 bx))
@@ -2284,9 +2284,9 @@ try_optimize_cfg iteration 1
 (insn 66 65 67 9 (set (reg/f:SI 113)
         (plus:SI (reg:SI 82)
             (const:SI (unspec:SI [
-                        (symbol_ref/f:SI ("*.LC9") [flags 0x2]  <var_decl 0x7a4f6d75dcf0 *.LC9>)
+                        (symbol_ref/f:SI ("*.LC9") [flags 0x2]  <var_decl 0x7b9e2655dcf0 *.LC9>)
                     ] UNSPEC_GOTOFF)))) "fs/bitmap.c":89:13 205 {*leasi}
-     (expr_list:REG_EQUAL (symbol_ref/f:SI ("*.LC9") [flags 0x2]  <var_decl 0x7a4f6d75dcf0 *.LC9>)
+     (expr_list:REG_EQUAL (symbol_ref/f:SI ("*.LC9") [flags 0x2]  <var_decl 0x7b9e2655dcf0 *.LC9>)
         (nil)))
 (insn 67 66 68 9 (set (mem/f:SI (pre_dec:SI (reg/f:SI 7 sp)) [2  S4 A32])
         (reg/f:SI 113)) "fs/bitmap.c":89:13 54 {*pushsi2}
@@ -2296,7 +2296,7 @@ try_optimize_cfg iteration 1
         (reg:SI 82)) "fs/bitmap.c":89:13 75 {*movsi_internal}
      (nil))
 (call_insn 69 68 70 9 (set (reg:SI 0 ax)
-        (call (mem:QI (symbol_ref:SI ("printk") [flags 0x41]  <function_decl 0x7a4f6d710900 printk>) [0 printk S1 A8])
+        (call (mem:QI (symbol_ref:SI ("printk") [flags 0x41]  <function_decl 0x7b9e26510900 printk>) [0 printk S1 A8])
             (const_int 16 [0x10]))) "fs/bitmap.c":89:13 823 {*call_value}
      (nil)
     (expr_list (use (reg:SI 3 bx))
@@ -2344,7 +2344,7 @@ try_optimize_cfg iteration 1
 (insn 81 80 82 10 (set (reg:SI 3 bx)
         (reg:SI 82)) "fs/bitmap.c":95:9 75 {*movsi_internal}
      (nil))
-(call_insn 82 81 83 10 (call (mem:QI (symbol_ref:SI ("brelse") [flags 0x41]  <function_decl 0x7a4f6d70e200 brelse>) [0 brelse S1 A8])
+(call_insn 82 81 83 10 (call (mem:QI (symbol_ref:SI ("brelse") [flags 0x41]  <function_decl 0x7b9e2650e200 brelse>) [0 brelse S1 A8])
         (const_int 16 [0x10])) "fs/bitmap.c":95:9 812 {*call}
      (nil)
     (expr_list (use (reg:SI 3 bx))
@@ -2545,9 +2545,9 @@ try_optimize_cfg iteration 1
 (insn 122 121 123 12 (set (reg/f:SI 128)
         (plus:SI (reg:SI 82)
             (const:SI (unspec:SI [
-                        (symbol_ref/f:SI ("*.LC10") [flags 0x2]  <var_decl 0x7a4f6d75de10 *.LC10>)
+                        (symbol_ref/f:SI ("*.LC10") [flags 0x2]  <var_decl 0x7b9e2655de10 *.LC10>)
                     ] UNSPEC_GOTOFF)))) "fs/bitmap.c":99:9 205 {*leasi}
-     (expr_list:REG_EQUAL (symbol_ref/f:SI ("*.LC10") [flags 0x2]  <var_decl 0x7a4f6d75de10 *.LC10>)
+     (expr_list:REG_EQUAL (symbol_ref/f:SI ("*.LC10") [flags 0x2]  <var_decl 0x7b9e2655de10 *.LC10>)
         (nil)))
 (insn 123 122 124 12 (set (mem/f:SI (pre_dec:SI (reg/f:SI 7 sp)) [2  S4 A32])
         (reg/f:SI 128)) "fs/bitmap.c":99:9 54 {*pushsi2}
@@ -2557,7 +2557,7 @@ try_optimize_cfg iteration 1
         (reg:SI 82)) "fs/bitmap.c":99:9 75 {*movsi_internal}
      (nil))
 (call_insn 125 124 126 12 (set (reg:SI 0 ax)
-        (call (mem:QI (symbol_ref:SI ("printk") [flags 0x41]  <function_decl 0x7a4f6d710900 printk>) [0 printk S1 A8])
+        (call (mem:QI (symbol_ref:SI ("printk") [flags 0x41]  <function_decl 0x7b9e26510900 printk>) [0 printk S1 A8])
             (const_int 16 [0x10]))) "fs/bitmap.c":99:9 823 {*call_value}
      (nil)
     (expr_list (use (reg:SI 3 bx))
@@ -2581,9 +2581,9 @@ try_optimize_cfg iteration 1
 (insn 128 127 129 12 (set (reg/f:SI 129)
         (plus:SI (reg:SI 82)
             (const:SI (unspec:SI [
-                        (symbol_ref/f:SI ("*.LC11") [flags 0x2]  <var_decl 0x7a4f6d75dea0 *.LC11>)
+                        (symbol_ref/f:SI ("*.LC11") [flags 0x2]  <var_decl 0x7b9e2655dea0 *.LC11>)
                     ] UNSPEC_GOTOFF)))) "fs/bitmap.c":100:9 205 {*leasi}
-     (expr_list:REG_EQUAL (symbol_ref/f:SI ("*.LC11") [flags 0x2]  <var_decl 0x7a4f6d75dea0 *.LC11>)
+     (expr_list:REG_EQUAL (symbol_ref/f:SI ("*.LC11") [flags 0x2]  <var_decl 0x7b9e2655dea0 *.LC11>)
         (nil)))
 (insn 129 128 130 12 (set (mem/f:SI (pre_dec:SI (reg/f:SI 7 sp)) [2  S4 A32])
         (reg/f:SI 129)) "fs/bitmap.c":100:9 54 {*pushsi2}
@@ -2592,7 +2592,7 @@ try_optimize_cfg iteration 1
 (insn 130 129 131 12 (set (reg:SI 3 bx)
         (reg:SI 82)) "fs/bitmap.c":100:9 75 {*movsi_internal}
      (nil))
-(call_insn 131 130 132 12 (call (mem:QI (symbol_ref:SI ("panic") [flags 0x41]  <function_decl 0x7a4f6d710b00 panic>) [0 panic S1 A8])
+(call_insn 131 130 132 12 (call (mem:QI (symbol_ref:SI ("panic") [flags 0x41]  <function_decl 0x7b9e26510b00 panic>) [0 panic S1 A8])
         (const_int 16 [0x10])) "fs/bitmap.c":100:9 812 {*call}
      (nil)
     (expr_list (use (reg:SI 3 bx))
@@ -2690,7 +2690,7 @@ try_optimize_cfg iteration 1
         (reg:SI 82)) "fs/bitmap.c":111:16 75 {*movsi_internal}
      (nil))
 (call_insn 8 7 9 2 (set (reg:SI 0 ax)
-        (call (mem:QI (symbol_ref:SI ("get_super") [flags 0x41]  <function_decl 0x7a4f6d70e000 get_super>) [0 get_super S1 A8])
+        (call (mem:QI (symbol_ref:SI ("get_super") [flags 0x41]  <function_decl 0x7b9e2650e000 get_super>) [0 get_super S1 A8])
             (const_int 16 [0x10]))) "fs/bitmap.c":111:16 823 {*call_value}
      (nil)
     (expr_list (use (reg:SI 3 bx))
@@ -2735,9 +2735,9 @@ try_optimize_cfg iteration 1
 (insn 16 15 17 3 (set (reg/f:SI 101)
         (plus:SI (reg:SI 82)
             (const:SI (unspec:SI [
-                        (symbol_ref/f:SI ("*.LC12") [flags 0x2]  <var_decl 0x7a4f6d75d510 *.LC12>)
+                        (symbol_ref/f:SI ("*.LC12") [flags 0x2]  <var_decl 0x7b9e2655d510 *.LC12>)
                     ] UNSPEC_GOTOFF)))) "fs/bitmap.c":112:9 205 {*leasi}
-     (expr_list:REG_EQUAL (symbol_ref/f:SI ("*.LC12") [flags 0x2]  <var_decl 0x7a4f6d75d510 *.LC12>)
+     (expr_list:REG_EQUAL (symbol_ref/f:SI ("*.LC12") [flags 0x2]  <var_decl 0x7b9e2655d510 *.LC12>)
         (nil)))
 (insn 17 16 18 3 (set (mem/f:SI (pre_dec:SI (reg/f:SI 7 sp)) [2  S4 A32])
         (reg/f:SI 101)) "fs/bitmap.c":112:9 54 {*pushsi2}
@@ -2746,7 +2746,7 @@ try_optimize_cfg iteration 1
 (insn 18 17 19 3 (set (reg:SI 3 bx)
         (reg:SI 82)) "fs/bitmap.c":112:9 75 {*movsi_internal}
      (nil))
-(call_insn 19 18 20 3 (call (mem:QI (symbol_ref:SI ("panic") [flags 0x41]  <function_decl 0x7a4f6d710b00 panic>) [0 panic S1 A8])
+(call_insn 19 18 20 3 (call (mem:QI (symbol_ref:SI ("panic") [flags 0x41]  <function_decl 0x7b9e26510b00 panic>) [0 panic S1 A8])
         (const_int 16 [0x10])) "fs/bitmap.c":112:9 812 {*call}
      (nil)
     (expr_list (use (reg:SI 3 bx))
@@ -3013,9 +3013,9 @@ try_optimize_cfg iteration 1
 (insn 92 91 93 15 (set (reg/f:SI 113)
         (plus:SI (reg:SI 82)
             (const:SI (unspec:SI [
-                        (symbol_ref/f:SI ("*.LC13") [flags 0x2]  <var_decl 0x7a4f6d797000 *.LC13>)
+                        (symbol_ref/f:SI ("*.LC13") [flags 0x2]  <var_decl 0x7b9e26597000 *.LC13>)
                     ] UNSPEC_GOTOFF)))) "fs/bitmap.c":121:9 205 {*leasi}
-     (expr_list:REG_EQUAL (symbol_ref/f:SI ("*.LC13") [flags 0x2]  <var_decl 0x7a4f6d797000 *.LC13>)
+     (expr_list:REG_EQUAL (symbol_ref/f:SI ("*.LC13") [flags 0x2]  <var_decl 0x7b9e26597000 *.LC13>)
         (nil)))
 (insn 93 92 94 15 (set (mem/f:SI (pre_dec:SI (reg/f:SI 7 sp)) [2  S4 A32])
         (reg/f:SI 113)) "fs/bitmap.c":121:9 54 {*pushsi2}
@@ -3024,7 +3024,7 @@ try_optimize_cfg iteration 1
 (insn 94 93 95 15 (set (reg:SI 3 bx)
         (reg:SI 82)) "fs/bitmap.c":121:9 75 {*movsi_internal}
      (nil))
-(call_insn 95 94 96 15 (call (mem:QI (symbol_ref:SI ("panic") [flags 0x41]  <function_decl 0x7a4f6d710b00 panic>) [0 panic S1 A8])
+(call_insn 95 94 96 15 (call (mem:QI (symbol_ref:SI ("panic") [flags 0x41]  <function_decl 0x7b9e26510b00 panic>) [0 panic S1 A8])
         (const_int 16 [0x10])) "fs/bitmap.c":121:9 812 {*call}
      (nil)
     (expr_list (use (reg:SI 3 bx))
@@ -3148,7 +3148,7 @@ try_optimize_cfg iteration 1
         (reg:SI 82)) "fs/bitmap.c":126:16 75 {*movsi_internal}
      (nil))
 (call_insn 124 123 125 18 (set (reg:SI 0 ax)
-        (call (mem:QI (symbol_ref:SI ("getblk") [flags 0x41]  <function_decl 0x7a4f6d70e500 getblk>) [0 getblk S1 A8])
+        (call (mem:QI (symbol_ref:SI ("getblk") [flags 0x41]  <function_decl 0x7b9e2650e500 getblk>) [0 getblk S1 A8])
             (const_int 16 [0x10]))) "fs/bitmap.c":126:16 823 {*call_value}
      (nil)
     (expr_list (use (reg:SI 3 bx))
@@ -3193,9 +3193,9 @@ try_optimize_cfg iteration 1
 (insn 132 131 133 19 (set (reg/f:SI 119)
         (plus:SI (reg:SI 82)
             (const:SI (unspec:SI [
-                        (symbol_ref/f:SI ("*.LC14") [flags 0x2]  <var_decl 0x7a4f6d797090 *.LC14>)
+                        (symbol_ref/f:SI ("*.LC14") [flags 0x2]  <var_decl 0x7b9e26597090 *.LC14>)
                     ] UNSPEC_GOTOFF)))) "fs/bitmap.c":127:9 205 {*leasi}
-     (expr_list:REG_EQUAL (symbol_ref/f:SI ("*.LC14") [flags 0x2]  <var_decl 0x7a4f6d797090 *.LC14>)
+     (expr_list:REG_EQUAL (symbol_ref/f:SI ("*.LC14") [flags 0x2]  <var_decl 0x7b9e26597090 *.LC14>)
         (nil)))
 (insn 133 132 134 19 (set (mem/f:SI (pre_dec:SI (reg/f:SI 7 sp)) [2  S4 A32])
         (reg/f:SI 119)) "fs/bitmap.c":127:9 54 {*pushsi2}
@@ -3204,7 +3204,7 @@ try_optimize_cfg iteration 1
 (insn 134 133 135 19 (set (reg:SI 3 bx)
         (reg:SI 82)) "fs/bitmap.c":127:9 75 {*movsi_internal}
      (nil))
-(call_insn 135 134 136 19 (call (mem:QI (symbol_ref:SI ("panic") [flags 0x41]  <function_decl 0x7a4f6d710b00 panic>) [0 panic S1 A8])
+(call_insn 135 134 136 19 (call (mem:QI (symbol_ref:SI ("panic") [flags 0x41]  <function_decl 0x7b9e26510b00 panic>) [0 panic S1 A8])
         (const_int 16 [0x10])) "fs/bitmap.c":127:9 812 {*call}
      (nil)
     (expr_list (use (reg:SI 3 bx))
@@ -3252,9 +3252,9 @@ try_optimize_cfg iteration 1
 (insn 145 144 146 21 (set (reg/f:SI 121)
         (plus:SI (reg:SI 82)
             (const:SI (unspec:SI [
-                        (symbol_ref/f:SI ("*.LC15") [flags 0x2]  <var_decl 0x7a4f6d797120 *.LC15>)
+                        (symbol_ref/f:SI ("*.LC15") [flags 0x2]  <var_decl 0x7b9e26597120 *.LC15>)
                     ] UNSPEC_GOTOFF)))) "fs/bitmap.c":129:9 205 {*leasi}
-     (expr_list:REG_EQUAL (symbol_ref/f:SI ("*.LC15") [flags 0x2]  <var_decl 0x7a4f6d797120 *.LC15>)
+     (expr_list:REG_EQUAL (symbol_ref/f:SI ("*.LC15") [flags 0x2]  <var_decl 0x7b9e26597120 *.LC15>)
         (nil)))
 (insn 146 145 147 21 (set (mem/f:SI (pre_dec:SI (reg/f:SI 7 sp)) [2  S4 A32])
         (reg/f:SI 121)) "fs/bitmap.c":129:9 54 {*pushsi2}
@@ -3263,7 +3263,7 @@ try_optimize_cfg iteration 1
 (insn 147 146 148 21 (set (reg:SI 3 bx)
         (reg:SI 82)) "fs/bitmap.c":129:9 75 {*movsi_internal}
      (nil))
-(call_insn 148 147 149 21 (call (mem:QI (symbol_ref:SI ("panic") [flags 0x41]  <function_decl 0x7a4f6d710b00 panic>) [0 panic S1 A8])
+(call_insn 148 147 149 21 (call (mem:QI (symbol_ref:SI ("panic") [flags 0x41]  <function_decl 0x7b9e26510b00 panic>) [0 panic S1 A8])
         (const_int 16 [0x10])) "fs/bitmap.c":129:9 812 {*call}
      (nil)
     (expr_list (use (reg:SI 3 bx))
@@ -3344,7 +3344,7 @@ try_optimize_cfg iteration 1
 (insn 164 163 165 22 (set (reg:SI 3 bx)
         (reg:SI 82)) "fs/bitmap.c":133:5 75 {*movsi_internal}
      (nil))
-(call_insn 165 164 166 22 (call (mem:QI (symbol_ref:SI ("brelse") [flags 0x41]  <function_decl 0x7a4f6d70e200 brelse>) [0 brelse S1 A8])
+(call_insn 165 164 166 22 (call (mem:QI (symbol_ref:SI ("brelse") [flags 0x41]  <function_decl 0x7b9e2650e200 brelse>) [0 brelse S1 A8])
         (const_int 16 [0x10])) "fs/bitmap.c":133:5 812 {*call}
      (nil)
     (expr_list (use (reg:SI 3 bx))
@@ -3397,7 +3397,7 @@ try_optimize_cfg iteration 1
         (reg:SI 82)) "fs/bitmap.c":111:16 75 {*movsi_internal}
      (nil))
 (call_insn 8 7 9 2 (set (reg:SI 0 ax)
-        (call (mem:QI (symbol_ref:SI ("get_super") [flags 0x41]  <function_decl 0x7a4f6d70e000 get_super>) [0 get_super S1 A8])
+        (call (mem:QI (symbol_ref:SI ("get_super") [flags 0x41]  <function_decl 0x7b9e2650e000 get_super>) [0 get_super S1 A8])
             (const_int 16 [0x10]))) "fs/bitmap.c":111:16 823 {*call_value}
      (nil)
     (expr_list (use (reg:SI 3 bx))
@@ -3441,9 +3441,9 @@ try_optimize_cfg iteration 1
 (insn 16 15 17 3 (set (reg/f:SI 101)
         (plus:SI (reg:SI 82)
             (const:SI (unspec:SI [
-                        (symbol_ref/f:SI ("*.LC12") [flags 0x2]  <var_decl 0x7a4f6d75d510 *.LC12>)
+                        (symbol_ref/f:SI ("*.LC12") [flags 0x2]  <var_decl 0x7b9e2655d510 *.LC12>)
                     ] UNSPEC_GOTOFF)))) "fs/bitmap.c":112:9 205 {*leasi}
-     (expr_list:REG_EQUAL (symbol_ref/f:SI ("*.LC12") [flags 0x2]  <var_decl 0x7a4f6d75d510 *.LC12>)
+     (expr_list:REG_EQUAL (symbol_ref/f:SI ("*.LC12") [flags 0x2]  <var_decl 0x7b9e2655d510 *.LC12>)
         (nil)))
 (insn 17 16 18 3 (set (mem/f:SI (pre_dec:SI (reg/f:SI 7 sp)) [2  S4 A32])
         (reg/f:SI 101)) "fs/bitmap.c":112:9 54 {*pushsi2}
@@ -3452,7 +3452,7 @@ try_optimize_cfg iteration 1
 (insn 18 17 19 3 (set (reg:SI 3 bx)
         (reg:SI 82)) "fs/bitmap.c":112:9 75 {*movsi_internal}
      (nil))
-(call_insn 19 18 20 3 (call (mem:QI (symbol_ref:SI ("panic") [flags 0x41]  <function_decl 0x7a4f6d710b00 panic>) [0 panic S1 A8])
+(call_insn 19 18 20 3 (call (mem:QI (symbol_ref:SI ("panic") [flags 0x41]  <function_decl 0x7b9e26510b00 panic>) [0 panic S1 A8])
         (const_int 16 [0x10])) "fs/bitmap.c":112:9 812 {*call}
      (nil)
     (expr_list (use (reg:SI 3 bx))
@@ -3711,9 +3711,9 @@ try_optimize_cfg iteration 1
 (insn 92 91 93 14 (set (reg/f:SI 113)
         (plus:SI (reg:SI 82)
             (const:SI (unspec:SI [
-                        (symbol_ref/f:SI ("*.LC13") [flags 0x2]  <var_decl 0x7a4f6d797000 *.LC13>)
+                        (symbol_ref/f:SI ("*.LC13") [flags 0x2]  <var_decl 0x7b9e26597000 *.LC13>)
                     ] UNSPEC_GOTOFF)))) "fs/bitmap.c":121:9 205 {*leasi}
-     (expr_list:REG_EQUAL (symbol_ref/f:SI ("*.LC13") [flags 0x2]  <var_decl 0x7a4f6d797000 *.LC13>)
+     (expr_list:REG_EQUAL (symbol_ref/f:SI ("*.LC13") [flags 0x2]  <var_decl 0x7b9e26597000 *.LC13>)
         (nil)))
 (insn 93 92 94 14 (set (mem/f:SI (pre_dec:SI (reg/f:SI 7 sp)) [2  S4 A32])
         (reg/f:SI 113)) "fs/bitmap.c":121:9 54 {*pushsi2}
@@ -3722,7 +3722,7 @@ try_optimize_cfg iteration 1
 (insn 94 93 95 14 (set (reg:SI 3 bx)
         (reg:SI 82)) "fs/bitmap.c":121:9 75 {*movsi_internal}
      (nil))
-(call_insn 95 94 96 14 (call (mem:QI (symbol_ref:SI ("panic") [flags 0x41]  <function_decl 0x7a4f6d710b00 panic>) [0 panic S1 A8])
+(call_insn 95 94 96 14 (call (mem:QI (symbol_ref:SI ("panic") [flags 0x41]  <function_decl 0x7b9e26510b00 panic>) [0 panic S1 A8])
         (const_int 16 [0x10])) "fs/bitmap.c":121:9 812 {*call}
      (nil)
     (expr_list (use (reg:SI 3 bx))
@@ -3844,7 +3844,7 @@ try_optimize_cfg iteration 1
         (reg:SI 82)) "fs/bitmap.c":126:16 75 {*movsi_internal}
      (nil))
 (call_insn 124 123 125 17 (set (reg:SI 0 ax)
-        (call (mem:QI (symbol_ref:SI ("getblk") [flags 0x41]  <function_decl 0x7a4f6d70e500 getblk>) [0 getblk S1 A8])
+        (call (mem:QI (symbol_ref:SI ("getblk") [flags 0x41]  <function_decl 0x7b9e2650e500 getblk>) [0 getblk S1 A8])
             (const_int 16 [0x10]))) "fs/bitmap.c":126:16 823 {*call_value}
      (nil)
     (expr_list (use (reg:SI 3 bx))
@@ -3888,9 +3888,9 @@ try_optimize_cfg iteration 1
 (insn 132 131 133 18 (set (reg/f:SI 119)
         (plus:SI (reg:SI 82)
             (const:SI (unspec:SI [
-                        (symbol_ref/f:SI ("*.LC14") [flags 0x2]  <var_decl 0x7a4f6d797090 *.LC14>)
+                        (symbol_ref/f:SI ("*.LC14") [flags 0x2]  <var_decl 0x7b9e26597090 *.LC14>)
                     ] UNSPEC_GOTOFF)))) "fs/bitmap.c":127:9 205 {*leasi}
-     (expr_list:REG_EQUAL (symbol_ref/f:SI ("*.LC14") [flags 0x2]  <var_decl 0x7a4f6d797090 *.LC14>)
+     (expr_list:REG_EQUAL (symbol_ref/f:SI ("*.LC14") [flags 0x2]  <var_decl 0x7b9e26597090 *.LC14>)
         (nil)))
 (insn 133 132 134 18 (set (mem/f:SI (pre_dec:SI (reg/f:SI 7 sp)) [2  S4 A32])
         (reg/f:SI 119)) "fs/bitmap.c":127:9 54 {*pushsi2}
@@ -3899,7 +3899,7 @@ try_optimize_cfg iteration 1
 (insn 134 133 135 18 (set (reg:SI 3 bx)
         (reg:SI 82)) "fs/bitmap.c":127:9 75 {*movsi_internal}
      (nil))
-(call_insn 135 134 136 18 (call (mem:QI (symbol_ref:SI ("panic") [flags 0x41]  <function_decl 0x7a4f6d710b00 panic>) [0 panic S1 A8])
+(call_insn 135 134 136 18 (call (mem:QI (symbol_ref:SI ("panic") [flags 0x41]  <function_decl 0x7b9e26510b00 panic>) [0 panic S1 A8])
         (const_int 16 [0x10])) "fs/bitmap.c":127:9 812 {*call}
      (nil)
     (expr_list (use (reg:SI 3 bx))
@@ -3945,9 +3945,9 @@ try_optimize_cfg iteration 1
 (insn 145 144 146 20 (set (reg/f:SI 121)
         (plus:SI (reg:SI 82)
             (const:SI (unspec:SI [
-                        (symbol_ref/f:SI ("*.LC15") [flags 0x2]  <var_decl 0x7a4f6d797120 *.LC15>)
+                        (symbol_ref/f:SI ("*.LC15") [flags 0x2]  <var_decl 0x7b9e26597120 *.LC15>)
                     ] UNSPEC_GOTOFF)))) "fs/bitmap.c":129:9 205 {*leasi}
-     (expr_list:REG_EQUAL (symbol_ref/f:SI ("*.LC15") [flags 0x2]  <var_decl 0x7a4f6d797120 *.LC15>)
+     (expr_list:REG_EQUAL (symbol_ref/f:SI ("*.LC15") [flags 0x2]  <var_decl 0x7b9e26597120 *.LC15>)
         (nil)))
 (insn 146 145 147 20 (set (mem/f:SI (pre_dec:SI (reg/f:SI 7 sp)) [2  S4 A32])
         (reg/f:SI 121)) "fs/bitmap.c":129:9 54 {*pushsi2}
@@ -3956,7 +3956,7 @@ try_optimize_cfg iteration 1
 (insn 147 146 148 20 (set (reg:SI 3 bx)
         (reg:SI 82)) "fs/bitmap.c":129:9 75 {*movsi_internal}
      (nil))
-(call_insn 148 147 149 20 (call (mem:QI (symbol_ref:SI ("panic") [flags 0x41]  <function_decl 0x7a4f6d710b00 panic>) [0 panic S1 A8])
+(call_insn 148 147 149 20 (call (mem:QI (symbol_ref:SI ("panic") [flags 0x41]  <function_decl 0x7b9e26510b00 panic>) [0 panic S1 A8])
         (const_int 16 [0x10])) "fs/bitmap.c":129:9 812 {*call}
      (nil)
     (expr_list (use (reg:SI 3 bx))
@@ -4036,7 +4036,7 @@ try_optimize_cfg iteration 1
 (insn 164 163 165 21 (set (reg:SI 3 bx)
         (reg:SI 82)) "fs/bitmap.c":133:5 75 {*movsi_internal}
      (nil))
-(call_insn 165 164 166 21 (call (mem:QI (symbol_ref:SI ("brelse") [flags 0x41]  <function_decl 0x7a4f6d70e200 brelse>) [0 brelse S1 A8])
+(call_insn 165 164 166 21 (call (mem:QI (symbol_ref:SI ("brelse") [flags 0x41]  <function_decl 0x7b9e2650e200 brelse>) [0 brelse S1 A8])
         (const_int 16 [0x10])) "fs/bitmap.c":133:5 812 {*call}
      (nil)
     (expr_list (use (reg:SI 3 bx))
@@ -4075,7 +4075,7 @@ try_optimize_cfg iteration 1
         (reg:SI 82)) "fs/bitmap.c":144:19 75 {*movsi_internal}
      (nil))
 (call_insn 6 5 7 2 (set (reg:SI 0 ax)
-        (call (mem:QI (symbol_ref:SI ("get_empty_inode") [flags 0x41]  <function_decl 0x7a4f6d710300 get_empty_inode>) [0 get_empty_inode S1 A8])
+        (call (mem:QI (symbol_ref:SI ("get_empty_inode") [flags 0x41]  <function_decl 0x7b9e26510300 get_empty_inode>) [0 get_empty_inode S1 A8])
             (const_int 0 [0]))) "fs/bitmap.c":144:19 823 {*call_value}
      (nil)
     (expr_list (use (reg:SI 3 bx))
@@ -4123,7 +4123,7 @@ try_optimize_cfg iteration 1
         (reg:SI 82)) "fs/bitmap.c":146:16 75 {*movsi_internal}
      (nil))
 (call_insn 20 19 21 4 (set (reg:SI 0 ax)
-        (call (mem:QI (symbol_ref:SI ("get_super") [flags 0x41]  <function_decl 0x7a4f6d70e000 get_super>) [0 get_super S1 A8])
+        (call (mem:QI (symbol_ref:SI ("get_super") [flags 0x41]  <function_decl 0x7b9e2650e000 get_super>) [0 get_super S1 A8])
             (const_int 16 [0x10]))) "fs/bitmap.c":146:16 823 {*call_value}
      (nil)
     (expr_list (use (reg:SI 3 bx))
@@ -4168,9 +4168,9 @@ try_optimize_cfg iteration 1
 (insn 28 27 29 5 (set (reg/f:SI 113)
         (plus:SI (reg:SI 82)
             (const:SI (unspec:SI [
-                        (symbol_ref/f:SI ("*.LC16") [flags 0x2]  <var_decl 0x7a4f6d747f30 *.LC16>)
+                        (symbol_ref/f:SI ("*.LC16") [flags 0x2]  <var_decl 0x7b9e26547f30 *.LC16>)
                     ] UNSPEC_GOTOFF)))) "fs/bitmap.c":147:9 205 {*leasi}
-     (expr_list:REG_EQUAL (symbol_ref/f:SI ("*.LC16") [flags 0x2]  <var_decl 0x7a4f6d747f30 *.LC16>)
+     (expr_list:REG_EQUAL (symbol_ref/f:SI ("*.LC16") [flags 0x2]  <var_decl 0x7b9e26547f30 *.LC16>)
         (nil)))
 (insn 29 28 30 5 (set (mem/f:SI (pre_dec:SI (reg/f:SI 7 sp)) [2  S4 A32])
         (reg/f:SI 113)) "fs/bitmap.c":147:9 54 {*pushsi2}
@@ -4179,7 +4179,7 @@ try_optimize_cfg iteration 1
 (insn 30 29 31 5 (set (reg:SI 3 bx)
         (reg:SI 82)) "fs/bitmap.c":147:9 75 {*movsi_internal}
      (nil))
-(call_insn 31 30 32 5 (call (mem:QI (symbol_ref:SI ("panic") [flags 0x41]  <function_decl 0x7a4f6d710b00 panic>) [0 panic S1 A8])
+(call_insn 31 30 32 5 (call (mem:QI (symbol_ref:SI ("panic") [flags 0x41]  <function_decl 0x7b9e26510b00 panic>) [0 panic S1 A8])
         (const_int 16 [0x10])) "fs/bitmap.c":147:9 812 {*call}
      (nil)
     (expr_list (use (reg:SI 3 bx))
@@ -4432,7 +4432,7 @@ try_optimize_cfg iteration 1
 (insn 95 94 96 15 (set (reg:SI 3 bx)
         (reg:SI 82)) "fs/bitmap.c":154:9 75 {*movsi_internal}
      (nil))
-(call_insn 96 95 97 15 (call (mem:QI (symbol_ref:SI ("iput") [flags 0x41]  <function_decl 0x7a4f6d6d2d00 iput>) [0 iput S1 A8])
+(call_insn 96 95 97 15 (call (mem:QI (symbol_ref:SI ("iput") [flags 0x41]  <function_decl 0x7b9e264d2d00 iput>) [0 iput S1 A8])
         (const_int 16 [0x10])) "fs/bitmap.c":154:9 812 {*call}
      (nil)
     (expr_list (use (reg:SI 3 bx))
@@ -4512,9 +4512,9 @@ try_optimize_cfg iteration 1
 (insn 114 113 115 17 (set (reg/f:SI 128)
         (plus:SI (reg:SI 82)
             (const:SI (unspec:SI [
-                        (symbol_ref/f:SI ("*.LC17") [flags 0x2]  <var_decl 0x7a4f6d7972d0 *.LC17>)
+                        (symbol_ref/f:SI ("*.LC17") [flags 0x2]  <var_decl 0x7b9e265972d0 *.LC17>)
                     ] UNSPEC_GOTOFF)))) "fs/bitmap.c":158:9 205 {*leasi}
-     (expr_list:REG_EQUAL (symbol_ref/f:SI ("*.LC17") [flags 0x2]  <var_decl 0x7a4f6d7972d0 *.LC17>)
+     (expr_list:REG_EQUAL (symbol_ref/f:SI ("*.LC17") [flags 0x2]  <var_decl 0x7b9e265972d0 *.LC17>)
         (nil)))
 (insn 115 114 116 17 (set (mem/f:SI (pre_dec:SI (reg/f:SI 7 sp)) [2  S4 A32])
         (reg/f:SI 128)) "fs/bitmap.c":158:9 54 {*pushsi2}
@@ -4523,7 +4523,7 @@ try_optimize_cfg iteration 1
 (insn 116 115 117 17 (set (reg:SI 3 bx)
         (reg:SI 82)) "fs/bitmap.c":158:9 75 {*movsi_internal}
      (nil))
-(call_insn 117 116 118 17 (call (mem:QI (symbol_ref:SI ("panic") [flags 0x41]  <function_decl 0x7a4f6d710b00 panic>) [0 panic S1 A8])
+(call_insn 117 116 118 17 (call (mem:QI (symbol_ref:SI ("panic") [flags 0x41]  <function_decl 0x7b9e26510b00 panic>) [0 panic S1 A8])
         (const_int 16 [0x10])) "fs/bitmap.c":158:9 812 {*call}
      (nil)
     (expr_list (use (reg:SI 3 bx))
@@ -4580,7 +4580,7 @@ try_optimize_cfg iteration 1
 (insn 131 130 132 18 (set (reg/f:SI 134)
         (mem/u/c:SI (plus:SI (reg:SI 82)
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("current") [flags 0x40]  <var_decl 0x7a4f6d72f120 current>)
+                            (symbol_ref:SI ("current") [flags 0x40]  <var_decl 0x7b9e2652f120 current>)
                         ] UNSPEC_GOT))) [20  S4 A8])) "fs/bitmap.c":163:27 75 {*movsi_internal}
      (nil))
 (insn 132 131 133 18 (set (reg/f:SI 90 [ current.0_8 ])
@@ -4601,7 +4601,7 @@ try_optimize_cfg iteration 1
 (insn 136 135 137 18 (set (reg/f:SI 136)
         (mem/u/c:SI (plus:SI (reg:SI 82)
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("current") [flags 0x40]  <var_decl 0x7a4f6d72f120 current>)
+                            (symbol_ref:SI ("current") [flags 0x40]  <var_decl 0x7b9e2652f120 current>)
                         ] UNSPEC_GOT))) [20  S4 A8])) "fs/bitmap.c":164:27 75 {*movsi_internal}
      (nil))
 (insn 137 136 138 18 (set (reg/f:SI 92 [ current.1_10 ])
@@ -4669,7 +4669,7 @@ try_optimize_cfg iteration 1
 (insn 152 151 153 18 (set (reg/f:SI 142)
         (mem/u/c:SI (plus:SI (reg:SI 82)
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("jiffies") [flags 0x40]  <var_decl 0x7a4f6d72f360 jiffies>)
+                            (symbol_ref:SI ("jiffies") [flags 0x40]  <var_decl 0x7b9e2652f360 jiffies>)
                         ] UNSPEC_GOT))) [20  S4 A8])) "fs/bitmap.c":167:56 75 {*movsi_internal}
      (nil))
 (insn 153 152 154 18 (set (reg:SI 99 [ jiffies.2_17 ])
@@ -4713,7 +4713,7 @@ try_optimize_cfg iteration 1
 (insn 159 158 160 18 (set (reg/f:SI 147)
         (mem/u/c:SI (plus:SI (reg:SI 82)
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("startup_time") [flags 0x40]  <var_decl 0x7a4f6d72f3f0 startup_time>)
+                            (symbol_ref:SI ("startup_time") [flags 0x40]  <var_decl 0x7b9e2652f3f0 startup_time>)
                         ] UNSPEC_GOT))) [20  S4 A8])) "fs/bitmap.c":167:56 75 {*movsi_internal}
      (nil))
 (insn 160 159 161 18 (set (reg:SI 101 [ startup_time.3_19 ])
@@ -4797,7 +4797,7 @@ try_optimize_cfg iteration 1
         (reg:SI 82)) "fs/bitmap.c":144:19 75 {*movsi_internal}
      (nil))
 (call_insn 6 5 7 2 (set (reg:SI 0 ax)
-        (call (mem:QI (symbol_ref:SI ("get_empty_inode") [flags 0x41]  <function_decl 0x7a4f6d710300 get_empty_inode>) [0 get_empty_inode S1 A8])
+        (call (mem:QI (symbol_ref:SI ("get_empty_inode") [flags 0x41]  <function_decl 0x7b9e26510300 get_empty_inode>) [0 get_empty_inode S1 A8])
             (const_int 0 [0]))) "fs/bitmap.c":144:19 823 {*call_value}
      (nil)
     (expr_list (use (reg:SI 3 bx))
@@ -4844,7 +4844,7 @@ try_optimize_cfg iteration 1
         (reg:SI 82)) "fs/bitmap.c":146:16 75 {*movsi_internal}
      (nil))
 (call_insn 20 19 21 4 (set (reg:SI 0 ax)
-        (call (mem:QI (symbol_ref:SI ("get_super") [flags 0x41]  <function_decl 0x7a4f6d70e000 get_super>) [0 get_super S1 A8])
+        (call (mem:QI (symbol_ref:SI ("get_super") [flags 0x41]  <function_decl 0x7b9e2650e000 get_super>) [0 get_super S1 A8])
             (const_int 16 [0x10]))) "fs/bitmap.c":146:16 823 {*call_value}
      (nil)
     (expr_list (use (reg:SI 3 bx))
@@ -4888,9 +4888,9 @@ try_optimize_cfg iteration 1
 (insn 28 27 29 5 (set (reg/f:SI 113)
         (plus:SI (reg:SI 82)
             (const:SI (unspec:SI [
-                        (symbol_ref/f:SI ("*.LC16") [flags 0x2]  <var_decl 0x7a4f6d747f30 *.LC16>)
+                        (symbol_ref/f:SI ("*.LC16") [flags 0x2]  <var_decl 0x7b9e26547f30 *.LC16>)
                     ] UNSPEC_GOTOFF)))) "fs/bitmap.c":147:9 205 {*leasi}
-     (expr_list:REG_EQUAL (symbol_ref/f:SI ("*.LC16") [flags 0x2]  <var_decl 0x7a4f6d747f30 *.LC16>)
+     (expr_list:REG_EQUAL (symbol_ref/f:SI ("*.LC16") [flags 0x2]  <var_decl 0x7b9e26547f30 *.LC16>)
         (nil)))
 (insn 29 28 30 5 (set (mem/f:SI (pre_dec:SI (reg/f:SI 7 sp)) [2  S4 A32])
         (reg/f:SI 113)) "fs/bitmap.c":147:9 54 {*pushsi2}
@@ -4899,7 +4899,7 @@ try_optimize_cfg iteration 1
 (insn 30 29 31 5 (set (reg:SI 3 bx)
         (reg:SI 82)) "fs/bitmap.c":147:9 75 {*movsi_internal}
      (nil))
-(call_insn 31 30 32 5 (call (mem:QI (symbol_ref:SI ("panic") [flags 0x41]  <function_decl 0x7a4f6d710b00 panic>) [0 panic S1 A8])
+(call_insn 31 30 32 5 (call (mem:QI (symbol_ref:SI ("panic") [flags 0x41]  <function_decl 0x7b9e26510b00 panic>) [0 panic S1 A8])
         (const_int 16 [0x10])) "fs/bitmap.c":147:9 812 {*call}
      (nil)
     (expr_list (use (reg:SI 3 bx))
@@ -5145,7 +5145,7 @@ try_optimize_cfg iteration 1
 (insn 95 94 96 14 (set (reg:SI 3 bx)
         (reg:SI 82)) "fs/bitmap.c":154:9 75 {*movsi_internal}
      (nil))
-(call_insn 96 95 97 14 (call (mem:QI (symbol_ref:SI ("iput") [flags 0x41]  <function_decl 0x7a4f6d6d2d00 iput>) [0 iput S1 A8])
+(call_insn 96 95 97 14 (call (mem:QI (symbol_ref:SI ("iput") [flags 0x41]  <function_decl 0x7b9e264d2d00 iput>) [0 iput S1 A8])
         (const_int 16 [0x10])) "fs/bitmap.c":154:9 812 {*call}
      (nil)
     (expr_list (use (reg:SI 3 bx))
@@ -5224,9 +5224,9 @@ try_optimize_cfg iteration 1
 (insn 114 113 115 16 (set (reg/f:SI 128)
         (plus:SI (reg:SI 82)
             (const:SI (unspec:SI [
-                        (symbol_ref/f:SI ("*.LC17") [flags 0x2]  <var_decl 0x7a4f6d7972d0 *.LC17>)
+                        (symbol_ref/f:SI ("*.LC17") [flags 0x2]  <var_decl 0x7b9e265972d0 *.LC17>)
                     ] UNSPEC_GOTOFF)))) "fs/bitmap.c":158:9 205 {*leasi}
-     (expr_list:REG_EQUAL (symbol_ref/f:SI ("*.LC17") [flags 0x2]  <var_decl 0x7a4f6d7972d0 *.LC17>)
+     (expr_list:REG_EQUAL (symbol_ref/f:SI ("*.LC17") [flags 0x2]  <var_decl 0x7b9e265972d0 *.LC17>)
         (nil)))
 (insn 115 114 116 16 (set (mem/f:SI (pre_dec:SI (reg/f:SI 7 sp)) [2  S4 A32])
         (reg/f:SI 128)) "fs/bitmap.c":158:9 54 {*pushsi2}
@@ -5235,7 +5235,7 @@ try_optimize_cfg iteration 1
 (insn 116 115 117 16 (set (reg:SI 3 bx)
         (reg:SI 82)) "fs/bitmap.c":158:9 75 {*movsi_internal}
      (nil))
-(call_insn 117 116 118 16 (call (mem:QI (symbol_ref:SI ("panic") [flags 0x41]  <function_decl 0x7a4f6d710b00 panic>) [0 panic S1 A8])
+(call_insn 117 116 118 16 (call (mem:QI (symbol_ref:SI ("panic") [flags 0x41]  <function_decl 0x7b9e26510b00 panic>) [0 panic S1 A8])
         (const_int 16 [0x10])) "fs/bitmap.c":158:9 812 {*call}
      (nil)
     (expr_list (use (reg:SI 3 bx))
@@ -5291,7 +5291,7 @@ try_optimize_cfg iteration 1
 (insn 131 130 132 17 (set (reg/f:SI 134)
         (mem/u/c:SI (plus:SI (reg:SI 82)
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("current") [flags 0x40]  <var_decl 0x7a4f6d72f120 current>)
+                            (symbol_ref:SI ("current") [flags 0x40]  <var_decl 0x7b9e2652f120 current>)
                         ] UNSPEC_GOT))) [20  S4 A8])) "fs/bitmap.c":163:27 75 {*movsi_internal}
      (nil))
 (insn 132 131 133 17 (set (reg/f:SI 90 [ current.0_8 ])
@@ -5312,7 +5312,7 @@ try_optimize_cfg iteration 1
 (insn 136 135 137 17 (set (reg/f:SI 136)
         (mem/u/c:SI (plus:SI (reg:SI 82)
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("current") [flags 0x40]  <var_decl 0x7a4f6d72f120 current>)
+                            (symbol_ref:SI ("current") [flags 0x40]  <var_decl 0x7b9e2652f120 current>)
                         ] UNSPEC_GOT))) [20  S4 A8])) "fs/bitmap.c":164:27 75 {*movsi_internal}
      (nil))
 (insn 137 136 138 17 (set (reg/f:SI 92 [ current.1_10 ])
@@ -5380,7 +5380,7 @@ try_optimize_cfg iteration 1
 (insn 152 151 153 17 (set (reg/f:SI 142)
         (mem/u/c:SI (plus:SI (reg:SI 82)
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("jiffies") [flags 0x40]  <var_decl 0x7a4f6d72f360 jiffies>)
+                            (symbol_ref:SI ("jiffies") [flags 0x40]  <var_decl 0x7b9e2652f360 jiffies>)
                         ] UNSPEC_GOT))) [20  S4 A8])) "fs/bitmap.c":167:56 75 {*movsi_internal}
      (nil))
 (insn 153 152 154 17 (set (reg:SI 99 [ jiffies.2_17 ])
@@ -5424,7 +5424,7 @@ try_optimize_cfg iteration 1
 (insn 159 158 160 17 (set (reg/f:SI 147)
         (mem/u/c:SI (plus:SI (reg:SI 82)
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("startup_time") [flags 0x40]  <var_decl 0x7a4f6d72f3f0 startup_time>)
+                            (symbol_ref:SI ("startup_time") [flags 0x40]  <var_decl 0x7b9e2652f3f0 startup_time>)
                         ] UNSPEC_GOT))) [20  S4 A8])) "fs/bitmap.c":167:56 75 {*movsi_internal}
      (nil))
 (insn 160 159 161 17 (set (reg:SI 101 [ startup_time.3_19 ])

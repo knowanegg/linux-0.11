@@ -74,7 +74,7 @@ Dataflow summary:
      (nil)
  -> 25)
 (note 12 11 44 3 [bb 3] NOTE_INSN_BASIC_BLOCK)
-(note 44 12 13 3 0x781067cd72a0 NOTE_INSN_BLOCK_BEG)
+(note 44 12 13 3 0x75cc672d72a0 NOTE_INSN_BLOCK_BEG)
 (insn 13 44 14 3 (set (reg/f:SI 0 ax [94])
         (mem/f/c:SI (plus:SI (reg/f:SI 7 sp)
                 (const_int 20 [0x14])) [1 tty+0 S4 A32])) "drivers/chr_drv/serial.c":18:9 75 {*movsi_internal}
@@ -116,7 +116,7 @@ Dataflow summary:
         (mem/c:QI (plus:SI (reg/f:SI 7 sp)
                 (const_int 15 [0xf])) [0 _v+0 S1 A8])) "drivers/chr_drv/serial.c":18:9 77 {*movqi_internal}
      (nil))
-(note 45 18 41 3 0x781067cd72a0 NOTE_INSN_BLOCK_END)
+(note 45 18 41 3 0x75cc672d72a0 NOTE_INSN_BLOCK_END)
 (insn 41 45 20 3 (parallel [
             (set (reg:SI 0 ax [orig:87 _5 ] [87])
                 (ior:SI (reg:SI 0 ax [orig:91 _12 ] [91])
@@ -382,7 +382,7 @@ Dataflow summary:
             (clobber (reg:CC 17 flags))
         ]) "drivers/chr_drv/serial.c":31:5 -1
      (nil))
-(note 52 27 29 2 0x781067cd7360 NOTE_INSN_BLOCK_BEG)
+(note 52 27 29 2 0x75cc672d7360 NOTE_INSN_BLOCK_BEG)
 (insn 29 52 38 2 (set (reg:SI 0 ax [102])
         (mem/c:SI (plus:SI (reg/f:SI 7 sp)
                 (const_int 20 [0x14])) [5 port+0 S4 A32])) "drivers/chr_drv/serial.c":32:11 75 {*movsi_internal}
@@ -406,7 +406,7 @@ Dataflow summary:
                 (const_int 15 [0xf])) [0 _v+0 S1 A8])
         (reg:QI 0 ax [orig:101 _v ] [101])) "drivers/chr_drv/serial.c":32:11 77 {*movqi_internal}
      (nil))
-(note 53 28 35 2 0x781067cd7360 NOTE_INSN_BLOCK_END)
+(note 53 28 35 2 0x75cc672d7360 NOTE_INSN_BLOCK_END)
 (insn 35 53 41 2 (const_int 0 [0]) "drivers/chr_drv/serial.c":33:1 843 {nop}
      (nil))
 (note 41 35 42 2 NOTE_INSN_EPILOGUE_BEG)
@@ -476,36 +476,36 @@ Dataflow summary:
 (insn 5 2 6 2 (set (reg:SI 0 ax [94])
         (mem/u/c:SI (plus:SI (reg:SI 3 bx [82])
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("idt") [flags 0x40]  <var_decl 0x781069588ea0 idt>)
+                            (symbol_ref:SI ("idt") [flags 0x40]  <var_decl 0x75cc687b8ea0 idt>)
                         ] UNSPEC_GOT))) [10  S4 A8])) "drivers/chr_drv/serial.c":38:5 75 {*movsi_internal}
      (nil))
 (insn 6 5 7 2 (set (reg/f:SI 2 cx [orig:83 _1 ] [83])
         (plus:SI (reg:SI 0 ax [94])
             (const_int 288 [0x120]))) "drivers/chr_drv/serial.c":38:5 205 {*leasi}
-     (expr_list:REG_EQUAL (const:SI (plus:SI (symbol_ref:SI ("idt") [flags 0x40]  <var_decl 0x781069588ea0 idt>)
+     (expr_list:REG_EQUAL (const:SI (plus:SI (symbol_ref:SI ("idt") [flags 0x40]  <var_decl 0x75cc687b8ea0 idt>)
                 (const_int 288 [0x120])))
         (nil)))
 (insn 7 6 8 2 (set (reg:SI 0 ax [95])
         (mem/u/c:SI (plus:SI (reg:SI 3 bx [82])
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("idt") [flags 0x40]  <var_decl 0x781069588ea0 idt>)
+                            (symbol_ref:SI ("idt") [flags 0x40]  <var_decl 0x75cc687b8ea0 idt>)
                         ] UNSPEC_GOT))) [10  S4 A8])) "drivers/chr_drv/serial.c":38:5 75 {*movsi_internal}
      (nil))
 (insn 8 7 9 2 (set (reg/f:SI 4 si [orig:84 _2 ] [84])
         (plus:SI (reg:SI 0 ax [95])
             (const_int 292 [0x124]))) "drivers/chr_drv/serial.c":38:5 205 {*leasi}
-     (expr_list:REG_EQUAL (const:SI (plus:SI (symbol_ref:SI ("idt") [flags 0x40]  <var_decl 0x781069588ea0 idt>)
+     (expr_list:REG_EQUAL (const:SI (plus:SI (symbol_ref:SI ("idt") [flags 0x40]  <var_decl 0x75cc687b8ea0 idt>)
                 (const_int 292 [0x124])))
         (nil)))
 (insn 9 8 10 2 (set (reg:SI 0 ax [97])
         (mem/u/c:SI (plus:SI (reg:SI 3 bx [82])
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("rs1_interrupt") [flags 0x41]  <function_decl 0x781067cd2f00 rs1_interrupt>)
+                            (symbol_ref:SI ("rs1_interrupt") [flags 0x41]  <function_decl 0x75cc672d2f00 rs1_interrupt>)
                         ] UNSPEC_GOT))) [10  S4 A8])) "drivers/chr_drv/serial.c":38:5 75 {*movsi_internal}
      (nil))
 (insn 10 9 11 2 (set (reg/f:SI 1 dx [96])
         (reg:SI 0 ax [97])) "drivers/chr_drv/serial.c":38:5 75 {*movsi_internal}
-     (expr_list:REG_EQUAL (symbol_ref:SI ("rs1_interrupt") [flags 0x41]  <function_decl 0x781067cd2f00 rs1_interrupt>)
+     (expr_list:REG_EQUAL (symbol_ref:SI ("rs1_interrupt") [flags 0x41]  <function_decl 0x75cc672d2f00 rs1_interrupt>)
         (nil)))
 (insn 11 10 12 2 (set (reg:SI 0 ax [98])
         (const_int 524288 [0x80000])) "drivers/chr_drv/serial.c":38:5 75 {*movsi_internal}
@@ -535,36 +535,36 @@ Dataflow summary:
 (insn 13 12 14 2 (set (reg:SI 0 ax [99])
         (mem/u/c:SI (plus:SI (reg:SI 3 bx [82])
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("idt") [flags 0x40]  <var_decl 0x781069588ea0 idt>)
+                            (symbol_ref:SI ("idt") [flags 0x40]  <var_decl 0x75cc687b8ea0 idt>)
                         ] UNSPEC_GOT))) [10  S4 A8])) "drivers/chr_drv/serial.c":39:5 75 {*movsi_internal}
      (nil))
 (insn 14 13 15 2 (set (reg/f:SI 2 cx [orig:85 _3 ] [85])
         (plus:SI (reg:SI 0 ax [99])
             (const_int 280 [0x118]))) "drivers/chr_drv/serial.c":39:5 205 {*leasi}
-     (expr_list:REG_EQUAL (const:SI (plus:SI (symbol_ref:SI ("idt") [flags 0x40]  <var_decl 0x781069588ea0 idt>)
+     (expr_list:REG_EQUAL (const:SI (plus:SI (symbol_ref:SI ("idt") [flags 0x40]  <var_decl 0x75cc687b8ea0 idt>)
                 (const_int 280 [0x118])))
         (nil)))
 (insn 15 14 16 2 (set (reg:SI 0 ax [100])
         (mem/u/c:SI (plus:SI (reg:SI 3 bx [82])
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("idt") [flags 0x40]  <var_decl 0x781069588ea0 idt>)
+                            (symbol_ref:SI ("idt") [flags 0x40]  <var_decl 0x75cc687b8ea0 idt>)
                         ] UNSPEC_GOT))) [10  S4 A8])) "drivers/chr_drv/serial.c":39:5 75 {*movsi_internal}
      (nil))
 (insn 16 15 17 2 (set (reg/f:SI 4 si [orig:86 _4 ] [86])
         (plus:SI (reg:SI 0 ax [100])
             (const_int 284 [0x11c]))) "drivers/chr_drv/serial.c":39:5 205 {*leasi}
-     (expr_list:REG_EQUAL (const:SI (plus:SI (symbol_ref:SI ("idt") [flags 0x40]  <var_decl 0x781069588ea0 idt>)
+     (expr_list:REG_EQUAL (const:SI (plus:SI (symbol_ref:SI ("idt") [flags 0x40]  <var_decl 0x75cc687b8ea0 idt>)
                 (const_int 284 [0x11c])))
         (nil)))
 (insn 17 16 18 2 (set (reg:SI 0 ax [102])
         (mem/u/c:SI (plus:SI (reg:SI 3 bx [82])
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("rs2_interrupt") [flags 0x41]  <function_decl 0x781067cd2600 rs2_interrupt>)
+                            (symbol_ref:SI ("rs2_interrupt") [flags 0x41]  <function_decl 0x75cc672d2600 rs2_interrupt>)
                         ] UNSPEC_GOT))) [10  S4 A8])) "drivers/chr_drv/serial.c":39:5 75 {*movsi_internal}
      (nil))
 (insn 18 17 19 2 (set (reg/f:SI 1 dx [101])
         (reg:SI 0 ax [102])) "drivers/chr_drv/serial.c":39:5 75 {*movsi_internal}
-     (expr_list:REG_EQUAL (symbol_ref:SI ("rs2_interrupt") [flags 0x41]  <function_decl 0x781067cd2600 rs2_interrupt>)
+     (expr_list:REG_EQUAL (symbol_ref:SI ("rs2_interrupt") [flags 0x41]  <function_decl 0x75cc672d2600 rs2_interrupt>)
         (nil)))
 (insn 19 18 20 2 (set (reg:SI 0 ax [103])
         (const_int 524288 [0x80000])) "drivers/chr_drv/serial.c":39:5 75 {*movsi_internal}
@@ -594,7 +594,7 @@ Dataflow summary:
 (insn 21 20 22 2 (set (reg/f:SI 0 ax [104])
         (mem/u/c:SI (plus:SI (reg:SI 3 bx [82])
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("tty_table") [flags 0x40]  <var_decl 0x781069588b40 tty_table>)
+                            (symbol_ref:SI ("tty_table") [flags 0x40]  <var_decl 0x75cc687b8b40 tty_table>)
                         ] UNSPEC_GOT))) [10  S4 A8])) "drivers/chr_drv/serial.c":40:29 75 {*movsi_internal}
      (nil))
 (insn 22 21 24 2 (set (reg:SI 0 ax [orig:87 _5 ] [87])
@@ -605,7 +605,7 @@ Dataflow summary:
         (reg:SI 0 ax [orig:88 _6 ] [88])) "drivers/chr_drv/serial.c":40:5 54 {*pushsi2}
      (expr_list:REG_ARGS_SIZE (const_int 4 [0x4])
         (nil)))
-(call_insn 25 24 26 2 (call (mem:QI (symbol_ref:SI ("init") [flags 0x3]  <function_decl 0x781067d0d000 init>) [0 init S1 A8])
+(call_insn 25 24 26 2 (call (mem:QI (symbol_ref:SI ("init") [flags 0x3]  <function_decl 0x75cc6730d000 init>) [0 init S1 A8])
         (const_int 4 [0x4])) "drivers/chr_drv/serial.c":40:5 812 {*call}
      (nil)
     (nil))
@@ -620,7 +620,7 @@ Dataflow summary:
 (insn 27 26 28 2 (set (reg/f:SI 0 ax [105])
         (mem/u/c:SI (plus:SI (reg:SI 3 bx [82])
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("tty_table") [flags 0x40]  <var_decl 0x781069588b40 tty_table>)
+                            (symbol_ref:SI ("tty_table") [flags 0x40]  <var_decl 0x75cc687b8b40 tty_table>)
                         ] UNSPEC_GOT))) [10  S4 A8])) "drivers/chr_drv/serial.c":41:29 75 {*movsi_internal}
      (nil))
 (insn 28 27 30 2 (set (reg:SI 0 ax [orig:89 _7 ] [89])
@@ -631,7 +631,7 @@ Dataflow summary:
         (reg:SI 0 ax [orig:90 _8 ] [90])) "drivers/chr_drv/serial.c":41:5 54 {*pushsi2}
      (expr_list:REG_ARGS_SIZE (const_int 4 [0x4])
         (nil)))
-(call_insn 31 30 32 2 (call (mem:QI (symbol_ref:SI ("init") [flags 0x3]  <function_decl 0x781067d0d000 init>) [0 init S1 A8])
+(call_insn 31 30 32 2 (call (mem:QI (symbol_ref:SI ("init") [flags 0x3]  <function_decl 0x75cc6730d000 init>) [0 init S1 A8])
         (const_int 4 [0x4])) "drivers/chr_drv/serial.c":41:5 812 {*call}
      (nil)
     (nil))
@@ -643,7 +643,7 @@ Dataflow summary:
         ]) "drivers/chr_drv/serial.c":41:5 209 {*addsi_1}
      (expr_list:REG_ARGS_SIZE (const_int 0 [0])
         (nil)))
-(note 72 32 34 2 0x781067cd7420 NOTE_INSN_BLOCK_BEG)
+(note 72 32 34 2 0x75cc672d7420 NOTE_INSN_BLOCK_BEG)
 (insn 34 72 47 2 (set (reg:SI 0 ax [107])
         (const_int 33 [0x21])) "drivers/chr_drv/serial.c":42:5 75 {*movsi_internal}
      (nil))
@@ -673,7 +673,7 @@ Dataflow summary:
         (mem/c:QI (plus:SI (reg/f:SI 7 sp)
                 (const_int 15 [0xf])) [0 _v+0 S1 A8])) "drivers/chr_drv/serial.c":42:5 77 {*movqi_internal}
      (nil))
-(note 73 36 37 2 0x781067cd7420 NOTE_INSN_BLOCK_END)
+(note 73 36 37 2 0x75cc672d7420 NOTE_INSN_BLOCK_END)
 (insn 37 73 38 2 (set (reg:SI 0 ax [orig:91 _9 ] [91])
         (zero_extend:SI (reg:QI 0 ax [orig:93 _15 ] [93]))) "drivers/chr_drv/serial.c":42:5 143 {*zero_extendqisi2}
      (nil))
