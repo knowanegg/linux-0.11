@@ -458,9 +458,9 @@ Dataflow summary:
 (insn 5 2 6 2 (set (reg/f:SI 1 dx [121])
         (plus:SI (reg:SI 0 ax [82])
             (const:SI (unspec:SI [
-                        (symbol_ref/f:SI ("*.LC0") [flags 0x2]  <var_decl 0x718a32545000 *.LC0>)
+                        (symbol_ref/f:SI ("*.LC0") [flags 0x2]  <var_decl 0x77f809745000 *.LC0>)
                     ] UNSPEC_GOTOFF)))) "kernel/vsprintf.c":38:14 205 {*leasi}
-     (expr_list:REG_EQUAL (symbol_ref/f:SI ("*.LC0") [flags 0x2]  <var_decl 0x718a32545000 *.LC0>)
+     (expr_list:REG_EQUAL (symbol_ref/f:SI ("*.LC0") [flags 0x2]  <var_decl 0x77f809745000 *.LC0>)
         (nil)))
 (insn 6 5 7 2 (set (mem/f/c:SI (plus:SI (reg/f:SI 7 sp)
                 (const_int 56 [0x38])) [1 digits+0 S4 A32])
@@ -495,9 +495,9 @@ Dataflow summary:
 (insn 12 11 13 3 (set (reg/f:SI 0 ax [123])
         (plus:SI (reg:SI 0 ax [82])
             (const:SI (unspec:SI [
-                        (symbol_ref/f:SI ("*.LC1") [flags 0x2]  <var_decl 0x718a32545090 *.LC1>)
+                        (symbol_ref/f:SI ("*.LC1") [flags 0x2]  <var_decl 0x77f809745090 *.LC1>)
                     ] UNSPEC_GOTOFF)))) "kernel/vsprintf.c":42:10 205 {*leasi}
-     (expr_list:REG_EQUAL (symbol_ref/f:SI ("*.LC1") [flags 0x2]  <var_decl 0x718a32545090 *.LC1>)
+     (expr_list:REG_EQUAL (symbol_ref/f:SI ("*.LC1") [flags 0x2]  <var_decl 0x77f809745090 *.LC1>)
         (nil)))
 (insn 13 12 14 3 (set (mem/f/c:SI (plus:SI (reg/f:SI 7 sp)
                 (const_int 56 [0x38])) [1 digits+0 S4 A32])
@@ -2151,7 +2151,7 @@ Dataflow summary:
 	.cfi_def_cfa_offset 52
 	 NOTE_INSN_CFI)
 (call_insn 90 596 91 15 (set (reg:SI 0 ax)
-        (call (mem:QI (symbol_ref:SI ("skip_atoi") [flags 0x3]  <function_decl 0x718a324f4200 skip_atoi>) [0 skip_atoi S1 A8])
+        (call (mem:QI (symbol_ref:SI ("skip_atoi") [flags 0x3]  <function_decl 0x77f8096f4200 skip_atoi>) [0 skip_atoi S1 A8])
             (const_int 4 [0x4]))) "kernel/vsprintf.c":139:27 823 {*call_value}
      (nil)
     (nil))
@@ -2337,7 +2337,7 @@ Dataflow summary:
 	.cfi_def_cfa_offset 52
 	 NOTE_INSN_CFI)
 (call_insn 141 598 142 22 (set (reg:SI 0 ax)
-        (call (mem:QI (symbol_ref:SI ("skip_atoi") [flags 0x3]  <function_decl 0x718a324f4200 skip_atoi>) [0 skip_atoi S1 A8])
+        (call (mem:QI (symbol_ref:SI ("skip_atoi") [flags 0x3]  <function_decl 0x77f8096f4200 skip_atoi>) [0 skip_atoi S1 A8])
             (const_int 4 [0x4]))) "kernel/vsprintf.c":154:29 823 {*call_value}
      (nil)
     (nil))
@@ -2809,7 +2809,7 @@ Dataflow summary:
 	.cfi_def_cfa_offset 64
 	 NOTE_INSN_CFI)
 (call_insn 264 609 265 41 (set (reg:SI 0 ax)
-        (call (mem:QI (symbol_ref:SI ("strlen") [flags 0x41]  <function_decl 0x718a324d2f00 strlen>) [0 strlen S1 A8])
+        (call (mem:QI (symbol_ref:SI ("strlen") [flags 0x41]  <function_decl 0x77f8096d2f00 strlen>) [0 strlen S1 A8])
             (const_int 16 [0x10]))) "kernel/vsprintf.c":178:19 823 {*call_value}
      (nil)
     (expr_list (use (reg:SI 3 bx))
@@ -3169,7 +3169,7 @@ Dataflow summary:
 	.cfi_def_cfa_offset 80
 	 NOTE_INSN_CFI)
 (call_insn 361 625 362 56 (set (reg:SI 0 ax)
-        (call (mem:QI (symbol_ref:SI ("number") [flags 0x3]  <function_decl 0x718a324f4400 number>) [0 number S1 A8])
+        (call (mem:QI (symbol_ref:SI ("number") [flags 0x3]  <function_decl 0x77f8096f4400 number>) [0 number S1 A8])
             (const_int 32 [0x20]))) "kernel/vsprintf.c":194:19 823 {*call_value}
      (nil)
     (nil))
@@ -3307,7 +3307,7 @@ Dataflow summary:
 	.cfi_def_cfa_offset 80
 	 NOTE_INSN_CFI)
 (call_insn 388 617 389 59 (set (reg:SI 0 ax)
-        (call (mem:QI (symbol_ref:SI ("number") [flags 0x3]  <function_decl 0x718a324f4400 number>) [0 number S1 A8])
+        (call (mem:QI (symbol_ref:SI ("number") [flags 0x3]  <function_decl 0x77f8096f4400 number>) [0 number S1 A8])
             (const_int 32 [0x20]))) "kernel/vsprintf.c":203:19 823 {*call_value}
      (nil)
     (nil))
@@ -3428,7 +3428,7 @@ Dataflow summary:
 	.cfi_def_cfa_offset 80
 	 NOTE_INSN_CFI)
 (call_insn 411 633 412 61 (set (reg:SI 0 ax)
-        (call (mem:QI (symbol_ref:SI ("number") [flags 0x3]  <function_decl 0x718a324f4400 number>) [0 number S1 A8])
+        (call (mem:QI (symbol_ref:SI ("number") [flags 0x3]  <function_decl 0x77f8096f4400 number>) [0 number S1 A8])
             (const_int 32 [0x20]))) "kernel/vsprintf.c":211:19 823 {*call_value}
      (nil)
     (nil))
@@ -3549,7 +3549,7 @@ Dataflow summary:
 	.cfi_def_cfa_offset 80
 	 NOTE_INSN_CFI)
 (call_insn 434 606 435 63 (set (reg:SI 0 ax)
-        (call (mem:QI (symbol_ref:SI ("number") [flags 0x3]  <function_decl 0x718a324f4400 number>) [0 number S1 A8])
+        (call (mem:QI (symbol_ref:SI ("number") [flags 0x3]  <function_decl 0x77f8096f4400 number>) [0 number S1 A8])
             (const_int 32 [0x20]))) "kernel/vsprintf.c":219:19 823 {*call_value}
      (nil)
     (nil))

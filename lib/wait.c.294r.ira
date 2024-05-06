@@ -229,7 +229,7 @@ Dataflow summary:
 (insn 23 22 24 4 (set (reg/f:SI 92)
         (mem/u/c:SI (plus:SI (reg:SI 82)
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("errno") [flags 0x40]  <var_decl 0x76538aa51b40 errno>)
+                            (symbol_ref:SI ("errno") [flags 0x40]  <var_decl 0x71261d885b40 errno>)
                         ] UNSPEC_GOT))) [4  S4 A8])) "lib/wait.c":11:1 75 {*movsi_internal}
      (expr_list:REG_DEAD (reg:SI 82)
         (nil)))
@@ -353,7 +353,7 @@ Dataflow summary:
      (expr_list:REG_ARGS_SIZE (const_int 12 [0xc])
         (nil)))
 (call_insn 8 7 9 2 (set (reg:SI 0 ax)
-        (call (mem:QI (symbol_ref:SI ("waitpid") [flags 0x3]  <function_decl 0x765389512e00 waitpid>) [0 waitpid S1 A8])
+        (call (mem:QI (symbol_ref:SI ("waitpid") [flags 0x3]  <function_decl 0x71261c312e00 waitpid>) [0 waitpid S1 A8])
             (const_int 12 [0xc]))) "lib/wait.c":15:12 823 {*call_value}
      (nil)
     (nil))

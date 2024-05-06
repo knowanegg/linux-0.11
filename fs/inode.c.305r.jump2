@@ -85,7 +85,7 @@ Dataflow summary:
         (reg/f:SI 0 ax [orig:83 _1 ] [83])) "fs/inode.c":23:9 54 {*pushsi2}
      (expr_list:REG_ARGS_SIZE (const_int 16 [0x10])
         (nil)))
-(call_insn 14 12 15 3 (call (mem:QI (symbol_ref:SI ("sleep_on") [flags 0x41]  <function_decl 0x7341ee515b00 sleep_on>) [0 sleep_on S1 A8])
+(call_insn 14 12 15 3 (call (mem:QI (symbol_ref:SI ("sleep_on") [flags 0x41]  <function_decl 0x748ea6b15b00 sleep_on>) [0 sleep_on S1 A8])
         (const_int 16 [0x10])) "fs/inode.c":23:9 812 {*call}
      (nil)
     (expr_list (use (reg:SI 3 bx))
@@ -240,7 +240,7 @@ Dataflow summary:
         (reg/f:SI 0 ax [orig:83 _1 ] [83])) "fs/inode.c":31:9 54 {*pushsi2}
      (expr_list:REG_ARGS_SIZE (const_int 16 [0x10])
         (nil)))
-(call_insn 14 12 15 3 (call (mem:QI (symbol_ref:SI ("sleep_on") [flags 0x41]  <function_decl 0x7341ee515b00 sleep_on>) [0 sleep_on S1 A8])
+(call_insn 14 12 15 3 (call (mem:QI (symbol_ref:SI ("sleep_on") [flags 0x41]  <function_decl 0x748ea6b15b00 sleep_on>) [0 sleep_on S1 A8])
         (const_int 16 [0x10])) "fs/inode.c":31:9 812 {*call}
      (nil)
     (expr_list (use (reg:SI 3 bx))
@@ -400,7 +400,7 @@ Dataflow summary:
 (insn 11 10 12 2 (set (reg:SI 3 bx)
         (reg:SI 0 ax [82])) "fs/inode.c":39:5 75 {*movsi_internal}
      (nil))
-(call_insn 12 11 13 2 (call (mem:QI (symbol_ref:SI ("wake_up") [flags 0x41]  <function_decl 0x7341ee515f00 wake_up>) [0 wake_up S1 A8])
+(call_insn 12 11 13 2 (call (mem:QI (symbol_ref:SI ("wake_up") [flags 0x41]  <function_decl 0x748ea6b15f00 wake_up>) [0 wake_up S1 A8])
         (const_int 16 [0x10])) "fs/inode.c":39:5 812 {*call}
      (nil)
     (expr_list (use (reg:SI 3 bx))
@@ -490,9 +490,9 @@ Dataflow summary:
 (insn 5 2 6 2 (set (reg/f:SI 0 ax [86])
         (plus:SI (reg:SI 3 bx [82])
             (const:SI (unspec:SI [
-                        (symbol_ref:SI ("inode_table") [flags 0x2]  <var_decl 0x7341ef90aea0 inode_table>)
+                        (symbol_ref:SI ("inode_table") [flags 0x2]  <var_decl 0x748ea80cdea0 inode_table>)
                     ] UNSPEC_GOTOFF)))) "fs/inode.c":47:11 205 {*leasi}
-     (expr_list:REG_EQUAL (symbol_ref:SI ("inode_table") [flags 0x2]  <var_decl 0x7341ef90aea0 inode_table>)
+     (expr_list:REG_EQUAL (symbol_ref:SI ("inode_table") [flags 0x2]  <var_decl 0x748ea80cdea0 inode_table>)
         (nil)))
 (insn 6 5 7 2 (set (mem/f/c:SI (plus:SI (reg/f:SI 7 sp)
                 (const_int 8 [0x8])) [5 inode+0 S4 A32])
@@ -522,7 +522,7 @@ Dataflow summary:
                 (const_int 20 [0x14])) [5 inode+0 S4 A32])) "fs/inode.c":49:9 54 {*pushsi2}
      (expr_list:REG_ARGS_SIZE (const_int 16 [0x10])
         (nil)))
-(call_insn 13 12 14 3 (call (mem:QI (symbol_ref:SI ("wait_on_inode") [flags 0x3]  <function_decl 0x7341ee540d00 wait_on_inode>) [0 wait_on_inode S1 A8])
+(call_insn 13 12 14 3 (call (mem:QI (symbol_ref:SI ("wait_on_inode") [flags 0x3]  <function_decl 0x748ea6b40d00 wait_on_inode>) [0 wait_on_inode S1 A8])
         (const_int 16 [0x10])) "fs/inode.c":49:9 812 {*call}
      (nil)
     (nil))
@@ -589,16 +589,16 @@ Dataflow summary:
 (insn 27 26 28 5 (set (reg/f:SI 0 ax [89])
         (plus:SI (reg:SI 3 bx [82])
             (const:SI (unspec:SI [
-                        (symbol_ref/f:SI ("*.LC0") [flags 0x2]  <var_decl 0x7341ee5b71b0 *.LC0>)
+                        (symbol_ref/f:SI ("*.LC0") [flags 0x2]  <var_decl 0x748ea6bb71b0 *.LC0>)
                     ] UNSPEC_GOTOFF)))) "fs/inode.c":52:17 205 {*leasi}
-     (expr_list:REG_EQUAL (symbol_ref/f:SI ("*.LC0") [flags 0x2]  <var_decl 0x7341ee5b71b0 *.LC0>)
+     (expr_list:REG_EQUAL (symbol_ref/f:SI ("*.LC0") [flags 0x2]  <var_decl 0x748ea6bb71b0 *.LC0>)
         (nil)))
 (insn 28 27 30 5 (set (mem/f:SI (pre_dec:SI (reg/f:SI 7 sp)) [10  S4 A32])
         (reg/f:SI 0 ax [89])) "fs/inode.c":52:17 54 {*pushsi2}
      (expr_list:REG_ARGS_SIZE (const_int 16 [0x10])
         (nil)))
 (call_insn 30 28 31 5 (set (reg:SI 0 ax)
-        (call (mem:QI (symbol_ref:SI ("printk") [flags 0x41]  <function_decl 0x7341ee538f00 printk>) [0 printk S1 A8])
+        (call (mem:QI (symbol_ref:SI ("printk") [flags 0x41]  <function_decl 0x748ea6b38f00 printk>) [0 printk S1 A8])
             (const_int 16 [0x10]))) "fs/inode.c":52:17 823 {*call_value}
      (nil)
     (expr_list (use (reg:SI 3 bx))
@@ -766,7 +766,7 @@ Dataflow summary:
                 (const_int 28 [0x1c])) [5 inode+0 S4 A32])) "fs/inode.c":62:5 54 {*pushsi2}
      (expr_list:REG_ARGS_SIZE (const_int 16 [0x10])
         (nil)))
-(call_insn 14 13 15 3 (call (mem:QI (symbol_ref:SI ("wait_on_inode") [flags 0x3]  <function_decl 0x7341ee540d00 wait_on_inode>) [0 wait_on_inode S1 A8])
+(call_insn 14 13 15 3 (call (mem:QI (symbol_ref:SI ("wait_on_inode") [flags 0x3]  <function_decl 0x748ea6b40d00 wait_on_inode>) [0 wait_on_inode S1 A8])
         (const_int 16 [0x10])) "fs/inode.c":62:5 812 {*call}
      (nil)
     (nil))
@@ -809,15 +809,15 @@ Dataflow summary:
 (insn 22 21 23 4 (set (reg/f:SI 0 ax [106])
         (plus:SI (reg:SI 3 bx [82])
             (const:SI (unspec:SI [
-                        (symbol_ref/f:SI ("*.LC1") [flags 0x2]  <var_decl 0x7341ee5b7360 *.LC1>)
+                        (symbol_ref/f:SI ("*.LC1") [flags 0x2]  <var_decl 0x748ea6bb7360 *.LC1>)
                     ] UNSPEC_GOTOFF)))) "fs/inode.c":64:9 205 {*leasi}
-     (expr_list:REG_EQUAL (symbol_ref/f:SI ("*.LC1") [flags 0x2]  <var_decl 0x7341ee5b7360 *.LC1>)
+     (expr_list:REG_EQUAL (symbol_ref/f:SI ("*.LC1") [flags 0x2]  <var_decl 0x748ea6bb7360 *.LC1>)
         (nil)))
 (insn 23 22 25 4 (set (mem/f:SI (pre_dec:SI (reg/f:SI 7 sp)) [10  S4 A32])
         (reg/f:SI 0 ax [106])) "fs/inode.c":64:9 54 {*pushsi2}
      (expr_list:REG_ARGS_SIZE (const_int 16 [0x10])
         (nil)))
-(call_insn 25 23 26 4 (call (mem:QI (symbol_ref:SI ("panic") [flags 0x41]  <function_decl 0x7341ee538700 panic>) [0 panic S1 A8])
+(call_insn 25 23 26 4 (call (mem:QI (symbol_ref:SI ("panic") [flags 0x41]  <function_decl 0x748ea6b38700 panic>) [0 panic S1 A8])
         (const_int 16 [0x10])) "fs/inode.c":64:9 812 {*call}
      (nil)
     (expr_list (use (reg:SI 3 bx))
@@ -877,7 +877,7 @@ Dataflow summary:
         (reg/f:SI 0 ax [orig:85 _3 ] [85])) "fs/inode.c":66:8 54 {*pushsi2}
      (expr_list:REG_ARGS_SIZE (const_int 16 [0x10])
         (nil)))
-(call_insn 39 37 40 6 (call (mem:QI (symbol_ref:SI ("wake_up") [flags 0x41]  <function_decl 0x7341ee515f00 wake_up>) [0 wake_up S1 A8])
+(call_insn 39 37 40 6 (call (mem:QI (symbol_ref:SI ("wake_up") [flags 0x41]  <function_decl 0x748ea6b15f00 wake_up>) [0 wake_up S1 A8])
         (const_int 16 [0x10])) "fs/inode.c":66:8 812 {*call}
      (nil)
     (expr_list (use (reg:SI 3 bx))
@@ -953,7 +953,7 @@ Dataflow summary:
         (reg:SI 0 ax [orig:89 _7 ] [89])) "fs/inode.c":69:8 54 {*pushsi2}
      (expr_list:REG_ARGS_SIZE (const_int 16 [0x10])
         (nil)))
-(call_insn 60 58 61 7 (call (mem:QI (symbol_ref:SI ("free_page") [flags 0x41]  <function_decl 0x7341ee538800 free_page>) [0 free_page S1 A8])
+(call_insn 60 58 61 7 (call (mem:QI (symbol_ref:SI ("free_page") [flags 0x41]  <function_decl 0x748ea6b38800 free_page>) [0 free_page S1 A8])
         (const_int 16 [0x10])) "fs/inode.c":69:8 812 {*call}
      (nil)
     (expr_list (use (reg:SI 3 bx))
@@ -1100,7 +1100,7 @@ Dataflow summary:
      (expr_list:REG_ARGS_SIZE (const_int 16 [0x10])
         (nil)))
 (call_insn 99 97 100 11 (set (reg:SI 0 ax)
-        (call (mem:QI (symbol_ref:SI ("sync_dev") [flags 0x41]  <function_decl 0x7341ee4d2f00 sync_dev>) [0 sync_dev S1 A8])
+        (call (mem:QI (symbol_ref:SI ("sync_dev") [flags 0x41]  <function_decl 0x748ea6ad2f00 sync_dev>) [0 sync_dev S1 A8])
             (const_int 16 [0x10]))) "fs/inode.c":80:9 823 {*call_value}
      (nil)
     (expr_list (use (reg:SI 3 bx))
@@ -1126,7 +1126,7 @@ Dataflow summary:
                 (const_int 28 [0x1c])) [5 inode+0 S4 A32])) "fs/inode.c":81:9 54 {*pushsi2}
      (expr_list:REG_ARGS_SIZE (const_int 16 [0x10])
         (nil)))
-(call_insn 103 102 104 11 (call (mem:QI (symbol_ref:SI ("wait_on_inode") [flags 0x3]  <function_decl 0x7341ee540d00 wait_on_inode>) [0 wait_on_inode S1 A8])
+(call_insn 103 102 104 11 (call (mem:QI (symbol_ref:SI ("wait_on_inode") [flags 0x3]  <function_decl 0x748ea6b40d00 wait_on_inode>) [0 wait_on_inode S1 A8])
         (const_int 16 [0x10])) "fs/inode.c":81:9 812 {*call}
      (nil)
     (nil))
@@ -1233,7 +1233,7 @@ Dataflow summary:
                 (const_int 28 [0x1c])) [5 inode+0 S4 A32])) "fs/inode.c":89:9 54 {*pushsi2}
      (expr_list:REG_ARGS_SIZE (const_int 16 [0x10])
         (nil)))
-(call_insn 132 130 133 16 (call (mem:QI (symbol_ref:SI ("truncate") [flags 0x41]  <function_decl 0x7341ee4d2600 truncate>) [0 truncate S1 A8])
+(call_insn 132 130 133 16 (call (mem:QI (symbol_ref:SI ("truncate") [flags 0x41]  <function_decl 0x748ea6ad2600 truncate>) [0 truncate S1 A8])
         (const_int 16 [0x10])) "fs/inode.c":89:9 812 {*call}
      (nil)
     (expr_list (use (reg:SI 3 bx))
@@ -1259,7 +1259,7 @@ Dataflow summary:
                 (const_int 28 [0x1c])) [5 inode+0 S4 A32])) "fs/inode.c":90:9 54 {*pushsi2}
      (expr_list:REG_ARGS_SIZE (const_int 16 [0x10])
         (nil)))
-(call_insn 137 135 138 16 (call (mem:QI (symbol_ref:SI ("free_inode") [flags 0x41]  <function_decl 0x7341ee4d2800 free_inode>) [0 free_inode S1 A8])
+(call_insn 137 135 138 16 (call (mem:QI (symbol_ref:SI ("free_inode") [flags 0x41]  <function_decl 0x748ea6ad2800 free_inode>) [0 free_inode S1 A8])
         (const_int 16 [0x10])) "fs/inode.c":90:9 812 {*call}
      (nil)
     (expr_list (use (reg:SI 3 bx))
@@ -1312,7 +1312,7 @@ Dataflow summary:
                 (const_int 28 [0x1c])) [5 inode+0 S4 A32])) "fs/inode.c":94:9 54 {*pushsi2}
      (expr_list:REG_ARGS_SIZE (const_int 16 [0x10])
         (nil)))
-(call_insn 150 149 151 18 (call (mem:QI (symbol_ref:SI ("write_inode") [flags 0x3]  <function_decl 0x7341ee540c00 write_inode>) [0 write_inode S1 A8])
+(call_insn 150 149 151 18 (call (mem:QI (symbol_ref:SI ("write_inode") [flags 0x3]  <function_decl 0x748ea6b40c00 write_inode>) [0 write_inode S1 A8])
         (const_int 16 [0x10])) "fs/inode.c":94:9 812 {*call}
      (nil)
     (nil))
@@ -1337,7 +1337,7 @@ Dataflow summary:
                 (const_int 28 [0x1c])) [5 inode+0 S4 A32])) "fs/inode.c":95:9 54 {*pushsi2}
      (expr_list:REG_ARGS_SIZE (const_int 16 [0x10])
         (nil)))
-(call_insn 154 153 155 18 (call (mem:QI (symbol_ref:SI ("wait_on_inode") [flags 0x3]  <function_decl 0x7341ee540d00 wait_on_inode>) [0 wait_on_inode S1 A8])
+(call_insn 154 153 155 18 (call (mem:QI (symbol_ref:SI ("wait_on_inode") [flags 0x3]  <function_decl 0x748ea6b40d00 wait_on_inode>) [0 wait_on_inode S1 A8])
         (const_int 16 [0x10])) "fs/inode.c":95:9 812 {*call}
      (nil)
     (nil))
@@ -1484,7 +1484,7 @@ Dataflow summary:
                 (const_int 44 [0x2c])) [5 inode+0 S4 A32])) "fs/inode.c":108:5 54 {*pushsi2}
      (expr_list:REG_ARGS_SIZE (const_int 16 [0x10])
         (nil)))
-(call_insn 7 6 8 2 (call (mem:QI (symbol_ref:SI ("lock_inode") [flags 0x3]  <function_decl 0x7341ee540f00 lock_inode>) [0 lock_inode S1 A8])
+(call_insn 7 6 8 2 (call (mem:QI (symbol_ref:SI ("lock_inode") [flags 0x3]  <function_decl 0x748ea6b40f00 lock_inode>) [0 lock_inode S1 A8])
         (const_int 16 [0x10])) "fs/inode.c":108:5 812 {*call}
      (nil)
     (nil))
@@ -1550,7 +1550,7 @@ Dataflow summary:
                 (const_int 44 [0x2c])) [5 inode+0 S4 A32])) "fs/inode.c":110:9 54 {*pushsi2}
      (expr_list:REG_ARGS_SIZE (const_int 16 [0x10])
         (nil)))
-(call_insn 22 21 23 4 (call (mem:QI (symbol_ref:SI ("unlock_inode") [flags 0x3]  <function_decl 0x7341ee540100 unlock_inode>) [0 unlock_inode S1 A8])
+(call_insn 22 21 23 4 (call (mem:QI (symbol_ref:SI ("unlock_inode") [flags 0x3]  <function_decl 0x748ea6b40100 unlock_inode>) [0 unlock_inode S1 A8])
         (const_int 16 [0x10])) "fs/inode.c":110:9 812 {*call}
      (nil)
     (nil))
@@ -1593,7 +1593,7 @@ Dataflow summary:
      (expr_list:REG_ARGS_SIZE (const_int 16 [0x10])
         (nil)))
 (call_insn 34 32 35 5 (set (reg:SI 0 ax)
-        (call (mem:QI (symbol_ref:SI ("get_super") [flags 0x41]  <function_decl 0x7341ee510000 get_super>) [0 get_super S1 A8])
+        (call (mem:QI (symbol_ref:SI ("get_super") [flags 0x41]  <function_decl 0x748ea6b10000 get_super>) [0 get_super S1 A8])
             (const_int 16 [0x10]))) "fs/inode.c":113:16 823 {*call_value}
      (nil)
     (expr_list (use (reg:SI 3 bx))
@@ -1634,15 +1634,15 @@ Dataflow summary:
 (insn 42 41 43 6 (set (reg/f:SI 0 ax [114])
         (plus:SI (reg:SI 3 bx [82])
             (const:SI (unspec:SI [
-                        (symbol_ref/f:SI ("*.LC2") [flags 0x2]  <var_decl 0x7341ee5b7510 *.LC2>)
+                        (symbol_ref/f:SI ("*.LC2") [flags 0x2]  <var_decl 0x748ea6bb7510 *.LC2>)
                     ] UNSPEC_GOTOFF)))) "fs/inode.c":114:9 205 {*leasi}
-     (expr_list:REG_EQUAL (symbol_ref/f:SI ("*.LC2") [flags 0x2]  <var_decl 0x7341ee5b7510 *.LC2>)
+     (expr_list:REG_EQUAL (symbol_ref/f:SI ("*.LC2") [flags 0x2]  <var_decl 0x748ea6bb7510 *.LC2>)
         (nil)))
 (insn 43 42 45 6 (set (mem/f:SI (pre_dec:SI (reg/f:SI 7 sp)) [10  S4 A32])
         (reg/f:SI 0 ax [114])) "fs/inode.c":114:9 54 {*pushsi2}
      (expr_list:REG_ARGS_SIZE (const_int 16 [0x10])
         (nil)))
-(call_insn 45 43 46 6 (call (mem:QI (symbol_ref:SI ("panic") [flags 0x41]  <function_decl 0x7341ee538700 panic>) [0 panic S1 A8])
+(call_insn 45 43 46 6 (call (mem:QI (symbol_ref:SI ("panic") [flags 0x41]  <function_decl 0x748ea6b38700 panic>) [0 panic S1 A8])
         (const_int 16 [0x10])) "fs/inode.c":114:9 812 {*call}
      (nil)
     (expr_list (use (reg:SI 3 bx))
@@ -1763,7 +1763,7 @@ Dataflow summary:
      (expr_list:REG_ARGS_SIZE (const_int 16 [0x10])
         (nil)))
 (call_insn 73 71 74 7 (set (reg:SI 0 ax)
-        (call (mem:QI (symbol_ref:SI ("bread") [flags 0x41]  <function_decl 0x7341ee510100 bread>) [0 bread S1 A8])
+        (call (mem:QI (symbol_ref:SI ("bread") [flags 0x41]  <function_decl 0x748ea6b10100 bread>) [0 bread S1 A8])
             (const_int 16 [0x10]))) "fs/inode.c":117:16 823 {*call_value}
      (nil)
     (expr_list (use (reg:SI 3 bx))
@@ -1804,15 +1804,15 @@ Dataflow summary:
 (insn 81 80 82 8 (set (reg/f:SI 0 ax [120])
         (plus:SI (reg:SI 3 bx [82])
             (const:SI (unspec:SI [
-                        (symbol_ref/f:SI ("*.LC3") [flags 0x2]  <var_decl 0x7341ee5b75a0 *.LC3>)
+                        (symbol_ref/f:SI ("*.LC3") [flags 0x2]  <var_decl 0x748ea6bb75a0 *.LC3>)
                     ] UNSPEC_GOTOFF)))) "fs/inode.c":118:9 205 {*leasi}
-     (expr_list:REG_EQUAL (symbol_ref/f:SI ("*.LC3") [flags 0x2]  <var_decl 0x7341ee5b75a0 *.LC3>)
+     (expr_list:REG_EQUAL (symbol_ref/f:SI ("*.LC3") [flags 0x2]  <var_decl 0x748ea6bb75a0 *.LC3>)
         (nil)))
 (insn 82 81 84 8 (set (mem/f:SI (pre_dec:SI (reg/f:SI 7 sp)) [10  S4 A32])
         (reg/f:SI 0 ax [120])) "fs/inode.c":118:9 54 {*pushsi2}
      (expr_list:REG_ARGS_SIZE (const_int 16 [0x10])
         (nil)))
-(call_insn 84 82 85 8 (call (mem:QI (symbol_ref:SI ("panic") [flags 0x41]  <function_decl 0x7341ee538700 panic>) [0 panic S1 A8])
+(call_insn 84 82 85 8 (call (mem:QI (symbol_ref:SI ("panic") [flags 0x41]  <function_decl 0x748ea6b38700 panic>) [0 panic S1 A8])
         (const_int 16 [0x10])) "fs/inode.c":118:9 812 {*call}
      (nil)
     (expr_list (use (reg:SI 3 bx))
@@ -1968,7 +1968,7 @@ Dataflow summary:
                 (const_int 16 [0x10])) [7 bh+0 S4 A32])) "fs/inode.c":124:5 54 {*pushsi2}
      (expr_list:REG_ARGS_SIZE (const_int 16 [0x10])
         (nil)))
-(call_insn 122 120 123 9 (call (mem:QI (symbol_ref:SI ("brelse") [flags 0x41]  <function_decl 0x7341ee510200 brelse>) [0 brelse S1 A8])
+(call_insn 122 120 123 9 (call (mem:QI (symbol_ref:SI ("brelse") [flags 0x41]  <function_decl 0x748ea6b10200 brelse>) [0 brelse S1 A8])
         (const_int 16 [0x10])) "fs/inode.c":124:5 812 {*call}
      (nil)
     (expr_list (use (reg:SI 3 bx))
@@ -1994,7 +1994,7 @@ Dataflow summary:
                 (const_int 44 [0x2c])) [5 inode+0 S4 A32])) "fs/inode.c":125:5 54 {*pushsi2}
      (expr_list:REG_ARGS_SIZE (const_int 16 [0x10])
         (nil)))
-(call_insn 126 125 127 9 (call (mem:QI (symbol_ref:SI ("unlock_inode") [flags 0x3]  <function_decl 0x7341ee540100 unlock_inode>) [0 unlock_inode S1 A8])
+(call_insn 126 125 127 9 (call (mem:QI (symbol_ref:SI ("unlock_inode") [flags 0x3]  <function_decl 0x748ea6b40100 unlock_inode>) [0 unlock_inode S1 A8])
         (const_int 16 [0x10])) "fs/inode.c":125:5 812 {*call}
      (nil)
     (nil))
@@ -2080,9 +2080,9 @@ Dataflow summary:
 (insn 5 2 6 2 (set (reg/f:SI 0 ax [85])
         (plus:SI (reg:SI 0 ax [82])
             (const:SI (unspec:SI [
-                        (symbol_ref:SI ("inode_table") [flags 0x2]  <var_decl 0x7341ef90aea0 inode_table>)
+                        (symbol_ref:SI ("inode_table") [flags 0x2]  <var_decl 0x748ea80cdea0 inode_table>)
                     ] UNSPEC_GOTOFF)))) "fs/inode.c":133:11 205 {*leasi}
-     (expr_list:REG_EQUAL (symbol_ref:SI ("inode_table") [flags 0x2]  <var_decl 0x7341ef90aea0 inode_table>)
+     (expr_list:REG_EQUAL (symbol_ref:SI ("inode_table") [flags 0x2]  <var_decl 0x748ea80cdea0 inode_table>)
         (nil)))
 (insn 6 5 7 2 (set (mem/f/c:SI (plus:SI (reg/f:SI 7 sp)
                 (const_int 8 [0x8])) [5 inode+0 S4 A32])
@@ -2112,7 +2112,7 @@ Dataflow summary:
                 (const_int 20 [0x14])) [5 inode+0 S4 A32])) "fs/inode.c":135:8 54 {*pushsi2}
      (expr_list:REG_ARGS_SIZE (const_int 16 [0x10])
         (nil)))
-(call_insn 13 12 14 3 (call (mem:QI (symbol_ref:SI ("wait_on_inode") [flags 0x3]  <function_decl 0x7341ee540d00 wait_on_inode>) [0 wait_on_inode S1 A8])
+(call_insn 13 12 14 3 (call (mem:QI (symbol_ref:SI ("wait_on_inode") [flags 0x3]  <function_decl 0x748ea6b40d00 wait_on_inode>) [0 wait_on_inode S1 A8])
         (const_int 16 [0x10])) "fs/inode.c":135:8 812 {*call}
      (nil)
     (nil))
@@ -2177,7 +2177,7 @@ Dataflow summary:
                 (const_int 20 [0x14])) [5 inode+0 S4 A32])) "fs/inode.c":137:11 54 {*pushsi2}
      (expr_list:REG_ARGS_SIZE (const_int 16 [0x10])
         (nil)))
-(call_insn 27 26 28 5 (call (mem:QI (symbol_ref:SI ("write_inode") [flags 0x3]  <function_decl 0x7341ee540c00 write_inode>) [0 write_inode S1 A8])
+(call_insn 27 26 28 5 (call (mem:QI (symbol_ref:SI ("write_inode") [flags 0x3]  <function_decl 0x748ea6b40c00 write_inode>) [0 write_inode S1 A8])
         (const_int 16 [0x10])) "fs/inode.c":137:11 812 {*call}
      (nil)
     (nil))
@@ -2314,7 +2314,7 @@ Dataflow summary:
 (insn 10 9 11 4 (set (reg/f:SI 0 ax [orig:83 last_inode.0_1 ] [83])
         (mem/f/c:SI (plus:SI (reg:SI 3 bx [82])
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("last_inode.0") [flags 0x2]  <var_decl 0x7341ee52ecf0 last_inode>)
+                            (symbol_ref:SI ("last_inode.0") [flags 0x2]  <var_decl 0x748ea6b2ecf0 last_inode>)
                         ] UNSPEC_GOTOFF))) [5 last_inode+0 S4 A32])) "fs/inode.c":150:17 75 {*movsi_internal}
      (nil))
 (insn 11 10 12 4 (parallel [
@@ -2326,23 +2326,23 @@ Dataflow summary:
      (nil))
 (insn 12 11 13 4 (set (mem/f/c:SI (plus:SI (reg:SI 3 bx [82])
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("last_inode.0") [flags 0x2]  <var_decl 0x7341ee52ecf0 last_inode>)
+                            (symbol_ref:SI ("last_inode.0") [flags 0x2]  <var_decl 0x748ea6b2ecf0 last_inode>)
                         ] UNSPEC_GOTOFF))) [5 last_inode+0 S4 A32])
         (reg/f:SI 0 ax [orig:84 _2 ] [84])) "fs/inode.c":150:16 75 {*movsi_internal}
      (nil))
 (insn 13 12 14 4 (set (reg/f:SI 1 dx [orig:85 last_inode.1_3 ] [85])
         (mem/f/c:SI (plus:SI (reg:SI 3 bx [82])
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("last_inode.0") [flags 0x2]  <var_decl 0x7341ee52ecf0 last_inode>)
+                            (symbol_ref:SI ("last_inode.0") [flags 0x2]  <var_decl 0x748ea6b2ecf0 last_inode>)
                         ] UNSPEC_GOTOFF))) [5 last_inode+0 S4 A32])) "fs/inode.c":150:17 75 {*movsi_internal}
      (nil))
 (insn 14 13 15 4 (set (reg/f:SI 0 ax [orig:86 _4 ] [86])
         (plus:SI (reg:SI 3 bx [82])
             (const:SI (plus:SI (unspec:SI [
-                            (symbol_ref:SI ("inode_table") [flags 0x2]  <var_decl 0x7341ef90aea0 inode_table>)
+                            (symbol_ref:SI ("inode_table") [flags 0x2]  <var_decl 0x748ea80cdea0 inode_table>)
                         ] UNSPEC_GOTOFF)
                     (const_int 1792 [0x700]))))) "fs/inode.c":150:45 205 {*leasi}
-     (expr_list:REG_EQUAL (const:SI (plus:SI (symbol_ref:SI ("inode_table") [flags 0x2]  <var_decl 0x7341ef90aea0 inode_table>)
+     (expr_list:REG_EQUAL (const:SI (plus:SI (symbol_ref:SI ("inode_table") [flags 0x2]  <var_decl 0x748ea80cdea0 inode_table>)
                 (const_int 1792 [0x700])))
         (nil)))
 (insn 15 14 16 4 (set (reg:CC 17 flags)
@@ -2360,13 +2360,13 @@ Dataflow summary:
 (insn 18 17 19 5 (set (reg/f:SI 0 ax [99])
         (plus:SI (reg:SI 3 bx [82])
             (const:SI (unspec:SI [
-                        (symbol_ref:SI ("inode_table") [flags 0x2]  <var_decl 0x7341ef90aea0 inode_table>)
+                        (symbol_ref:SI ("inode_table") [flags 0x2]  <var_decl 0x748ea80cdea0 inode_table>)
                     ] UNSPEC_GOTOFF)))) "fs/inode.c":151:28 205 {*leasi}
-     (expr_list:REG_EQUAL (symbol_ref:SI ("inode_table") [flags 0x2]  <var_decl 0x7341ef90aea0 inode_table>)
+     (expr_list:REG_EQUAL (symbol_ref:SI ("inode_table") [flags 0x2]  <var_decl 0x748ea80cdea0 inode_table>)
         (nil)))
 (insn 19 18 20 5 (set (mem/f/c:SI (plus:SI (reg:SI 3 bx [82])
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("last_inode.0") [flags 0x2]  <var_decl 0x7341ee52ecf0 last_inode>)
+                            (symbol_ref:SI ("last_inode.0") [flags 0x2]  <var_decl 0x748ea6b2ecf0 last_inode>)
                         ] UNSPEC_GOTOFF))) [5 last_inode+0 S4 A32])
         (reg/f:SI 0 ax [99])) "fs/inode.c":151:28 75 {*movsi_internal}
      (nil))
@@ -2375,7 +2375,7 @@ Dataflow summary:
 (insn 22 21 23 6 (set (reg/f:SI 0 ax [orig:87 last_inode.2_5 ] [87])
         (mem/f/c:SI (plus:SI (reg:SI 3 bx [82])
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("last_inode.0") [flags 0x2]  <var_decl 0x7341ee52ecf0 last_inode>)
+                            (symbol_ref:SI ("last_inode.0") [flags 0x2]  <var_decl 0x748ea6b2ecf0 last_inode>)
                         ] UNSPEC_GOTOFF))) [5 last_inode+0 S4 A32])) "fs/inode.c":152:28 75 {*movsi_internal}
      (nil))
 (insn 23 22 24 6 (set (reg:HI 0 ax [orig:88 _6 ] [88])
@@ -2397,7 +2397,7 @@ Dataflow summary:
 (insn 27 26 28 7 (set (reg/f:SI 0 ax [100])
         (mem/f/c:SI (plus:SI (reg:SI 3 bx [82])
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("last_inode.0") [flags 0x2]  <var_decl 0x7341ee52ecf0 last_inode>)
+                            (symbol_ref:SI ("last_inode.0") [flags 0x2]  <var_decl 0x748ea6b2ecf0 last_inode>)
                         ] UNSPEC_GOTOFF))) [5 last_inode+0 S4 A32])) "fs/inode.c":153:23 75 {*movsi_internal}
      (nil))
 (insn 28 27 29 7 (set (mem/f/c:SI (plus:SI (reg/f:SI 7 sp)
@@ -2511,7 +2511,7 @@ Dataflow summary:
 (insn 59 58 60 15 (set (reg:SI 1 dx [104])
         (plus:SI (reg:SI 3 bx [82])
             (const:SI (plus:SI (unspec:SI [
-                            (symbol_ref:SI ("inode_table") [flags 0x2]  <var_decl 0x7341ef90aea0 inode_table>)
+                            (symbol_ref:SI ("inode_table") [flags 0x2]  <var_decl 0x748ea80cdea0 inode_table>)
                         ] UNSPEC_GOTOFF)
                     (const_int 14 [0xe]))))) "fs/inode.c":161:38 205 {*leasi}
      (nil))
@@ -2549,7 +2549,7 @@ Dataflow summary:
 (insn 66 65 67 15 (set (reg:SI 2 cx [109])
         (plus:SI (reg:SI 3 bx [82])
             (const:SI (plus:SI (unspec:SI [
-                            (symbol_ref:SI ("inode_table") [flags 0x2]  <var_decl 0x7341ef90aea0 inode_table>)
+                            (symbol_ref:SI ("inode_table") [flags 0x2]  <var_decl 0x748ea80cdea0 inode_table>)
                         ] UNSPEC_GOTOFF)
                     (const_int 12 [0xc]))))) "fs/inode.c":160:52 205 {*leasi}
      (nil))
@@ -2599,16 +2599,16 @@ Dataflow summary:
 (insn 75 74 76 15 (set (reg/f:SI 0 ax [113])
         (plus:SI (reg:SI 3 bx [82])
             (const:SI (unspec:SI [
-                        (symbol_ref/f:SI ("*.LC4") [flags 0x2]  <var_decl 0x7341ee5b76c0 *.LC4>)
+                        (symbol_ref/f:SI ("*.LC4") [flags 0x2]  <var_decl 0x748ea6bb76c0 *.LC4>)
                     ] UNSPEC_GOTOFF)))) "fs/inode.c":160:17 205 {*leasi}
-     (expr_list:REG_EQUAL (symbol_ref/f:SI ("*.LC4") [flags 0x2]  <var_decl 0x7341ee5b76c0 *.LC4>)
+     (expr_list:REG_EQUAL (symbol_ref/f:SI ("*.LC4") [flags 0x2]  <var_decl 0x748ea6bb76c0 *.LC4>)
         (nil)))
 (insn 76 75 78 15 (set (mem/f:SI (pre_dec:SI (reg/f:SI 7 sp)) [10  S4 A32])
         (reg/f:SI 0 ax [113])) "fs/inode.c":160:17 54 {*pushsi2}
      (expr_list:REG_ARGS_SIZE (const_int 16 [0x10])
         (nil)))
 (call_insn 78 76 79 15 (set (reg:SI 0 ax)
-        (call (mem:QI (symbol_ref:SI ("printk") [flags 0x41]  <function_decl 0x7341ee538f00 printk>) [0 printk S1 A8])
+        (call (mem:QI (symbol_ref:SI ("printk") [flags 0x41]  <function_decl 0x748ea6b38f00 printk>) [0 printk S1 A8])
             (const_int 16 [0x10]))) "fs/inode.c":160:17 823 {*call_value}
      (nil)
     (expr_list (use (reg:SI 3 bx))
@@ -2656,15 +2656,15 @@ Dataflow summary:
 (insn 90 89 91 17 (set (reg/f:SI 0 ax [114])
         (plus:SI (reg:SI 3 bx [82])
             (const:SI (unspec:SI [
-                        (symbol_ref/f:SI ("*.LC5") [flags 0x2]  <var_decl 0x7341ee5b7750 *.LC5>)
+                        (symbol_ref/f:SI ("*.LC5") [flags 0x2]  <var_decl 0x748ea6bb7750 *.LC5>)
                     ] UNSPEC_GOTOFF)))) "fs/inode.c":162:17 205 {*leasi}
-     (expr_list:REG_EQUAL (symbol_ref/f:SI ("*.LC5") [flags 0x2]  <var_decl 0x7341ee5b7750 *.LC5>)
+     (expr_list:REG_EQUAL (symbol_ref/f:SI ("*.LC5") [flags 0x2]  <var_decl 0x748ea6bb7750 *.LC5>)
         (nil)))
 (insn 91 90 93 17 (set (mem/f:SI (pre_dec:SI (reg/f:SI 7 sp)) [10  S4 A32])
         (reg/f:SI 0 ax [114])) "fs/inode.c":162:17 54 {*pushsi2}
      (expr_list:REG_ARGS_SIZE (const_int 16 [0x10])
         (nil)))
-(call_insn 93 91 94 17 (call (mem:QI (symbol_ref:SI ("panic") [flags 0x41]  <function_decl 0x7341ee538700 panic>) [0 panic S1 A8])
+(call_insn 93 91 94 17 (call (mem:QI (symbol_ref:SI ("panic") [flags 0x41]  <function_decl 0x748ea6b38700 panic>) [0 panic S1 A8])
         (const_int 16 [0x10])) "fs/inode.c":162:17 812 {*call}
      (nil)
     (expr_list (use (reg:SI 3 bx))
@@ -2692,7 +2692,7 @@ Dataflow summary:
                 (const_int 24 [0x18])) [5 inode+0 S4 A32])) "fs/inode.c":164:9 54 {*pushsi2}
      (expr_list:REG_ARGS_SIZE (const_int 16 [0x10])
         (nil)))
-(call_insn 99 98 100 18 (call (mem:QI (symbol_ref:SI ("wait_on_inode") [flags 0x3]  <function_decl 0x7341ee540d00 wait_on_inode>) [0 wait_on_inode S1 A8])
+(call_insn 99 98 100 18 (call (mem:QI (symbol_ref:SI ("wait_on_inode") [flags 0x3]  <function_decl 0x748ea6b40d00 wait_on_inode>) [0 wait_on_inode S1 A8])
         (const_int 16 [0x10])) "fs/inode.c":164:9 812 {*call}
      (nil)
     (nil))
@@ -2724,7 +2724,7 @@ Dataflow summary:
                 (const_int 24 [0x18])) [5 inode+0 S4 A32])) "fs/inode.c":166:13 54 {*pushsi2}
      (expr_list:REG_ARGS_SIZE (const_int 16 [0x10])
         (nil)))
-(call_insn 106 105 107 19 (call (mem:QI (symbol_ref:SI ("write_inode") [flags 0x3]  <function_decl 0x7341ee540c00 write_inode>) [0 write_inode S1 A8])
+(call_insn 106 105 107 19 (call (mem:QI (symbol_ref:SI ("write_inode") [flags 0x3]  <function_decl 0x748ea6b40c00 write_inode>) [0 write_inode S1 A8])
         (const_int 16 [0x10])) "fs/inode.c":166:13 812 {*call}
      (nil)
     (nil))
@@ -2749,7 +2749,7 @@ Dataflow summary:
                 (const_int 24 [0x18])) [5 inode+0 S4 A32])) "fs/inode.c":167:13 54 {*pushsi2}
      (expr_list:REG_ARGS_SIZE (const_int 16 [0x10])
         (nil)))
-(call_insn 110 109 111 19 (call (mem:QI (symbol_ref:SI ("wait_on_inode") [flags 0x3]  <function_decl 0x7341ee540d00 wait_on_inode>) [0 wait_on_inode S1 A8])
+(call_insn 110 109 111 19 (call (mem:QI (symbol_ref:SI ("wait_on_inode") [flags 0x3]  <function_decl 0x748ea6b40d00 wait_on_inode>) [0 wait_on_inode S1 A8])
         (const_int 16 [0x10])) "fs/inode.c":167:13 812 {*call}
      (nil)
     (nil))
@@ -2825,7 +2825,7 @@ Dataflow summary:
      (expr_list:REG_ARGS_SIZE (const_int 16 [0x10])
         (nil)))
 (call_insn 131 129 132 22 (set (reg:SI 0 ax)
-        (call (mem:QI (symbol_ref:SI ("memset") [flags 0x41]  <function_decl 0x7341ee540a00 memset>) [0 memset S1 A8])
+        (call (mem:QI (symbol_ref:SI ("memset") [flags 0x41]  <function_decl 0x748ea6b40a00 memset>) [0 memset S1 A8])
             (const_int 16 [0x10]))) "fs/inode.c":170:5 823 {*call_value}
      (nil)
     (expr_list (use (reg:SI 3 bx))
@@ -2937,7 +2937,7 @@ Dataflow summary:
                 (const_int 44 [0x2c])) [5 inode+0 S4 A32])) "fs/inode.c":181:5 54 {*pushsi2}
      (expr_list:REG_ARGS_SIZE (const_int 16 [0x10])
         (nil)))
-(call_insn 7 6 8 2 (call (mem:QI (symbol_ref:SI ("lock_inode") [flags 0x3]  <function_decl 0x7341ee540f00 lock_inode>) [0 lock_inode S1 A8])
+(call_insn 7 6 8 2 (call (mem:QI (symbol_ref:SI ("lock_inode") [flags 0x3]  <function_decl 0x748ea6b40f00 lock_inode>) [0 lock_inode S1 A8])
         (const_int 16 [0x10])) "fs/inode.c":181:5 812 {*call}
      (nil)
     (nil))
@@ -2973,7 +2973,7 @@ Dataflow summary:
      (expr_list:REG_ARGS_SIZE (const_int 16 [0x10])
         (nil)))
 (call_insn 15 13 16 2 (set (reg:SI 0 ax)
-        (call (mem:QI (symbol_ref:SI ("get_super") [flags 0x41]  <function_decl 0x7341ee510000 get_super>) [0 get_super S1 A8])
+        (call (mem:QI (symbol_ref:SI ("get_super") [flags 0x41]  <function_decl 0x748ea6b10000 get_super>) [0 get_super S1 A8])
             (const_int 16 [0x10]))) "fs/inode.c":182:16 823 {*call_value}
      (nil)
     (expr_list (use (reg:SI 3 bx))
@@ -3014,15 +3014,15 @@ Dataflow summary:
 (insn 23 22 24 3 (set (reg/f:SI 0 ax [110])
         (plus:SI (reg:SI 3 bx [82])
             (const:SI (unspec:SI [
-                        (symbol_ref/f:SI ("*.LC6") [flags 0x2]  <var_decl 0x7341ee5b7870 *.LC6>)
+                        (symbol_ref/f:SI ("*.LC6") [flags 0x2]  <var_decl 0x748ea6bb7870 *.LC6>)
                     ] UNSPEC_GOTOFF)))) "fs/inode.c":183:9 205 {*leasi}
-     (expr_list:REG_EQUAL (symbol_ref/f:SI ("*.LC6") [flags 0x2]  <var_decl 0x7341ee5b7870 *.LC6>)
+     (expr_list:REG_EQUAL (symbol_ref/f:SI ("*.LC6") [flags 0x2]  <var_decl 0x748ea6bb7870 *.LC6>)
         (nil)))
 (insn 24 23 26 3 (set (mem/f:SI (pre_dec:SI (reg/f:SI 7 sp)) [10  S4 A32])
         (reg/f:SI 0 ax [110])) "fs/inode.c":183:9 54 {*pushsi2}
      (expr_list:REG_ARGS_SIZE (const_int 16 [0x10])
         (nil)))
-(call_insn 26 24 27 3 (call (mem:QI (symbol_ref:SI ("panic") [flags 0x41]  <function_decl 0x7341ee538700 panic>) [0 panic S1 A8])
+(call_insn 26 24 27 3 (call (mem:QI (symbol_ref:SI ("panic") [flags 0x41]  <function_decl 0x748ea6b38700 panic>) [0 panic S1 A8])
         (const_int 16 [0x10])) "fs/inode.c":183:9 812 {*call}
      (nil)
     (expr_list (use (reg:SI 3 bx))
@@ -3143,7 +3143,7 @@ Dataflow summary:
      (expr_list:REG_ARGS_SIZE (const_int 16 [0x10])
         (nil)))
 (call_insn 54 52 55 4 (set (reg:SI 0 ax)
-        (call (mem:QI (symbol_ref:SI ("bread") [flags 0x41]  <function_decl 0x7341ee510100 bread>) [0 bread S1 A8])
+        (call (mem:QI (symbol_ref:SI ("bread") [flags 0x41]  <function_decl 0x748ea6b10100 bread>) [0 bread S1 A8])
             (const_int 16 [0x10]))) "fs/inode.c":186:16 823 {*call_value}
      (nil)
     (expr_list (use (reg:SI 3 bx))
@@ -3184,15 +3184,15 @@ Dataflow summary:
 (insn 62 61 63 5 (set (reg/f:SI 0 ax [116])
         (plus:SI (reg:SI 3 bx [82])
             (const:SI (unspec:SI [
-                        (symbol_ref/f:SI ("*.LC7") [flags 0x2]  <var_decl 0x7341ee5b7900 *.LC7>)
+                        (symbol_ref/f:SI ("*.LC7") [flags 0x2]  <var_decl 0x748ea6bb7900 *.LC7>)
                     ] UNSPEC_GOTOFF)))) "fs/inode.c":187:9 205 {*leasi}
-     (expr_list:REG_EQUAL (symbol_ref/f:SI ("*.LC7") [flags 0x2]  <var_decl 0x7341ee5b7900 *.LC7>)
+     (expr_list:REG_EQUAL (symbol_ref/f:SI ("*.LC7") [flags 0x2]  <var_decl 0x748ea6bb7900 *.LC7>)
         (nil)))
 (insn 63 62 65 5 (set (mem/f:SI (pre_dec:SI (reg/f:SI 7 sp)) [10  S4 A32])
         (reg/f:SI 0 ax [116])) "fs/inode.c":187:9 54 {*pushsi2}
      (expr_list:REG_ARGS_SIZE (const_int 16 [0x10])
         (nil)))
-(call_insn 65 63 66 5 (call (mem:QI (symbol_ref:SI ("panic") [flags 0x41]  <function_decl 0x7341ee538700 panic>) [0 panic S1 A8])
+(call_insn 65 63 66 5 (call (mem:QI (symbol_ref:SI ("panic") [flags 0x41]  <function_decl 0x748ea6b38700 panic>) [0 panic S1 A8])
         (const_int 16 [0x10])) "fs/inode.c":187:9 812 {*call}
      (nil)
     (expr_list (use (reg:SI 3 bx))
@@ -3332,7 +3332,7 @@ Dataflow summary:
                 (const_int 16 [0x10])) [7 bh+0 S4 A32])) "fs/inode.c":191:5 54 {*pushsi2}
      (expr_list:REG_ARGS_SIZE (const_int 16 [0x10])
         (nil)))
-(call_insn 99 97 100 6 (call (mem:QI (symbol_ref:SI ("brelse") [flags 0x41]  <function_decl 0x7341ee510200 brelse>) [0 brelse S1 A8])
+(call_insn 99 97 100 6 (call (mem:QI (symbol_ref:SI ("brelse") [flags 0x41]  <function_decl 0x748ea6b10200 brelse>) [0 brelse S1 A8])
         (const_int 16 [0x10])) "fs/inode.c":191:5 812 {*call}
      (nil)
     (expr_list (use (reg:SI 3 bx))
@@ -3358,7 +3358,7 @@ Dataflow summary:
                 (const_int 44 [0x2c])) [5 inode+0 S4 A32])) "fs/inode.c":192:5 54 {*pushsi2}
      (expr_list:REG_ARGS_SIZE (const_int 16 [0x10])
         (nil)))
-(call_insn 103 102 104 6 (call (mem:QI (symbol_ref:SI ("unlock_inode") [flags 0x3]  <function_decl 0x7341ee540100 unlock_inode>) [0 unlock_inode S1 A8])
+(call_insn 103 102 104 6 (call (mem:QI (symbol_ref:SI ("unlock_inode") [flags 0x3]  <function_decl 0x748ea6b40100 unlock_inode>) [0 unlock_inode S1 A8])
         (const_int 16 [0x10])) "fs/inode.c":192:5 812 {*call}
      (nil)
     (nil))
@@ -3469,15 +3469,15 @@ Dataflow summary:
 (insn 9 8 10 3 (set (reg/f:SI 0 ax [101])
         (plus:SI (reg:SI 3 bx [82])
             (const:SI (unspec:SI [
-                        (symbol_ref/f:SI ("*.LC8") [flags 0x2]  <var_decl 0x7341ee5b7ab0 *.LC8>)
+                        (symbol_ref/f:SI ("*.LC8") [flags 0x2]  <var_decl 0x748ea6bb7ab0 *.LC8>)
                     ] UNSPEC_GOTOFF)))) "fs/inode.c":200:9 205 {*leasi}
-     (expr_list:REG_EQUAL (symbol_ref/f:SI ("*.LC8") [flags 0x2]  <var_decl 0x7341ee5b7ab0 *.LC8>)
+     (expr_list:REG_EQUAL (symbol_ref/f:SI ("*.LC8") [flags 0x2]  <var_decl 0x748ea6bb7ab0 *.LC8>)
         (nil)))
 (insn 10 9 12 3 (set (mem/f:SI (pre_dec:SI (reg/f:SI 7 sp)) [10  S4 A32])
         (reg/f:SI 0 ax [101])) "fs/inode.c":200:9 54 {*pushsi2}
      (expr_list:REG_ARGS_SIZE (const_int 16 [0x10])
         (nil)))
-(call_insn 12 10 13 3 (call (mem:QI (symbol_ref:SI ("panic") [flags 0x41]  <function_decl 0x7341ee538700 panic>) [0 panic S1 A8])
+(call_insn 12 10 13 3 (call (mem:QI (symbol_ref:SI ("panic") [flags 0x41]  <function_decl 0x748ea6b38700 panic>) [0 panic S1 A8])
         (const_int 16 [0x10])) "fs/inode.c":200:9 812 {*call}
      (nil)
     (expr_list (use (reg:SI 3 bx))
@@ -3493,7 +3493,7 @@ Dataflow summary:
 (code_label 14 13 15 4 56 (nil) [1 uses])
 (note 15 14 16 4 [bb 4] NOTE_INSN_BASIC_BLOCK)
 (call_insn 16 15 18 4 (set (reg:SI 0 ax)
-        (call (mem:QI (symbol_ref:SI ("get_empty_inode") [flags 0x3]  <function_decl 0x7341ee515300 get_empty_inode>) [0 get_empty_inode S1 A8])
+        (call (mem:QI (symbol_ref:SI ("get_empty_inode") [flags 0x3]  <function_decl 0x748ea6b15300 get_empty_inode>) [0 get_empty_inode S1 A8])
             (const_int 0 [0]))) "fs/inode.c":201:13 823 {*call_value}
      (nil)
     (nil))
@@ -3504,9 +3504,9 @@ Dataflow summary:
 (insn 19 18 20 4 (set (reg/f:SI 0 ax [103])
         (plus:SI (reg:SI 3 bx [82])
             (const:SI (unspec:SI [
-                        (symbol_ref:SI ("inode_table") [flags 0x2]  <var_decl 0x7341ef90aea0 inode_table>)
+                        (symbol_ref:SI ("inode_table") [flags 0x2]  <var_decl 0x748ea80cdea0 inode_table>)
                     ] UNSPEC_GOTOFF)))) "fs/inode.c":202:11 205 {*leasi}
-     (expr_list:REG_EQUAL (symbol_ref:SI ("inode_table") [flags 0x2]  <var_decl 0x7341ef90aea0 inode_table>)
+     (expr_list:REG_EQUAL (symbol_ref:SI ("inode_table") [flags 0x2]  <var_decl 0x748ea80cdea0 inode_table>)
         (nil)))
 (insn 20 19 197 4 (set (mem/f/c:SI (plus:SI (reg/f:SI 7 sp)
                 (const_int 12 [0xc])) [5 inode+0 S4 A32])
@@ -3597,7 +3597,7 @@ Dataflow summary:
                 (const_int 24 [0x18])) [5 inode+0 S4 A32])) "fs/inode.c":208:9 54 {*pushsi2}
      (expr_list:REG_ARGS_SIZE (const_int 16 [0x10])
         (nil)))
-(call_insn 44 43 45 8 (call (mem:QI (symbol_ref:SI ("wait_on_inode") [flags 0x3]  <function_decl 0x7341ee540d00 wait_on_inode>) [0 wait_on_inode S1 A8])
+(call_insn 44 43 45 8 (call (mem:QI (symbol_ref:SI ("wait_on_inode") [flags 0x3]  <function_decl 0x748ea6b40d00 wait_on_inode>) [0 wait_on_inode S1 A8])
         (const_int 16 [0x10])) "fs/inode.c":208:9 812 {*call}
      (nil)
     (nil))
@@ -3661,9 +3661,9 @@ Dataflow summary:
 (insn 59 58 60 10 (set (reg/f:SI 0 ax [108])
         (plus:SI (reg:SI 3 bx [82])
             (const:SI (unspec:SI [
-                        (symbol_ref:SI ("inode_table") [flags 0x2]  <var_decl 0x7341ef90aea0 inode_table>)
+                        (symbol_ref:SI ("inode_table") [flags 0x2]  <var_decl 0x748ea80cdea0 inode_table>)
                     ] UNSPEC_GOTOFF)))) "fs/inode.c":210:19 205 {*leasi}
-     (expr_list:REG_EQUAL (symbol_ref:SI ("inode_table") [flags 0x2]  <var_decl 0x7341ef90aea0 inode_table>)
+     (expr_list:REG_EQUAL (symbol_ref:SI ("inode_table") [flags 0x2]  <var_decl 0x748ea80cdea0 inode_table>)
         (nil)))
 (insn 60 59 201 10 (set (mem/f/c:SI (plus:SI (reg/f:SI 7 sp)
                 (const_int 12 [0xc])) [5 inode+0 S4 A32])
@@ -3733,7 +3733,7 @@ Dataflow summary:
 (insn 79 78 80 13 (set (reg/f:SI 1 dx [112])
         (mem/u/c:SI (plus:SI (reg:SI 3 bx [82])
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("super_block") [flags 0x40]  <var_decl 0x7341ef90ae10 super_block>)
+                            (symbol_ref:SI ("super_block") [flags 0x40]  <var_decl 0x748ea80cde10 super_block>)
                         ] UNSPEC_GOT))) [14  S4 A8])) "fs/inode.c":218:35 75 {*movsi_internal}
      (nil))
 (insn 80 79 81 13 (set (reg:SI 0 ax [113])
@@ -3836,16 +3836,16 @@ Dataflow summary:
 (insn 108 107 109 19 (set (reg/f:SI 0 ax [117])
         (plus:SI (reg:SI 3 bx [82])
             (const:SI (unspec:SI [
-                        (symbol_ref/f:SI ("*.LC9") [flags 0x2]  <var_decl 0x7341ee5b7b40 *.LC9>)
+                        (symbol_ref/f:SI ("*.LC9") [flags 0x2]  <var_decl 0x748ea6bb7b40 *.LC9>)
                     ] UNSPEC_GOTOFF)))) "fs/inode.c":221:17 205 {*leasi}
-     (expr_list:REG_EQUAL (symbol_ref/f:SI ("*.LC9") [flags 0x2]  <var_decl 0x7341ee5b7b40 *.LC9>)
+     (expr_list:REG_EQUAL (symbol_ref/f:SI ("*.LC9") [flags 0x2]  <var_decl 0x748ea6bb7b40 *.LC9>)
         (nil)))
 (insn 109 108 111 19 (set (mem/f:SI (pre_dec:SI (reg/f:SI 7 sp)) [10  S4 A32])
         (reg/f:SI 0 ax [117])) "fs/inode.c":221:17 54 {*pushsi2}
      (expr_list:REG_ARGS_SIZE (const_int 16 [0x10])
         (nil)))
 (call_insn 111 109 112 19 (set (reg:SI 0 ax)
-        (call (mem:QI (symbol_ref:SI ("printk") [flags 0x41]  <function_decl 0x7341ee538f00 printk>) [0 printk S1 A8])
+        (call (mem:QI (symbol_ref:SI ("printk") [flags 0x41]  <function_decl 0x748ea6b38f00 printk>) [0 printk S1 A8])
             (const_int 16 [0x10]))) "fs/inode.c":221:17 823 {*call_value}
      (nil)
     (expr_list (use (reg:SI 3 bx))
@@ -3884,7 +3884,7 @@ Dataflow summary:
                 (const_int 16 [0x10])) [5 empty+0 S4 A32])) "fs/inode.c":223:21 54 {*pushsi2}
      (expr_list:REG_ARGS_SIZE (const_int 16 [0x10])
         (nil)))
-(call_insn 118 117 119 20 (call (mem:QI (symbol_ref:SI ("iput") [flags 0x3]  <function_decl 0x7341ee4d2d00 iput>) [0 iput S1 A8])
+(call_insn 118 117 119 20 (call (mem:QI (symbol_ref:SI ("iput") [flags 0x3]  <function_decl 0x748ea6ad2d00 iput>) [0 iput S1 A8])
         (const_int 16 [0x10])) "fs/inode.c":223:21 812 {*call}
      (nil)
     (nil))
@@ -3922,7 +3922,7 @@ Dataflow summary:
                 (const_int 24 [0x18])) [5 inode+0 S4 A32])) "fs/inode.c":226:13 54 {*pushsi2}
      (expr_list:REG_ARGS_SIZE (const_int 16 [0x10])
         (nil)))
-(call_insn 129 128 130 22 (call (mem:QI (symbol_ref:SI ("iput") [flags 0x3]  <function_decl 0x7341ee4d2d00 iput>) [0 iput S1 A8])
+(call_insn 129 128 130 22 (call (mem:QI (symbol_ref:SI ("iput") [flags 0x3]  <function_decl 0x748ea6ad2d00 iput>) [0 iput S1 A8])
         (const_int 16 [0x10])) "fs/inode.c":226:13 812 {*call}
      (nil)
     (nil))
@@ -3937,7 +3937,7 @@ Dataflow summary:
 (insn 131 130 132 22 (set (reg/f:SI 1 dx [118])
         (mem/u/c:SI (plus:SI (reg:SI 3 bx [82])
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("super_block") [flags 0x40]  <var_decl 0x7341ef90ae10 super_block>)
+                            (symbol_ref:SI ("super_block") [flags 0x40]  <var_decl 0x748ea80cde10 super_block>)
                         ] UNSPEC_GOT))) [14  S4 A8])) "fs/inode.c":227:33 75 {*movsi_internal}
      (nil))
 (insn 132 131 133 22 (set (reg:SI 0 ax [119])
@@ -3982,9 +3982,9 @@ Dataflow summary:
 (insn 140 139 141 22 (set (reg/f:SI 0 ax [124])
         (plus:SI (reg:SI 3 bx [82])
             (const:SI (unspec:SI [
-                        (symbol_ref:SI ("inode_table") [flags 0x2]  <var_decl 0x7341ef90aea0 inode_table>)
+                        (symbol_ref:SI ("inode_table") [flags 0x2]  <var_decl 0x748ea80cdea0 inode_table>)
                     ] UNSPEC_GOTOFF)))) "fs/inode.c":229:19 205 {*leasi}
-     (expr_list:REG_EQUAL (symbol_ref:SI ("inode_table") [flags 0x2]  <var_decl 0x7341ef90aea0 inode_table>)
+     (expr_list:REG_EQUAL (symbol_ref:SI ("inode_table") [flags 0x2]  <var_decl 0x748ea80cdea0 inode_table>)
         (nil)))
 (insn 141 140 207 22 (set (mem/f/c:SI (plus:SI (reg/f:SI 7 sp)
                 (const_int 12 [0xc])) [5 inode+0 S4 A32])
@@ -4023,7 +4023,7 @@ Dataflow summary:
                 (const_int 16 [0x10])) [5 empty+0 S4 A32])) "fs/inode.c":233:13 54 {*pushsi2}
      (expr_list:REG_ARGS_SIZE (const_int 16 [0x10])
         (nil)))
-(call_insn 151 150 152 24 (call (mem:QI (symbol_ref:SI ("iput") [flags 0x3]  <function_decl 0x7341ee4d2d00 iput>) [0 iput S1 A8])
+(call_insn 151 150 152 24 (call (mem:QI (symbol_ref:SI ("iput") [flags 0x3]  <function_decl 0x748ea6ad2d00 iput>) [0 iput S1 A8])
         (const_int 16 [0x10])) "fs/inode.c":233:13 812 {*call}
      (nil)
     (nil))
@@ -4051,10 +4051,10 @@ Dataflow summary:
 (insn 160 159 162 26 (set (reg/f:SI 0 ax [orig:96 _15 ] [96])
         (plus:SI (reg:SI 3 bx [82])
             (const:SI (plus:SI (unspec:SI [
-                            (symbol_ref:SI ("inode_table") [flags 0x2]  <var_decl 0x7341ef90aea0 inode_table>)
+                            (symbol_ref:SI ("inode_table") [flags 0x2]  <var_decl 0x748ea80cdea0 inode_table>)
                         ] UNSPEC_GOTOFF)
                     (const_int 1792 [0x700]))))) "fs/inode.c":203:29 205 {*leasi}
-     (expr_list:REG_EQUAL (const:SI (plus:SI (symbol_ref:SI ("inode_table") [flags 0x2]  <var_decl 0x7341ef90aea0 inode_table>)
+     (expr_list:REG_EQUAL (const:SI (plus:SI (symbol_ref:SI ("inode_table") [flags 0x2]  <var_decl 0x748ea80cdea0 inode_table>)
                 (const_int 1792 [0x700])))
         (nil)))
 (insn 162 160 163 26 (set (reg:CC 17 flags)
@@ -4144,7 +4144,7 @@ Dataflow summary:
                 (const_int 24 [0x18])) [5 inode+0 S4 A32])) "fs/inode.c":241:5 54 {*pushsi2}
      (expr_list:REG_ARGS_SIZE (const_int 16 [0x10])
         (nil)))
-(call_insn 185 184 186 29 (call (mem:QI (symbol_ref:SI ("read_inode") [flags 0x3]  <function_decl 0x7341ee548b00 read_inode>) [0 read_inode S1 A8])
+(call_insn 185 184 186 29 (call (mem:QI (symbol_ref:SI ("read_inode") [flags 0x3]  <function_decl 0x748ea6b48b00 read_inode>) [0 read_inode S1 A8])
         (const_int 16 [0x10])) "fs/inode.c":241:5 812 {*call}
      (nil)
     (nil))
@@ -4260,15 +4260,15 @@ Dataflow summary:
 (insn 11 10 12 3 (set (reg/f:SI 0 ax [171])
         (plus:SI (reg:SI 3 bx [82])
             (const:SI (unspec:SI [
-                        (symbol_ref/f:SI ("*.LC10") [flags 0x2]  <var_decl 0x7341ee5b7cf0 *.LC10>)
+                        (symbol_ref/f:SI ("*.LC10") [flags 0x2]  <var_decl 0x748ea6bb7cf0 *.LC10>)
                     ] UNSPEC_GOTOFF)))) "fs/inode.c":251:9 205 {*leasi}
-     (expr_list:REG_EQUAL (symbol_ref/f:SI ("*.LC10") [flags 0x2]  <var_decl 0x7341ee5b7cf0 *.LC10>)
+     (expr_list:REG_EQUAL (symbol_ref/f:SI ("*.LC10") [flags 0x2]  <var_decl 0x748ea6bb7cf0 *.LC10>)
         (nil)))
 (insn 12 11 14 3 (set (mem/f:SI (pre_dec:SI (reg/f:SI 7 sp)) [10  S4 A32])
         (reg/f:SI 0 ax [171])) "fs/inode.c":251:9 54 {*pushsi2}
      (expr_list:REG_ARGS_SIZE (const_int 16 [0x10])
         (nil)))
-(call_insn 14 12 15 3 (call (mem:QI (symbol_ref:SI ("panic") [flags 0x41]  <function_decl 0x7341ee538700 panic>) [0 panic S1 A8])
+(call_insn 14 12 15 3 (call (mem:QI (symbol_ref:SI ("panic") [flags 0x41]  <function_decl 0x748ea6b38700 panic>) [0 panic S1 A8])
         (const_int 16 [0x10])) "fs/inode.c":251:9 812 {*call}
      (nil)
     (expr_list (use (reg:SI 3 bx))
@@ -4307,15 +4307,15 @@ Dataflow summary:
 (insn 24 23 25 5 (set (reg/f:SI 0 ax [172])
         (plus:SI (reg:SI 3 bx [82])
             (const:SI (unspec:SI [
-                        (symbol_ref/f:SI ("*.LC11") [flags 0x2]  <var_decl 0x7341ee5b7d80 *.LC11>)
+                        (symbol_ref/f:SI ("*.LC11") [flags 0x2]  <var_decl 0x748ea6bb7d80 *.LC11>)
                     ] UNSPEC_GOTOFF)))) "fs/inode.c":253:9 205 {*leasi}
-     (expr_list:REG_EQUAL (symbol_ref/f:SI ("*.LC11") [flags 0x2]  <var_decl 0x7341ee5b7d80 *.LC11>)
+     (expr_list:REG_EQUAL (symbol_ref/f:SI ("*.LC11") [flags 0x2]  <var_decl 0x748ea6bb7d80 *.LC11>)
         (nil)))
 (insn 25 24 27 5 (set (mem/f:SI (pre_dec:SI (reg/f:SI 7 sp)) [10  S4 A32])
         (reg/f:SI 0 ax [172])) "fs/inode.c":253:9 54 {*pushsi2}
      (expr_list:REG_ARGS_SIZE (const_int 16 [0x10])
         (nil)))
-(call_insn 27 25 28 5 (call (mem:QI (symbol_ref:SI ("panic") [flags 0x41]  <function_decl 0x7341ee538700 panic>) [0 panic S1 A8])
+(call_insn 27 25 28 5 (call (mem:QI (symbol_ref:SI ("panic") [flags 0x41]  <function_decl 0x748ea6b38700 panic>) [0 panic S1 A8])
         (const_int 16 [0x10])) "fs/inode.c":253:9 812 {*call}
      (nil)
     (expr_list (use (reg:SI 3 bx))
@@ -4406,7 +4406,7 @@ Dataflow summary:
      (expr_list:REG_ARGS_SIZE (const_int 16 [0x10])
         (nil)))
 (call_insn 51 49 52 9 (set (reg:SI 0 ax)
-        (call (mem:QI (symbol_ref:SI ("new_block") [flags 0x41]  <function_decl 0x7341ee510c00 new_block>) [0 new_block S1 A8])
+        (call (mem:QI (symbol_ref:SI ("new_block") [flags 0x41]  <function_decl 0x748ea6b10c00 new_block>) [0 new_block S1 A8])
             (const_int 16 [0x10]))) "fs/inode.c":256:41 823 {*call_value}
      (nil)
     (expr_list (use (reg:SI 3 bx))
@@ -4465,7 +4465,7 @@ Dataflow summary:
 (insn 64 63 65 10 (set (reg/f:SI 0 ax [180])
         (mem/u/c:SI (plus:SI (reg:SI 3 bx [82])
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("jiffies") [flags 0x40]  <var_decl 0x7341ee52e360 jiffies>)
+                            (symbol_ref:SI ("jiffies") [flags 0x40]  <var_decl 0x748ea6b2e360 jiffies>)
                         ] UNSPEC_GOT))) [14  S4 A8])) "fs/inode.c":257:34 75 {*movsi_internal}
      (nil))
 (insn 65 64 66 10 (set (reg:SI 2 cx [orig:89 jiffies.3_7 ] [89])
@@ -4516,7 +4516,7 @@ Dataflow summary:
 (insn 71 446 72 10 (set (reg/f:SI 0 ax [185])
         (mem/u/c:SI (plus:SI (reg:SI 3 bx [82])
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("startup_time") [flags 0x40]  <var_decl 0x7341ee52e3f0 startup_time>)
+                            (symbol_ref:SI ("startup_time") [flags 0x40]  <var_decl 0x748ea6b2e3f0 startup_time>)
                         ] UNSPEC_GOT))) [14  S4 A8])) "fs/inode.c":257:34 75 {*movsi_internal}
      (nil))
 (insn 72 71 73 10 (set (reg:SI 0 ax [orig:91 startup_time.4_9 ] [91])
@@ -4653,7 +4653,7 @@ Dataflow summary:
      (expr_list:REG_ARGS_SIZE (const_int 16 [0x10])
         (nil)))
 (call_insn 109 107 110 15 (set (reg:SI 0 ax)
-        (call (mem:QI (symbol_ref:SI ("new_block") [flags 0x41]  <function_decl 0x7341ee510c00 new_block>) [0 new_block S1 A8])
+        (call (mem:QI (symbol_ref:SI ("new_block") [flags 0x41]  <function_decl 0x748ea6b10c00 new_block>) [0 new_block S1 A8])
             (const_int 16 [0x10]))) "fs/inode.c":265:37 823 {*call_value}
      (nil)
     (expr_list (use (reg:SI 3 bx))
@@ -4708,7 +4708,7 @@ Dataflow summary:
 (insn 122 121 123 16 (set (reg/f:SI 0 ax [195])
         (mem/u/c:SI (plus:SI (reg:SI 3 bx [82])
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("jiffies") [flags 0x40]  <var_decl 0x7341ee52e360 jiffies>)
+                            (symbol_ref:SI ("jiffies") [flags 0x40]  <var_decl 0x748ea6b2e360 jiffies>)
                         ] UNSPEC_GOT))) [14  S4 A8])) "fs/inode.c":267:34 75 {*movsi_internal}
      (nil))
 (insn 123 122 124 16 (set (reg:SI 2 cx [orig:101 jiffies.5_19 ] [101])
@@ -4759,7 +4759,7 @@ Dataflow summary:
 (insn 129 451 130 16 (set (reg/f:SI 0 ax [200])
         (mem/u/c:SI (plus:SI (reg:SI 3 bx [82])
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("startup_time") [flags 0x40]  <var_decl 0x7341ee52e3f0 startup_time>)
+                            (symbol_ref:SI ("startup_time") [flags 0x40]  <var_decl 0x748ea6b2e3f0 startup_time>)
                         ] UNSPEC_GOT))) [14  S4 A8])) "fs/inode.c":267:34 75 {*movsi_internal}
      (nil))
 (insn 130 129 131 16 (set (reg:SI 0 ax [orig:103 startup_time.6_21 ] [103])
@@ -4854,7 +4854,7 @@ Dataflow summary:
      (expr_list:REG_ARGS_SIZE (const_int 16 [0x10])
         (nil)))
 (call_insn 157 155 158 19 (set (reg:SI 0 ax)
-        (call (mem:QI (symbol_ref:SI ("bread") [flags 0x41]  <function_decl 0x7341ee510100 bread>) [0 bread S1 A8])
+        (call (mem:QI (symbol_ref:SI ("bread") [flags 0x41]  <function_decl 0x748ea6b10100 bread>) [0 bread S1 A8])
             (const_int 16 [0x10]))) "fs/inode.c":271:20 823 {*call_value}
      (nil)
     (expr_list (use (reg:SI 3 bx))
@@ -4979,7 +4979,7 @@ Dataflow summary:
      (expr_list:REG_ARGS_SIZE (const_int 16 [0x10])
         (nil)))
 (call_insn 189 187 190 23 (set (reg:SI 0 ax)
-        (call (mem:QI (symbol_ref:SI ("new_block") [flags 0x41]  <function_decl 0x7341ee510c00 new_block>) [0 new_block S1 A8])
+        (call (mem:QI (symbol_ref:SI ("new_block") [flags 0x41]  <function_decl 0x748ea6b10c00 new_block>) [0 new_block S1 A8])
             (const_int 16 [0x10]))) "fs/inode.c":275:22 823 {*call_value}
      (nil)
     (expr_list (use (reg:SI 3 bx))
@@ -5064,7 +5064,7 @@ Dataflow summary:
                 (const_int 20 [0x14])) [7 bh+0 S4 A32])) "fs/inode.c":279:9 54 {*pushsi2}
      (expr_list:REG_ARGS_SIZE (const_int 16 [0x10])
         (nil)))
-(call_insn 211 209 212 25 (call (mem:QI (symbol_ref:SI ("brelse") [flags 0x41]  <function_decl 0x7341ee510200 brelse>) [0 brelse S1 A8])
+(call_insn 211 209 212 25 (call (mem:QI (symbol_ref:SI ("brelse") [flags 0x41]  <function_decl 0x748ea6b10200 brelse>) [0 brelse S1 A8])
         (const_int 16 [0x10])) "fs/inode.c":279:9 812 {*call}
      (nil)
     (expr_list (use (reg:SI 3 bx))
@@ -5154,7 +5154,7 @@ Dataflow summary:
      (expr_list:REG_ARGS_SIZE (const_int 16 [0x10])
         (nil)))
 (call_insn 233 231 234 28 (set (reg:SI 0 ax)
-        (call (mem:QI (symbol_ref:SI ("new_block") [flags 0x41]  <function_decl 0x7341ee510c00 new_block>) [0 new_block S1 A8])
+        (call (mem:QI (symbol_ref:SI ("new_block") [flags 0x41]  <function_decl 0x748ea6b10c00 new_block>) [0 new_block S1 A8])
             (const_int 16 [0x10]))) "fs/inode.c":284:33 823 {*call_value}
      (nil)
     (expr_list (use (reg:SI 3 bx))
@@ -5209,7 +5209,7 @@ Dataflow summary:
 (insn 246 245 247 29 (set (reg/f:SI 0 ax [218])
         (mem/u/c:SI (plus:SI (reg:SI 3 bx [82])
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("jiffies") [flags 0x40]  <var_decl 0x7341ee52e360 jiffies>)
+                            (symbol_ref:SI ("jiffies") [flags 0x40]  <var_decl 0x748ea6b2e360 jiffies>)
                         ] UNSPEC_GOT))) [14  S4 A8])) "fs/inode.c":286:30 75 {*movsi_internal}
      (nil))
 (insn 247 246 248 29 (set (reg:SI 2 cx [orig:129 jiffies.9_47 ] [129])
@@ -5260,7 +5260,7 @@ Dataflow summary:
 (insn 253 456 254 29 (set (reg/f:SI 0 ax [223])
         (mem/u/c:SI (plus:SI (reg:SI 3 bx [82])
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("startup_time") [flags 0x40]  <var_decl 0x7341ee52e3f0 startup_time>)
+                            (symbol_ref:SI ("startup_time") [flags 0x40]  <var_decl 0x748ea6b2e3f0 startup_time>)
                         ] UNSPEC_GOT))) [14  S4 A8])) "fs/inode.c":286:30 75 {*movsi_internal}
      (nil))
 (insn 254 253 255 29 (set (reg:SI 0 ax [orig:131 startup_time.10_49 ] [131])
@@ -5355,7 +5355,7 @@ Dataflow summary:
      (expr_list:REG_ARGS_SIZE (const_int 16 [0x10])
         (nil)))
 (call_insn 281 279 282 32 (set (reg:SI 0 ax)
-        (call (mem:QI (symbol_ref:SI ("bread") [flags 0x41]  <function_decl 0x7341ee510100 bread>) [0 bread S1 A8])
+        (call (mem:QI (symbol_ref:SI ("bread") [flags 0x41]  <function_decl 0x748ea6b10100 bread>) [0 bread S1 A8])
             (const_int 16 [0x10]))) "fs/inode.c":290:16 823 {*call_value}
      (nil)
     (expr_list (use (reg:SI 3 bx))
@@ -5490,7 +5490,7 @@ Dataflow summary:
      (expr_list:REG_ARGS_SIZE (const_int 16 [0x10])
         (nil)))
 (call_insn 315 313 316 36 (set (reg:SI 0 ax)
-        (call (mem:QI (symbol_ref:SI ("new_block") [flags 0x41]  <function_decl 0x7341ee510c00 new_block>) [0 new_block S1 A8])
+        (call (mem:QI (symbol_ref:SI ("new_block") [flags 0x41]  <function_decl 0x748ea6b10c00 new_block>) [0 new_block S1 A8])
             (const_int 16 [0x10]))) "fs/inode.c":294:18 823 {*call_value}
      (nil)
     (expr_list (use (reg:SI 3 bx))
@@ -5585,7 +5585,7 @@ Dataflow summary:
                 (const_int 20 [0x14])) [7 bh+0 S4 A32])) "fs/inode.c":298:5 54 {*pushsi2}
      (expr_list:REG_ARGS_SIZE (const_int 16 [0x10])
         (nil)))
-(call_insn 339 337 340 38 (call (mem:QI (symbol_ref:SI ("brelse") [flags 0x41]  <function_decl 0x7341ee510200 brelse>) [0 brelse S1 A8])
+(call_insn 339 337 340 38 (call (mem:QI (symbol_ref:SI ("brelse") [flags 0x41]  <function_decl 0x748ea6b10200 brelse>) [0 brelse S1 A8])
         (const_int 16 [0x10])) "fs/inode.c":298:5 812 {*call}
      (nil)
     (expr_list (use (reg:SI 3 bx))
@@ -5650,7 +5650,7 @@ Dataflow summary:
      (expr_list:REG_ARGS_SIZE (const_int 16 [0x10])
         (nil)))
 (call_insn 356 354 357 40 (set (reg:SI 0 ax)
-        (call (mem:QI (symbol_ref:SI ("bread") [flags 0x41]  <function_decl 0x7341ee510100 bread>) [0 bread S1 A8])
+        (call (mem:QI (symbol_ref:SI ("bread") [flags 0x41]  <function_decl 0x748ea6b10100 bread>) [0 bread S1 A8])
             (const_int 16 [0x10]))) "fs/inode.c":301:16 823 {*call_value}
      (nil)
     (expr_list (use (reg:SI 3 bx))
@@ -5782,7 +5782,7 @@ Dataflow summary:
      (expr_list:REG_ARGS_SIZE (const_int 16 [0x10])
         (nil)))
 (call_insn 389 387 390 44 (set (reg:SI 0 ax)
-        (call (mem:QI (symbol_ref:SI ("new_block") [flags 0x41]  <function_decl 0x7341ee510c00 new_block>) [0 new_block S1 A8])
+        (call (mem:QI (symbol_ref:SI ("new_block") [flags 0x41]  <function_decl 0x748ea6b10c00 new_block>) [0 new_block S1 A8])
             (const_int 16 [0x10]))) "fs/inode.c":305:18 823 {*call_value}
      (nil)
     (expr_list (use (reg:SI 3 bx))
@@ -5874,7 +5874,7 @@ Dataflow summary:
                 (const_int 20 [0x14])) [7 bh+0 S4 A32])) "fs/inode.c":309:5 54 {*pushsi2}
      (expr_list:REG_ARGS_SIZE (const_int 16 [0x10])
         (nil)))
-(call_insn 412 410 413 46 (call (mem:QI (symbol_ref:SI ("brelse") [flags 0x41]  <function_decl 0x7341ee510200 brelse>) [0 brelse S1 A8])
+(call_insn 412 410 413 46 (call (mem:QI (symbol_ref:SI ("brelse") [flags 0x41]  <function_decl 0x748ea6b10200 brelse>) [0 brelse S1 A8])
         (const_int 16 [0x10])) "fs/inode.c":309:5 812 {*call}
      (nil)
     (expr_list (use (reg:SI 3 bx))
@@ -5987,7 +5987,7 @@ Dataflow summary:
      (expr_list:REG_ARGS_SIZE (const_int 16 [0x10])
         (nil)))
 (call_insn 9 8 10 2 (set (reg:SI 0 ax)
-        (call (mem:QI (symbol_ref:SI ("_bmap") [flags 0x3]  <function_decl 0x7341ee548f00 _bmap>) [0 _bmap S1 A8])
+        (call (mem:QI (symbol_ref:SI ("_bmap") [flags 0x3]  <function_decl 0x748ea6b48f00 _bmap>) [0 _bmap S1 A8])
             (const_int 16 [0x10]))) "fs/inode.c":315:12 823 {*call_value}
      (nil)
     (nil))
@@ -6086,7 +6086,7 @@ Dataflow summary:
      (expr_list:REG_ARGS_SIZE (const_int 16 [0x10])
         (nil)))
 (call_insn 9 8 10 2 (set (reg:SI 0 ax)
-        (call (mem:QI (symbol_ref:SI ("_bmap") [flags 0x3]  <function_decl 0x7341ee548f00 _bmap>) [0 _bmap S1 A8])
+        (call (mem:QI (symbol_ref:SI ("_bmap") [flags 0x3]  <function_decl 0x748ea6b48f00 _bmap>) [0 _bmap S1 A8])
             (const_int 16 [0x10]))) "fs/inode.c":320:12 823 {*call_value}
      (nil)
     (nil))
@@ -6166,7 +6166,7 @@ Dataflow summary:
         (nil)))
 (note 2 57 5 2 NOTE_INSN_FUNCTION_BEG)
 (call_insn 5 2 7 2 (set (reg:SI 0 ax)
-        (call (mem:QI (symbol_ref:SI ("get_empty_inode") [flags 0x3]  <function_decl 0x7341ee515300 get_empty_inode>) [0 get_empty_inode S1 A8])
+        (call (mem:QI (symbol_ref:SI ("get_empty_inode") [flags 0x3]  <function_decl 0x748ea6b15300 get_empty_inode>) [0 get_empty_inode S1 A8])
             (const_int 0 [0]))) "fs/inode.c":327:19 823 {*call_value}
      (nil)
     (nil))
@@ -6198,7 +6198,7 @@ Dataflow summary:
 (code_label 14 54 15 4 97 (nil) [1 uses])
 (note 15 14 17 4 [bb 4] NOTE_INSN_BASIC_BLOCK)
 (call_insn 17 15 19 4 (set (reg:SI 0 ax)
-        (call (mem:QI (symbol_ref:SI ("get_free_page") [flags 0x41]  <function_decl 0x7341ee538900 get_free_page>) [0 get_free_page S1 A8])
+        (call (mem:QI (symbol_ref:SI ("get_free_page") [flags 0x41]  <function_decl 0x748ea6b38900 get_free_page>) [0 get_free_page S1 A8])
             (const_int 0 [0]))) "fs/inode.c":329:27 823 {*call_value}
      (nil)
     (expr_list (use (reg:SI 3 bx))

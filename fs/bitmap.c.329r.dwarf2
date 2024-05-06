@@ -186,7 +186,7 @@ Dataflow summary:
 	.cfi_def_cfa_offset 48
 	 NOTE_INSN_CFI)
 (call_insn 22 191 23 4 (set (reg:SI 0 ax)
-        (call (mem:QI (symbol_ref:SI ("memset") [flags 0x41]  <function_decl 0x7b9e2653b200 memset>) [0 memset S1 A8])
+        (call (mem:QI (symbol_ref:SI ("memset") [flags 0x41]  <function_decl 0x734fb1b3b200 memset>) [0 memset S1 A8])
             (const_int 16 [0x10]))) "fs/bitmap.c":56:9 823 {*call_value}
      (nil)
     (expr_list (use (reg:SI 3 bx))
@@ -261,9 +261,9 @@ Dataflow summary:
 (insn 40 199 41 6 (set (reg/f:SI 0 ax [105])
         (plus:SI (reg:SI 3 bx [82])
             (const:SI (unspec:SI [
-                        (symbol_ref/f:SI ("*.LC0") [flags 0x2]  <var_decl 0x7b9e2655d630 *.LC0>)
+                        (symbol_ref/f:SI ("*.LC0") [flags 0x2]  <var_decl 0x734fb1b5d630 *.LC0>)
                     ] UNSPEC_GOTOFF)))) "fs/bitmap.c":60:9 205 {*leasi}
-     (expr_list:REG_EQUAL (symbol_ref/f:SI ("*.LC0") [flags 0x2]  <var_decl 0x7b9e2655d630 *.LC0>)
+     (expr_list:REG_EQUAL (symbol_ref/f:SI ("*.LC0") [flags 0x2]  <var_decl 0x734fb1b5d630 *.LC0>)
         (nil)))
 (insn 41 40 200 6 (set (mem/f:SI (pre_dec:SI (reg/f:SI 7 sp)) [2  S4 A32])
         (reg/f:SI 0 ax [105])) "fs/bitmap.c":60:9 54 {*pushsi2}
@@ -273,7 +273,7 @@ Dataflow summary:
 	.cfi_def_cfa_offset 48
 	 NOTE_INSN_CFI)
 (call_insn 43 200 44 6 (set (reg:SI 0 ax)
-        (call (mem:QI (symbol_ref:SI ("printk") [flags 0x41]  <function_decl 0x7b9e26510900 printk>) [0 printk S1 A8])
+        (call (mem:QI (symbol_ref:SI ("printk") [flags 0x41]  <function_decl 0x734fb1b10900 printk>) [0 printk S1 A8])
             (const_int 16 [0x10]))) "fs/bitmap.c":60:9 823 {*call_value}
      (nil)
     (expr_list (use (reg:SI 3 bx))
@@ -303,9 +303,9 @@ Dataflow summary:
 (insn 46 202 47 6 (set (reg/f:SI 0 ax [106])
         (plus:SI (reg:SI 3 bx [82])
             (const:SI (unspec:SI [
-                        (symbol_ref/f:SI ("*.LC1") [flags 0x2]  <var_decl 0x7b9e2655d6c0 *.LC1>)
+                        (symbol_ref/f:SI ("*.LC1") [flags 0x2]  <var_decl 0x734fb1b5d6c0 *.LC1>)
                     ] UNSPEC_GOTOFF)))) "fs/bitmap.c":61:9 205 {*leasi}
-     (expr_list:REG_EQUAL (symbol_ref/f:SI ("*.LC1") [flags 0x2]  <var_decl 0x7b9e2655d6c0 *.LC1>)
+     (expr_list:REG_EQUAL (symbol_ref/f:SI ("*.LC1") [flags 0x2]  <var_decl 0x734fb1b5d6c0 *.LC1>)
         (nil)))
 (insn 47 46 203 6 (set (mem/f:SI (pre_dec:SI (reg/f:SI 7 sp)) [2  S4 A32])
         (reg/f:SI 0 ax [106])) "fs/bitmap.c":61:9 54 {*pushsi2}
@@ -314,7 +314,7 @@ Dataflow summary:
 (note 203 47 49 6
 	.cfi_def_cfa_offset 48
 	 NOTE_INSN_CFI)
-(call_insn 49 203 50 6 (call (mem:QI (symbol_ref:SI ("panic") [flags 0x41]  <function_decl 0x7b9e26510b00 panic>) [0 panic S1 A8])
+(call_insn 49 203 50 6 (call (mem:QI (symbol_ref:SI ("panic") [flags 0x41]  <function_decl 0x734fb1b10b00 panic>) [0 panic S1 A8])
         (const_int 16 [0x10])) "fs/bitmap.c":61:9 812 {*call}
      (nil)
     (expr_list (use (reg:SI 3 bx))
@@ -366,9 +366,9 @@ Dataflow summary:
 (insn 59 205 60 8 (set (reg/f:SI 0 ax [108])
         (plus:SI (reg:SI 3 bx [82])
             (const:SI (unspec:SI [
-                        (symbol_ref/f:SI ("*.LC2") [flags 0x2]  <var_decl 0x7b9e2655d750 *.LC2>)
+                        (symbol_ref/f:SI ("*.LC2") [flags 0x2]  <var_decl 0x734fb1b5d750 *.LC2>)
                     ] UNSPEC_GOTOFF)))) "fs/bitmap.c":64:9 205 {*leasi}
-     (expr_list:REG_EQUAL (symbol_ref/f:SI ("*.LC2") [flags 0x2]  <var_decl 0x7b9e2655d750 *.LC2>)
+     (expr_list:REG_EQUAL (symbol_ref/f:SI ("*.LC2") [flags 0x2]  <var_decl 0x734fb1b5d750 *.LC2>)
         (nil)))
 (insn 60 59 206 8 (set (mem/f:SI (pre_dec:SI (reg/f:SI 7 sp)) [2  S4 A32])
         (reg/f:SI 0 ax [108])) "fs/bitmap.c":64:9 54 {*pushsi2}
@@ -377,7 +377,7 @@ Dataflow summary:
 (note 206 60 62 8
 	.cfi_def_cfa_offset 48
 	 NOTE_INSN_CFI)
-(call_insn 62 206 63 8 (call (mem:QI (symbol_ref:SI ("panic") [flags 0x41]  <function_decl 0x7b9e26510b00 panic>) [0 panic S1 A8])
+(call_insn 62 206 63 8 (call (mem:QI (symbol_ref:SI ("panic") [flags 0x41]  <function_decl 0x734fb1b10b00 panic>) [0 panic S1 A8])
         (const_int 16 [0x10])) "fs/bitmap.c":64:9 812 {*call}
      (nil)
     (expr_list (use (reg:SI 3 bx))
@@ -425,7 +425,7 @@ Dataflow summary:
 	.cfi_def_cfa_offset 48
 	 NOTE_INSN_CFI)
 (call_insn 72 209 73 9 (set (reg:SI 0 ax)
-        (call (mem:QI (symbol_ref:SI ("get_super") [flags 0x41]  <function_decl 0x7b9e2650e000 get_super>) [0 get_super S1 A8])
+        (call (mem:QI (symbol_ref:SI ("get_super") [flags 0x41]  <function_decl 0x734fb1b0e000 get_super>) [0 get_super S1 A8])
             (const_int 16 [0x10]))) "fs/bitmap.c":65:16 823 {*call_value}
      (nil)
     (expr_list (use (reg:SI 3 bx))
@@ -472,9 +472,9 @@ Dataflow summary:
 (insn 80 211 81 10 (set (reg/f:SI 0 ax [111])
         (plus:SI (reg:SI 3 bx [82])
             (const:SI (unspec:SI [
-                        (symbol_ref/f:SI ("*.LC3") [flags 0x2]  <var_decl 0x7b9e2655d7e0 *.LC3>)
+                        (symbol_ref/f:SI ("*.LC3") [flags 0x2]  <var_decl 0x734fb1b5d7e0 *.LC3>)
                     ] UNSPEC_GOTOFF)))) "fs/bitmap.c":66:9 205 {*leasi}
-     (expr_list:REG_EQUAL (symbol_ref/f:SI ("*.LC3") [flags 0x2]  <var_decl 0x7b9e2655d7e0 *.LC3>)
+     (expr_list:REG_EQUAL (symbol_ref/f:SI ("*.LC3") [flags 0x2]  <var_decl 0x734fb1b5d7e0 *.LC3>)
         (nil)))
 (insn 81 80 212 10 (set (mem/f:SI (pre_dec:SI (reg/f:SI 7 sp)) [2  S4 A32])
         (reg/f:SI 0 ax [111])) "fs/bitmap.c":66:9 54 {*pushsi2}
@@ -483,7 +483,7 @@ Dataflow summary:
 (note 212 81 83 10
 	.cfi_def_cfa_offset 48
 	 NOTE_INSN_CFI)
-(call_insn 83 212 84 10 (call (mem:QI (symbol_ref:SI ("panic") [flags 0x41]  <function_decl 0x7b9e26510b00 panic>) [0 panic S1 A8])
+(call_insn 83 212 84 10 (call (mem:QI (symbol_ref:SI ("panic") [flags 0x41]  <function_decl 0x734fb1b10b00 panic>) [0 panic S1 A8])
         (const_int 16 [0x10])) "fs/bitmap.c":66:9 812 {*call}
      (nil)
     (expr_list (use (reg:SI 3 bx))
@@ -563,9 +563,9 @@ Dataflow summary:
 (insn 101 225 102 13 (set (reg/f:SI 0 ax [115])
         (plus:SI (reg:SI 3 bx [82])
             (const:SI (unspec:SI [
-                        (symbol_ref/f:SI ("*.LC4") [flags 0x2]  <var_decl 0x7b9e2655d870 *.LC4>)
+                        (symbol_ref/f:SI ("*.LC4") [flags 0x2]  <var_decl 0x734fb1b5d870 *.LC4>)
                     ] UNSPEC_GOTOFF)))) "fs/bitmap.c":68:9 205 {*leasi}
-     (expr_list:REG_EQUAL (symbol_ref/f:SI ("*.LC4") [flags 0x2]  <var_decl 0x7b9e2655d870 *.LC4>)
+     (expr_list:REG_EQUAL (symbol_ref/f:SI ("*.LC4") [flags 0x2]  <var_decl 0x734fb1b5d870 *.LC4>)
         (nil)))
 (insn 102 101 226 13 (set (mem/f:SI (pre_dec:SI (reg/f:SI 7 sp)) [2  S4 A32])
         (reg/f:SI 0 ax [115])) "fs/bitmap.c":68:9 54 {*pushsi2}
@@ -574,7 +574,7 @@ Dataflow summary:
 (note 226 102 104 13
 	.cfi_def_cfa_offset 48
 	 NOTE_INSN_CFI)
-(call_insn 104 226 105 13 (call (mem:QI (symbol_ref:SI ("panic") [flags 0x41]  <function_decl 0x7b9e26510b00 panic>) [0 panic S1 A8])
+(call_insn 104 226 105 13 (call (mem:QI (symbol_ref:SI ("panic") [flags 0x41]  <function_decl 0x734fb1b10b00 panic>) [0 panic S1 A8])
         (const_int 16 [0x10])) "fs/bitmap.c":68:9 812 {*call}
      (nil)
     (expr_list (use (reg:SI 3 bx))
@@ -658,9 +658,9 @@ Dataflow summary:
 (insn 120 214 121 15 (set (reg/f:SI 0 ax [120])
         (plus:SI (reg:SI 3 bx [82])
             (const:SI (unspec:SI [
-                        (symbol_ref/f:SI ("*.LC5") [flags 0x2]  <var_decl 0x7b9e2655d900 *.LC5>)
+                        (symbol_ref/f:SI ("*.LC5") [flags 0x2]  <var_decl 0x734fb1b5d900 *.LC5>)
                     ] UNSPEC_GOTOFF)))) "fs/bitmap.c":70:9 205 {*leasi}
-     (expr_list:REG_EQUAL (symbol_ref/f:SI ("*.LC5") [flags 0x2]  <var_decl 0x7b9e2655d900 *.LC5>)
+     (expr_list:REG_EQUAL (symbol_ref/f:SI ("*.LC5") [flags 0x2]  <var_decl 0x734fb1b5d900 *.LC5>)
         (nil)))
 (insn 121 120 215 15 (set (mem/f:SI (pre_dec:SI (reg/f:SI 7 sp)) [2  S4 A32])
         (reg/f:SI 0 ax [120])) "fs/bitmap.c":70:9 54 {*pushsi2}
@@ -669,7 +669,7 @@ Dataflow summary:
 (note 215 121 123 15
 	.cfi_def_cfa_offset 48
 	 NOTE_INSN_CFI)
-(call_insn 123 215 124 15 (call (mem:QI (symbol_ref:SI ("panic") [flags 0x41]  <function_decl 0x7b9e26510b00 panic>) [0 panic S1 A8])
+(call_insn 123 215 124 15 (call (mem:QI (symbol_ref:SI ("panic") [flags 0x41]  <function_decl 0x734fb1b10b00 panic>) [0 panic S1 A8])
         (const_int 16 [0x10])) "fs/bitmap.c":70:9 812 {*call}
      (nil)
     (expr_list (use (reg:SI 3 bx))
@@ -767,9 +767,9 @@ Dataflow summary:
 (insn 141 217 142 17 (set (reg/f:SI 0 ax [125])
         (plus:SI (reg:SI 3 bx [82])
             (const:SI (unspec:SI [
-                        (symbol_ref/f:SI ("*.LC6") [flags 0x2]  <var_decl 0x7b9e2655da20 *.LC6>)
+                        (symbol_ref/f:SI ("*.LC6") [flags 0x2]  <var_decl 0x734fb1b5da20 *.LC6>)
                     ] UNSPEC_GOTOFF)))) "fs/bitmap.c":72:9 205 {*leasi}
-     (expr_list:REG_EQUAL (symbol_ref/f:SI ("*.LC6") [flags 0x2]  <var_decl 0x7b9e2655da20 *.LC6>)
+     (expr_list:REG_EQUAL (symbol_ref/f:SI ("*.LC6") [flags 0x2]  <var_decl 0x734fb1b5da20 *.LC6>)
         (nil)))
 (insn 142 141 218 17 (set (mem/f:SI (pre_dec:SI (reg/f:SI 7 sp)) [2  S4 A32])
         (reg/f:SI 0 ax [125])) "fs/bitmap.c":72:9 54 {*pushsi2}
@@ -779,7 +779,7 @@ Dataflow summary:
 	.cfi_def_cfa_offset 48
 	 NOTE_INSN_CFI)
 (call_insn 144 218 145 17 (set (reg:SI 0 ax)
-        (call (mem:QI (symbol_ref:SI ("printk") [flags 0x41]  <function_decl 0x7b9e26510900 printk>) [0 printk S1 A8])
+        (call (mem:QI (symbol_ref:SI ("printk") [flags 0x41]  <function_decl 0x734fb1b10900 printk>) [0 printk S1 A8])
             (const_int 16 [0x10]))) "fs/bitmap.c":72:9 823 {*call_value}
      (nil)
     (expr_list (use (reg:SI 3 bx))
@@ -839,7 +839,7 @@ Dataflow summary:
 	.cfi_def_cfa_offset 48
 	 NOTE_INSN_CFI)
 (call_insn 155 223 156 18 (set (reg:SI 0 ax)
-        (call (mem:QI (symbol_ref:SI ("memset") [flags 0x41]  <function_decl 0x7b9e2653b200 memset>) [0 memset S1 A8])
+        (call (mem:QI (symbol_ref:SI ("memset") [flags 0x41]  <function_decl 0x734fb1b3b200 memset>) [0 memset S1 A8])
             (const_int 16 [0x10]))) "fs/bitmap.c":74:5 823 {*call_value}
      (nil)
     (expr_list (use (reg:SI 3 bx))
@@ -1038,7 +1038,7 @@ Dataflow summary:
 	.cfi_def_cfa_offset 48
 	 NOTE_INSN_CFI)
 (call_insn 8 177 9 2 (set (reg:SI 0 ax)
-        (call (mem:QI (symbol_ref:SI ("get_super") [flags 0x41]  <function_decl 0x7b9e2650e000 get_super>) [0 get_super S1 A8])
+        (call (mem:QI (symbol_ref:SI ("get_super") [flags 0x41]  <function_decl 0x734fb1b0e000 get_super>) [0 get_super S1 A8])
             (const_int 16 [0x10]))) "fs/bitmap.c":82:16 823 {*call_value}
      (nil)
     (expr_list (use (reg:SI 3 bx))
@@ -1085,9 +1085,9 @@ Dataflow summary:
 (insn 16 179 17 3 (set (reg/f:SI 0 ax [106])
         (plus:SI (reg:SI 3 bx [82])
             (const:SI (unspec:SI [
-                        (symbol_ref/f:SI ("*.LC7") [flags 0x2]  <var_decl 0x7b9e2655dbd0 *.LC7>)
+                        (symbol_ref/f:SI ("*.LC7") [flags 0x2]  <var_decl 0x734fb1b5dbd0 *.LC7>)
                     ] UNSPEC_GOTOFF)))) "fs/bitmap.c":83:9 205 {*leasi}
-     (expr_list:REG_EQUAL (symbol_ref/f:SI ("*.LC7") [flags 0x2]  <var_decl 0x7b9e2655dbd0 *.LC7>)
+     (expr_list:REG_EQUAL (symbol_ref/f:SI ("*.LC7") [flags 0x2]  <var_decl 0x734fb1b5dbd0 *.LC7>)
         (nil)))
 (insn 17 16 180 3 (set (mem/f:SI (pre_dec:SI (reg/f:SI 7 sp)) [2  S4 A32])
         (reg/f:SI 0 ax [106])) "fs/bitmap.c":83:9 54 {*pushsi2}
@@ -1096,7 +1096,7 @@ Dataflow summary:
 (note 180 17 19 3
 	.cfi_def_cfa_offset 48
 	 NOTE_INSN_CFI)
-(call_insn 19 180 20 3 (call (mem:QI (symbol_ref:SI ("panic") [flags 0x41]  <function_decl 0x7b9e26510b00 panic>) [0 panic S1 A8])
+(call_insn 19 180 20 3 (call (mem:QI (symbol_ref:SI ("panic") [flags 0x41]  <function_decl 0x734fb1b10b00 panic>) [0 panic S1 A8])
         (const_int 16 [0x10])) "fs/bitmap.c":83:9 812 {*call}
      (nil)
     (expr_list (use (reg:SI 3 bx))
@@ -1177,9 +1177,9 @@ Dataflow summary:
 (insn 37 207 38 6 (set (reg/f:SI 0 ax [109])
         (plus:SI (reg:SI 3 bx [82])
             (const:SI (unspec:SI [
-                        (symbol_ref/f:SI ("*.LC8") [flags 0x2]  <var_decl 0x7b9e2655dc60 *.LC8>)
+                        (symbol_ref/f:SI ("*.LC8") [flags 0x2]  <var_decl 0x734fb1b5dc60 *.LC8>)
                     ] UNSPEC_GOTOFF)))) "fs/bitmap.c":85:9 205 {*leasi}
-     (expr_list:REG_EQUAL (symbol_ref/f:SI ("*.LC8") [flags 0x2]  <var_decl 0x7b9e2655dc60 *.LC8>)
+     (expr_list:REG_EQUAL (symbol_ref/f:SI ("*.LC8") [flags 0x2]  <var_decl 0x734fb1b5dc60 *.LC8>)
         (nil)))
 (insn 38 37 208 6 (set (mem/f:SI (pre_dec:SI (reg/f:SI 7 sp)) [2  S4 A32])
         (reg/f:SI 0 ax [109])) "fs/bitmap.c":85:9 54 {*pushsi2}
@@ -1188,7 +1188,7 @@ Dataflow summary:
 (note 208 38 40 6
 	.cfi_def_cfa_offset 48
 	 NOTE_INSN_CFI)
-(call_insn 40 208 41 6 (call (mem:QI (symbol_ref:SI ("panic") [flags 0x41]  <function_decl 0x7b9e26510b00 panic>) [0 panic S1 A8])
+(call_insn 40 208 41 6 (call (mem:QI (symbol_ref:SI ("panic") [flags 0x41]  <function_decl 0x734fb1b10b00 panic>) [0 panic S1 A8])
         (const_int 16 [0x10])) "fs/bitmap.c":85:9 812 {*call}
      (nil)
     (expr_list (use (reg:SI 3 bx))
@@ -1234,7 +1234,7 @@ Dataflow summary:
 	.cfi_def_cfa_offset 48
 	 NOTE_INSN_CFI)
 (call_insn 48 184 49 7 (set (reg:SI 0 ax)
-        (call (mem:QI (symbol_ref:SI ("get_hash_table") [flags 0x41]  <function_decl 0x7b9e2650e400 get_hash_table>) [0 get_hash_table S1 A8])
+        (call (mem:QI (symbol_ref:SI ("get_hash_table") [flags 0x41]  <function_decl 0x734fb1b0e400 get_hash_table>) [0 get_hash_table S1 A8])
             (const_int 16 [0x10]))) "fs/bitmap.c":86:10 823 {*call_value}
      (nil)
     (expr_list (use (reg:SI 3 bx))
@@ -1324,9 +1324,9 @@ Dataflow summary:
 (insn 66 188 67 9 (set (reg/f:SI 0 ax [113])
         (plus:SI (reg:SI 3 bx [82])
             (const:SI (unspec:SI [
-                        (symbol_ref/f:SI ("*.LC9") [flags 0x2]  <var_decl 0x7b9e2655dcf0 *.LC9>)
+                        (symbol_ref/f:SI ("*.LC9") [flags 0x2]  <var_decl 0x734fb1b5dcf0 *.LC9>)
                     ] UNSPEC_GOTOFF)))) "fs/bitmap.c":89:13 205 {*leasi}
-     (expr_list:REG_EQUAL (symbol_ref/f:SI ("*.LC9") [flags 0x2]  <var_decl 0x7b9e2655dcf0 *.LC9>)
+     (expr_list:REG_EQUAL (symbol_ref/f:SI ("*.LC9") [flags 0x2]  <var_decl 0x734fb1b5dcf0 *.LC9>)
         (nil)))
 (insn 67 66 189 9 (set (mem/f:SI (pre_dec:SI (reg/f:SI 7 sp)) [2  S4 A32])
         (reg/f:SI 0 ax [113])) "fs/bitmap.c":89:13 54 {*pushsi2}
@@ -1336,7 +1336,7 @@ Dataflow summary:
 	.cfi_def_cfa_offset 48
 	 NOTE_INSN_CFI)
 (call_insn 69 189 70 9 (set (reg:SI 0 ax)
-        (call (mem:QI (symbol_ref:SI ("printk") [flags 0x41]  <function_decl 0x7b9e26510900 printk>) [0 printk S1 A8])
+        (call (mem:QI (symbol_ref:SI ("printk") [flags 0x41]  <function_decl 0x734fb1b10900 printk>) [0 printk S1 A8])
             (const_int 16 [0x10]))) "fs/bitmap.c":89:13 823 {*call_value}
      (nil)
     (expr_list (use (reg:SI 3 bx))
@@ -1394,7 +1394,7 @@ Dataflow summary:
 (note 197 80 82 10
 	.cfi_def_cfa_offset 48
 	 NOTE_INSN_CFI)
-(call_insn 82 197 83 10 (call (mem:QI (symbol_ref:SI ("brelse") [flags 0x41]  <function_decl 0x7b9e2650e200 brelse>) [0 brelse S1 A8])
+(call_insn 82 197 83 10 (call (mem:QI (symbol_ref:SI ("brelse") [flags 0x41]  <function_decl 0x734fb1b0e200 brelse>) [0 brelse S1 A8])
         (const_int 16 [0x10])) "fs/bitmap.c":95:9 812 {*call}
      (nil)
     (expr_list (use (reg:SI 3 bx))
@@ -1603,9 +1603,9 @@ Dataflow summary:
 (insn 122 201 123 12 (set (reg/f:SI 0 ax [128])
         (plus:SI (reg:SI 3 bx [82])
             (const:SI (unspec:SI [
-                        (symbol_ref/f:SI ("*.LC10") [flags 0x2]  <var_decl 0x7b9e2655de10 *.LC10>)
+                        (symbol_ref/f:SI ("*.LC10") [flags 0x2]  <var_decl 0x734fb1b5de10 *.LC10>)
                     ] UNSPEC_GOTOFF)))) "fs/bitmap.c":99:9 205 {*leasi}
-     (expr_list:REG_EQUAL (symbol_ref/f:SI ("*.LC10") [flags 0x2]  <var_decl 0x7b9e2655de10 *.LC10>)
+     (expr_list:REG_EQUAL (symbol_ref/f:SI ("*.LC10") [flags 0x2]  <var_decl 0x734fb1b5de10 *.LC10>)
         (nil)))
 (insn 123 122 202 12 (set (mem/f:SI (pre_dec:SI (reg/f:SI 7 sp)) [2  S4 A32])
         (reg/f:SI 0 ax [128])) "fs/bitmap.c":99:9 54 {*pushsi2}
@@ -1615,7 +1615,7 @@ Dataflow summary:
 	.cfi_def_cfa_offset 48
 	 NOTE_INSN_CFI)
 (call_insn 125 202 126 12 (set (reg:SI 0 ax)
-        (call (mem:QI (symbol_ref:SI ("printk") [flags 0x41]  <function_decl 0x7b9e26510900 printk>) [0 printk S1 A8])
+        (call (mem:QI (symbol_ref:SI ("printk") [flags 0x41]  <function_decl 0x734fb1b10900 printk>) [0 printk S1 A8])
             (const_int 16 [0x10]))) "fs/bitmap.c":99:9 823 {*call_value}
      (nil)
     (expr_list (use (reg:SI 3 bx))
@@ -1645,9 +1645,9 @@ Dataflow summary:
 (insn 128 204 129 12 (set (reg/f:SI 0 ax [129])
         (plus:SI (reg:SI 3 bx [82])
             (const:SI (unspec:SI [
-                        (symbol_ref/f:SI ("*.LC11") [flags 0x2]  <var_decl 0x7b9e2655dea0 *.LC11>)
+                        (symbol_ref/f:SI ("*.LC11") [flags 0x2]  <var_decl 0x734fb1b5dea0 *.LC11>)
                     ] UNSPEC_GOTOFF)))) "fs/bitmap.c":100:9 205 {*leasi}
-     (expr_list:REG_EQUAL (symbol_ref/f:SI ("*.LC11") [flags 0x2]  <var_decl 0x7b9e2655dea0 *.LC11>)
+     (expr_list:REG_EQUAL (symbol_ref/f:SI ("*.LC11") [flags 0x2]  <var_decl 0x734fb1b5dea0 *.LC11>)
         (nil)))
 (insn 129 128 205 12 (set (mem/f:SI (pre_dec:SI (reg/f:SI 7 sp)) [2  S4 A32])
         (reg/f:SI 0 ax [129])) "fs/bitmap.c":100:9 54 {*pushsi2}
@@ -1656,7 +1656,7 @@ Dataflow summary:
 (note 205 129 131 12
 	.cfi_def_cfa_offset 48
 	 NOTE_INSN_CFI)
-(call_insn 131 205 132 12 (call (mem:QI (symbol_ref:SI ("panic") [flags 0x41]  <function_decl 0x7b9e26510b00 panic>) [0 panic S1 A8])
+(call_insn 131 205 132 12 (call (mem:QI (symbol_ref:SI ("panic") [flags 0x41]  <function_decl 0x734fb1b10b00 panic>) [0 panic S1 A8])
         (const_int 16 [0x10])) "fs/bitmap.c":100:9 812 {*call}
      (nil)
     (expr_list (use (reg:SI 3 bx))
@@ -1935,7 +1935,7 @@ Dataflow summary:
 	.cfi_def_cfa_offset 64
 	 NOTE_INSN_CFI)
 (call_insn 8 219 9 2 (set (reg:SI 0 ax)
-        (call (mem:QI (symbol_ref:SI ("get_super") [flags 0x41]  <function_decl 0x7b9e2650e000 get_super>) [0 get_super S1 A8])
+        (call (mem:QI (symbol_ref:SI ("get_super") [flags 0x41]  <function_decl 0x734fb1b0e000 get_super>) [0 get_super S1 A8])
             (const_int 16 [0x10]))) "fs/bitmap.c":111:16 823 {*call_value}
      (nil)
     (expr_list (use (reg:SI 3 bx))
@@ -1982,9 +1982,9 @@ Dataflow summary:
 (insn 16 221 17 3 (set (reg/f:SI 0 ax [101])
         (plus:SI (reg:SI 3 bx [82])
             (const:SI (unspec:SI [
-                        (symbol_ref/f:SI ("*.LC12") [flags 0x2]  <var_decl 0x7b9e2655d510 *.LC12>)
+                        (symbol_ref/f:SI ("*.LC12") [flags 0x2]  <var_decl 0x734fb1b5d510 *.LC12>)
                     ] UNSPEC_GOTOFF)))) "fs/bitmap.c":112:9 205 {*leasi}
-     (expr_list:REG_EQUAL (symbol_ref/f:SI ("*.LC12") [flags 0x2]  <var_decl 0x7b9e2655d510 *.LC12>)
+     (expr_list:REG_EQUAL (symbol_ref/f:SI ("*.LC12") [flags 0x2]  <var_decl 0x734fb1b5d510 *.LC12>)
         (nil)))
 (insn 17 16 222 3 (set (mem/f:SI (pre_dec:SI (reg/f:SI 7 sp)) [2  S4 A32])
         (reg/f:SI 0 ax [101])) "fs/bitmap.c":112:9 54 {*pushsi2}
@@ -1993,7 +1993,7 @@ Dataflow summary:
 (note 222 17 19 3
 	.cfi_def_cfa_offset 64
 	 NOTE_INSN_CFI)
-(call_insn 19 222 20 3 (call (mem:QI (symbol_ref:SI ("panic") [flags 0x41]  <function_decl 0x7b9e26510b00 panic>) [0 panic S1 A8])
+(call_insn 19 222 20 3 (call (mem:QI (symbol_ref:SI ("panic") [flags 0x41]  <function_decl 0x734fb1b10b00 panic>) [0 panic S1 A8])
         (const_int 16 [0x10])) "fs/bitmap.c":112:9 812 {*call}
      (nil)
     (expr_list (use (reg:SI 3 bx))
@@ -2284,9 +2284,9 @@ Dataflow summary:
 (insn 92 224 93 16 (set (reg/f:SI 0 ax [113])
         (plus:SI (reg:SI 3 bx [82])
             (const:SI (unspec:SI [
-                        (symbol_ref/f:SI ("*.LC13") [flags 0x2]  <var_decl 0x7b9e26597000 *.LC13>)
+                        (symbol_ref/f:SI ("*.LC13") [flags 0x2]  <var_decl 0x734fb1b97000 *.LC13>)
                     ] UNSPEC_GOTOFF)))) "fs/bitmap.c":121:9 205 {*leasi}
-     (expr_list:REG_EQUAL (symbol_ref/f:SI ("*.LC13") [flags 0x2]  <var_decl 0x7b9e26597000 *.LC13>)
+     (expr_list:REG_EQUAL (symbol_ref/f:SI ("*.LC13") [flags 0x2]  <var_decl 0x734fb1b97000 *.LC13>)
         (nil)))
 (insn 93 92 225 16 (set (mem/f:SI (pre_dec:SI (reg/f:SI 7 sp)) [2  S4 A32])
         (reg/f:SI 0 ax [113])) "fs/bitmap.c":121:9 54 {*pushsi2}
@@ -2295,7 +2295,7 @@ Dataflow summary:
 (note 225 93 95 16
 	.cfi_def_cfa_offset 64
 	 NOTE_INSN_CFI)
-(call_insn 95 225 96 16 (call (mem:QI (symbol_ref:SI ("panic") [flags 0x41]  <function_decl 0x7b9e26510b00 panic>) [0 panic S1 A8])
+(call_insn 95 225 96 16 (call (mem:QI (symbol_ref:SI ("panic") [flags 0x41]  <function_decl 0x734fb1b10b00 panic>) [0 panic S1 A8])
         (const_int 16 [0x10])) "fs/bitmap.c":121:9 812 {*call}
      (nil)
     (expr_list (use (reg:SI 3 bx))
@@ -2434,7 +2434,7 @@ Dataflow summary:
 	.cfi_def_cfa_offset 64
 	 NOTE_INSN_CFI)
 (call_insn 124 236 125 19 (set (reg:SI 0 ax)
-        (call (mem:QI (symbol_ref:SI ("getblk") [flags 0x41]  <function_decl 0x7b9e2650e500 getblk>) [0 getblk S1 A8])
+        (call (mem:QI (symbol_ref:SI ("getblk") [flags 0x41]  <function_decl 0x734fb1b0e500 getblk>) [0 getblk S1 A8])
             (const_int 16 [0x10]))) "fs/bitmap.c":126:16 823 {*call_value}
      (nil)
     (expr_list (use (reg:SI 3 bx))
@@ -2481,9 +2481,9 @@ Dataflow summary:
 (insn 132 238 133 20 (set (reg/f:SI 0 ax [119])
         (plus:SI (reg:SI 3 bx [82])
             (const:SI (unspec:SI [
-                        (symbol_ref/f:SI ("*.LC14") [flags 0x2]  <var_decl 0x7b9e26597090 *.LC14>)
+                        (symbol_ref/f:SI ("*.LC14") [flags 0x2]  <var_decl 0x734fb1b97090 *.LC14>)
                     ] UNSPEC_GOTOFF)))) "fs/bitmap.c":127:9 205 {*leasi}
-     (expr_list:REG_EQUAL (symbol_ref/f:SI ("*.LC14") [flags 0x2]  <var_decl 0x7b9e26597090 *.LC14>)
+     (expr_list:REG_EQUAL (symbol_ref/f:SI ("*.LC14") [flags 0x2]  <var_decl 0x734fb1b97090 *.LC14>)
         (nil)))
 (insn 133 132 239 20 (set (mem/f:SI (pre_dec:SI (reg/f:SI 7 sp)) [2  S4 A32])
         (reg/f:SI 0 ax [119])) "fs/bitmap.c":127:9 54 {*pushsi2}
@@ -2492,7 +2492,7 @@ Dataflow summary:
 (note 239 133 135 20
 	.cfi_def_cfa_offset 64
 	 NOTE_INSN_CFI)
-(call_insn 135 239 136 20 (call (mem:QI (symbol_ref:SI ("panic") [flags 0x41]  <function_decl 0x7b9e26510b00 panic>) [0 panic S1 A8])
+(call_insn 135 239 136 20 (call (mem:QI (symbol_ref:SI ("panic") [flags 0x41]  <function_decl 0x734fb1b10b00 panic>) [0 panic S1 A8])
         (const_int 16 [0x10])) "fs/bitmap.c":127:9 812 {*call}
      (nil)
     (expr_list (use (reg:SI 3 bx))
@@ -2544,9 +2544,9 @@ Dataflow summary:
 (insn 145 241 146 22 (set (reg/f:SI 0 ax [121])
         (plus:SI (reg:SI 3 bx [82])
             (const:SI (unspec:SI [
-                        (symbol_ref/f:SI ("*.LC15") [flags 0x2]  <var_decl 0x7b9e26597120 *.LC15>)
+                        (symbol_ref/f:SI ("*.LC15") [flags 0x2]  <var_decl 0x734fb1b97120 *.LC15>)
                     ] UNSPEC_GOTOFF)))) "fs/bitmap.c":129:9 205 {*leasi}
-     (expr_list:REG_EQUAL (symbol_ref/f:SI ("*.LC15") [flags 0x2]  <var_decl 0x7b9e26597120 *.LC15>)
+     (expr_list:REG_EQUAL (symbol_ref/f:SI ("*.LC15") [flags 0x2]  <var_decl 0x734fb1b97120 *.LC15>)
         (nil)))
 (insn 146 145 242 22 (set (mem/f:SI (pre_dec:SI (reg/f:SI 7 sp)) [2  S4 A32])
         (reg/f:SI 0 ax [121])) "fs/bitmap.c":129:9 54 {*pushsi2}
@@ -2555,7 +2555,7 @@ Dataflow summary:
 (note 242 146 148 22
 	.cfi_def_cfa_offset 64
 	 NOTE_INSN_CFI)
-(call_insn 148 242 149 22 (call (mem:QI (symbol_ref:SI ("panic") [flags 0x41]  <function_decl 0x7b9e26510b00 panic>) [0 panic S1 A8])
+(call_insn 148 242 149 22 (call (mem:QI (symbol_ref:SI ("panic") [flags 0x41]  <function_decl 0x734fb1b10b00 panic>) [0 panic S1 A8])
         (const_int 16 [0x10])) "fs/bitmap.c":129:9 812 {*call}
      (nil)
     (expr_list (use (reg:SI 3 bx))
@@ -2647,7 +2647,7 @@ Dataflow summary:
 (note 245 163 165 23
 	.cfi_def_cfa_offset 64
 	 NOTE_INSN_CFI)
-(call_insn 165 245 166 23 (call (mem:QI (symbol_ref:SI ("brelse") [flags 0x41]  <function_decl 0x7b9e2650e200 brelse>) [0 brelse S1 A8])
+(call_insn 165 245 166 23 (call (mem:QI (symbol_ref:SI ("brelse") [flags 0x41]  <function_decl 0x734fb1b0e200 brelse>) [0 brelse S1 A8])
         (const_int 16 [0x10])) "fs/bitmap.c":133:5 812 {*call}
      (nil)
     (expr_list (use (reg:SI 3 bx))
@@ -2856,7 +2856,7 @@ Dataflow summary:
         (nil)))
 (note 2 196 6 2 NOTE_INSN_FUNCTION_BEG)
 (call_insn 6 2 8 2 (set (reg:SI 0 ax)
-        (call (mem:QI (symbol_ref:SI ("get_empty_inode") [flags 0x41]  <function_decl 0x7b9e26510300 get_empty_inode>) [0 get_empty_inode S1 A8])
+        (call (mem:QI (symbol_ref:SI ("get_empty_inode") [flags 0x41]  <function_decl 0x734fb1b10300 get_empty_inode>) [0 get_empty_inode S1 A8])
             (const_int 0 [0]))) "fs/bitmap.c":144:19 823 {*call_value}
      (nil)
     (expr_list (use (reg:SI 3 bx))
@@ -2908,7 +2908,7 @@ Dataflow summary:
 	.cfi_def_cfa_offset 64
 	 NOTE_INSN_CFI)
 (call_insn 20 233 21 4 (set (reg:SI 0 ax)
-        (call (mem:QI (symbol_ref:SI ("get_super") [flags 0x41]  <function_decl 0x7b9e2650e000 get_super>) [0 get_super S1 A8])
+        (call (mem:QI (symbol_ref:SI ("get_super") [flags 0x41]  <function_decl 0x734fb1b0e000 get_super>) [0 get_super S1 A8])
             (const_int 16 [0x10]))) "fs/bitmap.c":146:16 823 {*call_value}
      (nil)
     (expr_list (use (reg:SI 3 bx))
@@ -2955,9 +2955,9 @@ Dataflow summary:
 (insn 28 235 29 5 (set (reg/f:SI 0 ax [113])
         (plus:SI (reg:SI 3 bx [82])
             (const:SI (unspec:SI [
-                        (symbol_ref/f:SI ("*.LC16") [flags 0x2]  <var_decl 0x7b9e26547f30 *.LC16>)
+                        (symbol_ref/f:SI ("*.LC16") [flags 0x2]  <var_decl 0x734fb1b47f30 *.LC16>)
                     ] UNSPEC_GOTOFF)))) "fs/bitmap.c":147:9 205 {*leasi}
-     (expr_list:REG_EQUAL (symbol_ref/f:SI ("*.LC16") [flags 0x2]  <var_decl 0x7b9e26547f30 *.LC16>)
+     (expr_list:REG_EQUAL (symbol_ref/f:SI ("*.LC16") [flags 0x2]  <var_decl 0x734fb1b47f30 *.LC16>)
         (nil)))
 (insn 29 28 236 5 (set (mem/f:SI (pre_dec:SI (reg/f:SI 7 sp)) [2  S4 A32])
         (reg/f:SI 0 ax [113])) "fs/bitmap.c":147:9 54 {*pushsi2}
@@ -2966,7 +2966,7 @@ Dataflow summary:
 (note 236 29 31 5
 	.cfi_def_cfa_offset 64
 	 NOTE_INSN_CFI)
-(call_insn 31 236 32 5 (call (mem:QI (symbol_ref:SI ("panic") [flags 0x41]  <function_decl 0x7b9e26510b00 panic>) [0 panic S1 A8])
+(call_insn 31 236 32 5 (call (mem:QI (symbol_ref:SI ("panic") [flags 0x41]  <function_decl 0x734fb1b10b00 panic>) [0 panic S1 A8])
         (const_int 16 [0x10])) "fs/bitmap.c":147:9 812 {*call}
      (nil)
     (expr_list (use (reg:SI 3 bx))
@@ -3243,7 +3243,7 @@ Dataflow summary:
 (note 242 94 96 16
 	.cfi_def_cfa_offset 64
 	 NOTE_INSN_CFI)
-(call_insn 96 242 97 16 (call (mem:QI (symbol_ref:SI ("iput") [flags 0x41]  <function_decl 0x7b9e264d2d00 iput>) [0 iput S1 A8])
+(call_insn 96 242 97 16 (call (mem:QI (symbol_ref:SI ("iput") [flags 0x41]  <function_decl 0x734fb1ad2d00 iput>) [0 iput S1 A8])
         (const_int 16 [0x10])) "fs/bitmap.c":154:9 812 {*call}
      (nil)
     (expr_list (use (reg:SI 3 bx))
@@ -3332,9 +3332,9 @@ Dataflow summary:
 (insn 114 238 115 18 (set (reg/f:SI 0 ax [128])
         (plus:SI (reg:SI 3 bx [82])
             (const:SI (unspec:SI [
-                        (symbol_ref/f:SI ("*.LC17") [flags 0x2]  <var_decl 0x7b9e265972d0 *.LC17>)
+                        (symbol_ref/f:SI ("*.LC17") [flags 0x2]  <var_decl 0x734fb1b972d0 *.LC17>)
                     ] UNSPEC_GOTOFF)))) "fs/bitmap.c":158:9 205 {*leasi}
-     (expr_list:REG_EQUAL (symbol_ref/f:SI ("*.LC17") [flags 0x2]  <var_decl 0x7b9e265972d0 *.LC17>)
+     (expr_list:REG_EQUAL (symbol_ref/f:SI ("*.LC17") [flags 0x2]  <var_decl 0x734fb1b972d0 *.LC17>)
         (nil)))
 (insn 115 114 239 18 (set (mem/f:SI (pre_dec:SI (reg/f:SI 7 sp)) [2  S4 A32])
         (reg/f:SI 0 ax [128])) "fs/bitmap.c":158:9 54 {*pushsi2}
@@ -3343,7 +3343,7 @@ Dataflow summary:
 (note 239 115 117 18
 	.cfi_def_cfa_offset 64
 	 NOTE_INSN_CFI)
-(call_insn 117 239 118 18 (call (mem:QI (symbol_ref:SI ("panic") [flags 0x41]  <function_decl 0x7b9e26510b00 panic>) [0 panic S1 A8])
+(call_insn 117 239 118 18 (call (mem:QI (symbol_ref:SI ("panic") [flags 0x41]  <function_decl 0x734fb1b10b00 panic>) [0 panic S1 A8])
         (const_int 16 [0x10])) "fs/bitmap.c":158:9 812 {*call}
      (nil)
     (expr_list (use (reg:SI 3 bx))
@@ -3403,7 +3403,7 @@ Dataflow summary:
 (insn 131 130 132 19 (set (reg/f:SI 0 ax [134])
         (mem/u/c:SI (plus:SI (reg:SI 3 bx [82])
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("current") [flags 0x40]  <var_decl 0x7b9e2652f120 current>)
+                            (symbol_ref:SI ("current") [flags 0x40]  <var_decl 0x734fb1b2f120 current>)
                         ] UNSPEC_GOT))) [20  S4 A8])) "fs/bitmap.c":163:27 75 {*movsi_internal}
      (nil))
 (insn 132 131 133 19 (set (reg/f:SI 0 ax [orig:90 current.0_8 ] [90])
@@ -3424,7 +3424,7 @@ Dataflow summary:
 (insn 136 135 137 19 (set (reg/f:SI 0 ax [136])
         (mem/u/c:SI (plus:SI (reg:SI 3 bx [82])
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("current") [flags 0x40]  <var_decl 0x7b9e2652f120 current>)
+                            (symbol_ref:SI ("current") [flags 0x40]  <var_decl 0x734fb1b2f120 current>)
                         ] UNSPEC_GOT))) [20  S4 A8])) "fs/bitmap.c":164:27 75 {*movsi_internal}
      (nil))
 (insn 137 136 138 19 (set (reg/f:SI 0 ax [orig:92 current.1_10 ] [92])
@@ -3489,7 +3489,7 @@ Dataflow summary:
 (insn 152 151 153 19 (set (reg/f:SI 0 ax [142])
         (mem/u/c:SI (plus:SI (reg:SI 3 bx [82])
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("jiffies") [flags 0x40]  <var_decl 0x7b9e2652f360 jiffies>)
+                            (symbol_ref:SI ("jiffies") [flags 0x40]  <var_decl 0x734fb1b2f360 jiffies>)
                         ] UNSPEC_GOT))) [20  S4 A8])) "fs/bitmap.c":167:56 75 {*movsi_internal}
      (nil))
 (insn 153 152 154 19 (set (reg:SI 2 cx [orig:99 jiffies.2_17 ] [99])
@@ -3540,7 +3540,7 @@ Dataflow summary:
 (insn 159 209 160 19 (set (reg/f:SI 0 ax [147])
         (mem/u/c:SI (plus:SI (reg:SI 3 bx [82])
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("startup_time") [flags 0x40]  <var_decl 0x7b9e2652f3f0 startup_time>)
+                            (symbol_ref:SI ("startup_time") [flags 0x40]  <var_decl 0x734fb1b2f3f0 startup_time>)
                         ] UNSPEC_GOT))) [20  S4 A8])) "fs/bitmap.c":167:56 75 {*movsi_internal}
      (nil))
 (insn 160 159 161 19 (set (reg:SI 0 ax [orig:101 startup_time.3_19 ] [101])

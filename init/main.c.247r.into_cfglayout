@@ -70,7 +70,7 @@ try_optimize_cfg iteration 1
 (insn 20 19 21 4 (set (reg/f:SI 89)
         (mem/u/c:SI (plus:SI (reg:SI 82)
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("errno") [flags 0x40]  <var_decl 0x784623107b40 errno>)
+                            (symbol_ref:SI ("errno") [flags 0x40]  <var_decl 0x7f489bfdcb40 errno>)
                         ] UNSPEC_GOT))) [4  S4 A8])) "init/main.c":40:8 75 {*movsi_internal}
      (nil))
 (insn 21 20 22 4 (set (mem/c:SI (reg/f:SI 89) [1 errno+0 S4 A32])
@@ -166,7 +166,7 @@ try_optimize_cfg iteration 1
 (insn 21 20 22 4 (set (reg/f:SI 90)
         (mem/u/c:SI (plus:SI (reg:SI 82)
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("errno") [flags 0x40]  <var_decl 0x784623107b40 errno>)
+                            (symbol_ref:SI ("errno") [flags 0x40]  <var_decl 0x7f489bfdcb40 errno>)
                         ] UNSPEC_GOT))) [4  S4 A8])) "init/main.c":41:8 75 {*movsi_internal}
      (nil))
 (insn 22 21 23 4 (set (mem/c:SI (reg/f:SI 90) [1 errno+0 S4 A32])
@@ -257,7 +257,7 @@ try_optimize_cfg iteration 1
 (insn 20 19 21 4 (set (reg/f:SI 89)
         (mem/u/c:SI (plus:SI (reg:SI 82)
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("errno") [flags 0x40]  <var_decl 0x784623107b40 errno>)
+                            (symbol_ref:SI ("errno") [flags 0x40]  <var_decl 0x7f489bfdcb40 errno>)
                         ] UNSPEC_GOT))) [4  S4 A8])) "init/main.c":42:8 75 {*movsi_internal}
      (nil))
 (insn 21 20 22 4 (set (mem/c:SI (reg/f:SI 89) [1 errno+0 S4 A32])
@@ -348,7 +348,7 @@ try_optimize_cfg iteration 1
 (insn 20 19 21 4 (set (reg/f:SI 89)
         (mem/u/c:SI (plus:SI (reg:SI 82)
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("errno") [flags 0x40]  <var_decl 0x784623107b40 errno>)
+                            (symbol_ref:SI ("errno") [flags 0x40]  <var_decl 0x7f489bfdcb40 errno>)
                         ] UNSPEC_GOT))) [4  S4 A8])) "init/main.c":43:8 75 {*movsi_internal}
      (nil))
 (insn 21 20 22 4 (set (mem/c:SI (reg/f:SI 89) [1 errno+0 S4 A32])
@@ -1215,7 +1215,7 @@ try_optimize_cfg iteration 1
         (reg:SI 82)) "init/main.c":109:20 75 {*movsi_internal}
      (nil))
 (call_insn 151 150 152 4 (set (reg:SI 0 ax)
-        (call (mem:QI (symbol_ref:SI ("kernel_mktime") [flags 0x41]  <function_decl 0x784621d76f00 kernel_mktime>) [0 kernel_mktime S1 A8])
+        (call (mem:QI (symbol_ref:SI ("kernel_mktime") [flags 0x41]  <function_decl 0x7f489ab76f00 kernel_mktime>) [0 kernel_mktime S1 A8])
             (const_int 16 [0x10]))) "init/main.c":109:20 823 {*call_value}
      (nil)
     (expr_list (use (reg:SI 3 bx))
@@ -1234,7 +1234,7 @@ try_optimize_cfg iteration 1
 (insn 154 153 155 4 (set (reg/f:SI 178)
         (mem/u/c:SI (plus:SI (reg:SI 82)
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("startup_time") [flags 0x40]  <var_decl 0x784621d40480 startup_time>)
+                            (symbol_ref:SI ("startup_time") [flags 0x40]  <var_decl 0x7f489ab40480 startup_time>)
                         ] UNSPEC_GOT))) [4  S4 A8])) "init/main.c":109:18 75 {*movsi_internal}
      (nil))
 (insn 155 154 0 4 (set (mem/c:SI (reg/f:SI 178) [3 startup_time+0 S4 A32])
@@ -1284,14 +1284,14 @@ try_optimize_cfg iteration 1
      (nil))
 (insn 10 9 11 2 (set (mem/c:SI (plus:SI (reg:SI 82)
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("memory_end") [flags 0x2]  <var_decl 0x784621d40bd0 memory_end>)
+                            (symbol_ref:SI ("memory_end") [flags 0x2]  <var_decl 0x7f489ab40bd0 memory_end>)
                         ] UNSPEC_GOTOFF))) [3 memory_end+0 S4 A32])
         (reg:SI 87 [ _5 ])) "init/main.c":120:16 75 {*movsi_internal}
      (nil))
 (insn 11 10 12 2 (set (reg:SI 88 [ memory_end.1_6 ])
         (mem/c:SI (plus:SI (reg:SI 82)
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("memory_end") [flags 0x2]  <var_decl 0x784621d40bd0 memory_end>)
+                            (symbol_ref:SI ("memory_end") [flags 0x2]  <var_decl 0x7f489ab40bd0 memory_end>)
                         ] UNSPEC_GOTOFF))) [3 memory_end+0 S4 A32])) "init/main.c":121:16 75 {*movsi_internal}
      (nil))
 (insn 12 11 13 2 (parallel [
@@ -1303,14 +1303,14 @@ try_optimize_cfg iteration 1
      (nil))
 (insn 13 12 14 2 (set (mem/c:SI (plus:SI (reg:SI 82)
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("memory_end") [flags 0x2]  <var_decl 0x784621d40bd0 memory_end>)
+                            (symbol_ref:SI ("memory_end") [flags 0x2]  <var_decl 0x7f489ab40bd0 memory_end>)
                         ] UNSPEC_GOTOFF))) [3 memory_end+0 S4 A32])
         (reg:SI 89 [ _7 ])) "init/main.c":121:16 75 {*movsi_internal}
      (nil))
 (insn 14 13 17 2 (set (reg:SI 90 [ memory_end.2_8 ])
         (mem/c:SI (plus:SI (reg:SI 82)
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("memory_end") [flags 0x2]  <var_decl 0x784621d40bd0 memory_end>)
+                            (symbol_ref:SI ("memory_end") [flags 0x2]  <var_decl 0x7f489ab40bd0 memory_end>)
                         ] UNSPEC_GOTOFF))) [3 memory_end+0 S4 A32])) "init/main.c":124:20 75 {*movsi_internal}
      (nil))
 (insn 17 14 18 2 (set (reg:CCGC 17 flags)
@@ -1327,7 +1327,7 @@ try_optimize_cfg iteration 1
 (note 19 18 20 3 [bb 3] NOTE_INSN_BASIC_BLOCK)
 (insn 20 19 21 3 (set (mem/c:SI (plus:SI (reg:SI 82)
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("memory_end") [flags 0x2]  <var_decl 0x784621d40bd0 memory_end>)
+                            (symbol_ref:SI ("memory_end") [flags 0x2]  <var_decl 0x7f489ab40bd0 memory_end>)
                         ] UNSPEC_GOTOFF))) [3 memory_end+0 S4 A32])
         (const_int 16777216 [0x1000000])) "init/main.c":126:20 75 {*movsi_internal}
      (nil))
@@ -1336,7 +1336,7 @@ try_optimize_cfg iteration 1
 (insn 23 22 26 4 (set (reg:SI 91 [ memory_end.3_9 ])
         (mem/c:SI (plus:SI (reg:SI 82)
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("memory_end") [flags 0x2]  <var_decl 0x784621d40bd0 memory_end>)
+                            (symbol_ref:SI ("memory_end") [flags 0x2]  <var_decl 0x7f489ab40bd0 memory_end>)
                         ] UNSPEC_GOTOFF))) [3 memory_end+0 S4 A32])) "init/main.c":128:20 75 {*movsi_internal}
      (nil))
 (insn 26 23 27 4 (set (reg:CCGC 17 flags)
@@ -1353,7 +1353,7 @@ try_optimize_cfg iteration 1
 (note 28 27 29 5 [bb 5] NOTE_INSN_BASIC_BLOCK)
 (insn 29 28 32 5 (set (mem/c:SI (plus:SI (reg:SI 82)
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("buffer_memory_end") [flags 0x2]  <var_decl 0x784621d40c60 buffer_memory_end>)
+                            (symbol_ref:SI ("buffer_memory_end") [flags 0x2]  <var_decl 0x7f489ab40c60 buffer_memory_end>)
                         ] UNSPEC_GOTOFF))) [3 buffer_memory_end+0 S4 A32])
         (const_int 4194304 [0x400000])) "init/main.c":129:27 75 {*movsi_internal}
      (nil))
@@ -1363,7 +1363,7 @@ try_optimize_cfg iteration 1
 (insn 34 33 37 6 (set (reg:SI 92 [ memory_end.4_10 ])
         (mem/c:SI (plus:SI (reg:SI 82)
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("memory_end") [flags 0x2]  <var_decl 0x784621d40bd0 memory_end>)
+                            (symbol_ref:SI ("memory_end") [flags 0x2]  <var_decl 0x7f489ab40bd0 memory_end>)
                         ] UNSPEC_GOTOFF))) [3 memory_end+0 S4 A32])) "init/main.c":130:25 75 {*movsi_internal}
      (nil))
 (insn 37 34 38 6 (set (reg:CCGC 17 flags)
@@ -1380,7 +1380,7 @@ try_optimize_cfg iteration 1
 (note 39 38 40 7 [bb 7] NOTE_INSN_BASIC_BLOCK)
 (insn 40 39 43 7 (set (mem/c:SI (plus:SI (reg:SI 82)
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("buffer_memory_end") [flags 0x2]  <var_decl 0x784621d40c60 buffer_memory_end>)
+                            (symbol_ref:SI ("buffer_memory_end") [flags 0x2]  <var_decl 0x7f489ab40c60 buffer_memory_end>)
                         ] UNSPEC_GOTOFF))) [3 buffer_memory_end+0 S4 A32])
         (const_int 2097152 [0x200000])) "init/main.c":131:27 75 {*movsi_internal}
      (nil))
@@ -1389,7 +1389,7 @@ try_optimize_cfg iteration 1
 (note 44 43 45 8 [bb 8] NOTE_INSN_BASIC_BLOCK)
 (insn 45 44 46 8 (set (mem/c:SI (plus:SI (reg:SI 82)
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("buffer_memory_end") [flags 0x2]  <var_decl 0x784621d40c60 buffer_memory_end>)
+                            (symbol_ref:SI ("buffer_memory_end") [flags 0x2]  <var_decl 0x7f489ab40c60 buffer_memory_end>)
                         ] UNSPEC_GOTOFF))) [3 buffer_memory_end+0 S4 A32])
         (const_int 1048576 [0x100000])) "init/main.c":133:27 75 {*movsi_internal}
      (nil))
@@ -1398,12 +1398,12 @@ try_optimize_cfg iteration 1
 (insn 48 47 49 9 (set (reg:SI 93 [ buffer_memory_end.5_11 ])
         (mem/c:SI (plus:SI (reg:SI 82)
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("buffer_memory_end") [flags 0x2]  <var_decl 0x784621d40c60 buffer_memory_end>)
+                            (symbol_ref:SI ("buffer_memory_end") [flags 0x2]  <var_decl 0x7f489ab40c60 buffer_memory_end>)
                         ] UNSPEC_GOTOFF))) [3 buffer_memory_end+0 S4 A32])) "init/main.c":135:23 75 {*movsi_internal}
      (nil))
 (insn 49 48 0 9 (set (mem/c:SI (plus:SI (reg:SI 82)
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("main_memory_start") [flags 0x2]  <var_decl 0x784621d40cf0 main_memory_start>)
+                            (symbol_ref:SI ("main_memory_start") [flags 0x2]  <var_decl 0x7f489ab40cf0 main_memory_start>)
                         ] UNSPEC_GOTOFF))) [3 main_memory_start+0 S4 A32])
         (reg:SI 93 [ buffer_memory_end.5_11 ])) "init/main.c":135:23 75 {*movsi_internal}
      (nil))
@@ -1443,7 +1443,7 @@ try_optimize_cfg iteration 1
 (insn 8 7 9 2 (set (reg/f:SI 96)
         (mem/u/c:SI (plus:SI (reg:SI 82)
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("ROOT_DEV") [flags 0x40]  <var_decl 0x784623107c60 ROOT_DEV>)
+                            (symbol_ref:SI ("ROOT_DEV") [flags 0x40]  <var_decl 0x7f489bfdcc60 ROOT_DEV>)
                         ] UNSPEC_GOT))) [4  S4 A8])) "init/main.c":150:14 75 {*movsi_internal}
      (nil))
 (insn 9 8 10 2 (set (mem/c:SI (reg/f:SI 96) [1 ROOT_DEV+0 S4 A32])
@@ -1457,7 +1457,7 @@ try_optimize_cfg iteration 1
      (nil))
 (insn 12 11 13 2 (set (mem/c:SI (plus:SI (reg:SI 82)
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("drive_info") [flags 0x2]  <var_decl 0x784621d40ab0 drive_info>)
+                            (symbol_ref:SI ("drive_info") [flags 0x2]  <var_decl 0x7f489ab40ab0 drive_info>)
                         ] UNSPEC_GOTOFF))) [2 drive_info+0 S4 A256])
         (reg:SI 97)) "init/main.c":152:16 75 {*movsi_internal}
      (nil))
@@ -1467,7 +1467,7 @@ try_optimize_cfg iteration 1
      (nil))
 (insn 14 13 15 2 (set (mem/c:SI (plus:SI (reg:SI 82)
                 (const:SI (plus:SI (unspec:SI [
-                                (symbol_ref:SI ("drive_info") [flags 0x2]  <var_decl 0x784621d40ab0 drive_info>)
+                                (symbol_ref:SI ("drive_info") [flags 0x2]  <var_decl 0x7f489ab40ab0 drive_info>)
                             ] UNSPEC_GOTOFF)
                         (const_int 4 [0x4])))) [2 drive_info+4 S4 A32])
         (reg:SI 98)) "init/main.c":152:16 75 {*movsi_internal}
@@ -1478,7 +1478,7 @@ try_optimize_cfg iteration 1
      (nil))
 (insn 16 15 17 2 (set (mem/c:SI (plus:SI (reg:SI 82)
                 (const:SI (plus:SI (unspec:SI [
-                                (symbol_ref:SI ("drive_info") [flags 0x2]  <var_decl 0x784621d40ab0 drive_info>)
+                                (symbol_ref:SI ("drive_info") [flags 0x2]  <var_decl 0x7f489ab40ab0 drive_info>)
                             ] UNSPEC_GOTOFF)
                         (const_int 8 [0x8])))) [2 drive_info+8 S4 A64])
         (reg:SI 99)) "init/main.c":152:16 75 {*movsi_internal}
@@ -1489,7 +1489,7 @@ try_optimize_cfg iteration 1
      (nil))
 (insn 18 17 19 2 (set (mem/c:SI (plus:SI (reg:SI 82)
                 (const:SI (plus:SI (unspec:SI [
-                                (symbol_ref:SI ("drive_info") [flags 0x2]  <var_decl 0x784621d40ab0 drive_info>)
+                                (symbol_ref:SI ("drive_info") [flags 0x2]  <var_decl 0x7f489ab40ab0 drive_info>)
                             ] UNSPEC_GOTOFF)
                         (const_int 12 [0xc])))) [2 drive_info+12 S4 A32])
         (reg:SI 100)) "init/main.c":152:16 75 {*movsi_internal}
@@ -1500,7 +1500,7 @@ try_optimize_cfg iteration 1
      (nil))
 (insn 20 19 21 2 (set (mem/c:SI (plus:SI (reg:SI 82)
                 (const:SI (plus:SI (unspec:SI [
-                                (symbol_ref:SI ("drive_info") [flags 0x2]  <var_decl 0x784621d40ab0 drive_info>)
+                                (symbol_ref:SI ("drive_info") [flags 0x2]  <var_decl 0x7f489ab40ab0 drive_info>)
                             ] UNSPEC_GOTOFF)
                         (const_int 16 [0x10])))) [2 drive_info+16 S4 A128])
         (reg:SI 101)) "init/main.c":152:16 75 {*movsi_internal}
@@ -1511,7 +1511,7 @@ try_optimize_cfg iteration 1
      (nil))
 (insn 22 21 23 2 (set (mem/c:SI (plus:SI (reg:SI 82)
                 (const:SI (plus:SI (unspec:SI [
-                                (symbol_ref:SI ("drive_info") [flags 0x2]  <var_decl 0x784621d40ab0 drive_info>)
+                                (symbol_ref:SI ("drive_info") [flags 0x2]  <var_decl 0x7f489ab40ab0 drive_info>)
                             ] UNSPEC_GOTOFF)
                         (const_int 20 [0x14])))) [2 drive_info+20 S4 A32])
         (reg:SI 102)) "init/main.c":152:16 75 {*movsi_internal}
@@ -1522,7 +1522,7 @@ try_optimize_cfg iteration 1
      (nil))
 (insn 24 23 25 2 (set (mem/c:SI (plus:SI (reg:SI 82)
                 (const:SI (plus:SI (unspec:SI [
-                                (symbol_ref:SI ("drive_info") [flags 0x2]  <var_decl 0x784621d40ab0 drive_info>)
+                                (symbol_ref:SI ("drive_info") [flags 0x2]  <var_decl 0x7f489ab40ab0 drive_info>)
                             ] UNSPEC_GOTOFF)
                         (const_int 24 [0x18])))) [2 drive_info+24 S4 A64])
         (reg:SI 103)) "init/main.c":152:16 75 {*movsi_internal}
@@ -1533,25 +1533,25 @@ try_optimize_cfg iteration 1
      (nil))
 (insn 26 25 27 2 (set (mem/c:SI (plus:SI (reg:SI 82)
                 (const:SI (plus:SI (unspec:SI [
-                                (symbol_ref:SI ("drive_info") [flags 0x2]  <var_decl 0x784621d40ab0 drive_info>)
+                                (symbol_ref:SI ("drive_info") [flags 0x2]  <var_decl 0x7f489ab40ab0 drive_info>)
                             ] UNSPEC_GOTOFF)
                         (const_int 28 [0x1c])))) [2 drive_info+28 S4 A32])
         (reg:SI 104)) "init/main.c":152:16 75 {*movsi_internal}
      (nil))
-(call_insn 27 26 28 2 (call (mem:QI (symbol_ref:SI ("memory_detect") [flags 0x3]  <function_decl 0x784621d7ee00 memory_detect>) [0 memory_detect S1 A8])
+(call_insn 27 26 28 2 (call (mem:QI (symbol_ref:SI ("memory_detect") [flags 0x3]  <function_decl 0x7f489ab7ee00 memory_detect>) [0 memory_detect S1 A8])
         (const_int 0 [0])) "init/main.c":154:5 812 {*call}
      (nil)
     (nil))
 (insn 28 27 29 2 (set (reg:SI 87 [ memory_end.6_5 ])
         (mem/c:SI (plus:SI (reg:SI 82)
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("memory_end") [flags 0x2]  <var_decl 0x784621d40bd0 memory_end>)
+                            (symbol_ref:SI ("memory_end") [flags 0x2]  <var_decl 0x7f489ab40bd0 memory_end>)
                         ] UNSPEC_GOTOFF))) [3 memory_end+0 S4 A32])) "init/main.c":158:5 75 {*movsi_internal}
      (nil))
 (insn 29 28 30 2 (set (reg:SI 88 [ main_memory_start.7_6 ])
         (mem/c:SI (plus:SI (reg:SI 82)
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("main_memory_start") [flags 0x2]  <var_decl 0x784621d40cf0 main_memory_start>)
+                            (symbol_ref:SI ("main_memory_start") [flags 0x2]  <var_decl 0x7f489ab40cf0 main_memory_start>)
                         ] UNSPEC_GOTOFF))) [3 main_memory_start+0 S4 A32])) "init/main.c":158:5 75 {*movsi_internal}
      (nil))
 (insn 30 29 31 2 (parallel [
@@ -1573,7 +1573,7 @@ try_optimize_cfg iteration 1
 (insn 33 32 34 2 (set (reg:SI 3 bx)
         (reg:SI 82)) "init/main.c":158:5 75 {*movsi_internal}
      (nil))
-(call_insn 34 33 35 2 (call (mem:QI (symbol_ref:SI ("mem_init") [flags 0x41]  <function_decl 0x784621d76a00 mem_init>) [0 mem_init S1 A8])
+(call_insn 34 33 35 2 (call (mem:QI (symbol_ref:SI ("mem_init") [flags 0x41]  <function_decl 0x7f489ab76a00 mem_init>) [0 mem_init S1 A8])
         (const_int 16 [0x10])) "init/main.c":158:5 812 {*call}
      (nil)
     (expr_list (use (reg:SI 3 bx))
@@ -1589,7 +1589,7 @@ try_optimize_cfg iteration 1
 (insn 36 35 37 2 (set (reg:SI 3 bx)
         (reg:SI 82)) "init/main.c":159:5 75 {*movsi_internal}
      (nil))
-(call_insn 37 36 38 2 (call (mem:QI (symbol_ref:SI ("trap_init") [flags 0x41]  <function_decl 0x784621d5d000 trap_init>) [0 trap_init S1 A8])
+(call_insn 37 36 38 2 (call (mem:QI (symbol_ref:SI ("trap_init") [flags 0x41]  <function_decl 0x7f489ab5d000 trap_init>) [0 trap_init S1 A8])
         (const_int 0 [0])) "init/main.c":159:5 812 {*call}
      (nil)
     (expr_list (use (reg:SI 3 bx))
@@ -1597,7 +1597,7 @@ try_optimize_cfg iteration 1
 (insn 38 37 39 2 (set (reg:SI 3 bx)
         (reg:SI 82)) "init/main.c":160:5 75 {*movsi_internal}
      (nil))
-(call_insn 39 38 40 2 (call (mem:QI (symbol_ref:SI ("blk_dev_init") [flags 0x41]  <function_decl 0x784621d76b00 blk_dev_init>) [0 blk_dev_init S1 A8])
+(call_insn 39 38 40 2 (call (mem:QI (symbol_ref:SI ("blk_dev_init") [flags 0x41]  <function_decl 0x7f489ab76b00 blk_dev_init>) [0 blk_dev_init S1 A8])
         (const_int 0 [0])) "init/main.c":160:5 812 {*call}
      (nil)
     (expr_list (use (reg:SI 3 bx))
@@ -1605,7 +1605,7 @@ try_optimize_cfg iteration 1
 (insn 40 39 41 2 (set (reg:SI 3 bx)
         (reg:SI 82)) "init/main.c":161:5 75 {*movsi_internal}
      (nil))
-(call_insn 41 40 42 2 (call (mem:QI (symbol_ref:SI ("chr_dev_init") [flags 0x41]  <function_decl 0x784621d76c00 chr_dev_init>) [0 chr_dev_init S1 A8])
+(call_insn 41 40 42 2 (call (mem:QI (symbol_ref:SI ("chr_dev_init") [flags 0x41]  <function_decl 0x7f489ab76c00 chr_dev_init>) [0 chr_dev_init S1 A8])
         (const_int 0 [0])) "init/main.c":161:5 812 {*call}
      (nil)
     (expr_list (use (reg:SI 3 bx))
@@ -1613,19 +1613,19 @@ try_optimize_cfg iteration 1
 (insn 42 41 43 2 (set (reg:SI 3 bx)
         (reg:SI 82)) "init/main.c":162:5 75 {*movsi_internal}
      (nil))
-(call_insn 43 42 44 2 (call (mem:QI (symbol_ref:SI ("tty_init") [flags 0x41]  <function_decl 0x784621d5dd00 tty_init>) [0 tty_init S1 A8])
+(call_insn 43 42 44 2 (call (mem:QI (symbol_ref:SI ("tty_init") [flags 0x41]  <function_decl 0x7f489ab5dd00 tty_init>) [0 tty_init S1 A8])
         (const_int 0 [0])) "init/main.c":162:5 812 {*call}
      (nil)
     (expr_list (use (reg:SI 3 bx))
         (nil)))
-(call_insn 44 43 45 2 (call (mem:QI (symbol_ref:SI ("time_init") [flags 0x3]  <function_decl 0x784621d76100 time_init>) [0 time_init S1 A8])
+(call_insn 44 43 45 2 (call (mem:QI (symbol_ref:SI ("time_init") [flags 0x3]  <function_decl 0x7f489ab76100 time_init>) [0 time_init S1 A8])
         (const_int 0 [0])) "init/main.c":163:5 812 {*call}
      (nil)
     (nil))
 (insn 45 44 46 2 (set (reg:SI 3 bx)
         (reg:SI 82)) "init/main.c":164:5 75 {*movsi_internal}
      (nil))
-(call_insn 46 45 47 2 (call (mem:QI (symbol_ref:SI ("sched_init") [flags 0x41]  <function_decl 0x784621d5d100 sched_init>) [0 sched_init S1 A8])
+(call_insn 46 45 47 2 (call (mem:QI (symbol_ref:SI ("sched_init") [flags 0x41]  <function_decl 0x7f489ab5d100 sched_init>) [0 sched_init S1 A8])
         (const_int 0 [0])) "init/main.c":164:5 812 {*call}
      (nil)
     (expr_list (use (reg:SI 3 bx))
@@ -1633,7 +1633,7 @@ try_optimize_cfg iteration 1
 (insn 47 46 48 2 (set (reg:SI 89 [ buffer_memory_end.8_7 ])
         (mem/c:SI (plus:SI (reg:SI 82)
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("buffer_memory_end") [flags 0x2]  <var_decl 0x784621d40c60 buffer_memory_end>)
+                            (symbol_ref:SI ("buffer_memory_end") [flags 0x2]  <var_decl 0x7f489ab40c60 buffer_memory_end>)
                         ] UNSPEC_GOTOFF))) [3 buffer_memory_end+0 S4 A32])) "init/main.c":165:5 75 {*movsi_internal}
      (nil))
 (insn 48 47 49 2 (parallel [
@@ -1651,7 +1651,7 @@ try_optimize_cfg iteration 1
 (insn 50 49 51 2 (set (reg:SI 3 bx)
         (reg:SI 82)) "init/main.c":165:5 75 {*movsi_internal}
      (nil))
-(call_insn 51 50 52 2 (call (mem:QI (symbol_ref:SI ("buffer_init") [flags 0x41]  <function_decl 0x784621d17a00 buffer_init>) [0 buffer_init S1 A8])
+(call_insn 51 50 52 2 (call (mem:QI (symbol_ref:SI ("buffer_init") [flags 0x41]  <function_decl 0x7f489ab17a00 buffer_init>) [0 buffer_init S1 A8])
         (const_int 16 [0x10])) "init/main.c":165:5 812 {*call}
      (nil)
     (expr_list (use (reg:SI 3 bx))
@@ -1667,7 +1667,7 @@ try_optimize_cfg iteration 1
 (insn 53 52 54 2 (set (reg:SI 3 bx)
         (reg:SI 82)) "init/main.c":167:5 75 {*movsi_internal}
      (nil))
-(call_insn 54 53 55 2 (call (mem:QI (symbol_ref:SI ("hd_init") [flags 0x41]  <function_decl 0x784621d76d00 hd_init>) [0 hd_init S1 A8])
+(call_insn 54 53 55 2 (call (mem:QI (symbol_ref:SI ("hd_init") [flags 0x41]  <function_decl 0x7f489ab76d00 hd_init>) [0 hd_init S1 A8])
         (const_int 0 [0])) "init/main.c":167:5 812 {*call}
      (nil)
     (expr_list (use (reg:SI 3 bx))
@@ -1753,7 +1753,7 @@ try_optimize_cfg iteration 1
 (insn 72 71 73 4 (set (reg/f:SI 108)
         (mem/u/c:SI (plus:SI (reg:SI 82)
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("errno") [flags 0x40]  <var_decl 0x784623107b40 errno>)
+                            (symbol_ref:SI ("errno") [flags 0x40]  <var_decl 0x7f489bfdcb40 errno>)
                         ] UNSPEC_GOT))) [4  S4 A8])) "init/main.c":40:8 75 {*movsi_internal}
      (nil))
 (insn 73 72 74 4 (set (mem/c:SI (reg/f:SI 108) [1 errno+0 S4 A32])
@@ -1776,7 +1776,7 @@ try_optimize_cfg iteration 1
      (nil)
  -> 81)
 (note 79 78 80 6 [bb 6] NOTE_INSN_BASIC_BLOCK)
-(call_insn 80 79 81 6 (call (mem:QI (symbol_ref:SI ("init") [flags 0x3]  <function_decl 0x784621d76800 init>) [0 init S1 A8])
+(call_insn 80 79 81 6 (call (mem:QI (symbol_ref:SI ("init") [flags 0x3]  <function_decl 0x7f489ab76800 init>) [0 init S1 A8])
         (const_int 0 [0])) "init/main.c":185:9 812 {*call}
      (nil)
     (nil))
@@ -1838,7 +1838,7 @@ try_optimize_cfg iteration 1
 (insn 99 98 100 10 (set (reg/f:SI 112)
         (mem/u/c:SI (plus:SI (reg:SI 82)
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("errno") [flags 0x40]  <var_decl 0x784623107b40 errno>)
+                            (symbol_ref:SI ("errno") [flags 0x40]  <var_decl 0x7f489bfdcb40 errno>)
                         ] UNSPEC_GOT))) [4  S4 A8])) "init/main.c":42:8 75 {*movsi_internal}
      (nil))
 (insn 100 99 101 10 (set (mem/c:SI (reg/f:SI 112) [1 errno+0 S4 A32])
@@ -1892,9 +1892,9 @@ try_optimize_cfg iteration 1
 (insn 11 10 12 2 (set (reg/f:SI 87)
         (plus:SI (reg:SI 82)
             (const:SI (unspec:SI [
-                        (symbol_ref:SI ("printbuf") [flags 0x2]  <var_decl 0x784621d40a20 printbuf>)
+                        (symbol_ref:SI ("printbuf") [flags 0x2]  <var_decl 0x7f489ab40a20 printbuf>)
                     ] UNSPEC_GOTOFF)))) "init/main.c":204:28 205 {*leasi}
-     (expr_list:REG_EQUAL (symbol_ref:SI ("printbuf") [flags 0x2]  <var_decl 0x784621d40a20 printbuf>)
+     (expr_list:REG_EQUAL (symbol_ref:SI ("printbuf") [flags 0x2]  <var_decl 0x7f489ab40a20 printbuf>)
         (nil)))
 (insn 12 11 13 2 (set (mem/f:SI (pre_dec:SI (reg/f:SI 7 sp)) [6  S4 A32])
         (reg/f:SI 87)) "init/main.c":204:28 54 {*pushsi2}
@@ -1904,7 +1904,7 @@ try_optimize_cfg iteration 1
         (reg:SI 82)) "init/main.c":204:28 75 {*movsi_internal}
      (nil))
 (call_insn 14 13 15 2 (set (reg:SI 0 ax)
-        (call (mem:QI (symbol_ref:SI ("vsprintf") [flags 0x41]  <function_decl 0x784621d76900 vsprintf>) [0 vsprintf S1 A8])
+        (call (mem:QI (symbol_ref:SI ("vsprintf") [flags 0x41]  <function_decl 0x7f489ab76900 vsprintf>) [0 vsprintf S1 A8])
             (const_int 16 [0x10]))) "init/main.c":204:28 823 {*call_value}
      (nil)
     (expr_list (use (reg:SI 3 bx))
@@ -1940,9 +1940,9 @@ try_optimize_cfg iteration 1
 (insn 20 19 21 2 (set (reg/f:SI 89)
         (plus:SI (reg:SI 82)
             (const:SI (unspec:SI [
-                        (symbol_ref:SI ("printbuf") [flags 0x2]  <var_decl 0x784621d40a20 printbuf>)
+                        (symbol_ref:SI ("printbuf") [flags 0x2]  <var_decl 0x7f489ab40a20 printbuf>)
                     ] UNSPEC_GOTOFF)))) "init/main.c":204:5 205 {*leasi}
-     (expr_list:REG_EQUAL (symbol_ref:SI ("printbuf") [flags 0x2]  <var_decl 0x784621d40a20 printbuf>)
+     (expr_list:REG_EQUAL (symbol_ref:SI ("printbuf") [flags 0x2]  <var_decl 0x7f489ab40a20 printbuf>)
         (nil)))
 (insn 21 20 22 2 (set (mem/f:SI (pre_dec:SI (reg/f:SI 7 sp)) [6  S4 A32])
         (reg/f:SI 89)) "init/main.c":204:5 54 {*pushsi2}
@@ -1956,7 +1956,7 @@ try_optimize_cfg iteration 1
         (reg:SI 82)) "init/main.c":204:5 75 {*movsi_internal}
      (nil))
 (call_insn 24 23 25 2 (set (reg:SI 0 ax)
-        (call (mem:QI (symbol_ref:SI ("write") [flags 0x41]  <function_decl 0x784621d13200 write>) [0 write S1 A8])
+        (call (mem:QI (symbol_ref:SI ("write") [flags 0x41]  <function_decl 0x7f489ab13200 write>) [0 write S1 A8])
             (const_int 16 [0x10]))) "init/main.c":204:5 823 {*call_value}
      (nil)
     (expr_list (use (reg:SI 3 bx))
@@ -2009,16 +2009,16 @@ try_optimize_cfg iteration 1
 (insn 5 2 6 2 (set (reg/f:SI 98)
         (plus:SI (reg:SI 82)
             (const:SI (unspec:SI [
-                        (symbol_ref:SI ("drive_info") [flags 0x2]  <var_decl 0x784621d40ab0 drive_info>)
+                        (symbol_ref:SI ("drive_info") [flags 0x2]  <var_decl 0x7f489ab40ab0 drive_info>)
                     ] UNSPEC_GOTOFF)))) "init/main.c":219:5 205 {*leasi}
-     (expr_list:REG_EQUAL (symbol_ref:SI ("drive_info") [flags 0x2]  <var_decl 0x784621d40ab0 drive_info>)
+     (expr_list:REG_EQUAL (symbol_ref:SI ("drive_info") [flags 0x2]  <var_decl 0x7f489ab40ab0 drive_info>)
         (nil)))
 (insn 6 5 7 2 (set (mem/f:SI (pre_dec:SI (reg/f:SI 7 sp)) [11  S4 A32])
         (reg/f:SI 98)) "init/main.c":219:5 54 {*pushsi2}
      (expr_list:REG_ARGS_SIZE (const_int 4 [0x4])
         (nil)))
 (call_insn 7 6 8 2 (set (reg:SI 0 ax)
-        (call (mem:QI (symbol_ref:SI ("setup") [flags 0x3]  <function_decl 0x784621d5df00 setup>) [0 setup S1 A8])
+        (call (mem:QI (symbol_ref:SI ("setup") [flags 0x3]  <function_decl 0x7f489ab5df00 setup>) [0 setup S1 A8])
             (const_int 4 [0x4]))) "init/main.c":219:5 823 {*call_value}
      (nil)
     (nil))
@@ -2049,9 +2049,9 @@ try_optimize_cfg iteration 1
 (insn 12 11 13 2 (set (reg/f:SI 99)
         (plus:SI (reg:SI 82)
             (const:SI (unspec:SI [
-                        (symbol_ref/f:SI ("*.LC5") [flags 0x2]  <var_decl 0x784621dd36c0 *.LC5>)
+                        (symbol_ref/f:SI ("*.LC5") [flags 0x2]  <var_decl 0x7f489abd36c0 *.LC5>)
                     ] UNSPEC_GOTOFF)))) "init/main.c":220:11 205 {*leasi}
-     (expr_list:REG_EQUAL (symbol_ref/f:SI ("*.LC5") [flags 0x2]  <var_decl 0x784621dd36c0 *.LC5>)
+     (expr_list:REG_EQUAL (symbol_ref/f:SI ("*.LC5") [flags 0x2]  <var_decl 0x7f489abd36c0 *.LC5>)
         (nil)))
 (insn 13 12 14 2 (set (mem/f:SI (pre_dec:SI (reg/f:SI 7 sp)) [6  S4 A32])
         (reg/f:SI 99)) "init/main.c":220:11 54 {*pushsi2}
@@ -2061,7 +2061,7 @@ try_optimize_cfg iteration 1
         (reg:SI 82)) "init/main.c":220:11 75 {*movsi_internal}
      (nil))
 (call_insn 15 14 16 2 (set (reg:SI 0 ax)
-        (call (mem:QI (symbol_ref:SI ("open") [flags 0x41]  <function_decl 0x784621d0e800 open>) [0 open S1 A8])
+        (call (mem:QI (symbol_ref:SI ("open") [flags 0x41]  <function_decl 0x7f489ab0e800 open>) [0 open S1 A8])
             (const_int 16 [0x10]))) "init/main.c":220:11 823 {*call_value}
      (nil)
     (expr_list (use (reg:SI 3 bx))
@@ -2090,7 +2090,7 @@ try_optimize_cfg iteration 1
         (reg:SI 82)) "init/main.c":221:11 75 {*movsi_internal}
      (nil))
 (call_insn 20 19 21 2 (set (reg:SI 0 ax)
-        (call (mem:QI (symbol_ref:SI ("dup") [flags 0x41]  <function_decl 0x784621d0b200 dup>) [0 dup S1 A8])
+        (call (mem:QI (symbol_ref:SI ("dup") [flags 0x41]  <function_decl 0x7f489ab0b200 dup>) [0 dup S1 A8])
             (const_int 16 [0x10]))) "init/main.c":221:11 823 {*call_value}
      (nil)
     (expr_list (use (reg:SI 3 bx))
@@ -2119,7 +2119,7 @@ try_optimize_cfg iteration 1
         (reg:SI 82)) "init/main.c":222:11 75 {*movsi_internal}
      (nil))
 (call_insn 25 24 26 2 (set (reg:SI 0 ax)
-        (call (mem:QI (symbol_ref:SI ("dup") [flags 0x41]  <function_decl 0x784621d0b200 dup>) [0 dup S1 A8])
+        (call (mem:QI (symbol_ref:SI ("dup") [flags 0x41]  <function_decl 0x7f489ab0b200 dup>) [0 dup S1 A8])
             (const_int 16 [0x10]))) "init/main.c":222:11 823 {*call_value}
      (nil)
     (expr_list (use (reg:SI 3 bx))
@@ -2135,7 +2135,7 @@ try_optimize_cfg iteration 1
 (insn 27 26 28 2 (set (reg/f:SI 100)
         (mem/u/c:SI (plus:SI (reg:SI 82)
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("nr_buffers") [flags 0x40]  <var_decl 0x784623107ea0 nr_buffers>)
+                            (symbol_ref:SI ("nr_buffers") [flags 0x40]  <var_decl 0x7f489bfdcea0 nr_buffers>)
                         ] UNSPEC_GOT))) [4  S4 A8])) "init/main.c":223:5 75 {*movsi_internal}
      (nil))
 (insn 28 27 29 2 (set (reg:SI 83 [ nr_buffers.10_1 ])
@@ -2151,7 +2151,7 @@ try_optimize_cfg iteration 1
 (insn 30 29 31 2 (set (reg/f:SI 101)
         (mem/u/c:SI (plus:SI (reg:SI 82)
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("nr_buffers") [flags 0x40]  <var_decl 0x784623107ea0 nr_buffers>)
+                            (symbol_ref:SI ("nr_buffers") [flags 0x40]  <var_decl 0x7f489bfdcea0 nr_buffers>)
                         ] UNSPEC_GOT))) [4  S4 A8])) "init/main.c":223:5 75 {*movsi_internal}
      (nil))
 (insn 31 30 32 2 (set (reg:SI 85 [ nr_buffers.11_3 ])
@@ -2176,16 +2176,16 @@ try_optimize_cfg iteration 1
 (insn 35 34 36 2 (set (reg/f:SI 102)
         (plus:SI (reg:SI 82)
             (const:SI (unspec:SI [
-                        (symbol_ref/f:SI ("*.LC6") [flags 0x2]  <var_decl 0x784621dd3750 *.LC6>)
+                        (symbol_ref/f:SI ("*.LC6") [flags 0x2]  <var_decl 0x7f489abd3750 *.LC6>)
                     ] UNSPEC_GOTOFF)))) "init/main.c":223:5 205 {*leasi}
-     (expr_list:REG_EQUAL (symbol_ref/f:SI ("*.LC6") [flags 0x2]  <var_decl 0x784621dd3750 *.LC6>)
+     (expr_list:REG_EQUAL (symbol_ref/f:SI ("*.LC6") [flags 0x2]  <var_decl 0x7f489abd3750 *.LC6>)
         (nil)))
 (insn 36 35 37 2 (set (mem/f:SI (pre_dec:SI (reg/f:SI 7 sp)) [6  S4 A32])
         (reg/f:SI 102)) "init/main.c":223:5 54 {*pushsi2}
      (expr_list:REG_ARGS_SIZE (const_int 16 [0x10])
         (nil)))
 (call_insn 37 36 38 2 (set (reg:SI 0 ax)
-        (call (mem:QI (symbol_ref:SI ("printf") [flags 0x3]  <function_decl 0x784621d86300 printf>) [0 printf S1 A8])
+        (call (mem:QI (symbol_ref:SI ("printf") [flags 0x3]  <function_decl 0x7f489ab86300 printf>) [0 printf S1 A8])
             (const_int 16 [0x10]))) "init/main.c":223:5 823 {*call_value}
      (nil)
     (nil))
@@ -2200,13 +2200,13 @@ try_optimize_cfg iteration 1
 (insn 39 38 40 2 (set (reg:SI 86 [ memory_end.12_4 ])
         (mem/c:SI (plus:SI (reg:SI 82)
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("memory_end") [flags 0x2]  <var_decl 0x784621d40bd0 memory_end>)
+                            (symbol_ref:SI ("memory_end") [flags 0x2]  <var_decl 0x7f489ab40bd0 memory_end>)
                         ] UNSPEC_GOTOFF))) [3 memory_end+0 S4 A32])) "init/main.c":225:5 75 {*movsi_internal}
      (nil))
 (insn 40 39 41 2 (set (reg:SI 87 [ main_memory_start.13_5 ])
         (mem/c:SI (plus:SI (reg:SI 82)
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("main_memory_start") [flags 0x2]  <var_decl 0x784621d40cf0 main_memory_start>)
+                            (symbol_ref:SI ("main_memory_start") [flags 0x2]  <var_decl 0x7f489ab40cf0 main_memory_start>)
                         ] UNSPEC_GOTOFF))) [3 main_memory_start+0 S4 A32])) "init/main.c":225:5 75 {*movsi_internal}
      (nil))
 (insn 41 40 42 2 (parallel [
@@ -2231,16 +2231,16 @@ try_optimize_cfg iteration 1
 (insn 44 43 45 2 (set (reg/f:SI 103)
         (plus:SI (reg:SI 82)
             (const:SI (unspec:SI [
-                        (symbol_ref/f:SI ("*.LC7") [flags 0x2]  <var_decl 0x784621dd37e0 *.LC7>)
+                        (symbol_ref/f:SI ("*.LC7") [flags 0x2]  <var_decl 0x7f489abd37e0 *.LC7>)
                     ] UNSPEC_GOTOFF)))) "init/main.c":225:5 205 {*leasi}
-     (expr_list:REG_EQUAL (symbol_ref/f:SI ("*.LC7") [flags 0x2]  <var_decl 0x784621dd37e0 *.LC7>)
+     (expr_list:REG_EQUAL (symbol_ref/f:SI ("*.LC7") [flags 0x2]  <var_decl 0x7f489abd37e0 *.LC7>)
         (nil)))
 (insn 45 44 46 2 (set (mem/f:SI (pre_dec:SI (reg/f:SI 7 sp)) [6  S4 A32])
         (reg/f:SI 103)) "init/main.c":225:5 54 {*pushsi2}
      (expr_list:REG_ARGS_SIZE (const_int 16 [0x10])
         (nil)))
 (call_insn 46 45 47 2 (set (reg:SI 0 ax)
-        (call (mem:QI (symbol_ref:SI ("printf") [flags 0x3]  <function_decl 0x784621d86300 printf>) [0 printf S1 A8])
+        (call (mem:QI (symbol_ref:SI ("printf") [flags 0x3]  <function_decl 0x7f489ab86300 printf>) [0 printf S1 A8])
             (const_int 16 [0x10]))) "init/main.c":225:5 823 {*call_value}
      (nil)
     (nil))
@@ -2306,7 +2306,7 @@ try_optimize_cfg iteration 1
 (insn 63 62 64 4 (set (reg/f:SI 107)
         (mem/u/c:SI (plus:SI (reg:SI 82)
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("errno") [flags 0x40]  <var_decl 0x784623107b40 errno>)
+                            (symbol_ref:SI ("errno") [flags 0x40]  <var_decl 0x7f489bfdcb40 errno>)
                         ] UNSPEC_GOT))) [4  S4 A8])) "init/main.c":40:8 75 {*movsi_internal}
      (nil))
 (insn 64 63 65 4 (set (mem/c:SI (reg/f:SI 107) [1 errno+0 S4 A32])
@@ -2350,7 +2350,7 @@ try_optimize_cfg iteration 1
         (reg:SI 82)) "init/main.c":230:9 75 {*movsi_internal}
      (nil))
 (call_insn 75 74 76 6 (set (reg:SI 0 ax)
-        (call (mem:QI (symbol_ref:SI ("close") [flags 0x41]  <function_decl 0x784621d0b000 close>) [0 close S1 A8])
+        (call (mem:QI (symbol_ref:SI ("close") [flags 0x41]  <function_decl 0x7f489ab0b000 close>) [0 close S1 A8])
             (const_int 16 [0x10]))) "init/main.c":230:9 823 {*call_value}
      (nil)
     (expr_list (use (reg:SI 3 bx))
@@ -2382,9 +2382,9 @@ try_optimize_cfg iteration 1
 (insn 80 79 81 6 (set (reg/f:SI 108)
         (plus:SI (reg:SI 82)
             (const:SI (unspec:SI [
-                        (symbol_ref/f:SI ("*.LC8") [flags 0x2]  <var_decl 0x784621dd3900 *.LC8>)
+                        (symbol_ref/f:SI ("*.LC8") [flags 0x2]  <var_decl 0x7f489abd3900 *.LC8>)
                     ] UNSPEC_GOTOFF)))) "init/main.c":231:13 205 {*leasi}
-     (expr_list:REG_EQUAL (symbol_ref/f:SI ("*.LC8") [flags 0x2]  <var_decl 0x784621dd3900 *.LC8>)
+     (expr_list:REG_EQUAL (symbol_ref/f:SI ("*.LC8") [flags 0x2]  <var_decl 0x7f489abd3900 *.LC8>)
         (nil)))
 (insn 81 80 82 6 (set (mem/f:SI (pre_dec:SI (reg/f:SI 7 sp)) [6  S4 A32])
         (reg/f:SI 108)) "init/main.c":231:13 54 {*pushsi2}
@@ -2394,7 +2394,7 @@ try_optimize_cfg iteration 1
         (reg:SI 82)) "init/main.c":231:13 75 {*movsi_internal}
      (nil))
 (call_insn 83 82 84 6 (set (reg:SI 0 ax)
-        (call (mem:QI (symbol_ref:SI ("open") [flags 0x41]  <function_decl 0x784621d0e800 open>) [0 open S1 A8])
+        (call (mem:QI (symbol_ref:SI ("open") [flags 0x41]  <function_decl 0x7f489ab0e800 open>) [0 open S1 A8])
             (const_int 16 [0x10]))) "init/main.c":231:13 823 {*call_value}
      (nil)
     (expr_list (use (reg:SI 3 bx))
@@ -2437,7 +2437,7 @@ try_optimize_cfg iteration 1
 (insn 91 90 92 7 (set (reg:SI 3 bx)
         (reg:SI 82)) "init/main.c":232:13 75 {*movsi_internal}
      (nil))
-(call_insn 92 91 93 7 (call (mem:QI (symbol_ref:SI ("_exit") [flags 0x41]  <function_decl 0x784621d0b900 _exit>) [0 _exit S1 A8])
+(call_insn 92 91 93 7 (call (mem:QI (symbol_ref:SI ("_exit") [flags 0x41]  <function_decl 0x7f489ab0b900 _exit>) [0 _exit S1 A8])
         (const_int 16 [0x10])) "init/main.c":232:13 812 {*call}
      (nil)
     (expr_list (use (reg:SI 3 bx))
@@ -2463,9 +2463,9 @@ try_optimize_cfg iteration 1
 (insn 97 96 98 8 (set (reg/f:SI 109)
         (plus:SI (reg:SI 82)
             (const:SI (unspec:SI [
-                        (symbol_ref:SI ("envp_rc") [flags 0x2]  <var_decl 0x784621d7fb40 envp_rc>)
+                        (symbol_ref:SI ("envp_rc") [flags 0x2]  <var_decl 0x7f489ab7fb40 envp_rc>)
                     ] UNSPEC_GOTOFF)))) "init/main.c":233:9 205 {*leasi}
-     (expr_list:REG_EQUAL (symbol_ref:SI ("envp_rc") [flags 0x2]  <var_decl 0x784621d7fb40 envp_rc>)
+     (expr_list:REG_EQUAL (symbol_ref:SI ("envp_rc") [flags 0x2]  <var_decl 0x7f489ab7fb40 envp_rc>)
         (nil)))
 (insn 98 97 99 8 (set (mem/f:SI (pre_dec:SI (reg/f:SI 7 sp)) [12  S4 A32])
         (reg/f:SI 109)) "init/main.c":233:9 54 {*pushsi2}
@@ -2474,9 +2474,9 @@ try_optimize_cfg iteration 1
 (insn 99 98 100 8 (set (reg/f:SI 110)
         (plus:SI (reg:SI 82)
             (const:SI (unspec:SI [
-                        (symbol_ref:SI ("argv_rc") [flags 0x2]  <var_decl 0x784621d7fab0 argv_rc>)
+                        (symbol_ref:SI ("argv_rc") [flags 0x2]  <var_decl 0x7f489ab7fab0 argv_rc>)
                     ] UNSPEC_GOTOFF)))) "init/main.c":233:9 205 {*leasi}
-     (expr_list:REG_EQUAL (symbol_ref:SI ("argv_rc") [flags 0x2]  <var_decl 0x784621d7fab0 argv_rc>)
+     (expr_list:REG_EQUAL (symbol_ref:SI ("argv_rc") [flags 0x2]  <var_decl 0x7f489ab7fab0 argv_rc>)
         (nil)))
 (insn 100 99 101 8 (set (mem/f:SI (pre_dec:SI (reg/f:SI 7 sp)) [12  S4 A32])
         (reg/f:SI 110)) "init/main.c":233:9 54 {*pushsi2}
@@ -2485,9 +2485,9 @@ try_optimize_cfg iteration 1
 (insn 101 100 102 8 (set (reg/f:SI 111)
         (plus:SI (reg:SI 82)
             (const:SI (unspec:SI [
-                        (symbol_ref/f:SI ("*.LC1") [flags 0x2]  <var_decl 0x784621dd33f0 *.LC1>)
+                        (symbol_ref/f:SI ("*.LC1") [flags 0x2]  <var_decl 0x7f489abd33f0 *.LC1>)
                     ] UNSPEC_GOTOFF)))) "init/main.c":233:9 205 {*leasi}
-     (expr_list:REG_EQUAL (symbol_ref/f:SI ("*.LC1") [flags 0x2]  <var_decl 0x784621dd33f0 *.LC1>)
+     (expr_list:REG_EQUAL (symbol_ref/f:SI ("*.LC1") [flags 0x2]  <var_decl 0x7f489abd33f0 *.LC1>)
         (nil)))
 (insn 102 101 103 8 (set (mem/f:SI (pre_dec:SI (reg/f:SI 7 sp)) [6  S4 A32])
         (reg/f:SI 111)) "init/main.c":233:9 54 {*pushsi2}
@@ -2497,7 +2497,7 @@ try_optimize_cfg iteration 1
         (reg:SI 82)) "init/main.c":233:9 75 {*movsi_internal}
      (nil))
 (call_insn 104 103 105 8 (set (reg:SI 0 ax)
-        (call (mem:QI (symbol_ref:SI ("execve") [flags 0x41]  <function_decl 0x784621d0b300 execve>) [0 execve S1 A8])
+        (call (mem:QI (symbol_ref:SI ("execve") [flags 0x41]  <function_decl 0x7f489ab0b300 execve>) [0 execve S1 A8])
             (const_int 16 [0x10]))) "init/main.c":233:9 823 {*call_value}
      (nil)
     (expr_list (use (reg:SI 3 bx))
@@ -2525,7 +2525,7 @@ try_optimize_cfg iteration 1
 (insn 108 107 109 8 (set (reg:SI 3 bx)
         (reg:SI 82)) "init/main.c":234:9 75 {*movsi_internal}
      (nil))
-(call_insn 109 108 110 8 (call (mem:QI (symbol_ref:SI ("_exit") [flags 0x41]  <function_decl 0x784621d0b900 _exit>) [0 _exit S1 A8])
+(call_insn 109 108 110 8 (call (mem:QI (symbol_ref:SI ("_exit") [flags 0x41]  <function_decl 0x7f489ab0b900 _exit>) [0 _exit S1 A8])
         (const_int 16 [0x10])) "init/main.c":234:9 812 {*call}
      (nil)
     (expr_list (use (reg:SI 3 bx))
@@ -2578,7 +2578,7 @@ try_optimize_cfg iteration 1
         (reg:SI 82)) "init/main.c":237:23 75 {*movsi_internal}
      (nil))
 (call_insn 123 122 124 11 (set (reg:SI 0 ax)
-        (call (mem:QI (symbol_ref:SI ("wait") [flags 0x41]  <function_decl 0x784621d13f00 wait>) [0 wait S1 A8])
+        (call (mem:QI (symbol_ref:SI ("wait") [flags 0x41]  <function_decl 0x7f489ab13f00 wait>) [0 wait S1 A8])
             (const_int 16 [0x10]))) "init/main.c":237:23 823 {*call_value}
      (nil)
     (expr_list (use (reg:SI 3 bx))
@@ -2664,7 +2664,7 @@ try_optimize_cfg iteration 1
 (insn 147 146 148 15 (set (reg/f:SI 116)
         (mem/u/c:SI (plus:SI (reg:SI 82)
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("errno") [flags 0x40]  <var_decl 0x784623107b40 errno>)
+                            (symbol_ref:SI ("errno") [flags 0x40]  <var_decl 0x7f489bfdcb40 errno>)
                         ] UNSPEC_GOT))) [4  S4 A8])) "init/main.c":40:8 75 {*movsi_internal}
      (nil))
 (insn 148 147 149 15 (set (mem/c:SI (reg/f:SI 116) [1 errno+0 S4 A32])
@@ -2703,16 +2703,16 @@ try_optimize_cfg iteration 1
 (insn 159 158 160 17 (set (reg/f:SI 117)
         (plus:SI (reg:SI 82)
             (const:SI (unspec:SI [
-                        (symbol_ref/f:SI ("*.LC9") [flags 0x2]  <var_decl 0x784621dd3a20 *.LC9>)
+                        (symbol_ref/f:SI ("*.LC9") [flags 0x2]  <var_decl 0x7f489abd3a20 *.LC9>)
                     ] UNSPEC_GOTOFF)))) "init/main.c":241:13 205 {*leasi}
-     (expr_list:REG_EQUAL (symbol_ref/f:SI ("*.LC9") [flags 0x2]  <var_decl 0x784621dd3a20 *.LC9>)
+     (expr_list:REG_EQUAL (symbol_ref/f:SI ("*.LC9") [flags 0x2]  <var_decl 0x7f489abd3a20 *.LC9>)
         (nil)))
 (insn 160 159 161 17 (set (mem/f:SI (pre_dec:SI (reg/f:SI 7 sp)) [6  S4 A32])
         (reg/f:SI 117)) "init/main.c":241:13 54 {*pushsi2}
      (expr_list:REG_ARGS_SIZE (const_int 16 [0x10])
         (nil)))
 (call_insn 161 160 162 17 (set (reg:SI 0 ax)
-        (call (mem:QI (symbol_ref:SI ("printf") [flags 0x3]  <function_decl 0x784621d86300 printf>) [0 printf S1 A8])
+        (call (mem:QI (symbol_ref:SI ("printf") [flags 0x3]  <function_decl 0x7f489ab86300 printf>) [0 printf S1 A8])
             (const_int 16 [0x10]))) "init/main.c":241:13 823 {*call_value}
      (nil)
     (nil))
@@ -2756,7 +2756,7 @@ try_optimize_cfg iteration 1
         (reg:SI 82)) "init/main.c":245:13 75 {*movsi_internal}
      (nil))
 (call_insn 173 172 174 19 (set (reg:SI 0 ax)
-        (call (mem:QI (symbol_ref:SI ("close") [flags 0x41]  <function_decl 0x784621d0b000 close>) [0 close S1 A8])
+        (call (mem:QI (symbol_ref:SI ("close") [flags 0x41]  <function_decl 0x7f489ab0b000 close>) [0 close S1 A8])
             (const_int 16 [0x10]))) "init/main.c":245:13 823 {*call_value}
      (nil)
     (expr_list (use (reg:SI 3 bx))
@@ -2785,7 +2785,7 @@ try_optimize_cfg iteration 1
         (reg:SI 82)) "init/main.c":246:13 75 {*movsi_internal}
      (nil))
 (call_insn 178 177 179 19 (set (reg:SI 0 ax)
-        (call (mem:QI (symbol_ref:SI ("close") [flags 0x41]  <function_decl 0x784621d0b000 close>) [0 close S1 A8])
+        (call (mem:QI (symbol_ref:SI ("close") [flags 0x41]  <function_decl 0x7f489ab0b000 close>) [0 close S1 A8])
             (const_int 16 [0x10]))) "init/main.c":246:13 823 {*call_value}
      (nil)
     (expr_list (use (reg:SI 3 bx))
@@ -2814,7 +2814,7 @@ try_optimize_cfg iteration 1
         (reg:SI 82)) "init/main.c":247:13 75 {*movsi_internal}
      (nil))
 (call_insn 183 182 184 19 (set (reg:SI 0 ax)
-        (call (mem:QI (symbol_ref:SI ("close") [flags 0x41]  <function_decl 0x784621d0b000 close>) [0 close S1 A8])
+        (call (mem:QI (symbol_ref:SI ("close") [flags 0x41]  <function_decl 0x7f489ab0b000 close>) [0 close S1 A8])
             (const_int 16 [0x10]))) "init/main.c":247:13 823 {*call_value}
      (nil)
     (expr_list (use (reg:SI 3 bx))
@@ -2831,7 +2831,7 @@ try_optimize_cfg iteration 1
         (reg:SI 82)) "init/main.c":248:13 75 {*movsi_internal}
      (nil))
 (call_insn 186 185 187 19 (set (reg:SI 0 ax)
-        (call (mem:QI (symbol_ref:SI ("setsid") [flags 0x41]  <function_decl 0x784621d17200 setsid>) [0 setsid S1 A8])
+        (call (mem:QI (symbol_ref:SI ("setsid") [flags 0x41]  <function_decl 0x7f489ab17200 setsid>) [0 setsid S1 A8])
             (const_int 0 [0]))) "init/main.c":248:13 823 {*call_value}
      (nil)
     (expr_list (use (reg:SI 3 bx))
@@ -2855,9 +2855,9 @@ try_optimize_cfg iteration 1
 (insn 190 189 191 19 (set (reg/f:SI 118)
         (plus:SI (reg:SI 82)
             (const:SI (unspec:SI [
-                        (symbol_ref/f:SI ("*.LC5") [flags 0x2]  <var_decl 0x784621dd36c0 *.LC5>)
+                        (symbol_ref/f:SI ("*.LC5") [flags 0x2]  <var_decl 0x7f489abd36c0 *.LC5>)
                     ] UNSPEC_GOTOFF)))) "init/main.c":249:20 205 {*leasi}
-     (expr_list:REG_EQUAL (symbol_ref/f:SI ("*.LC5") [flags 0x2]  <var_decl 0x784621dd36c0 *.LC5>)
+     (expr_list:REG_EQUAL (symbol_ref/f:SI ("*.LC5") [flags 0x2]  <var_decl 0x7f489abd36c0 *.LC5>)
         (nil)))
 (insn 191 190 192 19 (set (mem/f:SI (pre_dec:SI (reg/f:SI 7 sp)) [6  S4 A32])
         (reg/f:SI 118)) "init/main.c":249:20 54 {*pushsi2}
@@ -2867,7 +2867,7 @@ try_optimize_cfg iteration 1
         (reg:SI 82)) "init/main.c":249:20 75 {*movsi_internal}
      (nil))
 (call_insn 193 192 194 19 (set (reg:SI 0 ax)
-        (call (mem:QI (symbol_ref:SI ("open") [flags 0x41]  <function_decl 0x784621d0e800 open>) [0 open S1 A8])
+        (call (mem:QI (symbol_ref:SI ("open") [flags 0x41]  <function_decl 0x7f489ab0e800 open>) [0 open S1 A8])
             (const_int 16 [0x10]))) "init/main.c":249:20 823 {*call_value}
      (nil)
     (expr_list (use (reg:SI 3 bx))
@@ -2896,7 +2896,7 @@ try_optimize_cfg iteration 1
         (reg:SI 82)) "init/main.c":250:20 75 {*movsi_internal}
      (nil))
 (call_insn 198 197 199 19 (set (reg:SI 0 ax)
-        (call (mem:QI (symbol_ref:SI ("dup") [flags 0x41]  <function_decl 0x784621d0b200 dup>) [0 dup S1 A8])
+        (call (mem:QI (symbol_ref:SI ("dup") [flags 0x41]  <function_decl 0x7f489ab0b200 dup>) [0 dup S1 A8])
             (const_int 16 [0x10]))) "init/main.c":250:20 823 {*call_value}
      (nil)
     (expr_list (use (reg:SI 3 bx))
@@ -2925,7 +2925,7 @@ try_optimize_cfg iteration 1
         (reg:SI 82)) "init/main.c":251:20 75 {*movsi_internal}
      (nil))
 (call_insn 203 202 204 19 (set (reg:SI 0 ax)
-        (call (mem:QI (symbol_ref:SI ("dup") [flags 0x41]  <function_decl 0x784621d0b200 dup>) [0 dup S1 A8])
+        (call (mem:QI (symbol_ref:SI ("dup") [flags 0x41]  <function_decl 0x7f489ab0b200 dup>) [0 dup S1 A8])
             (const_int 16 [0x10]))) "init/main.c":251:20 823 {*call_value}
      (nil)
     (expr_list (use (reg:SI 3 bx))
@@ -2949,9 +2949,9 @@ try_optimize_cfg iteration 1
 (insn 206 205 207 19 (set (reg/f:SI 119)
         (plus:SI (reg:SI 82)
             (const:SI (unspec:SI [
-                        (symbol_ref:SI ("envp") [flags 0x2]  <var_decl 0x784621d7fc60 envp>)
+                        (symbol_ref:SI ("envp") [flags 0x2]  <var_decl 0x7f489ab7fc60 envp>)
                     ] UNSPEC_GOTOFF)))) "init/main.c":252:13 205 {*leasi}
-     (expr_list:REG_EQUAL (symbol_ref:SI ("envp") [flags 0x2]  <var_decl 0x784621d7fc60 envp>)
+     (expr_list:REG_EQUAL (symbol_ref:SI ("envp") [flags 0x2]  <var_decl 0x7f489ab7fc60 envp>)
         (nil)))
 (insn 207 206 208 19 (set (mem/f:SI (pre_dec:SI (reg/f:SI 7 sp)) [12  S4 A32])
         (reg/f:SI 119)) "init/main.c":252:13 54 {*pushsi2}
@@ -2960,9 +2960,9 @@ try_optimize_cfg iteration 1
 (insn 208 207 209 19 (set (reg/f:SI 120)
         (plus:SI (reg:SI 82)
             (const:SI (unspec:SI [
-                        (symbol_ref:SI ("argv") [flags 0x2]  <var_decl 0x784621d7fbd0 argv>)
+                        (symbol_ref:SI ("argv") [flags 0x2]  <var_decl 0x7f489ab7fbd0 argv>)
                     ] UNSPEC_GOTOFF)))) "init/main.c":252:13 205 {*leasi}
-     (expr_list:REG_EQUAL (symbol_ref:SI ("argv") [flags 0x2]  <var_decl 0x784621d7fbd0 argv>)
+     (expr_list:REG_EQUAL (symbol_ref:SI ("argv") [flags 0x2]  <var_decl 0x7f489ab7fbd0 argv>)
         (nil)))
 (insn 209 208 210 19 (set (mem/f:SI (pre_dec:SI (reg/f:SI 7 sp)) [12  S4 A32])
         (reg/f:SI 120)) "init/main.c":252:13 54 {*pushsi2}
@@ -2971,9 +2971,9 @@ try_optimize_cfg iteration 1
 (insn 210 209 211 19 (set (reg/f:SI 121)
         (plus:SI (reg:SI 82)
             (const:SI (unspec:SI [
-                        (symbol_ref/f:SI ("*.LC1") [flags 0x2]  <var_decl 0x784621dd33f0 *.LC1>)
+                        (symbol_ref/f:SI ("*.LC1") [flags 0x2]  <var_decl 0x7f489abd33f0 *.LC1>)
                     ] UNSPEC_GOTOFF)))) "init/main.c":252:13 205 {*leasi}
-     (expr_list:REG_EQUAL (symbol_ref/f:SI ("*.LC1") [flags 0x2]  <var_decl 0x784621dd33f0 *.LC1>)
+     (expr_list:REG_EQUAL (symbol_ref/f:SI ("*.LC1") [flags 0x2]  <var_decl 0x7f489abd33f0 *.LC1>)
         (nil)))
 (insn 211 210 212 19 (set (mem/f:SI (pre_dec:SI (reg/f:SI 7 sp)) [6  S4 A32])
         (reg/f:SI 121)) "init/main.c":252:13 54 {*pushsi2}
@@ -2983,7 +2983,7 @@ try_optimize_cfg iteration 1
         (reg:SI 82)) "init/main.c":252:13 75 {*movsi_internal}
      (nil))
 (call_insn 213 212 214 19 (set (reg:SI 0 ax)
-        (call (mem:QI (symbol_ref:SI ("execve") [flags 0x41]  <function_decl 0x784621d0b300 execve>) [0 execve S1 A8])
+        (call (mem:QI (symbol_ref:SI ("execve") [flags 0x41]  <function_decl 0x7f489ab0b300 execve>) [0 execve S1 A8])
             (const_int 16 [0x10]))) "init/main.c":252:13 823 {*call_value}
      (nil)
     (expr_list (use (reg:SI 3 bx))
@@ -3014,7 +3014,7 @@ try_optimize_cfg iteration 1
 (insn 218 217 219 19 (set (reg:SI 3 bx)
         (reg:SI 82)) "init/main.c":252:13 75 {*movsi_internal}
      (nil))
-(call_insn 219 218 220 19 (call (mem:QI (symbol_ref:SI ("_exit") [flags 0x41]  <function_decl 0x784621d0b900 _exit>) [0 _exit S1 A8])
+(call_insn 219 218 220 19 (call (mem:QI (symbol_ref:SI ("_exit") [flags 0x41]  <function_decl 0x7f489ab0b900 _exit>) [0 _exit S1 A8])
         (const_int 16 [0x10])) "init/main.c":252:13 812 {*call}
      (nil)
     (expr_list (use (reg:SI 3 bx))
@@ -3054,7 +3054,7 @@ try_optimize_cfg iteration 1
         (reg:SI 82)) "init/main.c":255:24 75 {*movsi_internal}
      (nil))
 (call_insn 228 227 229 21 (set (reg:SI 0 ax)
-        (call (mem:QI (symbol_ref:SI ("wait") [flags 0x41]  <function_decl 0x784621d13f00 wait>) [0 wait S1 A8])
+        (call (mem:QI (symbol_ref:SI ("wait") [flags 0x41]  <function_decl 0x7f489ab13f00 wait>) [0 wait S1 A8])
             (const_int 16 [0x10]))) "init/main.c":255:24 823 {*call_value}
      (nil)
     (expr_list (use (reg:SI 3 bx))
@@ -3111,16 +3111,16 @@ try_optimize_cfg iteration 1
 (insn 247 246 248 24 (set (reg/f:SI 123)
         (plus:SI (reg:SI 82)
             (const:SI (unspec:SI [
-                        (symbol_ref/f:SI ("*.LC10") [flags 0x2]  <var_decl 0x784621dd3ab0 *.LC10>)
+                        (symbol_ref/f:SI ("*.LC10") [flags 0x2]  <var_decl 0x7f489abd3ab0 *.LC10>)
                     ] UNSPEC_GOTOFF)))) "init/main.c":257:9 205 {*leasi}
-     (expr_list:REG_EQUAL (symbol_ref/f:SI ("*.LC10") [flags 0x2]  <var_decl 0x784621dd3ab0 *.LC10>)
+     (expr_list:REG_EQUAL (symbol_ref/f:SI ("*.LC10") [flags 0x2]  <var_decl 0x7f489abd3ab0 *.LC10>)
         (nil)))
 (insn 248 247 249 24 (set (mem/f:SI (pre_dec:SI (reg/f:SI 7 sp)) [6  S4 A32])
         (reg/f:SI 123)) "init/main.c":257:9 54 {*pushsi2}
      (expr_list:REG_ARGS_SIZE (const_int 16 [0x10])
         (nil)))
 (call_insn 249 248 250 24 (set (reg:SI 0 ax)
-        (call (mem:QI (symbol_ref:SI ("printf") [flags 0x3]  <function_decl 0x784621d86300 printf>) [0 printf S1 A8])
+        (call (mem:QI (symbol_ref:SI ("printf") [flags 0x3]  <function_decl 0x7f489ab86300 printf>) [0 printf S1 A8])
             (const_int 16 [0x10]))) "init/main.c":257:9 823 {*call_value}
      (nil)
     (nil))
@@ -3133,7 +3133,7 @@ try_optimize_cfg iteration 1
      (expr_list:REG_ARGS_SIZE (const_int 0 [0])
         (nil)))
 (call_insn 251 250 252 24 (set (reg:SI 0 ax)
-        (call (mem:QI (symbol_ref:SI ("sync") [flags 0x3]  <function_decl 0x784621d13500 sync>) [0 sync S1 A8])
+        (call (mem:QI (symbol_ref:SI ("sync") [flags 0x3]  <function_decl 0x7f489ab13500 sync>) [0 sync S1 A8])
             (const_int 0 [0]))) "init/main.c":258:9 823 {*call_value}
      (nil)
     (nil))

@@ -155,7 +155,7 @@
                         (const_int 4 [0x4]))
                     (reg:SI 82))
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("month") [flags 0x2]  <var_decl 0x7fc558772cf0 month>)
+                            (symbol_ref:SI ("month") [flags 0x2]  <var_decl 0x76113cc7fcf0 month>)
                         ] UNSPEC_GOTOFF))) [1 month[_8]+0 S4 A32])) "kernel/mktime.c":38:14 75 {*movsi_internal}
      (nil))
 (insn 44 43 45 6 (parallel [

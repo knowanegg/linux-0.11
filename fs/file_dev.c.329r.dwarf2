@@ -395,7 +395,7 @@ Dataflow summary:
 	.cfi_def_cfa_offset 64
 	 NOTE_INSN_CFI)
 (call_insn 34 238 35 4 (set (reg:SI 0 ax)
-        (call (mem:QI (symbol_ref:SI ("bmap") [flags 0x41]  <function_decl 0x7cb6deb0ed00 bmap>) [0 bmap S1 A8])
+        (call (mem:QI (symbol_ref:SI ("bmap") [flags 0x41]  <function_decl 0x78a3bb50ed00 bmap>) [0 bmap S1 A8])
             (const_int 16 [0x10]))) "fs/file_dev.c":26:19 823 {*call_value}
      (nil)
     (expr_list (use (reg:SI 3 bx))
@@ -466,7 +466,7 @@ Dataflow summary:
 	.cfi_def_cfa_offset 64
 	 NOTE_INSN_CFI)
 (call_insn 48 242 49 5 (set (reg:SI 0 ax)
-        (call (mem:QI (symbol_ref:SI ("bread") [flags 0x41]  <function_decl 0x7cb6deb0e100 bread>) [0 bread S1 A8])
+        (call (mem:QI (symbol_ref:SI ("bread") [flags 0x41]  <function_decl 0x78a3bb50e100 bread>) [0 bread S1 A8])
             (const_int 16 [0x10]))) "fs/file_dev.c":27:24 823 {*call_value}
      (nil)
     (expr_list (use (reg:SI 3 bx))
@@ -728,7 +728,7 @@ Dataflow summary:
 (note 249 106 107 10
 	.cfi_def_cfa_offset 64
 	 NOTE_INSN_CFI)
-(call_insn 107 249 108 10 (call (mem:QI (symbol_ref:SI ("put_fs_byte") [flags 0x3]  <function_decl 0x7cb6deb38f00 put_fs_byte>) [0 put_fs_byte S1 A8])
+(call_insn 107 249 108 10 (call (mem:QI (symbol_ref:SI ("put_fs_byte") [flags 0x3]  <function_decl 0x78a3bb538f00 put_fs_byte>) [0 put_fs_byte S1 A8])
         (const_int 16 [0x10])) "fs/file_dev.c":39:17 812 {*call}
      (nil)
     (nil))
@@ -788,7 +788,7 @@ Dataflow summary:
 (note 245 121 123 12
 	.cfi_def_cfa_offset 64
 	 NOTE_INSN_CFI)
-(call_insn 123 245 124 12 (call (mem:QI (symbol_ref:SI ("brelse") [flags 0x41]  <function_decl 0x7cb6deb0e200 brelse>) [0 brelse S1 A8])
+(call_insn 123 245 124 12 (call (mem:QI (symbol_ref:SI ("brelse") [flags 0x41]  <function_decl 0x78a3bb50e200 brelse>) [0 brelse S1 A8])
         (const_int 16 [0x10])) "fs/file_dev.c":40:13 812 {*call}
      (nil)
     (expr_list (use (reg:SI 3 bx))
@@ -848,7 +848,7 @@ Dataflow summary:
 (note 253 137 138 13
 	.cfi_def_cfa_offset 64
 	 NOTE_INSN_CFI)
-(call_insn 138 253 139 13 (call (mem:QI (symbol_ref:SI ("put_fs_byte") [flags 0x3]  <function_decl 0x7cb6deb38f00 put_fs_byte>) [0 put_fs_byte S1 A8])
+(call_insn 138 253 139 13 (call (mem:QI (symbol_ref:SI ("put_fs_byte") [flags 0x3]  <function_decl 0x78a3bb538f00 put_fs_byte>) [0 put_fs_byte S1 A8])
         (const_int 16 [0x10])) "fs/file_dev.c":43:17 812 {*call}
      (nil)
     (nil))
@@ -907,7 +907,7 @@ Dataflow summary:
 (insn 157 156 158 16 (set (reg/f:SI 0 ax [135])
         (mem/u/c:SI (plus:SI (reg:SI 3 bx [82])
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("jiffies") [flags 0x40]  <var_decl 0x7cb6deb2f360 jiffies>)
+                            (symbol_ref:SI ("jiffies") [flags 0x40]  <var_decl 0x78a3bb52f360 jiffies>)
                         ] UNSPEC_GOT))) [12  S4 A8])) "fs/file_dev.c":46:22 75 {*movsi_internal}
      (nil))
 (insn 158 157 159 16 (set (reg:SI 2 cx [orig:100 jiffies.6_18 ] [100])
@@ -958,7 +958,7 @@ Dataflow summary:
 (insn 164 215 165 16 (set (reg/f:SI 0 ax [140])
         (mem/u/c:SI (plus:SI (reg:SI 3 bx [82])
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("startup_time") [flags 0x40]  <var_decl 0x7cb6deb2f3f0 startup_time>)
+                            (symbol_ref:SI ("startup_time") [flags 0x40]  <var_decl 0x78a3bb52f3f0 startup_time>)
                         ] UNSPEC_GOT))) [12  S4 A8])) "fs/file_dev.c":46:22 75 {*movsi_internal}
      (nil))
 (insn 165 164 166 16 (set (reg:SI 0 ax [orig:102 startup_time.7_20 ] [102])
@@ -1310,7 +1310,7 @@ Dataflow summary:
 	.cfi_def_cfa_offset 64
 	 NOTE_INSN_CFI)
 (call_insn 41 271 42 5 (set (reg:SI 0 ax)
-        (call (mem:QI (symbol_ref:SI ("create_block") [flags 0x41]  <function_decl 0x7cb6deb0ee00 create_block>) [0 create_block S1 A8])
+        (call (mem:QI (symbol_ref:SI ("create_block") [flags 0x41]  <function_decl 0x78a3bb50ee00 create_block>) [0 create_block S1 A8])
             (const_int 16 [0x10]))) "fs/file_dev.c":67:23 823 {*call_value}
      (nil)
     (expr_list (use (reg:SI 3 bx))
@@ -1381,7 +1381,7 @@ Dataflow summary:
 	.cfi_def_cfa_offset 64
 	 NOTE_INSN_CFI)
 (call_insn 59 275 60 6 (set (reg:SI 0 ax)
-        (call (mem:QI (symbol_ref:SI ("bread") [flags 0x41]  <function_decl 0x7cb6deb0e100 bread>) [0 bread S1 A8])
+        (call (mem:QI (symbol_ref:SI ("bread") [flags 0x41]  <function_decl 0x78a3bb50e100 bread>) [0 bread S1 A8])
             (const_int 16 [0x10]))) "fs/file_dev.c":69:20 823 {*call_value}
      (nil)
     (expr_list (use (reg:SI 3 bx))
@@ -1663,7 +1663,7 @@ Dataflow summary:
 	.cfi_def_cfa_offset 64
 	 NOTE_INSN_CFI)
 (call_insn 130 281 131 12 (set (reg:QI 0 ax)
-        (call (mem:QI (symbol_ref:SI ("get_fs_byte") [flags 0x3]  <function_decl 0x7cb6deb38d00 get_fs_byte>) [0 get_fs_byte S1 A8])
+        (call (mem:QI (symbol_ref:SI ("get_fs_byte") [flags 0x3]  <function_decl 0x78a3bb538d00 get_fs_byte>) [0 get_fs_byte S1 A8])
             (const_int 16 [0x10]))) "fs/file_dev.c":84:22 823 {*call_value}
      (nil)
     (nil))
@@ -1744,7 +1744,7 @@ Dataflow summary:
 (note 278 150 152 14
 	.cfi_def_cfa_offset 64
 	 NOTE_INSN_CFI)
-(call_insn 152 278 153 14 (call (mem:QI (symbol_ref:SI ("brelse") [flags 0x41]  <function_decl 0x7cb6deb0e200 brelse>) [0 brelse S1 A8])
+(call_insn 152 278 153 14 (call (mem:QI (symbol_ref:SI ("brelse") [flags 0x41]  <function_decl 0x78a3bb50e200 brelse>) [0 brelse S1 A8])
         (const_int 16 [0x10])) "fs/file_dev.c":85:9 812 {*call}
      (nil)
     (expr_list (use (reg:SI 3 bx))
@@ -1802,7 +1802,7 @@ Dataflow summary:
 (insn 162 161 163 19 (set (reg/f:SI 0 ax [155])
         (mem/u/c:SI (plus:SI (reg:SI 3 bx [82])
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("jiffies") [flags 0x40]  <var_decl 0x7cb6deb2f360 jiffies>)
+                            (symbol_ref:SI ("jiffies") [flags 0x40]  <var_decl 0x78a3bb52f360 jiffies>)
                         ] UNSPEC_GOT))) [12  S4 A8])) "fs/file_dev.c":87:22 75 {*movsi_internal}
      (nil))
 (insn 163 162 164 19 (set (reg:SI 2 cx [orig:101 jiffies.15_19 ] [101])
@@ -1853,7 +1853,7 @@ Dataflow summary:
 (insn 169 245 170 19 (set (reg/f:SI 0 ax [160])
         (mem/u/c:SI (plus:SI (reg:SI 3 bx [82])
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("startup_time") [flags 0x40]  <var_decl 0x7cb6deb2f3f0 startup_time>)
+                            (symbol_ref:SI ("startup_time") [flags 0x40]  <var_decl 0x78a3bb52f3f0 startup_time>)
                         ] UNSPEC_GOT))) [12  S4 A8])) "fs/file_dev.c":87:22 75 {*movsi_internal}
      (nil))
 (insn 170 169 171 19 (set (reg:SI 0 ax [orig:103 startup_time.16_21 ] [103])
@@ -1922,7 +1922,7 @@ Dataflow summary:
 (insn 185 184 186 20 (set (reg/f:SI 0 ax [165])
         (mem/u/c:SI (plus:SI (reg:SI 3 bx [82])
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("jiffies") [flags 0x40]  <var_decl 0x7cb6deb2f360 jiffies>)
+                            (symbol_ref:SI ("jiffies") [flags 0x40]  <var_decl 0x78a3bb52f360 jiffies>)
                         ] UNSPEC_GOT))) [12  S4 A8])) "fs/file_dev.c":90:26 75 {*movsi_internal}
      (nil))
 (insn 186 185 187 20 (set (reg:SI 2 cx [orig:109 jiffies.17_27 ] [109])
@@ -1973,7 +1973,7 @@ Dataflow summary:
 (insn 192 250 193 20 (set (reg/f:SI 0 ax [170])
         (mem/u/c:SI (plus:SI (reg:SI 3 bx [82])
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("startup_time") [flags 0x40]  <var_decl 0x7cb6deb2f3f0 startup_time>)
+                            (symbol_ref:SI ("startup_time") [flags 0x40]  <var_decl 0x78a3bb52f3f0 startup_time>)
                         ] UNSPEC_GOT))) [12  S4 A8])) "fs/file_dev.c":90:26 75 {*movsi_internal}
      (nil))
 (insn 193 192 194 20 (set (reg:SI 0 ax [orig:111 startup_time.18_29 ] [111])

@@ -113,7 +113,7 @@
 (insn 7 6 8 2 (set (reg/f:SI 132)
         (mem/u/c:SI (plus:SI (reg:SI 82)
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("current") [flags 0x40]  <var_decl 0x7b0aef31e360 current>)
+                            (symbol_ref:SI ("current") [flags 0x40]  <var_decl 0x7ca95191e360 current>)
                         ] UNSPEC_GOT))) [17  S4 A8])) "kernel/signal.c":19:36 75 {*movsi_internal}
      (nil))
 (insn 8 7 9 2 (set (reg/f:SI 83 [ current.0_1 ])
@@ -254,7 +254,7 @@
 (insn 41 40 42 8 (set (reg:SI 3 bx)
         (reg:SI 82)) "kernel/signal.c":30:13 75 {*movsi_internal}
      (nil))
-(call_insn 42 41 43 8 (call (mem:QI (symbol_ref:SI ("do_exit") [flags 0x41]  <function_decl 0x7b0aef33b600 do_exit>) [0 do_exit S1 A8])
+(call_insn 42 41 43 8 (call (mem:QI (symbol_ref:SI ("do_exit") [flags 0x41]  <function_decl 0x7ca95193b600 do_exit>) [0 do_exit S1 A8])
         (const_int 16 [0x10])) "kernel/signal.c":30:13 812 {*call}
      (nil)
     (expr_list (use (reg:SI 3 bx))
@@ -421,7 +421,7 @@
 (insn 86 85 87 14 (set (reg:SI 3 bx)
         (reg:SI 82)) "kernel/signal.c":37:5 75 {*movsi_internal}
      (nil))
-(call_insn 87 86 88 14 (call (mem:QI (symbol_ref:SI ("verify_area") [flags 0x41]  <function_decl 0x7b0aef33b300 verify_area>) [0 verify_area S1 A8])
+(call_insn 87 86 88 14 (call (mem:QI (symbol_ref:SI ("verify_area") [flags 0x41]  <function_decl 0x7ca95193b300 verify_area>) [0 verify_area S1 A8])
         (const_int 16 [0x10])) "kernel/signal.c":37:5 812 {*call}
      (nil)
     (expr_list (use (reg:SI 3 bx))
@@ -484,7 +484,7 @@
         (reg:SI 104 [ _22 ])) "kernel/signal.c":39:5 54 {*pushsi2}
      (expr_list:REG_ARGS_SIZE (const_int 16 [0x10])
         (nil)))
-(call_insn 100 99 101 14 (call (mem:QI (symbol_ref:SI ("put_fs_long") [flags 0x3]  <function_decl 0x7b0aef2d2a00 put_fs_long>) [0 put_fs_long S1 A8])
+(call_insn 100 99 101 14 (call (mem:QI (symbol_ref:SI ("put_fs_long") [flags 0x3]  <function_decl 0x7ca9518d2a00 put_fs_long>) [0 put_fs_long S1 A8])
         (const_int 16 [0x10])) "kernel/signal.c":39:5 812 {*call}
      (nil)
     (nil))
@@ -530,7 +530,7 @@
         (reg:SI 106 [ signr.9_24 ])) "kernel/signal.c":40:5 54 {*pushsi2}
      (expr_list:REG_ARGS_SIZE (const_int 16 [0x10])
         (nil)))
-(call_insn 109 108 110 14 (call (mem:QI (symbol_ref:SI ("put_fs_long") [flags 0x3]  <function_decl 0x7b0aef2d2a00 put_fs_long>) [0 put_fs_long S1 A8])
+(call_insn 109 108 110 14 (call (mem:QI (symbol_ref:SI ("put_fs_long") [flags 0x3]  <function_decl 0x7ca9518d2a00 put_fs_long>) [0 put_fs_long S1 A8])
         (const_int 16 [0x10])) "kernel/signal.c":40:5 812 {*call}
      (nil)
     (nil))
@@ -587,7 +587,7 @@
 (insn 120 119 121 15 (set (reg/f:SI 147)
         (mem/u/c:SI (plus:SI (reg:SI 82)
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("current") [flags 0x40]  <var_decl 0x7b0aef31e360 current>)
+                            (symbol_ref:SI ("current") [flags 0x40]  <var_decl 0x7ca95191e360 current>)
                         ] UNSPEC_GOT))) [17  S4 A8])) "kernel/signal.c":42:28 75 {*movsi_internal}
      (nil))
 (insn 121 120 122 15 (set (reg/f:SI 110 [ current.11_28 ])
@@ -616,7 +616,7 @@
         (reg:SI 112 [ _30 ])) "kernel/signal.c":42:9 54 {*pushsi2}
      (expr_list:REG_ARGS_SIZE (const_int 16 [0x10])
         (nil)))
-(call_insn 127 126 128 15 (call (mem:QI (symbol_ref:SI ("put_fs_long") [flags 0x3]  <function_decl 0x7b0aef2d2a00 put_fs_long>) [0 put_fs_long S1 A8])
+(call_insn 127 126 128 15 (call (mem:QI (symbol_ref:SI ("put_fs_long") [flags 0x3]  <function_decl 0x7ca9518d2a00 put_fs_long>) [0 put_fs_long S1 A8])
         (const_int 16 [0x10])) "kernel/signal.c":42:9 812 {*call}
      (nil)
     (nil))
@@ -665,7 +665,7 @@
         (reg:SI 114 [ eax.13_32 ])) "kernel/signal.c":43:5 54 {*pushsi2}
      (expr_list:REG_ARGS_SIZE (const_int 16 [0x10])
         (nil)))
-(call_insn 138 137 139 16 (call (mem:QI (symbol_ref:SI ("put_fs_long") [flags 0x3]  <function_decl 0x7b0aef2d2a00 put_fs_long>) [0 put_fs_long S1 A8])
+(call_insn 138 137 139 16 (call (mem:QI (symbol_ref:SI ("put_fs_long") [flags 0x3]  <function_decl 0x7ca9518d2a00 put_fs_long>) [0 put_fs_long S1 A8])
         (const_int 16 [0x10])) "kernel/signal.c":43:5 812 {*call}
      (nil)
     (nil))
@@ -712,7 +712,7 @@
         (reg:SI 116 [ ecx.15_34 ])) "kernel/signal.c":44:5 54 {*pushsi2}
      (expr_list:REG_ARGS_SIZE (const_int 16 [0x10])
         (nil)))
-(call_insn 147 146 148 16 (call (mem:QI (symbol_ref:SI ("put_fs_long") [flags 0x3]  <function_decl 0x7b0aef2d2a00 put_fs_long>) [0 put_fs_long S1 A8])
+(call_insn 147 146 148 16 (call (mem:QI (symbol_ref:SI ("put_fs_long") [flags 0x3]  <function_decl 0x7ca9518d2a00 put_fs_long>) [0 put_fs_long S1 A8])
         (const_int 16 [0x10])) "kernel/signal.c":44:5 812 {*call}
      (nil)
     (nil))
@@ -759,7 +759,7 @@
         (reg:SI 118 [ edx.17_36 ])) "kernel/signal.c":45:5 54 {*pushsi2}
      (expr_list:REG_ARGS_SIZE (const_int 16 [0x10])
         (nil)))
-(call_insn 156 155 157 16 (call (mem:QI (symbol_ref:SI ("put_fs_long") [flags 0x3]  <function_decl 0x7b0aef2d2a00 put_fs_long>) [0 put_fs_long S1 A8])
+(call_insn 156 155 157 16 (call (mem:QI (symbol_ref:SI ("put_fs_long") [flags 0x3]  <function_decl 0x7ca9518d2a00 put_fs_long>) [0 put_fs_long S1 A8])
         (const_int 16 [0x10])) "kernel/signal.c":45:5 812 {*call}
      (nil)
     (nil))
@@ -806,7 +806,7 @@
         (reg:SI 120 [ eflags.19_38 ])) "kernel/signal.c":46:5 54 {*pushsi2}
      (expr_list:REG_ARGS_SIZE (const_int 16 [0x10])
         (nil)))
-(call_insn 165 164 166 16 (call (mem:QI (symbol_ref:SI ("put_fs_long") [flags 0x3]  <function_decl 0x7b0aef2d2a00 put_fs_long>) [0 put_fs_long S1 A8])
+(call_insn 165 164 166 16 (call (mem:QI (symbol_ref:SI ("put_fs_long") [flags 0x3]  <function_decl 0x7ca9518d2a00 put_fs_long>) [0 put_fs_long S1 A8])
         (const_int 16 [0x10])) "kernel/signal.c":46:5 812 {*call}
      (nil)
     (nil))
@@ -853,7 +853,7 @@
         (reg:SI 122 [ old_eip.21_40 ])) "kernel/signal.c":47:5 54 {*pushsi2}
      (expr_list:REG_ARGS_SIZE (const_int 16 [0x10])
         (nil)))
-(call_insn 174 173 175 16 (call (mem:QI (symbol_ref:SI ("put_fs_long") [flags 0x3]  <function_decl 0x7b0aef2d2a00 put_fs_long>) [0 put_fs_long S1 A8])
+(call_insn 174 173 175 16 (call (mem:QI (symbol_ref:SI ("put_fs_long") [flags 0x3]  <function_decl 0x7ca9518d2a00 put_fs_long>) [0 put_fs_long S1 A8])
         (const_int 16 [0x10])) "kernel/signal.c":47:5 812 {*call}
      (nil)
     (nil))
@@ -868,7 +868,7 @@
 (insn 176 175 177 16 (set (reg/f:SI 153)
         (mem/u/c:SI (plus:SI (reg:SI 82)
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("current") [flags 0x40]  <var_decl 0x7b0aef31e360 current>)
+                            (symbol_ref:SI ("current") [flags 0x40]  <var_decl 0x7ca95191e360 current>)
                         ] UNSPEC_GOT))) [17  S4 A8])) "kernel/signal.c":48:22 75 {*movsi_internal}
      (nil))
 (insn 177 176 178 16 (set (reg/f:SI 123 [ current.22_41 ])
@@ -899,7 +899,7 @@
 (insn 183 182 184 16 (set (reg/f:SI 155)
         (mem/u/c:SI (plus:SI (reg:SI 82)
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("current") [flags 0x40]  <var_decl 0x7b0aef31e360 current>)
+                            (symbol_ref:SI ("current") [flags 0x40]  <var_decl 0x7ca95191e360 current>)
                         ] UNSPEC_GOT))) [17  S4 A8])) "kernel/signal.c":48:22 75 {*movsi_internal}
      (nil))
 (insn 184 183 185 16 (set (reg/f:SI 128 [ current.23_46 ])
@@ -994,7 +994,7 @@
 (insn 30 29 31 7 (set (reg/f:SI 92)
         (mem/u/c:SI (plus:SI (reg:SI 82)
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("current") [flags 0x40]  <var_decl 0x7b0aef31e360 current>)
+                            (symbol_ref:SI ("current") [flags 0x40]  <var_decl 0x7ca95191e360 current>)
                         ] UNSPEC_GOT))) [17  S4 A8])) "kernel/signal.c":61:28 75 {*movsi_internal}
      (nil))
 (insn 31 30 32 7 (set (reg/f:SI 85 [ current.26_3 ])
@@ -1043,7 +1043,7 @@
 (insn 39 38 40 7 (set (reg/f:SI 97)
         (mem/u/c:SI (plus:SI (reg:SI 82)
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("current") [flags 0x40]  <var_decl 0x7b0aef31e360 current>)
+                            (symbol_ref:SI ("current") [flags 0x40]  <var_decl 0x7ca95191e360 current>)
                         ] UNSPEC_GOT))) [17  S4 A8])) "kernel/signal.c":62:12 75 {*movsi_internal}
      (nil))
 (insn 40 39 41 7 (set (reg/f:SI 88 [ current.27_6 ])
@@ -1162,7 +1162,7 @@
      (expr_list:REG_ARGS_SIZE (const_int 4 [0x4])
         (nil)))
 (call_insn 13 12 14 4 (set (reg:QI 0 ax)
-        (call (mem:QI (symbol_ref:SI ("get_fs_byte") [flags 0x3]  <function_decl 0x7b0aef2d2600 get_fs_byte>) [0 get_fs_byte S1 A8])
+        (call (mem:QI (symbol_ref:SI ("get_fs_byte") [flags 0x3]  <function_decl 0x7ca9518d2600 get_fs_byte>) [0 get_fs_byte S1 A8])
             (const_int 4 [0x4]))) "kernel/signal.c":71:19 823 {*call_value}
      (nil)
     (nil))
@@ -1251,7 +1251,7 @@
 (insn 8 7 9 2 (set (reg:SI 3 bx)
         (reg:SI 82)) "kernel/signal.c":78:5 75 {*movsi_internal}
      (nil))
-(call_insn 9 8 10 2 (call (mem:QI (symbol_ref:SI ("verify_area") [flags 0x41]  <function_decl 0x7b0aef33b300 verify_area>) [0 verify_area S1 A8])
+(call_insn 9 8 10 2 (call (mem:QI (symbol_ref:SI ("verify_area") [flags 0x41]  <function_decl 0x7ca95193b300 verify_area>) [0 verify_area S1 A8])
         (const_int 16 [0x10])) "kernel/signal.c":78:5 812 {*call}
      (nil)
     (expr_list (use (reg:SI 3 bx))
@@ -1301,7 +1301,7 @@
         (reg:SI 84 [ _2 ])) "kernel/signal.c":80:9 54 {*pushsi2}
      (expr_list:REG_ARGS_SIZE (const_int 16 [0x10])
         (nil)))
-(call_insn 21 20 22 4 (call (mem:QI (symbol_ref:SI ("put_fs_byte") [flags 0x3]  <function_decl 0x7b0aef2d2800 put_fs_byte>) [0 put_fs_byte S1 A8])
+(call_insn 21 20 22 4 (call (mem:QI (symbol_ref:SI ("put_fs_byte") [flags 0x3]  <function_decl 0x7ca9518d2800 put_fs_byte>) [0 put_fs_byte S1 A8])
         (const_int 16 [0x10])) "kernel/signal.c":80:9 812 {*call}
      (nil)
     (nil))
@@ -1412,7 +1412,7 @@
 (insn 24 23 25 7 (set (reg/f:SI 108)
         (mem/u/c:SI (plus:SI (reg:SI 82)
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("current") [flags 0x40]  <var_decl 0x7b0aef31e360 current>)
+                            (symbol_ref:SI ("current") [flags 0x40]  <var_decl 0x7ca95191e360 current>)
                         ] UNSPEC_GOT))) [17  S4 A8])) "kernel/signal.c":93:18 75 {*movsi_internal}
      (nil))
 (insn 25 24 26 7 (set (reg/f:SI 83 [ current.28_1 ])
@@ -1485,7 +1485,7 @@
 (insn 39 38 40 7 (set (reg/f:SI 117)
         (mem/u/c:SI (plus:SI (reg:SI 82)
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("current") [flags 0x40]  <var_decl 0x7b0aef31e360 current>)
+                            (symbol_ref:SI ("current") [flags 0x40]  <var_decl 0x7ca95191e360 current>)
                         ] UNSPEC_GOT))) [17  S4 A8])) "kernel/signal.c":95:42 75 {*movsi_internal}
      (nil))
 (insn 40 39 41 7 (set (reg/f:SI 85 [ current.29_3 ])
@@ -1531,7 +1531,7 @@
                 (const_int 4 [0x4])) [15 action+0 S4 A32])) "kernel/signal.c":94:5 54 {*pushsi2}
      (expr_list:REG_ARGS_SIZE (const_int 8 [0x8])
         (nil)))
-(call_insn 48 47 49 7 (call (mem:QI (symbol_ref:SI ("get_new") [flags 0x3]  <function_decl 0x7b0aef33bb00 get_new>) [0 get_new S1 A8])
+(call_insn 48 47 49 7 (call (mem:QI (symbol_ref:SI ("get_new") [flags 0x3]  <function_decl 0x7ca95193bb00 get_new>) [0 get_new S1 A8])
         (const_int 8 [0x8])) "kernel/signal.c":94:5 812 {*call}
      (nil)
     (nil))
@@ -1580,7 +1580,7 @@
         (reg:SI 118)) "kernel/signal.c":97:9 54 {*pushsi2}
      (expr_list:REG_ARGS_SIZE (const_int 16 [0x10])
         (nil)))
-(call_insn 57 56 58 8 (call (mem:QI (symbol_ref:SI ("save_old") [flags 0x3]  <function_decl 0x7b0aef33bd00 save_old>) [0 save_old S1 A8])
+(call_insn 57 56 58 8 (call (mem:QI (symbol_ref:SI ("save_old") [flags 0x3]  <function_decl 0x7ca95193bd00 save_old>) [0 save_old S1 A8])
         (const_int 16 [0x10])) "kernel/signal.c":97:9 812 {*call}
      (nil)
     (nil))
@@ -1597,7 +1597,7 @@
 (insn 61 60 62 9 (set (reg/f:SI 119)
         (mem/u/c:SI (plus:SI (reg:SI 82)
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("current") [flags 0x40]  <var_decl 0x7b0aef31e360 current>)
+                            (symbol_ref:SI ("current") [flags 0x40]  <var_decl 0x7ca95191e360 current>)
                         ] UNSPEC_GOT))) [17  S4 A8])) "kernel/signal.c":98:16 75 {*movsi_internal}
      (nil))
 (insn 62 61 63 9 (set (reg/f:SI 91 [ current.31_9 ])
@@ -1668,7 +1668,7 @@
 (insn 74 73 75 10 (set (reg/f:SI 125)
         (mem/u/c:SI (plus:SI (reg:SI 82)
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("current") [flags 0x40]  <var_decl 0x7b0aef31e360 current>)
+                            (symbol_ref:SI ("current") [flags 0x40]  <var_decl 0x7ca95191e360 current>)
                         ] UNSPEC_GOT))) [17  S4 A8])) "kernel/signal.c":99:16 75 {*movsi_internal}
      (nil))
 (insn 75 74 76 10 (set (reg/f:SI 95 [ current.32_13 ])
@@ -1727,7 +1727,7 @@
 (insn 87 86 88 11 (set (reg/f:SI 131)
         (mem/u/c:SI (plus:SI (reg:SI 82)
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("current") [flags 0x40]  <var_decl 0x7b0aef31e360 current>)
+                            (symbol_ref:SI ("current") [flags 0x40]  <var_decl 0x7ca95191e360 current>)
                         ] UNSPEC_GOT))) [17  S4 A8])) "kernel/signal.c":101:48 75 {*movsi_internal}
      (nil))
 (insn 88 87 89 11 (set (reg/f:SI 97 [ current.33_15 ])
@@ -1804,7 +1804,7 @@
 (insn 101 100 102 11 (set (reg/f:SI 139)
         (mem/u/c:SI (plus:SI (reg:SI 82)
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("current") [flags 0x40]  <var_decl 0x7b0aef31e360 current>)
+                            (symbol_ref:SI ("current") [flags 0x40]  <var_decl 0x7ca95191e360 current>)
                         ] UNSPEC_GOT))) [17  S4 A8])) "kernel/signal.c":101:48 75 {*movsi_internal}
      (nil))
 (insn 102 101 103 11 (set (reg/f:SI 103 [ current.34_21 ])
@@ -1884,7 +1884,7 @@
 (insn 5 2 6 2 (set (reg/f:SI 86)
         (mem/u/c:SI (plus:SI (reg:SI 82)
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("current") [flags 0x40]  <var_decl 0x7b0aef31e360 current>)
+                            (symbol_ref:SI ("current") [flags 0x40]  <var_decl 0x7ca95191e360 current>)
                         ] UNSPEC_GOT))) [17  S4 A8])) "kernel/signal.c":107:19 75 {*movsi_internal}
      (nil))
 (insn 6 5 7 2 (set (reg/f:SI 83 [ current.39_1 ])
@@ -1911,7 +1911,7 @@
 (insn 5 2 6 2 (set (reg/f:SI 88)
         (mem/u/c:SI (plus:SI (reg:SI 82)
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("current") [flags 0x40]  <var_decl 0x7b0aef31e360 current>)
+                            (symbol_ref:SI ("current") [flags 0x40]  <var_decl 0x7ca95191e360 current>)
                         ] UNSPEC_GOT))) [17  S4 A8])) "kernel/signal.c":112:22 75 {*movsi_internal}
      (nil))
 (insn 6 5 7 2 (set (reg/f:SI 83 [ current.40_1 ])
@@ -1928,7 +1928,7 @@
 (insn 9 8 10 2 (set (reg/f:SI 90)
         (mem/u/c:SI (plus:SI (reg:SI 82)
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("current") [flags 0x40]  <var_decl 0x7b0aef31e360 current>)
+                            (symbol_ref:SI ("current") [flags 0x40]  <var_decl 0x7ca95191e360 current>)
                         ] UNSPEC_GOT))) [17  S4 A8])) "kernel/signal.c":114:12 75 {*movsi_internal}
      (nil))
 (insn 10 9 11 2 (set (reg/f:SI 84 [ current.41_2 ])

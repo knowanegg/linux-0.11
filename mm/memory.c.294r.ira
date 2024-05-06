@@ -94,9 +94,9 @@ Dataflow summary:
 (insn 6 5 7 2 (set (reg/f:SI 83)
         (plus:SI (reg:SI 82)
             (const:SI (unspec:SI [
-                        (symbol_ref/f:SI ("*.LC0") [flags 0x2]  <var_decl 0x7b517d59d480 *.LC0>)
+                        (symbol_ref/f:SI ("*.LC0") [flags 0x2]  <var_decl 0x7fe889d9d480 *.LC0>)
                     ] UNSPEC_GOTOFF)))) "mm/memory.c":34:2 205 {*leasi}
-     (expr_list:REG_EQUAL (symbol_ref/f:SI ("*.LC0") [flags 0x2]  <var_decl 0x7b517d59d480 *.LC0>)
+     (expr_list:REG_EQUAL (symbol_ref/f:SI ("*.LC0") [flags 0x2]  <var_decl 0x7fe889d9d480 *.LC0>)
         (nil)))
 (insn 7 6 8 2 (set (mem/f:SI (pre_dec:SI (reg/f:SI 7 sp)) [15  S4 A32])
         (reg/f:SI 83)) "mm/memory.c":34:2 54 {*pushsi2}
@@ -107,7 +107,7 @@ Dataflow summary:
         (reg:SI 82)) "mm/memory.c":34:2 75 {*movsi_internal}
      (nil))
 (call_insn 9 8 10 2 (set (reg:SI 0 ax)
-        (call (mem:QI (symbol_ref:SI ("printk") [flags 0x41]  <function_decl 0x7b517d4d2700 printk>) [0 printk S1 A8])
+        (call (mem:QI (symbol_ref:SI ("printk") [flags 0x41]  <function_decl 0x7fe889cd2700 printk>) [0 printk S1 A8])
             (const_int 16 [0x10]))) "mm/memory.c":34:2 823 {*call_value}
      (expr_list:REG_DEAD (reg:SI 3 bx)
         (expr_list:REG_UNUSED (reg:SI 0 ax)
@@ -140,7 +140,7 @@ Dataflow summary:
         (reg:SI 82)) "mm/memory.c":35:2 75 {*movsi_internal}
      (expr_list:REG_DEAD (reg:SI 82)
         (nil)))
-(call_insn 14 13 15 2 (call (mem:QI (symbol_ref:SI ("do_exit") [flags 0x41]  <function_decl 0x7b517d537e00 do_exit>) [0 do_exit S1 A8])
+(call_insn 14 13 15 2 (call (mem:QI (symbol_ref:SI ("do_exit") [flags 0x41]  <function_decl 0x7fe889d37e00 do_exit>) [0 do_exit S1 A8])
         (const_int 16 [0x10])) "mm/memory.c":35:2 812 {*call}
      (expr_list:REG_DEAD (reg:SI 3 bx)
         (nil))
@@ -340,7 +340,7 @@ Dataflow summary:
      (nil))
 (insn 6 5 7 2 (set (mem/c:SI (plus:SI (reg:SI 82)
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("HIGH_MEMORY") [flags 0x2]  <var_decl 0x7b517d52f510 HIGH_MEMORY>)
+                            (symbol_ref:SI ("HIGH_MEMORY") [flags 0x2]  <var_decl 0x7fe889d2f510 HIGH_MEMORY>)
                         ] UNSPEC_GOTOFF))) [1 HIGH_MEMORY+0 S4 A32])
         (reg:SI 86)) "mm/memory.c":45:17 75 {*movsi_internal}
      (expr_list:REG_DEAD (reg:SI 86)
@@ -359,7 +359,7 @@ Dataflow summary:
 (insn 11 10 12 3 (set (reg:SI 87)
         (plus:SI (reg:SI 82)
             (const:SI (unspec:SI [
-                        (symbol_ref:SI ("mem_map") [flags 0x2]  <var_decl 0x7b517d52f5a0 mem_map>)
+                        (symbol_ref:SI ("mem_map") [flags 0x2]  <var_decl 0x7fe889d2f5a0 mem_map>)
                     ] UNSPEC_GOTOFF)))) "mm/memory.c":49:20 205 {*leasi}
      (nil))
 (insn 12 11 13 3 (set (reg:SI 88)
@@ -485,7 +485,7 @@ Dataflow summary:
 (insn 37 36 38 6 (set (mem:QI (plus:SI (plus:SI (reg:SI 82)
                     (reg:SI 84 [ i.0_2 ]))
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("mem_map") [flags 0x2]  <var_decl 0x7b517d52f5a0 mem_map>)
+                            (symbol_ref:SI ("mem_map") [flags 0x2]  <var_decl 0x7fe889d2f5a0 mem_map>)
                         ] UNSPEC_GOTOFF))) [0 mem_map[i.0_2]+0 S1 A8])
         (const_int 0 [0])) "mm/memory.c":58:22 77 {*movqi_internal}
      (expr_list:REG_DEAD (reg:SI 84 [ i.0_2 ])
@@ -637,11 +637,11 @@ Dataflow summary:
 (insn 5 2 6 2 (set (reg/f:SI 83 [ _1 ])
         (plus:SI (reg:SI 82)
             (const:SI (plus:SI (unspec:SI [
-                            (symbol_ref:SI ("mem_map") [flags 0x2]  <var_decl 0x7b517d52f5a0 mem_map>)
+                            (symbol_ref:SI ("mem_map") [flags 0x2]  <var_decl 0x7fe889d2f5a0 mem_map>)
                         ] UNSPEC_GOTOFF)
                     (const_int 3839 [0xeff]))))) "mm/memory.c":137:34 205 {*leasi}
      (expr_list:REG_DEAD (reg:SI 82)
-        (expr_list:REG_EQUAL (const:SI (plus:SI (symbol_ref:SI ("mem_map") [flags 0x2]  <var_decl 0x7b517d52f5a0 mem_map>)
+        (expr_list:REG_EQUAL (const:SI (plus:SI (symbol_ref:SI ("mem_map") [flags 0x2]  <var_decl 0x7fe889d2f5a0 mem_map>)
                     (const_int 3839 [0xeff])))
             (nil))))
 (insn 6 5 7 2 (set (reg:SI 86)
@@ -905,7 +905,7 @@ Dataflow summary:
 (insn 14 13 15 3 (set (reg:SI 83 [ HIGH_MEMORY.2_1 ])
         (mem/c:SI (plus:SI (reg:SI 82)
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("HIGH_MEMORY") [flags 0x2]  <var_decl 0x7b517d52f510 HIGH_MEMORY>)
+                            (symbol_ref:SI ("HIGH_MEMORY") [flags 0x2]  <var_decl 0x7fe889d2f510 HIGH_MEMORY>)
                         ] UNSPEC_GOTOFF))) [1 HIGH_MEMORY+0 S4 A32])) "mm/memory.c":150:11 75 {*movsi_internal}
      (nil))
 (insn 15 14 16 3 (set (reg:SI 84 [ HIGH_MEMORY.3_2 ])
@@ -938,9 +938,9 @@ Dataflow summary:
 (insn 20 19 21 4 (set (reg/f:SI 87)
         (plus:SI (reg:SI 82)
             (const:SI (unspec:SI [
-                        (symbol_ref/f:SI ("*.LC1") [flags 0x2]  <var_decl 0x7b517d59d5a0 *.LC1>)
+                        (symbol_ref/f:SI ("*.LC1") [flags 0x2]  <var_decl 0x7fe889d9d5a0 *.LC1>)
                     ] UNSPEC_GOTOFF)))) "mm/memory.c":151:3 205 {*leasi}
-     (expr_list:REG_EQUAL (symbol_ref/f:SI ("*.LC1") [flags 0x2]  <var_decl 0x7b517d59d5a0 *.LC1>)
+     (expr_list:REG_EQUAL (symbol_ref/f:SI ("*.LC1") [flags 0x2]  <var_decl 0x7fe889d9d5a0 *.LC1>)
         (nil)))
 (insn 21 20 22 4 (set (mem/f:SI (pre_dec:SI (reg/f:SI 7 sp)) [15  S4 A32])
         (reg/f:SI 87)) "mm/memory.c":151:3 54 {*pushsi2}
@@ -950,7 +950,7 @@ Dataflow summary:
 (insn 22 21 23 4 (set (reg:SI 3 bx)
         (reg:SI 82)) "mm/memory.c":151:3 75 {*movsi_internal}
      (nil))
-(call_insn 23 22 24 4 (call (mem:QI (symbol_ref:SI ("panic") [flags 0x41]  <function_decl 0x7b517d4d2900 panic>) [0 panic S1 A8])
+(call_insn 23 22 24 4 (call (mem:QI (symbol_ref:SI ("panic") [flags 0x41]  <function_decl 0x7fe889cd2900 panic>) [0 panic S1 A8])
         (const_int 16 [0x10])) "mm/memory.c":151:3 812 {*call}
      (expr_list:REG_DEAD (reg:SI 3 bx)
         (nil))
@@ -986,7 +986,7 @@ Dataflow summary:
 (insn 29 28 30 5 (set (reg:SI 88)
         (plus:SI (reg:SI 82)
             (const:SI (unspec:SI [
-                        (symbol_ref:SI ("mem_map") [flags 0x2]  <var_decl 0x7b517d52f5a0 mem_map>)
+                        (symbol_ref:SI ("mem_map") [flags 0x2]  <var_decl 0x7fe889d2f5a0 mem_map>)
                     ] UNSPEC_GOTOFF)))) "mm/memory.c":154:13 205 {*leasi}
      (nil))
 (insn 30 29 31 5 (set (reg:SI 89)
@@ -1017,7 +1017,7 @@ Dataflow summary:
 (insn 34 33 35 5 (set (reg:SI 91)
         (plus:SI (reg:SI 82)
             (const:SI (unspec:SI [
-                        (symbol_ref:SI ("mem_map") [flags 0x2]  <var_decl 0x7b517d52f5a0 mem_map>)
+                        (symbol_ref:SI ("mem_map") [flags 0x2]  <var_decl 0x7fe889d2f5a0 mem_map>)
                     ] UNSPEC_GOTOFF)))) "mm/memory.c":154:19 205 {*leasi}
      (nil))
 (insn 35 34 36 5 (set (reg:SI 92)
@@ -1055,7 +1055,7 @@ Dataflow summary:
 (insn 45 44 46 6 (set (reg:SI 94)
         (plus:SI (reg:SI 82)
             (const:SI (unspec:SI [
-                        (symbol_ref:SI ("mem_map") [flags 0x2]  <var_decl 0x7b517d52f5a0 mem_map>)
+                        (symbol_ref:SI ("mem_map") [flags 0x2]  <var_decl 0x7fe889d2f5a0 mem_map>)
                     ] UNSPEC_GOTOFF)))) "mm/memory.c":156:16 205 {*leasi}
      (nil))
 (insn 46 45 47 6 (set (reg:SI 95)
@@ -1087,9 +1087,9 @@ Dataflow summary:
 (insn 50 49 51 6 (set (reg/f:SI 97)
         (plus:SI (reg:SI 82)
             (const:SI (unspec:SI [
-                        (symbol_ref/f:SI ("*.LC2") [flags 0x2]  <var_decl 0x7b517d59d630 *.LC2>)
+                        (symbol_ref/f:SI ("*.LC2") [flags 0x2]  <var_decl 0x7fe889d9d630 *.LC2>)
                     ] UNSPEC_GOTOFF)))) "mm/memory.c":157:2 205 {*leasi}
-     (expr_list:REG_EQUAL (symbol_ref/f:SI ("*.LC2") [flags 0x2]  <var_decl 0x7b517d59d630 *.LC2>)
+     (expr_list:REG_EQUAL (symbol_ref/f:SI ("*.LC2") [flags 0x2]  <var_decl 0x7fe889d9d630 *.LC2>)
         (nil)))
 (insn 51 50 52 6 (set (mem/f:SI (pre_dec:SI (reg/f:SI 7 sp)) [15  S4 A32])
         (reg/f:SI 97)) "mm/memory.c":157:2 54 {*pushsi2}
@@ -1100,7 +1100,7 @@ Dataflow summary:
         (reg:SI 82)) "mm/memory.c":157:2 75 {*movsi_internal}
      (expr_list:REG_DEAD (reg:SI 82)
         (nil)))
-(call_insn 53 52 54 6 (call (mem:QI (symbol_ref:SI ("panic") [flags 0x41]  <function_decl 0x7b517d4d2900 panic>) [0 panic S1 A8])
+(call_insn 53 52 54 6 (call (mem:QI (symbol_ref:SI ("panic") [flags 0x41]  <function_decl 0x7fe889cd2900 panic>) [0 panic S1 A8])
         (const_int 16 [0x10])) "mm/memory.c":157:2 812 {*call}
      (expr_list:REG_DEAD (reg:SI 3 bx)
         (nil))
@@ -1703,9 +1703,9 @@ Dataflow summary:
 (insn 17 16 18 4 (set (reg/f:SI 111)
         (plus:SI (reg:SI 82)
             (const:SI (unspec:SI [
-                        (symbol_ref/f:SI ("*.LC3") [flags 0x2]  <var_decl 0x7b517d59d7e0 *.LC3>)
+                        (symbol_ref/f:SI ("*.LC3") [flags 0x2]  <var_decl 0x7fe889d9d7e0 *.LC3>)
                     ] UNSPEC_GOTOFF)))) "mm/memory.c":187:9 205 {*leasi}
-     (expr_list:REG_EQUAL (symbol_ref/f:SI ("*.LC3") [flags 0x2]  <var_decl 0x7b517d59d7e0 *.LC3>)
+     (expr_list:REG_EQUAL (symbol_ref/f:SI ("*.LC3") [flags 0x2]  <var_decl 0x7fe889d9d7e0 *.LC3>)
         (nil)))
 (insn 18 17 19 4 (set (mem/f:SI (pre_dec:SI (reg/f:SI 7 sp)) [15  S4 A32])
         (reg/f:SI 111)) "mm/memory.c":187:9 54 {*pushsi2}
@@ -1715,7 +1715,7 @@ Dataflow summary:
 (insn 19 18 20 4 (set (reg:SI 3 bx)
         (reg:SI 82)) "mm/memory.c":187:9 75 {*movsi_internal}
      (nil))
-(call_insn 20 19 21 4 (call (mem:QI (symbol_ref:SI ("panic") [flags 0x41]  <function_decl 0x7b517d4d2900 panic>) [0 panic S1 A8])
+(call_insn 20 19 21 4 (call (mem:QI (symbol_ref:SI ("panic") [flags 0x41]  <function_decl 0x7fe889cd2900 panic>) [0 panic S1 A8])
         (const_int 16 [0x10])) "mm/memory.c":187:9 812 {*call}
      (expr_list:REG_DEAD (reg:SI 3 bx)
         (nil))
@@ -1874,9 +1874,9 @@ Dataflow summary:
 (insn 47 46 48 7 (set (reg/f:SI 116)
         (plus:SI (reg:SI 82)
             (const:SI (unspec:SI [
-                        (symbol_ref/f:SI ("*.LC4") [flags 0x2]  <var_decl 0x7b517d59d870 *.LC4>)
+                        (symbol_ref/f:SI ("*.LC4") [flags 0x2]  <var_decl 0x7fe889d9d870 *.LC4>)
                     ] UNSPEC_GOTOFF)))) "mm/memory.c":194:13 205 {*leasi}
-     (expr_list:REG_EQUAL (symbol_ref/f:SI ("*.LC4") [flags 0x2]  <var_decl 0x7b517d59d870 *.LC4>)
+     (expr_list:REG_EQUAL (symbol_ref/f:SI ("*.LC4") [flags 0x2]  <var_decl 0x7fe889d9d870 *.LC4>)
         (nil)))
 (insn 48 47 49 7 (set (mem/f:SI (pre_dec:SI (reg/f:SI 7 sp)) [15  S4 A32])
         (reg/f:SI 116)) "mm/memory.c":194:13 54 {*pushsi2}
@@ -1886,7 +1886,7 @@ Dataflow summary:
 (insn 49 48 50 7 (set (reg:SI 3 bx)
         (reg:SI 82)) "mm/memory.c":194:13 75 {*movsi_internal}
      (nil))
-(call_insn 50 49 51 7 (call (mem:QI (symbol_ref:SI ("panic") [flags 0x41]  <function_decl 0x7b517d4d2900 panic>) [0 panic S1 A8])
+(call_insn 50 49 51 7 (call (mem:QI (symbol_ref:SI ("panic") [flags 0x41]  <function_decl 0x7fe889cd2900 panic>) [0 panic S1 A8])
         (const_int 16 [0x10])) "mm/memory.c":194:13 812 {*call}
      (expr_list:REG_DEAD (reg:SI 3 bx)
         (nil))
@@ -1957,7 +1957,7 @@ Dataflow summary:
      (expr_list:REG_DEAD (reg:SI 97 [ _15 ])
         (nil)))
 (call_insn 68 67 69 9 (set (reg:SI 0 ax)
-        (call (mem:QI (symbol_ref:SI ("get_free_page") [flags 0x3]  <function_decl 0x7b517d53b100 get_free_page>) [0 get_free_page S1 A8])
+        (call (mem:QI (symbol_ref:SI ("get_free_page") [flags 0x3]  <function_decl 0x7fe889d3b100 get_free_page>) [0 get_free_page S1 A8])
             (const_int 0 [0]))) "mm/memory.c":198:49 823 {*call_value}
      (nil)
     (nil))
@@ -2172,7 +2172,7 @@ Dataflow summary:
 (insn 124 123 125 17 (set (reg:SI 127)
         (plus:SI (reg:SI 82)
             (const:SI (unspec:SI [
-                        (symbol_ref:SI ("mem_map") [flags 0x2]  <var_decl 0x7b517d52f5a0 mem_map>)
+                        (symbol_ref:SI ("mem_map") [flags 0x2]  <var_decl 0x7fe889d2f5a0 mem_map>)
                     ] UNSPEC_GOTOFF)))) "mm/memory.c":215:24 205 {*leasi}
      (nil))
 (insn 125 124 126 17 (set (reg:SI 128)
@@ -2205,7 +2205,7 @@ Dataflow summary:
 (insn 129 128 130 17 (set (reg:SI 130)
         (plus:SI (reg:SI 82)
             (const:SI (unspec:SI [
-                        (symbol_ref:SI ("mem_map") [flags 0x2]  <var_decl 0x7b517d52f5a0 mem_map>)
+                        (symbol_ref:SI ("mem_map") [flags 0x2]  <var_decl 0x7fe889d2f5a0 mem_map>)
                     ] UNSPEC_GOTOFF)))) "mm/memory.c":215:35 205 {*leasi}
      (nil))
 (insn 130 129 131 17 (set (reg:SI 131)
@@ -2766,9 +2766,9 @@ Dataflow summary:
 (insn 11 10 12 3 (set (reg/f:SI 101)
         (plus:SI (reg:SI 82)
             (const:SI (unspec:SI [
-                        (symbol_ref/f:SI ("*.LC5") [flags 0x2]  <var_decl 0x7b517d59d990 *.LC5>)
+                        (symbol_ref/f:SI ("*.LC5") [flags 0x2]  <var_decl 0x7fe889d9d990 *.LC5>)
                     ] UNSPEC_GOTOFF)))) "mm/memory.c":233:9 205 {*leasi}
-     (expr_list:REG_EQUAL (symbol_ref/f:SI ("*.LC5") [flags 0x2]  <var_decl 0x7b517d59d990 *.LC5>)
+     (expr_list:REG_EQUAL (symbol_ref/f:SI ("*.LC5") [flags 0x2]  <var_decl 0x7fe889d9d990 *.LC5>)
         (nil)))
 (insn 12 11 13 3 (set (mem/f:SI (pre_dec:SI (reg/f:SI 7 sp)) [15  S4 A32])
         (reg/f:SI 101)) "mm/memory.c":233:9 54 {*pushsi2}
@@ -2778,7 +2778,7 @@ Dataflow summary:
 (insn 13 12 14 3 (set (reg:SI 3 bx)
         (reg:SI 82)) "mm/memory.c":233:9 75 {*movsi_internal}
      (nil))
-(call_insn 14 13 15 3 (call (mem:QI (symbol_ref:SI ("panic") [flags 0x41]  <function_decl 0x7b517d4d2900 panic>) [0 panic S1 A8])
+(call_insn 14 13 15 3 (call (mem:QI (symbol_ref:SI ("panic") [flags 0x41]  <function_decl 0x7fe889cd2900 panic>) [0 panic S1 A8])
         (const_int 16 [0x10])) "mm/memory.c":233:9 812 {*call}
      (expr_list:REG_DEAD (reg:SI 3 bx)
         (nil))
@@ -2820,9 +2820,9 @@ Dataflow summary:
 (insn 22 21 23 5 (set (reg/f:SI 102)
         (plus:SI (reg:SI 82)
             (const:SI (unspec:SI [
-                        (symbol_ref/f:SI ("*.LC6") [flags 0x2]  <var_decl 0x7b517d59da20 *.LC6>)
+                        (symbol_ref/f:SI ("*.LC6") [flags 0x2]  <var_decl 0x7fe889d9da20 *.LC6>)
                     ] UNSPEC_GOTOFF)))) "mm/memory.c":235:9 205 {*leasi}
-     (expr_list:REG_EQUAL (symbol_ref/f:SI ("*.LC6") [flags 0x2]  <var_decl 0x7b517d59da20 *.LC6>)
+     (expr_list:REG_EQUAL (symbol_ref/f:SI ("*.LC6") [flags 0x2]  <var_decl 0x7fe889d9da20 *.LC6>)
         (nil)))
 (insn 23 22 24 5 (set (mem/f:SI (pre_dec:SI (reg/f:SI 7 sp)) [15  S4 A32])
         (reg/f:SI 102)) "mm/memory.c":235:9 54 {*pushsi2}
@@ -2833,7 +2833,7 @@ Dataflow summary:
         (reg:SI 82)) "mm/memory.c":235:9 75 {*movsi_internal}
      (expr_list:REG_DEAD (reg:SI 82)
         (nil)))
-(call_insn 25 24 26 5 (call (mem:QI (symbol_ref:SI ("panic") [flags 0x41]  <function_decl 0x7b517d4d2900 panic>) [0 panic S1 A8])
+(call_insn 25 24 26 5 (call (mem:QI (symbol_ref:SI ("panic") [flags 0x41]  <function_decl 0x7fe889cd2900 panic>) [0 panic S1 A8])
         (const_int 16 [0x10])) "mm/memory.c":235:9 812 {*call}
      (expr_list:REG_DEAD (reg:SI 3 bx)
         (nil))
@@ -3041,7 +3041,7 @@ Dataflow summary:
      (expr_list:REG_DEAD (reg:SI 94 [ _12 ])
         (expr_list:REG_ARGS_SIZE (const_int 16 [0x10])
             (nil))))
-(call_insn 69 68 70 10 (call (mem:QI (symbol_ref:SI ("free_page") [flags 0x3]  <function_decl 0x7b517d53b400 free_page>) [0 free_page S1 A8])
+(call_insn 69 68 70 10 (call (mem:QI (symbol_ref:SI ("free_page") [flags 0x3]  <function_decl 0x7fe889d3b400 free_page>) [0 free_page S1 A8])
         (const_int 16 [0x10])) "mm/memory.c":244:17 812 {*call}
      (nil)
     (nil))
@@ -3131,7 +3131,7 @@ Dataflow summary:
      (expr_list:REG_DEAD (reg:SI 96 [ _14 ])
         (expr_list:REG_ARGS_SIZE (const_int 16 [0x10])
             (nil))))
-(call_insn 90 89 91 13 (call (mem:QI (symbol_ref:SI ("free_page") [flags 0x3]  <function_decl 0x7b517d53b400 free_page>) [0 free_page S1 A8])
+(call_insn 90 89 91 13 (call (mem:QI (symbol_ref:SI ("free_page") [flags 0x3]  <function_decl 0x7fe889d3b400 free_page>) [0 free_page S1 A8])
         (const_int 16 [0x10])) "mm/memory.c":248:9 812 {*call}
      (nil)
     (nil))
@@ -3422,7 +3422,7 @@ Dataflow summary:
 (insn 14 13 15 3 (set (reg:SI 83 [ HIGH_MEMORY.9_1 ])
         (mem/c:SI (plus:SI (reg:SI 82)
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("HIGH_MEMORY") [flags 0x2]  <var_decl 0x7b517d52f510 HIGH_MEMORY>)
+                            (symbol_ref:SI ("HIGH_MEMORY") [flags 0x2]  <var_decl 0x7fe889d2f510 HIGH_MEMORY>)
                         ] UNSPEC_GOTOFF))) [1 HIGH_MEMORY+0 S4 A32])) "mm/memory.c":263:11 75 {*movsi_internal}
      (nil))
 (insn 15 14 16 3 (set (reg:SI 84 [ HIGH_MEMORY.10_2 ])
@@ -3455,9 +3455,9 @@ Dataflow summary:
 (insn 20 19 21 4 (set (reg/f:SI 87)
         (plus:SI (reg:SI 82)
             (const:SI (unspec:SI [
-                        (symbol_ref/f:SI ("*.LC1") [flags 0x2]  <var_decl 0x7b517d59d5a0 *.LC1>)
+                        (symbol_ref/f:SI ("*.LC1") [flags 0x2]  <var_decl 0x7fe889d9d5a0 *.LC1>)
                     ] UNSPEC_GOTOFF)))) "mm/memory.c":264:3 205 {*leasi}
-     (expr_list:REG_EQUAL (symbol_ref/f:SI ("*.LC1") [flags 0x2]  <var_decl 0x7b517d59d5a0 *.LC1>)
+     (expr_list:REG_EQUAL (symbol_ref/f:SI ("*.LC1") [flags 0x2]  <var_decl 0x7fe889d9d5a0 *.LC1>)
         (nil)))
 (insn 21 20 22 4 (set (mem/f:SI (pre_dec:SI (reg/f:SI 7 sp)) [15  S4 A32])
         (reg/f:SI 87)) "mm/memory.c":264:3 54 {*pushsi2}
@@ -3467,7 +3467,7 @@ Dataflow summary:
 (insn 22 21 23 4 (set (reg:SI 3 bx)
         (reg:SI 82)) "mm/memory.c":264:3 75 {*movsi_internal}
      (nil))
-(call_insn 23 22 24 4 (call (mem:QI (symbol_ref:SI ("panic") [flags 0x41]  <function_decl 0x7b517d4d2900 panic>) [0 panic S1 A8])
+(call_insn 23 22 24 4 (call (mem:QI (symbol_ref:SI ("panic") [flags 0x41]  <function_decl 0x7fe889cd2900 panic>) [0 panic S1 A8])
         (const_int 16 [0x10])) "mm/memory.c":264:3 812 {*call}
      (expr_list:REG_DEAD (reg:SI 3 bx)
         (nil))
@@ -3503,7 +3503,7 @@ Dataflow summary:
 (insn 29 28 30 5 (set (reg:SI 88)
         (plus:SI (reg:SI 82)
             (const:SI (unspec:SI [
-                        (symbol_ref:SI ("mem_map") [flags 0x2]  <var_decl 0x7b517d52f5a0 mem_map>)
+                        (symbol_ref:SI ("mem_map") [flags 0x2]  <var_decl 0x7fe889d2f5a0 mem_map>)
                     ] UNSPEC_GOTOFF)))) "mm/memory.c":267:13 205 {*leasi}
      (nil))
 (insn 30 29 31 5 (set (reg:SI 89)
@@ -3534,7 +3534,7 @@ Dataflow summary:
 (insn 34 33 35 5 (set (reg:SI 91)
         (plus:SI (reg:SI 82)
             (const:SI (unspec:SI [
-                        (symbol_ref:SI ("mem_map") [flags 0x2]  <var_decl 0x7b517d52f5a0 mem_map>)
+                        (symbol_ref:SI ("mem_map") [flags 0x2]  <var_decl 0x7fe889d2f5a0 mem_map>)
                     ] UNSPEC_GOTOFF)))) "mm/memory.c":267:19 205 {*leasi}
      (nil))
 (insn 35 34 36 5 (set (reg:SI 92)
@@ -3581,9 +3581,9 @@ Dataflow summary:
 (insn 46 45 47 6 (set (reg/f:SI 94)
         (plus:SI (reg:SI 82)
             (const:SI (unspec:SI [
-                        (symbol_ref/f:SI ("*.LC2") [flags 0x2]  <var_decl 0x7b517d59d630 *.LC2>)
+                        (symbol_ref/f:SI ("*.LC2") [flags 0x2]  <var_decl 0x7fe889d9d630 *.LC2>)
                     ] UNSPEC_GOTOFF)))) "mm/memory.c":269:2 205 {*leasi}
-     (expr_list:REG_EQUAL (symbol_ref/f:SI ("*.LC2") [flags 0x2]  <var_decl 0x7b517d59d630 *.LC2>)
+     (expr_list:REG_EQUAL (symbol_ref/f:SI ("*.LC2") [flags 0x2]  <var_decl 0x7fe889d9d630 *.LC2>)
         (nil)))
 (insn 47 46 48 6 (set (mem/f:SI (pre_dec:SI (reg/f:SI 7 sp)) [15  S4 A32])
         (reg/f:SI 94)) "mm/memory.c":269:2 54 {*pushsi2}
@@ -3594,7 +3594,7 @@ Dataflow summary:
         (reg:SI 82)) "mm/memory.c":269:2 75 {*movsi_internal}
      (expr_list:REG_DEAD (reg:SI 82)
         (nil)))
-(call_insn 49 48 50 6 (call (mem:QI (symbol_ref:SI ("panic") [flags 0x41]  <function_decl 0x7b517d4d2900 panic>) [0 panic S1 A8])
+(call_insn 49 48 50 6 (call (mem:QI (symbol_ref:SI ("panic") [flags 0x41]  <function_decl 0x7fe889cd2900 panic>) [0 panic S1 A8])
         (const_int 16 [0x10])) "mm/memory.c":269:2 812 {*call}
      (expr_list:REG_DEAD (reg:SI 3 bx)
         (nil))
@@ -3960,7 +3960,7 @@ Dataflow summary:
 (insn 10 9 11 3 (set (reg:SI 83 [ HIGH_MEMORY.11_1 ])
         (mem/c:SI (plus:SI (reg:SI 82)
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("HIGH_MEMORY") [flags 0x2]  <var_decl 0x7b517d52f510 HIGH_MEMORY>)
+                            (symbol_ref:SI ("HIGH_MEMORY") [flags 0x2]  <var_decl 0x7fe889d2f510 HIGH_MEMORY>)
                         ] UNSPEC_GOTOFF))) [1 HIGH_MEMORY+0 S4 A32])) "mm/memory.c":283:29 75 {*movsi_internal}
      (nil))
 (insn 11 10 12 3 (set (reg:SI 84 [ HIGH_MEMORY.12_2 ])
@@ -4003,9 +4003,9 @@ Dataflow summary:
 (insn 19 18 20 4 (set (reg/f:SI 102)
         (plus:SI (reg:SI 82)
             (const:SI (unspec:SI [
-                        (symbol_ref/f:SI ("*.LC7") [flags 0x2]  <var_decl 0x7b517d59dbd0 *.LC7>)
+                        (symbol_ref/f:SI ("*.LC7") [flags 0x2]  <var_decl 0x7fe889d9dbd0 *.LC7>)
                     ] UNSPEC_GOTOFF)))) "mm/memory.c":284:3 205 {*leasi}
-     (expr_list:REG_EQUAL (symbol_ref/f:SI ("*.LC7") [flags 0x2]  <var_decl 0x7b517d59dbd0 *.LC7>)
+     (expr_list:REG_EQUAL (symbol_ref/f:SI ("*.LC7") [flags 0x2]  <var_decl 0x7fe889d9dbd0 *.LC7>)
         (nil)))
 (insn 20 19 21 4 (set (mem/f:SI (pre_dec:SI (reg/f:SI 7 sp)) [15  S4 A32])
         (reg/f:SI 102)) "mm/memory.c":284:3 54 {*pushsi2}
@@ -4016,7 +4016,7 @@ Dataflow summary:
         (reg:SI 82)) "mm/memory.c":284:3 75 {*movsi_internal}
      (nil))
 (call_insn 22 21 23 4 (set (reg:SI 0 ax)
-        (call (mem:QI (symbol_ref:SI ("printk") [flags 0x41]  <function_decl 0x7b517d4d2700 printk>) [0 printk S1 A8])
+        (call (mem:QI (symbol_ref:SI ("printk") [flags 0x41]  <function_decl 0x7fe889cd2700 printk>) [0 printk S1 A8])
             (const_int 16 [0x10]))) "mm/memory.c":284:3 823 {*call_value}
      (expr_list:REG_DEAD (reg:SI 3 bx)
         (expr_list:REG_UNUSED (reg:SI 0 ax)
@@ -4061,7 +4061,7 @@ Dataflow summary:
         (mem:QI (plus:SI (plus:SI (reg:SI 82)
                     (reg:SI 86 [ _4 ]))
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("mem_map") [flags 0x2]  <var_decl 0x7b517d52f5a0 mem_map>)
+                            (symbol_ref:SI ("mem_map") [flags 0x2]  <var_decl 0x7fe889d2f5a0 mem_map>)
                         ] UNSPEC_GOTOFF))) [0 mem_map[_4]+0 S1 A8])) "mm/memory.c":285:13 77 {*movqi_internal}
      (expr_list:REG_DEAD (reg:SI 86 [ _4 ])
         (nil)))
@@ -4100,9 +4100,9 @@ Dataflow summary:
 (insn 36 35 37 6 (set (reg/f:SI 104)
         (plus:SI (reg:SI 82)
             (const:SI (unspec:SI [
-                        (symbol_ref/f:SI ("*.LC8") [flags 0x2]  <var_decl 0x7b517d59dc60 *.LC8>)
+                        (symbol_ref/f:SI ("*.LC8") [flags 0x2]  <var_decl 0x7fe889d9dc60 *.LC8>)
                     ] UNSPEC_GOTOFF)))) "mm/memory.c":286:3 205 {*leasi}
-     (expr_list:REG_EQUAL (symbol_ref/f:SI ("*.LC8") [flags 0x2]  <var_decl 0x7b517d59dc60 *.LC8>)
+     (expr_list:REG_EQUAL (symbol_ref/f:SI ("*.LC8") [flags 0x2]  <var_decl 0x7fe889d9dc60 *.LC8>)
         (nil)))
 (insn 37 36 38 6 (set (mem/f:SI (pre_dec:SI (reg/f:SI 7 sp)) [15  S4 A32])
         (reg/f:SI 104)) "mm/memory.c":286:3 54 {*pushsi2}
@@ -4114,7 +4114,7 @@ Dataflow summary:
      (expr_list:REG_DEAD (reg:SI 82)
         (nil)))
 (call_insn 39 38 40 6 (set (reg:SI 0 ax)
-        (call (mem:QI (symbol_ref:SI ("printk") [flags 0x41]  <function_decl 0x7b517d4d2700 printk>) [0 printk S1 A8])
+        (call (mem:QI (symbol_ref:SI ("printk") [flags 0x41]  <function_decl 0x7fe889cd2700 printk>) [0 printk S1 A8])
             (const_int 16 [0x10]))) "mm/memory.c":286:3 823 {*call_value}
      (expr_list:REG_DEAD (reg:SI 3 bx)
         (expr_list:REG_UNUSED (reg:SI 0 ax)
@@ -4223,7 +4223,7 @@ Dataflow summary:
 (code_label 59 100 60 9 57 (nil) [1 uses])
 (note 60 59 61 9 [bb 9] NOTE_INSN_BASIC_BLOCK)
 (call_insn 61 60 62 9 (set (reg:SI 0 ax)
-        (call (mem:QI (symbol_ref:SI ("get_free_page") [flags 0x3]  <function_decl 0x7b517d53b100 get_free_page>) [0 get_free_page S1 A8])
+        (call (mem:QI (symbol_ref:SI ("get_free_page") [flags 0x3]  <function_decl 0x7fe889d3b100 get_free_page>) [0 get_free_page S1 A8])
             (const_int 0 [0]))) "mm/memory.c":291:15 823 {*call_value}
      (nil)
     (nil))
@@ -4483,7 +4483,7 @@ Dataflow summary:
                 (nil)))))
 (note 2 35 5 2 NOTE_INSN_FUNCTION_BEG)
 (call_insn 5 2 6 2 (set (reg:SI 0 ax)
-        (call (mem:QI (symbol_ref:SI ("get_free_page") [flags 0x3]  <function_decl 0x7b517d53b100 get_free_page>) [0 get_free_page S1 A8])
+        (call (mem:QI (symbol_ref:SI ("get_free_page") [flags 0x3]  <function_decl 0x7fe889d3b100 get_free_page>) [0 get_free_page S1 A8])
             (const_int 0 [0]))) "mm/memory.c":305:14 823 {*call_value}
      (nil)
     (nil))
@@ -4529,7 +4529,7 @@ Dataflow summary:
      (expr_list:REG_ARGS_SIZE (const_int 16 [0x10])
         (nil)))
 (call_insn 14 13 15 3 (set (reg:SI 0 ax)
-        (call (mem:QI (symbol_ref:SI ("put_page") [flags 0x3]  <function_decl 0x7b517d53bc00 put_page>) [0 put_page S1 A8])
+        (call (mem:QI (symbol_ref:SI ("put_page") [flags 0x3]  <function_decl 0x7fe889d3bc00 put_page>) [0 put_page S1 A8])
             (const_int 16 [0x10]))) "mm/memory.c":305:35 823 {*call_value}
      (nil)
     (nil))
@@ -4575,7 +4575,7 @@ Dataflow summary:
                 (const_int -4 [0xfffffffffffffffc])) [1 tmp+0 S4 A32])) "mm/memory.c":306:3 54 {*pushsi2}
      (expr_list:REG_ARGS_SIZE (const_int 16 [0x10])
         (nil)))
-(call_insn 23 22 24 4 (call (mem:QI (symbol_ref:SI ("free_page") [flags 0x3]  <function_decl 0x7b517d53b400 free_page>) [0 free_page S1 A8])
+(call_insn 23 22 24 4 (call (mem:QI (symbol_ref:SI ("free_page") [flags 0x3]  <function_decl 0x7fe889d3b400 free_page>) [0 free_page S1 A8])
         (const_int 16 [0x10])) "mm/memory.c":306:3 812 {*call}
      (nil)
     (nil))
@@ -4588,7 +4588,7 @@ Dataflow summary:
      (expr_list:REG_UNUSED (reg:CC 17 flags)
         (expr_list:REG_ARGS_SIZE (const_int 0 [0])
             (nil))))
-(call_insn 25 24 33 4 (call (mem:QI (symbol_ref:SI ("oom") [flags 0x3]  <function_decl 0x7b517d537f00 oom>) [0 oom S1 A8])
+(call_insn 25 24 33 4 (call (mem:QI (symbol_ref:SI ("oom") [flags 0x3]  <function_decl 0x7fe889d37f00 oom>) [0 oom S1 A8])
         (const_int 0 [0])) "mm/memory.c":307:3 812 {*call}
      (nil)
     (nil))
@@ -5201,7 +5201,7 @@ Dataflow summary:
 (insn 16 15 17 2 (set (reg/f:SI 123)
         (mem/u/c:SI (plus:SI (reg:SI 82)
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("current") [flags 0x40]  <var_decl 0x7b517d52f120 current>)
+                            (symbol_ref:SI ("current") [flags 0x40]  <var_decl 0x7fe889d2f120 current>)
                         ] UNSPEC_GOT))) [17  S4 A8])) "mm/memory.c":329:24 75 {*movsi_internal}
      (nil))
 (insn 17 16 18 2 (set (reg/f:SI 87 [ current.13_5 ])
@@ -5416,7 +5416,7 @@ Dataflow summary:
 (insn 59 58 60 6 (set (reg:SI 97 [ HIGH_MEMORY.16_15 ])
         (mem/c:SI (plus:SI (reg:SI 82)
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("HIGH_MEMORY") [flags 0x2]  <var_decl 0x7b517d52f510 HIGH_MEMORY>)
+                            (symbol_ref:SI ("HIGH_MEMORY") [flags 0x2]  <var_decl 0x7fe889d2f510 HIGH_MEMORY>)
                         ] UNSPEC_GOTOFF))) [1 HIGH_MEMORY+0 S4 A32])) "mm/memory.c":341:16 75 {*movsi_internal}
      (nil))
 (insn 60 59 61 6 (set (reg:SI 98 [ HIGH_MEMORY.17_16 ])
@@ -5507,7 +5507,7 @@ Dataflow summary:
  -> 98)
 (note 82 81 83 10 [bb 10] NOTE_INSN_BASIC_BLOCK)
 (call_insn 83 82 84 10 (set (reg:SI 0 ax)
-        (call (mem:QI (symbol_ref:SI ("get_free_page") [flags 0x3]  <function_decl 0x7b517d53b100 get_free_page>) [0 get_free_page S1 A8])
+        (call (mem:QI (symbol_ref:SI ("get_free_page") [flags 0x3]  <function_decl 0x7fe889d3b100 get_free_page>) [0 get_free_page S1 A8])
             (const_int 0 [0]))) "mm/memory.c":345:13 823 {*call_value}
      (nil)
     (nil))
@@ -5566,7 +5566,7 @@ Dataflow summary:
 (barrier 163 162 95)
 (code_label 95 163 96 12 72 (nil) [1 uses])
 (note 96 95 97 12 [bb 12] NOTE_INSN_BASIC_BLOCK)
-(call_insn 97 96 98 12 (call (mem:QI (symbol_ref:SI ("oom") [flags 0x3]  <function_decl 0x7b517d537f00 oom>) [0 oom S1 A8])
+(call_insn 97 96 98 12 (call (mem:QI (symbol_ref:SI ("oom") [flags 0x3]  <function_decl 0x7fe889d37f00 oom>) [0 oom S1 A8])
         (const_int 0 [0])) "mm/memory.c":348:4 812 {*call}
      (nil)
     (nil))
@@ -5670,9 +5670,9 @@ Dataflow summary:
 (insn 117 116 118 14 (set (reg/f:SI 142)
         (plus:SI (reg:SI 82)
             (const:SI (unspec:SI [
-                        (symbol_ref/f:SI ("*.LC9") [flags 0x2]  <var_decl 0x7b517d59dea0 *.LC9>)
+                        (symbol_ref/f:SI ("*.LC9") [flags 0x2]  <var_decl 0x7fe889d9dea0 *.LC9>)
                     ] UNSPEC_GOTOFF)))) "mm/memory.c":353:3 205 {*leasi}
-     (expr_list:REG_EQUAL (symbol_ref/f:SI ("*.LC9") [flags 0x2]  <var_decl 0x7b517d59dea0 *.LC9>)
+     (expr_list:REG_EQUAL (symbol_ref/f:SI ("*.LC9") [flags 0x2]  <var_decl 0x7fe889d9dea0 *.LC9>)
         (nil)))
 (insn 118 117 119 14 (set (mem/f:SI (pre_dec:SI (reg/f:SI 7 sp)) [15  S4 A32])
         (reg/f:SI 142)) "mm/memory.c":353:3 54 {*pushsi2}
@@ -5682,7 +5682,7 @@ Dataflow summary:
 (insn 119 118 120 14 (set (reg:SI 3 bx)
         (reg:SI 82)) "mm/memory.c":353:3 75 {*movsi_internal}
      (nil))
-(call_insn 120 119 121 14 (call (mem:QI (symbol_ref:SI ("panic") [flags 0x41]  <function_decl 0x7b517d4d2900 panic>) [0 panic S1 A8])
+(call_insn 120 119 121 14 (call (mem:QI (symbol_ref:SI ("panic") [flags 0x41]  <function_decl 0x7fe889cd2900 panic>) [0 panic S1 A8])
         (const_int 16 [0x10])) "mm/memory.c":353:3 812 {*call}
      (expr_list:REG_DEAD (reg:SI 3 bx)
         (nil))
@@ -5781,7 +5781,7 @@ Dataflow summary:
 (insn 137 136 138 15 (set (reg:SI 144)
         (plus:SI (reg:SI 82)
             (const:SI (unspec:SI [
-                        (symbol_ref:SI ("mem_map") [flags 0x2]  <var_decl 0x7b517d52f5a0 mem_map>)
+                        (symbol_ref:SI ("mem_map") [flags 0x2]  <var_decl 0x7fe889d2f5a0 mem_map>)
                     ] UNSPEC_GOTOFF)))) "mm/memory.c":360:9 205 {*leasi}
      (nil))
 (insn 138 137 139 15 (set (reg:SI 145)
@@ -5814,7 +5814,7 @@ Dataflow summary:
 (insn 142 141 143 15 (set (reg:SI 147)
         (plus:SI (reg:SI 82)
             (const:SI (unspec:SI [
-                        (symbol_ref:SI ("mem_map") [flags 0x2]  <var_decl 0x7b517d52f5a0 mem_map>)
+                        (symbol_ref:SI ("mem_map") [flags 0x2]  <var_decl 0x7fe889d2f5a0 mem_map>)
                     ] UNSPEC_GOTOFF)))) "mm/memory.c":360:20 205 {*leasi}
      (expr_list:REG_DEAD (reg:SI 82)
         (nil)))
@@ -6153,7 +6153,7 @@ Dataflow summary:
 (insn 5 2 6 2 (set (reg/f:SI 99)
         (mem/u/c:SI (plus:SI (reg:SI 82)
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("current") [flags 0x40]  <var_decl 0x7b517d52f120 current>)
+                            (symbol_ref:SI ("current") [flags 0x40]  <var_decl 0x7fe889d2f120 current>)
                         ] UNSPEC_GOT))) [17  S4 A8])) "mm/memory.c":376:14 75 {*movsi_internal}
      (nil))
 (insn 6 5 7 2 (set (reg/f:SI 83 [ current.25_1 ])
@@ -6192,7 +6192,7 @@ Dataflow summary:
 (insn 16 15 17 4 (set (reg/f:SI 100)
         (mem/u/c:SI (plus:SI (reg:SI 82)
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("current") [flags 0x40]  <var_decl 0x7b517d52f120 current>)
+                            (symbol_ref:SI ("current") [flags 0x40]  <var_decl 0x7fe889d2f120 current>)
                         ] UNSPEC_GOT))) [17  S4 A8])) "mm/memory.c":378:13 75 {*movsi_internal}
      (nil))
 (insn 17 16 18 4 (set (reg/f:SI 85 [ current.26_3 ])
@@ -6236,14 +6236,14 @@ Dataflow summary:
 (insn 30 29 31 6 (set (reg:SI 102)
         (mem/u/c:SI (plus:SI (reg:SI 82)
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("task") [flags 0x40]  <var_decl 0x7b517d52f1b0 task>)
+                            (symbol_ref:SI ("task") [flags 0x40]  <var_decl 0x7fe889d2f1b0 task>)
                         ] UNSPEC_GOT))) [17  S4 A8])) "mm/memory.c":380:9 75 {*movsi_internal}
      (nil))
 (insn 31 30 32 6 (set (reg/f:SI 101)
         (plus:SI (reg:SI 102)
             (const_int 252 [0xfc]))) "mm/memory.c":380:9 205 {*leasi}
      (expr_list:REG_DEAD (reg:SI 102)
-        (expr_list:REG_EQUAL (const:SI (plus:SI (symbol_ref:SI ("task") [flags 0x40]  <var_decl 0x7b517d52f1b0 task>)
+        (expr_list:REG_EQUAL (const:SI (plus:SI (symbol_ref:SI ("task") [flags 0x40]  <var_decl 0x7fe889d2f1b0 task>)
                     (const_int 252 [0xfc])))
             (nil))))
 (insn 32 31 108 6 (set (mem/f/c:SI (plus:SI (reg/f:SI 19 frame)
@@ -6291,7 +6291,7 @@ Dataflow summary:
 (insn 47 46 48 8 (set (reg/f:SI 105)
         (mem/u/c:SI (plus:SI (reg:SI 82)
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("current") [flags 0x40]  <var_decl 0x7b517d52f120 current>)
+                            (symbol_ref:SI ("current") [flags 0x40]  <var_decl 0x7fe889d2f120 current>)
                         ] UNSPEC_GOT))) [17  S4 A8])) "mm/memory.c":383:15 75 {*movsi_internal}
      (nil))
 (insn 48 47 49 8 (set (reg/f:SI 90 [ current.27_8 ])
@@ -6329,7 +6329,7 @@ Dataflow summary:
 (insn 59 58 60 9 (set (reg/f:SI 107)
         (mem/u/c:SI (plus:SI (reg:SI 82)
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("current") [flags 0x40]  <var_decl 0x7b517d52f120 current>)
+                            (symbol_ref:SI ("current") [flags 0x40]  <var_decl 0x7fe889d2f120 current>)
                         ] UNSPEC_GOT))) [17  S4 A8])) "mm/memory.c":385:34 75 {*movsi_internal}
      (nil))
 (insn 60 59 61 9 (set (reg/f:SI 93 [ current.28_11 ])
@@ -6383,7 +6383,7 @@ Dataflow summary:
      (expr_list:REG_ARGS_SIZE (const_int 16 [0x10])
         (nil)))
 (call_insn 74 73 75 10 (set (reg:SI 0 ax)
-        (call (mem:QI (symbol_ref:SI ("try_to_share") [flags 0x3]  <function_decl 0x7b517d53b600 try_to_share>) [0 try_to_share S1 A8])
+        (call (mem:QI (symbol_ref:SI ("try_to_share") [flags 0x3]  <function_decl 0x7fe889d3b600 try_to_share>) [0 try_to_share S1 A8])
             (const_int 16 [0x10]))) "mm/memory.c":387:7 823 {*call_value}
      (nil)
     (nil))
@@ -6461,13 +6461,13 @@ Dataflow summary:
 (insn 89 87 90 13 (set (reg:SI 110)
         (mem/u/c:SI (plus:SI (reg:SI 82)
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("task") [flags 0x40]  <var_decl 0x7b517d52f1b0 task>)
+                            (symbol_ref:SI ("task") [flags 0x40]  <var_decl 0x7fe889d2f1b0 task>)
                         ] UNSPEC_GOT))) [17  S4 A8])) "mm/memory.c":380:25 75 {*movsi_internal}
      (nil))
 (insn 90 89 91 13 (set (reg:SI 109)
         (reg:SI 110)) "mm/memory.c":380:25 75 {*movsi_internal}
      (expr_list:REG_DEAD (reg:SI 110)
-        (expr_list:REG_EQUAL (symbol_ref:SI ("task") [flags 0x40]  <var_decl 0x7b517d52f1b0 task>)
+        (expr_list:REG_EQUAL (symbol_ref:SI ("task") [flags 0x40]  <var_decl 0x7fe889d2f1b0 task>)
             (nil))))
 (insn 91 90 92 13 (set (reg:CC 17 flags)
         (compare:CC (mem/f/c:SI (plus:SI (reg/f:SI 19 frame)
@@ -6917,7 +6917,7 @@ Dataflow summary:
 (insn 6 5 7 2 (set (reg/f:SI 106)
         (mem/u/c:SI (plus:SI (reg:SI 82)
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("current") [flags 0x40]  <var_decl 0x7b517d52f120 current>)
+                            (symbol_ref:SI ("current") [flags 0x40]  <var_decl 0x7fe889d2f120 current>)
                         ] UNSPEC_GOT))) [17  S4 A8])) "mm/memory.c":401:25 75 {*movsi_internal}
      (nil))
 (insn 7 6 8 2 (set (reg/f:SI 83 [ current.29_1 ])
@@ -6954,7 +6954,7 @@ Dataflow summary:
 (insn 15 14 16 2 (set (reg/f:SI 111)
         (mem/u/c:SI (plus:SI (reg:SI 82)
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("current") [flags 0x40]  <var_decl 0x7b517d52f120 current>)
+                            (symbol_ref:SI ("current") [flags 0x40]  <var_decl 0x7fe889d2f120 current>)
                         ] UNSPEC_GOT))) [17  S4 A8])) "mm/memory.c":402:14 75 {*movsi_internal}
      (nil))
 (insn 16 15 17 2 (set (reg/f:SI 85 [ current.30_3 ])
@@ -6983,7 +6983,7 @@ Dataflow summary:
 (insn 21 20 22 3 (set (reg/f:SI 112)
         (mem/u/c:SI (plus:SI (reg:SI 82)
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("current") [flags 0x40]  <var_decl 0x7b517d52f120 current>)
+                            (symbol_ref:SI ("current") [flags 0x40]  <var_decl 0x7fe889d2f120 current>)
                         ] UNSPEC_GOT))) [17  S4 A8])) "mm/memory.c":402:44 75 {*movsi_internal}
      (nil))
 (insn 22 21 23 3 (set (reg/f:SI 87 [ current.31_5 ])
@@ -7025,7 +7025,7 @@ Dataflow summary:
                 (const_int 4 [0x4])) [1 address+0 S4 A32])) "mm/memory.c":403:3 54 {*pushsi2}
      (expr_list:REG_ARGS_SIZE (const_int 16 [0x10])
         (nil)))
-(call_insn 30 29 31 4 (call (mem:QI (symbol_ref:SI ("get_empty_page") [flags 0x3]  <function_decl 0x7b517d53be00 get_empty_page>) [0 get_empty_page S1 A8])
+(call_insn 30 29 31 4 (call (mem:QI (symbol_ref:SI ("get_empty_page") [flags 0x3]  <function_decl 0x7fe889d3be00 get_empty_page>) [0 get_empty_page S1 A8])
         (const_int 16 [0x10])) "mm/memory.c":403:3 812 {*call}
      (nil)
     (nil))
@@ -7060,7 +7060,7 @@ Dataflow summary:
      (expr_list:REG_ARGS_SIZE (const_int 16 [0x10])
         (nil)))
 (call_insn 38 37 39 5 (set (reg:SI 0 ax)
-        (call (mem:QI (symbol_ref:SI ("share_page") [flags 0x3]  <function_decl 0x7b517d54c000 share_page>) [0 share_page S1 A8])
+        (call (mem:QI (symbol_ref:SI ("share_page") [flags 0x3]  <function_decl 0x7fe889d4c000 share_page>) [0 share_page S1 A8])
             (const_int 16 [0x10]))) "mm/memory.c":406:6 823 {*call_value}
      (nil)
     (nil))
@@ -7092,7 +7092,7 @@ Dataflow summary:
  -> 165)
 (note 47 42 48 6 [bb 6] NOTE_INSN_BASIC_BLOCK)
 (call_insn 48 47 49 6 (set (reg:SI 0 ax)
-        (call (mem:QI (symbol_ref:SI ("get_free_page") [flags 0x3]  <function_decl 0x7b517d53b100 get_free_page>) [0 get_free_page S1 A8])
+        (call (mem:QI (symbol_ref:SI ("get_free_page") [flags 0x3]  <function_decl 0x7fe889d3b100 get_free_page>) [0 get_free_page S1 A8])
             (const_int 0 [0]))) "mm/memory.c":408:15 823 {*call_value}
      (nil)
     (nil))
@@ -7119,7 +7119,7 @@ Dataflow summary:
         (nil))
  -> 55)
 (note 53 52 54 7 [bb 7] NOTE_INSN_BASIC_BLOCK)
-(call_insn 54 53 55 7 (call (mem:QI (symbol_ref:SI ("oom") [flags 0x3]  <function_decl 0x7b517d537f00 oom>) [0 oom S1 A8])
+(call_insn 54 53 55 7 (call (mem:QI (symbol_ref:SI ("oom") [flags 0x3]  <function_decl 0x7fe889d37f00 oom>) [0 oom S1 A8])
         (const_int 0 [0])) "mm/memory.c":409:3 812 {*call}
      (nil)
     (nil))
@@ -7168,7 +7168,7 @@ Dataflow summary:
 (insn 65 64 66 9 (set (reg/f:SI 115)
         (mem/u/c:SI (plus:SI (reg:SI 82)
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("current") [flags 0x40]  <var_decl 0x7b517d52f120 current>)
+                            (symbol_ref:SI ("current") [flags 0x40]  <var_decl 0x7fe889d2f120 current>)
                         ] UNSPEC_GOT))) [17  S4 A8])) "mm/memory.c":413:23 75 {*movsi_internal}
      (nil))
 (insn 66 65 67 9 (set (reg/f:SI 92 [ current.32_10 ])
@@ -7203,7 +7203,7 @@ Dataflow summary:
         (reg:SI 82)) "mm/memory.c":413:11 75 {*movsi_internal}
      (nil))
 (call_insn 72 71 73 9 (set (reg:SI 0 ax)
-        (call (mem:QI (symbol_ref:SI ("bmap") [flags 0x41]  <function_decl 0x7b517d514100 bmap>) [0 bmap S1 A8])
+        (call (mem:QI (symbol_ref:SI ("bmap") [flags 0x41]  <function_decl 0x7fe889d14100 bmap>) [0 bmap S1 A8])
             (const_int 16 [0x10]))) "mm/memory.c":413:11 823 {*call_value}
      (expr_list:REG_DEAD (reg:SI 3 bx)
         (nil))
@@ -7273,7 +7273,7 @@ Dataflow summary:
 (insn 87 86 88 11 (set (reg/f:SI 117)
         (mem/u/c:SI (plus:SI (reg:SI 82)
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("current") [flags 0x40]  <var_decl 0x7b517d52f120 current>)
+                            (symbol_ref:SI ("current") [flags 0x40]  <var_decl 0x7fe889d2f120 current>)
                         ] UNSPEC_GOT))) [17  S4 A8])) "mm/memory.c":414:26 75 {*movsi_internal}
      (nil))
 (insn 88 87 89 11 (set (reg/f:SI 95 [ current.33_13 ])
@@ -7329,7 +7329,7 @@ Dataflow summary:
 (insn 97 96 98 11 (set (reg:SI 3 bx)
         (reg:SI 82)) "mm/memory.c":414:2 75 {*movsi_internal}
      (nil))
-(call_insn 98 97 99 11 (call (mem:QI (symbol_ref:SI ("bread_page") [flags 0x41]  <function_decl 0x7b517d514b00 bread_page>) [0 bread_page S1 A8])
+(call_insn 98 97 99 11 (call (mem:QI (symbol_ref:SI ("bread_page") [flags 0x41]  <function_decl 0x7fe889d14b00 bread_page>) [0 bread_page S1 A8])
         (const_int 16 [0x10])) "mm/memory.c":414:2 812 {*call}
      (expr_list:REG_DEAD (reg:SI 3 bx)
         (nil))
@@ -7347,7 +7347,7 @@ Dataflow summary:
 (insn 100 99 101 11 (set (reg/f:SI 119)
         (mem/u/c:SI (plus:SI (reg:SI 82)
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("current") [flags 0x40]  <var_decl 0x7b517d52f120 current>)
+                            (symbol_ref:SI ("current") [flags 0x40]  <var_decl 0x7fe889d2f120 current>)
                         ] UNSPEC_GOT))) [17  S4 A8])) "mm/memory.c":415:26 75 {*movsi_internal}
      (expr_list:REG_DEAD (reg:SI 82)
         (nil)))
@@ -7490,7 +7490,7 @@ Dataflow summary:
      (expr_list:REG_ARGS_SIZE (const_int 16 [0x10])
         (nil)))
 (call_insn 133 132 134 14 (set (reg:SI 0 ax)
-        (call (mem:QI (symbol_ref:SI ("put_page") [flags 0x3]  <function_decl 0x7b517d53bc00 put_page>) [0 put_page S1 A8])
+        (call (mem:QI (symbol_ref:SI ("put_page") [flags 0x3]  <function_decl 0x7fe889d3bc00 put_page>) [0 put_page S1 A8])
             (const_int 16 [0x10]))) "mm/memory.c":421:6 823 {*call_value}
      (nil)
     (nil))
@@ -7535,7 +7535,7 @@ Dataflow summary:
                 (const_int -16 [0xfffffffffffffff0])) [1 page+0 S4 A32])) "mm/memory.c":423:2 54 {*pushsi2}
      (expr_list:REG_ARGS_SIZE (const_int 16 [0x10])
         (nil)))
-(call_insn 145 144 146 15 (call (mem:QI (symbol_ref:SI ("free_page") [flags 0x3]  <function_decl 0x7b517d53b400 free_page>) [0 free_page S1 A8])
+(call_insn 145 144 146 15 (call (mem:QI (symbol_ref:SI ("free_page") [flags 0x3]  <function_decl 0x7fe889d3b400 free_page>) [0 free_page S1 A8])
         (const_int 16 [0x10])) "mm/memory.c":423:2 812 {*call}
      (nil)
     (nil))
@@ -7548,7 +7548,7 @@ Dataflow summary:
      (expr_list:REG_UNUSED (reg:CC 17 flags)
         (expr_list:REG_ARGS_SIZE (const_int 0 [0])
             (nil))))
-(call_insn 147 146 162 15 (call (mem:QI (symbol_ref:SI ("oom") [flags 0x3]  <function_decl 0x7b517d537f00 oom>) [0 oom S1 A8])
+(call_insn 147 146 162 15 (call (mem:QI (symbol_ref:SI ("oom") [flags 0x3]  <function_decl 0x7fe889d37f00 oom>) [0 oom S1 A8])
         (const_int 0 [0])) "mm/memory.c":424:2 812 {*call}
      (nil)
     (nil))
@@ -7890,7 +7890,7 @@ Dataflow summary:
         (mem:QI (plus:SI (plus:SI (reg:SI 82)
                     (reg:SI 85 [ _3 ]))
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("mem_map") [flags 0x2]  <var_decl 0x7b517d52f5a0 mem_map>)
+                            (symbol_ref:SI ("mem_map") [flags 0x2]  <var_decl 0x7fe889d2f5a0 mem_map>)
                         ] UNSPEC_GOTOFF))) [0 mem_map[_3]+0 S1 A8])) "mm/memory.c":432:36 77 {*movqi_internal}
      (expr_list:REG_DEAD (reg:SI 85 [ _3 ])
         (nil)))
@@ -7956,7 +7956,7 @@ Dataflow summary:
 (code_label 30 69 31 5 102 (nil) [2 uses])
 (note 31 30 32 5 [bb 5] NOTE_INSN_BASIC_BLOCK)
 (call_insn 32 31 33 5 (set (reg:SI 0 ax)
-        (call (mem:QI (symbol_ref:SI ("get_free_page") [flags 0x3]  <function_decl 0x7b517d53b100 get_free_page>) [0 get_free_page S1 A8])
+        (call (mem:QI (symbol_ref:SI ("get_free_page") [flags 0x3]  <function_decl 0x7fe889d3b100 get_free_page>) [0 get_free_page S1 A8])
             (const_int 0 [0]))) "mm/memory.c":437:19 823 {*call_value}
      (nil)
     (nil))
@@ -7983,7 +7983,7 @@ Dataflow summary:
         (nil))
  -> 39)
 (note 37 36 38 6 [bb 6] NOTE_INSN_BASIC_BLOCK)
-(call_insn 38 37 39 6 (call (mem:QI (symbol_ref:SI ("oom") [flags 0x3]  <function_decl 0x7b517d537f00 oom>) [0 oom S1 A8])
+(call_insn 38 37 39 6 (call (mem:QI (symbol_ref:SI ("oom") [flags 0x3]  <function_decl 0x7fe889d37f00 oom>) [0 oom S1 A8])
         (const_int 0 [0])) "mm/memory.c":438:3 812 {*call}
      (nil)
     (nil))
@@ -8032,7 +8032,7 @@ Dataflow summary:
         (mem:QI (plus:SI (plus:SI (reg:SI 82)
                     (reg:SI 90 [ _8 ]))
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("mem_map") [flags 0x2]  <var_decl 0x7b517d52f5a0 mem_map>)
+                            (symbol_ref:SI ("mem_map") [flags 0x2]  <var_decl 0x7fe889d2f5a0 mem_map>)
                         ] UNSPEC_GOTOFF))) [0 mem_map[_8]+0 S1 A8])) "mm/memory.c":440:10 77 {*movqi_internal}
      (nil))
 (insn 50 49 51 8 (parallel [
@@ -8047,7 +8047,7 @@ Dataflow summary:
 (insn 51 50 52 8 (set (mem:QI (plus:SI (plus:SI (reg:SI 82)
                     (reg:SI 90 [ _8 ]))
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("mem_map") [flags 0x2]  <var_decl 0x7b517d52f5a0 mem_map>)
+                            (symbol_ref:SI ("mem_map") [flags 0x2]  <var_decl 0x7fe889d2f5a0 mem_map>)
                         ] UNSPEC_GOTOFF))) [0 mem_map[_8]+0 S1 A8])
         (reg:QI 92 [ _11 ])) "mm/memory.c":440:28 77 {*movqi_internal}
      (expr_list:REG_DEAD (reg:QI 92 [ _11 ])
@@ -8363,7 +8363,7 @@ Dataflow summary:
      (expr_list:REG_DEAD (reg/f:SI 91 [ _9 ])
         (expr_list:REG_ARGS_SIZE (const_int 16 [0x10])
             (nil))))
-(call_insn 18 17 19 2 (call (mem:QI (symbol_ref:SI ("un_wp_page") [flags 0x3]  <function_decl 0x7b517d54c400 un_wp_page>) [0 un_wp_page S1 A8])
+(call_insn 18 17 19 2 (call (mem:QI (symbol_ref:SI ("un_wp_page") [flags 0x3]  <function_decl 0x7fe889d4c400 un_wp_page>) [0 un_wp_page S1 A8])
         (const_int 16 [0x10])) "mm/memory.c":461:2 812 {*call}
      (nil)
     (nil))
@@ -8667,7 +8667,7 @@ Dataflow summary:
 (insn 10 9 11 3 (set (reg:SI 93)
         (plus:SI (reg:SI 82)
             (const:SI (unspec:SI [
-                        (symbol_ref:SI ("mem_map") [flags 0x2]  <var_decl 0x7b517d52f5a0 mem_map>)
+                        (symbol_ref:SI ("mem_map") [flags 0x2]  <var_decl 0x7fe889d2f5a0 mem_map>)
                     ] UNSPEC_GOTOFF)))) "mm/memory.c":472:15 205 {*leasi}
      (nil))
 (insn 11 10 12 3 (set (reg:SI 94)
@@ -8761,9 +8761,9 @@ Dataflow summary:
 (insn 32 31 33 7 (set (reg/f:SI 96)
         (plus:SI (reg:SI 82)
             (const:SI (unspec:SI [
-                        (symbol_ref/f:SI ("*.LC10") [flags 0x2]  <var_decl 0x7b517d59dab0 *.LC10>)
+                        (symbol_ref/f:SI ("*.LC10") [flags 0x2]  <var_decl 0x7fe889d9dab0 *.LC10>)
                     ] UNSPEC_GOTOFF)))) "mm/memory.c":474:2 205 {*leasi}
-     (expr_list:REG_EQUAL (symbol_ref/f:SI ("*.LC10") [flags 0x2]  <var_decl 0x7b517d59dab0 *.LC10>)
+     (expr_list:REG_EQUAL (symbol_ref/f:SI ("*.LC10") [flags 0x2]  <var_decl 0x7fe889d9dab0 *.LC10>)
         (nil)))
 (insn 33 32 34 7 (set (mem/f:SI (pre_dec:SI (reg/f:SI 7 sp)) [15  S4 A32])
         (reg/f:SI 96)) "mm/memory.c":474:2 54 {*pushsi2}
@@ -8774,7 +8774,7 @@ Dataflow summary:
         (reg:SI 82)) "mm/memory.c":474:2 75 {*movsi_internal}
      (nil))
 (call_insn 35 34 36 7 (set (reg:SI 0 ax)
-        (call (mem:QI (symbol_ref:SI ("printk") [flags 0x41]  <function_decl 0x7b517d4d2700 printk>) [0 printk S1 A8])
+        (call (mem:QI (symbol_ref:SI ("printk") [flags 0x41]  <function_decl 0x7fe889cd2700 printk>) [0 printk S1 A8])
             (const_int 16 [0x10]))) "mm/memory.c":474:2 823 {*call_value}
      (expr_list:REG_DEAD (reg:SI 3 bx)
         (expr_list:REG_UNUSED (reg:SI 0 ax)
@@ -8804,7 +8804,7 @@ Dataflow summary:
 (insn 41 40 42 8 (set (reg/f:SI 97)
         (mem/u/c:SI (plus:SI (reg:SI 82)
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("pg_dir") [flags 0x40]  <var_decl 0x7b517e995b40 pg_dir>)
+                            (symbol_ref:SI ("pg_dir") [flags 0x40]  <var_decl 0x7fe88b1c8b40 pg_dir>)
                         ] UNSPEC_GOT))) [17  S4 A8])) "mm/memory.c":476:17 75 {*movsi_internal}
      (nil))
 (insn 42 41 43 8 (set (reg:SI 98)
@@ -8844,7 +8844,7 @@ Dataflow summary:
 (insn 48 47 49 9 (set (reg/f:SI 99)
         (mem/u/c:SI (plus:SI (reg:SI 82)
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("pg_dir") [flags 0x40]  <var_decl 0x7b517e995b40 pg_dir>)
+                            (symbol_ref:SI ("pg_dir") [flags 0x40]  <var_decl 0x7fe88b1c8b40 pg_dir>)
                         ] UNSPEC_GOT))) [17  S4 A8])) "mm/memory.c":477:41 75 {*movsi_internal}
      (nil))
 (insn 49 48 50 9 (set (reg:SI 100)
@@ -9009,9 +9009,9 @@ Dataflow summary:
 (insn 83 82 84 14 (set (reg/f:SI 103)
         (plus:SI (reg:SI 82)
             (const:SI (unspec:SI [
-                        (symbol_ref/f:SI ("*.LC11") [flags 0x2]  <var_decl 0x7b517d20f000 *.LC11>)
+                        (symbol_ref/f:SI ("*.LC11") [flags 0x2]  <var_decl 0x7fe889a0f000 *.LC11>)
                     ] UNSPEC_GOTOFF)))) "mm/memory.c":481:5 205 {*leasi}
-     (expr_list:REG_EQUAL (symbol_ref/f:SI ("*.LC11") [flags 0x2]  <var_decl 0x7b517d20f000 *.LC11>)
+     (expr_list:REG_EQUAL (symbol_ref/f:SI ("*.LC11") [flags 0x2]  <var_decl 0x7fe889a0f000 *.LC11>)
         (nil)))
 (insn 84 83 85 14 (set (mem/f:SI (pre_dec:SI (reg/f:SI 7 sp)) [15  S4 A32])
         (reg/f:SI 103)) "mm/memory.c":481:5 54 {*pushsi2}
@@ -9022,7 +9022,7 @@ Dataflow summary:
         (reg:SI 82)) "mm/memory.c":481:5 75 {*movsi_internal}
      (nil))
 (call_insn 86 85 87 14 (set (reg:SI 0 ax)
-        (call (mem:QI (symbol_ref:SI ("printk") [flags 0x41]  <function_decl 0x7b517d4d2700 printk>) [0 printk S1 A8])
+        (call (mem:QI (symbol_ref:SI ("printk") [flags 0x41]  <function_decl 0x7fe889cd2700 printk>) [0 printk S1 A8])
             (const_int 16 [0x10]))) "mm/memory.c":481:5 823 {*call_value}
      (expr_list:REG_DEAD (reg:SI 3 bx)
         (expr_list:REG_UNUSED (reg:SI 0 ax)
@@ -9404,7 +9404,7 @@ Dataflow summary:
      (expr_list:REG_DEAD (reg/f:SI 92 [ page.39_10 ])
         (expr_list:REG_ARGS_SIZE (const_int 16 [0x10])
             (nil))))
-(call_insn 34 33 35 4 (call (mem:QI (symbol_ref:SI ("un_wp_page") [flags 0x3]  <function_decl 0x7b517d54c400 un_wp_page>) [0 un_wp_page S1 A8])
+(call_insn 34 33 35 4 (call (mem:QI (symbol_ref:SI ("un_wp_page") [flags 0x3]  <function_decl 0x7fe889d4c400 un_wp_page>) [0 un_wp_page S1 A8])
         (const_int 16 [0x10])) "mm/memory.c":495:9 812 {*call}
      (nil)
     (nil))

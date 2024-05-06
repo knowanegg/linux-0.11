@@ -230,7 +230,7 @@ Dataflow summary:
 (insn 8 7 9 2 (set (reg:SI 3 bx)
         (reg:SI 0 ax [82])) "fs/stat.c":21:5 75 {*movsi_internal}
      (nil))
-(call_insn 9 8 10 2 (call (mem:QI (symbol_ref:SI ("verify_area") [flags 0x41]  <function_decl 0x78974d738500 verify_area>) [0 verify_area S1 A8])
+(call_insn 9 8 10 2 (call (mem:QI (symbol_ref:SI ("verify_area") [flags 0x41]  <function_decl 0x76d1bc338500 verify_area>) [0 verify_area S1 A8])
         (const_int 16 [0x10])) "fs/stat.c":21:5 812 {*call}
      (nil)
     (expr_list (use (reg:SI 3 bx))
@@ -443,7 +443,7 @@ Dataflow summary:
         (reg:SI 0 ax [orig:103 _21 ] [103])) "fs/stat.c":34:9 54 {*pushsi2}
      (expr_list:REG_ARGS_SIZE (const_int 16 [0x10])
         (nil)))
-(call_insn 63 62 64 3 (call (mem:QI (symbol_ref:SI ("put_fs_byte") [flags 0x3]  <function_decl 0x78974d738a00 put_fs_byte>) [0 put_fs_byte S1 A8])
+(call_insn 63 62 64 3 (call (mem:QI (symbol_ref:SI ("put_fs_byte") [flags 0x3]  <function_decl 0x76d1bc338a00 put_fs_byte>) [0 put_fs_byte S1 A8])
         (const_int 16 [0x10])) "fs/stat.c":34:9 812 {*call}
      (nil)
     (nil))
@@ -590,7 +590,7 @@ Dataflow summary:
      (expr_list:REG_ARGS_SIZE (const_int 16 [0x10])
         (nil)))
 (call_insn 8 6 9 2 (set (reg:SI 0 ax)
-        (call (mem:QI (symbol_ref:SI ("namei") [flags 0x41]  <function_decl 0x78974d715500 namei>) [0 namei S1 A8])
+        (call (mem:QI (symbol_ref:SI ("namei") [flags 0x41]  <function_decl 0x76d1bc315500 namei>) [0 namei S1 A8])
             (const_int 16 [0x10]))) "fs/stat.c":41:19 823 {*call_value}
      (nil)
     (expr_list (use (reg:SI 3 bx))
@@ -648,7 +648,7 @@ Dataflow summary:
                 (const_int 24 [0x18])) [8 inode+0 S4 A32])) "fs/stat.c":43:5 54 {*pushsi2}
      (expr_list:REG_ARGS_SIZE (const_int 16 [0x10])
         (nil)))
-(call_insn 23 22 24 4 (call (mem:QI (symbol_ref:SI ("cp_stat") [flags 0x3]  <function_decl 0x78974d73a700 cp_stat>) [0 cp_stat S1 A8])
+(call_insn 23 22 24 4 (call (mem:QI (symbol_ref:SI ("cp_stat") [flags 0x3]  <function_decl 0x76d1bc33a700 cp_stat>) [0 cp_stat S1 A8])
         (const_int 16 [0x10])) "fs/stat.c":43:5 812 {*call}
      (nil)
     (nil))
@@ -673,7 +673,7 @@ Dataflow summary:
                 (const_int 24 [0x18])) [8 inode+0 S4 A32])) "fs/stat.c":44:5 54 {*pushsi2}
      (expr_list:REG_ARGS_SIZE (const_int 16 [0x10])
         (nil)))
-(call_insn 28 26 29 4 (call (mem:QI (symbol_ref:SI ("iput") [flags 0x41]  <function_decl 0x78974d6d2d00 iput>) [0 iput S1 A8])
+(call_insn 28 26 29 4 (call (mem:QI (symbol_ref:SI ("iput") [flags 0x41]  <function_decl 0x76d1bc2d2d00 iput>) [0 iput S1 A8])
         (const_int 16 [0x10])) "fs/stat.c":44:5 812 {*call}
      (nil)
     (expr_list (use (reg:SI 3 bx))
@@ -792,7 +792,7 @@ Dataflow summary:
 (insn 10 9 11 3 (set (reg/f:SI 0 ax [86])
         (mem/u/c:SI (plus:SI (reg:SI 0 ax [82])
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("current") [flags 0x40]  <var_decl 0x78974d72e120 current>)
+                            (symbol_ref:SI ("current") [flags 0x40]  <var_decl 0x76d1bc32e120 current>)
                         ] UNSPEC_GOT))) [11  S4 A8])) "fs/stat.c":53:39 75 {*movsi_internal}
      (nil))
 (insn 11 10 12 3 (set (reg/f:SI 0 ax [orig:83 current.3_1 ] [83])
@@ -887,7 +887,7 @@ Dataflow summary:
                 (const_int 20 [0x14])) [8 inode+0 S4 A32])) "fs/stat.c":55:5 54 {*pushsi2}
      (expr_list:REG_ARGS_SIZE (const_int 16 [0x10])
         (nil)))
-(call_insn 34 33 35 6 (call (mem:QI (symbol_ref:SI ("cp_stat") [flags 0x3]  <function_decl 0x78974d73a700 cp_stat>) [0 cp_stat S1 A8])
+(call_insn 34 33 35 6 (call (mem:QI (symbol_ref:SI ("cp_stat") [flags 0x3]  <function_decl 0x76d1bc33a700 cp_stat>) [0 cp_stat S1 A8])
         (const_int 16 [0x10])) "fs/stat.c":55:5 812 {*call}
      (nil)
     (nil))

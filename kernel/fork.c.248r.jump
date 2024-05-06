@@ -7,38 +7,38 @@
 (note 3 0 2 2 [bb 2] NOTE_INSN_BASIC_BLOCK)
 (note 2 3 5 2 NOTE_INSN_FUNCTION_BEG)
 (insn 5 2 6 2 (set (reg/f:SI 88)
-        (mem/f/c:SI (reg/f:SI 16 argp) [16 addr+0 S4 A32])) "include/linux/sched.h":181:28 75 {*movsi_internal}
+        (mem/f/c:SI (reg/f:SI 16 argp) [16 addr+0 S4 A32])) "include/linux/sched.h":219:28 75 {*movsi_internal}
      (nil))
 (insn 6 5 7 2 (parallel [
             (set (reg/f:SI 83 [ _1 ])
                 (plus:SI (reg/f:SI 88)
                     (const_int 2 [0x2])))
             (clobber (reg:CC 17 flags))
-        ]) "include/linux/sched.h":181:28 209 {*addsi_1}
+        ]) "include/linux/sched.h":219:28 209 {*addsi_1}
      (expr_list:REG_EQUAL (plus:SI (mem/f/c:SI (reg/f:SI 16 argp) [16 addr+0 S4 A32])
             (const_int 2 [0x2]))
         (nil)))
 (insn 7 6 8 2 (set (reg/f:SI 89)
-        (mem/f/c:SI (reg/f:SI 16 argp) [16 addr+0 S4 A32])) "include/linux/sched.h":181:48 75 {*movsi_internal}
+        (mem/f/c:SI (reg/f:SI 16 argp) [16 addr+0 S4 A32])) "include/linux/sched.h":219:48 75 {*movsi_internal}
      (nil))
 (insn 8 7 9 2 (parallel [
             (set (reg/f:SI 84 [ _2 ])
                 (plus:SI (reg/f:SI 89)
                     (const_int 4 [0x4])))
             (clobber (reg:CC 17 flags))
-        ]) "include/linux/sched.h":181:48 209 {*addsi_1}
+        ]) "include/linux/sched.h":219:48 209 {*addsi_1}
      (expr_list:REG_EQUAL (plus:SI (mem/f/c:SI (reg/f:SI 16 argp) [16 addr+0 S4 A32])
             (const_int 4 [0x4]))
         (nil)))
 (insn 9 8 10 2 (set (reg/f:SI 90)
-        (mem/f/c:SI (reg/f:SI 16 argp) [16 addr+0 S4 A32])) "include/linux/sched.h":181:68 75 {*movsi_internal}
+        (mem/f/c:SI (reg/f:SI 16 argp) [16 addr+0 S4 A32])) "include/linux/sched.h":219:68 75 {*movsi_internal}
      (nil))
 (insn 10 9 12 2 (parallel [
             (set (reg/f:SI 85 [ _3 ])
                 (plus:SI (reg/f:SI 90)
                     (const_int 7 [0x7])))
             (clobber (reg:CC 17 flags))
-        ]) "include/linux/sched.h":181:68 209 {*addsi_1}
+        ]) "include/linux/sched.h":219:68 209 {*addsi_1}
      (expr_list:REG_EQUAL (plus:SI (mem/f/c:SI (reg/f:SI 16 argp) [16 addr+0 S4 A32])
             (const_int 7 [0x7]))
         (nil)))
@@ -53,29 +53,29 @@
                         (mem:QI (reg/f:SI 85 [ _3 ]) [0 *_3+0 S1 A8])
                     ]
                      [
-                        (asm_input:QI ("m") include/linux/sched.h:177)
-                        (asm_input:QI ("m") include/linux/sched.h:177)
-                        (asm_input:QI ("m") include/linux/sched.h:177)
+                        (asm_input:QI ("m") include/linux/sched.h:215)
+                        (asm_input:QI ("m") include/linux/sched.h:215)
+                        (asm_input:QI ("m") include/linux/sched.h:215)
                     ]
-                     [] include/linux/sched.h:177))
+                     [] include/linux/sched.h:215))
             (clobber (reg:CC 17 flags))
-        ]) "include/linux/sched.h":177:5 -1
+        ]) "include/linux/sched.h":215:5 -1
      (nil))
 (insn 11 12 13 2 (set (mem/c:SI (plus:SI (reg/f:SI 19 frame)
                 (const_int -4 [0xfffffffffffffffc])) [1 __base+0 S4 A32])
-        (reg:SI 91 [ __base ])) "include/linux/sched.h":177:5 75 {*movsi_internal}
+        (reg:SI 91 [ __base ])) "include/linux/sched.h":215:5 75 {*movsi_internal}
      (nil))
 (insn 13 11 16 2 (set (reg:SI 86 [ _7 ])
         (mem/c:SI (plus:SI (reg/f:SI 19 frame)
-                (const_int -4 [0xfffffffffffffffc])) [1 __base+0 S4 A32])) "include/linux/sched.h":182:12 75 {*movsi_internal}
+                (const_int -4 [0xfffffffffffffffc])) [1 __base+0 S4 A32])) "include/linux/sched.h":220:12 75 {*movsi_internal}
      (nil))
 (insn 16 13 20 2 (set (reg:SI 87 [ <retval> ])
-        (reg:SI 86 [ _7 ])) "include/linux/sched.h":182:12 75 {*movsi_internal}
+        (reg:SI 86 [ _7 ])) "include/linux/sched.h":220:12 75 {*movsi_internal}
      (nil))
 (insn 20 16 21 2 (set (reg/i:SI 0 ax)
-        (reg:SI 87 [ <retval> ])) "include/linux/sched.h":183:1 75 {*movsi_internal}
+        (reg:SI 87 [ <retval> ])) "include/linux/sched.h":221:1 75 {*movsi_internal}
      (nil))
-(insn 21 20 0 2 (use (reg/i:SI 0 ax)) "include/linux/sched.h":183:1 -1
+(insn 21 20 0 2 (use (reg/i:SI 0 ax)) "include/linux/sched.h":221:1 -1
      (nil))
 
 
@@ -87,38 +87,38 @@ try_optimize_cfg iteration 1
 (note 3 0 2 2 [bb 2] NOTE_INSN_BASIC_BLOCK)
 (note 2 3 5 2 NOTE_INSN_FUNCTION_BEG)
 (insn 5 2 6 2 (set (reg/f:SI 88)
-        (mem/f/c:SI (reg/f:SI 16 argp) [16 addr+0 S4 A32])) "include/linux/sched.h":181:28 75 {*movsi_internal}
+        (mem/f/c:SI (reg/f:SI 16 argp) [16 addr+0 S4 A32])) "include/linux/sched.h":219:28 75 {*movsi_internal}
      (nil))
 (insn 6 5 7 2 (parallel [
             (set (reg/f:SI 83 [ _1 ])
                 (plus:SI (reg/f:SI 88)
                     (const_int 2 [0x2])))
             (clobber (reg:CC 17 flags))
-        ]) "include/linux/sched.h":181:28 209 {*addsi_1}
+        ]) "include/linux/sched.h":219:28 209 {*addsi_1}
      (expr_list:REG_EQUAL (plus:SI (mem/f/c:SI (reg/f:SI 16 argp) [16 addr+0 S4 A32])
             (const_int 2 [0x2]))
         (nil)))
 (insn 7 6 8 2 (set (reg/f:SI 89)
-        (mem/f/c:SI (reg/f:SI 16 argp) [16 addr+0 S4 A32])) "include/linux/sched.h":181:48 75 {*movsi_internal}
+        (mem/f/c:SI (reg/f:SI 16 argp) [16 addr+0 S4 A32])) "include/linux/sched.h":219:48 75 {*movsi_internal}
      (nil))
 (insn 8 7 9 2 (parallel [
             (set (reg/f:SI 84 [ _2 ])
                 (plus:SI (reg/f:SI 89)
                     (const_int 4 [0x4])))
             (clobber (reg:CC 17 flags))
-        ]) "include/linux/sched.h":181:48 209 {*addsi_1}
+        ]) "include/linux/sched.h":219:48 209 {*addsi_1}
      (expr_list:REG_EQUAL (plus:SI (mem/f/c:SI (reg/f:SI 16 argp) [16 addr+0 S4 A32])
             (const_int 4 [0x4]))
         (nil)))
 (insn 9 8 10 2 (set (reg/f:SI 90)
-        (mem/f/c:SI (reg/f:SI 16 argp) [16 addr+0 S4 A32])) "include/linux/sched.h":181:68 75 {*movsi_internal}
+        (mem/f/c:SI (reg/f:SI 16 argp) [16 addr+0 S4 A32])) "include/linux/sched.h":219:68 75 {*movsi_internal}
      (nil))
 (insn 10 9 12 2 (parallel [
             (set (reg/f:SI 85 [ _3 ])
                 (plus:SI (reg/f:SI 90)
                     (const_int 7 [0x7])))
             (clobber (reg:CC 17 flags))
-        ]) "include/linux/sched.h":181:68 209 {*addsi_1}
+        ]) "include/linux/sched.h":219:68 209 {*addsi_1}
      (expr_list:REG_EQUAL (plus:SI (mem/f/c:SI (reg/f:SI 16 argp) [16 addr+0 S4 A32])
             (const_int 7 [0x7]))
         (nil)))
@@ -133,29 +133,29 @@ try_optimize_cfg iteration 1
                         (mem:QI (reg/f:SI 85 [ _3 ]) [0 *_3+0 S1 A8])
                     ]
                      [
-                        (asm_input:QI ("m") include/linux/sched.h:177)
-                        (asm_input:QI ("m") include/linux/sched.h:177)
-                        (asm_input:QI ("m") include/linux/sched.h:177)
+                        (asm_input:QI ("m") include/linux/sched.h:215)
+                        (asm_input:QI ("m") include/linux/sched.h:215)
+                        (asm_input:QI ("m") include/linux/sched.h:215)
                     ]
-                     [] include/linux/sched.h:177))
+                     [] include/linux/sched.h:215))
             (clobber (reg:CC 17 flags))
-        ]) "include/linux/sched.h":177:5 -1
+        ]) "include/linux/sched.h":215:5 -1
      (nil))
 (insn 11 12 13 2 (set (mem/c:SI (plus:SI (reg/f:SI 19 frame)
                 (const_int -4 [0xfffffffffffffffc])) [1 __base+0 S4 A32])
-        (reg:SI 91 [ __base ])) "include/linux/sched.h":177:5 75 {*movsi_internal}
+        (reg:SI 91 [ __base ])) "include/linux/sched.h":215:5 75 {*movsi_internal}
      (nil))
 (insn 13 11 16 2 (set (reg:SI 86 [ _7 ])
         (mem/c:SI (plus:SI (reg/f:SI 19 frame)
-                (const_int -4 [0xfffffffffffffffc])) [1 __base+0 S4 A32])) "include/linux/sched.h":182:12 75 {*movsi_internal}
+                (const_int -4 [0xfffffffffffffffc])) [1 __base+0 S4 A32])) "include/linux/sched.h":220:12 75 {*movsi_internal}
      (nil))
 (insn 16 13 20 2 (set (reg:SI 87 [ <retval> ])
-        (reg:SI 86 [ _7 ])) "include/linux/sched.h":182:12 75 {*movsi_internal}
+        (reg:SI 86 [ _7 ])) "include/linux/sched.h":220:12 75 {*movsi_internal}
      (nil))
 (insn 20 16 21 2 (set (reg/i:SI 0 ax)
-        (reg:SI 87 [ <retval> ])) "include/linux/sched.h":183:1 75 {*movsi_internal}
+        (reg:SI 87 [ <retval> ])) "include/linux/sched.h":221:1 75 {*movsi_internal}
      (nil))
-(insn 21 20 0 2 (use (reg/i:SI 0 ax)) "include/linux/sched.h":183:1 -1
+(insn 21 20 0 2 (use (reg/i:SI 0 ax)) "include/linux/sched.h":221:1 -1
      (nil))
 
 ;; Function verify_area (verify_area, funcdef_no=1, decl_uid=1315, cgraph_uid=2, symbol_order=2)
@@ -213,7 +213,7 @@ try_optimize_cfg iteration 1
 (insn 13 12 14 2 (set (reg/f:SI 91)
         (mem/u/c:SI (plus:SI (reg:SI 82)
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("current") [flags 0x40]  <var_decl 0x7c5bf252e120 current>)
+                            (symbol_ref:SI ("current") [flags 0x40]  <var_decl 0x7ed81852e120 current>)
                         ] UNSPEC_GOT))) [18  S4 A8])) "kernel/fork.c":24:14 75 {*movsi_internal}
      (nil))
 (insn 14 13 15 2 (set (reg/f:SI 86 [ current.1_4 ])
@@ -231,7 +231,7 @@ try_optimize_cfg iteration 1
      (expr_list:REG_ARGS_SIZE (const_int 4 [0x4])
         (nil)))
 (call_insn 17 16 18 2 (set (reg:SI 0 ax)
-        (call (mem:QI (symbol_ref:SI ("_get_base") [flags 0x3]  <function_decl 0x7c5bf2515900 _get_base>) [0 _get_base S1 A8])
+        (call (mem:QI (symbol_ref:SI ("_get_base") [flags 0x3]  <function_decl 0x7ed818515900 _get_base>) [0 _get_base S1 A8])
             (const_int 4 [0x4]))) "kernel/fork.c":24:14 823 {*call_value}
      (nil)
     (nil))
@@ -283,7 +283,7 @@ try_optimize_cfg iteration 1
 (insn 27 26 28 3 (set (reg:SI 3 bx)
         (reg:SI 82)) "kernel/fork.c":27:9 75 {*movsi_internal}
      (nil))
-(call_insn 28 27 29 3 (call (mem:QI (symbol_ref:SI ("write_verify") [flags 0x41]  <function_decl 0x7c5bf2538f00 write_verify>) [0 write_verify S1 A8])
+(call_insn 28 27 29 3 (call (mem:QI (symbol_ref:SI ("write_verify") [flags 0x41]  <function_decl 0x7ed818538f00 write_verify>) [0 write_verify S1 A8])
         (const_int 16 [0x10])) "kernel/fork.c":27:9 812 {*call}
      (nil)
     (expr_list (use (reg:SI 3 bx))
@@ -379,7 +379,7 @@ try_optimize_cfg iteration 1
 (insn 13 12 14 2 (set (reg/f:SI 91)
         (mem/u/c:SI (plus:SI (reg:SI 82)
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("current") [flags 0x40]  <var_decl 0x7c5bf252e120 current>)
+                            (symbol_ref:SI ("current") [flags 0x40]  <var_decl 0x7ed81852e120 current>)
                         ] UNSPEC_GOT))) [18  S4 A8])) "kernel/fork.c":24:14 75 {*movsi_internal}
      (nil))
 (insn 14 13 15 2 (set (reg/f:SI 86 [ current.1_4 ])
@@ -397,7 +397,7 @@ try_optimize_cfg iteration 1
      (expr_list:REG_ARGS_SIZE (const_int 4 [0x4])
         (nil)))
 (call_insn 17 16 18 2 (set (reg:SI 0 ax)
-        (call (mem:QI (symbol_ref:SI ("_get_base") [flags 0x3]  <function_decl 0x7c5bf2515900 _get_base>) [0 _get_base S1 A8])
+        (call (mem:QI (symbol_ref:SI ("_get_base") [flags 0x3]  <function_decl 0x7ed818515900 _get_base>) [0 _get_base S1 A8])
             (const_int 4 [0x4]))) "kernel/fork.c":24:14 823 {*call_value}
      (nil)
     (nil))
@@ -449,7 +449,7 @@ try_optimize_cfg iteration 1
 (insn 27 26 28 3 (set (reg:SI 3 bx)
         (reg:SI 82)) "kernel/fork.c":27:9 75 {*movsi_internal}
      (nil))
-(call_insn 28 27 29 3 (call (mem:QI (symbol_ref:SI ("write_verify") [flags 0x41]  <function_decl 0x7c5bf2538f00 write_verify>) [0 write_verify S1 A8])
+(call_insn 28 27 29 3 (call (mem:QI (symbol_ref:SI ("write_verify") [flags 0x41]  <function_decl 0x7ed818538f00 write_verify>) [0 write_verify S1 A8])
         (const_int 16 [0x10])) "kernel/fork.c":27:9 812 {*call}
      (nil)
     (expr_list (use (reg:SI 3 bx))
@@ -500,7 +500,7 @@ try_optimize_cfg iteration 1
 (insn 6 5 7 3 (set (reg:SI 83 [ last_pid.2_1 ])
         (mem/c:SI (plus:SI (reg:SI 82)
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("last_pid") [flags 0x2]  <var_decl 0x7c5bf252e750 last_pid>)
+                            (symbol_ref:SI ("last_pid") [flags 0x2]  <var_decl 0x7ed81852e750 last_pid>)
                         ] UNSPEC_GOTOFF))) [1 last_pid+0 S4 A32])) "kernel/fork.c":37:10 75 {*movsi_internal}
      (nil))
 (insn 7 6 8 3 (parallel [
@@ -512,14 +512,14 @@ try_optimize_cfg iteration 1
      (nil))
 (insn 8 7 9 3 (set (mem/c:SI (plus:SI (reg:SI 82)
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("last_pid") [flags 0x2]  <var_decl 0x7c5bf252e750 last_pid>)
+                            (symbol_ref:SI ("last_pid") [flags 0x2]  <var_decl 0x7ed81852e750 last_pid>)
                         ] UNSPEC_GOTOFF))) [1 last_pid+0 S4 A32])
         (reg:SI 84 [ _2 ])) "kernel/fork.c":37:8 75 {*movsi_internal}
      (nil))
 (insn 9 8 12 3 (set (reg:SI 85 [ last_pid.3_3 ])
         (mem/c:SI (plus:SI (reg:SI 82)
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("last_pid") [flags 0x2]  <var_decl 0x7c5bf252e750 last_pid>)
+                            (symbol_ref:SI ("last_pid") [flags 0x2]  <var_decl 0x7ed81852e750 last_pid>)
                         ] UNSPEC_GOTOFF))) [1 last_pid+0 S4 A32])) "kernel/fork.c":37:10 75 {*movsi_internal}
      (nil))
 (insn 12 9 13 3 (set (reg:CCGOC 17 flags)
@@ -537,7 +537,7 @@ try_optimize_cfg iteration 1
 (note 14 13 15 4 [bb 4] NOTE_INSN_BASIC_BLOCK)
 (insn 15 14 16 4 (set (mem/c:SI (plus:SI (reg:SI 82)
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("last_pid") [flags 0x2]  <var_decl 0x7c5bf252e750 last_pid>)
+                            (symbol_ref:SI ("last_pid") [flags 0x2]  <var_decl 0x7ed81852e750 last_pid>)
                         ] UNSPEC_GOTOFF))) [1 last_pid+0 S4 A32])
         (const_int 1 [0x1])) "kernel/fork.c":38:18 75 {*movsi_internal}
      (nil))
@@ -554,7 +554,7 @@ try_optimize_cfg iteration 1
 (insn 22 21 23 6 (set (reg/f:SI 93)
         (mem/u/c:SI (plus:SI (reg:SI 82)
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("task") [flags 0x40]  <var_decl 0x7c5bf252e1b0 task>)
+                            (symbol_ref:SI ("task") [flags 0x40]  <var_decl 0x7ed81852e1b0 task>)
                         ] UNSPEC_GOT))) [18  S4 A8])) "kernel/fork.c":42:17 75 {*movsi_internal}
      (nil))
 (insn 23 22 24 6 (set (reg:SI 94)
@@ -582,7 +582,7 @@ try_optimize_cfg iteration 1
 (insn 28 27 29 7 (set (reg/f:SI 95)
         (mem/u/c:SI (plus:SI (reg:SI 82)
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("task") [flags 0x40]  <var_decl 0x7c5bf252e1b0 task>)
+                            (symbol_ref:SI ("task") [flags 0x40]  <var_decl 0x7ed81852e1b0 task>)
                         ] UNSPEC_GOT))) [18  S4 A8])) "kernel/fork.c":42:28 75 {*movsi_internal}
      (nil))
 (insn 29 28 30 7 (set (reg:SI 96)
@@ -601,7 +601,7 @@ try_optimize_cfg iteration 1
 (insn 32 31 33 7 (set (reg:SI 89 [ last_pid.4_7 ])
         (mem/c:SI (plus:SI (reg:SI 82)
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("last_pid") [flags 0x2]  <var_decl 0x7c5bf252e750 last_pid>)
+                            (symbol_ref:SI ("last_pid") [flags 0x2]  <var_decl 0x7ed81852e750 last_pid>)
                         ] UNSPEC_GOTOFF))) [1 last_pid+0 S4 A32])) "kernel/fork.c":42:37 75 {*movsi_internal}
      (nil))
 (insn 33 32 34 7 (set (reg:CCZ 17 flags)
@@ -656,7 +656,7 @@ try_optimize_cfg iteration 1
 (insn 53 52 54 12 (set (reg/f:SI 97)
         (mem/u/c:SI (plus:SI (reg:SI 82)
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("task") [flags 0x40]  <var_decl 0x7c5bf252e1b0 task>)
+                            (symbol_ref:SI ("task") [flags 0x40]  <var_decl 0x7ed81852e1b0 task>)
                         ] UNSPEC_GOT))) [18  S4 A8])) "kernel/fork.c":47:18 75 {*movsi_internal}
      (nil))
 (insn 54 53 55 12 (set (reg:SI 98)
@@ -742,7 +742,7 @@ try_optimize_cfg iteration 1
 (insn 6 5 7 3 (set (reg:SI 83 [ last_pid.2_1 ])
         (mem/c:SI (plus:SI (reg:SI 82)
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("last_pid") [flags 0x2]  <var_decl 0x7c5bf252e750 last_pid>)
+                            (symbol_ref:SI ("last_pid") [flags 0x2]  <var_decl 0x7ed81852e750 last_pid>)
                         ] UNSPEC_GOTOFF))) [1 last_pid+0 S4 A32])) "kernel/fork.c":37:10 75 {*movsi_internal}
      (nil))
 (insn 7 6 8 3 (parallel [
@@ -754,14 +754,14 @@ try_optimize_cfg iteration 1
      (nil))
 (insn 8 7 9 3 (set (mem/c:SI (plus:SI (reg:SI 82)
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("last_pid") [flags 0x2]  <var_decl 0x7c5bf252e750 last_pid>)
+                            (symbol_ref:SI ("last_pid") [flags 0x2]  <var_decl 0x7ed81852e750 last_pid>)
                         ] UNSPEC_GOTOFF))) [1 last_pid+0 S4 A32])
         (reg:SI 84 [ _2 ])) "kernel/fork.c":37:8 75 {*movsi_internal}
      (nil))
 (insn 9 8 12 3 (set (reg:SI 85 [ last_pid.3_3 ])
         (mem/c:SI (plus:SI (reg:SI 82)
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("last_pid") [flags 0x2]  <var_decl 0x7c5bf252e750 last_pid>)
+                            (symbol_ref:SI ("last_pid") [flags 0x2]  <var_decl 0x7ed81852e750 last_pid>)
                         ] UNSPEC_GOTOFF))) [1 last_pid+0 S4 A32])) "kernel/fork.c":37:10 75 {*movsi_internal}
      (nil))
 (insn 12 9 13 3 (set (reg:CCGOC 17 flags)
@@ -778,7 +778,7 @@ try_optimize_cfg iteration 1
 (note 14 13 15 4 [bb 4] NOTE_INSN_BASIC_BLOCK)
 (insn 15 14 16 4 (set (mem/c:SI (plus:SI (reg:SI 82)
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("last_pid") [flags 0x2]  <var_decl 0x7c5bf252e750 last_pid>)
+                            (symbol_ref:SI ("last_pid") [flags 0x2]  <var_decl 0x7ed81852e750 last_pid>)
                         ] UNSPEC_GOTOFF))) [1 last_pid+0 S4 A32])
         (const_int 1 [0x1])) "kernel/fork.c":38:18 75 {*movsi_internal}
      (nil))
@@ -794,7 +794,7 @@ try_optimize_cfg iteration 1
 (insn 22 21 23 6 (set (reg/f:SI 93)
         (mem/u/c:SI (plus:SI (reg:SI 82)
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("task") [flags 0x40]  <var_decl 0x7c5bf252e1b0 task>)
+                            (symbol_ref:SI ("task") [flags 0x40]  <var_decl 0x7ed81852e1b0 task>)
                         ] UNSPEC_GOT))) [18  S4 A8])) "kernel/fork.c":42:17 75 {*movsi_internal}
      (nil))
 (insn 23 22 24 6 (set (reg:SI 94)
@@ -821,7 +821,7 @@ try_optimize_cfg iteration 1
 (insn 28 27 29 7 (set (reg/f:SI 95)
         (mem/u/c:SI (plus:SI (reg:SI 82)
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("task") [flags 0x40]  <var_decl 0x7c5bf252e1b0 task>)
+                            (symbol_ref:SI ("task") [flags 0x40]  <var_decl 0x7ed81852e1b0 task>)
                         ] UNSPEC_GOT))) [18  S4 A8])) "kernel/fork.c":42:28 75 {*movsi_internal}
      (nil))
 (insn 29 28 30 7 (set (reg:SI 96)
@@ -840,7 +840,7 @@ try_optimize_cfg iteration 1
 (insn 32 31 33 7 (set (reg:SI 89 [ last_pid.4_7 ])
         (mem/c:SI (plus:SI (reg:SI 82)
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("last_pid") [flags 0x2]  <var_decl 0x7c5bf252e750 last_pid>)
+                            (symbol_ref:SI ("last_pid") [flags 0x2]  <var_decl 0x7ed81852e750 last_pid>)
                         ] UNSPEC_GOTOFF))) [1 last_pid+0 S4 A32])) "kernel/fork.c":42:37 75 {*movsi_internal}
      (nil))
 (insn 33 32 34 7 (set (reg:CCZ 17 flags)
@@ -892,7 +892,7 @@ try_optimize_cfg iteration 1
 (insn 53 52 54 12 (set (reg/f:SI 97)
         (mem/u/c:SI (plus:SI (reg:SI 82)
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("task") [flags 0x40]  <var_decl 0x7c5bf252e1b0 task>)
+                            (symbol_ref:SI ("task") [flags 0x40]  <var_decl 0x7ed81852e1b0 task>)
                         ] UNSPEC_GOT))) [18  S4 A8])) "kernel/fork.c":47:18 75 {*movsi_internal}
      (nil))
 (insn 54 53 55 12 (set (reg:SI 98)
@@ -1027,7 +1027,7 @@ try_optimize_cfg iteration 1
 (insn 15 14 16 2 (set (reg/f:SI 110)
         (mem/u/c:SI (plus:SI (reg:SI 82)
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("current") [flags 0x40]  <var_decl 0x7c5bf252e120 current>)
+                            (symbol_ref:SI ("current") [flags 0x40]  <var_decl 0x7ed81852e120 current>)
                         ] UNSPEC_GOT))) [18  S4 A8])) "kernel/fork.c":60:21 75 {*movsi_internal}
      (nil))
 (insn 16 15 17 2 (set (reg/f:SI 83 [ current.5_1 ])
@@ -1045,7 +1045,7 @@ try_optimize_cfg iteration 1
      (expr_list:REG_ARGS_SIZE (const_int 4 [0x4])
         (nil)))
 (call_insn 19 18 20 2 (set (reg:SI 0 ax)
-        (call (mem:QI (symbol_ref:SI ("_get_base") [flags 0x3]  <function_decl 0x7c5bf2515900 _get_base>) [0 _get_base S1 A8])
+        (call (mem:QI (symbol_ref:SI ("_get_base") [flags 0x3]  <function_decl 0x7ed818515900 _get_base>) [0 _get_base S1 A8])
             (const_int 4 [0x4]))) "kernel/fork.c":60:21 823 {*call_value}
      (nil)
     (nil))
@@ -1067,7 +1067,7 @@ try_optimize_cfg iteration 1
 (insn 23 22 24 2 (set (reg/f:SI 112)
         (mem/u/c:SI (plus:SI (reg:SI 82)
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("current") [flags 0x40]  <var_decl 0x7c5bf252e120 current>)
+                            (symbol_ref:SI ("current") [flags 0x40]  <var_decl 0x7ed81852e120 current>)
                         ] UNSPEC_GOT))) [18  S4 A8])) "kernel/fork.c":61:21 75 {*movsi_internal}
      (nil))
 (insn 24 23 25 2 (set (reg/f:SI 85 [ current.6_3 ])
@@ -1085,7 +1085,7 @@ try_optimize_cfg iteration 1
      (expr_list:REG_ARGS_SIZE (const_int 4 [0x4])
         (nil)))
 (call_insn 27 26 28 2 (set (reg:SI 0 ax)
-        (call (mem:QI (symbol_ref:SI ("_get_base") [flags 0x3]  <function_decl 0x7c5bf2515900 _get_base>) [0 _get_base S1 A8])
+        (call (mem:QI (symbol_ref:SI ("_get_base") [flags 0x3]  <function_decl 0x7ed818515900 _get_base>) [0 _get_base S1 A8])
             (const_int 4 [0x4]))) "kernel/fork.c":61:21 823 {*call_value}
      (nil)
     (nil))
@@ -1133,9 +1133,9 @@ try_optimize_cfg iteration 1
 (insn 36 35 37 3 (set (reg/f:SI 115)
         (plus:SI (reg:SI 82)
             (const:SI (unspec:SI [
-                        (symbol_ref/f:SI ("*.LC0") [flags 0x2]  <var_decl 0x7c5bf257f2d0 *.LC0>)
+                        (symbol_ref/f:SI ("*.LC0") [flags 0x2]  <var_decl 0x7ed81857f2d0 *.LC0>)
                     ] UNSPEC_GOTOFF)))) "kernel/fork.c":63:9 205 {*leasi}
-     (expr_list:REG_EQUAL (symbol_ref/f:SI ("*.LC0") [flags 0x2]  <var_decl 0x7c5bf257f2d0 *.LC0>)
+     (expr_list:REG_EQUAL (symbol_ref/f:SI ("*.LC0") [flags 0x2]  <var_decl 0x7ed81857f2d0 *.LC0>)
         (nil)))
 (insn 37 36 38 3 (set (mem/f:SI (pre_dec:SI (reg/f:SI 7 sp)) [16  S4 A32])
         (reg/f:SI 115)) "kernel/fork.c":63:9 54 {*pushsi2}
@@ -1144,7 +1144,7 @@ try_optimize_cfg iteration 1
 (insn 38 37 39 3 (set (reg:SI 3 bx)
         (reg:SI 82)) "kernel/fork.c":63:9 75 {*movsi_internal}
      (nil))
-(call_insn 39 38 40 3 (call (mem:QI (symbol_ref:SI ("panic") [flags 0x41]  <function_decl 0x7c5bf2538700 panic>) [0 panic S1 A8])
+(call_insn 39 38 40 3 (call (mem:QI (symbol_ref:SI ("panic") [flags 0x41]  <function_decl 0x7ed818538700 panic>) [0 panic S1 A8])
         (const_int 16 [0x10])) "kernel/fork.c":63:9 812 {*call}
      (nil)
     (expr_list (use (reg:SI 3 bx))
@@ -1189,9 +1189,9 @@ try_optimize_cfg iteration 1
 (insn 48 47 49 5 (set (reg/f:SI 117)
         (plus:SI (reg:SI 82)
             (const:SI (unspec:SI [
-                        (symbol_ref/f:SI ("*.LC1") [flags 0x2]  <var_decl 0x7c5bf257f360 *.LC1>)
+                        (symbol_ref/f:SI ("*.LC1") [flags 0x2]  <var_decl 0x7ed81857f360 *.LC1>)
                     ] UNSPEC_GOTOFF)))) "kernel/fork.c":65:9 205 {*leasi}
-     (expr_list:REG_EQUAL (symbol_ref/f:SI ("*.LC1") [flags 0x2]  <var_decl 0x7c5bf257f360 *.LC1>)
+     (expr_list:REG_EQUAL (symbol_ref/f:SI ("*.LC1") [flags 0x2]  <var_decl 0x7ed81857f360 *.LC1>)
         (nil)))
 (insn 49 48 50 5 (set (mem/f:SI (pre_dec:SI (reg/f:SI 7 sp)) [16  S4 A32])
         (reg/f:SI 117)) "kernel/fork.c":65:9 54 {*pushsi2}
@@ -1200,7 +1200,7 @@ try_optimize_cfg iteration 1
 (insn 50 49 51 5 (set (reg:SI 3 bx)
         (reg:SI 82)) "kernel/fork.c":65:9 75 {*movsi_internal}
      (nil))
-(call_insn 51 50 52 5 (call (mem:QI (symbol_ref:SI ("panic") [flags 0x41]  <function_decl 0x7c5bf2538700 panic>) [0 panic S1 A8])
+(call_insn 51 50 52 5 (call (mem:QI (symbol_ref:SI ("panic") [flags 0x41]  <function_decl 0x7ed818538700 panic>) [0 panic S1 A8])
         (const_int 16 [0x10])) "kernel/fork.c":65:9 812 {*call}
      (nil)
     (expr_list (use (reg:SI 3 bx))
@@ -1460,7 +1460,7 @@ try_optimize_cfg iteration 1
         (reg:SI 82)) "kernel/fork.c":70:9 75 {*movsi_internal}
      (nil))
 (call_insn 91 90 92 6 (set (reg:SI 0 ax)
-        (call (mem:QI (symbol_ref:SI ("copy_page_tables") [flags 0x41]  <function_decl 0x7c5bf2538300 copy_page_tables>) [0 copy_page_tables S1 A8])
+        (call (mem:QI (symbol_ref:SI ("copy_page_tables") [flags 0x41]  <function_decl 0x7ed818538300 copy_page_tables>) [0 copy_page_tables S1 A8])
             (const_int 16 [0x10]))) "kernel/fork.c":70:9 823 {*call_value}
      (nil)
     (expr_list (use (reg:SI 3 bx))
@@ -1500,9 +1500,9 @@ try_optimize_cfg iteration 1
 (insn 98 97 99 7 (set (reg/f:SI 130)
         (plus:SI (reg:SI 82)
             (const:SI (unspec:SI [
-                        (symbol_ref/f:SI ("*.LC2") [flags 0x2]  <var_decl 0x7c5bf257f3f0 *.LC2>)
+                        (symbol_ref/f:SI ("*.LC2") [flags 0x2]  <var_decl 0x7ed81857f3f0 *.LC2>)
                     ] UNSPEC_GOTOFF)))) "kernel/fork.c":71:9 205 {*leasi}
-     (expr_list:REG_EQUAL (symbol_ref/f:SI ("*.LC2") [flags 0x2]  <var_decl 0x7c5bf257f3f0 *.LC2>)
+     (expr_list:REG_EQUAL (symbol_ref/f:SI ("*.LC2") [flags 0x2]  <var_decl 0x7ed81857f3f0 *.LC2>)
         (nil)))
 (insn 99 98 100 7 (set (mem/f:SI (pre_dec:SI (reg/f:SI 7 sp)) [16  S4 A32])
         (reg/f:SI 130)) "kernel/fork.c":71:9 54 {*pushsi2}
@@ -1512,7 +1512,7 @@ try_optimize_cfg iteration 1
         (reg:SI 82)) "kernel/fork.c":71:9 75 {*movsi_internal}
      (nil))
 (call_insn 101 100 102 7 (set (reg:SI 0 ax)
-        (call (mem:QI (symbol_ref:SI ("printk") [flags 0x41]  <function_decl 0x7c5bf2538e00 printk>) [0 printk S1 A8])
+        (call (mem:QI (symbol_ref:SI ("printk") [flags 0x41]  <function_decl 0x7ed818538e00 printk>) [0 printk S1 A8])
             (const_int 16 [0x10]))) "kernel/fork.c":71:9 823 {*call_value}
      (nil)
     (expr_list (use (reg:SI 3 bx))
@@ -1547,7 +1547,7 @@ try_optimize_cfg iteration 1
         (reg:SI 82)) "kernel/fork.c":72:9 75 {*movsi_internal}
      (nil))
 (call_insn 107 106 108 7 (set (reg:SI 0 ax)
-        (call (mem:QI (symbol_ref:SI ("free_page_tables") [flags 0x41]  <function_decl 0x7c5bf2538400 free_page_tables>) [0 free_page_tables S1 A8])
+        (call (mem:QI (symbol_ref:SI ("free_page_tables") [flags 0x41]  <function_decl 0x7ed818538400 free_page_tables>) [0 free_page_tables S1 A8])
             (const_int 16 [0x10]))) "kernel/fork.c":72:9 823 {*call_value}
      (nil)
     (expr_list (use (reg:SI 3 bx))
@@ -1648,7 +1648,7 @@ try_optimize_cfg iteration 1
 (insn 15 14 16 2 (set (reg/f:SI 110)
         (mem/u/c:SI (plus:SI (reg:SI 82)
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("current") [flags 0x40]  <var_decl 0x7c5bf252e120 current>)
+                            (symbol_ref:SI ("current") [flags 0x40]  <var_decl 0x7ed81852e120 current>)
                         ] UNSPEC_GOT))) [18  S4 A8])) "kernel/fork.c":60:21 75 {*movsi_internal}
      (nil))
 (insn 16 15 17 2 (set (reg/f:SI 83 [ current.5_1 ])
@@ -1666,7 +1666,7 @@ try_optimize_cfg iteration 1
      (expr_list:REG_ARGS_SIZE (const_int 4 [0x4])
         (nil)))
 (call_insn 19 18 20 2 (set (reg:SI 0 ax)
-        (call (mem:QI (symbol_ref:SI ("_get_base") [flags 0x3]  <function_decl 0x7c5bf2515900 _get_base>) [0 _get_base S1 A8])
+        (call (mem:QI (symbol_ref:SI ("_get_base") [flags 0x3]  <function_decl 0x7ed818515900 _get_base>) [0 _get_base S1 A8])
             (const_int 4 [0x4]))) "kernel/fork.c":60:21 823 {*call_value}
      (nil)
     (nil))
@@ -1688,7 +1688,7 @@ try_optimize_cfg iteration 1
 (insn 23 22 24 2 (set (reg/f:SI 112)
         (mem/u/c:SI (plus:SI (reg:SI 82)
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("current") [flags 0x40]  <var_decl 0x7c5bf252e120 current>)
+                            (symbol_ref:SI ("current") [flags 0x40]  <var_decl 0x7ed81852e120 current>)
                         ] UNSPEC_GOT))) [18  S4 A8])) "kernel/fork.c":61:21 75 {*movsi_internal}
      (nil))
 (insn 24 23 25 2 (set (reg/f:SI 85 [ current.6_3 ])
@@ -1706,7 +1706,7 @@ try_optimize_cfg iteration 1
      (expr_list:REG_ARGS_SIZE (const_int 4 [0x4])
         (nil)))
 (call_insn 27 26 28 2 (set (reg:SI 0 ax)
-        (call (mem:QI (symbol_ref:SI ("_get_base") [flags 0x3]  <function_decl 0x7c5bf2515900 _get_base>) [0 _get_base S1 A8])
+        (call (mem:QI (symbol_ref:SI ("_get_base") [flags 0x3]  <function_decl 0x7ed818515900 _get_base>) [0 _get_base S1 A8])
             (const_int 4 [0x4]))) "kernel/fork.c":61:21 823 {*call_value}
      (nil)
     (nil))
@@ -1753,9 +1753,9 @@ try_optimize_cfg iteration 1
 (insn 36 35 37 3 (set (reg/f:SI 115)
         (plus:SI (reg:SI 82)
             (const:SI (unspec:SI [
-                        (symbol_ref/f:SI ("*.LC0") [flags 0x2]  <var_decl 0x7c5bf257f2d0 *.LC0>)
+                        (symbol_ref/f:SI ("*.LC0") [flags 0x2]  <var_decl 0x7ed81857f2d0 *.LC0>)
                     ] UNSPEC_GOTOFF)))) "kernel/fork.c":63:9 205 {*leasi}
-     (expr_list:REG_EQUAL (symbol_ref/f:SI ("*.LC0") [flags 0x2]  <var_decl 0x7c5bf257f2d0 *.LC0>)
+     (expr_list:REG_EQUAL (symbol_ref/f:SI ("*.LC0") [flags 0x2]  <var_decl 0x7ed81857f2d0 *.LC0>)
         (nil)))
 (insn 37 36 38 3 (set (mem/f:SI (pre_dec:SI (reg/f:SI 7 sp)) [16  S4 A32])
         (reg/f:SI 115)) "kernel/fork.c":63:9 54 {*pushsi2}
@@ -1764,7 +1764,7 @@ try_optimize_cfg iteration 1
 (insn 38 37 39 3 (set (reg:SI 3 bx)
         (reg:SI 82)) "kernel/fork.c":63:9 75 {*movsi_internal}
      (nil))
-(call_insn 39 38 40 3 (call (mem:QI (symbol_ref:SI ("panic") [flags 0x41]  <function_decl 0x7c5bf2538700 panic>) [0 panic S1 A8])
+(call_insn 39 38 40 3 (call (mem:QI (symbol_ref:SI ("panic") [flags 0x41]  <function_decl 0x7ed818538700 panic>) [0 panic S1 A8])
         (const_int 16 [0x10])) "kernel/fork.c":63:9 812 {*call}
      (nil)
     (expr_list (use (reg:SI 3 bx))
@@ -1807,9 +1807,9 @@ try_optimize_cfg iteration 1
 (insn 48 47 49 5 (set (reg/f:SI 117)
         (plus:SI (reg:SI 82)
             (const:SI (unspec:SI [
-                        (symbol_ref/f:SI ("*.LC1") [flags 0x2]  <var_decl 0x7c5bf257f360 *.LC1>)
+                        (symbol_ref/f:SI ("*.LC1") [flags 0x2]  <var_decl 0x7ed81857f360 *.LC1>)
                     ] UNSPEC_GOTOFF)))) "kernel/fork.c":65:9 205 {*leasi}
-     (expr_list:REG_EQUAL (symbol_ref/f:SI ("*.LC1") [flags 0x2]  <var_decl 0x7c5bf257f360 *.LC1>)
+     (expr_list:REG_EQUAL (symbol_ref/f:SI ("*.LC1") [flags 0x2]  <var_decl 0x7ed81857f360 *.LC1>)
         (nil)))
 (insn 49 48 50 5 (set (mem/f:SI (pre_dec:SI (reg/f:SI 7 sp)) [16  S4 A32])
         (reg/f:SI 117)) "kernel/fork.c":65:9 54 {*pushsi2}
@@ -1818,7 +1818,7 @@ try_optimize_cfg iteration 1
 (insn 50 49 51 5 (set (reg:SI 3 bx)
         (reg:SI 82)) "kernel/fork.c":65:9 75 {*movsi_internal}
      (nil))
-(call_insn 51 50 52 5 (call (mem:QI (symbol_ref:SI ("panic") [flags 0x41]  <function_decl 0x7c5bf2538700 panic>) [0 panic S1 A8])
+(call_insn 51 50 52 5 (call (mem:QI (symbol_ref:SI ("panic") [flags 0x41]  <function_decl 0x7ed818538700 panic>) [0 panic S1 A8])
         (const_int 16 [0x10])) "kernel/fork.c":65:9 812 {*call}
      (nil)
     (expr_list (use (reg:SI 3 bx))
@@ -2077,7 +2077,7 @@ try_optimize_cfg iteration 1
         (reg:SI 82)) "kernel/fork.c":70:9 75 {*movsi_internal}
      (nil))
 (call_insn 91 90 92 6 (set (reg:SI 0 ax)
-        (call (mem:QI (symbol_ref:SI ("copy_page_tables") [flags 0x41]  <function_decl 0x7c5bf2538300 copy_page_tables>) [0 copy_page_tables S1 A8])
+        (call (mem:QI (symbol_ref:SI ("copy_page_tables") [flags 0x41]  <function_decl 0x7ed818538300 copy_page_tables>) [0 copy_page_tables S1 A8])
             (const_int 16 [0x10]))) "kernel/fork.c":70:9 823 {*call_value}
      (nil)
     (expr_list (use (reg:SI 3 bx))
@@ -2116,9 +2116,9 @@ try_optimize_cfg iteration 1
 (insn 98 97 99 7 (set (reg/f:SI 130)
         (plus:SI (reg:SI 82)
             (const:SI (unspec:SI [
-                        (symbol_ref/f:SI ("*.LC2") [flags 0x2]  <var_decl 0x7c5bf257f3f0 *.LC2>)
+                        (symbol_ref/f:SI ("*.LC2") [flags 0x2]  <var_decl 0x7ed81857f3f0 *.LC2>)
                     ] UNSPEC_GOTOFF)))) "kernel/fork.c":71:9 205 {*leasi}
-     (expr_list:REG_EQUAL (symbol_ref/f:SI ("*.LC2") [flags 0x2]  <var_decl 0x7c5bf257f3f0 *.LC2>)
+     (expr_list:REG_EQUAL (symbol_ref/f:SI ("*.LC2") [flags 0x2]  <var_decl 0x7ed81857f3f0 *.LC2>)
         (nil)))
 (insn 99 98 100 7 (set (mem/f:SI (pre_dec:SI (reg/f:SI 7 sp)) [16  S4 A32])
         (reg/f:SI 130)) "kernel/fork.c":71:9 54 {*pushsi2}
@@ -2128,7 +2128,7 @@ try_optimize_cfg iteration 1
         (reg:SI 82)) "kernel/fork.c":71:9 75 {*movsi_internal}
      (nil))
 (call_insn 101 100 102 7 (set (reg:SI 0 ax)
-        (call (mem:QI (symbol_ref:SI ("printk") [flags 0x41]  <function_decl 0x7c5bf2538e00 printk>) [0 printk S1 A8])
+        (call (mem:QI (symbol_ref:SI ("printk") [flags 0x41]  <function_decl 0x7ed818538e00 printk>) [0 printk S1 A8])
             (const_int 16 [0x10]))) "kernel/fork.c":71:9 823 {*call_value}
      (nil)
     (expr_list (use (reg:SI 3 bx))
@@ -2163,7 +2163,7 @@ try_optimize_cfg iteration 1
         (reg:SI 82)) "kernel/fork.c":72:9 75 {*movsi_internal}
      (nil))
 (call_insn 107 106 108 7 (set (reg:SI 0 ax)
-        (call (mem:QI (symbol_ref:SI ("free_page_tables") [flags 0x41]  <function_decl 0x7c5bf2538400 free_page_tables>) [0 free_page_tables S1 A8])
+        (call (mem:QI (symbol_ref:SI ("free_page_tables") [flags 0x41]  <function_decl 0x7ed818538400 free_page_tables>) [0 free_page_tables S1 A8])
             (const_int 16 [0x10]))) "kernel/fork.c":72:9 823 {*call_value}
      (nil)
     (expr_list (use (reg:SI 3 bx))
@@ -2207,7 +2207,7 @@ try_optimize_cfg iteration 1
         (reg:SI 82)) "kernel/fork.c":99:32 75 {*movsi_internal}
      (nil))
 (call_insn 6 5 7 2 (set (reg:SI 0 ax)
-        (call (mem:QI (symbol_ref:SI ("get_free_page") [flags 0x41]  <function_decl 0x7c5bf2538900 get_free_page>) [0 get_free_page S1 A8])
+        (call (mem:QI (symbol_ref:SI ("get_free_page") [flags 0x41]  <function_decl 0x7ed818538900 get_free_page>) [0 get_free_page S1 A8])
             (const_int 0 [0]))) "kernel/fork.c":99:32 823 {*call_value}
      (nil)
     (expr_list (use (reg:SI 3 bx))
@@ -2242,7 +2242,7 @@ try_optimize_cfg iteration 1
 (insn 17 16 18 4 (set (reg/f:SI 204)
         (mem/u/c:SI (plus:SI (reg:SI 82)
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("task") [flags 0x40]  <var_decl 0x7c5bf252e1b0 task>)
+                            (symbol_ref:SI ("task") [flags 0x40]  <var_decl 0x7ed81852e1b0 task>)
                         ] UNSPEC_GOT))) [18  S4 A8])) "kernel/fork.c":104:14 75 {*movsi_internal}
      (nil))
 (insn 18 17 19 4 (set (reg:SI 205)
@@ -2260,7 +2260,7 @@ try_optimize_cfg iteration 1
 (insn 21 20 22 4 (set (reg/f:SI 207)
         (mem/u/c:SI (plus:SI (reg:SI 82)
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("current") [flags 0x40]  <var_decl 0x7c5bf252e120 current>)
+                            (symbol_ref:SI ("current") [flags 0x40]  <var_decl 0x7ed81852e120 current>)
                         ] UNSPEC_GOT))) [18  S4 A8])) "kernel/fork.c":110:10 75 {*movsi_internal}
      (nil))
 (insn 22 21 23 4 (set (reg/f:SI 84 [ current.8_2 ])
@@ -2305,7 +2305,7 @@ try_optimize_cfg iteration 1
 (insn 30 29 31 4 (set (reg:SI 85 [ last_pid.9_3 ])
         (mem/c:SI (plus:SI (reg:SI 82)
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("last_pid") [flags 0x2]  <var_decl 0x7c5bf252e750 last_pid>)
+                            (symbol_ref:SI ("last_pid") [flags 0x2]  <var_decl 0x7ed81852e750 last_pid>)
                         ] UNSPEC_GOTOFF))) [1 last_pid+0 S4 A32])) "kernel/fork.c":112:12 75 {*movsi_internal}
      (nil))
 (insn 31 30 32 4 (set (reg/f:SI 213)
@@ -2319,7 +2319,7 @@ try_optimize_cfg iteration 1
 (insn 33 32 34 4 (set (reg/f:SI 214)
         (mem/u/c:SI (plus:SI (reg:SI 82)
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("current") [flags 0x40]  <var_decl 0x7c5bf252e120 current>)
+                            (symbol_ref:SI ("current") [flags 0x40]  <var_decl 0x7ed81852e120 current>)
                         ] UNSPEC_GOT))) [18  S4 A8])) "kernel/fork.c":113:24 75 {*movsi_internal}
      (nil))
 (insn 34 33 35 4 (set (reg/f:SI 86 [ current.10_4 ])
@@ -2428,7 +2428,7 @@ try_optimize_cfg iteration 1
 (insn 60 59 61 4 (set (reg/f:SI 227)
         (mem/u/c:SI (plus:SI (reg:SI 82)
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("jiffies") [flags 0x40]  <var_decl 0x7c5bf252e360 jiffies>)
+                            (symbol_ref:SI ("jiffies") [flags 0x40]  <var_decl 0x7ed81852e360 jiffies>)
                         ] UNSPEC_GOT))) [18  S4 A8])) "kernel/fork.c":120:19 75 {*movsi_internal}
      (nil))
 (insn 61 60 62 4 (set (reg:SI 91 [ jiffies.11_9 ])
@@ -2740,7 +2740,7 @@ try_optimize_cfg iteration 1
 (insn 133 132 134 4 (set (reg/f:SI 265)
         (mem/u/c:SI (plus:SI (reg:SI 82)
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("last_task_used_math") [flags 0x40]  <var_decl 0x7c5bf252e240 last_task_used_math>)
+                            (symbol_ref:SI ("last_task_used_math") [flags 0x40]  <var_decl 0x7ed81852e240 last_task_used_math>)
                         ] UNSPEC_GOT))) [18  S4 A8])) "kernel/fork.c":142:29 75 {*movsi_internal}
      (nil))
 (insn 134 133 135 4 (set (reg/f:SI 104 [ last_task_used_math.14_22 ])
@@ -2749,7 +2749,7 @@ try_optimize_cfg iteration 1
 (insn 135 134 136 4 (set (reg/f:SI 266)
         (mem/u/c:SI (plus:SI (reg:SI 82)
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("current") [flags 0x40]  <var_decl 0x7c5bf252e120 current>)
+                            (symbol_ref:SI ("current") [flags 0x40]  <var_decl 0x7ed81852e120 current>)
                         ] UNSPEC_GOT))) [18  S4 A8])) "kernel/fork.c":142:29 75 {*movsi_internal}
      (nil))
 (insn 136 135 137 4 (set (reg/f:SI 105 [ current.15_23 ])
@@ -2805,7 +2805,7 @@ try_optimize_cfg iteration 1
      (expr_list:REG_ARGS_SIZE (const_int 16 [0x10])
         (nil)))
 (call_insn 147 146 148 6 (set (reg:SI 0 ax)
-        (call (mem:QI (symbol_ref:SI ("copy_mem") [flags 0x3]  <function_decl 0x7c5bf2540400 copy_mem>) [0 copy_mem S1 A8])
+        (call (mem:QI (symbol_ref:SI ("copy_mem") [flags 0x3]  <function_decl 0x7ed818540400 copy_mem>) [0 copy_mem S1 A8])
             (const_int 16 [0x10]))) "kernel/fork.c":144:9 823 {*call_value}
      (nil)
     (nil))
@@ -2836,7 +2836,7 @@ try_optimize_cfg iteration 1
 (insn 153 152 154 7 (set (reg/f:SI 268)
         (mem/u/c:SI (plus:SI (reg:SI 82)
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("task") [flags 0x40]  <var_decl 0x7c5bf252e1b0 task>)
+                            (symbol_ref:SI ("task") [flags 0x40]  <var_decl 0x7ed81852e1b0 task>)
                         ] UNSPEC_GOT))) [18  S4 A8])) "kernel/fork.c":145:18 75 {*movsi_internal}
      (nil))
 (insn 154 153 155 7 (set (reg:SI 269)
@@ -2866,7 +2866,7 @@ try_optimize_cfg iteration 1
 (insn 159 158 160 7 (set (reg:SI 3 bx)
         (reg:SI 82)) "kernel/fork.c":146:9 75 {*movsi_internal}
      (nil))
-(call_insn 160 159 161 7 (call (mem:QI (symbol_ref:SI ("free_page") [flags 0x41]  <function_decl 0x7c5bf2538800 free_page>) [0 free_page S1 A8])
+(call_insn 160 159 161 7 (call (mem:QI (symbol_ref:SI ("free_page") [flags 0x41]  <function_decl 0x7ed818538800 free_page>) [0 free_page S1 A8])
         (const_int 16 [0x10])) "kernel/fork.c":146:9 812 {*call}
      (nil)
     (expr_list (use (reg:SI 3 bx))
@@ -2988,7 +2988,7 @@ try_optimize_cfg iteration 1
 (insn 195 194 196 13 (set (reg/f:SI 276)
         (mem/u/c:SI (plus:SI (reg:SI 82)
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("current") [flags 0x40]  <var_decl 0x7c5bf252e120 current>)
+                            (symbol_ref:SI ("current") [flags 0x40]  <var_decl 0x7ed81852e120 current>)
                         ] UNSPEC_GOT))) [18  S4 A8])) "kernel/fork.c":152:16 75 {*movsi_internal}
      (nil))
 (insn 196 195 197 13 (set (reg/f:SI 110 [ current.17_29 ])
@@ -3014,7 +3014,7 @@ try_optimize_cfg iteration 1
 (insn 201 200 202 14 (set (reg/f:SI 277)
         (mem/u/c:SI (plus:SI (reg:SI 82)
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("current") [flags 0x40]  <var_decl 0x7c5bf252e120 current>)
+                            (symbol_ref:SI ("current") [flags 0x40]  <var_decl 0x7ed81852e120 current>)
                         ] UNSPEC_GOT))) [18  S4 A8])) "kernel/fork.c":153:16 75 {*movsi_internal}
      (nil))
 (insn 202 201 203 14 (set (reg/f:SI 112 [ current.18_31 ])
@@ -3045,7 +3045,7 @@ try_optimize_cfg iteration 1
 (insn 209 208 210 15 (set (reg/f:SI 278)
         (mem/u/c:SI (plus:SI (reg:SI 82)
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("current") [flags 0x40]  <var_decl 0x7c5bf252e120 current>)
+                            (symbol_ref:SI ("current") [flags 0x40]  <var_decl 0x7ed81852e120 current>)
                         ] UNSPEC_GOT))) [18  S4 A8])) "kernel/fork.c":154:16 75 {*movsi_internal}
      (nil))
 (insn 210 209 211 15 (set (reg/f:SI 116 [ current.19_36 ])
@@ -3071,7 +3071,7 @@ try_optimize_cfg iteration 1
 (insn 215 214 216 16 (set (reg/f:SI 279)
         (mem/u/c:SI (plus:SI (reg:SI 82)
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("current") [flags 0x40]  <var_decl 0x7c5bf252e120 current>)
+                            (symbol_ref:SI ("current") [flags 0x40]  <var_decl 0x7ed81852e120 current>)
                         ] UNSPEC_GOT))) [18  S4 A8])) "kernel/fork.c":155:16 75 {*movsi_internal}
      (nil))
 (insn 216 215 217 16 (set (reg/f:SI 118 [ current.20_38 ])
@@ -3102,7 +3102,7 @@ try_optimize_cfg iteration 1
 (insn 223 222 224 17 (set (reg/f:SI 280)
         (mem/u/c:SI (plus:SI (reg:SI 82)
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("current") [flags 0x40]  <var_decl 0x7c5bf252e120 current>)
+                            (symbol_ref:SI ("current") [flags 0x40]  <var_decl 0x7ed81852e120 current>)
                         ] UNSPEC_GOT))) [18  S4 A8])) "kernel/fork.c":156:16 75 {*movsi_internal}
      (nil))
 (insn 224 223 225 17 (set (reg/f:SI 122 [ current.21_43 ])
@@ -3128,7 +3128,7 @@ try_optimize_cfg iteration 1
 (insn 229 228 230 18 (set (reg/f:SI 281)
         (mem/u/c:SI (plus:SI (reg:SI 82)
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("current") [flags 0x40]  <var_decl 0x7c5bf252e120 current>)
+                            (symbol_ref:SI ("current") [flags 0x40]  <var_decl 0x7ed81852e120 current>)
                         ] UNSPEC_GOT))) [18  S4 A8])) "kernel/fork.c":157:16 75 {*movsi_internal}
      (nil))
 (insn 230 229 231 18 (set (reg/f:SI 124 [ current.22_45 ])
@@ -3205,12 +3205,12 @@ try_optimize_cfg iteration 1
 (insn 245 244 246 19 (set (reg:SI 285)
         (mem/u/c:SI (plus:SI (reg:SI 82)
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("gdt") [flags 0x40]  <var_decl 0x7c5bf3961c60 gdt>)
+                            (symbol_ref:SI ("gdt") [flags 0x40]  <var_decl 0x7ed819905c60 gdt>)
                         ] UNSPEC_GOT))) [18  S4 A8])) "kernel/fork.c":159:5 75 {*movsi_internal}
      (nil))
 (insn 246 245 247 19 (set (reg:SI 284)
         (reg:SI 285)) "kernel/fork.c":159:5 75 {*movsi_internal}
-     (expr_list:REG_EQUAL (symbol_ref:SI ("gdt") [flags 0x40]  <var_decl 0x7c5bf3961c60 gdt>)
+     (expr_list:REG_EQUAL (symbol_ref:SI ("gdt") [flags 0x40]  <var_decl 0x7ed819905c60 gdt>)
         (nil)))
 (insn 247 246 248 19 (parallel [
             (set (reg/f:SI 134 [ _56 ])
@@ -3258,12 +3258,12 @@ try_optimize_cfg iteration 1
 (insn 254 253 255 19 (set (reg:SI 288)
         (mem/u/c:SI (plus:SI (reg:SI 82)
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("gdt") [flags 0x40]  <var_decl 0x7c5bf3961c60 gdt>)
+                            (symbol_ref:SI ("gdt") [flags 0x40]  <var_decl 0x7ed819905c60 gdt>)
                         ] UNSPEC_GOT))) [18  S4 A8])) "kernel/fork.c":159:5 75 {*movsi_internal}
      (nil))
 (insn 255 254 256 19 (set (reg:SI 287)
         (reg:SI 288)) "kernel/fork.c":159:5 75 {*movsi_internal}
-     (expr_list:REG_EQUAL (symbol_ref:SI ("gdt") [flags 0x40]  <var_decl 0x7c5bf3961c60 gdt>)
+     (expr_list:REG_EQUAL (symbol_ref:SI ("gdt") [flags 0x40]  <var_decl 0x7ed819905c60 gdt>)
         (nil)))
 (insn 256 255 257 19 (parallel [
             (set (reg/f:SI 140 [ _62 ])
@@ -3311,12 +3311,12 @@ try_optimize_cfg iteration 1
 (insn 263 262 264 19 (set (reg:SI 291)
         (mem/u/c:SI (plus:SI (reg:SI 82)
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("gdt") [flags 0x40]  <var_decl 0x7c5bf3961c60 gdt>)
+                            (symbol_ref:SI ("gdt") [flags 0x40]  <var_decl 0x7ed819905c60 gdt>)
                         ] UNSPEC_GOT))) [18  S4 A8])) "kernel/fork.c":159:5 75 {*movsi_internal}
      (nil))
 (insn 264 263 265 19 (set (reg:SI 290)
         (reg:SI 291)) "kernel/fork.c":159:5 75 {*movsi_internal}
-     (expr_list:REG_EQUAL (symbol_ref:SI ("gdt") [flags 0x40]  <var_decl 0x7c5bf3961c60 gdt>)
+     (expr_list:REG_EQUAL (symbol_ref:SI ("gdt") [flags 0x40]  <var_decl 0x7ed819905c60 gdt>)
         (nil)))
 (insn 265 264 266 19 (parallel [
             (set (reg/f:SI 146 [ _68 ])
@@ -3364,12 +3364,12 @@ try_optimize_cfg iteration 1
 (insn 272 271 273 19 (set (reg:SI 294)
         (mem/u/c:SI (plus:SI (reg:SI 82)
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("gdt") [flags 0x40]  <var_decl 0x7c5bf3961c60 gdt>)
+                            (symbol_ref:SI ("gdt") [flags 0x40]  <var_decl 0x7ed819905c60 gdt>)
                         ] UNSPEC_GOT))) [18  S4 A8])) "kernel/fork.c":159:5 75 {*movsi_internal}
      (nil))
 (insn 273 272 274 19 (set (reg:SI 293)
         (reg:SI 294)) "kernel/fork.c":159:5 75 {*movsi_internal}
-     (expr_list:REG_EQUAL (symbol_ref:SI ("gdt") [flags 0x40]  <var_decl 0x7c5bf3961c60 gdt>)
+     (expr_list:REG_EQUAL (symbol_ref:SI ("gdt") [flags 0x40]  <var_decl 0x7ed819905c60 gdt>)
         (nil)))
 (insn 274 273 275 19 (parallel [
             (set (reg/f:SI 152 [ _74 ])
@@ -3417,12 +3417,12 @@ try_optimize_cfg iteration 1
 (insn 281 280 282 19 (set (reg:SI 297)
         (mem/u/c:SI (plus:SI (reg:SI 82)
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("gdt") [flags 0x40]  <var_decl 0x7c5bf3961c60 gdt>)
+                            (symbol_ref:SI ("gdt") [flags 0x40]  <var_decl 0x7ed819905c60 gdt>)
                         ] UNSPEC_GOT))) [18  S4 A8])) "kernel/fork.c":159:5 75 {*movsi_internal}
      (nil))
 (insn 282 281 283 19 (set (reg:SI 296)
         (reg:SI 297)) "kernel/fork.c":159:5 75 {*movsi_internal}
-     (expr_list:REG_EQUAL (symbol_ref:SI ("gdt") [flags 0x40]  <var_decl 0x7c5bf3961c60 gdt>)
+     (expr_list:REG_EQUAL (symbol_ref:SI ("gdt") [flags 0x40]  <var_decl 0x7ed819905c60 gdt>)
         (nil)))
 (insn 283 282 284 19 (parallel [
             (set (reg/f:SI 158 [ _80 ])
@@ -3470,12 +3470,12 @@ try_optimize_cfg iteration 1
 (insn 290 289 291 19 (set (reg:SI 300)
         (mem/u/c:SI (plus:SI (reg:SI 82)
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("gdt") [flags 0x40]  <var_decl 0x7c5bf3961c60 gdt>)
+                            (symbol_ref:SI ("gdt") [flags 0x40]  <var_decl 0x7ed819905c60 gdt>)
                         ] UNSPEC_GOT))) [18  S4 A8])) "kernel/fork.c":159:5 75 {*movsi_internal}
      (nil))
 (insn 291 290 292 19 (set (reg:SI 299)
         (reg:SI 300)) "kernel/fork.c":159:5 75 {*movsi_internal}
-     (expr_list:REG_EQUAL (symbol_ref:SI ("gdt") [flags 0x40]  <var_decl 0x7c5bf3961c60 gdt>)
+     (expr_list:REG_EQUAL (symbol_ref:SI ("gdt") [flags 0x40]  <var_decl 0x7ed819905c60 gdt>)
         (nil)))
 (insn 292 291 293 19 (parallel [
             (set (reg/f:SI 164 [ _86 ])
@@ -3563,12 +3563,12 @@ try_optimize_cfg iteration 1
 (insn 302 301 303 19 (set (reg:SI 304)
         (mem/u/c:SI (plus:SI (reg:SI 82)
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("gdt") [flags 0x40]  <var_decl 0x7c5bf3961c60 gdt>)
+                            (symbol_ref:SI ("gdt") [flags 0x40]  <var_decl 0x7ed819905c60 gdt>)
                         ] UNSPEC_GOT))) [18  S4 A8])) "kernel/fork.c":160:5 75 {*movsi_internal}
      (nil))
 (insn 303 302 304 19 (set (reg:SI 303)
         (reg:SI 304)) "kernel/fork.c":160:5 75 {*movsi_internal}
-     (expr_list:REG_EQUAL (symbol_ref:SI ("gdt") [flags 0x40]  <var_decl 0x7c5bf3961c60 gdt>)
+     (expr_list:REG_EQUAL (symbol_ref:SI ("gdt") [flags 0x40]  <var_decl 0x7ed819905c60 gdt>)
         (nil)))
 (insn 304 303 305 19 (parallel [
             (set (reg/f:SI 171 [ _93 ])
@@ -3616,12 +3616,12 @@ try_optimize_cfg iteration 1
 (insn 311 310 312 19 (set (reg:SI 307)
         (mem/u/c:SI (plus:SI (reg:SI 82)
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("gdt") [flags 0x40]  <var_decl 0x7c5bf3961c60 gdt>)
+                            (symbol_ref:SI ("gdt") [flags 0x40]  <var_decl 0x7ed819905c60 gdt>)
                         ] UNSPEC_GOT))) [18  S4 A8])) "kernel/fork.c":160:5 75 {*movsi_internal}
      (nil))
 (insn 312 311 313 19 (set (reg:SI 306)
         (reg:SI 307)) "kernel/fork.c":160:5 75 {*movsi_internal}
-     (expr_list:REG_EQUAL (symbol_ref:SI ("gdt") [flags 0x40]  <var_decl 0x7c5bf3961c60 gdt>)
+     (expr_list:REG_EQUAL (symbol_ref:SI ("gdt") [flags 0x40]  <var_decl 0x7ed819905c60 gdt>)
         (nil)))
 (insn 313 312 314 19 (parallel [
             (set (reg/f:SI 177 [ _99 ])
@@ -3669,12 +3669,12 @@ try_optimize_cfg iteration 1
 (insn 320 319 321 19 (set (reg:SI 310)
         (mem/u/c:SI (plus:SI (reg:SI 82)
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("gdt") [flags 0x40]  <var_decl 0x7c5bf3961c60 gdt>)
+                            (symbol_ref:SI ("gdt") [flags 0x40]  <var_decl 0x7ed819905c60 gdt>)
                         ] UNSPEC_GOT))) [18  S4 A8])) "kernel/fork.c":160:5 75 {*movsi_internal}
      (nil))
 (insn 321 320 322 19 (set (reg:SI 309)
         (reg:SI 310)) "kernel/fork.c":160:5 75 {*movsi_internal}
-     (expr_list:REG_EQUAL (symbol_ref:SI ("gdt") [flags 0x40]  <var_decl 0x7c5bf3961c60 gdt>)
+     (expr_list:REG_EQUAL (symbol_ref:SI ("gdt") [flags 0x40]  <var_decl 0x7ed819905c60 gdt>)
         (nil)))
 (insn 322 321 323 19 (parallel [
             (set (reg/f:SI 183 [ _105 ])
@@ -3722,12 +3722,12 @@ try_optimize_cfg iteration 1
 (insn 329 328 330 19 (set (reg:SI 313)
         (mem/u/c:SI (plus:SI (reg:SI 82)
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("gdt") [flags 0x40]  <var_decl 0x7c5bf3961c60 gdt>)
+                            (symbol_ref:SI ("gdt") [flags 0x40]  <var_decl 0x7ed819905c60 gdt>)
                         ] UNSPEC_GOT))) [18  S4 A8])) "kernel/fork.c":160:5 75 {*movsi_internal}
      (nil))
 (insn 330 329 331 19 (set (reg:SI 312)
         (reg:SI 313)) "kernel/fork.c":160:5 75 {*movsi_internal}
-     (expr_list:REG_EQUAL (symbol_ref:SI ("gdt") [flags 0x40]  <var_decl 0x7c5bf3961c60 gdt>)
+     (expr_list:REG_EQUAL (symbol_ref:SI ("gdt") [flags 0x40]  <var_decl 0x7ed819905c60 gdt>)
         (nil)))
 (insn 331 330 332 19 (parallel [
             (set (reg/f:SI 189 [ _111 ])
@@ -3775,12 +3775,12 @@ try_optimize_cfg iteration 1
 (insn 338 337 339 19 (set (reg:SI 316)
         (mem/u/c:SI (plus:SI (reg:SI 82)
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("gdt") [flags 0x40]  <var_decl 0x7c5bf3961c60 gdt>)
+                            (symbol_ref:SI ("gdt") [flags 0x40]  <var_decl 0x7ed819905c60 gdt>)
                         ] UNSPEC_GOT))) [18  S4 A8])) "kernel/fork.c":160:5 75 {*movsi_internal}
      (nil))
 (insn 339 338 340 19 (set (reg:SI 315)
         (reg:SI 316)) "kernel/fork.c":160:5 75 {*movsi_internal}
-     (expr_list:REG_EQUAL (symbol_ref:SI ("gdt") [flags 0x40]  <var_decl 0x7c5bf3961c60 gdt>)
+     (expr_list:REG_EQUAL (symbol_ref:SI ("gdt") [flags 0x40]  <var_decl 0x7ed819905c60 gdt>)
         (nil)))
 (insn 340 339 341 19 (parallel [
             (set (reg/f:SI 195 [ _117 ])
@@ -3828,12 +3828,12 @@ try_optimize_cfg iteration 1
 (insn 347 346 348 19 (set (reg:SI 319)
         (mem/u/c:SI (plus:SI (reg:SI 82)
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("gdt") [flags 0x40]  <var_decl 0x7c5bf3961c60 gdt>)
+                            (symbol_ref:SI ("gdt") [flags 0x40]  <var_decl 0x7ed819905c60 gdt>)
                         ] UNSPEC_GOT))) [18  S4 A8])) "kernel/fork.c":160:5 75 {*movsi_internal}
      (nil))
 (insn 348 347 349 19 (set (reg:SI 318)
         (reg:SI 319)) "kernel/fork.c":160:5 75 {*movsi_internal}
-     (expr_list:REG_EQUAL (symbol_ref:SI ("gdt") [flags 0x40]  <var_decl 0x7c5bf3961c60 gdt>)
+     (expr_list:REG_EQUAL (symbol_ref:SI ("gdt") [flags 0x40]  <var_decl 0x7ed819905c60 gdt>)
         (nil)))
 (insn 349 348 350 19 (parallel [
             (set (reg/f:SI 201 [ _123 ])
@@ -3882,7 +3882,7 @@ try_optimize_cfg iteration 1
 (insn 353 352 354 19 (set (reg:SI 202 [ _125 ])
         (mem/c:SI (plus:SI (reg:SI 82)
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("last_pid") [flags 0x2]  <var_decl 0x7c5bf252e750 last_pid>)
+                            (symbol_ref:SI ("last_pid") [flags 0x2]  <var_decl 0x7ed81852e750 last_pid>)
                         ] UNSPEC_GOTOFF))) [1 last_pid+0 S4 A32])) "kernel/fork.c":162:12 75 {*movsi_internal}
      (nil))
 
@@ -3909,7 +3909,7 @@ try_optimize_cfg iteration 1
         (reg:SI 82)) "kernel/fork.c":99:32 75 {*movsi_internal}
      (nil))
 (call_insn 6 5 7 2 (set (reg:SI 0 ax)
-        (call (mem:QI (symbol_ref:SI ("get_free_page") [flags 0x41]  <function_decl 0x7c5bf2538900 get_free_page>) [0 get_free_page S1 A8])
+        (call (mem:QI (symbol_ref:SI ("get_free_page") [flags 0x41]  <function_decl 0x7ed818538900 get_free_page>) [0 get_free_page S1 A8])
             (const_int 0 [0]))) "kernel/fork.c":99:32 823 {*call_value}
      (nil)
     (expr_list (use (reg:SI 3 bx))
@@ -3943,7 +3943,7 @@ try_optimize_cfg iteration 1
 (insn 17 16 18 4 (set (reg/f:SI 204)
         (mem/u/c:SI (plus:SI (reg:SI 82)
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("task") [flags 0x40]  <var_decl 0x7c5bf252e1b0 task>)
+                            (symbol_ref:SI ("task") [flags 0x40]  <var_decl 0x7ed81852e1b0 task>)
                         ] UNSPEC_GOT))) [18  S4 A8])) "kernel/fork.c":104:14 75 {*movsi_internal}
      (nil))
 (insn 18 17 19 4 (set (reg:SI 205)
@@ -3961,7 +3961,7 @@ try_optimize_cfg iteration 1
 (insn 21 20 22 4 (set (reg/f:SI 207)
         (mem/u/c:SI (plus:SI (reg:SI 82)
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("current") [flags 0x40]  <var_decl 0x7c5bf252e120 current>)
+                            (symbol_ref:SI ("current") [flags 0x40]  <var_decl 0x7ed81852e120 current>)
                         ] UNSPEC_GOT))) [18  S4 A8])) "kernel/fork.c":110:10 75 {*movsi_internal}
      (nil))
 (insn 22 21 23 4 (set (reg/f:SI 84 [ current.8_2 ])
@@ -4006,7 +4006,7 @@ try_optimize_cfg iteration 1
 (insn 30 29 31 4 (set (reg:SI 85 [ last_pid.9_3 ])
         (mem/c:SI (plus:SI (reg:SI 82)
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("last_pid") [flags 0x2]  <var_decl 0x7c5bf252e750 last_pid>)
+                            (symbol_ref:SI ("last_pid") [flags 0x2]  <var_decl 0x7ed81852e750 last_pid>)
                         ] UNSPEC_GOTOFF))) [1 last_pid+0 S4 A32])) "kernel/fork.c":112:12 75 {*movsi_internal}
      (nil))
 (insn 31 30 32 4 (set (reg/f:SI 213)
@@ -4020,7 +4020,7 @@ try_optimize_cfg iteration 1
 (insn 33 32 34 4 (set (reg/f:SI 214)
         (mem/u/c:SI (plus:SI (reg:SI 82)
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("current") [flags 0x40]  <var_decl 0x7c5bf252e120 current>)
+                            (symbol_ref:SI ("current") [flags 0x40]  <var_decl 0x7ed81852e120 current>)
                         ] UNSPEC_GOT))) [18  S4 A8])) "kernel/fork.c":113:24 75 {*movsi_internal}
      (nil))
 (insn 34 33 35 4 (set (reg/f:SI 86 [ current.10_4 ])
@@ -4129,7 +4129,7 @@ try_optimize_cfg iteration 1
 (insn 60 59 61 4 (set (reg/f:SI 227)
         (mem/u/c:SI (plus:SI (reg:SI 82)
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("jiffies") [flags 0x40]  <var_decl 0x7c5bf252e360 jiffies>)
+                            (symbol_ref:SI ("jiffies") [flags 0x40]  <var_decl 0x7ed81852e360 jiffies>)
                         ] UNSPEC_GOT))) [18  S4 A8])) "kernel/fork.c":120:19 75 {*movsi_internal}
      (nil))
 (insn 61 60 62 4 (set (reg:SI 91 [ jiffies.11_9 ])
@@ -4441,7 +4441,7 @@ try_optimize_cfg iteration 1
 (insn 133 132 134 4 (set (reg/f:SI 265)
         (mem/u/c:SI (plus:SI (reg:SI 82)
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("last_task_used_math") [flags 0x40]  <var_decl 0x7c5bf252e240 last_task_used_math>)
+                            (symbol_ref:SI ("last_task_used_math") [flags 0x40]  <var_decl 0x7ed81852e240 last_task_used_math>)
                         ] UNSPEC_GOT))) [18  S4 A8])) "kernel/fork.c":142:29 75 {*movsi_internal}
      (nil))
 (insn 134 133 135 4 (set (reg/f:SI 104 [ last_task_used_math.14_22 ])
@@ -4450,7 +4450,7 @@ try_optimize_cfg iteration 1
 (insn 135 134 136 4 (set (reg/f:SI 266)
         (mem/u/c:SI (plus:SI (reg:SI 82)
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("current") [flags 0x40]  <var_decl 0x7c5bf252e120 current>)
+                            (symbol_ref:SI ("current") [flags 0x40]  <var_decl 0x7ed81852e120 current>)
                         ] UNSPEC_GOT))) [18  S4 A8])) "kernel/fork.c":142:29 75 {*movsi_internal}
      (nil))
 (insn 136 135 137 4 (set (reg/f:SI 105 [ current.15_23 ])
@@ -4504,7 +4504,7 @@ try_optimize_cfg iteration 1
      (expr_list:REG_ARGS_SIZE (const_int 16 [0x10])
         (nil)))
 (call_insn 147 146 148 6 (set (reg:SI 0 ax)
-        (call (mem:QI (symbol_ref:SI ("copy_mem") [flags 0x3]  <function_decl 0x7c5bf2540400 copy_mem>) [0 copy_mem S1 A8])
+        (call (mem:QI (symbol_ref:SI ("copy_mem") [flags 0x3]  <function_decl 0x7ed818540400 copy_mem>) [0 copy_mem S1 A8])
             (const_int 16 [0x10]))) "kernel/fork.c":144:9 823 {*call_value}
      (nil)
     (nil))
@@ -4534,7 +4534,7 @@ try_optimize_cfg iteration 1
 (insn 153 152 154 7 (set (reg/f:SI 268)
         (mem/u/c:SI (plus:SI (reg:SI 82)
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("task") [flags 0x40]  <var_decl 0x7c5bf252e1b0 task>)
+                            (symbol_ref:SI ("task") [flags 0x40]  <var_decl 0x7ed81852e1b0 task>)
                         ] UNSPEC_GOT))) [18  S4 A8])) "kernel/fork.c":145:18 75 {*movsi_internal}
      (nil))
 (insn 154 153 155 7 (set (reg:SI 269)
@@ -4564,7 +4564,7 @@ try_optimize_cfg iteration 1
 (insn 159 158 160 7 (set (reg:SI 3 bx)
         (reg:SI 82)) "kernel/fork.c":146:9 75 {*movsi_internal}
      (nil))
-(call_insn 160 159 161 7 (call (mem:QI (symbol_ref:SI ("free_page") [flags 0x41]  <function_decl 0x7c5bf2538800 free_page>) [0 free_page S1 A8])
+(call_insn 160 159 161 7 (call (mem:QI (symbol_ref:SI ("free_page") [flags 0x41]  <function_decl 0x7ed818538800 free_page>) [0 free_page S1 A8])
         (const_int 16 [0x10])) "kernel/fork.c":146:9 812 {*call}
      (nil)
     (expr_list (use (reg:SI 3 bx))
@@ -4682,7 +4682,7 @@ try_optimize_cfg iteration 1
 (insn 195 194 196 13 (set (reg/f:SI 276)
         (mem/u/c:SI (plus:SI (reg:SI 82)
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("current") [flags 0x40]  <var_decl 0x7c5bf252e120 current>)
+                            (symbol_ref:SI ("current") [flags 0x40]  <var_decl 0x7ed81852e120 current>)
                         ] UNSPEC_GOT))) [18  S4 A8])) "kernel/fork.c":152:16 75 {*movsi_internal}
      (nil))
 (insn 196 195 197 13 (set (reg/f:SI 110 [ current.17_29 ])
@@ -4707,7 +4707,7 @@ try_optimize_cfg iteration 1
 (insn 201 200 202 14 (set (reg/f:SI 277)
         (mem/u/c:SI (plus:SI (reg:SI 82)
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("current") [flags 0x40]  <var_decl 0x7c5bf252e120 current>)
+                            (symbol_ref:SI ("current") [flags 0x40]  <var_decl 0x7ed81852e120 current>)
                         ] UNSPEC_GOT))) [18  S4 A8])) "kernel/fork.c":153:16 75 {*movsi_internal}
      (nil))
 (insn 202 201 203 14 (set (reg/f:SI 112 [ current.18_31 ])
@@ -4737,7 +4737,7 @@ try_optimize_cfg iteration 1
 (insn 209 208 210 15 (set (reg/f:SI 278)
         (mem/u/c:SI (plus:SI (reg:SI 82)
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("current") [flags 0x40]  <var_decl 0x7c5bf252e120 current>)
+                            (symbol_ref:SI ("current") [flags 0x40]  <var_decl 0x7ed81852e120 current>)
                         ] UNSPEC_GOT))) [18  S4 A8])) "kernel/fork.c":154:16 75 {*movsi_internal}
      (nil))
 (insn 210 209 211 15 (set (reg/f:SI 116 [ current.19_36 ])
@@ -4762,7 +4762,7 @@ try_optimize_cfg iteration 1
 (insn 215 214 216 16 (set (reg/f:SI 279)
         (mem/u/c:SI (plus:SI (reg:SI 82)
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("current") [flags 0x40]  <var_decl 0x7c5bf252e120 current>)
+                            (symbol_ref:SI ("current") [flags 0x40]  <var_decl 0x7ed81852e120 current>)
                         ] UNSPEC_GOT))) [18  S4 A8])) "kernel/fork.c":155:16 75 {*movsi_internal}
      (nil))
 (insn 216 215 217 16 (set (reg/f:SI 118 [ current.20_38 ])
@@ -4792,7 +4792,7 @@ try_optimize_cfg iteration 1
 (insn 223 222 224 17 (set (reg/f:SI 280)
         (mem/u/c:SI (plus:SI (reg:SI 82)
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("current") [flags 0x40]  <var_decl 0x7c5bf252e120 current>)
+                            (symbol_ref:SI ("current") [flags 0x40]  <var_decl 0x7ed81852e120 current>)
                         ] UNSPEC_GOT))) [18  S4 A8])) "kernel/fork.c":156:16 75 {*movsi_internal}
      (nil))
 (insn 224 223 225 17 (set (reg/f:SI 122 [ current.21_43 ])
@@ -4817,7 +4817,7 @@ try_optimize_cfg iteration 1
 (insn 229 228 230 18 (set (reg/f:SI 281)
         (mem/u/c:SI (plus:SI (reg:SI 82)
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("current") [flags 0x40]  <var_decl 0x7c5bf252e120 current>)
+                            (symbol_ref:SI ("current") [flags 0x40]  <var_decl 0x7ed81852e120 current>)
                         ] UNSPEC_GOT))) [18  S4 A8])) "kernel/fork.c":157:16 75 {*movsi_internal}
      (nil))
 (insn 230 229 231 18 (set (reg/f:SI 124 [ current.22_45 ])
@@ -4893,12 +4893,12 @@ try_optimize_cfg iteration 1
 (insn 245 244 246 19 (set (reg:SI 285)
         (mem/u/c:SI (plus:SI (reg:SI 82)
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("gdt") [flags 0x40]  <var_decl 0x7c5bf3961c60 gdt>)
+                            (symbol_ref:SI ("gdt") [flags 0x40]  <var_decl 0x7ed819905c60 gdt>)
                         ] UNSPEC_GOT))) [18  S4 A8])) "kernel/fork.c":159:5 75 {*movsi_internal}
      (nil))
 (insn 246 245 247 19 (set (reg:SI 284)
         (reg:SI 285)) "kernel/fork.c":159:5 75 {*movsi_internal}
-     (expr_list:REG_EQUAL (symbol_ref:SI ("gdt") [flags 0x40]  <var_decl 0x7c5bf3961c60 gdt>)
+     (expr_list:REG_EQUAL (symbol_ref:SI ("gdt") [flags 0x40]  <var_decl 0x7ed819905c60 gdt>)
         (nil)))
 (insn 247 246 248 19 (parallel [
             (set (reg/f:SI 134 [ _56 ])
@@ -4946,12 +4946,12 @@ try_optimize_cfg iteration 1
 (insn 254 253 255 19 (set (reg:SI 288)
         (mem/u/c:SI (plus:SI (reg:SI 82)
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("gdt") [flags 0x40]  <var_decl 0x7c5bf3961c60 gdt>)
+                            (symbol_ref:SI ("gdt") [flags 0x40]  <var_decl 0x7ed819905c60 gdt>)
                         ] UNSPEC_GOT))) [18  S4 A8])) "kernel/fork.c":159:5 75 {*movsi_internal}
      (nil))
 (insn 255 254 256 19 (set (reg:SI 287)
         (reg:SI 288)) "kernel/fork.c":159:5 75 {*movsi_internal}
-     (expr_list:REG_EQUAL (symbol_ref:SI ("gdt") [flags 0x40]  <var_decl 0x7c5bf3961c60 gdt>)
+     (expr_list:REG_EQUAL (symbol_ref:SI ("gdt") [flags 0x40]  <var_decl 0x7ed819905c60 gdt>)
         (nil)))
 (insn 256 255 257 19 (parallel [
             (set (reg/f:SI 140 [ _62 ])
@@ -4999,12 +4999,12 @@ try_optimize_cfg iteration 1
 (insn 263 262 264 19 (set (reg:SI 291)
         (mem/u/c:SI (plus:SI (reg:SI 82)
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("gdt") [flags 0x40]  <var_decl 0x7c5bf3961c60 gdt>)
+                            (symbol_ref:SI ("gdt") [flags 0x40]  <var_decl 0x7ed819905c60 gdt>)
                         ] UNSPEC_GOT))) [18  S4 A8])) "kernel/fork.c":159:5 75 {*movsi_internal}
      (nil))
 (insn 264 263 265 19 (set (reg:SI 290)
         (reg:SI 291)) "kernel/fork.c":159:5 75 {*movsi_internal}
-     (expr_list:REG_EQUAL (symbol_ref:SI ("gdt") [flags 0x40]  <var_decl 0x7c5bf3961c60 gdt>)
+     (expr_list:REG_EQUAL (symbol_ref:SI ("gdt") [flags 0x40]  <var_decl 0x7ed819905c60 gdt>)
         (nil)))
 (insn 265 264 266 19 (parallel [
             (set (reg/f:SI 146 [ _68 ])
@@ -5052,12 +5052,12 @@ try_optimize_cfg iteration 1
 (insn 272 271 273 19 (set (reg:SI 294)
         (mem/u/c:SI (plus:SI (reg:SI 82)
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("gdt") [flags 0x40]  <var_decl 0x7c5bf3961c60 gdt>)
+                            (symbol_ref:SI ("gdt") [flags 0x40]  <var_decl 0x7ed819905c60 gdt>)
                         ] UNSPEC_GOT))) [18  S4 A8])) "kernel/fork.c":159:5 75 {*movsi_internal}
      (nil))
 (insn 273 272 274 19 (set (reg:SI 293)
         (reg:SI 294)) "kernel/fork.c":159:5 75 {*movsi_internal}
-     (expr_list:REG_EQUAL (symbol_ref:SI ("gdt") [flags 0x40]  <var_decl 0x7c5bf3961c60 gdt>)
+     (expr_list:REG_EQUAL (symbol_ref:SI ("gdt") [flags 0x40]  <var_decl 0x7ed819905c60 gdt>)
         (nil)))
 (insn 274 273 275 19 (parallel [
             (set (reg/f:SI 152 [ _74 ])
@@ -5105,12 +5105,12 @@ try_optimize_cfg iteration 1
 (insn 281 280 282 19 (set (reg:SI 297)
         (mem/u/c:SI (plus:SI (reg:SI 82)
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("gdt") [flags 0x40]  <var_decl 0x7c5bf3961c60 gdt>)
+                            (symbol_ref:SI ("gdt") [flags 0x40]  <var_decl 0x7ed819905c60 gdt>)
                         ] UNSPEC_GOT))) [18  S4 A8])) "kernel/fork.c":159:5 75 {*movsi_internal}
      (nil))
 (insn 282 281 283 19 (set (reg:SI 296)
         (reg:SI 297)) "kernel/fork.c":159:5 75 {*movsi_internal}
-     (expr_list:REG_EQUAL (symbol_ref:SI ("gdt") [flags 0x40]  <var_decl 0x7c5bf3961c60 gdt>)
+     (expr_list:REG_EQUAL (symbol_ref:SI ("gdt") [flags 0x40]  <var_decl 0x7ed819905c60 gdt>)
         (nil)))
 (insn 283 282 284 19 (parallel [
             (set (reg/f:SI 158 [ _80 ])
@@ -5158,12 +5158,12 @@ try_optimize_cfg iteration 1
 (insn 290 289 291 19 (set (reg:SI 300)
         (mem/u/c:SI (plus:SI (reg:SI 82)
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("gdt") [flags 0x40]  <var_decl 0x7c5bf3961c60 gdt>)
+                            (symbol_ref:SI ("gdt") [flags 0x40]  <var_decl 0x7ed819905c60 gdt>)
                         ] UNSPEC_GOT))) [18  S4 A8])) "kernel/fork.c":159:5 75 {*movsi_internal}
      (nil))
 (insn 291 290 292 19 (set (reg:SI 299)
         (reg:SI 300)) "kernel/fork.c":159:5 75 {*movsi_internal}
-     (expr_list:REG_EQUAL (symbol_ref:SI ("gdt") [flags 0x40]  <var_decl 0x7c5bf3961c60 gdt>)
+     (expr_list:REG_EQUAL (symbol_ref:SI ("gdt") [flags 0x40]  <var_decl 0x7ed819905c60 gdt>)
         (nil)))
 (insn 292 291 293 19 (parallel [
             (set (reg/f:SI 164 [ _86 ])
@@ -5251,12 +5251,12 @@ try_optimize_cfg iteration 1
 (insn 302 301 303 19 (set (reg:SI 304)
         (mem/u/c:SI (plus:SI (reg:SI 82)
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("gdt") [flags 0x40]  <var_decl 0x7c5bf3961c60 gdt>)
+                            (symbol_ref:SI ("gdt") [flags 0x40]  <var_decl 0x7ed819905c60 gdt>)
                         ] UNSPEC_GOT))) [18  S4 A8])) "kernel/fork.c":160:5 75 {*movsi_internal}
      (nil))
 (insn 303 302 304 19 (set (reg:SI 303)
         (reg:SI 304)) "kernel/fork.c":160:5 75 {*movsi_internal}
-     (expr_list:REG_EQUAL (symbol_ref:SI ("gdt") [flags 0x40]  <var_decl 0x7c5bf3961c60 gdt>)
+     (expr_list:REG_EQUAL (symbol_ref:SI ("gdt") [flags 0x40]  <var_decl 0x7ed819905c60 gdt>)
         (nil)))
 (insn 304 303 305 19 (parallel [
             (set (reg/f:SI 171 [ _93 ])
@@ -5304,12 +5304,12 @@ try_optimize_cfg iteration 1
 (insn 311 310 312 19 (set (reg:SI 307)
         (mem/u/c:SI (plus:SI (reg:SI 82)
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("gdt") [flags 0x40]  <var_decl 0x7c5bf3961c60 gdt>)
+                            (symbol_ref:SI ("gdt") [flags 0x40]  <var_decl 0x7ed819905c60 gdt>)
                         ] UNSPEC_GOT))) [18  S4 A8])) "kernel/fork.c":160:5 75 {*movsi_internal}
      (nil))
 (insn 312 311 313 19 (set (reg:SI 306)
         (reg:SI 307)) "kernel/fork.c":160:5 75 {*movsi_internal}
-     (expr_list:REG_EQUAL (symbol_ref:SI ("gdt") [flags 0x40]  <var_decl 0x7c5bf3961c60 gdt>)
+     (expr_list:REG_EQUAL (symbol_ref:SI ("gdt") [flags 0x40]  <var_decl 0x7ed819905c60 gdt>)
         (nil)))
 (insn 313 312 314 19 (parallel [
             (set (reg/f:SI 177 [ _99 ])
@@ -5357,12 +5357,12 @@ try_optimize_cfg iteration 1
 (insn 320 319 321 19 (set (reg:SI 310)
         (mem/u/c:SI (plus:SI (reg:SI 82)
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("gdt") [flags 0x40]  <var_decl 0x7c5bf3961c60 gdt>)
+                            (symbol_ref:SI ("gdt") [flags 0x40]  <var_decl 0x7ed819905c60 gdt>)
                         ] UNSPEC_GOT))) [18  S4 A8])) "kernel/fork.c":160:5 75 {*movsi_internal}
      (nil))
 (insn 321 320 322 19 (set (reg:SI 309)
         (reg:SI 310)) "kernel/fork.c":160:5 75 {*movsi_internal}
-     (expr_list:REG_EQUAL (symbol_ref:SI ("gdt") [flags 0x40]  <var_decl 0x7c5bf3961c60 gdt>)
+     (expr_list:REG_EQUAL (symbol_ref:SI ("gdt") [flags 0x40]  <var_decl 0x7ed819905c60 gdt>)
         (nil)))
 (insn 322 321 323 19 (parallel [
             (set (reg/f:SI 183 [ _105 ])
@@ -5410,12 +5410,12 @@ try_optimize_cfg iteration 1
 (insn 329 328 330 19 (set (reg:SI 313)
         (mem/u/c:SI (plus:SI (reg:SI 82)
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("gdt") [flags 0x40]  <var_decl 0x7c5bf3961c60 gdt>)
+                            (symbol_ref:SI ("gdt") [flags 0x40]  <var_decl 0x7ed819905c60 gdt>)
                         ] UNSPEC_GOT))) [18  S4 A8])) "kernel/fork.c":160:5 75 {*movsi_internal}
      (nil))
 (insn 330 329 331 19 (set (reg:SI 312)
         (reg:SI 313)) "kernel/fork.c":160:5 75 {*movsi_internal}
-     (expr_list:REG_EQUAL (symbol_ref:SI ("gdt") [flags 0x40]  <var_decl 0x7c5bf3961c60 gdt>)
+     (expr_list:REG_EQUAL (symbol_ref:SI ("gdt") [flags 0x40]  <var_decl 0x7ed819905c60 gdt>)
         (nil)))
 (insn 331 330 332 19 (parallel [
             (set (reg/f:SI 189 [ _111 ])
@@ -5463,12 +5463,12 @@ try_optimize_cfg iteration 1
 (insn 338 337 339 19 (set (reg:SI 316)
         (mem/u/c:SI (plus:SI (reg:SI 82)
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("gdt") [flags 0x40]  <var_decl 0x7c5bf3961c60 gdt>)
+                            (symbol_ref:SI ("gdt") [flags 0x40]  <var_decl 0x7ed819905c60 gdt>)
                         ] UNSPEC_GOT))) [18  S4 A8])) "kernel/fork.c":160:5 75 {*movsi_internal}
      (nil))
 (insn 339 338 340 19 (set (reg:SI 315)
         (reg:SI 316)) "kernel/fork.c":160:5 75 {*movsi_internal}
-     (expr_list:REG_EQUAL (symbol_ref:SI ("gdt") [flags 0x40]  <var_decl 0x7c5bf3961c60 gdt>)
+     (expr_list:REG_EQUAL (symbol_ref:SI ("gdt") [flags 0x40]  <var_decl 0x7ed819905c60 gdt>)
         (nil)))
 (insn 340 339 341 19 (parallel [
             (set (reg/f:SI 195 [ _117 ])
@@ -5516,12 +5516,12 @@ try_optimize_cfg iteration 1
 (insn 347 346 348 19 (set (reg:SI 319)
         (mem/u/c:SI (plus:SI (reg:SI 82)
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("gdt") [flags 0x40]  <var_decl 0x7c5bf3961c60 gdt>)
+                            (symbol_ref:SI ("gdt") [flags 0x40]  <var_decl 0x7ed819905c60 gdt>)
                         ] UNSPEC_GOT))) [18  S4 A8])) "kernel/fork.c":160:5 75 {*movsi_internal}
      (nil))
 (insn 348 347 349 19 (set (reg:SI 318)
         (reg:SI 319)) "kernel/fork.c":160:5 75 {*movsi_internal}
-     (expr_list:REG_EQUAL (symbol_ref:SI ("gdt") [flags 0x40]  <var_decl 0x7c5bf3961c60 gdt>)
+     (expr_list:REG_EQUAL (symbol_ref:SI ("gdt") [flags 0x40]  <var_decl 0x7ed819905c60 gdt>)
         (nil)))
 (insn 349 348 350 19 (parallel [
             (set (reg/f:SI 201 [ _123 ])
@@ -5570,7 +5570,7 @@ try_optimize_cfg iteration 1
 (insn 353 352 354 19 (set (reg:SI 202 [ _125 ])
         (mem/c:SI (plus:SI (reg:SI 82)
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("last_pid") [flags 0x2]  <var_decl 0x7c5bf252e750 last_pid>)
+                            (symbol_ref:SI ("last_pid") [flags 0x2]  <var_decl 0x7ed81852e750 last_pid>)
                         ] UNSPEC_GOTOFF))) [1 last_pid+0 S4 A32])) "kernel/fork.c":162:12 75 {*movsi_internal}
      (nil))
 (code_label 354 353 355 20 23 (nil) [0 uses])

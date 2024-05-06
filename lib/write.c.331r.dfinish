@@ -110,7 +110,7 @@
 (insn 23 41 24 4 (set (reg/f:SI 0 ax [92])
         (mem/u/c:SI (plus:SI (reg:SI 4 si [82])
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("errno") [flags 0x40]  <var_decl 0x75ab9881eb40 errno>)
+                            (symbol_ref:SI ("errno") [flags 0x40]  <var_decl 0x705f61ef7b40 errno>)
                         ] UNSPEC_GOT))) [4  S4 A8])) "lib/write.c":10:1 75 {*movsi_internal}
      (nil))
 (insn 24 23 25 4 (set (mem/c:SI (reg/f:SI 0 ax [92]) [2 errno+0 S4 A32])

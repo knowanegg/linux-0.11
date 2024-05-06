@@ -246,7 +246,7 @@ try_optimize_cfg iteration 1
         (reg:SI 82)) "fs/block_dev.c":26:20 75 {*movsi_internal}
      (nil))
 (call_insn 43 42 44 5 (set (reg:SI 0 ax)
-        (call (mem:QI (symbol_ref:SI ("breada") [flags 0x41]  <function_decl 0x7286aef0e600 breada>) [0 breada S1 A8])
+        (call (mem:QI (symbol_ref:SI ("breada") [flags 0x41]  <function_decl 0x7b7b82f0e600 breada>) [0 breada S1 A8])
             (const_int 32 [0x20]))) "fs/block_dev.c":26:20 823 {*call_value}
      (nil)
     (expr_list (use (reg:SI 3 bx))
@@ -437,7 +437,7 @@ try_optimize_cfg iteration 1
         (reg:SI 97 [ _15 ])) "fs/block_dev.c":35:13 54 {*pushsi2}
      (expr_list:REG_ARGS_SIZE (const_int 16 [0x10])
         (nil)))
-(call_insn 94 93 95 10 (call (mem:QI (symbol_ref:SI ("put_fs_byte") [flags 0x3]  <function_decl 0x7286aef10a00 put_fs_byte>) [0 put_fs_byte S1 A8])
+(call_insn 94 93 95 10 (call (mem:QI (symbol_ref:SI ("put_fs_byte") [flags 0x3]  <function_decl 0x7b7b82f10a00 put_fs_byte>) [0 put_fs_byte S1 A8])
         (const_int 16 [0x10])) "fs/block_dev.c":35:13 812 {*call}
      (nil)
     (nil))
@@ -494,7 +494,7 @@ try_optimize_cfg iteration 1
 (insn 109 108 110 12 (set (reg:SI 3 bx)
         (reg:SI 82)) "fs/block_dev.c":36:9 75 {*movsi_internal}
      (nil))
-(call_insn 110 109 111 12 (call (mem:QI (symbol_ref:SI ("brelse") [flags 0x41]  <function_decl 0x7286aef0e200 brelse>) [0 brelse S1 A8])
+(call_insn 110 109 111 12 (call (mem:QI (symbol_ref:SI ("brelse") [flags 0x41]  <function_decl 0x7b7b82f0e200 brelse>) [0 brelse S1 A8])
         (const_int 16 [0x10])) "fs/block_dev.c":36:9 812 {*call}
      (nil)
     (expr_list (use (reg:SI 3 bx))
@@ -677,7 +677,7 @@ try_optimize_cfg iteration 1
         (reg:SI 82)) "fs/block_dev.c":55:18 75 {*movsi_internal}
      (nil))
 (call_insn 38 37 39 6 (set (reg:SI 0 ax)
-        (call (mem:QI (symbol_ref:SI ("getblk") [flags 0x41]  <function_decl 0x7286aef0e500 getblk>) [0 getblk S1 A8])
+        (call (mem:QI (symbol_ref:SI ("getblk") [flags 0x41]  <function_decl 0x7b7b82f0e500 getblk>) [0 getblk S1 A8])
             (const_int 16 [0x10]))) "fs/block_dev.c":55:18 823 {*call_value}
      (nil)
     (expr_list (use (reg:SI 3 bx))
@@ -761,7 +761,7 @@ try_optimize_cfg iteration 1
         (reg:SI 82)) "fs/block_dev.c":57:18 75 {*movsi_internal}
      (nil))
 (call_insn 57 56 58 7 (set (reg:SI 0 ax)
-        (call (mem:QI (symbol_ref:SI ("breada") [flags 0x41]  <function_decl 0x7286aef0e600 breada>) [0 breada S1 A8])
+        (call (mem:QI (symbol_ref:SI ("breada") [flags 0x41]  <function_decl 0x7b7b82f0e600 breada>) [0 breada S1 A8])
             (const_int 32 [0x20]))) "fs/block_dev.c":57:18 823 {*call_value}
      (nil)
     (expr_list (use (reg:SI 3 bx))
@@ -938,7 +938,7 @@ try_optimize_cfg iteration 1
      (expr_list:REG_ARGS_SIZE (const_int 16 [0x10])
         (nil)))
 (call_insn 105 104 106 13 (set (reg:QI 0 ax)
-        (call (mem:QI (symbol_ref:SI ("get_fs_byte") [flags 0x3]  <function_decl 0x7286aef10800 get_fs_byte>) [0 get_fs_byte S1 A8])
+        (call (mem:QI (symbol_ref:SI ("get_fs_byte") [flags 0x3]  <function_decl 0x7b7b82f10800 get_fs_byte>) [0 get_fs_byte S1 A8])
             (const_int 16 [0x10]))) "fs/block_dev.c":67:22 823 {*call_value}
      (nil)
     (nil))
@@ -1022,7 +1022,7 @@ try_optimize_cfg iteration 1
 (insn 127 126 128 15 (set (reg:SI 3 bx)
         (reg:SI 82)) "fs/block_dev.c":69:9 75 {*movsi_internal}
      (nil))
-(call_insn 128 127 129 15 (call (mem:QI (symbol_ref:SI ("brelse") [flags 0x41]  <function_decl 0x7286aef0e200 brelse>) [0 brelse S1 A8])
+(call_insn 128 127 129 15 (call (mem:QI (symbol_ref:SI ("brelse") [flags 0x41]  <function_decl 0x7b7b82f0e200 brelse>) [0 brelse S1 A8])
         (const_int 16 [0x10])) "fs/block_dev.c":69:9 812 {*call}
      (nil)
     (expr_list (use (reg:SI 3 bx))

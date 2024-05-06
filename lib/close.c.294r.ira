@@ -201,7 +201,7 @@ Dataflow summary:
 (insn 21 20 22 4 (set (reg/f:SI 90)
         (mem/u/c:SI (plus:SI (reg:SI 82)
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("errno") [flags 0x40]  <var_decl 0x7f2097b26b40 errno>)
+                            (symbol_ref:SI ("errno") [flags 0x40]  <var_decl 0x78fe0df14b40 errno>)
                         ] UNSPEC_GOT))) [3  S4 A8])) "lib/close.c":9:1 75 {*movsi_internal}
      (expr_list:REG_DEAD (reg:SI 82)
         (nil)))

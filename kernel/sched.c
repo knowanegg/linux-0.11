@@ -15,6 +15,8 @@
 #include <linux/fdreg.h>
 
 #define _S(nr)  (1 << ((nr)-1))
+// 可以被BLOCK,判断依据是SIGKILL和SIGSTOP位
+// 结果等于11111111111101111111111011111111
 #define _BLOCKABLE (~(_S(SIGKILL) | _S(SIGSTOP)))
 
 #define LATCH (1193180/HZ)
@@ -34,6 +36,7 @@ union task_union {
 
 static union task_union init_task = { INIT_TASK, };
 
+// jiffies 是系统从开机开始算起的滴答数（10ms)
 long volatile jiffies = 0;
 long startup_time = 0;
 struct task_struct *current = &(init_task.task);
@@ -55,6 +58,17 @@ extern int system_call(void);
  * tasks can run. It can not be killed, and it cannot sleep.
  * The information in task[0] is never used.
  */
+// 调度函数 schedule()负责选择系统中下一个要运行的任务（进程）。它首先对所有任务进行检测，唤
+// 醒任何一个已经得到信号的任务。具体方法是针对任务数组中的每个任务，检查其报警定时值 alarm。
+// 如果任务的 alarm 时间已经过期(alarm<jiffies)，则在它的信号位图中设置 SIGALRM 信号，然后清 alarm
+// 值。jiffies 是系统从开机计算起的滴答数（10ms/滴答，在 sched.h 中定义）。如果进程的信号位图中除
+// 去被阻塞的信号外还有其他信号，并且任务处于可中断睡眠状态（TASK_INTERRUPTIBLE），则置任
+// 务为就绪状态（TASK_RUNNING）。
+// 随后是调度函数的核心处理部分。这部分代码根据进程的时间片和优先权调度机制，来选择随后要
+// 执行的任务。它首先循环检查任务数组中的所有任务，根据每个就绪态任务剩余执行时间的值 counter，
+// 选取该值最大的一个任务，并利用 switch_to()函数切换到该任务。
+// 若所有就绪态任务的 counter 值都等于零，表示此刻所有任务的时间片都已经运行完，于是就根据任
+// 务的优先权值 priority，重置每个任务的运行时间片值 counter，再重新循环检查所有任务的执行时间片值。
 void schedule(void)
 {
 	int i, next, c;
@@ -64,14 +78,32 @@ void schedule(void)
 	 * Check alarm, wake up any interruptible tasks that have
 	 * got a signal.
 	 */
+	 // p从task[]数组最后一个开始遍历，第一次init执行时是这样的
+	 // task[] = {0x201c0 <init_task>, 0xfdf000, 0x0 <startup_32> <repeats 62 times>}
+	 // 也就是0x0有62个，这个循环会循环62次直到0xfdf000才找到一个存在的进程
 	for (p = &LAST_TASK; p > &FIRST_TASK; --p) 
+		// 如果p存在
 		if (*p) {
-			if ((*p)->alarm && (*p)->alarm < jiffies) {
-				(*p)->signal |= (1 << (SIGALRM - 1));
-				(*p)->alarm = 0;
+			// 如果p的闹钟剩余时间alarm还在，且小于系统经过的时钟中断次数
+			// 那不对啊，如果这样说，alarm永远赶不上系统的jiffies，因为系统的jiffies是从开机就一直增加的
+			// jiffies的定义是准确的，这里只需要理解alarm是如何定义的
+			// alarm并不是增长去赶超jiffies的，相反，alarm定义在未来的时间点，等着jiffies到达 
+			if ((*p)->alarm && (*p)->alarm < jiffies) { //这里的alarm<jiffies说明已经到时间了，闹钟响了
+				(*p)->signal |= (1 << (SIGALRM - 1));   // SIGALRM=0xe，1110，-1=1101，左移1位是11010？错！
+														// 这里1<<SIG不是将SIG左移1位，而是将1左移SIG位！
+														// 至于为什么-1呢？因为可以不移动啊，如果是0001，非得左移
+														// 那么最少就是0010了，最后一位一直空着浪费空间
+				(*p)->alarm = 0;	// 闹钟响过了，清零
 			}
+			// 这里_BLOCKABLE是第19位和9位为0其余为1的SIGNAL位图，这两位对应SIGKILL和SIGSTOP
+			// 和(*p)->blocked进行&运算，那么_BLOCKABLE为0的两位会清掉(*p)->blocked对应的2位
+			// 意思就是：SIGKILL和SIGSTOP这两位，你想blocked也不行，不允许
+			// 然后取反，得到的就是未block的为1的位图，和p的signal相&，就是p进程未被block的信号位图
 			if (((*p)->signal & ~(_BLOCKABLE & (*p)->blocked)) &&
+				// 而且要判断p的状态是否为TASK_INTERRUPTIBLE，如果是，可以通过信号、任务超时等手段唤醒
 			    (*p)->state == TASK_INTERRUPTIBLE)
+				// 上面两个条件是（任务有信号）&&（任务可以被信号唤醒）
+				// 那么就吧任务设置为可以执行加入队列
 				(*p)->state = TASK_RUNNING;
 		}
 
@@ -81,21 +113,50 @@ void schedule(void)
 			next = 0;
 			i = NR_TASKS;
 			p = &task[NR_TASKS];
-
+			// 从最后一个TASK开始遍历
 			while (--i) {
+				// 为空就跳过
 				if (!*--p)
 					continue;
+				// 找到了一个存在的，如果是RUNNING且拥有的剩余时间片比c要大
 				if ((*p)->state == TASK_RUNNING &&
 				    (*p)->counter > c)
+					// 那么c就换为当前人物的时间片，next设置为当前任务下标
 					c = (*p)->counter, next = i;
+					// 因为在while中，最后肯定会循环到task[0]。
+					// 其实就是冒泡排序法找出TASK_RUNNING且counter最大的p
+					// 因为用的是>c比较，所以两个进程counter相同时，先执行排名靠后的
 			}
+			// c大于0，可以执行，退出查找循环，此时next就是这个进程下标
 			if (c)
 				break;
+			// 这里有个情况容易误解，上面过滤的TASK_RUNNING很重要，如果所有的RUNNING进程counter都<=0,
+			// 但是存在不是RUNNING的进程counter大于0，也会运行到下面的重新分配
+			// 为何这样设计呢？难道是要做到阻塞的时间越长的进程，后续优先级越高吗？
+			// 应该是这样的
+
+			// 在所有RUNNING的进程时间片耗尽后，调度器会根据进程的priority字段来重新设置counter的值，以便在下次调度时重新分配时间片。
+			// 一般不容易到这个断点，可以用gdb设置值
+			// pwndbg> p task
+			// $6 = {0x201c0 <init_task>, 0xfdf000, 0xfdd000, 0xfa1000, 0x0 <startup_32> <repeats 60 times>}
+			// pwndbg> p (*task[3])->counter=0
+			// $7 = 0
+			// pwndbg> p (*task[2])->counter=0
+			// $8 = 0
+			// pwndbg> p (*task[1])->counter=0
+			// 或者用 set var width=47，var表示是内核变量而不是gdb的变量
 			for (p = &LAST_TASK; p > &FIRST_TASK; --p)
-				if (*p)
+				if (*p) // 再次遍历进程数组
+									// 如果，假设不是0，那么这里就是将原有时间片减半的意思
+									// 第一次执行这个for循环时，如果某进程为阻塞状态，那么其counter为priority
+									// 第二次执行这个for循环时，如果该进程为阻塞状态，那么其counter为priority+priority/2
+									// 如果该进程一直阻塞，那么其counter为 p+p/2+p/4+p/8，这样counter一直增加，当该进程一旦处于就绪
+									// 状态，它的counter就会变得很大。进程为什么会阻塞，很大可能就是进程IO操作
+									// IO操作不正是前台进程的特征吗？也就是说会优先执行前台进程。
 					(*p)->counter = ((*p)->counter >> 1) +
 					    (*p)->priority;
 		}
+		// 切换到task[next]执行
 		switch_to(next);
 }
 
@@ -154,7 +215,7 @@ void wake_up(struct task_struct **p)
 		(**p).state = 0; // 将任务的状态设置为0=runnable, 就绪
 		*p = NULL;  // 传进来的时候基本都是 &p ，也就是指针本身的内存位置，*p就是指针指向的地址。设置为空是将这个指针置空
 		            // 也就是传进来的这个指针不再有效了。这样做好吗？
-					// 看到这里
+					// debug : 0x2110c地址内容 -> 0x00027d68 还在，是&p，而0x00027d68地址内容被清空了,0x00fdf000变成了0x0
 	}
 }
 
@@ -205,7 +266,7 @@ void sched_init(void)
 	//设置0x20中断门为timer_interrupt，timer_interrupt在system_calls.s中用汇编实现
     set_intr_gate(0x20, &timer_interrupt); 
     outb(inb_p(0x21) & ~0x01, 0x21); //// 修改屏蔽码，允许定时器中断。
-    set_system_gate(0x80, &system_call);  // 设置系统调用门0x80
+    set_system_gate(0x80, &system_call);  // 设置系统调用门0x80 后面int 0x80时cpu会去idt表里面找(head.s:106)
 }
 
 #define TIME_REQUESTS 64
@@ -400,11 +461,17 @@ void do_timer(long cpl)
 	// 看看是不是软驱
     if (current_DOR & 0xf0)
         do_floppy_timer();
+	// 如果当前的counter还没降到0
     if ((--current->counter) > 0)
+	// 返回
         return;
+	// 如果是0或者0以下，置为0
     current->counter = 0;
+	// 如果特权级为0，也就是高权限
     if (!cpl)
+	// 返回
         return;
+	// 前面条件都不满足，就执行schedule
     schedule();
 }
 

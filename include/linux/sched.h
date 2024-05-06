@@ -11,11 +11,11 @@
 #define FIRST_TASK task[0]
 #define LAST_TASK  task[NR_TASKS - 1]
 
-#define TASK_RUNNING         0
-#define TASK_INTERRUPTIBLE   1
-#define TASK_UNINTERRUPTIBLE 2
-#define TASK_ZOMBIE          3
-#define TASK_STOPPED         4
+#define TASK_RUNNING         0  //进程正在运行或已准备就绪,等待调度器安排时间片以执行。
+#define TASK_INTERRUPTIBLE   1  //可以通过信号、任务超时等手段唤醒
+#define TASK_UNINTERRUPTIBLE 2  //只能通过wake_up()唤醒
+#define TASK_ZOMBIE          3  //表示任务已经终止，但尚未被其父进程回收。
+#define TASK_STOPPED         4  //表示任务因某种原因（如接收到SIGSTOP信号）而停止运行。
 
 #ifndef NULL
 #define NULL ((void *) 0)
@@ -73,8 +73,8 @@ struct tss_struct {
 struct task_struct {
 	/* 基本进程状态和调度信息 */
 	long state;		/* -1 unrunable, 0 runable, >0 stopped */
-	long counter;   // 时间片计数
-	long priority;  // 优先级，这里还没上CFS那种算法
+	long counter;   // 进程拥有的剩余时间片，在每次时钟中断时，这个值会减少，降至零时，任务会被暂停
+	long priority;  // 优先级，该值被用作分配时间片的基础。通常来说，优先级越高，时间片越长。，这里还没上CFS那种算法
 	long signal;    // 这个字段是一个指向 signal_struct 类型的指针。
 	struct sigaction sigaction[32]; // 针对32种不同信号的处理动作数组。
 	long blocked;        // 掩码，标识哪些信号被阻塞。
@@ -85,7 +85,7 @@ struct task_struct {
 	// 用户和组ID信息
 	unsigned short uid, euid, suid; // 用户ID、有效用户ID和保存的用户ID。
 	unsigned short gid, egid, sgid; // 组ID、有效组ID和保存的组ID。
-	long alarm;  // 闹钟信号的剩余时间。
+	long alarm;  // 闹钟信号的剩余时间/报警定时值（嘀嗒数）。
 	long utime, stime, cutime, cstime, start_time; // 用户CPU时间、系统CPU时间、累计的子进程用户CPU时间和系统CPU时间。
 	unsigned short used_math;  // 进程开始的时间。
 	/* 文件系统和I/O信息 */
@@ -135,9 +135,33 @@ struct task_struct {
  * 0 - nul, 1 - cs, 2 - ds, 3 - syscall
  * 4 - TSS0, 5 - LDT0, 6 - TSS1 etc ...
  */
+// 描述符表中 TSS 描述符的起始位置
+// 看上面的英文描述：GDT结构：
+// 0: NULL
+// 1: cs
+// 2: ds
+// 3: syscall
+// 4: TSS0
+// 5: LDT0
+// 6: TSS1
+// 7: LDT1
+// 8: .....(可以回看head.s:384)
+// 这里可以获得的信息有：
+//   1.LDT在GDT里面
+//   2.TSS虽然是杂七杂八的现场保存，但是和LDT平级
+//   3.每个TSS和一个LDT捆绑，按顺序对应task[n]
+// 那么有个问题：LDT是每个用户权限一个，还是每个进程一个？
+// 看上面就知道了，每个进程都有一个单独的LDT
+
+// 第一个TSS索引
 #define FIRST_TSS_ENTRY  4
+// 第一个LDT索引
 #define FIRST_LDT_ENTRY  (FIRST_TSS_ENTRY + 1)
-#define _TSS(n)  ((((unsigned long) n)<<4)+(FIRST_TSS_ENTRY<<3))
+// 为什么后面是<<3前面是<<4？
+// <<3=*8 <<4=*16
+// FIRST_TSS_ENTRY=4,乘以8说明前面有4个长度为8的数据，也就是null cs ds syscall
+// 后面的下标*16，是因为TSS和LDT成对出现了，每次要跳过两个8
+#define _TSS(n)  ((((unsigned long) n)<<4)+(FIRST_TSS_ENTRY<<3)) 
 #define _LDT(n)  ((((unsigned long) n)<<4)+(FIRST_LDT_ENTRY<<3))
 #define ltr(n)   __asm__("ltr %%ax" :: "a" (_TSS(n)))
 #define lldt(n)  __asm__("lldt %%ax" :: "a" (_LDT(n)))
@@ -155,6 +179,20 @@ struct task_struct {
  * This also clears the TS-flag if the task we switched to
  * has used tha math co-processor latest.
  */
+ // 切换任务，这里的n是下一个任务next在task[]数组中的下标
+ // 传入参数:__tmp.a和b的内存值
+ // edx是(_TSS(n))，取n的TSS
+ // ecx是task[n]，这里的n注意是数字，是下标
+ // "movw %%dx, %1" 方向是dx->%1，word是两个byte
+ // 因为dx是传入参数，存放着task[n]对应的TSS相对于GDT的偏移
+ // xchgl交换两个长字（32位）整数的值
+ // 执行 clts 指令会清除CR0寄存器的 TS 位。这允许浮点操作继续进行而不引发异常，
+ // 常在操作系统在保存当前任务的浮点状态后，并在加载新任务的浮点状态之前使用，
+ // 以避免不必要的异常和上下文切换开销。
+ // 临时数据结构__tmp 用于组建 228 行远跳转（FAR JUMP）指令的操作数。该操作数由 4 字节
+ // 偏移地址和 2 字节的段选择符组成。因此__tmp 中 a 的值是 32 位偏移值，而 b 的低 2 字节是新
+ // TSS 段的选择符（高 2 字节不用）。
+ // __tmp.a没看到有赋值啊？
 #define switch_to(n) { \
 	struct { long a, b;} __tmp;   \
 	__asm__("cmpl %%ecx, current\n\t" \

@@ -409,7 +409,7 @@ Dataflow summary:
 (note 189 15 17 3
 	.cfi_def_cfa_offset 48
 	 NOTE_INSN_CFI)
-(call_insn 17 189 18 3 (call (mem:QI (symbol_ref:SI ("wake_up") [flags 0x41]  <function_decl 0x7dde69138400 wake_up>) [0 wake_up S1 A8])
+(call_insn 17 189 18 3 (call (mem:QI (symbol_ref:SI ("wake_up") [flags 0x41]  <function_decl 0x71a46b338400 wake_up>) [0 wake_up S1 A8])
         (const_int 16 [0x10])) "fs/pipe.c":17:13 812 {*call}
      (nil)
     (expr_list (use (reg:SI 3 bx))
@@ -487,7 +487,7 @@ Dataflow summary:
 (note 192 32 34 5
 	.cfi_def_cfa_offset 48
 	 NOTE_INSN_CFI)
-(call_insn 34 192 35 5 (call (mem:QI (symbol_ref:SI ("sleep_on") [flags 0x41]  <function_decl 0x7dde69138000 sleep_on>) [0 sleep_on S1 A8])
+(call_insn 34 192 35 5 (call (mem:QI (symbol_ref:SI ("sleep_on") [flags 0x41]  <function_decl 0x71a46b338000 sleep_on>) [0 sleep_on S1 A8])
         (const_int 16 [0x10])) "fs/pipe.c":20:13 812 {*call}
      (nil)
     (expr_list (use (reg:SI 3 bx))
@@ -811,7 +811,7 @@ Dataflow summary:
 (note 186 110 111 12
 	.cfi_def_cfa_offset 48
 	 NOTE_INSN_CFI)
-(call_insn 111 186 112 12 (call (mem:QI (symbol_ref:SI ("put_fs_byte") [flags 0x3]  <function_decl 0x7dde69138f00 put_fs_byte>) [0 put_fs_byte S1 A8])
+(call_insn 111 186 112 12 (call (mem:QI (symbol_ref:SI ("put_fs_byte") [flags 0x3]  <function_decl 0x71a46b338f00 put_fs_byte>) [0 put_fs_byte S1 A8])
         (const_int 16 [0x10])) "fs/pipe.c":33:13 812 {*call}
      (nil)
     (nil))
@@ -897,7 +897,7 @@ Dataflow summary:
 (note 179 134 136 15
 	.cfi_def_cfa_offset 48
 	 NOTE_INSN_CFI)
-(call_insn 136 179 137 15 (call (mem:QI (symbol_ref:SI ("wake_up") [flags 0x41]  <function_decl 0x7dde69138400 wake_up>) [0 wake_up S1 A8])
+(call_insn 136 179 137 15 (call (mem:QI (symbol_ref:SI ("wake_up") [flags 0x41]  <function_decl 0x71a46b338400 wake_up>) [0 wake_up S1 A8])
         (const_int 16 [0x10])) "fs/pipe.c":35:5 812 {*call}
      (nil)
     (expr_list (use (reg:SI 3 bx))
@@ -1106,7 +1106,7 @@ Dataflow summary:
 (note 209 15 17 3
 	.cfi_def_cfa_offset 48
 	 NOTE_INSN_CFI)
-(call_insn 17 209 18 3 (call (mem:QI (symbol_ref:SI ("wake_up") [flags 0x41]  <function_decl 0x7dde69138400 wake_up>) [0 wake_up S1 A8])
+(call_insn 17 209 18 3 (call (mem:QI (symbol_ref:SI ("wake_up") [flags 0x41]  <function_decl 0x71a46b338400 wake_up>) [0 wake_up S1 A8])
         (const_int 16 [0x10])) "fs/pipe.c":45:13 812 {*call}
      (nil)
     (expr_list (use (reg:SI 3 bx))
@@ -1145,7 +1145,7 @@ Dataflow summary:
 (insn 24 23 25 4 (set (reg/f:SI 0 ax [117])
         (mem/u/c:SI (plus:SI (reg:SI 3 bx [82])
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("current") [flags 0x40]  <var_decl 0x7dde6912f120 current>)
+                            (symbol_ref:SI ("current") [flags 0x40]  <var_decl 0x71a46b32f120 current>)
                         ] UNSPEC_GOT))) [19  S4 A8])) "fs/pipe.c":47:33 75 {*movsi_internal}
      (nil))
 (insn 25 24 26 4 (set (reg/f:SI 0 ax [orig:85 current.4_3 ] [85])
@@ -1158,7 +1158,7 @@ Dataflow summary:
 (insn 27 26 28 4 (set (reg/f:SI 0 ax [118])
         (mem/u/c:SI (plus:SI (reg:SI 3 bx [82])
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("current") [flags 0x40]  <var_decl 0x7dde6912f120 current>)
+                            (symbol_ref:SI ("current") [flags 0x40]  <var_decl 0x71a46b32f120 current>)
                         ] UNSPEC_GOT))) [19  S4 A8])) "fs/pipe.c":47:33 75 {*movsi_internal}
      (nil))
 (insn 28 27 195 4 (set (reg/f:SI 0 ax [orig:87 current.5_5 ] [87])
@@ -1244,7 +1244,7 @@ Dataflow summary:
 (note 212 49 51 7
 	.cfi_def_cfa_offset 48
 	 NOTE_INSN_CFI)
-(call_insn 51 212 52 7 (call (mem:QI (symbol_ref:SI ("sleep_on") [flags 0x41]  <function_decl 0x7dde69138000 sleep_on>) [0 sleep_on S1 A8])
+(call_insn 51 212 52 7 (call (mem:QI (symbol_ref:SI ("sleep_on") [flags 0x41]  <function_decl 0x71a46b338000 sleep_on>) [0 sleep_on S1 A8])
         (const_int 16 [0x10])) "fs/pipe.c":50:13 812 {*call}
      (nil)
     (expr_list (use (reg:SI 3 bx))
@@ -1529,7 +1529,7 @@ Dataflow summary:
 	.cfi_def_cfa_offset 48
 	 NOTE_INSN_CFI)
 (call_insn 118 206 119 14 (set (reg:QI 0 ax)
-        (call (mem:QI (symbol_ref:SI ("get_fs_byte") [flags 0x3]  <function_decl 0x7dde69138d00 get_fs_byte>) [0 get_fs_byte S1 A8])
+        (call (mem:QI (symbol_ref:SI ("get_fs_byte") [flags 0x3]  <function_decl 0x71a46b338d00 get_fs_byte>) [0 get_fs_byte S1 A8])
             (const_int 16 [0x10]))) "fs/pipe.c":63:47 823 {*call_value}
      (nil)
     (nil))
@@ -1654,7 +1654,7 @@ Dataflow summary:
 (note 200 152 154 17
 	.cfi_def_cfa_offset 48
 	 NOTE_INSN_CFI)
-(call_insn 154 200 155 17 (call (mem:QI (symbol_ref:SI ("wake_up") [flags 0x41]  <function_decl 0x7dde69138400 wake_up>) [0 wake_up S1 A8])
+(call_insn 154 200 155 17 (call (mem:QI (symbol_ref:SI ("wake_up") [flags 0x41]  <function_decl 0x71a46b338400 wake_up>) [0 wake_up S1 A8])
         (const_int 16 [0x10])) "fs/pipe.c":65:5 812 {*call}
      (nil)
     (expr_list (use (reg:SI 3 bx))
@@ -1859,7 +1859,7 @@ Dataflow summary:
 (insn 10 9 11 3 (set (reg/f:SI 1 dx [125])
         (mem/u/c:SI (plus:SI (reg:SI 3 bx [82])
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("file_table") [flags 0x40]  <var_decl 0x7dde6a68fd80 file_table>)
+                            (symbol_ref:SI ("file_table") [flags 0x40]  <var_decl 0x71a46c782d80 file_table>)
                         ] UNSPEC_GOT))) [19  S4 A8])) "fs/pipe.c":78:27 75 {*movsi_internal}
      (nil))
 (insn 11 10 12 3 (set (reg:SI 0 ax [126])
@@ -1931,7 +1931,7 @@ Dataflow summary:
 (insn 24 23 26 4 (set (reg:SI 1 dx [132])
         (mem/u/c:SI (plus:SI (reg:SI 3 bx [82])
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("file_table") [flags 0x40]  <var_decl 0x7dde6a68fd80 file_table>)
+                            (symbol_ref:SI ("file_table") [flags 0x40]  <var_decl 0x71a46c782d80 file_table>)
                         ] UNSPEC_GOT))) [19  S4 A8])) "fs/pipe.c":79:25 75 {*movsi_internal}
      (nil))
 (insn 26 24 27 4 (parallel [
@@ -2072,7 +2072,7 @@ Dataflow summary:
 (insn 71 70 72 13 (set (reg/f:SI 0 ax [133])
         (mem/u/c:SI (plus:SI (reg:SI 3 bx [82])
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("current") [flags 0x40]  <var_decl 0x7dde6912f120 current>)
+                            (symbol_ref:SI ("current") [flags 0x40]  <var_decl 0x71a46b32f120 current>)
                         ] UNSPEC_GOT))) [19  S4 A8])) "fs/pipe.c":86:21 75 {*movsi_internal}
      (nil))
 (insn 72 71 73 13 (set (reg/f:SI 0 ax [orig:92 current.13_11 ] [92])
@@ -2112,7 +2112,7 @@ Dataflow summary:
 (insn 79 78 80 14 (set (reg/f:SI 0 ax [136])
         (mem/u/c:SI (plus:SI (reg:SI 3 bx [82])
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("current") [flags 0x40]  <var_decl 0x7dde6912f120 current>)
+                            (symbol_ref:SI ("current") [flags 0x40]  <var_decl 0x71a46b32f120 current>)
                         ] UNSPEC_GOT))) [19  S4 A8])) "fs/pipe.c":87:20 75 {*movsi_internal}
      (nil))
 (insn 80 79 81 14 (set (reg/f:SI 0 ax [orig:94 current.14_13 ] [94])
@@ -2229,7 +2229,7 @@ Dataflow summary:
 (insn 111 110 112 19 (set (reg/f:SI 0 ax [142])
         (mem/u/c:SI (plus:SI (reg:SI 3 bx [82])
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("current") [flags 0x40]  <var_decl 0x7dde6912f120 current>)
+                            (symbol_ref:SI ("current") [flags 0x40]  <var_decl 0x71a46b32f120 current>)
                         ] UNSPEC_GOT))) [19  S4 A8])) "fs/pipe.c":91:16 75 {*movsi_internal}
      (nil))
 (insn 112 111 113 19 (set (reg/f:SI 0 ax [orig:97 current.15_16 ] [97])
@@ -2297,7 +2297,7 @@ Dataflow summary:
 (code_label 131 212 132 22 42 (nil) [1 uses])
 (note 132 131 134 22 [bb 22] NOTE_INSN_BASIC_BLOCK)
 (call_insn 134 132 136 22 (set (reg:SI 0 ax)
-        (call (mem:QI (symbol_ref:SI ("get_pipe_inode") [flags 0x41]  <function_decl 0x7dde69116b00 get_pipe_inode>) [0 get_pipe_inode S1 A8])
+        (call (mem:QI (symbol_ref:SI ("get_pipe_inode") [flags 0x41]  <function_decl 0x71a46b316b00 get_pipe_inode>) [0 get_pipe_inode S1 A8])
             (const_int 0 [0]))) "fs/pipe.c":96:19 823 {*call_value}
      (nil)
     (expr_list (use (reg:SI 3 bx))
@@ -2322,7 +2322,7 @@ Dataflow summary:
 (insn 140 139 141 23 (set (reg/f:SI 0 ax [145])
         (mem/u/c:SI (plus:SI (reg:SI 3 bx [82])
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("current") [flags 0x40]  <var_decl 0x7dde6912f120 current>)
+                            (symbol_ref:SI ("current") [flags 0x40]  <var_decl 0x71a46b32f120 current>)
                         ] UNSPEC_GOT))) [19  S4 A8])) "fs/pipe.c":98:20 75 {*movsi_internal}
      (nil))
 (insn 141 140 142 23 (set (reg/f:SI 0 ax [orig:102 current.16_21 ] [102])
@@ -2344,7 +2344,7 @@ Dataflow summary:
 (insn 145 144 146 23 (set (reg/f:SI 2 cx [147])
         (mem/u/c:SI (plus:SI (reg:SI 3 bx [82])
                 (const:SI (unspec:SI [
-                            (symbol_ref:SI ("current") [flags 0x40]  <var_decl 0x7dde6912f120 current>)
+                            (symbol_ref:SI ("current") [flags 0x40]  <var_decl 0x71a46b32f120 current>)
                         ] UNSPEC_GOT))) [19  S4 A8])) "fs/pipe.c":97:16 75 {*movsi_internal}
      (nil))
 (insn 146 145 147 23 (set (reg/f:SI 2 cx [orig:104 current.17_23 ] [104])
@@ -2493,7 +2493,7 @@ Dataflow summary:
 (note 239 181 182 24
 	.cfi_def_cfa_offset 64
 	 NOTE_INSN_CFI)
-(call_insn 182 239 183 24 (call (mem:QI (symbol_ref:SI ("put_fs_long") [flags 0x3]  <function_decl 0x7dde6913a100 put_fs_long>) [0 put_fs_long S1 A8])
+(call_insn 182 239 183 24 (call (mem:QI (symbol_ref:SI ("put_fs_long") [flags 0x3]  <function_decl 0x71a46b33a100 put_fs_long>) [0 put_fs_long S1 A8])
         (const_int 16 [0x10])) "fs/pipe.c":106:5 812 {*call}
      (nil)
     (nil))
@@ -2550,7 +2550,7 @@ Dataflow summary:
 (note 243 190 191 24
 	.cfi_def_cfa_offset 64
 	 NOTE_INSN_CFI)
-(call_insn 191 243 192 24 (call (mem:QI (symbol_ref:SI ("put_fs_long") [flags 0x3]  <function_decl 0x7dde6913a100 put_fs_long>) [0 put_fs_long S1 A8])
+(call_insn 191 243 192 24 (call (mem:QI (symbol_ref:SI ("put_fs_long") [flags 0x3]  <function_decl 0x71a46b33a100 put_fs_long>) [0 put_fs_long S1 A8])
         (const_int 16 [0x10])) "fs/pipe.c":107:5 812 {*call}
      (nil)
     (nil))
