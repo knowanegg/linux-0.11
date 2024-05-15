@@ -193,6 +193,10 @@ struct task_struct {
  // 偏移地址和 2 字节的段选择符组成。因此__tmp 中 a 的值是 32 位偏移值，而 b 的低 2 字节是新
  // TSS 段的选择符（高 2 字节不用）。
  // __tmp.a没看到有赋值啊？
+ // 段间转移指令 JMP 或段间调用指令 CALL 所含指针的选择子指示一个可用任务状态段 TSS 描述符时
+ //正常情况下就发生从当前任务到由该可用 TSS 对应任务(目标任务)的切换。
+ //目标任务的入口点由目标任务 TSS 内的 CS 和 EIP 字段所规定的指针确定。
+ //这样的 JMP或 CALL 指令内的偏.移被丢弃。
 #define switch_to(n) { \
 	struct { long a, b;} __tmp;   \
 	__asm__("cmpl %%ecx, current\n\t" \

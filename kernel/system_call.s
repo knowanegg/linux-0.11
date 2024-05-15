@@ -98,15 +98,15 @@ system_call: # 这里就是int跳到的地方了，这里的压栈就是int的�
         jne reschedule
         cmpl $0,counter(%eax)           # counter
         je reschedule
-ret_from_sys_call:
-	movl current, %eax
-	cmpl task, %eax
-	je 3f
-	cmpw $0x0f, CS(%esp)
-	jne 3f
-	cmpw $0x17, OLDSS(%esp)
-	jne 3f
-	movl signal(%eax), %ebx
+ret_from_sys_call:                      # 从系统中断中返回
+	movl current, %eax                  # current是指向task_struct的指针，初始化为init_task.task
+	cmpl task, %eax						# 对比task和eax,这里的task是不是task[]数组呢？是的。看看是不是第一个，也就是init_task
+	je 3f                                  # 相同就跳到3：
+	cmpw $0x0f, CS(%esp)                # 对比CS段选择子word和0x0f
+	jne 3f                                 # 不同就跳到3:
+	cmpw $0x17, OLDSS(%esp)             # 对比esp和0x17，这里0x17真熟悉啊,OLDSS不会是Old Stack Segment吧，上面定义了OLDSS=0x2c
+	jne 3f                                 # 不同就跳到3:
+	movl signal(%eax), %ebx             # 
 	movl blocked(%eax), %ecx
 	notl %ecx
 	andl %ebx, %ecx
@@ -118,7 +118,7 @@ ret_from_sys_call:
 	pushl %ecx
 	call do_signal
 	popl %eax
-3:	popl %eax
+3:	popl %eax                            # 吧当时进入系统调用压栈的寄存器弹完
 	popl %ebx
 	popl %ecx
 	popl %edx
@@ -195,9 +195,9 @@ timer_interrupt:
 						  # 还记得call吗？call之前是不是要压栈返回地址？这个返回地址就是CS:IP组成的啊，当然是固定能找到的
 	andl $3, %eax         # 从堆栈中取出执行系统调用代码的选择符（CS 段寄存器值）中的当前特权级别(0 或 3)并压入
 	pushl %eax            # 堆栈，作为 do_timer 的参数。do_timer()函数执行任务切换、计时等工作，在 kernel/sched.c
-	call do_timer         
-	addl $4, %esp
-	jmp ret_from_sys_call
+	call do_timer         # 这里面最后有个schedule()
+	addl $4, %esp		  # esp+4，单步追踪可见esp->0x26ac4  ebp->0x26b08，栈从高到低增长，+4意思是退出4个byte不用。这四个byte就是前面push的eax
+	jmp ret_from_sys_call # 跳到退出系统调用处理程序
 	ret
 
 .align 2

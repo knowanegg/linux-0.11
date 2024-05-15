@@ -18,14 +18,6 @@ vmlinux.bin
 *.cmd
 *.img
 *.bin
-
-# Execte file
-
-!.gitignore
-# output
-keyboard.s
-drivers/chr_drv/keyboard.s
-
 *.expand
 *.vregs
 *.into_cfglayout
@@ -51,3 +43,12 @@ drivers/chr_drv/keyboard.s
 *.dwarf2
 *.final
 *.dfinish
+
+# Execte file
+
+!.gitignore
+# output
+keyboard.s
+drivers/chr_drv/keyboard.s
+
+
