@@ -106,17 +106,17 @@ ret_from_sys_call:                      # 从系统中断中返回
 	jne 3f                                 # 不同就跳到3:
 	cmpw $0x17, OLDSS(%esp)             # 对比esp和0x17，这里0x17真熟悉啊,OLDSS不会是Old Stack Segment吧，上面定义了OLDSS=0x2c
 	jne 3f                                 # 不同就跳到3:
-	movl signal(%eax), %ebx             # 
-	movl blocked(%eax), %ecx
-	notl %ecx
+	movl signal(%eax), %ebx             # signal(%eax)这种和上面OLDSS都是一样的，括号前面的是已经提前定义好的偏移量
+	movl blocked(%eax), %ecx            # 这种相当于数组%eax[signal]
+	notl %ecx							# ecx取反和ebx相与，ecx是屏蔽位，是将signal中屏蔽位去掉
 	andl %ebx, %ecx
-	bsfl %ecx, %ecx
+	bsfl %ecx, %ecx                     # Bit Scan Forward 从ecx低位开始找为1的位置，结果放入ecx
 	je 3f
-	btrl %ecx, %ebx
-	movl %ebx, signal(%eax)
-	incl %ecx
-	pushl %ecx
-	call do_signal
+	btrl %ecx, %ebx                     # Bit Test and Reset 第一个参数指定的位置，在第二个参数中是否为0，不是就置为0，同时设置ZeroFlag位
+	movl %ebx, signal(%eax)		        # 这样做，ebx进来就是把最后一位1置为0了，再放入signal
+	incl %ecx							# ecx+1，ecx在上面是signal中最低的为1的位，加1就是更高的一位
+	pushl %ecx							# 压栈为do_signal的第一个参数，为啥+1呢？因为从0开始，而接受的参数是signalnr是数字
+	call do_signal                      # 根据进程信号位图取进程的最小信号量，调用 do_signal()
 	popl %eax
 3:	popl %eax                            # 吧当时进入系统调用压栈的寄存器弹完
 	popl %ebx

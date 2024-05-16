@@ -10,13 +10,14 @@
 
 extern void do_exit(int error_code);
 
+// 这里的signr是前面计算出的刨除block位的signal里面最低一位为1但是置为0的位置
 void do_signal(long signr, long eax, long ebx, long ecx, long edx,
 	       long fs, long es, long ds,
 	       long eip, long cs, long eflags, unsigned long *esp, long ss)
 {
     unsigned long sa_handler;
     long old_eip = eip;
-    struct sigaction * sa = current->sigaction + signr - 1;
+    struct sigaction * sa = current->sigaction + signr - 1; // 找当前进程处理这个信号的action
     int longs;
     unsigned long *tmp_esp;
 
