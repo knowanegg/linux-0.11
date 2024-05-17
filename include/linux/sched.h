@@ -212,6 +212,7 @@ struct task_struct {
 			"d" (_TSS(n)), "c" ((long) task[n]));  \
 }
 
+// 获得基址
 static inline unsigned long _get_base(char *addr)
 {
     unsigned long __base;

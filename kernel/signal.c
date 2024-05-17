@@ -15,27 +15,27 @@ void do_signal(long signr, long eax, long ebx, long ecx, long edx,
 	       long fs, long es, long ds,
 	       long eip, long cs, long eflags, unsigned long *esp, long ss)
 {
-    unsigned long sa_handler;
-    long old_eip = eip;
+    unsigned long sa_handler;  // sa : signal action
+    long old_eip = eip;        // 保留旧的eip，这是要干什么？
     struct sigaction * sa = current->sigaction + signr - 1; // 找当前进程处理这个信号的action
     int longs;
-    unsigned long *tmp_esp;
+    unsigned long *tmp_esp;   // 临时esp寄存器保存
 
     sa_handler = (unsigned long)sa->sa_handler;
-    if (sa_handler == 1)
-        return;
-    if (!sa_handler) {
-        if (signr == SIGCHLD)
+    if (sa_handler == 1)  // 如果信号句柄为 SIG_IGN（1，默认忽略句柄）则不对信号进行处理而直接返回。
+        return;           // 这个SIG_IGN没搜到在哪，也没见赋值过1，可能是0.11没完善，不追究了
+    if (!sa_handler) {    // 如果句柄为 SIG_DFL（0，默认处理），则根据具体的信号进行分别处理。
+        if (signr == SIGCHLD)   // 如果是SIGCHLD也忽略，SIGCHLD 信号通常用于通知父进程子进程状态变化，默认处理是忽略。
             return;
-        else
+        else              // 其他信号报错退出
             do_exit(1 << (signr - 1));
     }
-    if (sa->sa_flags & SA_ONESHOT)
-        sa->sa_handler = NULL;
-    *(&eip) = sa_handler;
-    longs = (sa->sa_flags & SA_NOMASK) ? 7 : 8;
-    *(&esp) -= longs;
-    verify_area(esp, longs * 4);
+    if (sa->sa_flags & SA_ONESHOT)  // ONESHOT表示就执行一次，执行完置空
+        sa->sa_handler = NULL;      // 这里置空不会找不到handler，因为已经赋值给了局部变量sa_handler保存
+    *(&eip) = sa_handler;           // eip设置成sa_handler保存的地址，跳到handler执行。
+    longs = (sa->sa_flags & SA_NOMASK) ? 7 : 8;  // 表示在信号处理函数运行时，不自动阻塞正在处理的信号，这决定了需要保存的寄存器数量。
+    *(&esp) -= longs;               // 上面的longs决定了esp，也就是决定了进栈参数是7个还是8个，差的是不自动阻塞的信号
+    verify_area(esp, longs * 4);  // 这里的esp是addr，longs*4是size
     tmp_esp = esp;
     put_fs_long((long)sa->sa_restorer, tmp_esp++);
     put_fs_long(signr, tmp_esp++);

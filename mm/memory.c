@@ -483,14 +483,16 @@ void calc_mem(void)
 	}
 }
 
+// 写验证
 void write_verify(unsigned long address)
 {
     unsigned long page;
-
+	// 2^20 = 0x100000，除以1M，表示有多少M。0xffc=4092，去掉了4M内核内存，剩下的是可用的用户内存
     if (!((page = *((unsigned long *)((address >> 20) & 0xffc))) & 1))
+		// 简化后是 !(page指向0xffc中一个page有效位是否为1)
         return;
     page &= 0xfffff000;
-    page += ((address >> 10) & 0xffc);
+    page += ((address >> 10) & 0xffc);  // 
     if ((3 & *(unsigned long *) page) == 1) /* non-writeable, present */
         un_wp_page((unsigned long *)page);
     return;

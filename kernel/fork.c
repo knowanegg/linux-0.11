@@ -14,18 +14,20 @@ extern void write_verify(unsigned long address);
 
 long last_pid = 0;
 
+
+// 传进来的addr是esp，size是栈内参数大小
 void verify_area(void *addr, int size)
 {
     unsigned long start;
 
     start = (unsigned long)addr;
-    size += start & 0xfff;
-    start &= 0xfffff000;
-    start += get_base(current->ldt[2]);
-    while (size > 0) {
-        size -= 4096;
-        write_verify(start);
-        start += 4096;
+    size += start & 0xfff;              // 传进来的size加上start最后三位，也就是保存了栈大小+start最后三位大小
+    start &= 0xfffff000;                // start去掉后三位，也就是向前推了，这样做可能会多验证一些大小，但不会漏掉
+    start += get_base(current->ldt[2]); // 加上基址，这里是ldt[2]，是ldt中的第三个，保存着cs
+    while (size > 0) {                  // 大小是否大于0
+        size -= 4096;                   // 如果是的话，减去4096也就是0x1000，这样循环一次相当于验证了0x1000
+        write_verify(start);   // 写验证
+        start += 4096;                  // start地址后移4096，验证下一个4096大小的块。通过上面size减这里加，最后验证了全部的地址
     }
 }
 
