@@ -52,6 +52,11 @@ repeat:
     return -EAGAIN;
 }
 
+ // 复制内存页表。
+ // 参数 nr 是新任务号；p 是新任务数据结构指针。该函数为新任务在线性地址空间中设置代码
+ // 段和数据段基址、限长，并复制页表。 由于 Linux 系统采用了写时复制（copy on write）
+ // 技术， 因此这里仅为新进程设置自己的页目录表项和页表项，并没有为新进程分配实际物理
+ // 内存页面。此时新进程与其父进程共享所有内存页面。操作成功返回 0，否则返回出错号。
 int copy_mem(int nr, struct task_struct *p)
 {
     unsigned long old_data_base, new_data_base, data_limit;
@@ -61,11 +66,11 @@ int copy_mem(int nr, struct task_struct *p)
     data_limit = get_limit(0x17); /* Obtain Data segment from LDT[2] */
     old_code_base = get_base(current->ldt[1]); /* Current CODE Segment */
     old_data_base = get_base(current->ldt[2]); /* Current DATA Segment */
-    if (old_data_base != old_code_base)
+    if (old_data_base != old_code_base)  // 内核还不支持代码和数据段分立的情况，检查代码段和数据段基址是否都相同
         panic("We don't support separate I&D");
-    if (data_limit < code_limit)
+    if (data_limit < code_limit)         // 并且要求数据段的长度至少不小于代码段的长度
         panic("Bad data_limit");
-    new_data_base = new_code_base = nr * 0x4000000;
+    new_data_base = new_code_base = nr * 0x4000000; // 按照任务号分虚拟内存， 64MB * 其任务号
     p->start_code = new_code_base;
     set_base(p->ldt[1], new_code_base);
     set_base(p->ldt[2], new_data_base);
@@ -140,10 +145,10 @@ int copy_process(int nr, long ebp, long edi, long esi, long gs, long none, // �
     p->tss.fs = fs & 0xffff;
     p->tss.gs = gs & 0xffff;
     p->tss.ldt = _LDT(nr); /* selector for LDT */
-    p->tss.trace_bitmap = 0x80000000;
-    if (last_task_used_math == current)
-        __asm__("clts ; fnsave %0" :: "m" (p->tss.i387));
-    if (copy_mem(nr, p)) {
+    p->tss.trace_bitmap = 0x80000000; // Trace Bit（T 位）：当设置这个位时，每执行一条指令都会产生一个调试异常（#DB）。这对于调试程序非常有用，可以逐条跟踪指令的执行。
+    if (last_task_used_math == current) // 最后一个浮点计算是不是这个任务
+        __asm__("clts ; fnsave %0" :: "m" (p->tss.i387)); // fnsave的f是FPU，浮点运算单元
+    if (copy_mem(nr, p)) { // 
         task[nr] = NULL;
         free_page((long)p);
         return -EAGAIN;

@@ -212,11 +212,16 @@ struct task_struct {
 			"d" (_TSS(n)), "c" ((long) task[n]));  \
 }
 
-// 获得基址
+// 传进来的addr是当前进程的ldt[1]或[2]。
 static inline unsigned long _get_base(char *addr)
 {
     unsigned long __base;
 
+	// 取[addr+7]处基址高 16 位的高 8 位(位 31-24)DH。
+	// 取[addr+4]处基址高 16 位的低 8 位(位 23-16)DL。
+	// 基地址高 16 位移到 EDX 中高 16 位处。
+	// 取[addr+2]处基址低 16 位(位 15-0)DX
+	// 从而 EDX 中含有 32 位的段基地址。
     __asm__("movb %3, %%dh\n\t" 
             "movb %2, %%dl\n\t" 
             "shll $16, %%edx\n\t" 
@@ -225,6 +230,7 @@ static inline unsigned long _get_base(char *addr)
     return __base;
 }
 
+// 和上面get_base对应
 #define _set_base(addr, base)       \
         __asm__("push %%edx\n\t"        \
                 "movw %%dx, %0\n\t"     \
@@ -255,8 +261,10 @@ static inline unsigned long _get_base(char *addr)
 #define set_base(ldt, base)   _set_base( ((char *)&(ldt)),(base) )
 #define set_limit(ldt, limit) _set_limit( ((char *)&(ldt)), (limit - 1) >> 12)
 
+// get_base传进来的参数是ldt的地址
 #define get_base(ldt) _get_base((char *)&(ldt))
 
+// lsll ->  Load Segment Limit 加载段界限
 #define get_limit(segment)  ({    \
 	unsigned long __limit;        \
 	__asm__ ("lsll %1, %0\n\tincl %0":"=r" (__limit):"r" (segment));  \

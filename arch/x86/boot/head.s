@@ -380,7 +380,7 @@ gdt_descr:                   # 这只是一个描述符，只有一个描述符�
 idt:  
 	.fill 256,8,0            # IDT is uninitialized 0x54b8
 	                         # 用0填满256个长度为8的表
-
+# gdt在这个位置！
 gdt:                         # 已经设计好的gdt表
 	.quad 0x0000000000000000  /* NULL descriptor */ # 第一个一定为空
 	.quad 0x00c09a0000000fff  /* 16Mb */            

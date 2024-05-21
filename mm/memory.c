@@ -174,6 +174,7 @@ void free_page(unsigned long addr)
  * 1 Mb-range, so the pages can be shared with the kernel. Thus the
  * special case for nr=xxxx.
  */
+ // 参数from和to是页表
 int copy_page_tables(unsigned long from, unsigned long to, long size)
 {
     unsigned long *from_page_table;
@@ -181,10 +182,13 @@ int copy_page_tables(unsigned long from, unsigned long to, long size)
     unsigned long this_page;
     unsigned long *from_dir, *to_dir;
     unsigned long nr;
-
+	// PDE -> Page Dir Entry 只能用基址不能带偏移
     /* PDE alignment check: linear address [21:0] must be clear */
     if ((from & 0x3fffff) || (to & 0x3fffff))
         panic("copy_page_tables called with wrong alignment");
+	// 对应的目录项号等于 from >> 20。因为每项占 4 字节，并且由于页目录表从物理地址 0 开始存放，
+	// 20位是页号，低12位是偏移，0xffc是低10位（4+4+2）
+    // 因此实际目录项指针= 目录项号<<2，也即(from>>20)。“与”上 0xffc 确保目录项指针范围有效（页最后两位P和R/W）。
     from_dir = (unsigned long *) ((from >> 20) & 0xFFC);  /* _pg_dir = 0 */
     to_dir = (unsigned long *) ((to >> 20) & 0xFFC);
     size = ((unsigned) (size + 0x3fffff)) >> 22;
@@ -488,8 +492,8 @@ void write_verify(unsigned long address)
 {
     unsigned long page;
 	// 2^20 = 0x100000，除以1M，表示有多少M。0xffc=4092，去掉了4M内核内存，剩下的是可用的用户内存
-    if (!((page = *((unsigned long *)((address >> 20) & 0xffc))) & 1))
-		// 简化后是 !(page指向0xffc中一个page有效位是否为1)
+    if (!((page = *((unsigned long *)((address >> 20) & 0xffc))) & 1)) // 
+		// 简化后是 !(page指向0xffc中一个page有效位是否为1)·
         return;
     page &= 0xfffff000;
     page += ((address >> 10) & 0xffc);  // 
