@@ -174,7 +174,7 @@ void free_page(unsigned long addr)
  * 1 Mb-range, so the pages can be shared with the kernel. Thus the
  * special case for nr=xxxx.
  */
- // 参数from和to是页表
+ // 参数from和to是old_data_base和new_data_base段基址，size是父进程数据段限长
 int copy_page_tables(unsigned long from, unsigned long to, long size)
 {
     unsigned long *from_page_table;
@@ -186,24 +186,27 @@ int copy_page_tables(unsigned long from, unsigned long to, long size)
     /* PDE alignment check: linear address [21:0] must be clear */
     if ((from & 0x3fffff) || (to & 0x3fffff))
         panic("copy_page_tables called with wrong alignment");
-	// 对应的目录项号等于 from >> 20。因为每项占 4 字节，并且由于页目录表从物理地址 0 开始存放，
-	// 20位是页号，低12位是偏移，0xffc是低10位（4+4+2）
-    // 因此实际目录项指针= 目录项号<<2，也即(from>>20)。“与”上 0xffc 确保目录项指针范围有效（页最后两位P和R/W）。
+	// 对应的目录项号等于 from >> 20。why?
+	// 页的地址格式是 |10位页目录|10位页号|12位偏移地址|
+	// 如果想拿到页目录index，需要移掉10+12也就是>>22
+	// 拿到页目录index后，要通过index找实际地址，由于页目录表从物理地址0开始存放，就是0+index*长度4，也就是>>22<<2
+    // 约分完就等于>>20
+	// 后面&0xffc就是清除掉没对齐长度的（占了半个index长度这种）
     from_dir = (unsigned long *) ((from >> 20) & 0xFFC);  /* _pg_dir = 0 */
     to_dir = (unsigned long *) ((to >> 20) & 0xFFC);
-    size = ((unsigned) (size + 0x3fffff)) >> 22;
+    size = ((unsigned) (size + 0x3fffff)) >> 22; // size是父进程数据段限长
     for ( ; size-- > 0; from_dir++, to_dir++) {
         /* Check PDE P flag */
-        if (1 & *to_dir)
+        if (1 & *to_dir)       // 这里的1&是000001按位&的意思，逻辑与是&&。检查最后一位P存在位
             panic("copy_page_tables: already exist");
-        if (!(1 & *from_dir))
+        if (!(1 & *from_dir))  
             continue;
-        from_page_table = (unsigned long *) (0xfffff000 & *from_dir);
-        if (!(to_page_table = (unsigned long *) get_free_page()))
+        from_page_table = (unsigned long *) (0xfffff000 & *from_dir); // 清除最后3*4=12位偏移
+        if (!(to_page_table = (unsigned long *) get_free_page())) // 找一个未使用的页,返回起始物理地址
             return -1; /* Out of memory, see freeing */
         /* Addition: Set Write/Read, U/S and P flag */
-        *to_dir = ((unsigned long) to_page_table) | 7;
-        nr = (from == 0) ? 0xA0 : 1024;
+        *to_dir = ((unsigned long) to_page_table) | 7; // &7=&111 初始化三个状态位
+        nr = (from == 0) ? 0xA0 : 0x400; //如果是0地址，只拷贝160页，否则拷贝1024页  
         /* Copy old PTE contents to new PTE */
         for ( ; nr-- > 0; from_page_table++, to_page_table++) {
             this_page = *from_page_table;
