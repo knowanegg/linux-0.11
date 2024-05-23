@@ -104,7 +104,7 @@ struct task_struct {
 
 /*
  * INIT_TASK is used to set up the first task table, touch at
- * your own risk! Base=0, limit=0x9ffff (=640kB)
+ * your own risk! Base=0, limit=0x9ffff (=640kB) 为啥0x9f是0x9ffff?要加上0xfff小尾巴
  */
 #define INIT_TASK  \
  /* state etc */  { 0, 15, 15,      \

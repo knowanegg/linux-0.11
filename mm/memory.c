@@ -206,24 +206,28 @@ int copy_page_tables(unsigned long from, unsigned long to, long size)
             return -1; /* Out of memory, see freeing */
         /* Addition: Set Write/Read, U/S and P flag */
         *to_dir = ((unsigned long) to_page_table) | 7; // &7=&111 初始化三个状态位
-        nr = (from == 0) ? 0xA0 : 0x400; //如果是0地址，只拷贝160页，否则拷贝1024页  
+        nr = (from == 0) ? 0xA0 : 0x400; // 如果是0地址，只拷贝160页，否则拷贝1024页
+		                                 // 这里为什么是160页？160页*4=640Kb  
+										 // 记得初始化的第一个进程吗？INIT_TASK
+										 // 它的段是Base=0, limit=0x9ffff (=640kB)
         /* Copy old PTE contents to new PTE */
         for ( ; nr-- > 0; from_page_table++, to_page_table++) {
-            this_page = *from_page_table;
-            if (!(1 & this_page))
+            this_page = *from_page_table; // this_page是原页面
+            if (!(1 & this_page))  // 看P位，页是否使用，没使用就不用复制
                 continue;
             /* Only read this 4-KByte page */
-            this_page &= ~2;
-            *to_page_table = this_page;
-            if (this_page > LOW_MEM) {
-                *from_page_table = this_page;
-                this_page -= LOW_MEM;
-                this_page >>= 12;
-                mem_map[this_page]++;
+            this_page &= ~2;       // 设置Read Only位
+            *to_page_table = this_page; // 赋值给目标的页表项
+            if (this_page > LOW_MEM) {  // 如果页比LOW_MEM大，也就是不在内核中而是在主存中
+                *from_page_table = this_page; // 令源页表项也只读。
+                this_page -= LOW_MEM;         // 减去内核内存占用的空间
+                this_page >>= 12;			  // 右移12位，相当于找出PDE+PTE的20位，去掉了偏移
+                mem_map[this_page]++;         // 将mem_map[this_page]++，要结合mem_map是什么来看
             }
         }
     }
-    invalidate();
+    invalidate(); // movl %%eax, %%cr3 -> eax=0输入，也就是给cr3赋值0, 刷新 CPU 页变换高速缓冲。
+
     return 0;
 }
 
