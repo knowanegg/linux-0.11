@@ -27,6 +27,7 @@
 static long HIGH_MEMORY = 0;
 extern void do_exit(int error_code);
 
+// mem_map实际上不算入page的偏移，只有pg_dir+pg_table，所以最后0xfff或者说最后12位不要
 unsigned char mem_map[PAGING_PAGES] = { 0, };
 
 static inline void oom(void)
@@ -79,19 +80,7 @@ unsigned long get_free_page(void)
 // esp 通常指向调用该 thunk 的指令之后的返回地址。因此，这条指令实际上是在读取调用 __x86.get_pc_thunk.ax 后应当返回的地址，这是调用该函数的下一条指令的地址。
 // 然后再add 0x19acb，应该是找到相对于下一条地址偏移0x19acb的位置
 // 这里为何是0x19acb,编译器是如何取值的呢？
-// 通过gdb跟踪发现，eax加上0x19acb后是0x20044,查看内存,这是<startup_32>的位置，里面放的类似描述符的东西
-// pwndbg> x /20x *0x20044
-// 0x0 <startup_32>:       0x00001027      0x00002007      0x00003007      0x00004007
-// 0x10 <startup_32+16>:   0x00000000      0x00000000      0x00000000      0x00000000
-// 0x20 <startup_32+32>:   0x00000000      0x00000000      0x00000000      0x00000000
-// startup_32 通常是 Linux 内核启动过程中的一个重要函数，用于 32 位系统的初始化。
-// 这里就回到boot三个汇编文件中的head.s
-// pg_dir:
-//	.globl startup_32
-// 下面有setup_paging，就是在这里循环设置了页表，内容为0x1007,0x2007,0x3007....
-// 也就是说0x20044是页表开头的位置
-// 那么反推，eax（当前pc地址）加上0x19acb后是0x20044是页表开头地址，那么0x19acb就是当前地址pc距离页表开头地址的偏移
-// 这个地址编译器是怎么得到的呢？
+
 // 这涉及到编译器在生成位置无关代码（PIC）时的地址解析机制。
 // 编译器如何计算偏移值：
 // 静态链接阶段的地址计算：
@@ -143,6 +132,7 @@ unsigned long get_free_page(void)
  * Free a page of memory at physical address 'addr'. Used by
  * 'free_page_tables()'
  */
+// 这里的addr是物理内存，>>12是对应的页号
 void free_page(unsigned long addr)
 {
 	if (addr < LOW_MEM)
@@ -151,7 +141,7 @@ void free_page(unsigned long addr)
 		panic("trying to free nonexistent page");
 	addr -= LOW_MEM;
 	addr >>= 12;
-	if (mem_map[addr]--)
+	if (mem_map[addr]--) // mem_map在linux0.11中只是个char数组，在后面现代内核中是page*数组
 		return;
 	mem_map[addr] = 0;
 	panic("trying to free free page");
@@ -216,7 +206,9 @@ int copy_page_tables(unsigned long from, unsigned long to, long size)
             if (!(1 & this_page))  // 看P位，页是否使用，没使用就不用复制
                 continue;
             /* Only read this 4-KByte page */
-            this_page &= ~2;       // 设置Read Only位
+            this_page &= ~2;       // 设置Read Only位，为什么？
+			//通过 this_page &= ~2; 将页表项中的写位清除，设置为只读。这就是实现写时复制的关键步骤。
+			//当父进程或子进程试图写入这些只读页时，会触发页错误处理程序 do_wp_page，该程序负责分配新的物理页，并复制原来的内容。
             *to_page_table = this_page; // 赋值给目标的页表项
             if (this_page > LOW_MEM) {  // 如果页比LOW_MEM大，也就是不在内核中而是在主存中
                 *from_page_table = this_page; // 令源页表项也只读。
@@ -235,28 +227,30 @@ int copy_page_tables(unsigned long from, unsigned long to, long size)
  * This function frees a continuos block of page talbes, as needed
  * by 'exit()'. As does copy_page_tables(). This handles only 4Mb blocks.
  */
+ // 从哪开始释放多少，from是段基址，size是段限长
 int free_page_tables(unsigned long from, unsigned long size)
 {
     unsigned long *pg_table;
     unsigned long *dir, nr;
-
-    if (from & 0x3fffff)
+	// 0x3fffff掩盖了22位，12+10，剩下的只有页目录索引了
+    if (from & 0x3fffff) 
         panic("free_page_tables called while wrong alignment");
     if (!from)
         panic("Trying to free up swapper memory space");
+	// 算出这个size要多少个页目录索引
     size = (size + 0x3fffff) >> 22;
-    dir = (unsigned long *) ((from >> 20) & 0xffc); /* _pg_dir = 0 */
+    dir = (unsigned long *) ((from >> 20) & 0xffc); /* _pg_dir = 0 */ // dir是页目录索引
     for ( ; size-- > 0; dir++) {
-        if (!(1 & *dir))
+        if (!(1 & *dir)) // PDE最后一位P位不为1，表示这个页目录未使用，不用free
             continue;
-        pg_table = (unsigned long *) (0xfffff000 & *dir);
-        for (nr = 0; nr < 1024 ; nr++) {
-            if (1 & *pg_table)
-                free_page(0xfffff000 & *pg_table);
-            *pg_table = 0;
-            pg_table++;
+        pg_table = (unsigned long *) (0xfffff000 & *dir); // 后12位掩掉,这里的*dir指向了页表index
+        for (nr = 0; nr < 1024 ; nr++) { // 一个页目录有1024个条目，指向页表
+            if (1 & *pg_table)           // 如果指向的当前页表存在（P为1）
+                free_page(0xfffff000 & *pg_table); // 那么就free掉
+            *pg_table = 0;               // 内容清0
+            pg_table++;                  // 下一个页表
         }
-        free_page(0xfffff000 & *dir);
+        free_page(0xfffff000 & *dir); // dir是PDE，掩掉12位
         *dir = 0;
     }
     invalidate();

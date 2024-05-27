@@ -148,12 +148,12 @@ int copy_process(int nr, long ebp, long edi, long esi, long gs, long none, // �
     p->tss.trace_bitmap = 0x80000000; // Trace Bit（T 位）：当设置这个位时，每执行一条指令都会产生一个调试异常（#DB）。这对于调试程序非常有用，可以逐条跟踪指令的执行。
     if (last_task_used_math == current) // 最后一个浮点计算是不是这个任务
         __asm__("clts ; fnsave %0" :: "m" (p->tss.i387)); // fnsave的f是FPU，浮点运算单元
-    if (copy_mem(nr, p)) { // 
-        task[nr] = NULL;
-        free_page((long)p);
+    if (copy_mem(nr, p)) { // 把父进程的内存复制到新的进程，这里满足条件说明出错了，返回0才说明没出错
+        task[nr] = NULL;   // 出错了就置空
+        free_page((long)p);// 清理掉这个进程用的页
         return -EAGAIN;
     }
-    for (i = 0; i < NR_OPEN; i++)
+    for (i = 0; i < NR_OPEN; i++) // 看到这里
         if ((f = p->filp[i]))
             f->f_count++;
     if (current->pwd)
