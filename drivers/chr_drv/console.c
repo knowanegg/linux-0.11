@@ -423,7 +423,7 @@ void con_write(struct tty_struct *tty)
 
     nr = CHARS(tty->write_q);
     while (nr--) {
-        GETCH(tty->write_q, c);
+        GETCH(tty->write_q, c); // GETCH = GetChar
         switch (state) {
         case 0:
             if (c > 31 && c < 127) {

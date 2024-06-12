@@ -91,7 +91,7 @@ struct d_inode {
     unsigned short i_zone[9];
 };
 
-struct m_inode {
+struct m_inode { // 成员里面的i_是inode的意思
 	unsigned short i_mode;
 	unsigned short i_uid;
 	unsigned long i_size;
@@ -105,7 +105,7 @@ struct m_inode {
 	unsigned long  i_ctime;
 	unsigned short i_dev;
 	unsigned short i_num;
-	unsigned short i_count;
+	unsigned short i_count; //
 	unsigned char  i_lock;
 	unsigned char  i_dirt;
 	unsigned char  i_pipe;
@@ -114,6 +114,7 @@ struct m_inode {
 	unsigned char  i_update;
 };
 
+// 文件数据结构
 struct file {
 	unsigned short f_mode;
 	unsigned short f_flags;

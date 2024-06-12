@@ -154,8 +154,9 @@ int copy_process(int nr, long ebp, long edi, long esi, long gs, long none, // �
         return -EAGAIN;
     }
     for (i = 0; i < NR_OPEN; i++) // 看到这里
-        if ((f = p->filp[i]))
+        if ((f = p->filp[i])) // 这里应该是看p->filp[i]有多少个，没接触fs先暂存
             f->f_count++;
+    // 下面是父进程打开的文件，创建的子进程也会打开相同的文件，所以计数+1
     if (current->pwd)
         current->pwd->i_count++;
     if (current->root)

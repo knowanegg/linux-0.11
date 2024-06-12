@@ -244,7 +244,7 @@ static void read_intr(void)
     end_request(1);
     do_hd_request();
 }
-
+// 处理硬盘请求
 void do_hd_request(void)
 {
     int i, r = 0;
@@ -305,7 +305,7 @@ repeat:
     } else
         panic("unknow hd-command");
 }
-
+// 初始化硬盘
 void hd_init(void)
 {
     blk_dev[MAJOR_NR].request_fn = do_hd_request;

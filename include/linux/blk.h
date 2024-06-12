@@ -22,16 +22,17 @@
  * read/write completion.
  */
 // 请求结构,既然放在这个blk.h下面了，就理解为块设备的请求吧
+// request代表一次读盘请求
 struct request {
-    int dev;
-    int cmd;
-    int errors;
-    unsigned long sector;
-    unsigned long nr_sectors;
-    char *buffer;
-    struct task_struct *waiting;
-    struct buffer_head *bh;
-    struct request *next;
+    int dev;    // dev表示设备号, -1就代表空闲
+    int cmd;    // 表示READ还是WRITE
+    int errors; // 表示操作时产生的错误次数
+    unsigned long sector;   // 操作的起始扇区
+    unsigned long nr_sectors;   // 操作的扇区数
+    char *buffer;   // 数据缓冲区，也就是读盘之后数据存在哪里
+    struct task_struct *waiting;    // 是一个task_struct结构，可以表示一个进程，表示是哪个进程发起了这个请求
+    struct buffer_head *bh;     // 缓冲区头指针
+    struct request *next;       // 下一个请求
 };
 // 块设备结构体
 struct blk_dev_struct {

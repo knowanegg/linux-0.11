@@ -10,6 +10,7 @@ quiet_cmd_running_linux = RUN     vmlinux
 quiet_cmd_debug_linux = DEBUG      vmlinux
       cmd_debug_linux = $(QEMU) $(QEMU_FLAGS) -s -S > /dev/null 2>&1
 
+$(info    cmd_debug_linux is $(cmd_debug_linux))
 PHONY += start
 start: vmlinux
 	$(call if_changed,running_linux)

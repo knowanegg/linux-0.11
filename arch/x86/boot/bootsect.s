@@ -5,12 +5,13 @@
 # jmp到了0x7c00
 
 # 编译完后，用objdump看vmlinux，开头是head.s
+# objdump -d -m i386 ./vmlinux --start-address=0x0 --stop-address=0x400 
 # 那么这个bootsect和setup在哪呢？
 # 应该是在硬盘1、2扇区，而vmlinux被写入到了
 # 从第三个扇区开始
 # 我们想找到真的编译成果，就去找硬盘文件
 # 看makefile，实际编译出来的合并到了bootloader
-# objdump -D -b binary -m i386:x86-64 ./arch/x86/boot/bootloader
+# objdump -D -b binary -m i386 ./arch/x86/boot/bootloader
 
 # 第一步，先把自己移动到0x90000，为后面
 # 腾出空间
@@ -96,8 +97,9 @@ new_start:
 # put stack at 0x9ff00
 	mov %ax, %ss
 	# 栈指针设置在0xFF00，这时栈位于9000:ff00也就是0x9ff00
-	mov $0xFF00, %sp # arbitrary value >> 512 ？这里不知道为啥
-
+	mov $0xFF00, %sp # arbitrary value >> 512 ？这里不知道为啥注释这个
+	
+# CHS (Cylinder-Head-Sector) 寻址方式在BIOS中断调用中使用。柱面（Cylinder）和磁头（Head）编号从0开始，但扇区（Sector）编号从1开始。
 # load the setup-sectors directly after the bootblock
 # Note that 'es' is already set up
 # 读取setup扇区，用BIOS的0x13中断调用
@@ -105,7 +107,7 @@ load_setup:
 	# 读硬盘，调用中断处理程序
 	# If use hard disk, dirver is 0x80 
 	mov $0x0000, %dx      # head 0
-	mov $DEVICE_NR, %dl   # drive 0
+	mov $DEVICE_NR, %dl   # drive 0 
 	mov $0x0002, %cx   # sector 2 扇区（Sector）, track 0 磁道（Track）这里为什么是2扇区
                        # 因为第一扇区是boot，也就是现在的程序，紧跟着的下一个扇区就是setup
 	mov $0x0200, %bx   # address = 512, in INITSEG 加载到INITSEG的512地址处
@@ -198,14 +200,14 @@ root_defined:
 sread:	.word 1+ SETUPLEN  # sectors read of current track
 head:	.word 0			   # current head
 track:	.word 0			   # current track
-
+# 下面一大串基本就是read硬盘操作，将vmlinux文件读到内存0x10000处，很繁杂，不用看
 read_it:
 	mov %es, %ax       # 比较es和0x0fff，从read SYSSEG来的话es应该是0x1000
 	test $0x0fff, %ax  # test指令执行的是位与（AND）操作，但结果不会保存，仅用来影响标志位。
 die:
-	jne die       # es must be at 64kB boundary es必须64K对齐，如果and 0x0fff有对上的说没对齐
+	jne die       # es must be at 64kB boundary es必须64K对齐，如果=0x0fff有对上的说没对齐
 				  # 然后自己跳转到自己，无限死循环？
-	xor %bx, %bx  # bx is starting address with segment  这里清零
+	xor %bx, %bx  # bx is starting address with segment 这里清零
 rp_read:
 	mov %es, %ax
 	cmp $ENDSEG, %ax   # have we loaded all yet? # 看看有没有完全加载完

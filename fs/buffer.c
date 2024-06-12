@@ -111,7 +111,7 @@ void buffer_init(long buffer_end)
         // 如果不止1M，那么就直接设置为buffer_end也就是memory_detect中设置的4M
         b = (void *)buffer_end;
     // BLOCK_SIZE在fs.h中定义，为1024，一个块的大小,0x400,1KB
-    // 在这里将buffer_end向前直到buffer_start，切分成1KB大小的块
+    // 在这里,b（buffer存储块）向前，h（buffer头）向后，一一对应直到接近
     while ((b -= BLOCK_SIZE) >= ((void *)(h + 1))) {
         h->b_dev    = 0;
         h->b_dirt   = 0;

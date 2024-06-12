@@ -157,6 +157,7 @@ do_move:
 
 # then we load the segment descriptors
 
+# 移动结束，这时候设置idt和gdt
 end_move:
 	mov	$SETUPSEG, %ax	# right, forgot this at first. didn't work :-)
 	mov	%ax, %ds
@@ -183,7 +184,7 @@ end_move:
 # rectify it afterwards. Thus the bios puts interrupts at 0x08-0x0f,
 # which is used for the internal hardware interrupts as well. We just
 # have to reprogram the 8259's, and it isn't fun.
-
+# 8259重新编程
 	mov	$0x11, %al		# initialization sequence(ICW1)
 					# ICW4 needed(1),CASCADE mode,Level-triggered
 	out	%al, $0x20		# send it to 8259A-1
@@ -224,7 +225,7 @@ end_move:
 	#mov	$0x0001, %ax	# protected mode (PE) bit
 	#lmsw	%ax		# This is it!
 	mov	%cr0, %eax	# get machine status(cr0|MSW)	
-	bts	$0, %eax	# 将cr0最后一位置为1，打开保护模式
+	bts	$0, %eax	# 将cr0最后一位置为1，打开保护模式 bts（Bit Test and Set）。它会测试指定位置的位并设置该位。
 	mov	%eax, %cr0	# protection enabled
 				
 				# segment-descriptor        (INDEX:TI:RPL)

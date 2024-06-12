@@ -216,8 +216,8 @@ void init(void)
 {
     int pid, i;
 
-    setup((void *)&drive_info);
-    (void)open("/dev/tty0", O_RDWR, 0);
+    setup((void *)&drive_info); // 从硬盘加载根文件系统
+    (void)open("/dev/tty0", O_RDWR, 0); // 看到这里
     (void)dup(0);
     (void)dup(0);
     printf("%d buffers = %d bytes buffer space\n\r", NR_BUFFERS,

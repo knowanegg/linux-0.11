@@ -45,13 +45,13 @@ keyboard_interrupt:
 	mov %ax,%ds
 	mov %ax,%es
 	xor %al,%al		/* %eax is scan code */
-	inb $0x60,%al
-	cmpb $0xe0,%al
+	inb $0x60,%al   # 键盘控制器的数据端口
+	cmpb $0xe0,%al  # 特殊按键，键盘会先发送 0xE0 作为前缀，然后再发送实际的扫描码。
 	je set_e0
 	cmpb $0xe1,%al
 	je set_e1
 	call *key_table(,%eax,4)
-	movb $0,e0
+	movb $0,e0		# 这里的e0不是16进制立即数，是上面定义的变量
 e0_e1:	inb $0x61,%al
 	jmp 1f
 1:	jmp 1f

@@ -37,7 +37,7 @@ struct tty_struct {
 #define LEFT(a)  (((a).tail - (a).head - 1) & (TTY_BUF_SIZE - 1))
 #define LAST(a)  ((a).buf[(TTY_BUF_SIZE - 1) & ((a).head - 1)])
 #define FULL(a)  (!LEFT(a))
-#define CHARS(a) (((a).head - (a).tail) & (TTY_BUF_SIZE - 1))
+#define CHARS(a) (((a).head - (a).tail) & (TTY_BUF_SIZE - 1)) // 计算有多少char
 #define GETCH(queue, c) \
 	(void)({c=(queue).buf[(queue).tail];INC((queue).tail);})
 #define PUTCH(c, queue) \

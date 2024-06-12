@@ -41,7 +41,7 @@ startup_32:
 	lss stack_start, %esp   # stack_start 是一个内存地址，指向包含两个部分的数据结构：
 	                        # 新的堆栈指针值和新的堆栈段选择子。首先是堆栈指针值（低地址处）
 							# 其次是段选择子（高地址处）。低地址明显看出给了%esp
-							# 高地址隐式赋值给了SS
+							# 高地址隐式赋值给了SS(隐式的意思是这条指令没出现ss)
 	xorl %eax, %eax
 1:
 	incl %eax                # Check that A20 really is enabled
@@ -57,7 +57,7 @@ startup_32:
  */
  # cr0寄存器，设置权限
 	movl %cr0, %eax          # Check math chip
-	andl $0x80000011, %eax   # Save PG, PE, ET
+	andl $0x80000011, %eax   # Save PG, PE, ET ，注意这里是and不是or，没开的还是没开，pg这里没开
 	                         # PE（Protection Enable）就是是否保护模式
 							 # 曾经试验过，保护模式运行一半关了，能退回实模式
 							 # PG（Paging）是否开启分页机制，有了分页就有了虚拟内存
@@ -102,7 +102,7 @@ check_x87:
  * are enabled elsewhere, when we can be relatively
  * sure everthing is ok. This routine will be
  * over-written by the page tables.
- */
+ */ # ignore_int 忽略interrupt
 setup_idt:
 	lea ignore_int, %edx    # 全称为“Load Effective Address”
 	                        # 即“加载有效地址”。这个指令计算内存地址表达式的值
@@ -153,7 +153,7 @@ rp_sidt:
 	addl $8, %edi
 	dec %ecx
 	jne rp_sidt
-	lidt idt_descr           # 将256个中断门全部设成一样的 ignore_int
+	lidt idt_descr           # 将256个中断门全部设成一样的 ignore_interrupt
 	ret
 
 /*
@@ -268,37 +268,37 @@ ignore_int:
  */
 .align 2
 setup_paging:
-	movl $1024*5, %ecx      /* 5 pages - pg_dir+4 page tables */
+	movl $1024*5, %ecx      /* 清零0x0000-0x5000 */
 	xorl %eax, %eax
-	xorl %edi, %edi         /* pg_dir is at 0x00 */
+	xorl %edi, %edi         /* pg_dir is at 0x00 ，这里覆盖了0x5000前面的代码 */
 	cld;rep;stosl           # CLean Direction flag 
 	                        # 这里的分号有些浏览器会解释成注释
 							# 但是实际rep stosl是执行的
 	                        # 当DF=0的时候，从低地址到高地址 */
 	movl $pg0+7, pg_dir     # 这里为什么是+7? 误区：pg0的地址+7
-	movl $pg1+7, pg_dir+4   # 实际上pg0的值+7，也就是这个7是给pg0附加的
+	movl $pg1+7, pg_dir+4   # 实际上pg0的偏移值+7（看上面，pg0:  pg1: ...）
 	movl $pg2+7, pg_dir+8   # pg0=0x1000 +7 = 0x1007
-	movl $pg3+7, pg_dir+12  # 这里四个页目录，映射到四个页表的头部
+	movl $pg3+7, pg_dir+12  # 这里四个页目录，映射到四个页表的头部 
 	                        # 分别映射到0x1000 0x2000 0x3000 0x4000
 							# 每个页表4byte，那么0x1000的空间可以存储 0x1000/4 = 0x400
 							# 也就是1024个页表
 							# 每个页表映射物理地址范围为0x1000,也就是0x400*0x1000=4MB
 							# 四个页目录加起来就=4M*4=16M
-	movl $pg3+4092, %edi
+	movl $pg3+4092, %edi    # 这里从pg3往回写，pg3的偏移（0x4000）加上4092（0xffc）
 	movl $0xfff007, %eax    /* 16Mb - 4096 + 7 (r/w user, p) */
 	std                     # SeT Direction flag
-	                        # 当DF=0的时候，从低地址到高地址
-1:  stosl                   # Store String  
+	                        # 当DF=1的时候，从高地址到低地址
+1:  stosl                   # Store String  4字节4字节地循环写入
                             /* fill pages backwards - more efficient :-) */
 							# 为什么backwards更efficient？
 							# 难道是因为：
 							# 80386没有缓存，80486的缓存为8K = 0x2000
-							# 前面第268行，从0x0增长到了1024*5x4=0x5000
+							# 前面第271行，从0x0增长到了1024*5x4=0x5000
 							# 这时候L1缓存了从0x5000-0x3000的内容
 							# 如果正向cld，那么又重新从0x1000开始写
 							# 这时候L1 cache全部miss
 							# 如果是反向std，那么从0x4ffc开始，会命中
-							# 0x4ffc-0x3000=0x1ffc大小的缓存
+							# 0x4ffc-0x3000=大小的缓存,(0x4ffc写入long其实写到了0x4fff，这里命中全部0x2000缓存)
 	subl $0x1000, %eax
 	jge 1b
 	cld
@@ -357,13 +357,13 @@ setup_paging:
 							# 为什么页表要写到0x4ffc而不是0x4fff呢？
 							# 因为页表有长度啊，从0x4ffc开始写0x00fff807，四位正好写到0x4fff
 
-	movl %eax, %cr3         /* cr3 - page directory start */
+	movl %eax, %cr3         /* cr3 - page directory start 设置好了cr3 ,就可以打开分页了*/
 	movl %cr0, %eax
 	orl  $0x80000000, %eax
 	movl %eax, %cr0         /* set paging (PG) bit */
 							# 设置cr0寄存器的PG位，打开分页
 	ret                     /* This also flushes prefetch-queue */
-                            # 
+                            # 这里直接ret返回到main，正式进入内核高级语言代码执行
 
 .align 2
 .word 0
@@ -373,8 +373,8 @@ idt_descr:                   # 这只是一个描述符
 .align 2
 .word 0
 gdt_descr:                   # 这只是一个描述符，只有一个描述符的大小
-	.word 256*8-1            # so does gdt (not that that's any
-	.long gdt                # magic number, but it works for me:^)
+	.word 256*8-1            # 0x7ff,界限
+	.long gdt                # 
                              # 这里指向真正的表偏移
 	.align 8
 idt:  
