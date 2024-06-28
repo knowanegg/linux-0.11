@@ -315,6 +315,7 @@ void hd_init(void)
 }
 
 /* This may be used only once, enforced by 'static int callable' */
+// 这里是init中setup实际函数
 int sys_setup(void *BIOS)
 {
     static int callable = 1;

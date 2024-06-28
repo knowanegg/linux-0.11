@@ -150,6 +150,7 @@ static struct buffer_head *find_entry(struct m_inode **dir,
  * Getdir traverses the pathname until it hits the topmost directory.
  * It returns NULL on failure.
  */
+ // 
 static struct m_inode *get_dir(const char *pathname)
 {
     char c;

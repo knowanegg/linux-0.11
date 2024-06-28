@@ -42,6 +42,7 @@ int sys_open(const char *filename, int flag, int mode)
     int i, fd;
 
     mode &= 0777 & ~current->umask;
+    // 选出filp[fd]不存在的fd值
     for (fd = 0; fd < NR_OPEN; fd++)
         if (!current->filp[fd])
             break;
@@ -49,11 +50,13 @@ int sys_open(const char *filename, int flag, int mode)
         return -EINVAL;
     current->close_on_exec &= ~(1 << fd);
     f = 0 + file_table;
+    // 选出f_count为0的f值
     for (i = 0; i < NR_FILE; i++, f++)
         if (!f->f_count)
             break;
     if (i >= NR_FILE)
         return -EINVAL;
+    // 将未被占用的filp[fd]指向f，并增加f的f_count
     (current->filp[fd] = f)->f_count++;
     if ((i = open_namei(filename, flag, mode, &inode)) < 0) {
         current->filp[fd] = NULL;
